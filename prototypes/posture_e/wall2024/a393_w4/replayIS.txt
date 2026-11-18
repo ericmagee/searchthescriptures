@@ -7,15 +7,11 @@
   alt_models: {"alt_minimax31":{"api_model":"minimax/minimax-m3.1-flash","family":"minimax","max_tokens":64000},"alt_minimax3":{"api_model":"minimax/minimax-m3","family":"minimax","max_tokens":64000}}
   agreement_out: ["ember"]
   alt_dropped:
-    chatgpt (openai): sits on the panel
-    sol (openai): sits on the panel
-    sol62 (openai): sits on the panel
     hydrogen (google): family google debates in this debate
     gemini (google): is a debater
     argon (google): family google debates in this debate
     spark (meta): is a debater
     ember (meta): did not accept the posture
-    qwen (null): not a panel seat
 == run 38593 (every panel seat filled: BROKEN 3-0, 3 of 3 counted)
   s262 replay equals the stored Init Seats output (run_token, t0, sd aside): true 
   every s262 field byte-equal in the target (alt_dropped is the only new field): true | new fields: alt_dropped
@@ -25,15 +21,11 @@
   alt_models: {"alt_minimax31":{"api_model":"minimax/minimax-m3.1-flash","family":"minimax","max_tokens":64000},"alt_minimax3":{"api_model":"minimax/minimax-m3","family":"minimax","max_tokens":64000}}
   agreement_out: []
   alt_dropped:
-    chatgpt (openai): sits on the panel
-    sol (openai): sits on the panel
-    sol62 (openai): sits on the panel
     hydrogen (google): family google debates in this debate
     gemini (google): is a debater
     argon (google): family google debates in this debate
     spark (meta): is a debater
     ember (meta): family meta debates in this debate
-    qwen (null): not a panel seat
 == run 38450
   s262 replay equals the stored Init Seats output (run_token, t0, sd aside): false alt_order
   every s262 field byte-equal in the target (alt_dropped is the only new field): true | new fields: alt_dropped
@@ -43,15 +35,11 @@
   alt_models: {"alt_minimax31":{"api_model":"minimax/minimax-m3.1-flash","family":"minimax","max_tokens":64000},"alt_minimax3":{"api_model":"minimax/minimax-m3","family":"minimax","max_tokens":64000}}
   agreement_out: ["ember"]
   alt_dropped:
-    chatgpt (openai): sits on the panel
-    sol (openai): sits on the panel
-    sol62 (openai): sits on the panel
     hydrogen (google): family google debates in this debate
     gemini (google): is a debater
     argon (google): family google debates in this debate
     spark (meta): is a debater
     ember (meta): did not accept the posture
-    qwen (null): not a panel seat
 == PLANT: 38661 inputs with both debaters Claude (claude vs opus)
   every s262 field byte-equal in the target (alt_dropped is the only new field): true | new fields: alt_dropped
   panel_order: ["sol62","chatgpt","sol"]
@@ -60,9 +48,5 @@
   alt_models: {"alt_minimax31":{"api_model":"minimax/minimax-m3.1-flash","family":"minimax","max_tokens":64000},"alt_minimax3":{"api_model":"minimax/minimax-m3","family":"minimax","max_tokens":64000}}
   agreement_out: ["ember"]
   alt_dropped:
-    chatgpt (openai): sits on the panel
-    sol (openai): sits on the panel
-    sol62 (openai): sits on the panel
     ember (meta): did not accept the posture
-    qwen (null): not a panel seat
 RESULT: PASS

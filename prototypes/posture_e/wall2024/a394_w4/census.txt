@@ -1,0 +1,183 @@
+collision-line regex sites (distinct name+pattern): 91
+- __c [own path] | 26 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Merge 1
+    /^D\d+ VS C\d+$/
+- __ecfColl0 [own path] | 6 places | e.g. engine lib:Alt Judge Enforcer Build; engine lib:Judge Enforcer Build; engine lib:R2 Alt Judge Enforcer Build
+    /^(?:[DC]\d+\s*(?:vs\.?\s*[DC]\d+)?)\s*(?:\([^()\n]{0,160}\))?\s*:/
+- __fo [own path] | 26 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Merge 1
+    /^\s*(?:[-\u2022]|\d+[.)])?\s*FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*(D\d+)\s+VS\.?\s+(C\d+)\b/
+- __FO [own path] | 26 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Merge 1
+    /^\s*(?:[-\u2022]|\d+[.)])?\s*FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*(D\d+)\s+VS\.?\s+(C\d+)\b/
+- __gkv [own path] | 26 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Merge 1
+    /^\s*(?:[-•*]\s*|\d+[.)]\s*)?\**\s*(?:FORCED\b|D\d+\s+vs\.?\s+C\d+\b)/
+- __rt [own path] | 26 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Merge 1
+    /^RETRACTED\s*:\s*(D\d+)\s+VS\.?\s+(C\d+)\s*\.?$/
+- __rtH [own path] | 26 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Merge 1
+    /^RETRACTED\s*:\s*D\d+\s+VS\.?\s+C\d+\s*\S/
+- __UD [own path] | 6 places | e.g. engine lib:Alt Send Back Build; engine lib:R2 Alt Send Back Build; engine lib:Send Back Build
+    /^[\s>*_-]*(D\d+)\s+vs\.?\s+(C\d+)\b[^\n]{0,200}?:\s*\**\s*UNDERDETERMINED\b/
+- bm [own path] | 8 places | e.g. engine lib:Alternate Payloads; engine lib:Extract Independent Verdict; engine lib:Panel Payloads
+    /^(?:[-•]|\d+[.)])?\s*D(\d+)\s+vs\.?\s+C(\d+)\b/
+- charges [own path] | 12 places | e.g. engine lib:Alt Send Back Build; engine lib:Alt Send Back Record; engine lib:R2 Alt Send Back Build
+    /\bD\d+\s+vs\.?\s+C\d+/
+- COL [own path] | 7 places | e.g. engine node Alternate Merge; engine lib:Alt Gate Record; engine lib:Gate Record
+    /^[\s>-]*(?:\d+[.)]\s*)?(D\d+)\s+vs\.?\s+(C\d+)\b/
+- COL [own path] | 12 places | e.g. engine lib:Alt Send Back Build; engine lib:Alt Send Back Record; engine lib:R2 Alt Send Back Build
+    /^[\s>*_-]*(?:\d+[.)]\s*)?\**\s*(D\d+)\s+vs\.?\s+(C\d+)\b[^\n]{0,200}?:\s*\**\s*(STANDS|UNDERDETERMINED)\b/
+- collLines [own path] | 2 places | e.g. engine lib:Extract Independent Verdict; child lib:Extract Independent Verdict
+    /^[ \t]*(?:[-•]|\d+[.)])?[ \t]*D\d+\s+VS\.?\s+C\d+\b/
+- collLines [own path] | 2 places | e.g. engine lib:Extract Independent Verdict; child lib:Extract Independent Verdict
+    /^[ \t]*COLLISION POINTS[ \t]*:?[ \t]*(?:[-•]|\d+[.)])?[ \t]*D\d+\s+VS\.?\s+C\d+\b/
+- cureRecompute [own path] | 8 places | e.g. engine lib:Alternate Merge Seat; engine lib:Cure Check; engine lib:Panel Cure Check
+    /^D\d+ vs C\d+$/
+- f [own path] | 1 places | e.g. engine node Alternate Merge
+    /^FORCED\s*:\s*(D\d+)\s+vs\.?\s+(C\d+)/
+- f [own path] | 6 places | e.g. engine lib:Alt Send Back Build; engine lib:R2 Alt Send Back Build; engine lib:Send Back Build
+    /^FORCED\s*:\s*D(\d+)\s+vs\.?\s+C(\d+)\b/
+- fm [own path] | 18 places | e.g. engine lib:Alt Judge Enforcer Record; engine lib:Alt Send Back Build; engine lib:Alt Send Back Record
+    /^\s*(?:[-•]\s*|\d+[.)]\s*)?FORCED\s*:\s*(D\d+)\s+vs\.?\s+(C\d+)\b/
+- g [own path] | 12 places | e.g. engine lib:Alt Judge Enforcer Build; engine lib:Alt Send Back Build; engine lib:Judge Enforcer Build
+    /^D\d+\s+vs\.?\s+C\d+\s*(?:\([^)]*\))?\s*:\s*(DEFENDER|CHALLENGER) LINK BROKEN\b/
+- G2 [own path] | 6 places | e.g. engine lib:Alt Send Back Build; engine lib:R2 Alt Send Back Build; engine lib:Send Back Build
+    /^\s*(?:[-\u2022*]\s*|\d+[.)]\s*)?\**D\d+\s+vs\.?\s+C\d+\b(?:\s*\([^)\n]*\))?[^:\n(]*:\s*\**(?:DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN)\b/
+- GR [own path] | 1 places | e.g. engine node Alternate Merge
+    /\b(D\d+)\s+vs\.?\s+(C\d+)\b(?:\s*\([^)\n]{0,80}\))?\s*:\s*\**\s*(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|STANDS|HELD|BROKEN|COLLISION)\b/
+- GR [own path] | 26 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Merge 1
+    /^\s*(?:[-\u2022*]\s*|\d+[.)]\s*)?\**D\d+\s+vs\.?\s+C\d+\b(?:\s*\([^)\n]*\))?[^:\n(]*:\s*\**(?:DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|STANDS|WITHDRAWN)\b/
+- GR [own path] | 24 places | e.g. engine lib:Alt Gate Record; engine lib:Alt Send Back Build; engine lib:Alt Send Back Record
+    /^[\s>*_-]*D(\d+)\s+vs\.?\s+C(\d+)\b[^\n]{0,200}?:\s*\**\s*(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|WITHDRAWN AFTER)/
+- GRADED1 [own path] | 18 places | e.g. engine lib:Alt Gate Record; engine lib:Alt Send Back Record; engine lib:Gate Record
+    /new RegExp('\\bD'+n+'\\s+vs\\.?\\s+C\\d+\\b[^\\n]{0,200}?:\\s*\\**\\s*(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|WITHDRAWN AFTER)')/
+- GROUND_HEAD [own path] | 66 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Build
+    /^(?:[-•]|\d+[.)])?\s*(?:D\d+(?:\s+vs\.?\s+C\d+(?:\s*\/\s*C\d+)*)?(?:\s*\([^)]*\))?|KEYSTONE|RESULT|CLAUSE|REASONING|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENDER CHAIN MARK|CHALLENGER CHAIN /
+- h [own path] | 18 places | e.g. engine lib:Alt Judge Enforcer Record; engine lib:Alt Send Back Build; engine lib:Alt Send Back Record
+    /^\s*(?:[-•]\s*|\d+[.)]\s*)?D\d+\s+vs\.?\s+C\d+\s*\(([^)]*)\)/
+- h [own path] | 8 places | e.g. engine lib:Alternate Payloads; engine lib:Extract Independent Verdict; engine lib:Panel Payloads
+    /^\s*(?:[-•]|\d+[.)])?\s*D\d+\s+vs\.?\s+C\d+\s*\(([^)]*)\)/
+- hm [own path] | 8 places | e.g. engine lib:Alternate Payloads; engine lib:Extract Independent Verdict; engine lib:Panel Payloads
+    /^(?:[-•]\s*|\d+[.)]\s*)?(D\d+\s+vs\.?\s+C\d+)\b[^\n]*?:\s*UNDERDETERMINED\b/
+- HOLD [own path] | 6 places | e.g. engine lib:Alt Judge Enforcer Build; engine lib:Judge Enforcer Build; engine lib:R2 Alt Judge Enforcer Build
+    /^([DC]\d+(?:\s*vs\.?\s*[DC]\d+)?)\s*(?:\([^)]*\))?\s*:\s*(STANDS|UNDERDETERMINED)\b/
+- id [own path] | 50 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Cure Normalize
+    /D\d+\s+vs\.?\s+C\d+/
+- id [own path] | 42 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Cure Build
+    /^(?:[-•]|\d+[.)])?\s*(D\d+\s+VS\.?\s+C\d+)/
+- id [own path] | 12 places | e.g. engine lib:Alt Gate Record; engine lib:Gate Record; engine lib:R2 Alt Gate Record
+    /^D\d+\s+vs\.?\s+C\d+$/
+- k [own path] | 20 places | e.g. engine lib:Alternate Cure Normalize; engine lib:Alternate Merge Seat; engine lib:Cure Check
+    /^D(\d+) VS C(\d+)$/
+- kl2Lines [own path] | 28 places | e.g. engine lib:Alternate Cure Normalize; engine lib:Alternate Merge Seat; engine lib:Alternate Payloads
+    /^\s*(?:[-•]|\d+[.)])?\s*[*_]*\s*D\d+\s+vs\.?\s+C\d+/
+- krulMatch [own path] | 66 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Build
+    /((?:\bD\d+\s*(?:,\s*(?:and\s+)?|\s+and\s+|\s*&\s*))+D\d+)\s*vs\.?\s*(C\d+)\b/
+- lab [own path] | 96 places | e.g. engine node Build Save Body; engine node Format Markdown; engine node Enforcer Build
+    /^D\d+\s+vs\.?\s+C\d+\b/
+- labs [own path] | 7 places | e.g. engine node Alternate Merge; engine lib:Alt Gate Record; engine lib:Gate Record
+    /\b(D\d+)\s+vs\.?\s+(C\d+)\b/
+- LBL [own path] | 19 places | e.g. engine node Build Save Body; engine lib:Alt Send Back Build; engine lib:Alt Send Back Record
+    /^\s*(?:[-\u2022>]\s*|\d+[.)]\s+)?\**\s*(?:[A-Z][A-Z0-9 '\/()-]{2,60}:|D\d+\s+vs\.?\s+C\d+|C\d+\s+vs\.?\s+D\d+|\[|FORCED\b|RESULT\b|KEYSTONE\b|CLAUSE\b|#)/
+- LBL [own path] | 12 places | e.g. engine lib:Alt Send Back Build; engine lib:Alt Send Back Record; engine lib:R2 Alt Send Back Build
+    /\bD\d+\s+vs\.?\s+C\d+\b/
+- m [own path] | 2 places | e.g. engine node Build Save Body; engine node Format Markdown
+    /\((K-S|K-S2|K-LXX|K-C|K-N|K-SC|K-K|K-DG8|K-F|K-L2|K-P)\) -- (D\d+(?: vs C\d+)?|REASONING|CITATION CHECK|KEYSTONE|RESULT|(?:DEFENSE|CHALLENGE) STANDING|(?:DEFENDER|CHALLENGER) CHAIN MARK|(?:CHALLENGER )?CONCEDED LINKS)(?=[ ;:.,\]]|/
+- m [own path] | 2 places | e.g. engine node Build Save Body; engine node Format Markdown
+    /\((K-G\d+)\) -- (D\d+ vs C\d+)/
+- m [own path] | 2 places | e.g. engine node Build Save Body; engine node Format Markdown
+    /VIOLATION -- (D\d+ vs C\d+) /
+- m [own path] | 50 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Cure Normalize
+    /^(?:[-•]|\d+[.)])?\s*D(\d+)\s+vs\.?\s+C(\d+)\b/
+- m [own path] | 66 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Build
+    /^(D\d+) vs (C\d+)$/
+- m [own path] | 30 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Merge 1
+    /^(?:[-•]|\d+[.)])?\s*(D\d+)\s+VS\.?\s+(C\d+)\b/
+- m [own path] | 26 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Merge 1
+    /^(D\d+)\s+VS\.?\s+(C\d+)\b/
+- m [own path] | 26 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Merge 1
+    /^\s*(?:[-\u2022]|\d+[.)])?\s*FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*(D\d+)\s+VS\.?\s+(C\d+)\b/
+- m [own path] | 30 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Merge 1
+    /^D(\d+) VS C(\d+)$/
+- m [own path] | 18 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Gate Build
+    /^(D\d+)\s+vs\.?\s+(C\d+)$/
+- m [own path] | 26 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Merge Seat
+    /^D(\d+)\s+VS\.?\s+C(\d+)$/
+- m [own path] | 26 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Merge 1
+    /^\s*(?:[-•]\s*|\d+[.)]\s*)?(?:FORCED(?:\s*\([^)]*\))?\s*:\s*)?D(\d+)\s+vs\.?\s+C\d+\b(?:\s*\([^)\n]*\))?[^:\n(]*:\s*STANDS\b/
+- m [own path] | 18 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Gate Build
+    /^(?:[-•]\s*|\d+[.)]\s*)?(D\d+\s+vs\.?\s+C\d+)\b[^\n]*?:\s*UNDERDETERMINED\b/
+- m [own path] | 18 places | e.g. engine lib:Alt Gate Record; engine lib:Alt Send Back Record; engine lib:Gate Record
+    /^(D\d+ vs C\d+)\b([^]*?)[\s;\/|-]*(FORCED[^:]{0,20}: *\1\b[^]*)$/
+- m [own path] | 12 places | e.g. engine lib:Alt Gate Record; engine lib:Gate Record; engine lib:R2 Alt Gate Record
+    /^FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*(D\d+)\s+vs\.?\s+(C\d+)/
+- m [own path] | 12 places | e.g. engine lib:Alt Gate Record; engine lib:Gate Record; engine lib:R2 Alt Gate Record
+    /^(?:RESTATED\s*:\s*)?(?:FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*)?(D\d+)\s+vs\.?\s+(C\d+)\b/
+- m [own path] | 6 places | e.g. engine lib:Alt Judge Enforcer Build; engine lib:Judge Enforcer Build; engine lib:R2 Alt Judge Enforcer Build
+    /^(?:FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*)?([DC]\d+)\s*vs\.?\s*([DC]\d+)/
+- m [own path] | 12 places | e.g. engine lib:Alt Judge Enforcer Build; engine lib:Alt Send Back Build; engine lib:Judge Enforcer Build
+    /^D(\d+)\s+vs\.?\s+C(\d+)\b/
+- m [own path] | 6 places | e.g. engine lib:Alt Judge Enforcer Build; engine lib:Judge Enforcer Build; engine lib:R2 Alt Judge Enforcer Build
+    /^(?:FORCED\s*:\s*)?(D\d+)\s+vs\.?\s+(C\d+)\b/
+- m [own path] | 6 places | e.g. engine lib:Alt Judge Enforcer Build; engine lib:Judge Enforcer Build; engine lib:R2 Alt Judge Enforcer Build
+    /^(?:FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*)?D(\d+)\s*(?:vs\.?\s*C\d+)?\s*(?:\([^)]*\))?\s*:\s*DEFENDER LINK BROKEN\b/
+- m [own path] | 6 places | e.g. engine lib:Alt Send Back Build; engine lib:R2 Alt Send Back Build; engine lib:Send Back Build
+    /\bD(\d+)\s+vs\.?\s+C(\d+)\b/
+- m [own path] | 20 places | e.g. engine lib:Alternate Cure Normalize; engine lib:Alternate Merge Seat; engine lib:Cure Check
+    /^\s*(?:[-•]\s*)?RESTATED\s*:\s*(D\d+)\s+vs\.?\s+(C\d+)/
+- m [own path] | 20 places | e.g. engine lib:Alternate Cure Normalize; engine lib:Alternate Merge Seat; engine lib:Cure Check
+    /^D(\d+)\s+vs\.?\s+C(\d+)$/
+- m [own path] | 20 places | e.g. engine lib:Alternate Cure Normalize; engine lib:Alternate Merge Seat; engine lib:Cure Check
+    /^D(\d+) vs C(\d+)$/
+- m [own path] | 20 places | e.g. engine lib:Alternate Cure Normalize; engine lib:Alternate Merge Seat; engine lib:Cure Check
+    /^D(\d+)(?:\s+vs\.?\s+C(\d+))?/
+- m [own path] | 12 places | e.g. engine lib:Alternate Merge 1; engine lib:Alternate Merge Seat; engine lib:Cure Check
+    /^(?:[-\u2022]\s*)?FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*(D\d+)\s+vs\.?\s+(C\d+)/
+- m [own path] | 12 places | e.g. engine lib:Alternate Merge 1; engine lib:Alternate Merge Seat; engine lib:Cure Check
+    /^(D\d+\s+VS\.?\s+C\d+|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|RESULT|CLAUSE|KEYSTONE)\b/
+- m [own path] | 12 places | e.g. engine lib:Alternate Merge 1; engine lib:Alternate Merge Seat; engine lib:Cure Check
+    /^(D\d+)\s+vs\.?\s+(C\d+)\s*\(([^)]*)\)\s*:\s*([A-Z][A-Z -]*[A-Z])/
+- m [own path] | 6 places | e.g. engine lib:Alternate Payloads; engine lib:Panel Payloads; engine lib:R2 Alternate Payloads
+    /^D(\d+)\s+vs\.?\s+C(\d+)\b\s*(?:\([^)]*\))?\s*:\s*(DEFENDER|CHALLENGER) LINK BROKEN\b/
+- m [own path] | 6 places | e.g. engine lib:Alternate Payloads; engine lib:Panel Payloads; engine lib:R2 Alternate Payloads
+    /^[*_>-]*\s*(D\d+)\s+vs\s+(C\d+(?:\s*\/\s*C\d+)*)\s*(?:\(([^)]*)\))?/
+- m [inside ri5/ri6 call: fallback] | 8 places | e.g. engine lib:Alternate Payloads; engine lib:Extract Independent Verdict; engine lib:Panel Payloads
+    /^\s*(?:[-•*]\s*|\d+[.)]\s*)?\**(D\d+)\s+vs\.?\s+(C\d+)\b(?:\s*\([^)\n]*\))?[^:\n(]*:\s*\**(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|WITHDRAWN)\b/
+- m [own path] | 8 places | e.g. engine lib:Alternate Payloads; engine lib:Extract Independent Verdict; engine lib:Panel Payloads
+    /^\s*(?:[-•*]\s*)?RESTATED\s*:\s*(D\d+)\s+vs\.?\s+(C\d+)/
+- mc [own path] | 30 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Merge Seat
+    /^(?:[-•]|\d+[.)])?\s*(D\d+)(?:\s+VS\.?\s+(C\d+))?\b/
+- mc [own path] | 30 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Merge Seat
+    /^(?:[-•]|\d+[.)])?\s*(D\d+)\s+VS\.?\s+(C\d+)\b/
+- p [own path] | 34 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Merge 1
+    /^(D\d+)\s+vs\.?\s+(C\d+)$/
+- pm [own path] | 12 places | e.g. engine lib:Alt Send Back Build; engine lib:Alt Send Back Record; engine lib:R2 Alt Send Back Build
+    /\b(D\d+)\s+vs\.?\s+(C\d+)/
+- pm [own path] | 12 places | e.g. engine lib:Alt Send Back Build; engine lib:Alt Send Back Record; engine lib:R2 Alt Send Back Build
+    /^\s*(?:FORCED\s*:\s*)?D\d+\s+vs\s+C\d+\s*\(([^)]*)\)/
+- pm [own path] | 6 places | e.g. engine lib:Alt Send Back Build; engine lib:R2 Alt Send Back Build; engine lib:Send Back Build
+    /\b(D\d+\s+vs\.?\s+C\d+)\b/
+- pm [own path] | 6 places | e.g. engine lib:Alt Send Back Record; engine lib:R2 Alt Send Back Record; engine lib:Send Back Record
+    /\b(D\d+)\s*vs\.?\s*(C\d+)\b/
+- PR [own path] | 26 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Merge 1
+    /^\s*(?:[-\u2022]|\d+[.)])?\s*(?:FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*)?(D\d+)\s+VS\.?\s+(C\d+)\b/
+- prop item [own path] | 6 places | e.g. engine lib:Alt Judge Enforcer Build; engine lib:Judge Enforcer Build; engine lib:R2 Alt Judge Enforcer Build
+    /^(?:FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*)?([DC]\d+(?:\s*vs\.?\s*[DC]\d+)?)/
+- prop item [own path] | 6 places | e.g. engine lib:Alt Judge Enforcer Build; engine lib:Judge Enforcer Build; engine lib:R2 Alt Judge Enforcer Build
+    /^(D\d+\s*vs\.?\s*C\d+)/
+- q [own path] | 18 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Gate Build
+    /^D(\d+)\s+VS\.?\s+C(\d+)$/
+- q [own path] | 12 places | e.g. engine lib:Alt Gate Record; engine lib:Gate Record; engine lib:R2 Alt Gate Record
+    /^D(\d+) VS C(\d+)$/
+- resWord [own path] | 1 places | e.g. engine node Format Markdown
+    /(?:^|\n|\\n)[ \t*_>-]*(D[0-9]+ vs C[0-9]+)[^\n\\]*?:[ \t*_]*CHALLENGER LINK BROKEN/
+- retr [own path] | 6 places | e.g. engine lib:Alt Judge Enforcer Build; engine lib:Judge Enforcer Build; engine lib:R2 Alt Judge Enforcer Build
+    /^RETRACTED[:\s]+D(\d+)\s*vs\.?\s*C\d+/
+- ri5Restated2024 [own path] | 20 places | e.g. engine lib:Alternate Cure Normalize; engine lib:Alternate Merge Seat; engine lib:Cure Check
+    /^D\d+\s+vs\.?\s+C\d+$/
+- ri5Restated2024 [own path] | 20 places | e.g. engine lib:Alternate Cure Normalize; engine lib:Alternate Merge Seat; engine lib:Cure Check
+    /^(D\d+)\s+vs\.?\s+(C\d+)$/
+- rudPair2024 [own path] | 18 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Gate Build
+    /\bD\d+\s+vs\.?\s+C\d+\b/
+- SB_FORM [own path] | 26 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Merge 1
+    /^(?:(?:DEFENDER|CHALLENGER)\s*\|\s*\[?\s*[CD]R\d\s*\]?\s*\||D\d+\s+vs\.?\s+C\d+\b|D\d+\s*(?::|--|\u2014)|(?:CHALLENGER\s+)?CONCEDED LINKS\s*:|(?:DEFENSE|CHALLENGE) STANDING\s*:|KEYSTONE\s*:|CLAUSE\s*:|ANSWER CHECK\s*:|FORCED(?:\s*/
+- sid [own path] | 30 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Merge Seat
+    /^(?:[-•]|\d+[.)])?\s*(D\d+\s+VS\.?\s+C\d+)/
+- sm [own path] | 26 places | e.g. engine lib:Alt Gate Build; engine lib:Alt Gate Record; engine lib:Alternate Merge 1
+    /^(D\d+)\s+vs\.?\s+(C\d+)$/

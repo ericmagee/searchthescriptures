@@ -1,0 +1,28 @@
+reader node used: Alternate Payloads
+READER | D1 vs C2 (2 Samuel 7:12): STANDS -- answered in [CR3]        | COLLISION STANDS 
+READER | **D1 vs C2 (Acts 2:30): CHALLENGER LINK BROKEN -- GROUND: x  | COLLISION CHALLENGER LINK BROKEN 
+READER | D1 vs C2 (Acts 2:30): DEFENDER LINK BROKEN -- GROUND: x      | COLLISION DEFENDER LINK BROKEN 
+READER | - D1 vs C2: UNDERDETERMINED -- x                             | COLLISION UNDERDETERMINED 
+READER | 1. D1 vs C2 (Luke 1:35): DEFENDER LINK BROKEN -- x           | COLLISION DEFENDER LINK BROKEN 
+READER | FORCED: D2 vs C1 (Matthew 1:18): DEFENDER LINK BROKEN -- x   | null null code MALFORMED_FORCED
+READER | FORCED (Commitment 5): D2 vs C1: DEFENDER LINK BROKEN -- x   | null null code MALFORMED_FORCED
+READER | D1: STANDS                                                   | LINK STATE STANDS 
+READER | > D3 vs C1 (Isaiah 7:14): UNDERDETERMINED -- x               | COLLISION UNDERDETERMINED 
+READER | D2 vs C3: WITHDRAWN AFTER [DR3] -- x                         | COLLISION WITHDRAWN 
+READER | **D4 vs C2**: CHALLENGER LINK BROKEN -- x                    | COLLISION CHALLENGER LINK BROKEN 
+SITE __UD      (6 places) accepts: 00010000100 
+SITE COL       (12 places) accepts: 10010000100 
+SITE g         (12 places) accepts: 00100000000 
+SITE G2        (6 places) accepts: 01101000001 
+SITE GR        (1 places) accepts: 11111110100 | shapes only this regex reads (reader gives no COLLISION): "FORCED: D2 vs C1 (Matthew 1:18): DEFENDER LIN", "FORCED (Commitment 5): D2 vs C1: DEFENDER LIN"
+SITE GR        (26 places) accepts: 11111000011 
+SITE GR        (24 places) accepts: 01110000111 
+SITE GRADED1   (18 places) accepts: 01111000000 
+SITE hm        (8 places) accepts: 00010000000 
+SITE HOLD      (6 places) accepts: 10000001000 | shapes only this regex reads (reader gives no COLLISION): "D1: STANDS"
+SITE m         (26 places) accepts: 10000000000 
+SITE m         (18 places) accepts: 00010000000 
+SITE m         (6 places) accepts: 00100110000 | shapes only this regex reads (reader gives no COLLISION): "FORCED: D2 vs C1 (Matthew 1:18): DEFENDER LIN", "FORCED (Commitment 5): D2 vs C1: DEFENDER LIN"
+SITE m         (6 places) accepts: 00100000000 
+SITE m         (8 places) accepts: 01101000011 
+SITE resWord   (1 places) accepts: 01000000001 
