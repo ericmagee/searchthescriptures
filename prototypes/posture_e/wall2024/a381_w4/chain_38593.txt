@@ -11,7 +11,7 @@ same    Judge Enforcer Resume#0            x 244 | s262 reproduces stored true |
 same    Judge Enforcer Call deepseek#0     x 246 | s262 reproduces stored true | reads field false  
 same    Judge Enforcer Retry Build#0       x 247 | s262 reproduces stored true | reads field false  
 same    Judge Enforcer Resend Build#0      x 250 | s262 reproduces stored true | reads field false  
-same    Judge Enforcer Record#0            x 252 | s262 reproduces stored false | reads field false  
+same    Judge Enforcer Record#0            x 252 | s262 reproduces stored true | reads field false  
 same    Send Back Build#0                  x 253 | s262 reproduces stored true | reads field false  
 CHANGED Send Back Record#0                 x 256 | s262 reproduces stored true | reads field false  
       out.0.sb_rows.8.cure_status 
@@ -36,7 +36,7 @@ same    Early Alternate Reply#0            x 273 | s262 reproduces stored true |
 same    Alternate Payloads#0               x 275 | s262 reproduces stored true | reads field true  
 same    Alternate Cure Build#0             x 277 | s262 reproduces stored true | reads field false  
 same    Alternate Cure Normalize#0         x 279 | s262 reproduces stored true | reads field false  
-CHANGED Alternate Merge Seat#0             x 281 | s262 reproduces stored false | reads field true  
+CHANGED Alternate Merge Seat#0             x 281 | s262 reproduces stored true | reads field true  
       out.0.bodies.1 
         s262:   "{\"payload\":{\"debate_id\":\"eebfa022-fec6-4d6f-9c04-2437e3affcf2\",\"judge_seat\":\"chatgpt\",\"judge_api_model\":\"openai/gpt-6.1-terra\",\"verdict_raw\":\"{\\n  \\\"verdict_tag\\\": \\\"BROKEN\\\",\\n  \\\"defense_standing\\\": \\\"PROP-DEPENDENT\\\",\\n  \\\"challenge_standing\\\": \\\"PROP-DE 
         target: "{\"payload\":{\"debate_id\":\"eebfa022-fec6-4d6f-9c04-2437e3affcf2\",\"judge_seat\":\"chatgpt\",\"judge_api_model\":\"openai/gpt-6.1-terra\",\"verdict_raw\":\"{\\n  \\\"verdict_tag\\\": \\\"BROKEN\\\",\\n  \\\"defense_standing\\\": \\\"PROP-DEPENDENT\\\",\\n  \\\"challenge_standing\\\": \\\"PROP-DE
@@ -63,7 +63,7 @@ same    Alt Reread Record#0                x 296 | s262 reproduces stored true |
 same    Alt Gate Build#0                   x 297 | s262 reproduces stored true | reads field false  
 same    Alt Late Gate Build#0              x 300 | s262 reproduces stored true | reads field false  
 same    Alt Gate Record#0                  x 302 | s262 reproduces stored true | reads field false  
-CHANGED Alternate Merge 1#0                x 303 | s262 reproduces stored false | reads field true  
+CHANGED Alternate Merge 1#0                x 303 | s262 reproduces stored true | reads field true  
       out.0.bodies.1 
         s262:   "{\"payload\":{\"debate_id\":\"eebfa022-fec6-4d6f-9c04-2437e3affcf2\",\"judge_seat\":\"chatgpt\",\"judge_api_model\":\"openai/gpt-6.1-terra\",\"verdict_raw\":\"{\\n  \\\"verdict_tag\\\": \\\"BROKEN\\\",\\n  \\\"defense_standing\\\": \\\"PROP-DEPENDENT\\\",\\n  \\\"challenge_standing\\\": \\\"PROP-DE 
         target: "{\"payload\":{\"debate_id\":\"eebfa022-fec6-4d6f-9c04-2437e3affcf2\",\"judge_seat\":\"chatgpt\",\"judge_api_model\":\"openai/gpt-6.1-terra\",\"verdict_raw\":\"{\\n  \\\"verdict_tag\\\": \\\"BROKEN\\\",\\n  \\\"defense_standing\\\": \\\"PROP-DEPENDENT\\\",\\n  \\\"challenge_standing\\\": \\\"PROP-DE
@@ -79,7 +79,7 @@ CHANGED Alternate Merge 1#0                x 303 | s262 reproduces stored false 
       out.0.enforcer_log.106.cure_reason 
         s262:   "SEND-BACK CHANGE TO: CHALLENGER CONCEDED LINKS: 2 -- Premise 1 is NOT VOID but UNEXHIBITED because its proven press was left unmet; premise 2 is NOT VOID but UNEXHIBITED because its answers to its proven presses rely on absence. -- [DR3] answers premise 2 that Romans 1:3 “names no mother, no womb,  
         target: "SEND-BACK CHANGE TO: CHALLENGER CONCEDED LINKS: 2 -- Premise 1 is NOT VOID but UNEXHIBITED because its proven press was left unmet; premise 2 is NOT VOID but UNEXHIBITED because its answers to its proven presses rely on absence. -- [DR3] answers premise 2 that Romans 1:3 “names no mother, no womb, 
-CHANGED Second Alternate?#0                x 304 | s262 reproduces stored false | reads field false  
+CHANGED Second Alternate?#0                x 304 | s262 reproduces stored true | reads field false  
       out.0.__a379.R.bodies.1 
         s262:   "{\"payload\":{\"debate_id\":\"eebfa022-fec6-4d6f-9c04-2437e3affcf2\",\"judge_seat\":\"chatgpt\",\"judge_api_model\":\"openai/gpt-6.1-terra\",\"verdict_raw\":\"{\\n  \\\"verdict_tag\\\": \\\"BROKEN\\\",\\n  \\\"defense_standing\\\": \\\"PROP-DEPENDENT\\\",\\n  \\\"challenge_standing\\\": \\\"PROP-DE 
         target: "{\"payload\":{\"debate_id\":\"eebfa022-fec6-4d6f-9c04-2437e3affcf2\",\"judge_seat\":\"chatgpt\",\"judge_api_model\":\"openai/gpt-6.1-terra\",\"verdict_raw\":\"{\\n  \\\"verdict_tag\\\": \\\"BROKEN\\\",\\n  \\\"defense_standing\\\": \\\"PROP-DEPENDENT\\\",\\n  \\\"challenge_standing\\\": \\\"PROP-DE
@@ -95,8 +95,8 @@ CHANGED Second Alternate?#0                x 304 | s262 reproduces stored false 
       out.0.__a379.R.enforcer_log.106.cure_reason 
         s262:   "SEND-BACK CHANGE TO: CHALLENGER CONCEDED LINKS: 2 -- Premise 1 is NOT VOID but UNEXHIBITED because its proven press was left unmet; premise 2 is NOT VOID but UNEXHIBITED because its answers to its proven presses rely on absence. -- [DR3] answers premise 2 that Romans 1:3 “names no mother, no womb,  
         target: "SEND-BACK CHANGE TO: CHALLENGER CONCEDED LINKS: 2 -- Premise 1 is NOT VOID but UNEXHIBITED because its proven press was left unmet; premise 2 is NOT VOID but UNEXHIBITED because its answers to its proven presses rely on absence. -- [DR3] answers premise 2 that Romans 1:3 “names no mother, no womb, 
-NONCODE Second Alternate Needed?#0 input differs: s262 vs stored true | target vs s262 true
-CHANGED Alternate Merge#0                  x 306 | s262 reproduces stored false | reads field false  
+NONCODE Second Alternate Needed?#0 input differs: s262 vs stored false | target vs s262 true
+CHANGED Alternate Merge#0                  x 306 | s262 reproduces stored true | reads field false  
       out.0.bodies.1 
         s262:   "{\"payload\":{\"debate_id\":\"eebfa022-fec6-4d6f-9c04-2437e3affcf2\",\"judge_seat\":\"chatgpt\",\"judge_api_model\":\"openai/gpt-6.1-terra\",\"verdict_raw\":\"{\\n  \\\"verdict_tag\\\": \\\"BROKEN\\\",\\n  \\\"defense_standing\\\": \\\"PROP-DEPENDENT\\\",\\n  \\\"challenge_standing\\\": \\\"PROP-DE 
         target: "{\"payload\":{\"debate_id\":\"eebfa022-fec6-4d6f-9c04-2437e3affcf2\",\"judge_seat\":\"chatgpt\",\"judge_api_model\":\"openai/gpt-6.1-terra\",\"verdict_raw\":\"{\\n  \\\"verdict_tag\\\": \\\"BROKEN\\\",\\n  \\\"defense_standing\\\": \\\"PROP-DEPENDENT\\\",\\n  \\\"challenge_standing\\\": \\\"PROP-DE
@@ -112,7 +112,7 @@ CHANGED Alternate Merge#0                  x 306 | s262 reproduces stored false 
       out.0.enforcer_log.112.cure_reason 
         s262:   "SEND-BACK CHANGE TO: CHALLENGER CONCEDED LINKS: 2 -- Premise 1 is NOT VOID but UNEXHIBITED because its proven press was left unmet; premise 2 is NOT VOID but UNEXHIBITED because its answers to its proven presses rely on absence. -- [DR3] answers premise 2 that Romans 1:3 “names no mother, no womb,  
         target: "SEND-BACK CHANGE TO: CHALLENGER CONCEDED LINKS: 2 -- Premise 1 is NOT VOID but UNEXHIBITED because its proven press was left unmet; premise 2 is NOT VOID but UNEXHIBITED because its answers to its proven presses rely on absence. -- [DR3] answers premise 2 that Romans 1:3 “names no mother, no womb, 
-NONCODE Dry?#0 input differs: s262 vs stored true | target vs s262 true
+NONCODE Dry?#0 input differs: s262 vs stored false | target vs s262 true
 same    Panel Done#0                       x 315 | s262 reproduces stored true | reads field false  
 same    Panel Tokens#0                     x 316 | s262 reproduces stored true | reads field false  
 NONCODE Get Judgments#0 input differs: s262 vs stored false | target vs s262 true
