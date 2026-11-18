@@ -1,0 +1,7 @@
+v61 ENGINE RESULT (ert386)       t401 cites v184 x1 | t403 cites section 8 x1 | equal apart from that: true | v184 gone: true
+   t403 RULE: RULE: engine_manual section 8, STANDINGS, RESULT and VERDICT DEFINITIONS, then the tie rule KB-0030
+v25 RECOMPUTED (cureRecompute)   t401 cites v184 x1 | t403 cites section 8 x1 | equal apart from that: true | v184 gone: true
+   t403 RULE: RULE: engine_manual section 8, STANDINGS, RESULT and VERDICT DEFINITIONS
+v37 DERIVED (sbApply2024)        t401 cites v184 x1 | t403 cites section 8 x1 | equal apart from that: true | v184 gone: true
+   t403 RULE: RULE: engine_manual section 8 and the tie rule KB-0030, applied to the corrected lines
+RESULT: PASS
