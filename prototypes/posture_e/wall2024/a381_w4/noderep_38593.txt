@@ -1,0 +1,27 @@
+NODE Alt Gate Build         | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE Alt Gate Record        | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE Alt Send Back Record   | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE Alternate Merge 1      | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE Alternate Merge Seat   | s262 reproduces stored (time stamps aside): true | target == s262: false  
+    out.0.bodies.1 
+      s262:   "{\"payload\":{\"debate_id\":\"eebfa022-fec6-4d6f-9c04-2437e3affcf2\",\"judge_seat\":\"chatgpt\",\"judge_api_model\":\"openai/gpt-6.1-terra\",\"verdict_raw\":\"{\\n  \\\"verdict_tag\\\": \\\"BROKEN\\\",\\n  \\\"defense_standing\\\": \\\"PROP-DEPENDENT\\\",\\n  \\\"challenge_standing\\\": \\\"PROP-DEPENDENT\\\",\\n  \\\"conceded_links\\\": 2,\\n  \\\"challenger_conceded_links\\\": 2,\\n  \\\"counte 
+      target: "{\"payload\":{\"debate_id\":\"eebfa022-fec6-4d6f-9c04-2437e3affcf2\",\"judge_seat\":\"chatgpt\",\"judge_api_model\":\"openai/gpt-6.1-terra\",\"verdict_raw\":\"{\\n  \\\"verdict_tag\\\": \\\"BROKEN\\\",\\n  \\\"defense_standing\\\": \\\"PROP-DEPENDENT\\\",\\n  \\\"challenge_standing\\\": \\\"PROP-DEPENDENT\\\",\\n  \\\"conceded_links\\\": 2,\\n  \\\"challenger_conceded_links\\\": 2,\\n  \\\"counte
+NODE Gate Build             | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE Gate Record            | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE Panel Cure Check       | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE Send Back Record       | s262 reproduces stored (time stamps aside): true | target == s262: false  
+    out.0.sb_rows.8.cure_status 
+      s262:   "CURED" 
+      target: "UNCURED"
+    out.0.sb_rows.8.cure_reason 
+      s262:   "SEND-BACK CHANGE TO: CHALLENGER CONCEDED LINKS: 2 -- Premise 1 is NOT VOID but UNEXHIBITED because its proven press was left unmet; premise 2 is NOT VOID but UNEXHIBITED because its answers to its proven presses rely on absence. -- [DR3] answers premise 1 that “Matthew 1:19 gives two joined grounds,” while retaining the claim that “the scorn such a publick making would bring stands with the tradi 
+      target: "SEND-BACK CHANGE TO: CHALLENGER CONCEDED LINKS: 2 -- Premise 1 is NOT VOID but UNEXHIBITED because its proven press was left unmet; premise 2 is NOT VOID but UNEXHIBITED because its answers to its proven presses rely on absence. -- [DR3] answers premise 1 that “Matthew 1:19 gives two joined grounds,” while retaining the claim that “the scorn such a publick making would bring stands with the tradi
+    out.0.sb_rows.9.cure_status 
+      s262:   "CURED" 
+      target: "UNCURED"
+    out.0.sb_rows.9.cure_reason 
+      s262:   "SEND-BACK CHANGE TO: CHALLENGER CONCEDED LINKS: 2 -- Premise 1 is NOT VOID but UNEXHIBITED because its proven press was left unmet; premise 2 is NOT VOID but UNEXHIBITED because its answers to its proven presses rely on absence. -- [DR3] answers premise 2 that Romans 1:3 “names no mother, no womb, and no Mary of David in its words.” | ENFORCER: (right: SPARED): The VOID turns on the props clause  
+      target: "SEND-BACK CHANGE TO: CHALLENGER CONCEDED LINKS: 2 -- Premise 1 is NOT VOID but UNEXHIBITED because its proven press was left unmet; premise 2 is NOT VOID but UNEXHIBITED because its answers to its proven presses rely on absence. -- [DR3] answers premise 2 that Romans 1:3 “names no mother, no womb, and no Mary of David in its words.” | ENFORCER: (right: SPARED): The VOID turns on the props clause 
+NODE Late Gate Build        | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE Alt Late Gate Build    | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODES WITH A CHANGE: 2

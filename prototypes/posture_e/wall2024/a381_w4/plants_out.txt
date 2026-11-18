@@ -1,0 +1,11 @@
+PASS | 38593 chatgpt line | Gate Record | old {"1":"SPARED","2":"SPARED"} | new {"1":"COUNTED","2":"COUNTED"} | want {"1":"COUNTED","2":"COUNTED"}
+PASS | mirror, defender side | Gate Record | old {"1":"SPARED","2":"SPARED"} | new {"1":"COUNTED","2":"COUNTED"} | want {"1":"COUNTED","2":"COUNTED"}
+PASS | plain not VOID | Gate Record | old {"1":"SPARED"} | new {"1":"SPARED"} | want {"1":"SPARED"}
+PASS | no grade word after but | Gate Record | old {"1":"SPARED"} | new {"1":"SPARED"} | want {"1":"SPARED"}
+PASS | not UNEXHIBITED but VOID | Gate Record | old {"1":"SPARED"} | new {"1":"VOID"} | want {"1":"VOID"}
+PASS | negated Y | Gate Record | old {"1":"SPARED"} | new {"1":"SPARED"} | want {"1":"SPARED"}
+PASS | but premise N (W2) | Gate Record | old {"1":"SPARED","2":"SPARED"} | new {"1":"SPARED","2":"SPARED"} 
+PASS | Y then not X | Gate Record | old {"1":"COUNTED"} | new {"1":"COUNTED"} | want {"1":"COUNTED"}
+PASS | comma before but, it is | Gate Record | old {"1":"SPARED"} | new {"1":"COUNTED"} | want {"1":"COUNTED"}
+PASS | rather | Gate Record | old {"1":"SPARED"} | new {"1":"COUNTED"} | want {"1":"COUNTED"}
+ALL PLANTS PASS (3 variants)
