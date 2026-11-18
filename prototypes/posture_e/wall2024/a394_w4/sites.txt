@@ -1,0 +1,140 @@
+#### SITE 0 __UD
+
+  LIB 2898 [3 stubs: Alt Send Back Build, R2 Alt Send Back Build, Send Back Build]
+ const __UD=/^[\s>*_-]*(D\d+)\s+vs\.?\s+(C\d+)\b[^\n]{0,200}?:\s*\**\s*UNDERDETERMINED\b/i;
+
+#### SITE 1 COL
+
+  LIB 3501 [6 stubs: Alt Send Back Build, Alt Send Back Record, R2 Alt Send Back Build, R2 Alt Send Back Record, Send Back Build, Send Back Record]
+ic 17:50 11-16 "UNDERDETERMINED, HELD, AND BROKEN INCLUDED"): every grade carries its layers. LIVE: [L1] on STANDS; RESULT and KEYSTONE name the deciding collision labels and carry an [L1]. TRIAL one run: the 6-word quotations on STANDS and UNDERDETERMINED (sent back and logged; no seat removed) */
+ const N=s=>String(s==null?'':s).toLowerCase().replace(/\\+"/g,'"').replace(/[‘’ʼ`]/g,"'").replace(/\[(?:l[1-4]|[cd]r[1-4])\]/g,' ').replace(/[\[\]]/g,'').replace(/'/g,'').replace(/[^a-z0-9Ͱ-Ͽἀ-῿֐-׿]+/g,' ').replace(/\s+/g,' ').trim();
+ const QR=/"[^"\n]{8,}?"|“[^”\n]{8,}?”/g;
+ const own=t=>N(String(t||'').replace(/[*_`]+/g,'').replace(QR,' | '));
+ const LBL=/\bD\d+\s+vs\.?\s+C\d+\b/i;
+ const COL=/^[\s>*_-]*(?:\d+[.)]\s*)?\**\s*(D\d+)\s+vs\.?\s+(C\d+)\b[^\n]{0,200}?:\s*\**\s*(STANDS|UNDERDETERMINED)\b/i;
+ const RES=/^[\s>*_-]*\**\s*RESULT\s*:/i,KEY=/^[\s>*_-]*\**\s*KEYSTONE\s*:\s*\**\s*(D\d+)\b/i;
+ const DERIVED=/derived by the engine|derived after the send-back|\brecomputed\b|BROKEN BY A CONFIRMED CLOSING CONTRADICTION/i;
+ const l1=(t,ctx)=>{let c;try{c=ECL.check('FORCED: X -- GROUND: '+String(t||''),ctx||{});}catch(e){return {ok:true,s:'UNREAD'};}return {ok:c.l1==='COUNTED'||c.l1==='UNVERIFIABLE',s:c.l1};};
+ const run6=(line,txt)=>{const T=' '+txt+' ';const qs=[];String(line||'').replace(/\\+"/g,'"').replace(QR,m=>{qs.push(m.slice(1,-1));return m;});for(const q of qs){const w=N(q).split(' ').filter(Boolean);for(let i=0;i+6<=w.length;i++){const r=w.slice(i,i+6).join(' ');if(T.includes(' 
+
+#### SITE 2 g
+
+  LIB 2922 [6 stubs: Alt Judge Enforcer Build, Alt Send Back Build, Judge Enforcer Build, R2 Alt Judge Enforcer Build, R2 Alt Send Back Build, Send Back Build]
+const __ecC=l=>{const t=String(l||'').replace(/[*_`]+/g,'').trim();const m=t.match(/^D(\d+)\s+vs\.?\s+C(\d+)\b/i),a=t.match(/\[AUDIT: LINK (\d+) BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- (DEFENDER|CHALLENGER)\b/),g=a?a[2]:(t.match(/^D\d+\s+vs\.?\s+C\d+\s*(?:\([^)]*\))?\s*:\s*(DEFENDER|CHALLENGER) LINK BROKEN\b/)||[])[1],n=m&&g&&(g==='DEFENDER'?m[1]:m[2]);return n&&(!a||a[1]===n)&&__cc.has(g+' '+n)?'D'+m[1]+' VS C'+m[2]:null;};
+
+#### SITE 3 G2
+
+  LIB 2933 [3 stubs: Alt Send Back Build, R2 Alt Send Back Build, Send Back Build]
+ const items=list.slice(0,MAX).map((x,k)=>({sid:'S'+(k+1),rule:x.rule,item:x.item||'',line:x.flagged_line||x.response_line||'',reason:why(x),ecl:x.ecl||null,ecw:(x.rule==='E-COL'||x.rule==='E-HOLD')?ECW.item(x):null,lay:x.lay||null,und:x.und||null,abs:x.abs||null,pab:x.pab||null,mnp:x.mnp||null,imp:x.imp||null,ksc:x.ksc||null,b7:x.b7||null,src:x}));  {const F2=/^\s*(?:[-\u2022]|\d+[.)])?\s*FORCED\b/i;const P2=l=>{const m=String(l||'').replace(/[*_`]+/g,'').match(/\bD(\d+)\s+vs\.?\s+C(\d+)\b/i);return m?'D'+m[1]+' vs C'+m[2]:null;};const G2=/^\s*(?:[-\u2022*]\s*|\d+[.)]\s*)?\**D\d+\s+vs\.?\s+C\d+\b(?:\s*\([^)\n]*\))?[^:\n(]*:\s*\**(?:DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN)\b/;const L2=said[seat].split('\n');for(const i of items.slice()){if(i.rule!=='E-COL'||!F2.test(String(i.line||'').replace(/[*_`]+/g,'')))continue;const p=P2(i.line);if(!p)continue;if(items.some(o=>o!==i&&!F2.test(String(o.line||'').replace(/[*_`]+/g,''))&&P2(o.line)===p))continue;const cl=L2.filter(l=>{const t=l.replace(/[*_`]+/g,'').trim();return G2.test(t)&&P2(t)===p;});if(cl.length!==1)continue;if(items.length>=MAX){not_sent.push({seat,rule:'E-COL',item:p+' (companion for '+i.sid+')',why:'over the '+MAX+'-item transport limit'});continue;}const c={sid:'S'+(items.length+1),rule:'E-COL',item:p+' (collision line for '+i.sid+')',line:cl[0].trim(),reason:'COMPANION ASK (pkgGRT2): no enforcer fla
+
+#### SITE 4 GR
+
+  INLINE Alternate Merge
+brackets */
+const o=__AMOUT&&__AMOUT[0]&&__AMOUT[0].json;if(o&&Array.isArray(o.bodies))o.bodies=o.bodies.map(s=>{try{return __rhd(s);}catch(e){return s;}});}catch(e){}
+try{const __gca=raw=>{/* pkgGCA (ASK 323, W1 4b; TRIAL, record-only): on the final cured text only (AUDIT and EXTRACTOR lines and the standing lines' change lists set aside), (1) a Dn vs Cm pair graded two different ways, (2) KEYSTONE Dk STANDS beside a Dk pair graded DEFENDER LINK BROKEN (or a FORCED line on a Dk pair carrying no other grade); a FORCED line under CHALLENGER LINK BROKEN does not count. */
+ const t=String(raw==null?'':raw).replace(/\\n/g,'\n').replace(/\\"/g,'"');const G=new Map(),out=[];let ks=null;
+ const GR=/\b(D\d+)\s+vs\.?\s+(C\d+)\b(?:\s*\([^)\n]{0,80}\))?\s*:\s*\**\s*(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|STANDS|HELD|BROKEN|COLLISION)\b/g;
+ for(const l0 of t.split('\n')){const l=l0.replace(/[*_`]+/g,'').trim();if(!l||/^\[(?:AUDIT|EXTRACTOR)\b/.test(l)||/^(?:DEFENSE|CHALLENGE) STANDING\s*:/.test(l))continue;
+  const k=l.match(/^KEYSTONE\s*:\s*(D\d+)\s*(?:--|—|–|-|:)?\s*(STANDS|BROKEN|WITHDRAWN)\b/);if(k&&!ks)ks={d:k[1],g:k[2]};
+  for(const m of l.matchAll(GR)){const key=m[1]+' vs '+m[2];if(!G.has(key))G.set(key,new Set());G.get(key).add(m[3]);}
+  const f=l.match(/^FORCED\s*:\s*(D\d+)\s+vs\.?\s+(C\d+)/);if(f){const key=f[1]+' vs '+f[2];if(!G.has(key))G.set(key,new Set());G.get(key).add('FORCED');}}
+ for(const [key,s] of G){const g=[...s].filter(x=>x!=='FORCED');if(g.length>1)out.push('the pair '+key.replace(' vs ','/')+' carr
+
+#### SITE 5 GR
+
+  LIB 1445 [13 stubs: Alt Gate Build, Alt Gate Record, Alternate Merge 1, Alternate Merge Seat, Gate Build, Gate Record, R2 Alt Gate Build, R2 Alt Gate Record, R2 Alternate Merge, R2 Alternate Merge Seat, Late Gate Build, Alt Late Gate Build, R2 Alt Late Gate Build]
+   const GR=/^\s*(?:[-\u2022*]\s*|\d+[.)]\s*)?\**D\d+\s+vs\.?\s+C\d+\b(?:\s*\([^)\n]*\))?[^:\n(]*:\s*\**(?:DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|STANDS|WITHDRAWN)\b/;
+
+#### SITE 6 GR
+
+  LIB 1893 [12 stubs: Alt Gate Record, Alt Send Back Build, Alt Send Back Record, Gate Record, R2 Alt Gate Record, R2 Alt Send Back Build, R2 Alt Send Back Record, Send Back Build, Send Back Record, Late Gate Build, Alt Late Gate Build, R2 Alt Late Gate Build]
+ const GR=/^[\s>*_-]*D(\d+)\s+vs\.?\s+C(\d+)\b[^\n]{0,200}?:\s*\**\s*(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|WITHDRAWN AFTER)/gmi;
+
+#### SITE 7 GRADED1
+
+  LIB 1904 [9 stubs: Alt Gate Record, Alt Send Back Record, Gate Record, R2 Alt Gate Record, R2 Alt Send Back Record, Send Back Record, Late Gate Build, Alt Late Gate Build, R2 Alt Late Gate Build]
+ const GRADED1=n=>new RegExp('\\bD'+n+'\\s+vs\\.?\\s+C\\d+\\b[^\\n]{0,200}?:\\s*\\**\\s*(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|WITHDRAWN AFTER)','i');
+
+#### SITE 8 hm
+
+  LIB 1754 [9 stubs: Alt Gate Build, Alt Gate Record, Gate Build, Gate Record, R2 Alt Gate Build, R2 Alt Gate Record, Late Gate Build, Alt Late Gate Build, R2 Alt Late Gate Build]
+,T1,newk_error:NK.error||null};} function rudPair2024(T){/* ASK 356 (K-RUD pair test; Wall 7523, 7528, 7530, 7531): on the corrected text after the apply, a RESULT graded DEFENDER WINS or CHALLENGER WINS that names a pair "Dn vs Cm" as deciding, where the judge's own collision line for that pair grades it UNDERDETERMINED. A clause holding an open word, or naming the pair only to set it aside, is passed over. TRIAL, record only. */try{const t=String(T||'').replace(/\\n/g,'\n').replace(/\\+"/g,'"').replace(/[*_\x60]+/g,'');const L=t.split('\n').map(l=>l.trim());const nm=p=>p.replace(/\s+vs\.?\s+/i,' vs ').toUpperCase().replace('VS','vs');const und=new Map();
+ for(const l of L){const m=l.match(/^(?:[-•]\s*|\d+[.)]\s*)?(D\d+\s+vs\.?\s+C\d+)\b[^\n]*?:\s*UNDERDETERMINED\b/i);if(m&&!und.has(nm(m[1])))und.set(nm(m[1]),l);}
+ if(!und.size)return [];const OW=/\b(?:open|unsettled|undecided|unresolved|disputed|contested|underdetermined|not decided|undetermined)\b|\bremains?\s+(?:in\s+)?(?:doubt|question|uncertain)\b/i;
+ const aside=(s,i,n)=>{const pre=s.slice(Math.max(0,i-60),i),post=s.slice(i+n,i+n+60);return /\b(?:not|no|neither|nor|aside|apart from|without|except|other than)\s+(?:\S+\s+){0,2}$/i.test(pre)||/^\s*(?:\S+\s+){0,2}?(?:not|no|neither|nor|aside)\b/i.test(post)||/^\s*(?:\S+\s+){0,2}?(?:does|do|did|is|are)\s+not\b/i.test(post);};
+ const out=[];const seen=new Set();for(const l of L){const rm=l.match(/^RESULT\s*:\s*((?:DEFENDER|CHALLENGER)\s+WINS)\b(.*)$/i)
+
+  LIB 2278 [4 stubs: Alternate Payloads, Extract Independent Verdict, Panel Payloads, R2 Alternate Payloads]
+:[^\]]*\]/g,' ').toLowerCase().replace(/[‘’']/g,'').replace(/[^a-z ]/g,' ').replace(/\s+/g,' ').trim()+' ';}
+function rudQuotes(s){const out=[];const re=/“([^”]{2,400})”|"([^"]{2,400})"/g;let m;while((m=re.exec(s)))out.push({q:m[1]||m[2],i:m.index});return out;}
+function rudLines2024(text,ROWS){const items=[],marks=[];const T=String(kkjvText(text)||'').replace(/\\n/g,'\n').replace(/[*_`]+/g,'');
+ if(!T.trim()||!(ROWS&&ROWS.length))return {items,marks};const I={};ROWS.forEach(r=>{if(r&&r.book&&r.chapter!=null&&r.verse!=null)I[r.book+'|'+r.chapter+'|'+r.verse]=String(r.text||'');});
+ const L=T.split('\n').map(l=>l.trim());const open=[];const seen=new Set();
+ for(const l of L){const hm=l.match(/^(?:[-•]\s*|\d+[.)]\s*)?(D\d+\s+vs\.?\s+C\d+)\b[^\n]*?:\s*UNDERDETERMINED\b/i);if(!hm)continue;
+  const label=hm[1].replace(/\s+vs\.?\s+/i,' vs ').toUpperCase().replace('VS','vs');const oi=l.search(/\bopen\b/i);if(oi<0)continue;
+  const vs=[];for(const m of l.matchAll(RUD_REF)){const b=m[1],c=+m[2],a=+m[3],z=+(m[4]||m[3]);for(let v=a;v<=z&&v<a+20;v++)vs.push(b+'|'+c+'|'+v);}
+  for(const qq of rudQuotes(l)){if(qq.i<oi)continue;const f=rudFold(qq.q).trim();if(f.split(' ').length<3)continue;
+   const k=vs.find(k=>I[k]!=null&&rudFold(I[k]).includes(' '+f+' '));
+   if(!k){const miss=vs.filter(k=>I[k]==null);if(miss.length&&!vs.some(k=>I[k]!=null&&rudFold(I[k]).includes(' '+f+' ')))marks.push('[AUDIT v35: RESULT ON AN OPEN LINE NOT CHECKED (K-RUD; TRIAL, list only) -- '+l
+
+#### SITE 9 HOLD
+
+  LIB 3064 [3 stubs: Alt Judge Enforcer Build, Judge Enforcer Build, R2 Alt Judge Enforcer Build]
+const HOLD=/^([DC]\d+(?:\s*vs\.?\s*[DC]\d+)?)\s*(?:\([^)]*\))?\s*:\s*(STANDS|UNDERDETERMINED)\b/;
+
+#### SITE 10 m
+
+  LIB 1530 [13 stubs: Alt Gate Build, Alt Gate Record, Alternate Merge 1, Alternate Merge Seat, Gate Build, Gate Record, R2 Alt Gate Build, R2 Alt Gate Record, R2 Alternate Merge, R2 Alternate Merge Seat, Late Gate Build, Alt Late Gate Build, R2 Alt Late Gate Build]
+CONCEDED LINKS'?', an Oracle concede,':'')+' and is refused. The count stays at its cure value.';}catch(e){return null;}} /* pkgBNS, ASK 295 (Wall 6433 item 2; both steps, Eric 17:40 CST 11-14): a send-back or gate change that sets a defender collision Dk vs Cm to STANDS is NOT APPLIED when E-ASSUME found the fact that link k ASSUMES BOTH NOT STATED (no quoted verse states it). */ function bnsFacts2024(){try{const a=$('Assume Check Record');if(!a||!a.isExecuted)return [];return (((a.first().json||{}).acx||{}).facts||[]).filter(f=>f&&f.both_not_stated);}catch(e){return [];}} function bnsRefuse2024(to){try{const s=String(to==null?'':to).replace(/\\+/g,'').replace(/[*_`]+/g,'');const m=s.match(/^\s*(?:[-•]\s*|\d+[.)]\s*)?(?:FORCED(?:\s*\([^)]*\))?\s*:\s*)?D(\d+)\s+vs\.?\s+C\d+\b(?:\s*\([^)\n]*\))?[^:\n(]*:\s*STANDS\b/i);if(!m)return null;const f=bnsFacts2024().find(z=>z.side==='DEFENDER'&&+z.link===+m[1]);if(!f)return null;return 'the change sets D'+m[1]+' to STANDS, but E-ASSUME found the fact its premise '+f.n+' ASSUMES, "'+String(f.fact).slice(0,160)+'", BOTH NOT STATED: no quoted verse states it (pkgBNS, ASK 295). CHANGE TO the line graded without that fact, or KEEP, and the change stays unapplied.';}catch(e){return null;}} /* pkgNSG (Wall 6569 item 1, E-GATE part; Ruling 383 text test): a send-back or gate change that takes a premise out of the count, on a RULING card or a CONCEDED LINKS line, is NOT APPLIED while E-ASSUME found a fact that premise ASSUMES BOTH NOT STATED (no verse quoted in the deb
+
+#### SITE 11 m
+
+  LIB 1754 [9 stubs: Alt Gate Build, Alt Gate Record, Gate Build, Gate Record, R2 Alt Gate Build, R2 Alt Gate Record, Late Gate Build, Alt Late Gate Build, R2 Alt Late Gate Build]
+,T1,newk_error:NK.error||null};} function rudPair2024(T){/* ASK 356 (K-RUD pair test; Wall 7523, 7528, 7530, 7531): on the corrected text after the apply, a RESULT graded DEFENDER WINS or CHALLENGER WINS that names a pair "Dn vs Cm" as deciding, where the judge's own collision line for that pair grades it UNDERDETERMINED. A clause holding an open word, or naming the pair only to set it aside, is passed over. TRIAL, record only. */try{const t=String(T||'').replace(/\\n/g,'\n').replace(/\\+"/g,'"').replace(/[*_\x60]+/g,'');const L=t.split('\n').map(l=>l.trim());const nm=p=>p.replace(/\s+vs\.?\s+/i,' vs ').toUpperCase().replace('VS','vs');const und=new Map();
+ for(const l of L){const m=l.match(/^(?:[-•]\s*|\d+[.)]\s*)?(D\d+\s+vs\.?\s+C\d+)\b[^\n]*?:\s*UNDERDETERMINED\b/i);if(m&&!und.has(nm(m[1])))und.set(nm(m[1]),l);}
+ if(!und.size)return [];const OW=/\b(?:open|unsettled|undecided|unresolved|disputed|contested|underdetermined|not decided|undetermined)\b|\bremains?\s+(?:in\s+)?(?:doubt|question|uncertain)\b/i;
+ const aside=(s,i,n)=>{const pre=s.slice(Math.max(0,i-60),i),post=s.slice(i+n,i+n+60);return /\b(?:not|no|neither|nor|aside|apart from|without|except|other than)\s+(?:\S+\s+){0,2}$/i.test(pre)||/^\s*(?:\S+\s+){0,2}?(?:not|no|neither|nor|aside)\b/i.test(post)||/^\s*(?:\S+\s+){0,2}?(?:does|do|did|is|are)\s+not\b/i.test(post);};
+ const out=[];const seen=new Set();for(const l of L){const rm=l.match(/^RESULT\s*:\s*((?:DEFENDER|CHALLENGER)\s+WINS)\b(.*)$/i)
+
+  LIB 2278 [4 stubs: Alternate Payloads, Extract Independent Verdict, Panel Payloads, R2 Alternate Payloads]
+:[^\]]*\]/g,' ').toLowerCase().replace(/[‘’']/g,'').replace(/[^a-z ]/g,' ').replace(/\s+/g,' ').trim()+' ';}
+function rudQuotes(s){const out=[];const re=/“([^”]{2,400})”|"([^"]{2,400})"/g;let m;while((m=re.exec(s)))out.push({q:m[1]||m[2],i:m.index});return out;}
+function rudLines2024(text,ROWS){const items=[],marks=[];const T=String(kkjvText(text)||'').replace(/\\n/g,'\n').replace(/[*_`]+/g,'');
+ if(!T.trim()||!(ROWS&&ROWS.length))return {items,marks};const I={};ROWS.forEach(r=>{if(r&&r.book&&r.chapter!=null&&r.verse!=null)I[r.book+'|'+r.chapter+'|'+r.verse]=String(r.text||'');});
+ const L=T.split('\n').map(l=>l.trim());const open=[];const seen=new Set();
+ for(const l of L){const hm=l.match(/^(?:[-•]\s*|\d+[.)]\s*)?(D\d+\s+vs\.?\s+C\d+)\b[^\n]*?:\s*UNDERDETERMINED\b/i);if(!hm)continue;
+  const label=hm[1].replace(/\s+vs\.?\s+/i,' vs ').toUpperCase().replace('VS','vs');const oi=l.search(/\bopen\b/i);if(oi<0)continue;
+  const vs=[];for(const m of l.matchAll(RUD_REF)){const b=m[1],c=+m[2],a=+m[3],z=+(m[4]||m[3]);for(let v=a;v<=z&&v<a+20;v++)vs.push(b+'|'+c+'|'+v);}
+  for(const qq of rudQuotes(l)){if(qq.i<oi)continue;const f=rudFold(qq.q).trim();if(f.split(' ').length<3)continue;
+   const k=vs.find(k=>I[k]!=null&&rudFold(I[k]).includes(' '+f+' '));
+   if(!k){const miss=vs.filter(k=>I[k]==null);if(miss.length&&!vs.some(k=>I[k]!=null&&rudFold(I[k]).includes(' '+f+' ')))marks.push('[AUDIT v35: RESULT ON AN OPEN LINE NOT CHECKED (K-RUD; TRIAL, list only) -- '+l
+
+#### SITE 12 m
+
+  LIB 3135 [3 stubs: Alt Judge Enforcer Build, Judge Enforcer Build, R2 Alt Judge Enforcer Build]
+  const brokenD=new Set();for(const l of ls){const m=l.match(/^(?:FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*)?D(\d+)\s*(?:vs\.?\s*C\d+)?\s*(?:\([^)]*\))?\s*:\s*DEFENDER LINK BROKEN\b/);if(m&&!retr.has(+m[1]))brokenD.add(+m[1]);}
+
+#### SITE 13 m
+
+  LIB 3463 [3 stubs: Alternate Payloads, Panel Payloads, R2 Alternate Payloads]
+function ecgSplit2024(items){const L=new Set();for(const [n,k] of [['Close Enforcer Record','cec'],['Judge Contradiction Record','jcc']]){try{const x=$(n);if(!x||!x.isExecuted)continue;const j=x.first().json;((j&&j[k]&&j[k].confirmed)||[]).forEach(y=>L.add(y.side+' '+(+y.link)));}catch(e){}} /* pkgECG: K-B, K-G4 and K-G7 are not asked on a link the engine broke on a confirmed closing contradiction (the gate-rule side of pkgECB) */
+ const keep=[],ecg=[];for(const x of (items||[])){const t=String(x&&x.line||'').replace(/[*_`]+/g,'').trim();const m=/^K-(?:B|G4|G7)$/.test(String(x&&x.rule||''))?t.match(/^D(\d+)\s+vs\.?\s+C(\d+)\b\s*(?:\([^)]*\))?\s*:\s*(DEFENDER|CHALLENGER) LINK BROKEN\b/):null;const n=m&&(m[3]==='DEFENDER'?m[1]:m[2]);
+  if(n&&L.has(m[3]+' '+(+n)))ecg.push(Object.assign({},x,{ecg:'NOT ASKED (code, pkgECG): the line grades '+m[3]+' link '+n+', which the engine broke on a confirmed closing contradiction; '+x.rule+' does not apply to that break, as the send-back does not send it (pkgECB)'}));else keep.push(x);}return {keep,ecg};}
+
+#### SITE 14 m
+
+  LIB 2256 [4 stubs: Alternate Payloads, Extract Independent Verdict, Panel Payloads, R2 Alternate Payloads]
+ for(const l of L){let m=ri6Col2024(l,/^\s*(?:[-•*]\s*|\d+[.)]\s*)?\**(D\d+)\s+vs\.?\s+(C\d+)\b(?:\s*\([^)\n]*\))?[^:\n(]*:\s*\**(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|WITHDRAWN)\b/,['DEFENDER LINK BROKEN','CHALLENGER LINK BROKEN','WITHDRAWN']); /* pkgRI6 */if(m)add(m[1]+' vs '+m[2],'JUDGE');
+
+#### SITE 15 resWord
+
+  INLINE Format Markdown
+ with ORIGINAL other than COUNTED gives the word by the judge prompt's Line 2 rule; otherwise the FIRST RESULT line. */
+const resWord = (raw, seat, cs) => { const s = String(raw || ''); const m = s.match(/\[AUDIT v21: CORRECTED RESULT -- SEAT: ([^;\]]*); ORIGINAL: (\w+); COUNTED: (\w+) \([A-Z]+-[0-9]\)(?:; RETRACTED: ([^\]]*))?\]/);
+  if (!m || m[1] !== seat || m[2] === m[3]) { const x = s.match(/RESULT[ \t*_]*:[ \t*_]*(DEFENDER WINS|CHALLENGER WINS|UNDERDETERMINED)/); return x ? x[1] : null; }
+  if (m[3] === 'BROKEN') return 'CHALLENGER WINS'; if (m[3] !== 'HELD') return 'UNDERDETERMINED'; const ret = String(m[4] || '').trim().split(/\s*,\s*/);
+  let clb = false; for (const y of s.matchAll(/(?:^|\n|\\n)[ \t*_>-]*(D[0-9]+ vs C[0-9]+)[^\n\\]*?:[ \t*_]*CHALLENGER LINK BROKEN/g)) if (!ret.includes(y[1])) { clb = true; break; }
+  return ((cs || 'SELF-SUPPORTED') !== 'SELF-SUPPORTED' || clb) ? 'DEFENDER WINS' : 'UNDERDETERMINED'; };
+/* ASK 378 rev 3 (DoD 2, W1 8040, W3 8036, W4 8048): every verdict or RESULT change, in STEP order, not text position. Rank 1: the cure (a v21 with no send-back marker that is not v25's twin); rank 2: v25 RECOMPUTED AFTER CURE (its twin v21 folded in); rank 3: v37 SEND-BACK APPLIED (its twin v21, "send-back changes ... applied", folded in). A tag that changes neither verdict nor RESULT is not printed. */
+const chgList = raw => { const s = String(raw || '').replace(/\\"/g, '"'); const W = x => (String(x || '').match(/^(HELD|PARTIAL|BROKE
