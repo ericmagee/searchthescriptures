@@ -1,15 +1,15 @@
-// ASK 407 build (plan W3 8683, rev 1 8690; W4 8687, 8689; W1 8688). Operator 12:31 CST order; card 12:32 "Before sonnet (sonnet last)". Offline.
+// ASK 407 build rev 2 (plan W3 8683, rev 1 8690; W4 8687, 8689, 8700, 8701, 8705; W1 8688). Operator orders 12:31, 12:41, 12:45, 12:49 CST; 12:50 "keep panel unchanged. just update alternates". Offline.
 // Six engine nodes; no library, child, connection or model-setting change. Usage: node a407/build.cjs IN OUT
 const fs=require('fs');const acorn=require('../tools/node_modules/acorn');
 const [IN,OUT]=process.argv.slice(2);let d=JSON.parse(fs.readFileSync(IN));if(d.data&&d.data.nodes)d=d.data;const log=[];
 const node=nm=>d.nodes.find(n=>n.name===nm);
 const rep=(nm,a,b)=>{const n=node(nm);const s=n.parameters.jsCode;const c=s.split(a).length-1;if(c!==1)throw new Error(nm+': found '+c+' times: '+a);n.parameters.jsCode=s.replace(a,()=>b);log.push(nm);};
-const C=" /* ASK 407 (operator 12:31 CST 11-18; card 12:32 \"Before sonnet (sonnet last)\"): glm_legal, qwen4max and hy4 added after ember */";
-rep('Init Seats',"'ember','sonnet','qwen'];","'ember','glm_legal','qwen4max','hy4','sonnet','qwen'];"+C);
-rep('Init Seats',"const __ALT=['haiku','hydrogen','gemini','argon','spark','ember','sonnet'];","const __ALT=['haiku','hydrogen','gemini','argon','spark','ember','glm_legal','qwen4max','hy4','sonnet'];"+C);
-rep('Init Seats',"claude:'anthropic',opus:'anthropic'};","claude:'anthropic',opus:'anthropic',glm:'zhipu',qwen:'qwen',qwen4max:'qwen',glm_legal:'zhipu',hy4:'tencent'}; /* ASK 407 (W4 8687 item 5): the debater seats glm, qwen and qwen4max carry their family, so a GLM or Qwen debater bars its own family's judge */");
-rep('Init Seats',"ember:'openrouter',sonnet:'openrouter'};","ember:'openrouter',glm_legal:'openrouter',qwen4max:'openrouter',hy4:'openrouter',sonnet:'openrouter'}; /* ASK 407 */");
-rep('Accept Build',"'ember','sonnet','qwen'];","'ember','glm_legal','qwen4max','hy4','sonnet','qwen'];"+C+" /* same list as Init Seats ORDER0 */");
-for(const nm of ['Resolve Seats','Build Synthesis','Build Independent Verdict','Build Diagnostic Prompt'])rep(nm,"ember:'openrouter',sonnet:'openrouter'};","ember:'openrouter',glm_legal:'openrouter',qwen4max:'openrouter',hy4:'openrouter',sonnet:'openrouter'}; /* ASK 407 */");
+const C=" /* ASK 407 (operator 12:49 and 12:50 CST 11-18: alternates ember, GLM legal, haiku, tencent/hy4, 6.1 terra, 6.2 sol, tencent/hy4-flash, Gemini 3.8 flash, hydrogen, spark 1.3, Qwen4 Max, argon, sonnet; panel unchanged). chatgpt (6.1 terra) and sol62 (6.2 sol) stay panel seats, so they are not in the alternate set */";
+rep('Init Seats',"const ORDER0=['chatgpt','sol','sol62','haiku','hydrogen','gemini','argon','spark','ember','sonnet','qwen'];","const ORDER0=['chatgpt','sol','sol62','ember','glm_legal','haiku','hy4','hy4_flash','gemini','hydrogen','spark','qwen4max','argon','sonnet','qwen'];"+C);
+rep('Init Seats',"const __ALT=['haiku','hydrogen','gemini','argon','spark','ember','sonnet'];","const __ALT=['ember','glm_legal','haiku','hy4','hy4_flash','gemini','hydrogen','spark','qwen4max','argon','sonnet'];"+C+" /* the alternate order is ORDER0's order */");
+rep('Init Seats',"claude:'anthropic',opus:'anthropic'};","claude:'anthropic',opus:'anthropic',glm:'zhipu',qwen:'qwen',qwen4max:'qwen',glm_legal:'zhipu',hy4:'tencent',hy4_flash:'tencent'}; /* ASK 407 (W4 8687 item 5): the debater seats glm, qwen and qwen4max carry their family, so a GLM or Qwen debater bars its own family's judge */");
+rep('Init Seats',"ember:'openrouter',sonnet:'openrouter'};","ember:'openrouter',glm_legal:'openrouter',qwen4max:'openrouter',hy4:'openrouter',hy4_flash:'openrouter',sonnet:'openrouter'}; /* ASK 407 */");
+rep('Accept Build',"const ORDER=['chatgpt','sol','sol62','haiku','hydrogen','gemini','argon','spark','ember','sonnet','qwen'];","const ORDER=['chatgpt','sol','sol62','ember','glm_legal','haiku','hy4','hy4_flash','gemini','hydrogen','spark','qwen4max','argon','sonnet','qwen'];"+C+" /* same list as Init Seats ORDER0 */");
+for(const nm of ['Resolve Seats','Build Synthesis','Build Independent Verdict','Build Diagnostic Prompt'])rep(nm,"ember:'openrouter',sonnet:'openrouter'};","ember:'openrouter',glm_legal:'openrouter',qwen4max:'openrouter',hy4:'openrouter',hy4_flash:'openrouter',sonnet:'openrouter'}; /* ASK 407 */");
 for(const nm of new Set(log))acorn.parse(node(nm).parameters.jsCode,{ecmaVersion:'latest',allowReturnOutsideFunction:true,allowAwaitOutsideFunction:true});
 fs.writeFileSync(OUT,JSON.stringify(d));console.log('nodes changed:',[...new Set(log)].join(', '),'| edits',log.length);

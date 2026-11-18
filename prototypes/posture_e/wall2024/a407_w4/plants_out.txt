@@ -1,24 +1,27 @@
 == stored 38661 inputs (spark vs gemini)
   live panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","sonnet"] | dropped hydrogen(google) gemini(google) argon(google) spark(meta) ember(meta)
-  t407 panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","glm_legal","qwen4max","hy4","sonnet"] | dropped hydrogen(google) gemini(google) argon(google) spark(meta) ember(meta)
+  t407 panel ["sol62","chatgpt","sol"] reserve glm_legal | alternates ["glm_legal","haiku","hy4","hy4_flash","qwen4max","sonnet"] | dropped ember(meta) gemini(google) hydrogen(google) spark(meta) argon(google)
 == plant: qwen vs gemini
   live panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","spark","sonnet"] | dropped hydrogen(google) gemini(google) argon(google) ember(meta)
-  t407 panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","spark","glm_legal","hy4","sonnet"] | dropped hydrogen(google) gemini(google) argon(google) ember(meta) qwen4max(qwen)
+  t407 panel ["sol62","chatgpt","sol"] reserve glm_legal | alternates ["glm_legal","haiku","hy4","hy4_flash","spark","sonnet"] | dropped ember(meta) gemini(google) hydrogen(google) qwen4max(qwen) argon(google)
 == plant: qwen4max vs spark
   live panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","hydrogen","gemini","argon","sonnet"] | dropped spark(meta) ember(meta)
-  t407 panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","hydrogen","gemini","argon","glm_legal","hy4","sonnet"] | dropped spark(meta) ember(meta) qwen4max(qwen)
+  t407 panel ["sol62","chatgpt","sol"] reserve glm_legal | alternates ["glm_legal","haiku","hy4","hy4_flash","gemini","hydrogen","argon","sonnet"] | dropped ember(meta) spark(meta) qwen4max(qwen)
 == plant: glm vs gemini
   live panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","spark","sonnet"] | dropped hydrogen(google) gemini(google) argon(google) ember(meta)
-  t407 panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","spark","qwen4max","hy4","sonnet"] | dropped hydrogen(google) gemini(google) argon(google) ember(meta) glm_legal(zhipu)
+  t407 panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","hy4","hy4_flash","spark","qwen4max","sonnet"] | dropped ember(meta) glm_legal(zhipu) gemini(google) hydrogen(google) argon(google)
+== plant: chatgpt vs gemini
+  live panel ["haiku","spark","sonnet"] reserve null | alternates [] | dropped haiku(anthropic) hydrogen(google) gemini(google) argon(google) spark(meta) ember(meta) sonnet(anthropic)
+  t407 panel ["glm_legal","haiku","hy4"] reserve hy4_flash | alternates ["hy4_flash","spark","qwen4max","sonnet"] | dropped ember(meta) glm_legal(zhipu) haiku(anthropic) hy4(tencent) gemini(google) hydrogen(google) argon(google)
 == plant: chatgpt vs sonnet
   live ERROR: ORACLE_DEBATE_V1 Init refused: challenger engine "sonnet" is not one of [claude, chatgpt, gemini, grok, mimo, haiku, opus, glm, qwen4max, qwen, spark, deepseek]. run_token=ODV1-X-4fzzzxjy
   t407 ERROR: ORACLE_DEBATE_V1 Init refused: challenger engine "sonnet" is not one of [claude, chatgpt, gemini, grok, mimo, haiku, opus, glm, qwen4max, qwen, spark, deepseek]. run_token=ODV1-X-4fzzzxjy
 == plant: claude vs opus
   live panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","hydrogen","gemini","argon","spark","sonnet"] | dropped ember(meta)
-  t407 panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","hydrogen","gemini","argon","spark","glm_legal","qwen4max","hy4","sonnet"] | dropped ember(meta)
+  t407 panel ["sol62","chatgpt","sol"] reserve glm_legal | alternates ["glm_legal","haiku","hy4","hy4_flash","gemini","hydrogen","spark","qwen4max","argon","sonnet"] | dropped ember(meta)
 == plant: deepseek_debate vs mimo
   live ERROR: ORACLE_DEBATE_V1 Init refused: DeepSeek never debates (ruling 421): it is the enforcer. run_token=ODV1-X-4fzzzxjy
   t407 ERROR: ORACLE_DEBATE_V1 Init refused: DeepSeek never debates (ruling 421): it is the enforcer. run_token=ODV1-X-4fzzzxjy
-== plant: t407 with no glm_legal or hy4 model row
+== plant: t407 with none of the three new model rows
   live panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","sonnet"] | dropped hydrogen(google) gemini(google) argon(google) spark(meta) ember(meta)
-  t407 panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","glm_legal","qwen4max","hy4","sonnet"] | dropped hydrogen(google) gemini(google) argon(google) spark(meta) ember(meta)
+  t407 panel ["sol62","chatgpt","sol"] reserve glm_legal | alternates ["glm_legal","haiku","hy4","hy4_flash","qwen4max","sonnet"] | dropped ember(meta) gemini(google) hydrogen(google) spark(meta) argon(google)
