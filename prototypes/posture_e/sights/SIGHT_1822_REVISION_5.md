@@ -1,6 +1,6 @@
 # Sight 1822 Revision 5 (proposal, not written)
 
-Drafted by W3 (session_01H1X3ANsGiMnhnbkfphocmo) on 2026-11-17 at 19:59 CST. Every verse was pulled live from kjv_verses this session, and every Strong's tag from kjv_word_map and lexicon_words.
+Drafted by W3 (session_01H1X3ANsGiMnhnbkfphocmo) on 2026-11-17 at 19:59 CST. Rev 5.1 (20:02 CST) adds the operator's rows (19:57 CST: "Acts 10:38, 2 Corinthians 1:21-22, 1 John 2:20 and 27") and W2 8005 items 4 and 5 (Acts 4:27; the ruling stated as ground; Matthew 1:20's gennao met in place). Every verse was pulled live from kjv_verses this session, and every Strong's tag from kjv_word_map and lexicon_words.
 
 ## Cause
 
@@ -44,7 +44,19 @@ The event itself names the husband: "Joseph her husband" (1:19), "Mary thy wife"
   - Luke 3:22: "And the Holy Ghost descended in a bodily shape like a dove upon him, and a voice came from heaven, which said, Thou art my beloved Son; in thee I am well pleased."
   - Acts 10:37-38: "That word, [I say], ye know, which was published throughout all Judaea, and began from Galilee, after the baptism which John preached; How God anointed Jesus of Nazareth with the Holy Ghost and with power: who went about doing good, and healing all that were oppressed of the devil; for God was with him."
   - Luke 4:18: "The Spirit of the Lord [is] upon me, because he hath anointed me to preach the gospel to the poor; he hath sent me to heal the brokenhearted, to preach deliverance to the captives, and recovering of sight to the blind, to set at liberty them that are bruised,"
+- The same God anoints believers with the same Spirit, and the anointing abides in them. Every one of them has a father:
+  - 2 Corinthians 1:21: "Now he which stablisheth us with you in Christ, and hath anointed us, [is] God;"
+  - 2 Corinthians 1:22: "Who hath also sealed us, and given the earnest of the Spirit in our hearts."
+  - 1 John 2:20: "But ye have an unction from the Holy One, and ye know all things."
+  - 1 John 2:27: "But the anointing which ye have received of him abideth in you, and ye need not that any man teach you: but as the same anointing teacheth you of all things, and is truth, and is no lie, and even as it hath taught you, ye shall abide in him. [in him: or, in it]"
+  - "Unction" and "anointing" are chrisma (G5545): "an unguent or smearing, i.e. (figuratively) the special endowment ('chrism') of the Holy Spirit". "Anointed" is chrio (G5548): "to smear or rub with oil, i.e. (by implication) to consecrate to an office or religious service".
+  - The Spirit "in our hearts" and the anointing that "abideth in you" consecrate. They do not beget.
+- The child is named as the one anointed: Acts 4:27, "For of a truth against thy holy child Jesus, whom thou hast anointed, both Herod, and Pontius Pilate, with the Gentiles, and the people of Israel, were gathered together,"
 So "found with child of the Holy Ghost" and "that which is conceived in her is of the Holy Ghost" say this: the child in her is the Anointed, anointed from the womb, with the anointing declared at the Jordan. Neither row names a begetter.
+
+THE VERB AT 1:20, MET IN PLACE. "Conceived [Gr. begotten]" is gennao (G1080): "to procreate (properly, of the father, but by extension of the mother)". The verb says that a child was begotten in her. "Of the Holy Ghost" says what the child is: the Anointed. The row that carries the verb names the husband and the wife: "Joseph, thou son of David, fear not to take unto thee Mary thy wife". The verb's proper subject, the father, is named in the same row. The Spirit is not that subject.
+
+GROUND. The operator's statement of 17 Nov 2026, 19:55 CST, a ruling: "'that which is conceived in her is of the Holy Ghost.' translation: the child in her is anointed".
 
 (3) THE HOLY GHOST ON A CHILD FROM THE WOMB DOES NOT REMOVE THE FATHER.
 - Luke 1:15: "For he shall be great in the sight of the Lord, and shall drink neither wine nor strong drink; and he shall be filled with the Holy Ghost, even from his mother's womb."
