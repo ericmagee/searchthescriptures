@@ -1,0 +1,83 @@
+DONE WHEN 4. COPIES AND LIBRARY
+  R4 new copies: declared 1 distinct text, dlinks 1 distinct text (old: 1, 1)
+  R5 new copies: declared 1 distinct text, dlinks 1 distinct text (old: 1, 1)
+  R1 child text equals engine text: true
+  R2 child text equals engine text: true
+  R3 child text equals engine text: true
+  lib_sha base engine 7b1cd78b3c25da5c child 7b1cd78b3c25da5c | target engine 5b8a26a88fc94b12 child 5b8a26a88fc94b12 | equal true
+
+DONE WHEN 1 AND 2. 245 stored claude_r1 texts
+  R1: with a numbered link today 241 of 241 equal; differ 0 | left out (no numbered link today) 4; newly read 4: 27665=6, 39015=4, 39266=5, 38661=5
+    the 4 runs all newly read: yes
+  R2: with a numbered link today 229 of 229 equal; differ 0 | left out (no numbered link today) 16; newly read 16: 27177=6, 16(no run token)=6, 27433=6, 28361=6, 27563=6, 27613=6, 27665=6, 27795=6, 27893=6, 28662=6, 27088=6, 27259=6, 28269=6, 39015=4, 39266=5, 38661=5
+    the 4 runs all newly read: yes
+    27177 last link: Therefore Christ had a biological father: Joseph, the named son of David, through whom the Davidic seed proceeded "according to the flesh" — the WHO a
+    16(no run token) last link: The "other sheep" of John 10:16 are the scattered, lo-ammi Northern Kingdom (House of Israel), being restored to covenant identity and reunited under 
+    27433 last link: Therefore YES: Christ had a biological father — Joseph, the named father of the house of David; a man was involved and the Davidic seed is honored thr
+    28361 last link: Yes — Christ had a biological father: Joseph, of the house and lineage of David, the named line the flesh seed came through, the record stating the wh
+    27563 last link: ANSWER — YES: Christ had a biological father, Joseph, the named Davidic father; the seed is David's according to the flesh, out of loins and bowels, a
+    27613 last link: ANSWER: Yes — Christ had a biological father: Joseph, son of David, named in the text; the Davidic seed is honored through the named line, and the rec
+    27665 last link: Christ had a biological father — Joseph, the named Davidic father — with the WHO named and the HOW never narrated — [L1] John 6:42; Romans 1:3; 2 Samu
+    27795 last link: ANSWER: Christ had a biological father — Joseph, the named Davidic father; a man was involved and the seed is honored through the named line, and the 
+    27893 last link: Christ had a biological father: Joseph, the named Davidic father, and Christ was made of the seed of David according to the flesh — [L1] Romans 1:3, L
+    28662 last link: ANSWER: Yes — Christ had a biological father: Joseph, of the house and lineage of David, knew Mary his wife within the espousal, and the child is of h
+    27088 last link: ANSWER: Yes — Christ had a biological father: Joseph, son of David, of the house and lineage of David, through whom the promised seed proceeded accord
+    27259 last link: Therefore Christ had a biological father — Joseph, of the house of David, named by mother, narrator, town, disciple and angel, through whom the promis
+    28269 last link: Therefore Christ had a biological father: Joseph, the named Davidic father — a man was involved, and the text names the WHO and does not narrate the H
+    39015 last link: Christ had a biological father, Joseph, of the house of David, of whose loins the seed came according to the flesh -- [L1] Romans 1:3 and Acts 2:30 wi
+    39266 last link: Christ had a biological father, Joseph, who knew Mary his wife within the espousal — exhibits Genesis 4:1; Matthew 1:19, 1:20, 1:25 with Psalms 132:11
+    38661 last link: Christ had a biological father, Joseph, of the seed of David according to the flesh — Exhibits Romans 1:3 [L1] + sperma seed [L2] + Luke 2:48 [L3].
+  R3: with a numbered link today 229 of 229 equal; differ 0 | left out (no numbered link today) 16; newly read 16: 27177=6, 16(no run token)=6, 27433=6, 28361=6, 27563=6, 27613=6, 27665=6, 27795=6, 27893=6, 28662=6, 27088=6, 27259=6, 28269=6, 39015=4, 39266=5, 38661=5
+    the 4 runs all newly read: yes
+    27665 last link: LINK 6 -- Christ had a biological father — Joseph, the named Davidic father — with the WHO named and the HOW never na...
+    39015 last link: LINK 4 -- Christ had a biological father, Joseph, of the house of David, of whose loins the seed came according to th...
+    39266 last link: LINK 5 -- Christ had a biological father, Joseph, who knew Mary his wife within the espousal — exhibits Genesis 4:1; ...
+    38661 last link: LINK 5 -- Christ had a biological father, Joseph, of the seed of David according to the flesh — Exhibits Romans 1:3 [...
+  R4: with a numbered link today 229 of 229 equal; differ 0 | left out (no numbered link today) 16; newly read 16: 27177=6, 16(no run token)=6, 27433=6, 28361=6, 27563=6, 27613=6, 27665=6, 27795=6, 27893=6, 28662=6, 27088=6, 27259=6, 28269=6, 39015=4, 39266=5, 38661=5
+    the 4 runs all newly read: yes
+    27665 last link: 6. Christ had a biological father — Joseph, the named Davidic father — with the WHO named and the HOW never narrated — [L1] John 6:42; Romans 1:3; 2 S
+    39015 last link: 4. Christ had a biological father, Joseph, of the house of David, of whose loins the seed came according to the flesh -- [L1] Romans 1:3 and Acts 2:30
+    39266 last link: 5. Christ had a biological father, Joseph, who knew Mary his wife within the espousal — exhibits Genesis 4:1; Matthew 1:19, 1:20, 1:25 with Psalms 132
+    38661 last link: 5. Christ had a biological father, Joseph, of the seed of David according to the flesh — Exhibits Romans 1:3 [L1] + sperma seed [L2] + Luke 2:48 [L3].
+  R5: with a numbered link today 229 of 229 equal; differ 0 | left out (no numbered link today) 16; newly read 16: 27177=6, 16(no run token)=6, 27433=6, 28361=6, 27563=6, 27613=6, 27665=6, 27795=6, 27893=6, 28662=6, 27088=6, 27259=6, 28269=6, 39015=4, 39266=5, 38661=5
+    the 4 runs all newly read: yes
+    27665 last link: 6. Christ had a biological father — Joseph, the named Davidic father — with the WHO named and the HOW never narrated — [L1] John 6:42; Romans 1:3; 2 S
+    39015 last link: 4. Christ had a biological father, Joseph, of the house of David, of whose loins the seed came according to the flesh -- [L1] Romans 1:3 and Acts 2:30
+    39266 last link: 5. Christ had a biological father, Joseph, who knew Mary his wife within the espousal — exhibits Genesis 4:1; Matthew 1:19, 1:20, 1:25 with Psalms 132
+    38661 last link: 5. Christ had a biological father, Joseph, of the seed of David according to the flesh — Exhibits Romans 1:3 [L1] + sperma seed [L2] + Luke 2:48 [L3].
+
+DONE WHEN 3. D4 Build declared() for 39266 (the YOUR DECLARED CHAIN text of the round 4 prompt)
+--- BEFORE ---
+DECLARED CHAIN
+D1: Promise requires seed out of man's bowels/loins according to flesh — exhibits 2 Samuel 7:12; Romans 1:3 with spermatos (G4690) meaning seed + Acts 2:30.
+D2: That seed is reckoned by house of fathers and sprang evidently out of Juda — exhibits Numbers 1:2, 1:18 + Hebrews 7:14.
+D3: The named Davidic father is Joseph, called father in four mouths — exhibits Luke 2:48; John 6:42 with Matthew 1:20 naming Joseph thou son of David + Luke 2:4.
+--- AFTER ---
+DECLARED CHAIN
+D1: Promise requires seed out of man's bowels/loins according to flesh — exhibits 2 Samuel 7:12; Romans 1:3 with spermatos (G4690) meaning seed + Acts 2:30.
+D2: That seed is reckoned by house of fathers and sprang evidently out of Juda — exhibits Numbers 1:2, 1:18 + Hebrews 7:14.
+D3: The named Davidic father is Joseph, called father in four mouths — exhibits Luke 2:48; John 6:42 with Matthew 1:20 naming Joseph thou son of David + Luke 2:4.
+D4: Of the Holy Ghost is covenant origin and anointing, not begetting; Luke 1:35 verbs are power and presence — exhibits Matthew 1:20 with gennao (G1080) meaning to procreate + Acts 1:8 with eperchomai (G1904) meaning to come upon + Matthew 17:5 with episkiazo (G1982) meaning to overshadow.
+D5: Christ had a biological father, Joseph, who knew Mary his wife within the espousal — exhibits Genesis 4:1; Matthew 1:19, 1:20, 1:25 with Psalms 132:11.
+
+DONE WHEN 7. PLANTED CASES
+  (a) indented chain, R1: before 0 links, after 3; same before and after false; links 3
+  (a) indented chain, R2: before 3 links, after 3; same before and after true; links 3
+  (a) indented chain, R3: before 3 links, after 3; same before and after true; links 3
+  (a) indented chain, R4: before 3 links, after 3; same before and after true; links 3
+  (a) indented chain, R5: before 3 links, after 3; same before and after true; links 3
+  (b) D1:/D2:/28:10/D3 chain, R1: new on "D<n>:" form equals old on "<n>." form true; new equals old on "<n>." form true; links 3; 28:10 line not in output
+  (b) D1:/D2:/28:10/D3 chain, R2: new on "D<n>:" form equals old on "<n>." form true; new equals old on "<n>." form true; links 2; 28:10 line not in output
+  (b) D1:/D2:/28:10/D3 chain, R3: new on "D<n>:" form equals old on "<n>." form true; new equals old on "<n>." form true; links 2; 28:10 line not in output
+  (b) D1:/D2:/28:10/D3 chain, R4: new on "D<n>:" form equals old on "<n>." form true; new equals old on "<n>." form true; links 2; 28:10 line not in output
+  (b) D1:/D2:/28:10/D3 chain, R5: new on "D<n>:" form equals old on "<n>." form true; new equals old on "<n>." form true; links 2; 28:10 line not in output
+  head test "28:10 For precept": false
+  head test "1.5 x": false
+  head test "2 Corinthians 5:17": false
+  head test "D1: a": true
+  head test "  1. a": true
+  head test "**D2.** b": true
+  head test "### 3) c": true
+  head test "4 -- d": true
+  head test "4 — d": true
+  head test "D12: x": true
