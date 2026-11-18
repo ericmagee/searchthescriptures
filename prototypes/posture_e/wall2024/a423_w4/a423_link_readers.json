@@ -1,0 +1,668 @@
+[
+ {
+  "node": "Extract Independent Verdict",
+  "in_library": true,
+  "patterns": 34,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(\\d+|none)\\b/i);if(k)own.push({at:off,link:"
+ },
+ {
+  "node": "Panel Payloads",
+  "in_library": true,
+  "patterns": 28,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b|\\**\\s*\\d+[.)]\\s)[^\\n]*$/gmi)"
+ },
+ {
+  "node": "Alternate Payloads",
+  "in_library": true,
+  "patterns": 28,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b|\\**\\s*\\d+[.)]\\s)[^\\n]*$/gmi)"
+ },
+ {
+  "node": "Cure Check",
+  "in_library": true,
+  "patterns": 26,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b|\\**\\s*\\d+[.)]\\s)[^\\n]*$/gmi)"
+ },
+ {
+  "node": "Panel Cure Check",
+  "in_library": true,
+  "patterns": 26,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b|\\**\\s*\\d+[.)]\\s)[^\\n]*$/gmi)"
+ },
+ {
+  "node": "Alternate Merge Seat",
+  "in_library": true,
+  "patterns": 26,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b|\\**\\s*\\d+[.)]\\s)[^\\n]*$/gmi)"
+ },
+ {
+  "node": "Cure Normalize",
+  "in_library": true,
+  "patterns": 24,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b|\\**\\s*\\d+[.)]\\s)[^\\n]*$/gmi)"
+ },
+ {
+  "node": "Panel Cure Normalize 1",
+  "in_library": true,
+  "patterns": 24,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b|\\**\\s*\\d+[.)]\\s)[^\\n]*$/gmi)"
+ },
+ {
+  "node": "Panel Cure Normalize 2",
+  "in_library": true,
+  "patterns": 24,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b|\\**\\s*\\d+[.)]\\s)[^\\n]*$/gmi)"
+ },
+ {
+  "node": "Panel Cure Normalize 3",
+  "in_library": true,
+  "patterns": 24,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b|\\**\\s*\\d+[.)]\\s)[^\\n]*$/gmi)"
+ },
+ {
+  "node": "Alternate Cure Normalize",
+  "in_library": true,
+  "patterns": 24,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b|\\**\\s*\\d+[.)]\\s)[^\\n]*$/gmi)"
+ },
+ {
+  "node": "Gate Build",
+  "in_library": true,
+  "patterns": 18,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b|\\**\\s*\\d+[.)]\\s)[^\\n]*$/gmi)"
+ },
+ {
+  "node": "Gate Record",
+  "in_library": true,
+  "patterns": 18,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b|\\**\\s*\\d+[.)]\\s)[^\\n]*$/gmi)"
+ },
+ {
+  "node": "Alt Gate Build",
+  "in_library": true,
+  "patterns": 18,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b|\\**\\s*\\d+[.)]\\s)[^\\n]*$/gmi)"
+ },
+ {
+  "node": "Alt Gate Record",
+  "in_library": true,
+  "patterns": 18,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b|\\**\\s*\\d+[.)]\\s)[^\\n]*$/gmi)"
+ },
+ {
+  "node": "Late Gate Build",
+  "in_library": true,
+  "patterns": 18,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b|\\**\\s*\\d+[.)]\\s)[^\\n]*$/gmi)"
+ },
+ {
+  "node": "Alt Late Gate Build",
+  "in_library": true,
+  "patterns": 18,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b|\\**\\s*\\d+[.)]\\s)[^\\n]*$/gmi)"
+ },
+ {
+  "node": "Send Back Build",
+  "in_library": true,
+  "patterns": 17,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, judge lines",
+  "first_pattern": "LINK\\s+(\\d+)[^\\n]*/gmi)];const h=H[j-1];return h?t"
+ },
+ {
+  "node": "Alt Send Back Build",
+  "in_library": true,
+  "patterns": 17,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, judge lines",
+  "first_pattern": "LINK\\s+(\\d+)[^\\n]*/gmi)];const h=H[j-1];return h?t"
+ },
+ {
+  "node": "Send Back Record",
+  "in_library": true,
+  "patterns": 12,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, judge lines",
+  "first_pattern": "LINK\\s+(\\d+|none)\\b/i);if(k)own.push({at:off,link:"
+ },
+ {
+  "node": "Alt Judge Enforcer Build",
+  "in_library": true,
+  "patterns": 12,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": true,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+\\d)/i.test(l))break;out.push(l);}"
+ },
+ {
+  "node": "Alt Send Back Record",
+  "in_library": true,
+  "patterns": 12,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, judge lines",
+  "first_pattern": "LINK\\s+(\\d+|none)\\b/i);if(k)own.push({at:off,link:"
+ },
+ {
+  "node": "Panel Build",
+  "in_library": false,
+  "patterns": 11,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b|\\**\\s*\\d+[.)]\\s)[^\\n]*$/gmi)"
+ },
+ {
+  "node": "Build Independent Verdict",
+  "in_library": false,
+  "patterns": 10,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b|\\**\\s*\\d+[.)]\\s)[^\\n]*$/gmi)"
+ },
+ {
+  "node": "Judge Enforcer Build",
+  "in_library": true,
+  "patterns": 10,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": true,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+\\d)/i.test(l))break;out.push(l);}"
+ },
+ {
+  "node": "C3B Extract",
+  "in_library": false,
+  "patterns": 9,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list",
+  "first_pattern": "LINK\\s+\\d+\\b/i.test(l);const rule=l=>/^\\s*-{3,}\\s*"
+ },
+ {
+  "node": "D4 Build",
+  "in_library": false,
+  "patterns": 8,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b[^\\n]*|\\**\\s*\\d+[.)]\\s+(?:LIN"
+ },
+ {
+  "node": "D3B Extract",
+  "in_library": false,
+  "patterns": 8,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "defender round 3, premise list",
+  "first_pattern": "LINK\\s+\\d+\\b/i.test(l);const rule=l=>/^\\s*-{3,}\\s*"
+ },
+ {
+  "node": "Alternate Merge 1",
+  "in_library": true,
+  "patterns": 7,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(\\d+|none)\\b/i);if(k)own.push({at:off,link:"
+ },
+ {
+  "node": "D4B Extract",
+  "in_library": false,
+  "patterns": 7,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list",
+  "first_pattern": "LINK\\s+\\d+\\b/i.test(l);const rule=l=>/^\\s*-{3,}\\s*"
+ },
+ {
+  "node": "Close Enforcer Build",
+  "in_library": false,
+  "patterns": 7,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, judge lines",
+  "first_pattern": "LINK\\s+(\\d+)[^\\n]*/gmi))H.push({n:+h[1],at:h.index"
+ },
+ {
+  "node": "Build Save Body",
+  "in_library": false,
+  "patterns": 6,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(\\d+|none)\\b/i);if(k)own.push({at:off,link:"
+ },
+ {
+  "node": "D2B Extract",
+  "in_library": false,
+  "patterns": 6,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "",
+  "first_pattern": "LINK\\s+\\d+\\b/i.test(l);const rule=l=>/^\\s*-{3,}\\s*"
+ },
+ {
+  "node": "C2B Extract",
+  "in_library": false,
+  "patterns": 6,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "premise list",
+  "first_pattern": "LINK\\s+\\d+\\b/i.test(l);const rule=l=>/^\\s*-{3,}\\s*"
+ },
+ {
+  "node": "D3 Build",
+  "in_library": false,
+  "patterns": 5,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": true,
+  "reads": "premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b[^\\n]*|\\**\\s*\\d+[.)]\\s+(?:LIN"
+ },
+ {
+  "node": "C3 Extract",
+  "in_library": false,
+  "patterns": 5,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b[^\\n]*|\\**\\s*\\d+[.)]\\s+(?:LIN"
+ },
+ {
+  "node": "C4 Build",
+  "in_library": false,
+  "patterns": 5,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b[^\\n]*|\\**\\s*\\d+[.)]\\s+(?:LIN"
+ },
+ {
+  "node": "C3G Extract",
+  "in_library": false,
+  "patterns": 5,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b[^\\n]*|\\**\\s*\\d+[.)]\\s+(?:LIN"
+ },
+ {
+  "node": "C4B Extract",
+  "in_library": false,
+  "patterns": 5,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list",
+  "first_pattern": "LINK\\s+\\d+\\b/i.test(l);const rule=l=>/^\\s*-{3,}\\s*"
+ },
+ {
+  "node": "D3 Extract",
+  "in_library": false,
+  "patterns": 4,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "premise list",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b[^\\n]*|\\**\\s*\\d+[.)]\\s+(?:LIN"
+ },
+ {
+  "node": "C3 Build",
+  "in_library": false,
+  "patterns": 4,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b[^\\n]*|\\**\\s*\\d+[.)]\\s+(?:LIN"
+ },
+ {
+  "node": "C1B Extract",
+  "in_library": false,
+  "patterns": 4,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "",
+  "first_pattern": "LINK\\s+\\d+\\b/i.test(l);const rule=l=>/^\\s*-{3,}\\s*"
+ },
+ {
+  "node": "D2B Build",
+  "in_library": false,
+  "patterns": 4,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "",
+  "first_pattern": "LINK\\s+\\d+\\b/i.test(l);const rule=l=>/^\\s*-{3,}\\s*"
+ },
+ {
+  "node": "C2B Build",
+  "in_library": false,
+  "patterns": 4,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "premise list",
+  "first_pattern": "LINK\\s+\\d+\\b/i.test(l);const rule=l=>/^\\s*-{3,}\\s*"
+ },
+ {
+  "node": "D3B Build",
+  "in_library": false,
+  "patterns": 4,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "defender round 3, premise list",
+  "first_pattern": "LINK\\s+\\d+\\b/i.test(l);const rule=l=>/^\\s*-{3,}\\s*"
+ },
+ {
+  "node": "C3B Build",
+  "in_library": false,
+  "patterns": 4,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "defender round 3, premise list",
+  "first_pattern": "LINK\\s+\\d+\\b/i.test(l);const rule=l=>/^\\s*-{3,}\\s*"
+ },
+ {
+  "node": "D4B Build",
+  "in_library": false,
+  "patterns": 4,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list",
+  "first_pattern": "LINK\\s+\\d+\\b/i.test(l);const rule=l=>/^\\s*-{3,}\\s*"
+ },
+ {
+  "node": "C4B Build",
+  "in_library": false,
+  "patterns": 4,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list",
+  "first_pattern": "LINK\\s+\\d+\\b/i.test(l);const rule=l=>/^\\s*-{3,}\\s*"
+ },
+ {
+  "node": "D4 Extract",
+  "in_library": false,
+  "patterns": 3,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b[^\\n]*|\\**\\s*\\d+[.)]\\s+(?:LIN"
+ },
+ {
+  "node": "Close Enforcer Record",
+  "in_library": false,
+  "patterns": 3,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, judge lines",
+  "first_pattern": "LINK\\s+)(\\d+)\\b/gi:/\\b(?:C|LINK\\s+)(\\d+)\\b/gi;cons"
+ },
+ {
+  "node": "Assume Check Build",
+  "in_library": false,
+  "patterns": 3,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(\\d+)/i);"
+ },
+ {
+  "node": "C1 Extract",
+  "in_library": false,
+  "patterns": 2,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b[^\\n]*|\\**\\s*\\d+[.)]\\s+(?:LIN"
+ },
+ {
+  "node": "D2 Build",
+  "in_library": false,
+  "patterns": 2,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b[^\\n]*|\\**\\s*\\d+[.)]\\s+(?:LIN"
+ },
+ {
+  "node": "D2 Extract",
+  "in_library": false,
+  "patterns": 2,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b[^\\n]*|\\**\\s*\\d+[.)]\\s+(?:LIN"
+ },
+ {
+  "node": "C2 Build",
+  "in_library": false,
+  "patterns": 2,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b[^\\n]*|\\**\\s*\\d+[.)]\\s+(?:LIN"
+ },
+ {
+  "node": "C2 Extract",
+  "in_library": false,
+  "patterns": 2,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b[^\\n]*|\\**\\s*\\d+[.)]\\s+(?:LIN"
+ },
+ {
+  "node": "Citation Scan",
+  "in_library": false,
+  "patterns": 2,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b[^\\n]*|\\**\\s*\\d+[.)]\\s+(?:LIN"
+ },
+ {
+  "node": "Failure Salvage",
+  "in_library": false,
+  "patterns": 2,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b[^\\n:]{0,80}:/mi;"
+ },
+ {
+  "node": "Cure Build",
+  "in_library": true,
+  "patterns": 2,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+\\d|\\[L[1-4]\\]|\\b(?:answered|unanswered|refu"
+ },
+ {
+  "node": "Panel Cure Build 1",
+  "in_library": true,
+  "patterns": 2,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+\\d|\\[L[1-4]\\]|\\b(?:answered|unanswered|refu"
+ },
+ {
+  "node": "Panel Cure Build 2",
+  "in_library": true,
+  "patterns": 2,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+\\d|\\[L[1-4]\\]|\\b(?:answered|unanswered|refu"
+ },
+ {
+  "node": "Panel Cure Build 3",
+  "in_library": true,
+  "patterns": 2,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+\\d|\\[L[1-4]\\]|\\b(?:answered|unanswered|refu"
+ },
+ {
+  "node": "Alternate Build",
+  "in_library": true,
+  "patterns": 2,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+\\d|\\[L[1-4]\\]|\\b(?:answered|unanswered|refu"
+ },
+ {
+  "node": "Alternate Cure Build",
+  "in_library": true,
+  "patterns": 2,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+\\d|\\[L[1-4]\\]|\\b(?:answered|unanswered|refu"
+ },
+ {
+  "node": "L2 Count Plan",
+  "in_library": false,
+  "patterns": 2,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, judge lines",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b[^\\n]*|\\**\\s*\\d+[.)]\\s+(?:LIN"
+ },
+ {
+  "node": "Enforcer Build",
+  "in_library": false,
+  "patterns": 2,
+  "accepts_D_prefix": true,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s*\\d+|[DC]\\d+)\\b[^\\n:]{0,60}):/gi;"
+ },
+ {
+  "node": "C1B Build",
+  "in_library": false,
+  "patterns": 2,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "",
+  "first_pattern": "LINK\\s+\\d+\\b/i.test(l);const rule=l=>/^\\s*-{3,}\\s*"
+ },
+ {
+  "node": "Judge Contradiction Build",
+  "in_library": false,
+  "patterns": 2,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, judge lines",
+  "first_pattern": "LINK\\s+(\\d+)[^\\n]*/gmi))H.push({n:+h[1],at:h.index"
+ },
+ {
+  "node": "Judge Contradiction Record",
+  "in_library": false,
+  "patterns": 2,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, judge lines",
+  "first_pattern": "LINK\\s+(\\d+)[^\\n]*/gmi))H.push({n:+h[1],at:h.index"
+ },
+ {
+  "node": "L2 Gloss Plan",
+  "in_library": false,
+  "patterns": 2,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "",
+  "first_pattern": "LINK\\s+(?:\\d+|none)\\b[^\\n]*|\\**\\s*\\d+[.)]\\s+(?:LIN"
+ },
+ {
+  "node": "Build Synthesis",
+  "in_library": false,
+  "patterns": 1,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(\\d+)[^\\n]*/gmi))H.push({n:+h[1],at:h.index"
+ },
+ {
+  "node": "Format Markdown",
+  "in_library": false,
+  "patterns": 1,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list, judge lines",
+  "first_pattern": "LINK\\s+(\\d+)[^\\n]*/gmi))H.push({n:+h[1],at:h.index"
+ },
+ {
+  "node": "C4 Extract",
+  "in_library": false,
+  "patterns": 1,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list",
+  "first_pattern": "LINK\\s+(\\d+)[^\\n]*/gmi))H.push({n:+h[1],at:h.index"
+ },
+ {
+  "node": "C4G Extract",
+  "in_library": false,
+  "patterns": 1,
+  "accepts_D_prefix": false,
+  "reads_premise_tag": false,
+  "reads": "challenger round 3, defender round 3, premise list",
+  "first_pattern": "LINK\\s+(\\d+)[^\\n]*/gmi))H.push({n:+h[1],at:h.index"
+ }
+]
