@@ -1,0 +1,194 @@
+{
+ "out": {
+  "counts": {
+   "rounds": 3829,
+   "odv1Rounds": 1617,
+   "itemsOld": 271652,
+   "itemsNew": 271673
+  },
+  "classes": {
+   "R3 cut at 12 (old: first verse only)": 793,
+   "R1 add (bare number after \"and\" or \"&\")": 24,
+   "R2 refuse: no such chapter": 95,
+   "R2 refuse: verse past chapter end": 97,
+   "R3 cut at 40 (old: first verse only)": 3,
+   "R3 cut at 30 (old: first verse only)": 11,
+   "R2 clip: range past chapter end": 1,
+   "R1 drop (bare number after a comma, followed by a word)": 3
+  },
+  "keyDiff": {
+   "cap 12 scoped": {
+    "roundsChanged": 509,
+    "keysLost": 307,
+    "keysGained": 3492,
+    "oldKeys": 142065,
+    "newKeys": 145250
+   },
+   "cap 40 scoped": {
+    "roundsChanged": 140,
+    "keysLost": 245,
+    "keysGained": 118,
+    "oldKeys": 146775,
+    "newKeys": 146648
+   },
+   "cap 30 scoped": {
+    "roundsChanged": 145,
+    "keysLost": 245,
+    "keysGained": 254,
+    "oldKeys": 146569,
+    "newKeys": 146578
+   },
+   "cap 30 unscoped": {
+    "roundsChanged": 510,
+    "keysLost": 1463,
+    "keysGained": 250,
+    "oldKeys": 151882,
+    "newKeys": 150669
+   }
+  },
+  "r1cost": {
+   "n": 3,
+   "byNext": [
+    [
+     "pair",
+     1
+    ],
+    [
+     "makes",
+     1
+    ],
+    [
+     "verses",
+     1
+    ]
+   ]
+  },
+  "andWordN": 8,
+  "psalm0": [],
+  "sheet": {
+   "maxNewN": 137,
+   "maxNewC": 19065,
+   "overV": [],
+   "overC": [],
+   "alreadyOverV": 0,
+   "alreadyOverC": 0
+  }
+ },
+ "ex": {
+  "R3 cut at 12 (old: first verse only)": [
+   "18181b2f-f747-4e62-8b66-1e34e5f64534 claude_r1 | Exodus 28:15-30 | omething precedes the sun. **Exodus 28:15-30** — The Choshen Mishpat (brea",
+   "18181b2f-f747-4e62-8b66-1e34e5f64534 claude_r1 | Revelation 21:11-23 | nd radiator of this light. **Revelation 21:11-23** — - Wall: 12 foundations, e",
+   "18181b2f-f747-4e62-8b66-1e34e5f64534 engine_r1 | Exodus 28:15-30 | r ethnically-specific one. **Exodus 28:15-30:** Your argument hinges on th",
+   "18181b2f-f747-4e62-8b66-1e34e5f64534 engine_r1 | Revelation 21:11-24 |  light He places upon her. **Revelation 21:11-24:** This is the nexus of your ",
+   "191b4434-1e82-4261-87e9-48e72749c025 claude_r1 | 2 Kings 17:6-23 | al exile condition. **[L3-B] 2 Kings 17:6-23 — Northern Kingdom Scatter Ex",
+   "79357134-60fd-42cd-a8f2-2ef1a074f4e4 engine_r2 | Romans 1:1-17 | g it to be worked through. **Romans 1:1-17** [L1] is a cascade of layere",
+   "0d31cc8b-9690-436d-8c70-c605e0855dad claude_r2 | Acts 11:4-17 | xplanation. Peter's answer in Acts 11:4-17 does not say *\"they were actu",
+   "1b40c755-6ca8-4954-a201-32d24c48fda6 engine_r1 | Isaiah 28:1-13 | mediate Contextual Grounding (Isaiah 28:1–13) - **Verses 1–8**: Judgment o",
+   "f86c3c2e-9786-4848-b06a-802051c048f7 engine_r1 | Ezekiel 34:1-16 | ael” echoes Jeremiah 50:6 and Ezekiel 34:1–16, where God promises to shephe",
+   "ade94dfc-d7ff-4eb3-94b5-40aa8cd73157 engine_r1 | Isaiah 28:1-13 | iah 28:10 must be read inside Isaiah 28:1-13, because the chapter begins w",
+   "7be48827-65c5-4f04-8222-c74dbe27c3d0 claude_r1 | Isaiah 28:1-29 | g the word, the full chapter (Isa 28:1-29) governs. Verses 1-8 = woe or",
+   "48a1d27b-ebbc-4491-94b3-14cf1a5da04b claude_r1 | Galatians 3:8-28 |  *every* Pauline ethnē usage (Gal 3:8-28) collapses into Lo-ammi witho"
+  ],
+  "R1 add (bare number after \"and\" or \"&\")": [
+   "b5b16c53-1f7d-47f3-bc73-bcc708635241 claude_r2 |  (2/5):** The argument quotes Isaiah 28:10 and 9, grounding its initial premise in the K",
+   "127a4733-26ff-4c9a-bed0-82dd60ac11de engine_r1 | eaker than asserted You cite James 2:17, 20, and 26 as \"three witnesses\" with the same verd",
+   "127a4733-26ff-4c9a-bed0-82dd60ac11de engine_r2 | \"** — rests on the claim that James 2:17, 20, and 26 all use *nekros* (dead), but the TR rea",
+   "127a4733-26ff-4c9a-bed0-82dd60ac11de engine_r3 | s it. The KJV reads \"dead\" at James 2:17, 20, and 26 in English, but I concede the underlyin",
+   "f85b01a3-f1c2-4c93-8623-c7d0b76cb811 engine_r1 |  entirely. [L4] **Prove from James 2:14, 17, 19, 20, and 26 — without importing a pre-commitment to",
+   "cc0eafec-e930-4b70-bd54-59695758fd65 engine_r2 | h” made “one body.”** [L3] **Galatians 3:8, 14, 16, and 29 explicitly connect the nations/Gentiles",
+   "309d97c7-6a5e-4912-bcad-d5495c4e0596 claude_r1 | . **[L4]** - **Footing:** L1 Romans 11:11, 13-14 and 18; Jeremiah 11:16; L2 *parazēloō*; L3 Deu",
+   "22e2701a-7490-4d0c-b5a1-4741de07d6ed engine_r1 |  [L1] rule for counting seed; Galatians 3:8, 14, and 29 supply the [L1] recipients and outcome,",
+   "4b1c5d4d-ac9b-4acc-ae52-16ff9dc823f3 engine_r2 | ture does not exist **[L2]** Romans 11:17, 23, and 24 use forms of **the same verb**, *enkent",
+   "4b1c5d4d-ac9b-4acc-ae52-16ff9dc823f3 challenger_r3 | EDED -- it floats free. [L2] Romans 11:17, 23, and 24 use forms of the same verb, **ἐγκεντρίζ",
+   "ODV1-25581-pram8fgi engine_r2 | unted for circumcision\"), and Acts 15:19, 24 and 28-29 rule it non-binding (DG-21). It must be",
+   "ODV1-25804-8j8g7h25 engine_r2 | kiel 34:12-13, 23, 30-31 with John 10:11 and 27 [L1], on echō/allos/poimnē [L2], on Mat"
+  ],
+  "R2 refuse: no such chapter": [
+   "e9f36f41-b342-4d38-a4e6-36cb1be714f6 claude_r2 | 1 Corinthians 28:11-12 |  (1 Cor 14:21 directly quotes 28:11–12; milk/meat parallels are text",
+   "81097479-98d7-42b4-a69c-fc6c8d86a5cf engine_r1 | Micah 27:42 | (citing Micah 5:2), 2:20, and 27:42 consistently denotes the cont",
+   "ecb73caa-154b-4da6-a572-3431c55ac496 claude_r1 | Matthew 34:5-6 | y scattered by bad shepherds (34:5-6, \"scattered upon all the face",
+   "722ea987-cd61-46e1-b63e-9e38a32f68b5 claude_r2 | Micah 19:28 | f Israel,\" purely geographic. 19:28 — \"twelve tribes of Israel\" a",
+   "722ea987-cd61-46e1-b63e-9e38a32f68b5 claude_r2 | Micah 27:42 | ction rather than erasing it. 27:42 — a mocking title, no polity ",
+   "de1b1eeb-7cbc-4874-a874-902053a7873d engine_r2 | Luke 49:6 | d,\" fulfilling Isaiah 61, not 49:6). The full citation of Isaiah",
+   "c022f8b2-8355-468a-8794-1acd7307ace2 claude_r2 | Ephesians 11:28 | oved for the fathers' sakes\" (11:28, election). The blood-verdict",
+   "70109ad0-7bce-4560-9b6f-989bc64b2f58 claude_r1 | 1 Thessalonians 17:1-9 | essalonica — the very city of 17:1-9**, the comparison city of v.1",
+   "70109ad0-7bce-4560-9b6f-989bc64b2f58 claude_r2 | Galatians 17:11 | ed on the searching practice (17:11) → outcome recorded (17:12) →",
+   "70109ad0-7bce-4560-9b6f-989bc64b2f58 claude_r2 | Galatians 17:12 | e (17:11) → outcome recorded (17:12) → prescribed to all (1 Thess",
+   "7711611b-5f62-4233-8078-f9904149fcb2 claude_r2 | Galatians 11:20 | en off \"because of unbelief\" (11:20) are still \"of the seed\" (11:",
+   "7711611b-5f62-4233-8078-f9904149fcb2 claude_r2 | Galatians 11:1 | :20) are still \"of the seed\" (11:1) with calling *ametamelēta* ("
+  ],
+  "R2 refuse: verse past chapter end": [
+   "53c09ede-95cf-41f7-a635-34046af3a38f engine_r1 | Micah 4:14 (ends 13) | e preceding verse (Micah 5:1 [4:14 MT]), where Israel's ruler is",
+   "81097479-98d7-42b4-a69c-fc6c8d86a5cf engine_r1 | Micah 2:20 (ends 13) | tthew 2:6 (citing Micah 5:2), 2:20, and 27:42 consistently denot",
+   "92e43beb-53fa-42cf-9295-c53233b5314c engine_r1 | Psalms 118:176 (ends 29) | herds caused them to err. - **LXX Psalm 118:176 (119:176)** — *eplanēthēn hōs",
+   "92e43beb-53fa-42cf-9295-c53233b5314c claude_r2 | Psalms 118:176 (ends 29) |  misled by shepherds [L2] - **LXX Ps 118:176** — *hōs probaton apolōloton*",
+   "722ea987-cd61-46e1-b63e-9e38a32f68b5 claude_r2 | Micah 2:20 (ends 13) | el\" — no north/south content. 2:20 — \"land of Israel,\" purely ge",
+   "97f635b7-6bc5-40bc-a697-bb72de71bdc1 claude_r2 | Hosea 9:24 (ends 17) | ) to describe those called in 9:24, \"not of the Jews only, but a",
+   "59db5d7b-9620-466d-91b6-5def5d5ff021 claude_r2 | Matthew 11:50 (ends 30) | (ἔθνος, singular, Israel, per 11:50's \"the people,\" λαός). **[L4]",
+   "8b420283-62db-479b-babd-64188f6ef648 claude_r2 | Isaiah 9:27 (ends 21) | ork already flags (Paul marks Isa 9:27 \"concerning Israel\" but leave",
+   "58c9af8a-0136-46c4-8dfc-e5358bdecbee claude_r2 | Matthew 1:35 (ends 25) |  the Highest overshadows her (1:35). [L1] The text also holds, ",
+   "46d25153-f15b-449c-987d-4e3f6a513ee5 engine_r2 | Isaiah 9:27 (ends 21) | llenger notes Paul labels the Isaiah 9:27 citation \"concerning Israel\" ",
+   "296f3292-4f5a-41c1-8b80-109d24170368 engine_r2 | Judges 10:30 (ends 18) | h 24:31; Judg 2:7; 1 Ki 3:14; 2 Ki 10:30; 2 Chr 12:1; Ps 23:6; Prov 28",
+   "ce9463ba-c1e9-40a0-8e79-e180f90d2724 challenger_r3 | Hosea 9:24 (ends 17) | y, but also of the Gentiles\" (9:24). That is Paul's own citation"
+  ],
+  "R3 cut at 40 (old: first verse only)": [
+   "4fe4caba-09f2-47aa-8a3f-5c15d7c865d0 engine_r2 | Genesis 36:1-43 | ly established (Gen 25:23-34; 36:1-43). The L1/L2 text itself provi",
+   "ODV1-26245-m5nh3phz engine_r1 | John 4:1-42 | ve everlasting life.\"* [L1] - John 4:1-42 [L1]: the Samaritan woman at ",
+   "ODV1-26512-af2o9te5 engine_r2 | Luke 1:5-48 | Isaiah 7:14, Matthew 1:16-25, Luke 1:5-48, Romans 1:3-4, Acts 2:30, 2 S"
+  ],
+  "R3 cut at 30 (old: first verse only)": [
+   "4fe4caba-09f2-47aa-8a3f-5c15d7c865d0 engine_r2 | Genesis 36:1-43 | ly established (Gen 25:23-34; 36:1-43). The L1/L2 text itself provi",
+   "7711611b-5f62-4233-8078-f9904149fcb2 claude_r2 | Romans 11:1-36 | e subject line [L1] {STATED: Rom 11:1-36} The defender has now stated ",
+   "82462fa8-ecb7-4a8b-a8eb-dc32963407d9 engine_r1 | John 4:4-42 | n’s own narrative structure*. John 4:4-42 shows Jesus in Samaria — not ",
+   "b77c38c4-e917-49f8-9a3b-fe57445ecdb6 claude_r2 | John 4:5-42 |  path language - The context (John 4:5-42) shows Jesus speaking to *Sam",
+   "ODV1-23845-bqsjdt6k claude_r2 | John 4:4-39 | iaskorpizō as John 10:12) - **John 4:4-39** — the Samaritan territory (",
+   "ODV1-23845-bqsjdt6k claude_r2 | John 4:4-39 |  children gathered) [L1-L3] - John 4:4-39 (must go to Samaria; Samarita",
+   "ODV1-23845-bqsjdt6k engine_r2 | John 4:4-42 | of man being lifted up. [L1] John 4:4–42 nowhere calls these Samaritan",
+   "ODV1-23845-bqsjdt6k engine_r3 | John 4:4-42 | sity, not identity. **[L3]** John 4:4–42 records Samaritan belief; now",
+   "ODV1-23845-bqsjdt6k engine_r3 | John 4:4-42 | ting grounded in [L1/L2/L3]. John 4:4–42 does not name the ancestry or",
+   "ODV1-26245-m5nh3phz engine_r1 | John 4:1-42 | ve everlasting life.\"* [L1] - John 4:1-42 [L1]: the Samaritan woman at ",
+   "ODV1-26512-af2o9te5 engine_r2 | Luke 1:5-48 | Isaiah 7:14, Matthew 1:16-25, Luke 1:5-48, Romans 1:3-4, Acts 2:30, 2 S"
+  ],
+  "R2 clip: range past chapter end": [
+   "1be2923b-4dd3-41c2-9e93-aded6c75ebc4 claude_r1 | Ezekiel 12:20-32 (ends 28) | for \"expands\" is 11:51-52 and 12:20-32, both of which I have just re"
+  ],
+  "R1 drop (bare number after a comma, followed by a word)": [
+   "ODV1-28489-ciui0jmy claude_r2 | ord can cover a virgin (their Genesis 24:43, 16 pair) is not disputed; the point is the",
+   "ODV1-30196-rymz70zp claude_r2 | oes not displace this.** [L1] Luke 1:36, 5 makes Elisabeth of Aaron's daughters. [",
+   "ODV1-37719-7h5d9el2 engine_r1 | 9), \"young woman\" — stands in Isaiah 7:14, 7 verses in the canon. bethulah (H1330), "
+  ]
+ },
+ "r1cost": [
+  {
+   "tag": "ODV1-28489-ciui0jmy claude_r2",
+   "b": "Genesis",
+   "label": "24:16",
+   "next": "pair",
+   "ctx": "ord can cover a virgin (their Genesis 24:43, 16 pair) is not disputed; the point is the"
+  },
+  {
+   "tag": "ODV1-30196-rymz70zp claude_r2",
+   "b": "Luke",
+   "label": "1:5",
+   "next": "makes",
+   "ctx": "oes not displace this.** [L1] Luke 1:36, 5 makes Elisabeth of Aaron's daughters. ["
+  },
+  {
+   "tag": "ODV1-37719-7h5d9el2 engine_r1",
+   "b": "Isaiah",
+   "label": "7:7",
+   "next": "verses",
+   "ctx": "9), \"young woman\" — stands in Isaiah 7:14, 7 verses in the canon. bethulah (H1330), "
+  }
+ ],
+ "andWord": [
+  "67afe540-e6a8-4071-92a8-158f83168daf engine_r2 | rests on treating Isaiah 28:10 and 13 as performatively",
+  "f224c996-56ed-4eda-96d1-6395de1b84af engine_r2 | ctic over-read; the John 7:35 and 4 proposals are under-dete",
+  "c18ddc1b-dc31-48db-a922-211be5d79d57 claude_r2 | 3).** - **[L1]** Romans 11:17 and 24 name the branches' ",
+  "20d7478e-bb35-43aa-a66b-737b921e0fb0 engine_r2 | claim was that Ephesians 2:12 and 19 do not *supply* p",
+  "ODV1-23966-xisk8n0s engine_r1 |  Footing: [L1] Galatians 3:8 and 29 state the promise’s ",
+  "ODV1-24603-r7h3131h engine_r3 | ORTED --** [L1] Romans 11:11 and 14 expressly identify provo",
+  "ODV1-27893-xurofuvd engine_r2 |  these rows.\" In Matthew 1:3 and 5 a named man is t",
+  "ODV1-33389-ds52amc3 engine_r1 | David on Joseph. Matthew 1:21 and 25 with Luke 1:13 and "
+ ]
+}
