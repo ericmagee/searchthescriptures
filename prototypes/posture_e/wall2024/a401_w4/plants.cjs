@@ -1,0 +1,10 @@
+// ASK 401 plants (W2 8602 item 4 cases a-e plus extras): run the pkgGKV closure as it stands in each library line 1448, old and new.
+const fs=require('fs');const T=require('../tools/lib.cjs');
+const get=f=>{let d=JSON.parse(fs.readFileSync(f));if(d.data&&d.data.nodes)d=d.data;const U=T.unpack(d);const l=U.L[1448];const i=l.indexOf('{const __gkv=(t=>');const j=l.indexOf('})(to);',i);return l.slice(i+'{const __gkv='.length,j+'})'.length);};
+const R=[{book:'Matthew',chapter:1,verse:20,text:"But while he thought on these things, behold, the angel of the Lord appeared unto him in a dream, saying, Joseph, thou son of David, fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost. [conceived: Gr. begotten]"},{book:'Matthew',chapter:1,verse:18,text:"Now the birth of Jesus Christ was on this wise: When as his mother Mary was espoused to Joseph, before they came together, she was found with child of the Holy Ghost."}];
+const $=n=>({all:()=>n==='Cited Verses'?R.map(json=>({json})):[]});
+const mk=src=>eval('('+src+')');
+const [OLD,NEW]=process.argv.slice(2).map(get);const fo=mk(OLD),fn=mk(NEW);
+const g=q=>'D4 vs C1 (Matthew 1:18): UNDERDETERMINED -- x -- GROUND: [L1] Matthew 1:20 "'+q+'" | [L1] Matthew 1:18 "before they came together, she was found with child of the Holy Ghost"';
+const C=[['a margin note (44974)','for that which is conceived in her is of the Holy Ghost. [conceived: Gr. begotten]'],['b no note','for that which is conceived in her is of the Holy Ghost.'],['c Spirit','for that which is conceived in her is of the Holy Spirit.'],['d begotten in her','for that which is begotten in her'],['e ellipsis','thy wife... of the Holy Ghost'],['f note only','[conceived: Gr. begotten]'],['g note plus wrong word','for that which is conceived in her is of the Holy Spirit. [conceived: Gr. begotten]'],['h note in parentheses','for that which is conceived in her is of the Holy Ghost. (conceived: Gr. begotten)']];
+for(const [n,q] of C){const o=fo(g(q)),w=fn(g(q));console.log(n.padEnd(24),'old',o?'REFUSED':'ok','| new',w?'REFUSED':'ok');}
