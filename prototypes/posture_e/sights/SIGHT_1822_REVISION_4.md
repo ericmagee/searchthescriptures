@@ -1,6 +1,6 @@
 # Sight 1822 Revision 4.2 (proposal, not written)
 
-Rev 4.2 (19:58 CST) applies W2's grade at Wall 7986 to 7988: B item 1 now reads "the man is named in the row or its chain", and Luke 1:35 is answered in place. Hebrews 11:11's chain is 11:12 (W2 7987).
+Rev 4.2 (19:58 CST) applies W2's grade at Wall 7986 to 7988: B item 1 now reads "the man is named in the row or its chain", and Luke 1:35 is answered in place. Change C (5) now states the "came in unto her" claim for the 21 rows that state the act (W1, after 7988). Hebrews 11:11's chain is 11:12 (W2 7987).
 
 Rev 4.1 (19:52 CST) applies W1's grade at Wall 7985: C1 (the title of Change B), C2 (a Romans 9:10 line), and 4.2 (cite Sight 32, and name the sights that hold Luke 1:35).
 
@@ -89,7 +89,7 @@ No row in the canon gives a woman's conception without a man.
 
 ## Change C: new [L4] point (5)
 
-(5) In every row where scripture tells how a woman conceived, a man came in unto her. Where it says the LORD gave the conception, the husband stands in the same row or its chain:
+(5) In the 21 rows where scripture states how a woman conceived, a man knew her, went in unto her, came in unto her, or lay with her. In all 33 rows that narrate a conception, the man is named in the row or its chain. Where it says the LORD gave the conception, the husband stands in the same row or its chain:
 - "when he went in unto her, the LORD gave her conception" (Ruth 4:13);
 - "Elkanah knew Hannah his wife; and the LORD remembered her" (1 Samuel 1:19).
 
