@@ -1,0 +1,24 @@
+== a. live pair, nothing running, released body: exit 0, GO
+== b. a running execution in another workflow: exit 1, REFUSED (1)
+   FAIL  1 RUNNING: 1 (running, workflow zzz)
+== c. a waiting execution in the child: exit 1, REFUSED (1)
+   FAIL  1 RUNNING: 2 (waiting, workflow MqQHRl7mQQ0z8QdT)
+== d. a waiting execution in another workflow: exit 0, GO
+   ok    1 waiting in other workflows, not refused: 3 (workflow baHaafyFRjSFD9q3)
+== e. expected engine version is the one before: exit 1, REFUSED (1)
+   FAIL  2 engine VERSION db091b9e-4a6b-4c2a-a35a-e83f1c4cbe5f is not the expected 3257a833-d661-4767-ad98-bf620e21e542
+== f. child not published: exit 1, REFUSED (1)
+   FAIL  2 child NOT PUBLISHED (active True, activeVersionId old-version)
+== g. child library one line drifted: exit 1, REFUSED (2)
+   FAIL  3 LIBRARY DIFFERS: engine 7b1cd78b3c25da5c, child ed453db91725e9f0
+   FAIL  3 child HEADER names 7b1cd78b3c25da5c, body is ed453db91725e9f0
+== h. body with an extra key: exit 1, REFUSED (1)
+   FAIL  5 BODY KEYS ['challenger', 'defender', 'extra', 'topic'], expected defender, challenger, topic
+== i. body without a topic: exit 1, REFUSED (2)
+   FAIL  5 BODY KEYS ['challenger', 'defender'], expected defender, challenger, topic
+   FAIL  5 BODY TOPIC empty or missing
+== j. body that does not parse: exit 1, REFUSED (1)
+   FAIL  5 BODY does not parse: Expecting value: line 1 column 14 (char 13)
+== k. released body sha differs: exit 1, REFUSED (2)
+   FAIL  5 BODY KEYS ['challenger', 'defender', 'extra', 'topic'], expected defender, challenger, topic
+   FAIL  5 BODY SHA 094dfe96ed9e does not match the released 53763d9544a6
