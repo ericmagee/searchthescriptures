@@ -1,0 +1,834 @@
+{
+ "cnt": {
+  "PARTIAL|SELF-SUPPORTED": {
+   "n": 17,
+   "ch": 0
+  },
+  "BROKEN|SELF-SUPPORTED": {
+   "n": 95,
+   "ch": 0
+  },
+  "BROKEN|PROP-DEPENDENT": {
+   "n": 92,
+   "ch": 88
+  },
+  "BROKEN|COLLAPSED": {
+   "n": 11,
+   "ch": 11
+  },
+  "PARTIAL|COLLAPSED": {
+   "n": 4,
+   "ch": 0
+  },
+  "HELD|COLLAPSED": {
+   "n": 31,
+   "ch": 0
+  },
+  "HELD|SELF-SUPPORTED": {
+   "n": 237,
+   "ch": 0
+  },
+  "HELD|PROP-DEPENDENT": {
+   "n": 122,
+   "ch": 0
+  },
+  "PARTIAL|PROP-DEPENDENT": {
+   "n": 15,
+   "ch": 0
+  }
+ },
+ "ch": [
+  {
+   "id": 606,
+   "seat": "deepseek",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 609,
+   "seat": "deepseek",
+   "v": "BROKEN",
+   "cs": "COLLAPSED",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 669,
+   "seat": "deepseek",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 671,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "COLLAPSED",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 674,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 679,
+   "seat": "gemini",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 680,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "COLLAPSED",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 681,
+   "seat": "deepseek",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 682,
+   "seat": "gemini",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 687,
+   "seat": "deepseek",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 688,
+   "seat": "gemini",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 689,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 696,
+   "seat": "deepseek",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 697,
+   "seat": "gemini",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 698,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 699,
+   "seat": "deepseek",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 700,
+   "seat": "gemini",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 701,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 702,
+   "seat": "deepseek",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 703,
+   "seat": "gemini",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 704,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 708,
+   "seat": "deepseek",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 709,
+   "seat": "gemini",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 710,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 711,
+   "seat": "deepseek",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 712,
+   "seat": "gemini",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 713,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 717,
+   "seat": "deepseek",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 718,
+   "seat": "gemini",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 719,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 740,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 743,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 744,
+   "seat": "deepseek",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 749,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 760,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "COLLAPSED",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 761,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "COLLAPSED",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 765,
+   "seat": "deepseek",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 766,
+   "seat": "gemini",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 767,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "COLLAPSED",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 768,
+   "seat": "deepseek",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 769,
+   "seat": "gemini",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 770,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 771,
+   "seat": "deepseek",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 772,
+   "seat": "gemini",
+   "v": "BROKEN",
+   "cs": "COLLAPSED",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 773,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 775,
+   "seat": "gemini",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 776,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "COLLAPSED",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 777,
+   "seat": "deepseek",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 779,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "COLLAPSED",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 782,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 784,
+   "seat": "gemini",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 785,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 787,
+   "seat": "gemini",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 798,
+   "seat": "deepseek",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 800,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 804,
+   "seat": "deepseek",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 805,
+   "seat": "gemini",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 806,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "COLLAPSED",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 869,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 872,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 887,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 890,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 935,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 947,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 949,
+   "seat": "sol",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 962,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 965,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "COLLAPSED",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 968,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 971,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 976,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 983,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 987,
+   "seat": "sol",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 997,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 998,
+   "seat": "sol",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1133,
+   "seat": "argon",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1140,
+   "seat": "luna",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1141,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1142,
+   "seat": "sol",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1143,
+   "seat": "luna",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1144,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1145,
+   "seat": "sol",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1149,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1163,
+   "seat": "hydrogen",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1170,
+   "seat": "luna",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1176,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1177,
+   "seat": "sol",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1181,
+   "seat": "luna",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1188,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1189,
+   "seat": "hydrogen",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1190,
+   "seat": "luna",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1194,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1196,
+   "seat": "luna",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1214,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1215,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1216,
+   "seat": "sol",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1217,
+   "seat": "grok",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1221,
+   "seat": "sonnet",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1222,
+   "seat": "chatgpt",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  },
+  {
+   "id": 1226,
+   "seat": "sol",
+   "v": "BROKEN",
+   "cs": "PROP-DEPENDENT",
+   "a": "CHALLENGER WINS",
+   "b": "UNDERDETERMINED"
+  }
+ ]
+}

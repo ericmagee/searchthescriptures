@@ -1,0 +1,30 @@
+PASS rd386 BROKEN, challenge SELF-SUPPORTED                     live CHALLENGER WINS | t404 CHALLENGER WINS
+PASS rd386 BROKEN, challenge PROP-DEPENDENT                     live CHALLENGER WINS | t404 UNDERDETERMINED
+PASS rd386 BROKEN, challenge COLLAPSED                          live CHALLENGER WINS | t404 UNDERDETERMINED
+PASS rd386 BROKEN, no challenge standing                        live CHALLENGER WINS | t404 null
+PASS rd386 BROKEN-1 form, PROP-DEPENDENT                        live CHALLENGER WINS | t404 UNDERDETERMINED
+PASS HELD and PARTIAL grid (384 cases) unchanged                differ 0
+PASS BROKEN SELF-SUPPORTED on a KB-0030 tie                     live UNDERDETERMINED | t404 UNDERDETERMINED
+stored judgments 624 errors 0
+   BROKEN|COLLAPSED             seats 11 word changes 11
+   BROKEN|PROP-DEPENDENT        seats 92 word changes 88
+   BROKEN|SELF-SUPPORTED        seats 95 word changes 0
+   HELD|COLLAPSED               seats 31 word changes 0
+   HELD|PROP-DEPENDENT          seats 122 word changes 0
+   HELD|SELF-SUPPORTED          seats 237 word changes 0
+   PARTIAL|COLLAPSED            seats 4 word changes 0
+   PARTIAL|PROP-DEPENDENT       seats 15 word changes 0
+   PARTIAL|SELF-SUPPORTED       seats 17 word changes 0
+PASS every change is BROKEN, not SELF-SUPPORTED, CHALLENGER WINS to UNDERDETERMINED changes 99, other 0
+PASS boundary 1076 (SELF-SUPPORTED) keeps CHALLENGER WINS       live CHALLENGER WINS | t404 CHALLENGER WINS
+PASS boundary 1128 (SELF-SUPPORTED) keeps CHALLENGER WINS       live CHALLENGER WINS | t404 CHALLENGER WINS
+PASS boundary 1199 (SELF-SUPPORTED) keeps CHALLENGER WINS       live CHALLENGER WINS | t404 CHALLENGER WINS
+PASS no-word row 604 (SELF-SUPPORTED): a word on recompute under live iff under t404 recompute: live CHALLENGER WINS | t404 CHALLENGER WINS (stored: no word; not written back)
+PASS no-word row 606 (PROP-DEPENDENT): a word on recompute under live iff under t404 recompute: live CHALLENGER WINS | t404 UNDERDETERMINED (stored: no word; not written back)
+PASS no-word row 607 (SELF-SUPPORTED): a word on recompute under live iff under t404 recompute: live CHALLENGER WINS | t404 CHALLENGER WINS (stored: no word; not written back)
+PASS no-word row 608 (SELF-SUPPORTED): a word on recompute under live iff under t404 recompute: live CHALLENGER WINS | t404 CHALLENGER WINS (stored: no word; not written back)
+PASS no-word row 609 (COLLAPSED): a word on recompute under live iff under t404 recompute: live CHALLENGER WINS | t404 UNDERDETERMINED (stored: no word; not written back)
+PASS no-word row 610 (SELF-SUPPORTED): a word on recompute under live iff under t404 recompute: live CHALLENGER WINS | t404 CHALLENGER WINS (stored: no word; not written back)
+PASS no-word row 611 (SELF-SUPPORTED): a word on recompute under live iff under t404 recompute: live CHALLENGER WINS | t404 CHALLENGER WINS (stored: no word; not written back)
+PASS no-word row 628 (SELF-SUPPORTED): a word on recompute under live iff under t404 recompute: live CHALLENGER WINS | t404 CHALLENGER WINS (stored: no word; not written back)
+RESULT: PASS
