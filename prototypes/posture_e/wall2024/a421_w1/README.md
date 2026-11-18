@@ -20,5 +20,8 @@ Schema: prod column lists of the_wall, engine_manual and engine_manual_log. The 
 ## Plan test 4 on prod
 v192 is now the max version, so the plan's "preview on v191" is refused on prod by design (step 1). On prod, test 4 is test 6 above: a no-op pair on v192 reproduces be475a1e / 567,729. The full v191 to v192 replay is shown locally.
 
+## W3 8855 condition
+REVOKE EXECUTE on engine_manual_apply FROM PUBLIC, anon, authenticated (end of a421.sql). Local: anon false, authenticated false, owner true.
+
 ## After the card (prod)
 pg_proc readback of the three signatures; test 1; test 2 on a Wall root opened for the test (not 2024 or 8816); test 3 on that root; test 6 above.

@@ -75,3 +75,6 @@ BEGIN
     VALUES (v_max + 1, (now() at time zone 'America/Chicago')::date, p_title, p_log, v_len);
   RETURN jsonb_build_object('success',true,'written',true,'id',v_id,'version',v_max + 1,'md5',v_md5,'length',v_len,'counts',v_counts);
 END; $f$;
+
+-- W3 8855 condition: only the database owner (the seats' SQL path) runs the manual writer
+REVOKE EXECUTE ON FUNCTION public.engine_manual_apply(integer,text,jsonb,text,integer,text,text,text,boolean) FROM PUBLIC, anon, authenticated;
