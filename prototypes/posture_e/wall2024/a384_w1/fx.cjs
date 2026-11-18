@@ -19,5 +19,9 @@ const F=[
  ['(Matthew 1:18, 20)',12],
  ['Matthew 1:18, 20: the angel',12],
  ['Jude 1:3 and Judges 1:3',12],
+ ['2 Samuel 7:12, 14',12],
+ ['Matthew 1:18, 20-23',12],
+ ['Matthew 1:18; 20',12],
+ ['Matthew 1:18 and 20 show',12],
 ];
 for(const [t,cap] of F){console.log(JSON.stringify(t),'cap',cap,'=>',R.keys(t,{cap}).map(k=>k.key.replace(/^\S+ /,'')).join(' | ').slice(0,120));}
