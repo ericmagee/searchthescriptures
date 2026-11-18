@@ -1,0 +1,804 @@
+{
+ "W1_R1": {
+  "items": {
+   "dropped": 856,
+   "added": 17
+  },
+  "keys": {
+   "lostReal": 284,
+   "lostPhantom": 243,
+   "gained": 3492
+  },
+  "r3": {
+   "cap 12": {
+    "lastVerseLost": 295,
+    "gains": 498
+   },
+   "cap 30": {
+    "lastVerseLost": 0,
+    "gains": 11
+   },
+   "cap 40": {
+    "lastVerseLost": 0,
+    "gains": 3
+   }
+  },
+  "r2": {
+   "refuse": 191,
+   "clip": 1
+  },
+  "sheet": {
+   "maxN": 203,
+   "maxC": 29782,
+   "overV": [
+    "0b3e2a44-80e7-4c26-b245-729017ee72e8 154->154",
+    "5b5261a7-4a72-486d-808a-7d3465a6d297 166->183",
+    "6ab1c637-2345-40e8-9045-cc35a36a722b 146->154",
+    "a9a85f12-c225-44a3-b6cd-f5a894eb70f1 148->156",
+    "9f60ccbc-695f-40fc-b159-c991942af9ca 157->157",
+    "d5ab92c5-f481-4308-98b7-54e99a843ceb 159->159",
+    "5ac40dec-719c-43a3-b7ca-6bb7dfde5579 162->176",
+    "7f68a0c5-d354-4b7b-8e75-5d4d5763b694 160->169",
+    "ODV1-23855-7yf0umeo 151->157",
+    "ODV1-24364-1ajgn5sp 164->164",
+    "ODV1-24557-ehbwfe2q 183->183",
+    "ODV1-24566-hpp2iymr 146->155",
+    "ODV1-25581-pram8fgi 197->203",
+    "ODV1-25592-mcqdykme 164->162",
+    "ODV1-25634-z4kq3wse 165->173",
+    "ODV1-25869-e1bqqal3 188->190",
+    "ODV1-26085-34jfk7wt 146->157",
+    "ODV1-26086-c1upchvv 204->203",
+    "ODV1-26240-kdc5gxu3 158->158",
+    "ODV1-26245-m5nh3phz 145->156",
+    "ODV1-26285-irkkb1at 151->151",
+    "ODV1-26986-sjssh7io 168->171",
+    "ODV1-27035-vxp28wcr 149->156",
+    "ODV1-27088-cg67a8be 149->164",
+    "ODV1-27191-bbe6uj76 160->175",
+    "ODV1-27208-ekasifv0 172->189",
+    "ODV1-27259-75fg8o6t 155->170",
+    "ODV1-29456-7wi6erod 145->153",
+    "ODV1-30196-rymz70zp 156->162",
+    "ODV1-32157-13dt08rh 153->162",
+    "ODV1-32205-iz6ryl2d 148->157",
+    "ODV1-32212-7r5e2xwm 145->160",
+    "ODV1-32255-5uddr87o 160->166"
+   ],
+   "overC": [
+    "5b5261a7-4a72-486d-808a-7d3465a6d297 24331->26745",
+    "5ac40dec-719c-43a3-b7ca-6bb7dfde5579 23788->25630",
+    "7f68a0c5-d354-4b7b-8e75-5d4d5763b694 22764->24019",
+    "ODV1-24557-ehbwfe2q 25518->25518",
+    "ODV1-25581-pram8fgi 28915->29782",
+    "ODV1-25634-z4kq3wse 23664->24484",
+    "ODV1-25869-e1bqqal3 26343->26629",
+    "ODV1-26086-c1upchvv 29092->28856",
+    "ODV1-26986-sjssh7io 24277->24526",
+    "ODV1-27191-bbe6uj76 24108->25890",
+    "ODV1-27208-ekasifv0 26000->27974",
+    "ODV1-27259-75fg8o6t 22936->24728",
+    "ODV1-32255-5uddr87o 24064->24537"
+   ],
+   "oldMaxN": 204,
+   "oldMaxC": 29092
+  },
+  "keptProseWords": [
+   [
+    "and",
+    48
+   ]
+  ]
+ },
+ "narrow": {
+  "items": {
+   "dropped": 3,
+   "added": 24
+  },
+  "keys": {
+   "lostReal": 64,
+   "lostPhantom": 243,
+   "gained": 3492
+  },
+  "r3": {
+   "cap 12": {
+    "lastVerseLost": 295,
+    "gains": 498
+   },
+   "cap 30": {
+    "lastVerseLost": 0,
+    "gains": 11
+   },
+   "cap 40": {
+    "lastVerseLost": 0,
+    "gains": 3
+   }
+  },
+  "r2": {
+   "refuse": 192,
+   "clip": 1
+  },
+  "sheet": {
+   "maxN": 204,
+   "maxC": 29934,
+   "overV": [
+    "0b3e2a44-80e7-4c26-b245-729017ee72e8 154->154",
+    "5b5261a7-4a72-486d-808a-7d3465a6d297 166->183",
+    "6ab1c637-2345-40e8-9045-cc35a36a722b 146->154",
+    "a9a85f12-c225-44a3-b6cd-f5a894eb70f1 148->156",
+    "9f60ccbc-695f-40fc-b159-c991942af9ca 157->157",
+    "d5ab92c5-f481-4308-98b7-54e99a843ceb 159->159",
+    "5ac40dec-719c-43a3-b7ca-6bb7dfde5579 162->176",
+    "7f68a0c5-d354-4b7b-8e75-5d4d5763b694 160->169",
+    "ODV1-23855-7yf0umeo 151->157",
+    "ODV1-24364-1ajgn5sp 164->164",
+    "ODV1-24557-ehbwfe2q 183->183",
+    "ODV1-24566-hpp2iymr 146->155",
+    "ODV1-25581-pram8fgi 197->204",
+    "ODV1-25592-mcqdykme 164->164",
+    "ODV1-25634-z4kq3wse 165->173",
+    "ODV1-25869-e1bqqal3 188->190",
+    "ODV1-26085-34jfk7wt 146->157",
+    "ODV1-26086-c1upchvv 204->204",
+    "ODV1-26240-kdc5gxu3 158->158",
+    "ODV1-26245-m5nh3phz 145->156",
+    "ODV1-26285-irkkb1at 151->151",
+    "ODV1-26986-sjssh7io 168->171",
+    "ODV1-27035-vxp28wcr 149->156",
+    "ODV1-27088-cg67a8be 149->164",
+    "ODV1-27191-bbe6uj76 160->175",
+    "ODV1-27208-ekasifv0 172->189",
+    "ODV1-27259-75fg8o6t 155->170",
+    "ODV1-29456-7wi6erod 145->153",
+    "ODV1-30196-rymz70zp 156->162",
+    "ODV1-32157-13dt08rh 153->162",
+    "ODV1-32205-iz6ryl2d 148->157",
+    "ODV1-32212-7r5e2xwm 145->160",
+    "ODV1-32255-5uddr87o 160->166"
+   ],
+   "overC": [
+    "5b5261a7-4a72-486d-808a-7d3465a6d297 24331->26745",
+    "5ac40dec-719c-43a3-b7ca-6bb7dfde5579 23788->25630",
+    "7f68a0c5-d354-4b7b-8e75-5d4d5763b694 22764->24019",
+    "ODV1-24557-ehbwfe2q 25518->25518",
+    "ODV1-25581-pram8fgi 28915->29934",
+    "ODV1-25634-z4kq3wse 23664->24484",
+    "ODV1-25869-e1bqqal3 26343->26629",
+    "ODV1-26086-c1upchvv 29092->29092",
+    "ODV1-26986-sjssh7io 24277->24526",
+    "ODV1-27191-bbe6uj76 24108->25890",
+    "ODV1-27208-ekasifv0 26000->27974",
+    "ODV1-27259-75fg8o6t 22936->24728",
+    "ODV1-32255-5uddr87o 24064->24537"
+   ],
+   "oldMaxN": 204,
+   "oldMaxC": 29092
+  },
+  "keptProseWords": [
+   [
+    "and",
+    187
+   ],
+   [
+    "names",
+    25
+   ],
+   [
+    "is",
+    22
+   ],
+   [
+    "with",
+    16
+   ],
+   [
+    "give",
+    13
+   ],
+   [
+    "name",
+    12
+   ],
+   [
+    "are",
+    10
+   ],
+   [
+    "state",
+    9
+   ],
+   [
+    "use",
+    9
+   ],
+   [
+    "uses",
+    8
+   ],
+   [
+    "says",
+    8
+   ],
+   [
+    "place",
+    7
+   ],
+   [
+    "shows",
+    7
+   ],
+   [
+    "for",
+    6
+   ],
+   [
+    "show",
+    6
+   ],
+   [
+    "as",
+    5
+   ],
+   [
+    "explicitly",
+    5
+   ],
+   [
+    "means",
+    5
+   ],
+   [
+    "say",
+    5
+   ],
+   [
+    "the",
+    5
+   ],
+   [
+    "carries",
+    4
+   ],
+   [
+    "describes",
+    4
+   ],
+   [
+    "does",
+    4
+   ],
+   [
+    "do",
+    4
+   ],
+   [
+    "in",
+    4
+   ],
+   [
+    "establishes",
+    4
+   ],
+   [
+    "at",
+    4
+   ],
+   [
+    "has",
+    4
+   ],
+   [
+    "gives",
+    4
+   ],
+   [
+    "calls",
+    4
+   ],
+   [
+    "plus",
+    4
+   ],
+   [
+    "puts",
+    4
+   ],
+   [
+    "vs",
+    3
+   ],
+   [
+    "only",
+    3
+   ],
+   [
+    "to",
+    3
+   ],
+   [
+    "supply",
+    3
+   ],
+   [
+    "excludes",
+    3
+   ],
+   [
+    "supplies",
+    3
+   ],
+   [
+    "identifies",
+    3
+   ],
+   [
+    "places",
+    3
+   ],
+   [
+    "prove",
+    3
+   ],
+   [
+    "reads",
+    3
+   ],
+   [
+    "describe",
+    3
+   ],
+   [
+    "reckon",
+    3
+   ],
+   [
+    "establish",
+    2
+   ],
+   [
+    "all",
+    2
+   ],
+   [
+    "must",
+    2
+   ],
+   [
+    "or",
+    2
+   ],
+   [
+    "calling",
+    2
+   ],
+   [
+    "distinguishes",
+    2
+   ],
+   [
+    "contrasts",
+    2
+   ],
+   [
+    "cannot",
+    2
+   ],
+   [
+    "expressly",
+    2
+   ],
+   [
+    "speaks",
+    2
+   ],
+   [
+    "rows",
+    2
+   ],
+   [
+    "applies",
+    2
+   ],
+   [
+    "independently",
+    2
+   ],
+   [
+    "promises",
+    2
+   ],
+   [
+    "set",
+    2
+   ],
+   [
+    "call",
+    2
+   ],
+   [
+    "speak",
+    2
+   ],
+   [
+    "states",
+    2
+   ],
+   [
+    "grammar",
+    2
+   ],
+   [
+    "enrolls",
+    2
+   ],
+   [
+    "therefore",
+    2
+   ],
+   [
+    "sets",
+    2
+   ],
+   [
+    "against",
+    2
+   ],
+   [
+    "joins",
+    2
+   ],
+   [
+    "diverge",
+    2
+   ],
+   [
+    "specifically",
+    1
+   ],
+   [
+    "restores",
+    1
+   ],
+   [
+    "sits",
+    1
+   ],
+   [
+    "directly",
+    1
+   ],
+   [
+    "indicates",
+    1
+   ],
+   [
+    "yet",
+    1
+   ],
+   [
+    "idia",
+    1
+   ],
+   [
+    "draws",
+    1
+   ],
+   [
+    "quotes",
+    1
+   ],
+   [
+    "report",
+    1
+   ],
+   [
+    "necessarily",
+    1
+   ],
+   [
+    "by",
+    1
+   ],
+   [
+    "requires",
+    1
+   ],
+   [
+    "natural",
+    1
+   ],
+   [
+    "of",
+    1
+   ],
+   [
+    "sheol",
+    1
+   ],
+   [
+    "closes",
+    1
+   ],
+   [
+    "read",
+    1
+   ],
+   [
+    "synagogue",
+    1
+   ],
+   [
+    "root",
+    1
+   ],
+   [
+    "refers",
+    1
+   ],
+   [
+    "prophesies",
+    1
+   ],
+   [
+    "placing",
+    1
+   ],
+   [
+    "entails",
+    1
+   ],
+   [
+    "continue",
+    1
+   ],
+   [
+    "consistently",
+    1
+   ],
+   [
+    "apply",
+    1
+   ],
+   [
+    "defines",
+    1
+   ],
+   [
+    "lexical",
+    1
+   ],
+   [
+    "re",
+    1
+   ],
+   [
+    "under",
+    1
+   ],
+   [
+    "proves",
+    1
+   ],
+   [
+    "includes",
+    1
+   ],
+   [
+    "locates",
+    1
+   ],
+   [
+    "sequence",
+    1
+   ],
+   [
+    "expounded",
+    1
+   ],
+   [
+    "connects",
+    1
+   ],
+   [
+    "power",
+    1
+   ],
+   [
+    "remains",
+    1
+   ],
+   [
+    "genuinely",
+    1
+   ],
+   [
+    "takes",
+    1
+   ],
+   [
+    "shares",
+    1
+   ],
+   [
+    "put",
+    1
+   ],
+   [
+    "ties",
+    1
+   ],
+   [
+    "seat",
+    1
+   ],
+   [
+    "answers",
+    1
+   ],
+   [
+    "fix",
+    1
+   ],
+   [
+    "already",
+    1
+   ],
+   [
+    "sequences",
+    1
+   ],
+   [
+    "backdrop",
+    1
+   ],
+   [
+    "beside",
+    1
+   ],
+   [
+    "answer",
+    1
+   ],
+   [
+    "keeps",
+    1
+   ],
+   [
+    "son",
+    1
+   ],
+   [
+    "define",
+    1
+   ],
+   [
+    "corroborates",
+    1
+   ],
+   [
+    "naming",
+    1
+   ],
+   [
+    "implies",
+    1
+   ],
+   [
+    "from",
+    1
+   ],
+   [
+    "reckoned",
+    1
+   ],
+   [
+    "runs",
+    1
+   ],
+   [
+    "reckoning",
+    1
+   ],
+   [
+    "stands",
+    1
+   ],
+   [
+    "timing",
+    1
+   ],
+   [
+    "keep",
+    1
+   ],
+   [
+    "offers",
+    1
+   ],
+   [
+    "also",
+    1
+   ],
+   [
+    "lists",
+    1
+   ],
+   [
+    "dates",
+    1
+   ],
+   [
+    "her",
+    1
+   ],
+   [
+    "contain",
+    1
+   ],
+   [
+    "why",
+    1
+   ],
+   [
+    "fixing",
+    1
+   ],
+   [
+    "together",
+    1
+   ],
+   [
+    "supports",
+    1
+   ],
+   [
+    "count",
+    1
+   ],
+   [
+    "govern",
+    1
+   ],
+   [
+    "close",
+    1
+   ],
+   [
+    "resolves",
+    1
+   ],
+   [
+    "showing",
+    1
+   ],
+   [
+    "himself",
+    1
+   ],
+   [
+    "on",
+    1
+   ],
+   [
+    "twice",
+    1
+   ],
+   [
+    "make",
+    1
+   ],
+   [
+    "alone",
+    1
+   ],
+   [
+    "carry",
+    1
+   ],
+   [
+    "through",
+    1
+   ]
+  ]
+ }
+}
