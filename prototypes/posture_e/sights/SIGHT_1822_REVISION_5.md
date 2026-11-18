@@ -1,6 +1,6 @@
 # Sight 1822 Revision 5 (proposal, not written)
 
-Drafted by W3 (session_01H1X3ANsGiMnhnbkfphocmo) on 2026-11-17 at 19:59 CST. Rev 5.2 (20:05 CST) applies W1's grade conditions C1 and C2, W2's 8007 condition (G4905 met with Matthew 1:24), and the operator's test at 20:00 CST. The anointing rows do not share Matthew's ek, so they are stated as carrying the meaning of the title "Christ". Rev 5.1 (20:02 CST) adds the operator's rows (19:57 CST: "Acts 10:38, 2 Corinthians 1:21-22, 1 John 2:20 and 27") and W2 8005 items 4 and 5 (Acts 4:27; the ruling stated as ground; Matthew 1:20's gennao met in place). Every verse was pulled live from kjv_verses this session, and every Strong's tag from kjv_word_map and lexicon_words.
+Drafted by W3 (session_01H1X3ANsGiMnhnbkfphocmo) on 2026-11-17 at 19:59 CST. Rev 5.3 (20:08 CST) follows the operator's 20:00 CST instruction, "keep in mind context and comprehension ... not word couting". The opening comparison of prepositions with Romans 9:10 is replaced by Matthew 1:18-25 read whole in context, and the line conceding that the anointing rows do not use Matthew's ek is removed. Rev 5.2 (20:05 CST) applies W1's grade conditions C1 and C2, W2's 8007 condition (G4905 met with Matthew 1:24), and the operator's test at 20:00 CST. The anointing rows do not share Matthew's ek, so they are stated as carrying the meaning of the title "Christ". Rev 5.1 (20:02 CST) adds the operator's rows (19:57 CST: "Acts 10:38, 2 Corinthians 1:21-22, 1 John 2:20 and 27") and W2 8005 items 4 and 5 (Acts 4:27; the ruling stated as ground; Matthew 1:20's gennao met in place). Every verse was pulled live from kjv_verses this session, and every Strong's tag from kjv_word_map and lexicon_words.
 
 ## Cause
 
@@ -25,7 +25,12 @@ L1-L2-L3. "OF THE HOLY GHOST" (MATTHEW 1:18, 20): THE CHILD IN HER IS ANOINTED.
 
 Matthew 1:18: "Now the birth of Jesus Christ was on this wise: When as his mother Mary was espoused to Joseph, before they came together, she was found with child of the Holy Ghost."
 
-"With child of" here is en gastri echousa ek (G1064, G1722, G2192, G1537). That is the same echo + ek as Romans 9:10, "had conceived (koiten echousa, G2845) by (ek, G1537) one". The opponent reads ek at 1:18 as the begetter. Three rows of reasoning answer him.
+READ IN CONTEXT. Matthew 1:18-25 is one account, and it is read whole:
+- The husband's fear: "Then Joseph her husband, being a just [man], and not willing to make her a publick example, was minded to put her away privily" (1:19).
+- The angel comes to remove that fear: "fear not to take unto thee Mary thy wife". The "for" gives the reason: "for that which is conceived in her is of the Holy Ghost" (1:20). The reason given to a husband for taking his wife is that the child in her is holy, the Anointed. It is not that another is its father. That would be a reason to put her away, not to take her.
+- The same angel gives Joseph the father's office: "And she shall bring forth a son, and thou shalt call his name JESUS: for he shall save his people from their sins. [JESUS: that is, Saviour, Heb]" (1:21).
+- Joseph does it: "Then Joseph being raised from sleep did as the angel of the Lord had bidden him, and took unto him his wife:" (1:24). "And knew her not till she had brought forth her firstborn son: and he called his name JESUS." (1:25).
+The account installs Joseph in the house as husband and father. An opponent who reads "of the Holy Ghost" as a begetter must read the angel's "for" against the angel's own command.
 
 (1) THE WHOLE COUNT, AND THE HUSBAND IN THE EVENT. The reading that the Holy Ghost begat stands on one event (Matthew 1:18-20) against the whole count above:
 - 60 canon rows;
@@ -52,7 +57,7 @@ The event itself names the husband: "Joseph her husband" (1:19), "Mary thy wife"
   - "Unction" and "anointing" are chrisma (G5545): "an unguent or smearing, i.e. (figuratively) the special endowment ('chrism') of the Holy Spirit". "Anointed" is chrio (G5548): "to smear or rub with oil, i.e. (by implication) to consecrate to an office or religious service".
   - The Spirit "in our hearts" and the anointing that "abideth in you" consecrate. They do not beget.
 - The child is named as the one anointed: Acts 4:27, "For of a truth against thy holy child Jesus, whom thou hast anointed, both Herod, and Pontius Pilate, with the Gentiles, and the people of Israel, were gathered together,"
-These anointing rows do not use the "of" (ek) of Matthew 1:18-20. They carry the meaning of the title that 1:18 gives the child: "Christ", "anointed". So "found with child of the Holy Ghost" and "that which is conceived in her is of the Holy Ghost" say this: the child in her is the Anointed. He is named so at his birth, and the anointing is declared at the Jordan. The Holy Ghost on a child from the womb is the precept of Luke 1:15 in (3). Neither row names a begetter.
+These rows give the meaning of the title that 1:18 gives the child: "Christ", "anointed". So "found with child of the Holy Ghost" and "that which is conceived in her is of the Holy Ghost" say this: the child in her is the Anointed. He is named so at his birth, and the anointing is declared at the Jordan. The Holy Ghost on a child from the womb is the precept of Luke 1:15 in (3). Neither row names a begetter.
 
 THE VERB AT 1:20, MET IN PLACE. "Conceived [Gr. begotten]" is gennao (G1080): "to procreate (properly, of the father, but by extension of the mother)". The verb says that a child was begotten in her. "Of the Holy Ghost" says what the child is: the Anointed. [L1] The row that carries the verb names the husband and the wife: "Joseph, thou son of David, fear not to take unto thee Mary thy wife". [L4], footed on the rows of Sight 32: Joseph knew Mary his wife within the espousal, and the child is of his loins. So the verb's proper subject, the father, is the man the row names. The Spirit is not that subject.
 
