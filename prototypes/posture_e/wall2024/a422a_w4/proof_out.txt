@@ -1,0 +1,34 @@
+1a. ASK 374 pairs on the pre-374 bases -> live 36fcf36b (engine) and the child after 374
+engine 13377f36258a4b05 -> 603f8ccc979aba85 MAP n changed 13 | child 13377f36258a4b05 -> 603f8ccc979aba85 MAP n changed 13
+SAME LIBRARY 603f8ccc979aba85
+    engine vs 36fcf36b: BYTE FOR BYTE EQUAL 1067686
+    child vs pre-422(c) child: BYTE FOR BYTE EQUAL 1067652
+1b. ASK 422(c) pairs on those -> live 3257a833 and 0e006a24
+engine 603f8ccc979aba85 -> 7b1cd78b3c25da5c MAP n changed 33 | child 603f8ccc979aba85 -> 7b1cd78b3c25da5c MAP n changed 33
+SAME LIBRARY 7b1cd78b3c25da5c
+    engine vs 3257a833: BYTE FOR BYTE EQUAL 1067694
+    child vs 0e006a24: BYTE FOR BYTE EQUAL 1067660
+1c. ASK 424 pairs on db091b9e and 0e006a24 -> the ASK 424 targets
+engine 7b1cd78b3c25da5c -> 5b8a26a88fc94b12 MAP n changed 13 | child 7b1cd78b3c25da5c -> 5b8a26a88fc94b12 MAP n changed 13
+SAME LIBRARY 5b8a26a88fc94b12
+    engine vs t424: BYTE FOR BYTE EQUAL 1067895
+    child vs t424: BYTE FOR BYTE EQUAL 1067861
+1d. refusals
+REFUSED: the two library bodies differ after the change (7b1cd78b3c25da5c / ed453db91725e9f0)
+    exit 1
+Error: engine pair 1: old text occurs 0 times, not once
+    exit 1
+2. load check (t422a.cjs) on the targets built on the ASK 424 targets
+live pair | engine lib_sha 5b8a26a88fc94b12 (68 ms) | child PASSES, output lib422 {"engine":"5b8a26a88fc94b12","child":"5b8a26a88fc94b12","same":true} | sa keys a2r
+child library with one byte added on one line | engine lib_sha 5b8a26a88fc94b12 | child STOPS: pkgLIB1: library drift, engine 5b8a26a88fc94b12, child 2f493612bae5c650
+engine library unreadable | engine lib_sha null | child STOPS: pkgLIB1: library drift, engine none, child 5b8a26a88fc94b12
+pass without lib_sha (an engine before 422(a)) | child STOPS: pkgLIB1: library drift, engine none, child 5b8a26a88fc94b12
+9. two-sha readback (libsha.py) on fetched pairs
+engine db091b9e-4a6b-4c2a-a35a-e83f1c4cbe5f body 7b1cd78b3c25da5c header 7b1cd78b3c25da5c
+child 0e006a24-8100-4186-b32c-ae218eb0b236 body 7b1cd78b3c25da5c header 7b1cd78b3c25da5c
+EQUAL
+    exit 0
+engine 3257a833-d661-4767-ad98-bf620e21e542 body 7b1cd78b3c25da5c header 7b1cd78b3c25da5c
+child 0e006a24-8100-4186-b32c-ae218eb0b236 body ed453db91725e9f0 header 7b1cd78b3c25da5c
+DIFFER
+    exit 1

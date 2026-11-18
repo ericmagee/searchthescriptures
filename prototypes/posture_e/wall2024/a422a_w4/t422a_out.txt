@@ -1,0 +1,4 @@
+live pair | engine lib_sha 5b8a26a88fc94b12 (65 ms) | child PASSES, output lib422 {"engine":"5b8a26a88fc94b12","child":"5b8a26a88fc94b12","same":true} | sa keys a2r
+child library with one byte added on one line | engine lib_sha 5b8a26a88fc94b12 | child STOPS: pkgLIB1: library drift, engine 5b8a26a88fc94b12, child 2f493612bae5c650
+engine library unreadable | engine lib_sha null | child STOPS: pkgLIB1: library drift, engine none, child 5b8a26a88fc94b12
+pass without lib_sha (an engine before 422(a)) | child STOPS: pkgLIB1: library drift, engine none, child 5b8a26a88fc94b12
