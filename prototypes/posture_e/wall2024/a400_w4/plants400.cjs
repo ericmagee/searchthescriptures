@@ -21,6 +21,8 @@ const P=[
  ['12 retraction "D2 vs C1" the only key naming D2: link-state break left out',eq,CP+'D1 vs C4 (John 1:1): UNDERDETERMINED -- g\nD2: DEFENDER LINK BROKEN -- x',"\n[AUDIT v21: CORRECTED RESULT -- SEAT: s1; ORIGINAL: BROKEN; COUNTED: HELD (HELD-1); RETRACTED: D2 vs C1]"],
  ['15 lone LINK STATE break, BROKEN (W3 8569 B): note must not fire',eqB,'BROKEN\nCOLLISION POINTS:\nD2: DEFENDER LINK BROKEN -- x'],
  ['16 LINK STATE break beside STANDS (W2 8566 D): note stays',eq,CP+'D1: STANDS -- a\nD2: DEFENDER LINK BROKEN -- x'],
+ ['17 lone "D2: CHALLENGER LINK BROKEN" (W3 8573): UNREAD, note fires',eqB,'BROKEN\nCOLLISION POINTS:\nD2: CHALLENGER LINK BROKEN -- x'],
+ ['18 lone bare "D2: BROKEN" (W3 8573): UNREAD, note fires',eqB,'BROKEN\nCOLLISION POINTS:\nD2: BROKEN -- x'],
  ['13 two retracted keys name D2: the join is ambiguous, entry UNREAD',eq,CP+'D1 vs C4 (John 1:1): UNDERDETERMINED -- g\nD2: DEFENDER LINK BROKEN -- x',"\n[AUDIT v21: CORRECTED RESULT -- SEAT: s1; ORIGINAL: BROKEN; COUNTED: HELD (HELD-1); RETRACTED: D2 vs C1, D2 vs C2]"]];
 let OUT14R0;const out=[];for(const [n,f,r,tail] of P){const raw=H(f,r)+(tail||'');const a=tagOf(E0,raw,f),b=tagOf(E1,raw,f);const rc=E1.rcLines(E1.cureJText(raw,true));
  out.push({plant:n,live386:{word:W(a),tie:/TIE yes/.test(a),broken:BL(a),note:/NOT READ \(short form\)/.test(a)},t400:{word:W(b),tie:/TIE yes/.test(b),broken:BL(b),note:/NOT READ \(short form\)/.test(b)},col:rc.col.map(z=>z.link+':'+(z.grade||'UNREAD '+z.unread)),ls:rc.ls.map(z=>z.link+':'+(z.grade||'UNREAD '+z.unread))});}

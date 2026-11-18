@@ -1,0 +1,198 @@
+same    Accept Build#0                     x 2 | s262 reproduces stored false | reads field false  
+NONCODE Accept Call openrouter#0 input differs: s262 vs stored true | target vs s262 false
+same    Accept DS Build#0                  x 4 | s262 reproduces stored true | reads field false  
+same    Accept Check#0                     x 6 | s262 reproduces stored true | reads field false | s262 ERR FAIL-CLOSED: Accept Check read 9 replies for 8 acceptance calls. execution=38450 | tgt ERR FAIL-CLOSED: Accept Check read 9 replies for 8 acceptance calls. execution=38450
+same    Accept Return Build#0              x 8 | s262 reproduces stored false | reads field false  
+NONCODE Accept OR Return?#0 input differs: s262 vs stored true | target vs s262 false
+same    Accept DS Return Build#0           x 11 | s262 reproduces stored true | reads field false  
+same    Accept Final#0                     x 13 | s262 reproduces stored true | reads field false  
+same    Init Seats#0                       x 14 | s262 reproduces stored false | reads field false  
+NONCODE Topic Fence#0 input differs: s262 vs stored true | target vs s262 false
+same    Fence Check#0                      x 16 | s262 reproduces stored false | reads field false  
+NONCODE Fetch Models#0 input differs: s262 vs stored true | target vs s262 false
+same    Resolve Seats#0                    x 20 | s262 reproduces stored false | reads field false  
+NONCODE Respond Accepted#0 input differs: s262 vs stored true | target vs s262 false
+same    Retrieval Check#0                  x 24 | s262 reproduces stored false | reads field false  
+same    Init with Guards#0                 x 25 | s262 reproduces stored false | reads field false  
+NONCODE D1 Verse Sheet#0 input differs: s262 vs stored true | target vs s262 false
+same    D1 Build#0                         x 27 | s262 reproduces stored false | reads field false  
+NONCODE D1 Route#0 input differs: s262 vs stored true | target vs s262 false
+same    D1 Extract#0                       x 30 | s262 reproduces stored false | reads field false  
+NONCODE C1 Verse Sheet#0 input differs: s262 vs stored true | target vs s262 false
+same    C1 Build#0                         x 32 | s262 reproduces stored false | reads field false  
+NONCODE C1 Route#0 input differs: s262 vs stored true | target vs s262 false
+same    C1 Extract#0                       x 35 | s262 reproduces stored false | reads field false  
+same    C1B Build#0                        x 36 | s262 reproduces stored false | reads field false  
+NONCODE C1B Route#0 input differs: s262 vs stored true | target vs s262 false
+same    C1B Extract#0                      x 38 | s262 reproduces stored true | reads field false | s262 ERR Cannot read properties of undefined (reading 'json') | tgt ERR Cannot read properties of undefined (reading 'json')
+same    D2 Words Plan#0                    x 40 | s262 reproduces stored true | reads field false  
+same    D2 Lexicon Plan#0                  x 42 | s262 reproduces stored true | reads field false  
+same    D2 Build#0                         x 44 | s262 reproduces stored false | reads field false  
+NONCODE D2 Route#0 input differs: s262 vs stored true | target vs s262 false
+same    D2 Extract#0                       x 47 | s262 reproduces stored false | reads field false  
+same    D2B Build#0                        x 48 | s262 reproduces stored false | reads field false  
+NONCODE D2B Route#0 input differs: s262 vs stored true | target vs s262 false
+same    D2B Extract#0                      x 51 | s262 reproduces stored false | reads field false  
+NONCODE C2 Verse Sheet#0 input differs: s262 vs stored true | target vs s262 false
+same    C2 Words Plan#0                    x 53 | s262 reproduces stored true | reads field false  
+same    C2 Lexicon Plan#0                  x 55 | s262 reproduces stored true | reads field false  
+same    C2 Build#0                         x 57 | s262 reproduces stored false | reads field false  
+NONCODE C2 Route#0 input differs: s262 vs stored true | target vs s262 false
+same    C2 Extract#0                       x 60 | s262 reproduces stored false | reads field false  
+same    C2B Build#0                        x 61 | s262 reproduces stored false | reads field false  
+NONCODE C2B Route#0 input differs: s262 vs stored true | target vs s262 false
+same    C2B Extract#0                      x 63 | s262 reproduces stored true | reads field false | s262 ERR Cannot read properties of undefined (reading 'json') | tgt ERR Cannot read properties of undefined (reading 'json')
+same    D3 Words Plan#0                    x 65 | s262 reproduces stored true | reads field false  
+same    D3 Lexicon Plan#0                  x 67 | s262 reproduces stored true | reads field false  
+same    D3 Build#0                         x 69 | s262 reproduces stored false | reads field false  
+NONCODE D3 Route#0 input differs: s262 vs stored true | target vs s262 false
+same    D3 Extract#0                       x 72 | s262 reproduces stored false | reads field false  
+same    D3B Build#0                        x 73 | s262 reproduces stored false | reads field false  
+NONCODE D3B Route#0 input differs: s262 vs stored true | target vs s262 false
+same    D3B Extract#0                      x 76 | s262 reproduces stored false | reads field false  
+NONCODE C3 Verse Sheet#0 input differs: s262 vs stored true | target vs s262 false
+same    C3 Words Plan#0                    x 78 | s262 reproduces stored true | reads field false  
+same    C3 Lexicon Plan#0                  x 80 | s262 reproduces stored true | reads field false  
+same    C3 Build#0                         x 82 | s262 reproduces stored false | reads field false  
+NONCODE C3 Route#0 input differs: s262 vs stored true | target vs s262 false
+same    C3 Extract#0                       x 85 | s262 reproduces stored false | reads field false  
+same    C3G Build#0                        x 86 | s262 reproduces stored false | reads field false  
+NONCODE C3G Route#0 input differs: s262 vs stored true | target vs s262 false
+same    C3G Extract#0                      x 88 | s262 reproduces stored true | reads field false | s262 ERR Cannot read properties of undefined (reading 'json') | tgt ERR Cannot read properties of undefined (reading 'json')
+same    C3B Build#0                        x 89 | s262 reproduces stored true | reads field false  
+same    C3B Extract#0                      x 91 | s262 reproduces stored true | reads field false | s262 ERR Cannot read properties of undefined (reading 'json') | tgt ERR Cannot read properties of undefined (reading 'json')
+same    D4 Words Plan#0                    x 93 | s262 reproduces stored true | reads field false  
+same    D4 Lexicon Plan#0                  x 95 | s262 reproduces stored true | reads field false  
+same    D4 Build#0                         x 97 | s262 reproduces stored false | reads field false  
+NONCODE D4 Route#0 input differs: s262 vs stored true | target vs s262 false
+same    D4 Extract#0                       x 100 | s262 reproduces stored false | reads field false  
+same    D4B Build#0                        x 101 | s262 reproduces stored false | reads field false  
+NONCODE D4B Route#0 input differs: s262 vs stored true | target vs s262 false
+same    D4B Extract#0                      x 104 | s262 reproduces stored false | reads field false  
+NONCODE C4 Verse Sheet#0 input differs: s262 vs stored true | target vs s262 false
+same    C4 Words Plan#0                    x 106 | s262 reproduces stored true | reads field false  
+same    C4 Lexicon Plan#0                  x 108 | s262 reproduces stored true | reads field false  
+same    C4 Build#0                         x 110 | s262 reproduces stored false | reads field false  
+NONCODE C4 Route#0 input differs: s262 vs stored true | target vs s262 false
+same    C4 Extract#0                       x 113 | s262 reproduces stored false | reads field false  
+same    C4G Build#0                        x 114 | s262 reproduces stored false | reads field false  
+NONCODE C4G Route#0 input differs: s262 vs stored true | target vs s262 false
+same    C4G Extract#0                      x 116 | s262 reproduces stored true | reads field false | s262 ERR Cannot read properties of undefined (reading 'json') | tgt ERR Cannot read properties of undefined (reading 'json')
+same    C4B Build#0                        x 117 | s262 reproduces stored true | reads field false  
+same    C4B Extract#0                      x 119 | s262 reproduces stored true | reads field false | s262 ERR Cannot read properties of undefined (reading 'json') | tgt ERR Cannot read properties of undefined (reading 'json')
+same    Build Synthesis#0                  x 120 | s262 reproduces stored false | reads field false  
+NONCODE Synthesis Judge Route#0 input differs: s262 vs stored true | target vs s262 false
+same    Synthesis Normalizer#0             x 123 | s262 reproduces stored true | reads field false  
+same    Final Output#0                     x 124 | s262 reproduces stored true | reads field false  
+same    Citation Scan#0                    x 125 | s262 reproduces stored true | reads field false  
+same    Quote Compare#0                    x 127 | s262 reproduces stored true | reads field false  
+same    L2 Words Plan#0                    x 129 | s262 reproduces stored true | reads field false  
+same    L2 Lexicon Plan#0                  x 131 | s262 reproduces stored true | reads field false  
+same    L2 Gloss Plan#0                    x 133 | s262 reproduces stored false | reads field false  
+NONCODE L2 Gloss Any#0 input differs: s262 vs stored true | target vs s262 false
+same    L2 Count Plan#0                    x 136 | s262 reproduces stored true | reads field false  
+same    Quote Report#0                     x 138 | s262 reproduces stored true | reads field false  
+same    Close Enforcer Build#0             x 139 | s262 reproduces stored false | reads field false  
+same    Anticheat Build#0                  x 140 | s262 reproduces stored false | reads field false  
+same    Assume Check Build#0               x 141 | s262 reproduces stored false | reads field false  
+same    Close Group Batch Build#0          x 142 | s262 reproduces stored true | reads field false  
+same    Close Group Retry Build#0          x 145 | s262 reproduces stored true | reads field false  
+same    Close Enforcer Resume#0            x 147 | s262 reproduces stored false | reads field false  
+NONCODE Close Enforcer Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Close Enforcer Call deepseek#0     x 149 | s262 reproduces stored true | reads field false  
+same    Close Enforcer Record#0            x 150 | s262 reproduces stored false | reads field false  
+NONCODE Regrade After Quotes?#0 input differs: s262 vs stored true | target vs s262 false
+same    SJ Off#0                           x 152 | s262 reproduces stored true | reads field false  
+same    Build Save Body#0                  x 153 | s262 reproduces stored false | reads field false  
+NONCODE Save to DB#0 input differs: s262 vs stored true | target vs s262 false
+same    Check Save#0                       x 155 | s262 reproduces stored false | reads field false  
+same    Anticheat Resume#0                 x 156 | s262 reproduces stored false | reads field false  
+NONCODE Anticheat Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Anticheat Call deepseek#0          x 158 | s262 reproduces stored true | reads field false  
+same    Anticheat Record#0                 x 159 | s262 reproduces stored true | reads field false  
+same    Panel Build#0                      x 161 | s262 reproduces stored false | reads field true  
+NONCODE QR Trial?#0 input differs: s262 vs stored true | target vs s262 false
+same    Panel Judges Prep#0                x 163 | s262 reproduces stored false | reads field false  
+NONCODE Panel Judges Parallel#0 input differs: s262 vs stored true | target vs s262 false
+same    Panel Judges Collect#0             x 196 | s262 reproduces stored true | reads field false  
+same    Panel Judge 1 openrouter#0         x 198 | s262 reproduces stored true | reads field false  
+same    Panel Judge 2 openrouter#0         x 200 | s262 reproduces stored true | reads field false  
+same    Panel Judge 3 openrouter#0         x 202 | s262 reproduces stored true | reads field false  
+same    Panel Check#0                      x 203 | s262 reproduces stored false | reads field false  
+NONCODE Reserve Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Panel Payloads#0                   x 205 | s262 reproduces stored false | reads field true  
+same    Judge Contradiction Build#0        x 206 | s262 reproduces stored false | reads field false  
+NONCODE Judge Contradiction Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Judge Contradiction Record#0       x 208 | s262 reproduces stored false | reads field false  
+same    Assume Check Resume#0              x 209 | s262 reproduces stored false | reads field false  
+NONCODE Assume Check Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Assume Check Call deepseek#0       x 211 | s262 reproduces stored true | reads field false  
+same    Assume Check Record#0              x 212 | s262 reproduces stored false | reads field false  
+NONCODE Panel Cure Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Panel Cure Build 1#0               x 214 | s262 reproduces stored false | reads field false  
+NONCODE Panel Cure Call 1 openrouter#0 input differs: s262 vs stored true | target vs s262 false
+same    Panel Cure Normalize 1#0           x 216 | s262 reproduces stored true | reads field false  
+same    Panel Cure Build 2#0               x 218 | s262 reproduces stored false | reads field false  
+NONCODE Panel Cure Call 2 openrouter#0 input differs: s262 vs stored true | target vs s262 false
+same    Panel Cure Normalize 2#0           x 220 | s262 reproduces stored true | reads field false  
+same    Panel Cure Build 3#0               x 222 | s262 reproduces stored false | reads field false  
+NONCODE Panel Cure Call 3 openrouter#0 input differs: s262 vs stored true | target vs s262 false
+same    Panel Cure Normalize 3#0           x 224 | s262 reproduces stored true | reads field false  
+same    Panel Cure Check#0                 x 226 | s262 reproduces stored false | reads field true  
+same    Early Alternate Build#0            x 227 | s262 reproduces stored false | reads field false  
+NONCODE Early Alternate Start#0 input differs: s262 vs stored true | target vs s262 false
+same    Enforcer Build#0                   x 229 | s262 reproduces stored true | reads field false  
+same    Judge Enforcer Build#0             x 230 | s262 reproduces stored false | reads field true  
+same    Enforcer Group Batch Build#0       x 231 | s262 reproduces stored true | reads field false  
+same    Enforcer Resume#0                  x 234 | s262 reproduces stored true | reads field false  
+same    Enforcer Record#0                  x 236 | s262 reproduces stored false | reads field false  
+same    Judge Enforcer Resume#0            x 237 | s262 reproduces stored false | reads field false  
+NONCODE Judge Enforcer Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Judge Enforcer Call deepseek#0     x 239 | s262 reproduces stored true | reads field false  
+same    Judge Enforcer Retry Build#0       x 240 | s262 reproduces stored true | reads field false  
+same    Judge Enforcer Record#0            x 242 | s262 reproduces stored false | reads field false  
+same    Send Back Build#0                  x 243 | s262 reproduces stored false | reads field false  
+NONCODE Send Back Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Send Back Record#0                 x 246 | s262 reproduces stored false | reads field false  
+same    Reread Build#0                     x 247 | s262 reproduces stored false | reads field false  
+NONCODE Reread Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Reread Record#0                    x 250 | s262 reproduces stored false | reads field false  
+same    Gate Build#0                       x 251 | s262 reproduces stored false | reads field false  
+NONCODE Gate Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Late Gate Build#0                  x 254 | s262 reproduces stored true | reads field false  
+same    Gate Record#0                      x 256 | s262 reproduces stored false | reads field false  
+NONCODE Alternate Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Alternate Build#0                  x 259 | s262 reproduces stored true | reads field false | s262 ERR Cannot read properties of undefined (reading 'map') | tgt ERR Cannot read properties of undefined (reading 'map')
+same    Early Alternate Reply#0            x 262 | s262 reproduces stored true | reads field false  
+same    Alternate Payloads#0               x 264 | s262 reproduces stored true | reads field true  
+same    Alternate Cure Build#0             x 266 | s262 reproduces stored true | reads field false  
+same    Alternate Cure Normalize#0         x 268 | s262 reproduces stored true | reads field false  
+same    Alternate Merge Seat#0             x 270 | s262 reproduces stored false | reads field true  
+same    Alt Seated#0                       x 271 | s262 reproduces stored false | reads field false  
+same    Alt Judge Enforcer Build#0         x 272 | s262 reproduces stored false | reads field true  
+NONCODE Alt Judge Enforcer Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Alt Judge Enforcer Retry Build#0   x 275 | s262 reproduces stored true | reads field false  
+same    Alt Judge Enforcer Record#0        x 277 | s262 reproduces stored false | reads field false  
+same    Alt Send Back Build#0              x 278 | s262 reproduces stored false | reads field false  
+NONCODE Alt Send Back Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Alt Send Back Record#0             x 281 | s262 reproduces stored false | reads field false  
+same    Alt Reread Build#0                 x 282 | s262 reproduces stored false | reads field false  
+NONCODE Alt Reread Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Alt Reread Record#0                x 285 | s262 reproduces stored false | reads field false  
+same    Alt Gate Build#0                   x 286 | s262 reproduces stored false | reads field false  
+NONCODE Alt Gate Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Alt Late Gate Build#0              x 289 | s262 reproduces stored true | reads field false  
+same    Alt Gate Record#0                  x 291 | s262 reproduces stored false | reads field false  
+same    Alternate Merge 1#0                x 292 | s262 reproduces stored false | reads field true  
+same    Second Alternate?#0                x 293 | s262 reproduces stored false | reads field false  
+NONCODE Second Alternate Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Alternate Merge#0                  x 315 | s262 reproduces stored false | reads field false  
+NONCODE Dry?#0 input differs: s262 vs stored true | target vs s262 false
+same    Panel Done#0                       x 324 | s262 reproduces stored false | reads field false  
+same    Panel Tokens#0                     x 325 | s262 reproduces stored false | reads field false  
+NONCODE Write Tokens?#0 input differs: s262 vs stored true | target vs s262 false
+same    Format Markdown#0                  x 332 | s262 reproduces stored false | reads field false  
+same    Plain Rule Lines#0                 x 333 | s262 reproduces stored false | reads field false  
+NONCODE Save to Drive#0 input differs: s262 vs stored true | target vs s262 false
+same    Raise If Incomplete#0              x 335 | s262 reproduces stored true | reads field false  
+START x 0 | code-node runs changed: 0

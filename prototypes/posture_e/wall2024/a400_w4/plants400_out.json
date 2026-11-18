@@ -273,6 +273,44 @@
   ]
  },
  {
+  "plant": "17 lone \"D2: CHALLENGER LINK BROKEN\" (W3 8573): UNREAD, note fires",
+  "live386": {
+   "word": "CHALLENGER WINS",
+   "tie": false,
+   "broken": "none",
+   "note": true
+  },
+  "t400": {
+   "word": "CHALLENGER WINS",
+   "tie": false,
+   "broken": "none",
+   "note": true
+  },
+  "col": [],
+  "ls": [
+   "D2:UNREAD LINK STATE CHALLENGER LINK BROKEN ON D2"
+  ]
+ },
+ {
+  "plant": "18 lone bare \"D2: BROKEN\" (W3 8573): UNREAD, note fires",
+  "live386": {
+   "word": "CHALLENGER WINS",
+   "tie": false,
+   "broken": "none",
+   "note": true
+  },
+  "t400": {
+   "word": "CHALLENGER WINS",
+   "tie": false,
+   "broken": "none",
+   "note": true
+  },
+  "col": [],
+  "ls": [
+   "D2:UNREAD LINK STATE BROKEN ON D2"
+  ]
+ },
+ {
   "plant": "13 two retracted keys name D2: the join is ambiguous, entry UNREAD",
   "live386": {
    "word": "UNDERDETERMINED",
