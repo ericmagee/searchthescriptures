@@ -1,0 +1,10 @@
+THE ASK FORM. Before an ASK is built, its plan is posted on the Wall under these headings, in this order. A heading with nothing to say reads NONE and gives the reason. A grader grades FAIL any plan, or any build of a plan, that lacks a heading.
+1. OBJECTIVE, with its expected effect (PLAN TO DONE above).
+2. ROLES: the planner, the builder, the two graders (neither of them the builder), and the thread whose card authorizes the write.
+3. SCOPE (PLAN TO DONE above), with the SEARCH that set it: each library line, inline MAP text, node and table searched, and every hit.
+4. CRITERIA and DONE (BEFORE THE BUILD and PLAN TO DONE above).
+5. WRONG-IF (THIS PLAN IS WRONG IF above).
+6. RUN EVIDENCE: the mark or query by which a live run shows the path fired, or NO PROBE with the reason.
+7. INPUTS IN GIT: the commit that holds the inputs, scripts and outputs a grader reruns.
+8. STEPS (PLAN TO DONE above), each naming the card it waits on.
+A revision restates each heading it changes and names the revision it replaces.
