@@ -1,0 +1,86 @@
+{
+ "out": [
+  {
+   "id": 793,
+   "seat": "gemini",
+   "v": "HELD",
+   "defense": "PROP-DEPENDENT > SELF-SUPPORTED",
+   "challenge": "SELF-SUPPORTED",
+   "word": "UNDERDETERMINED",
+   "word_on_stored_standings": "UNDERDETERMINED"
+  },
+  {
+   "id": 796,
+   "seat": "gemini",
+   "v": "HELD",
+   "defense": "PROP-DEPENDENT > SELF-SUPPORTED",
+   "challenge": "SELF-SUPPORTED",
+   "word": "UNDERDETERMINED",
+   "word_on_stored_standings": "UNDERDETERMINED"
+  },
+  {
+   "id": 810,
+   "seat": "deepseek",
+   "v": "HELD",
+   "defense": "PROP-DEPENDENT > SELF-SUPPORTED",
+   "challenge": "SELF-SUPPORTED",
+   "word": "UNDERDETERMINED",
+   "word_on_stored_standings": "UNDERDETERMINED"
+  },
+  {
+   "id": 811,
+   "seat": "gemini",
+   "v": "HELD",
+   "defense": "PROP-DEPENDENT > SELF-SUPPORTED",
+   "challenge": "SELF-SUPPORTED",
+   "word": "UNDERDETERMINED",
+   "word_on_stored_standings": "UNDERDETERMINED"
+  },
+  {
+   "id": 820,
+   "seat": "gemini",
+   "v": "HELD",
+   "defense": "PROP-DEPENDENT > SELF-SUPPORTED",
+   "challenge": "SELF-SUPPORTED",
+   "word": "UNDERDETERMINED",
+   "word_on_stored_standings": "UNDERDETERMINED"
+  },
+  {
+   "id": 826,
+   "seat": "gemini",
+   "v": "HELD",
+   "defense": "PROP-DEPENDENT > SELF-SUPPORTED",
+   "challenge": "SELF-SUPPORTED",
+   "word": "UNDERDETERMINED",
+   "word_on_stored_standings": "UNDERDETERMINED"
+  },
+  {
+   "id": 832,
+   "seat": "gemini",
+   "v": "HELD",
+   "defense": "PROP-DEPENDENT",
+   "challenge": "PROP-DEPENDENT > SELF-SUPPORTED",
+   "word": "DEFENDER WINS > UNDERDETERMINED",
+   "word_on_stored_standings": "UNDERDETERMINED"
+  },
+  {
+   "id": 865,
+   "seat": "gemini",
+   "v": "HELD",
+   "defense": "SELF-SUPPORTED",
+   "challenge": "PROP-DEPENDENT > SELF-SUPPORTED",
+   "word": "DEFENDER WINS > UNDERDETERMINED",
+   "word_on_stored_standings": "DEFENDER WINS"
+  },
+  {
+   "id": 894,
+   "seat": "deepseek",
+   "v": "HELD",
+   "defense": "SELF-SUPPORTED",
+   "challenge": "PROP-DEPENDENT > SELF-SUPPORTED",
+   "word": "DEFENDER WINS > UNDERDETERMINED",
+   "word_on_stored_standings": "UNDERDETERMINED"
+  }
+ ],
+ "tagDiff": []
+}

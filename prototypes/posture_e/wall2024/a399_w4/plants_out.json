@@ -1,0 +1,276 @@
+[
+ {
+  "plant": "1A three-call, case A (v25 regraded in place)",
+  "expect": "unchanged",
+  "live": {
+   "v25": "UNDERDETERMINED",
+   "v37": "UNDERDETERMINED",
+   "v37_challenge": "SELF-SUPPORTED",
+   "tag": "UNDERDETERMINED"
+  },
+  "t399": {
+   "v25": "UNDERDETERMINED",
+   "v37": "UNDERDETERMINED",
+   "v37_challenge": "SELF-SUPPORTED",
+   "tag": "UNDERDETERMINED"
+  }
+ },
+ {
+  "plant": "1B three-call, case B on v37 (retracted, not restated, still CHALLENGER LINK BROKEN)",
+  "expect": "t399 v37 UNDERDETERMINED, challenge SELF-SUPPORTED (live DEFENDER WINS)",
+  "live": {
+   "v25": "-",
+   "v37": "DEFENDER WINS",
+   "v37_challenge": "PROP-DEPENDENT",
+   "tag": "DEFENDER WINS"
+  },
+  "t399": {
+   "v25": "-",
+   "v37": "UNDERDETERMINED",
+   "v37_challenge": "SELF-SUPPORTED",
+   "tag": "UNDERDETERMINED"
+  }
+ },
+ {
+  "plant": "2 BROKEN, equal fields, the only line retracted and still STANDS, not restated (W3 8523)",
+  "expect": "t399 CHALLENGER WINS, no tie (live UNDERDETERMINED by the tie)",
+  "live": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "why": null
+  },
+  "t399": {
+   "word": "CHALLENGER WINS",
+   "tie": false,
+   "why": null
+  }
+ },
+ {
+  "plant": "3 the same, restated by a v25 step",
+  "expect": "both UNDERDETERMINED (it counts)",
+  "live": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "why": null
+  },
+  "t399": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "why": null
+  }
+ },
+ {
+  "plant": "4 the same, restated by a v27 SUPERSEDED LINE only (1196 shape)",
+  "expect": "both UNDERDETERMINED (it counts)",
+  "live": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "why": null
+  },
+  "t399": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "why": null
+  }
+ },
+ {
+  "plant": "5 the same, v27 of another seat only",
+  "expect": "t399 CHALLENGER WINS (not restated for s1)",
+  "live": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "why": null
+  },
+  "t399": {
+   "word": "CHALLENGER WINS",
+   "tie": false,
+   "why": null
+  }
+ },
+ {
+  "plant": "6 judge-restated (894 shape): line still CHALLENGER LINK BROKEN, RESTATED statement UNDERDETERMINED; HELD, equal PROP-DEPENDENT fields",
+  "expect": "t399 counts it UNDERDETERMINED, the tie holds: UNDERDETERMINED (live leaves it out, list empty, no tie: DEFENDER WINS)",
+  "live": {
+   "word": "DEFENDER WINS",
+   "tie": false,
+   "why": null
+  },
+  "t399": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "why": null
+  }
+ },
+ {
+  "plant": "7 restated, then a CLOSE-CONTRADICTION step (1153 shape): BROKEN, equal fields, with a D2 vs C2 STANDS line",
+  "expect": "t399 counts DEFENDER LINK BROKEN, no tie: CHALLENGER WINS (live leaves it out, D2 STANDS ties: UNDERDETERMINED)",
+  "live": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "why": null
+  },
+  "t399": {
+   "word": "CHALLENGER WINS",
+   "tie": false,
+   "why": null
+  }
+ },
+ {
+  "plant": "8 case B (973 shape): v25 step to UNDERDETERMINED, line still DEFENDER LINK BROKEN; HELD, equal PROP-DEPENDENT fields",
+  "expect": "t399 counts it UNDERDETERMINED, the tie holds: UNDERDETERMINED (live leaves it out, list empty, no tie: DEFENDER WINS)",
+  "live": {
+   "word": "DEFENDER WINS",
+   "tie": false,
+   "why": null
+  },
+  "t399": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "why": null
+  }
+ },
+ {
+  "plant": "9a 2f: retracted \"D2 vs C1\" not restated, only a \"D2\" LINK STATE DEFENDER LINK BROKEN entry",
+  "expect": "left out of brk",
+  "t399": [
+   {
+    "link": "D1 vs C1",
+    "grade": "UNDERDETERMINED"
+   }
+  ]
+ },
+ {
+  "plant": "9b 2f: two retracted keys name D2",
+  "expect": "D2 entry UNREAD (grade null)",
+  "t399": [
+   {
+    "link": "D1 vs C1",
+    "grade": "UNDERDETERMINED"
+   },
+   {
+    "link": "D2",
+    "grade": null,
+    "unread": "RETRACTION JOIN AMBIGUOUS"
+   }
+  ]
+ },
+ {
+  "plant": "9c 2f: the one key naming D2 was restated (v25 to UNDERDETERMINED)",
+  "expect": "D2 entry kept, grade UNDERDETERMINED",
+  "t399": [
+   {
+    "link": "D1 vs C1",
+    "grade": "UNDERDETERMINED"
+   },
+   {
+    "link": "D2",
+    "grade": "UNDERDETERMINED"
+   }
+  ]
+ },
+ {
+  "plant": "9d idempotence: ap399 twice equals once (9a, 9b, 9c)",
+  "expect": "true",
+  "t399": true
+ },
+ {
+  "plant": "9e plain list (no flags): ASK 386 rule",
+  "expect": "D2 LINK BROKEN left out; a plain retracted STANDS line kept",
+  "t399": [
+   {
+    "link": "D1 vs C1",
+    "grade": "STANDS"
+   }
+  ]
+ },
+ {
+  "plant": "9f the caller's own cure (add) is restated",
+  "expect": "D1 vs C1 restated true",
+  "t399": {
+   "D1 VS C1": {
+    "restated": true,
+    "grade": null
+   }
+  }
+ },
+ {
+  "plant": "10 stored 1196 luna D2 VS C2",
+  "expect": "see flag",
+  "flag": {
+   "restated": true,
+   "grade": null
+  },
+  "line_grade": "UNDERDETERMINED",
+  "counted_as": "UNDERDETERMINED"
+ },
+ {
+  "plant": "10 stored 973 chatgpt D4 VS C5",
+  "expect": "see flag",
+  "flag": {
+   "restated": true,
+   "grade": "UNDERDETERMINED"
+  },
+  "line_grade": "DEFENDER LINK BROKEN",
+  "counted_as": "UNDERDETERMINED"
+ },
+ {
+  "plant": "10 stored 1153 chatgpt D6 VS C3",
+  "expect": "see flag",
+  "flag": {
+   "restated": true,
+   "grade": "DEFENDER LINK BROKEN"
+  },
+  "line_grade": "DEFENDER LINK BROKEN",
+  "counted_as": "DEFENDER LINK BROKEN"
+ },
+ {
+  "plant": "10 stored 894 deepseek D6 VS C4",
+  "expect": "see flag",
+  "flag": {
+   "restated": true,
+   "grade": "UNDERDETERMINED"
+  },
+  "line_grade": "CHALLENGER LINK BROKEN",
+  "counted_as": "UNDERDETERMINED"
+ },
+ {
+  "plant": "10 stored 832 gemini D3 VS C2",
+  "expect": "see flag",
+  "flag": {
+   "restated": false,
+   "grade": null
+  },
+  "line_grade": "CHALLENGER LINK BROKEN",
+  "counted_as": "(left out)"
+ },
+ {
+  "plant": "11 v25 (ASK 400 14e): retractions D1 vs C1 and D2 vs C1; D2 only a LINK STATE entry",
+  "expect": "t399: D2 vs C1 is accepted (wd) but no line was regraded, so it is not restated; under 2f the D2 entry is left out of brk (live counts it: brk DEFENDER 1, BROKEN, CHALLENGER WINS)",
+  "live": {
+   "result": "CHALLENGER WINS",
+   "fields": {
+    "verdict_tag": "BROKEN",
+    "defense_standing": "PROP-DEPENDENT",
+    "conceded_links": 0,
+    "challenge_standing": "PROP-DEPENDENT",
+    "challenger_conceded_links": 1
+   },
+   "trig": [
+    "RETRACTED D1 vs C1 (UNDERDETERMINED to UNDERDETERMINED)"
+   ]
+  },
+  "t399": {
+   "result": "DEFENDER WINS",
+   "fields": {
+    "verdict_tag": "HELD",
+    "defense_standing": "SELF-SUPPORTED",
+    "conceded_links": 0,
+    "challenge_standing": "PROP-DEPENDENT",
+    "challenger_conceded_links": 1
+   },
+   "trig": [
+    "RETRACTED D1 vs C1 (UNDERDETERMINED to UNDERDETERMINED)"
+   ]
+  }
+ }
+]

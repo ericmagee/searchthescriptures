@@ -1,0 +1,49 @@
+// ASK 399 plants (8543 DoD a; W2 8549 C1; W3 8552 C; W1 8644). live 360d569d (L) against t399 (T).
+const LIVE=__dirname+'/../rdf/fetchback_w394s11.json',TGT=__dirname+'/t399.json';
+const SL=require('../a400/stubload400.cjs');const G={L:SL(LIVE,'Alternate Merge Seat',['cureRecompute','sbApply2024']),T:SL(TGT,'Alternate Merge Seat',['cureRecompute','sbApply2024'])};
+const E={L:require('./ev.cjs')(LIVE),T:require('./ev.cjs')(TGT)};const J=require('../a384/judgments_all.json');
+const W=t=>(String(t).split('\n').pop().match(/WORD: ([A-Z ]+|none);/)||[])[1];const out=[];const P=(name,expect,res)=>{out.push({plant:name,expect,...res});};
+// 1. three-call plant (a386/three386.cjs): case A (v25 regrades in place) and case B (v21 names D2 vs C1 RETRACTED, line still CHALLENGER LINK BROKEN, challenge SELF-SUPPORTED)
+{const Fd={verdict_tag:'HELD',defense_standing:'PROP-DEPENDENT',challenge_standing:'SELF-SUPPORTED',conceded_links:1,challenger_conceded_links:0};
+ const R0=['HELD','CLAUSE: HELD-1 -- n=2 w=0 k=0','D1 vs C1 (John 1:1): STANDS -- g','D2 vs C1 (John 1:3): CHALLENGER LINK BROKEN -- g','DEFENSE STANDING: PROP-DEPENDENT','CHALLENGE STANDING: SELF-SUPPORTED','CONCEDED LINKS: 1','CHALLENGER CONCEDED LINKS: 0','RESULT: DEFENDER WINS -- D2 vs C1'];
+ const reply='CORRECTED RESULT: HELD-1 -- the retraction below\nRETRACTED: D2 vs C1 -- regraded to UNDERDETERMINED -- in CR2 the challenger wrote "the verse speaks of the Word only" (John 1:3)';
+ const items=[{rule:'K-X',link:'D2 vs C1',line:R0[3]}];const its=[{sid:'E-1',ans:'CHANGE',line:'D1 vs C1 (John 1:1): STANDS -- g',to:'D1 vs C1 (John 1:1): STANDS -- g, restated'}];const head=t=>JSON.stringify({...Fd,reasoning:t});
+ const res={};for(const v of ['L','T']){const r25=G[v].cureRecompute('s4',R0.join('\n'),Fd,items,[],{ok:true,text:reply});let tA=R0.join('\n');for(const [a,b] of r25.rp)tA=tA.split(a).join(b);
+  const A=head(tA)+'\n'+r25.audit;const B=head(R0.join('\n'))+'\n[AUDIT v21: CORRECTED RESULT -- SEAT: s4; ORIGINAL: BROKEN; COUNTED: HELD (HELD-1); RETRACTED: D2 vs C1]';
+  for(const [nm,raw] of [['A',A],['B',B]]){const r37=G[v].sbApply2024('s4',raw,Fd,its,null);const tail=raw.slice(raw.indexOf('\n[AUDIT'));const after=r37?JSON.stringify({...r37.fields,reasoning:r37.text})+tail:raw;
+   res[v+nm]={v25:nm==='A'?r25.result:'-',v37:r37&&r37.result,v37_challenge:r37&&r37.fields&&r37.fields.challenge_standing,tag:r37?W(E[v].ert386(after,'s4',r37.fields)):null};}}
+ P('1A three-call, case A (v25 regraded in place)','unchanged',{live:res.LA,t399:res.TA});
+ P('1B three-call, case B on v37 (retracted, not restated, still CHALLENGER LINK BROKEN)','t399 v37 UNDERDETERMINED, challenge SELF-SUPPORTED (live DEFENDER WINS)',{live:res.LB,t399:res.TB});}
+// rd386-level plants with ret386 lists built from tag text
+const rdp=(v,verdict,f,lines,tags)=>{const raw=lines.join('\n')+(tags?'\n'+tags:'');const P0=E[v].rcLines(lines.join('\n'));const R=E[v].ret386(raw,'s1');return E[v].rd386({verdict,dst:f[0],cst:f[1],cd:f[2],cc:f[3],col:P0.col.concat(P0.ls||[]),retracted:R});};
+const v21='[AUDIT v21: CORRECTED RESULT -- SEAT: s1; ORIGINAL: HELD; COUNTED: BROKEN (BROKEN-1); RETRACTED: D1 vs C1]';
+for(const [nm,exp,verdict,f,lines,tags] of [
+ ['2 BROKEN, equal fields, the only line retracted and still STANDS, not restated (W3 8523)','t399 CHALLENGER WINS, no tie (live UNDERDETERMINED by the tie)','BROKEN',['PROP-DEPENDENT','PROP-DEPENDENT',1,1],['COLLISION POINTS:','D1 vs C1 (John 1:1): STANDS -- g'],v21],
+ ['3 the same, restated by a v25 step','both UNDERDETERMINED (it counts)','BROKEN',['PROP-DEPENDENT','PROP-DEPENDENT',1,1],['COLLISION POINTS:','D1 vs C1 (John 1:1): STANDS -- g'],v21+'\n[AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: s1; TRIGGER: RETRACTED D1 vs C1 (DEFENDER LINK BROKEN to STANDS); ORIGINAL: x]'],
+ ['4 the same, restated by a v27 SUPERSEDED LINE only (1196 shape)','both UNDERDETERMINED (it counts)','BROKEN',['PROP-DEPENDENT','PROP-DEPENDENT',1,1],['COLLISION POINTS:','D1 vs C1 (John 1:1): STANDS -- g'],v21+'\n[AUDIT v27: SUPERSEDED LINE -- SEAT: s1; LABEL: D1 VS C1; ORIGINAL: D1 vs C1 (John 1:1): DEFENDER LINK BROKEN -- g; END]'],
+ ['5 the same, v27 of another seat only','t399 CHALLENGER WINS (not restated for s1)','BROKEN',['PROP-DEPENDENT','PROP-DEPENDENT',1,1],['COLLISION POINTS:','D1 vs C1 (John 1:1): STANDS -- g'],v21+'\n[AUDIT v27: SUPERSEDED LINE -- SEAT: s9; LABEL: D1 VS C1; ORIGINAL: x; END]'],
+ ['6 judge-restated (894 shape): line still CHALLENGER LINK BROKEN, RESTATED statement UNDERDETERMINED; HELD, equal PROP-DEPENDENT fields','t399 counts it UNDERDETERMINED, the tie holds: UNDERDETERMINED (live leaves it out, list empty, no tie: DEFENDER WINS)','HELD',['PROP-DEPENDENT','PROP-DEPENDENT',1,1],['COLLISION POINTS:','D1 vs C1 (John 1:1): CHALLENGER LINK BROKEN -- g'],v21+'\n[AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: s1; ITEM: D1 vs C1; RULE: K-DG8; RESULT: CURED; WHY: restated; LINE: x; STATEMENT: RESTATED: D1 vs C1 (John 1:1): UNDERDETERMINED -- (L1) x; JUDGE STATEMENT: y]'],
+ ['7 restated, then a CLOSE-CONTRADICTION step (1153 shape): BROKEN, equal fields, with a D2 vs C2 STANDS line','t399 counts DEFENDER LINK BROKEN, no tie: CHALLENGER WINS (live leaves it out, D2 STANDS ties: UNDERDETERMINED)','BROKEN',['PROP-DEPENDENT','PROP-DEPENDENT',1,1],['COLLISION POINTS:','D1 vs C1 (John 1:1): DEFENDER LINK BROKEN -- g','D2 vs C2 (John 1:2): STANDS -- g'],v21+'\n[AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: s1; TRIGGER: RETRACTED D1 vs C1 (DEFENDER LINK BROKEN to UNDERDETERMINED), CLOSE-CONTRADICTION D1 vs C1 (UNDERDETERMINED to DEFENDER LINK BROKEN); ORIGINAL: x]'],
+ ['8 case B (973 shape): v25 step to UNDERDETERMINED, line still DEFENDER LINK BROKEN; HELD, equal PROP-DEPENDENT fields','t399 counts it UNDERDETERMINED, the tie holds: UNDERDETERMINED (live leaves it out, list empty, no tie: DEFENDER WINS)','HELD',['PROP-DEPENDENT','PROP-DEPENDENT',1,1],['COLLISION POINTS:','D1 vs C1 (John 1:1): DEFENDER LINK BROKEN -- g'],v21+'\n[AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: s1; TRIGGER: RETRACTED D1 vs C1 (DEFENDER LINK BROKEN to UNDERDETERMINED); ORIGINAL: x]'],
+]){const a=rdp('L',verdict,f,lines,tags),b=rdp('T',verdict,f,lines,tags);P(nm,exp,{live:a,t399:b});}
+// 9. ap399 directly: 2f (W2 8549 C1), ambiguity, idempotence, plain list
+{const A=E.T.ap399;const col=[{link:'D1 vs C1',grade:'UNDERDETERMINED'},{link:'D2',grade:'DEFENDER LINK BROKEN'}];
+ const R1=E.T.ret386('[AUDIT v21: CORRECTED RESULT -- SEAT: s1; ORIGINAL: HELD; COUNTED: HELD (HELD-1); RETRACTED: D2 vs C1]','s1');
+ P('9a 2f: retracted "D2 vs C1" not restated, only a "D2" LINK STATE DEFENDER LINK BROKEN entry','left out of brk',{t399:A(col,R1)});
+ const R2=E.T.ret386('[AUDIT v21: CORRECTED RESULT -- SEAT: s1; ORIGINAL: HELD; COUNTED: HELD (HELD-1); RETRACTED: D2 vs C1, D2 vs C3]','s1');
+ P('9b 2f: two retracted keys name D2','D2 entry UNREAD (grade null)',{t399:A(col,R2)});
+ const R3=E.T.ret386('[AUDIT v21: CORRECTED RESULT -- SEAT: s1; ORIGINAL: HELD; COUNTED: HELD (HELD-1); RETRACTED: D2 vs C1]\n[AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: s1; TRIGGER: RETRACTED D2 vs C1 (DEFENDER LINK BROKEN to UNDERDETERMINED); ORIGINAL: x]','s1');
+ P('9c 2f: the one key naming D2 was restated (v25 to UNDERDETERMINED)','D2 entry kept, grade UNDERDETERMINED',{t399:A(col,R3)});
+ P('9d idempotence: ap399 twice equals once (9a, 9b, 9c)','true',{t399:[R1,R2,R3].every(R=>JSON.stringify(A(A(col,R),R))===JSON.stringify(A(col,R)))});
+ P('9e plain list (no flags): ASK 386 rule','D2 LINK BROKEN left out; a plain retracted STANDS line kept',{t399:A([{link:'D1 vs C1',grade:'STANDS'},{link:'D2',grade:'DEFENDER LINK BROKEN'}],['D1 vs C1','D2 vs C1'])});
+ P('9f the caller\'s own cure (add) is restated','D1 vs C1 restated true',{t399:E.T.ret386('','s1',['D1 vs C1']).rs});}
+// 10. stored rows through ret386 flags (W1 8644: 1196 for v27; one of case B)
+for(const [id,lk] of [[1196,'D2 VS C2'],[973,'D4 VS C5'],[1153,'D6 VS C3'],[894,'D6 VS C4'],[832,'D3 VS C2']]){const j=J.find(x=>x.id===id);const R=E.T.ret386(j.v,j.seat);const P0=E.T.rcLines(E.T.cureJText(j.v,true));const z=P0.col.find(c=>c.link.toUpperCase().replace(/ VS\.? /,' VS ')===lk);const a=E.T.ap399(P0.col.concat(P0.ls||[]),R).find(c=>c.link.toUpperCase().replace(/ VS\.? /,' VS ')===lk);
+ P('10 stored '+id+' '+j.seat+' '+lk,'see flag',{flag:R.rs[lk],line_grade:z&&z.grade,counted_as:a?a.grade:'(left out)'});}
+// 11. v25 plants from ASK 400 (14c, 14e): the retracted D2 link-state entry and brk at 1344
+{const f={verdict_tag:'HELD',defense_standing:'SELF-SUPPORTED',challenge_standing:'PROP-DEPENDENT',conceded_links:0,challenger_conceded_links:1};
+ const R0=['HELD','CLAUSE: HELD-1 -- n=2 w=0 k=0','COLLISION POINTS:','D1 vs C1 (John 1:1): UNDERDETERMINED -- g','D2: DEFENDER LINK BROKEN -- x','DEFENSE STANDING: SELF-SUPPORTED -- L=2 c=0','CHALLENGE STANDING: PROP-DEPENDENT -- L=1 c=1','CONCEDED LINKS: 0','CHALLENGER CONCEDED LINKS: 1','RESULT: DEFENDER WINS'];
+ const reply='CORRECTED RESULT: HELD-1 -- the retractions below\nRETRACTED: D1 vs C1 -- regraded to UNDERDETERMINED -- in CR2 the challenger wrote "x" (John 1:1)\nRETRACTED: D2 vs C1 -- regraded to UNDERDETERMINED -- in CR2 the challenger wrote "y" (John 1:2)';
+ const run=v=>{let r;try{r=G[v].cureRecompute('s1',R0.join('\n'),f,[{rule:'K-X',link:'D1 vs C1',line:R0[3]},{rule:'K-X',link:'D2 vs C1',line:R0[4]}],[],{ok:true,text:reply});}catch(e){r={error:String(e)}}return {result:r&&r.result,fields:r&&r.fields,trig:r&&r.trig,error:r&&r.error};};
+ P('11 v25 (ASK 400 14e): retractions D1 vs C1 and D2 vs C1; D2 only a LINK STATE entry','t399: D2 vs C1 is accepted (wd) but no line was regraded, so it is not restated; under 2f the D2 entry is left out of brk (live counts it: brk DEFENDER 1, BROKEN, CHALLENGER WINS)',{live:run('L'),t399:run('T')});}
+for(const o of out)console.log(JSON.stringify(o));require('fs').writeFileSync(__dirname+'/plants_out.json',JSON.stringify(out,null,1));
