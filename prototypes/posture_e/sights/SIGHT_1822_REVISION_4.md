@@ -1,4 +1,6 @@
-# Sight 1822 Revision 4 (proposal, not written)
+# Sight 1822 Revision 4.1 (proposal, not written)
+
+Rev 4.1 (19:52 CST) applies W1's grade at Wall 7985: C1 (the title of Change B), C2 (a Romans 9:10 line), and 4.2 (cite Sight 32, and name the sights that hold Luke 1:35).
 
 Sight 1822, "Flesh After His Kind". Drafted by W3 (session_01H1X3ANsGiMnhnbkfphocmo) on 2026-11-17 at 19:41 CST.
 
@@ -26,7 +28,7 @@ Genesis 1:11: "And God said, Let the earth bring forth grass, the herb yielding 
 
 ## Change B: new block, after "L1-L2-L3. MATTHEW 1:20 WHOLE"
 
-L1-L2. "CONCEIVED" IN SCRIPTURE: THE LORD GIVES THE CONCEPTION, AND THE HUSBAND STANDS IN THE SAME ROW.
+L1-L2. "CONCEIVED" IN SCRIPTURE: THE LORD GIVES THE CONCEPTION, AND THE HUSBAND STANDS IN THE SAME ROW OR ITS CHAIN.
 
 Where the text says the LORD gave the conception, it names the husband in the same row or chain:
 
@@ -54,6 +56,18 @@ L2. The words for "conceive":
 
 Romans 9:10: "And not only [this]; but when Rebecca also had conceived by one, [even] by our father Isaac;"
 
+L1-L2. ROMANS 9:10 AND MATTHEW 1:20 ARE TWO FORMS, NOT ONE.
+
+Romans 9:10's "by one" is ek (G1537) joined to koite, and it names a man: "our father Isaac".
+
+Matthew 1:20's form is gennao (G1080) + ek (G1537) + pneuma (G4151). Scripture uses that same form for every one born of the Spirit, and it gives spirit, not flesh:
+- John 3:5: "Jesus answered, Verily, verily, I say unto thee, Except a man be born of water and [of] the Spirit, he cannot enter into the kingdom of God."
+- John 3:6: "That which is born of the flesh is flesh; and that which is born of the Spirit is spirit."
+- John 3:8: "The wind bloweth where it listeth, and thou hearest the sound thereof, but canst not tell whence it cometh, and whither it goeth: so is every one that is born of the Spirit."
+- John 1:13 has gennao + ek with God: "Which were born, not of blood, nor of the will of the flesh, nor of the will of man, but of God."
+
+So "of the Holy Ghost" at Matthew 1:20 is scripture's own form of spiritual origin (Sight 10). Romans 9:10's ek, joined to koite, names the man. Neither row cancels the other (DG-59).
+
 THE WHOLE COUNT. The canon (66 books) has 60 rows with "conceive", "conceived" or "conceiving". The 4 Apocrypha rows (2 Esdras 13:16; Sirach 16:20; Wisdom 7:15; Judith 9:9) are all of the mind.
 1. 33 rows narrate a woman's conception:
    - Genesis 4:1, 4:17, 16:4, 16:5, 21:2, 25:21, 29:32-35, 30:5, 30:7, 30:17, 30:19, 30:23, 38:3-5, 38:18;
@@ -77,13 +91,14 @@ No row in the canon gives a woman's conception without a man.
 - "when he went in unto her, the LORD gave her conception" (Ruth 4:13);
 - "Elkanah knew Hannah his wife; and the LORD remembered her" (1 Samuel 1:19).
 
-The LORD's hand named at a conception never removes the husband. Matthew 1:20 carries both in one row: God's part ("of the Holy Ghost") and the husband ("Joseph, thou son of David ... Mary thy wife"). Read precept upon precept (Isaiah 28:10), "conceived ... of the Holy Ghost" says the child was conceived. It does not say the Holy Ghost impregnated her. That reading has no row in scripture.
+The LORD's hand named at a conception never removes the husband. Matthew 1:20 carries both in one row: God's part ("of the Holy Ghost") and the husband ("Joseph, thou son of David ... Mary thy wife"). Read precept upon precept (Isaiah 28:10), "conceived ... of the Holy Ghost" says the child was conceived. It does not say the Holy Ghost impregnated her. That reading has no row in scripture. Luke 1:34, "seeing I know not a man", is a present state, not a vow (Sight 32). Luke 1:35, "come upon" and "overshadow", is held by Sight 8 (Acts 1:8, the parallel for eperchomai) and Sight 9 (every New Testament use of episkiazo is the presence cloud). Its "born of thee" (gennao + ek) is recorded in Sight 1578.
 
 ## OPEN for the graders (must be answered before the operator's card)
 
-1. Romans 9:10 uses ek (G1537) with the conception: "conceived by (ek) one, our father Isaac". Matthew 1:20 uses the same ek: "of (ek) the Holy Ghost". Sight 10 reads ek + God/Spirit as covenant origin.
+1. ANSWERED in rev 4.1 by the Romans 9:10 line (W1, Wall 7985, C2). Original question: Romans 9:10 uses ek (G1537) with the conception: "conceived by (ek) one, our father Isaac". Matthew 1:20 uses the same ek: "of (ek) the Holy Ghost". Sight 10 reads ek + God/Spirit as covenant origin.
    - An opponent will set Romans 9:10 against Sight 10 and say that ek with a conception names the begetter.
    - The two rows use different verbs: koitē at Romans 9:10, gennaō at Matthew 1:20.
    - The graders must say whether Change B and Change C hold whole with Sight 10 and DG-8 (DG-59: none cancels another), or whether Romans 9:10 needs its own line.
-2. Luke 1:34, "seeing I know not a man", is held by Sight 32 (present state, not a vow). The graders must say whether Change C must cite Sight 32.
-3. Size: the summary is 9,261 characters now. Changes A to C add about 3,500.
+2. ANSWERED in rev 4.1: Change C now cites Sight 32, and Sights 8, 9 and 1578 for Luke 1:35. Original question: Luke 1:34, "seeing I know not a man", is held by Sight 32 (present state, not a vow). The graders must say whether Change C must cite Sight 32.
+3. Size: the summary is 9,261 characters now. Changes A to C add about 4,700. W1 knows of no limit.
+4. The man in the chain, for all 33 narrated rows, was read by W3 in this session. Row in the verse: Genesis 4:1, 4:17, 16:4, 21:2, 30:5, 30:7, 30:17, 30:19, 38:18; 1 Chronicles 7:23; Isaiah 8:3; Hosea 1:3; Luke 1:24; Romans 9:10. Row in the chain: Genesis 16:5 (16:4), 25:21 ("his wife"), 29:32-35 ("my husband", 29:32, 34), 30:23 (Rachel, wife of Jacob, 29:28), 38:3-5 (38:2), Exodus 2:2 (2:1), 1 Samuel 1:20 (1:19), 2:21 (2:20), 2 Samuel 11:5 (11:4), 2 Kings 4:17 ("her husband", 4:14), Hosea 1:6, 1:8 (1:2-3), Luke 1:36 (1:5, 1:13), Hebrews 11:11 (Sarah: Genesis 21:2).
