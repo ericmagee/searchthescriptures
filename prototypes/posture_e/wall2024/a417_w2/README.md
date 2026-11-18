@@ -26,3 +26,9 @@ The emitter refuses (exit 3) if the statement holds a write word.
 - 407, 408, 409 marks also hold on runs before those packages (an alternate was seated, "sperma" used, no pkgREFP
   error). Only live_since separates them.
 - x (debate_errors) has no run_token; the window is 3 hours before the results row to 10 minutes after.
+- (W4 8869) 405, 408 and 409 have "a run exists" as their case, and 409's mark is the absence of a pkgREFP error, so for
+  them EXERCISED means "ran without fault", not "a case was met".
+- (W4 8869) 396 is checked by hand in the Drive report export; the query cannot see it.
+
+## Grades
+W1 8867 PASS; W4 8869 PASS (both at edd0fa1f).
