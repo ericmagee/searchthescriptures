@@ -1,0 +1,10 @@
+PASS 1 DEFENDER fact, D4 vs C2: STANDS | old: REFUSED | new: REFUSED: the change sets D4 to STANDS, but E-ASSUME found the fact its premise 3 ASSUMES, "Mary of the house of David", BOTH NOT STATED: no quoted verse states it (pkgBNS, ASK 295). CHANGE TO the line graded without that fact, or KEEP, and the change stays unapplied.
+PASS 2 CHALLENGER fact n2, D4 vs C2: DEFENDER LINK BROKEN | old: applied | new: REFUSED: the change sets D4 vs C2 to DEFENDER LINK BROKEN, but E-ASSUME found the fact challenger premise 2 ASSUMES, "Joseph begat Jesus", BOTH NOT STATED: no quoted verse states it (pkgBNS, ASK 374). CHANGE TO the line graded without that fact, or KEEP, and the change stays unapplied.
+PASS 3 same fact, D4 vs C3: DEFENDER LINK BROKEN | old: applied | new: applied
+PASS 4 CHALLENGER fact, D4 vs C2: STANDS | old: applied | new: applied
+PASS 5 FORCED prefix with the fact | old: applied | new: REFUSED: the change sets D4 vs C2 to DEFENDER LINK BROKEN, but E-ASSUME found the fact challenger premise 2 ASSUMES, "Joseph begat Jesus", BOTH NOT STATED: no quoted verse states it (pkgBNS, ASK 374). CHANGE TO the line graded without that fact, or KEEP, and the change stays unapplied.
+PASS 6 no facts | old: applied | new: applied
+PASS 7 fact n2 link4, D1 vs C2: DEFENDER LINK BROKEN | old: applied | new: REFUSED: the change sets D1 vs C2 to DEFENDER LINK BROKEN, but E-ASSUME found the fact challenger premise 2 ASSUMES, "Joseph begat Jesus", BOTH NOT STATED: no quoted verse states it (pkgBNS, ASK 374). CHANGE TO the line graded without that fact, or KEEP, and the change stays unapplied.
+PASS extra: CHALLENGER LINK BROKEN with the fact | old: applied | new: applied
+PASS extra: bullet and bold | old: applied | new: REFUSED: the change sets D4 vs C2 to DEFENDER LINK BROKEN, but E-ASSUME found the fact challenger premise 2 ASSUMES, "Joseph begat Jesus", BOTH NOT STATED: no quoted verse states it (pkgBNS, ASK 374). CHANGE TO the line graded without that fact, or KEEP, and the change stays unapplied.
+plants 9 of 9
