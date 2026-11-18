@@ -16,12 +16,14 @@ function copies(src,where,out,errs){let cm=[];let ast;
   if(n.type==='VariableDeclarator'&&n.id&&n.id.type==='Identifier'&&NAMES.has(n.id.name)&&n.init)take(n.id.name,n.start,n.end);
   for(const k in n){const v=n[k];if(Array.isArray(v))v.forEach(walk);else if(v&&typeof v.type==='string')walk(v);}};
  walk(ast);}
-const out={},errs=[];
-for(const f of files){const w=rd(f);const tag=path.basename(f);
+const out={},errs=[];const perFile={};
+for(const f of files){const w=rd(f);const tag=path.basename(f);perFile[tag]=w;
  for(const n of w.nodes){const j=n.parameters&&n.parameters.jsCode;if(typeof j!=='string')continue;
   if(n.name==='Shared Library'){const U=T.unpack(w);const seen=new Set();
    for(const k of Object.keys(U.M)){const s=T.rb(U.L,U.M[k]);const h=sha(s);if(seen.has(h))continue;seen.add(h);copies(s,tag+' lib:'+k,out,errs);}}
   else copies(j,tag+' '+n.name,out,errs);}}
+/* W3 condition: a file holding 0 copies of a registered name FAILs (a wrong --child file must not pass) */
+let zero=0;for(const tag of Object.keys(perFile))for(const name of R.names){const c=(out[name]||[]).filter(x=>x.where.startsWith(tag+' ')).length;if(!c){zero++;console.log('FAIL '+tag+': 0 copies of '+name);}}
 const acc=(R.accepted||[]).map(a=>[a.name,[a.sha_a,a.sha_b].sort().join('|'),a]);let fail=0;
 for(const name of R.names){const L=out[name]||[];const by={};for(const c of L)(by[c.sha]=by[c.sha]||[]).push(c.where);const shas=Object.keys(by);
  console.log('NAME '+name+': '+L.length+' copies, '+shas.length+' text(s)');
@@ -29,4 +31,4 @@ for(const name of R.names){const L=out[name]||[];const by={};for(const c of L)(b
  for(let i=0;i<shas.length;i++)for(let j=i+1;j<shas.length;j++){const key=[shas[i],shas[j]].sort().join('|');const a=acc.find(x=>x[0]===name&&x[1]===key);
   if(a)console.log('  ACCEPTED '+shas[i]+' vs '+shas[j]+': '+a[2].reason+' ('+a[2].wall+')');else{fail++;console.log('  FAIL '+shas[i]+' vs '+shas[j]);}}}
 if(errs.length)console.log('PARSE ERRORS '+errs.length+': '+errs.slice(0,3).join(' | '));
-console.log(fail?'RESULT: FAIL ('+fail+' differing pair(s))':'RESULT: PASS');process.exitCode=fail?1:0;
+fail+=zero;console.log(fail?'RESULT: FAIL ('+fail+' failing check(s))':'RESULT: PASS');process.exitCode=fail?1:0;
