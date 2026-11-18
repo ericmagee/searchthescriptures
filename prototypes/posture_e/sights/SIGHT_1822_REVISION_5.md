@@ -56,8 +56,6 @@ So "found with child of the Holy Ghost" and "that which is conceived in her is o
 
 THE VERB AT 1:20, MET IN PLACE. "Conceived [Gr. begotten]" is gennao (G1080): "to procreate (properly, of the father, but by extension of the mother)". The verb says that a child was begotten in her. "Of the Holy Ghost" says what the child is: the Anointed. The row that carries the verb names the husband and the wife: "Joseph, thou son of David, fear not to take unto thee Mary thy wife". The verb's proper subject, the father, is named in the same row. The Spirit is not that subject.
 
-GROUND. The operator's statement of 17 Nov 2026, 19:55 CST, a ruling: "'that which is conceived in her is of the Holy Ghost.' translation: the child in her is anointed".
-
 (3) THE HOLY GHOST ON A CHILD FROM THE WOMB DOES NOT REMOVE THE FATHER.
 - Luke 1:15: "For he shall be great in the sight of the Lord, and shall drink neither wine nor strong drink; and he shall be filled with the Holy Ghost, even from his mother's womb."
 - His father is named by the same angel: "thy wife Elisabeth shall bear thee a son" (Luke 1:13).
@@ -73,4 +71,4 @@ SUPPORT ONLY: John 3:5, 3:6, 3:8 and John 1:13 give gennao + ek with the Spirit,
 
 ## Notes line (appended)
 
-REVISION 5: replaces the rev 4.2 line "ROMANS 9:10 AND MATTHEW 1:20 ARE TWO FORMS, NOT ONE". That line fell to Matthew 1:18, which has the same echo + ek form as Romans 9:10. The new block, "OF THE HOLY GHOST: THE CHILD IN HER IS ANOINTED", rests on the operator's statement of 17 Nov 2026, 19:55 CST: "the child in her is anointed".
+REVISION 5: replaces the rev 4.2 line "ROMANS 9:10 AND MATTHEW 1:20 ARE TWO FORMS, NOT ONE". That line fell to Matthew 1:18, which has the same echo + ek form as Romans 9:10. The new block, "OF THE HOLY GHOST: THE CHILD IN HER IS ANOINTED", rests on the operator's statement of 17 Nov 2026, 19:55 CST, which is a ruling: "'that which is conceived in her is of the Holy Ghost.' translation: the child in her is anointed"; and on the rows he gave at 19:57 CST: "Acts 10:38, 2 Corinthians 1:21-22, 1 John 2:20 and 27". The ground is kept in the notes, not in the summary, because the summary is served to debaters.
