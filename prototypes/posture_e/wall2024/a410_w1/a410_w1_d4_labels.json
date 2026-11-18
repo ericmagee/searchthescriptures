@@ -266,14 +266,15 @@
    "enforcer_row": 44781,
    "run_token": "ODV1-39015-pnpoj45j",
    "item": "premise listed against the challenger 3",
-   "right": "SPARED",
+   "right": "COUNTED",
    "judge_lines": {
-    "P7.1": "DISAGREE",
+    "P7.1": "AGREE",
     "P7.2": "AGREE",
     "P7.3": "AGREE"
    },
-   "reason": "Challenger LINK 3 exhibits [L1] Matthew 1:19, 1:25, [L2] ginosko, paralambano, [L3] Matthew 1:20, Genesis 4:1 and an [L4]. P7.1's ASSUMES (\"justice would require him to marry her if he fathered the child\") is the link's own inference ([L4], DG-61), not a missing row; the Matthew 1:19 answer gives its own fit (MEETS in my reading). Close call.",
+   "reason": "Challenger LINK 3 exhibits [L1] Matthew 1:19, 1:25, [L2] ginosko, paralambano, [L3] Matthew 1:20, Genesis 4:1 and an [L4]. P7.1's ASSUMES (\"justice would require him to marry her if he fathered the child\") is the link's own inference ([L4], DG-61), not a missing row; the Matthew 1:19 answer gives its own fit (MEETS in my reading). Close call. REVISED (Wall 8833, after W2 8832): COUNTED. The step \"a just father would not put her away\" is given by no quoted row (both seats labelled the same step NOT STATED in E-ASSUME), so it is an unexhibited given, not an [L4] the rows reach. My SPARED was a mistake.",
    "stored_deepseek_head": "ENFORCER: P7.1 -- AGREE -- RIGHT: COUNTED -- The line counts"
   }
- ]
+ ],
+ "revision": "item 20 revised to COUNTED at Wall 8833"
 }
