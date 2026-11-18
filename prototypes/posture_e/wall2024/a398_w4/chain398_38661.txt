@@ -1,0 +1,1911 @@
+same    Send Back Record#0                 x 264 | s262 reproduces stored true | reads field false  
+same    Reread Build#0                     x 265 | s262 reproduces stored true | reads field false  
+same    Reread Record#0                    x 268 | s262 reproduces stored true | reads field false  
+same    Gate Build#0                       x 269 | s262 reproduces stored true | reads field false  
+same    Late Gate Build#0                  x 272 | s262 reproduces stored true | reads field false  
+same    Gate Record#0                      x 274 | s262 reproduces stored true | reads field false  
+same    Alternate Build#0                  x 277 | s262 reproduces stored true | reads field false | s262 ERR Cannot read properties of undefined (reading 'map') | tgt ERR Cannot read properties of undefined (reading 'map')
+same    Early Alternate Reply#0            x 280 | s262 reproduces stored true | reads field false  
+same    Alternate Payloads#0               x 282 | s262 reproduces stored true | reads field true  
+same    Alternate Cure Build#0             x 284 | s262 reproduces stored true | reads field false  
+same    Alternate Cure Normalize#0         x 286 | s262 reproduces stored true | reads field false  
+same    Alternate Merge Seat#0             x 288 | s262 reproduces stored true | reads field true  
+same    Alt Seated#0                       x 289 | s262 reproduces stored true | reads field false  
+same    Alt Judge Enforcer Build#0         x 290 | s262 reproduces stored true | reads field true  
+same    Alt Judge Enforcer Retry Build#0   x 293 | s262 reproduces stored true | reads field false  
+same    Alt Judge Enforcer Resend Build#0  x 296 | s262 reproduces stored true | reads field false  
+same    Alt Judge Enforcer Record#0        x 298 | s262 reproduces stored true | reads field false  
+same    Alt Send Back Build#0              x 299 | s262 reproduces stored true | reads field false  
+CHANGED Alt Send Back Record#0             x 302 | s262 reproduces stored true | reads field false  
+      out.0.bodies.0 
+        s262:   "{\"payload\":{\"debate_id\":\"14bac268-52c2-41a2-8ee8-465184af0792\",\"judge_seat\":\"sonnet\",\"judge_api_model\":\"anthropic/claude-sonnet-5.5\",\"verdict_raw\":\"{\\\"verdict_tag\\\":\\\"BROKEN\\\",\\\"defense_standing\\\":\\\"PROP-DEPENDENT\\\",\\\"challenge_standing\\\":\\\"PROP-DEPENDENT\\\", 
+        target: "{\"payload\":{\"debate_id\":\"14bac268-52c2-41a2-8ee8-465184af0792\",\"judge_seat\":\"sonnet\",\"judge_api_model\":\"anthropic/claude-sonnet-5.5\",\"verdict_raw\":\"{\\\"verdict_tag\\\":\\\"BROKEN\\\",\\\"defense_standing\\\":\\\"PROP-DEPENDENT\\\",\\\"challenge_standing\\\":\\\"PROP-DEPENDENT\\\",
+      out.0.alt_needed 
+        s262:   true 
+        target: false
+      out.0.sendback.und_counted.0 
+        s262:   {"seat":"sonnet","items":["S10 (E-UNG COLLISION D1 (pressed: [DR2] premise 1): the CHANGE TO has no graded D1 vs C<j> line)"]} 
+        target: undefined
+      out.0.sb_rows.9.cure_status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.sb_rows.9.cure_reason 
+        s262:   "SEND-BACK CHANGE TO: D1 vs C2 (Acts 2:30): STANDS -- the challenger's answer rests on Mary's lineage, which no quoted row gives, and the defender's answer fits the verse -- GROUND: [L1] Acts 2:30 'that of the fruit of his loins, according to the flesh' | [L2] karpos (G2590, fruit) | [L3] 2 Samuel 7 
+        target: "SEND-BACK CHANGE TO: D1 vs C2 (Acts 2:30): STANDS -- the challenger's answer rests on Mary's lineage, which no quoted row gives, and the defender's answer fits the verse -- GROUND: [L1] Acts 2:30 'that of the fruit of his loins, according to the flesh' | [L2] karpos (G2590, fruit) | [L3] 2 Samuel 7
+same    Alt Reread Build#0                 x 303 | s262 reproduces stored true | reads field false  
+same    Alt Reread Record#0                x 306 | s262 reproduces stored true | reads field false  
+same    Alt Gate Build#0                   x 307 | s262 reproduces stored true | reads field false  
+same    Alt Late Gate Build#0              x 310 | s262 reproduces stored true | reads field false  
+CHANGED Alt Gate Record#0                  x 312 | s262 reproduces stored true | reads field false  
+      out.0.bodies.0 
+        s262:   "{\"payload\":{\"debate_id\":\"14bac268-52c2-41a2-8ee8-465184af0792\",\"judge_seat\":\"sonnet\",\"judge_api_model\":\"anthropic/claude-sonnet-5.5\",\"verdict_raw\":\"{\\\"verdict_tag\\\":\\\"BROKEN\\\",\\\"defense_standing\\\":\\\"PROP-DEPENDENT\\\",\\\"challenge_standing\\\":\\\"PROP-DEPENDENT\\\", 
+        target: "{\"payload\":{\"debate_id\":\"14bac268-52c2-41a2-8ee8-465184af0792\",\"judge_seat\":\"sonnet\",\"judge_api_model\":\"anthropic/claude-sonnet-5.5\",\"verdict_raw\":\"{\\\"verdict_tag\\\":\\\"BROKEN\\\",\\\"defense_standing\\\":\\\"PROP-DEPENDENT\\\",\\\"challenge_standing\\\":\\\"PROP-DEPENDENT\\\",
+      out.0.alt_needed 
+        s262:   true 
+        target: false
+      out.0.sendback.und_counted.0 
+        s262:   {"seat":"sonnet","items":["S10 (E-UNG COLLISION D1 (pressed: [DR2] premise 1): the CHANGE TO has no graded D1 vs C<j> line)"]} 
+        target: undefined
+CHANGED Alternate Merge 1#0                x 313 | s262 reproduces stored true | reads field true  
+      out.0.bodies.0 
+        s262:   "{\"payload\":{\"debate_id\":\"14bac268-52c2-41a2-8ee8-465184af0792\",\"judge_seat\":\"haiku\",\"judge_api_model\":\"anthropic/claude-haiku-5.5\",\"verdict_raw\":\"{\\\"verdict_tag\\\":\\\"BROKEN\\\",\\\"defense_standing\\\":\\\"COLLAPSED\\\",\\\"challenge_standing\\\":\\\"SELF-SUPPORTED\\\",\\\"con 
+        target: "{\"payload\":{\"debate_id\":\"14bac268-52c2-41a2-8ee8-465184af0792\",\"judge_seat\":\"sonnet\",\"judge_api_model\":\"anthropic/claude-sonnet-5.5\",\"verdict_raw\":\"{\\\"verdict_tag\\\":\\\"BROKEN\\\",\\\"defense_standing\\\":\\\"PROP-DEPENDENT\\\",\\\"challenge_standing\\\":\\\"PROP-DEPENDENT\\\",
+      out.0.summary.0.seat 
+        s262:   "haiku" 
+        target: "sonnet"
+      out.0.summary.0.node 
+        s262:   "Panel Reserve openrouter" 
+        target: "Alternate Call openrouter"
+      out.0.summary.0.api_model 
+        s262:   "anthropic/claude-haiku-5.5" 
+        target: "anthropic/claude-sonnet-5.5"
+      out.0.summary.0.raw_chars 
+        s262:   4505 
+        target: 19284
+      out.0.summary.0.drv.0.rule 
+        s262:   "K-F" 
+        target: "K-G7"
+      out.0.summary.0.drv.0.side 
+        s262:   "BOTH" 
+        target: "DEFENDER"
+      out.0.summary.0.drv.0.link 
+        s262:   "D2 vs C1" 
+        target: "D3 vs C3"
+      out.0.summary.0.drv.0.line 
+        s262:   "FORCED: D2 vs C1 -- MEANS [DR1]: \"The seed according to the flesh came forth through a woman, made under the law.\" -- ANSWER [CR2]: \"made of a woman names the mother and the mortality idiom said of men with named fathers\" -- FAILS: \"mortality idiom said of men with named fathers\" -- GROUND: [ 
+        target: "D3 vs C3 (Luke 3:23): DEFENDER LINK BROKEN -- the named man is not shown to be the father of that flesh; the answer shows supposing as mistaken -- GROUND: [L1] Luke 3:23 'being (as was supposed) the son of Joseph' | [L2] nomizo (G3543, to deem, regard, suppose) | [L3] Luke 2:44 'But they, supposing
+      out.0.summary.0.drv.0.why 
+        s262:   "the MEANS quotation is not in [DR1]" 
+        target: undefined
+      out.0.summary.0.drv.0.premise 
+        s262:   undefined 
+        target: 2
+      out.0.summary.0.drv.0.conc 
+        s262:   undefined 
+        target: 0
+      out.0.summary.0.drv.0.st 
+        s262:   undefined 
+        target: "PROP-DEPENDENT"
+      out.0.summary.0.drv.0.L 
+        s262:   undefined 
+        target: 5
+      out.0.summary.0.drv.1.rule 
+        s262:   "K-FC" 
+        target: "K-G7"
+      out.0.summary.0.drv.1.side 
+        s262:   "BOTH" 
+        target: "DEFENDER"
+      out.0.summary.0.drv.1.link 
+        s262:   "D2 vs C1" 
+        target: "D4 vs C5"
+      out.0.summary.0.drv.1.ref 
+        s262:   null 
+        target: undefined
+      out.0.summary.0.drv.1.means 
+        s262:   "The seed according to the flesh came forth through a woman, made under the law." 
+        target: undefined
+      out.0.summary.0.drv.1.why 
+        s262:   "the FORCED line has no CARRIED BY: \"<the words of the pressed verse that state its MEANS>\" (W3 B7)" 
+        target: undefined
+      out.0.summary.0.drv.1.line 
+        s262:   "FORCED line for D2 vs C1: the FORCED line has no CARRIED BY: \"<the words of the pressed verse that state its MEANS>\" (W3 B7). Write the FORCED line again with CARRIED BY: \"<the words of the pressed verse that state the MEANS sentence, quoted from the KJV>\" between FAILS and GROUND, or RETRACTED 
+        target: "D4 vs C5 (Matthew 1:18): DEFENDER LINK BROKEN -- no row gives a union before the taking; the answer's own 'dates the finding' puts the conception before the coming together -- GROUND: [L1] Matthew 1:18 'before they came together, she was found with child of the Holy Ghost' | [L2] synerchomai (G4905
+      out.0.summary.0.drv.1.premise 
+        s262:   undefined 
+        target: 3
+      out.0.summary.0.drv.1.conc 
+        s262:   undefined 
+        target: 0
+      out.0.summary.0.drv.1.st 
+        s262:   undefined 
+        target: "PROP-DEPENDENT"
+      out.0.summary.0.drv.1.L 
+        s262:   undefined 
+        target: 5
+      out.0.summary.0.drv.2.rule 
+        s262:   "K-R" 
+        target: "K-G7"
+      out.0.summary.0.drv.2.link 
+        s262:   "DEFENDER premise 1" 
+        target: "D5 vs C4"
+      out.0.summary.0.drv.2.key 
+        s262:   "Galatians 4:4" 
+        target: undefined
+      out.0.summary.0.drv.2.premise 
+        s262:   1 
+        target: 5
+      out.0.summary.0.drv.2.line 
+        s262:   "premise 1: Galatians 4:4 is PROVEN BY REFERENCE (PROVEN IN [DR1]) and has no REFERENCE line" 
+        target: "D5 vs C4 (Matthew 1:20): DEFENDER LINK BROKEN -- the begetting is attributed to the Holy Ghost and the answer shows no fit for Joseph as begetter -- GROUND: [L1] Matthew 1:20 'for that which is conceived in her is of the Holy Ghost' | [L2] gennao (G1080, to procreate, properly of the father) | [L3]
+      out.0.summary.0.drv.2.means 
+        s262:   "The seed according to the flesh came forth through a woman, made under the law." 
+        target: undefined
+      out.0.summary.0.drv.2.round 
+        s262:   "DR1" 
+        target: undefined
+      out.0.summary.0.drv.2.why 
+        s262:   "no REFERENCE line" 
+        target: undefined
+      out.0.summary.0.drv.2.conc 
+        s262:   undefined 
+        target: 0
+      out.0.summary.0.drv.2.st 
+        s262:   undefined 
+        target: "PROP-DEPENDENT"
+      out.0.summary.0.drv.2.L 
+        s262:   undefined 
+        target: 5
+      out.0.summary.0.drv.3.link 
+        s262:   "DEFENDER premise 2" 
+        target: "DEFENDER premise 5"
+      out.0.summary.0.drv.3.key 
+        s262:   "Luke 3:23" 
+        target: "Luke 1:34"
+      out.0.summary.0.drv.3.premise 
+        s262:   2 
+        target: 5
+      out.0.summary.0.drv.3.line 
+        s262:   "premise 2: Luke 3:23 is PROVEN BY REFERENCE (PROVEN IN [DR1]) and has no REFERENCE line" 
+        target: "REFERENCE: Luke 1:34 -- [DR1] -- NOT CONFIRMED -- \"Mary's explicit absence of carnal knowledge of a man\" / \"Mary conceived when she said I know not a man\"; the MEANS adds a conception at the time of speaking. The premise is VOID in any case."
+      out.0.summary.0.drv.3.means 
+        s262:   "Joseph's paternal relation is defined by scripture as supposed rather than biological." 
+        target: "Mary conceived when she said I know not a man."
+      out.0.summary.0.drv.3.why 
+        s262:   "no REFERENCE line" 
+        target: "the REFERENCE line is not in the form REFERENCE: <press> -- [<round>] -- CONFIRMED | NOT CONFIRMED -- \"<block meaning>\" / \"<MEANS sentence>\""
+      out.0.summary.0.drv.4.rule 
+        s262:   "K-R" 
+        target: "K-CMT"
+      out.0.summary.0.drv.4.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.drv.4.link 
+        s262:   "DEFENDER premise 3" 
+        target: "contested grades without a commitment"
+      out.0.summary.0.drv.4.key 
+        s262:   "Matthew 1:18" 
+        target: undefined
+      out.0.summary.0.drv.4.premise 
+        s262:   3 
+        target: undefined
+      out.0.summary.0.drv.4.line 
+        s262:   "premise 3: Matthew 1:18 is PROVEN BY REFERENCE (PROVEN IN [DR1]) and has no REFERENCE line" 
+        target: "13 contested grade lines name no commitment (answer each with its Commitment N, or NOT A GRADE); first: \"BROKEN. D3, D4 and D5 each fail against pressed witnesses and the defender's answers show no fit. [L1] Matthew 1:18 'before they came together, she was found wi\"; \"CONCEDED LINKS: 0 -- Premis
+      out.0.summary.0.drv.4.means 
+        s262:   "The conception took place before the husband and wife came together." 
+        target: undefined
+      out.0.summary.0.drv.4.round 
+        s262:   "DR1" 
+        target: undefined
+      out.0.summary.0.drv.4.why 
+        s262:   "no REFERENCE line" 
+        target: undefined
+      out.0.summary.0.drv.5.rule 
+        s262:   "K-R" 
+        target: "K-CMTL"
+      out.0.summary.0.drv.5.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.drv.5.link 
+        s262:   "DEFENDER premise 4" 
+        target: "line 1"
+      out.0.summary.0.drv.5.key 
+        s262:   "Matthew 1:20" 
+        target: undefined
+      out.0.summary.0.drv.5.premise 
+        s262:   4 
+        target: undefined
+      out.0.summary.0.drv.5.line 
+        s262:   "premise 4: Matthew 1:20 is PROVEN BY REFERENCE (PROVEN IN [DR1]) and has no REFERENCE line" 
+        target: "\"BROKEN. D3, D4 and D5 each fail against pressed witnesses and the defender's answers show no fit. [L1] Matthew 1:18 'before they came together, she was found with child of the Holy Ghost' and Matthew 1:20 'that which is conceived in her is of the Holy Ghost' [conceived: Gr. begotten] cannot take 
+      out.0.summary.0.drv.5.means 
+        s262:   "The procreation in Mary's womb is directly attributed to the Holy Ghost." 
+        target: undefined
+      out.0.summary.0.drv.5.round 
+        s262:   "DR1" 
+        target: undefined
+      out.0.summary.0.drv.5.why 
+        s262:   "no REFERENCE line" 
+        target: undefined
+      out.0.summary.0.drv.6.rule 
+        s262:   "K-R" 
+        target: "K-CMTL"
+      out.0.summary.0.drv.6.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.drv.6.link 
+        s262:   "DEFENDER premise 5" 
+        target: "line 2"
+      out.0.summary.0.drv.6.key 
+        s262:   "Luke 1:34" 
+        target: undefined
+      out.0.summary.0.drv.6.premise 
+        s262:   5 
+        target: undefined
+      out.0.summary.0.drv.6.line 
+        s262:   "premise 5: Luke 1:34 is PROVEN BY REFERENCE (PROVEN IN [DR1]) and has no REFERENCE line" 
+        target: "\"CONCEDED LINKS: 0 -- Premise 1 (LINK 1): not counted. Galatians 4:4 and Luke 1:32 were answered in [CR2] and [CR4], and the answers MEET. Premise 2 (LINK 3): not counted. Luke 3:23 and Luke 2:49 were named in answers, and the Luke 3:23 answer MISSES, which is graded at D3 and not counted. Premise
+      out.0.summary.0.drv.6.means 
+        s262:   "Mary conceived when she said I know not a man." 
+        target: undefined
+      out.0.summary.0.drv.6.round 
+        s262:   "DR1" 
+        target: undefined
+      out.0.summary.0.drv.6.why 
+        s262:   "no REFERENCE line" 
+        target: undefined
+      out.0.summary.0.drv.7.rule 
+        s262:   "K-CMT" 
+        target: "K-CMTL"
+      out.0.summary.0.drv.7.link 
+        s262:   "contested grades without a commitment" 
+        target: "line 3"
+      out.0.summary.0.drv.7.line 
+        s262:   "7 contested grade lines name no commitment (answer each with its Commitment N, or NOT A GRADE); first: \"BROKEN -- The defender's own declared chain carries at least one listed link refuted from the text, and the defender's keystone link is not shown.\"; \"KEYSTONE: D5 -- BROKEN -- Link D5 (Christ  
+        target: "\"D3 vs C3 (Luke 3:23): DEFENDER LINK BROKEN -- the named man is not shown to be the father of that flesh; the answer shows supposing as mistaken -- GROUND: [L1] Luke 3:23 'being (as was supposed) the son of Joseph' | [L2] nomizo (G3543, to deem, regard, suppose) | [L3] Luke 2:44 'But they, supposi
+      out.0.summary.0.drv.8.link 
+        s262:   "line 1" 
+        target: "line 4"
+      out.0.summary.0.drv.8.line 
+        s262:   "\"BROKEN -- The defender's own declared chain carries at least one listed link refuted from the text, and the defender's keystone link is not shown.\" -- this contested grade line names no commitment. TRIAL rule: answer it with RESPONSE: K-CMTL line 1 | (Commitment N), the commitment the grade appl 
+        target: "\"D4 vs C5 (Matthew 1:18): DEFENDER LINK BROKEN -- no row gives a union before the taking; the answer's own 'dates the finding' puts the conception before the coming together -- GROUND: [L1] Matthew 1:18 'before they came together, she was found with child of the Holy Ghost' | [L2] synerchomai (G49
+      out.0.summary.0.drv.9.link 
+        s262:   "line 2" 
+        target: "line 5"
+      out.0.summary.0.drv.9.line 
+        s262:   "\"KEYSTONE: D5 -- BROKEN -- Link D5 (Christ had a biological father, Joseph) is graded DEFENDER LINK BROKEN at the collision with C5 and C3 on the words of Matthew 1:20 and Luke 1:35, and the defender's own answer to the pressed Luke 1:34 does not meet its press.\" -- this contested grade line name 
+        target: "\"D5 vs C4 (Matthew 1:20): DEFENDER LINK BROKEN -- the begetting is attributed to the Holy Ghost and the answer shows no fit for Joseph as begetter -- GROUND: [L1] Matthew 1:20 'for that which is conceived in her is of the Holy Ghost' | [L2] gennao (G1080, to procreate, properly of the father) | [L
+      out.0.summary.0.drv.10.link 
+        s262:   "line 3" 
+        target: "line 6"
+      out.0.summary.0.drv.10.line 
+        s262:   "\"D2: DEFENDER LINK BROKEN vs C1 (Romans 1:3): the link that the seed of David according to the flesh requires a male begetter is not shown by Galatians 4:4 \"made of a woman\"; the defender's answer does not show the fit. GROUND: [L1] Galatians 4:4 \"made of a woman, made under the law\" | [L2] gi 
+        target: "\"ANSWER CHECK: Luke 3:23 -- [CR4] -- MEANS: \"Joseph's paternal relation is defined by scripture as supposed rather than biological.\" -- ANSWER: \"shows supposing mistaken. It stands with Luke 2:48 thy father.\" -- MISSES -- the fact that Joseph is the begetter is not given by the rows; Luke 2:44
+      out.0.summary.0.drv.11.link 
+        s262:   "line 4" 
+        target: "line 7"
+      out.0.summary.0.drv.11.line 
+        s262:   "\"FORCED: D2 vs C1 -- MEANS [DR1]: \"The seed according to the flesh came forth through a woman, made under the law.\" -- ANSWER [CR2]: \"made of a woman names the mother and the mortality idiom said of men with named fathers\" -- FAILS: \"mortality idiom said of men with named fathers\" -- GROUND: 
+        target: "\"ANSWER CHECK: Matthew 1:18 -- [CR4] -- MEANS: \"The conception took place before the husband and wife came together.\" -- ANSWER: \"The coming together is the taking.\" -- MISSES -- the fact of a union between espousal and taking is not given by the rows; Matthew 1:24 puts the taking after the fi
+      out.0.summary.0.drv.12.link 
+        s262:   "line 5" 
+        target: "line 8"
+      out.0.summary.0.drv.12.line 
+        s262:   "\"D3: DEFENDER LINK BROKEN vs C3 (Luke 2:48, Luke 3:23): the defender's naming of Joseph as father rests on common speech; Luke 3:23 \"(as was supposed) the son of Joseph\" marks the reckoning. GROUND: [L1] Luke 3:23 \"(as was supposed) the son of Joseph\" | [L2] nomizo (G3543, to deem or regard, s 
+        target: "\"ANSWER CHECK: Matthew 1:19 -- [CR2] -- MEANS: \"Joseph sought to put Mary away because he was not the father of the child in her womb.\" -- ANSWER: \"his mind to put away states intent from two angles, just and sparing scorn\" -- MISSES -- Mark 7:7 and 7:8 are about doctrines of men and washing o
+      out.0.summary.0.drv.13.link 
+        s262:   "line 6" 
+        target: "line 9"
+      out.0.summary.0.drv.13.line 
+        s262:   "\"D4: DEFENDER LINK BROKEN vs C5 (Luke 1:34): the claim that Joseph knew Mary in the espousal is not shown against Matthew 1:18 \"before they came together\"; the answer rests on Genesis 4:1 without showing the coming together is cohabitation. GROUND: [L1] Matthew 1:18 \"before they came together\" 
+        target: "\"ANSWER CHECK: Luke 1:35 -- [CR4] -- MEANS: \"The child born of Mary is generated by the Holy Ghost and power of the Highest.\" -- ANSWER: \"Both state anointing and presence, and shall be called states title.\" -- MISSES -- Acts 1:8 and Matthew 17:5 concern others, and the verse's 'therefore also
+      out.0.summary.0.drv.14.link 
+        s262:   "line 7" 
+        target: "line 10"
+      out.0.summary.0.drv.14.line 
+        s262:   "\"D5: DEFENDER LINK BROKEN vs C5 (Luke 1:34, Isaiah 7:14): the defender's conclusion that Christ had a biological father is not shown against Mary's \"I know not a man\" and the virgin sign. GROUND: [L1] Luke 1:34 \"seeing I know not a man\" | [L2] ginosko (G1097, to know).\" -- this contested grad 
+        target: "\"ANSWER CHECK: Galatians 4:4 -- [DR3] -- MEANS: \"Made of a woman is said of men with named fathers in Job 14:1.\" -- ANSWER: \"the text specifies he was \\\"made of a woman\\\" without coupling a man\" -- MISSES -- the fact that ginomai excludes a father is not given by the rows, and Romans 1:3 u
+      out.0.summary.0.drv.15.rule 
+        s262:   "K-RUL" 
+        target: "K-CMTL"
+      out.0.summary.0.drv.15.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.drv.15.link 
+        s262:   "DEFENDER premise 1" 
+        target: "line 11"
+      out.0.summary.0.drv.15.ruling 
+        s262:   "DEFENDER premise 1" 
+        target: undefined
+      out.0.summary.0.drv.15.krul_ctx 
+        s262:   {"ks":"D5","ps":{"1":["DEFENDER"],"3":["DEFENDER"]}} 
+        target: undefined
+      out.0.summary.0.drv.15.line 
+        s262:   "deciding ruling DEFENDER premise 1: no ruling card; answer with the five-line card (RULING, CLAIM, NAMED BY, RULE, APPLIED)" 
+        target: "\"ANSWER CHECK: Romans 1:3 -- [DR3] -- MEANS: \"Seed according to the flesh is out of bowels and loins in 2 Samuel 7:12.\" -- ANSWER: \"Mary herself is of David's house and lineage\" -- MISSES -- the fact of Mary's house is not given by the rows.\" -- this contested grade line names no commitment. 
+      out.0.summary.0.drv.16.rule 
+        s262:   "K-RUL" 
+        target: "K-CMTL"
+      out.0.summary.0.drv.16.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.drv.16.link 
+        s262:   "DEFENDER premise 3" 
+        target: "line 12"
+      out.0.summary.0.drv.16.ruling 
+        s262:   "DEFENDER premise 3" 
+        target: undefined
+      out.0.summary.0.drv.16.krul_ctx 
+        s262:   {"ks":"D5","ps":{"1":["DEFENDER"],"3":["DEFENDER"]}} 
+        target: undefined
+      out.0.summary.0.drv.16.line 
+        s262:   "deciding ruling DEFENDER premise 3: no ruling card; answer with the five-line card (RULING, CLAIM, NAMED BY, RULE, APPLIED)" 
+        target: "\"ANSWER CHECK: Luke 1:32 -- [DR3] -- MEANS: \"The throne of his father David is given with the covenant Son title in Luke 1:32.\" -- ANSWER: \"Davidic descent is preserved through his maternal birth\" -- MISSES -- the fact of Mary's house is not given by the rows.\" -- this contested grade line na
+      out.0.summary.0.drv.17.rule 
+        s262:   "K-RUL" 
+        target: "K-CMTL"
+      out.0.summary.0.drv.17.link 
+        s262:   "keystone" 
+        target: "line 13"
+      out.0.summary.0.drv.17.ruling 
+        s262:   "keystone" 
+        target: undefined
+      out.0.summary.0.drv.17.krul_ctx 
+        s262:   {"ks":"D5","ps":{"1":["DEFENDER"],"3":["DEFENDER"]}} 
+        target: undefined
+      out.0.summary.0.drv.17.line 
+        s262:   "deciding ruling keystone: no ruling card; answer with the five-line card (RULING, CLAIM, NAMED BY, RULE, APPLIED)" 
+        target: "\"REFERENCE: Luke 1:34 -- [DR1] -- NOT CONFIRMED -- \"Mary's explicit absence of carnal knowledge of a man\" / \"Mary conceived when she said I know not a man\"; the MEANS adds a conception at the time of speaking. The premise is VOID in any case.\" -- this contested grade line names no commitment.
+      out.0.summary.0.drv.18.rule 
+        s262:   "K-UNX" 
+        target: "K-RUL"
+      out.0.summary.0.drv.18.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.drv.18.link 
+        s262:   "DEFENDER premise 1" 
+        target: "keystone"
+      out.0.summary.0.drv.18.premise 
+        s262:   1 
+        target: undefined
+      out.0.summary.0.drv.18.kinds 
+        s262:   ["L1","L3"] 
+        target: undefined
+      out.0.summary.0.drv.18.conc 
+        s262:   2 
+        target: undefined
+      out.0.summary.0.drv.18.why 
+        s262:   "counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L3 and the count names no layer the block lacks" 
+        target: undefined
+      out.0.summary.0.drv.18.line 
+        s262:   "DEFENDER premise 1: counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L3 and the count names no layer the block lacks. Name the missing layer in a STATEMENT for this item (\"[L1]\", \"[L2]\", \"[L3]\" or \"[L4]\", one the block does not exhibit); or, if the step takes for g 
+        target: "deciding ruling keystone: the RULE quote differs from your accepted line for Commitment 3 (\"A link that cannot agree with a pressed verse's shown meaning fails. I do not accept \"no verse states it\" as a ground, a\"); answer with the five-line card (RULING, CLAIM, NAMED BY, RULE, APPLIED)"
+      out.0.summary.0.drv.18.ruling 
+        s262:   undefined 
+        target: "keystone"
+      out.0.summary.0.drv.18.krul_ctx 
+        s262:   undefined 
+        target: {"ks":"D5","ps":{"1":["CHALLENGER"],"2":["CHALLENGER"]}}
+      out.0.summary.0.drv.19.rule 
+        s262:   "K-UNX" 
+        target: "K-RUL"
+      out.0.summary.0.drv.19.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.drv.19.link 
+        s262:   "DEFENDER premise 3" 
+        target: "D3 vs C3"
+      out.0.summary.0.drv.19.premise 
+        s262:   3 
+        target: undefined
+      out.0.summary.0.drv.19.kinds 
+        s262:   ["L1","L3"] 
+        target: undefined
+      out.0.summary.0.drv.19.conc 
+        s262:   2 
+        target: undefined
+      out.0.summary.0.drv.19.why 
+        s262:   "counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L3 and the count names no layer the block lacks" 
+        target: undefined
+      out.0.summary.0.drv.19.line 
+        s262:   "DEFENDER premise 3: counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L3 and the count names no layer the block lacks. Name the missing layer in a STATEMENT for this item (\"[L1]\", \"[L2]\", \"[L3]\" or \"[L4]\", one the block does not exhibit); or, if the step takes for g 
+        target: "deciding ruling D3 vs C3: the RULE quote differs from your accepted line for Commitment 3 (\"A link that cannot agree with a pressed verse's shown meaning fails. I do not accept \"no verse states it\" as a ground, a\"); answer with the five-line card (RULING, CLAIM, NAMED BY, RULE, APPLIED)"
+      out.0.summary.0.drv.19.ruling 
+        s262:   undefined 
+        target: "D3 vs C3"
+      out.0.summary.0.drv.19.krul_ctx 
+        s262:   undefined 
+        target: {"ks":"D5","ps":{"1":["CHALLENGER"],"2":["CHALLENGER"]}}
+      out.0.summary.0.drv.20 
+        s262:   undefined 
+        target: {"rule":"K-RUL","side":"JUDGE","link":"D4 vs C5","ruling":"D4 vs C5","krul_ctx":{"ks":"D5","ps":{"1":["CHALLENGER"],"2":["CHALLENGER"]}},"line":"deciding ruling D4 vs C5: the RULE quote differs from your accepted line for Commitment 3 (\"A link that cannot agree with a pressed verse's shown meaning 
+      out.0.summary.0.drv.21 
+        s262:   undefined 
+        target: {"rule":"K-RUL","side":"JUDGE","link":"D5 vs C4","ruling":"D5 vs C4","krul_ctx":{"ks":"D5","ps":{"1":["CHALLENGER"],"2":["CHALLENGER"]}},"line":"deciding ruling D5 vs C4: the RULE quote differs from your accepted line for Commitment 3 (\"A link that cannot agree with a pressed verse's shown meaning 
+      out.0.summary.0.drv.22 
+        s262:   undefined 
+        target: {"rule":"K-UNX","a":"ASSUMES","asm":"","side":"CHALLENGER","link":"CHALLENGER premise 2","premise":2,"kinds":["L1","L3"],"conc":2,"l1":"He shall be great, and shall be called the Son of the Highest: and the Lord God shall give unto him the throne of his father David:","l1ref":"Luke 1:32","press":"",
+      out.0.summary.0.ecg 
+        s262:   [] 
+        target: undefined
+      out.0.summary.0.substitute 
+        s262:   true 
+        target: false
+      out.0.summary.0.cure.0.rule 
+        s262:   "K-F" 
+        target: "K-G7"
+      out.0.summary.0.cure.0.side 
+        s262:   "BOTH" 
+        target: "DEFENDER"
+      out.0.summary.0.cure.0.link 
+        s262:   "D2 vs C1" 
+        target: "D3 vs C3"
+      out.0.summary.0.cure.0.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.summary.0.cure.0.why 
+        s262:   "no FORCED line for D2 vs C1, no RETRACTED line and no RESTATED line regrading it" 
+        target: "forced link: a FORCED line for D3 vs C3 (ruling 421); the premise is not counted (pkgKG7)"
+      out.0.summary.0.cure.1.rule 
+        s262:   "K-FC" 
+        target: "K-G7"
+      out.0.summary.0.cure.1.side 
+        s262:   "BOTH" 
+        target: "DEFENDER"
+      out.0.summary.0.cure.1.link 
+        s262:   "D2 vs C1" 
+        target: "D4 vs C5"
+      out.0.summary.0.cure.1.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.summary.0.cure.1.why 
+        s262:   "TRIAL rule (K-FC): no FORCED line for D2 vs C1 with CARRIED BY, no RETRACTED line and no RESTATED line regrading it" 
+        target: "forced link: a FORCED line for D4 vs C5 (ruling 421); the premise is not counted (pkgKG7)"
+      out.0.summary.0.cure.2.rule 
+        s262:   "K-R" 
+        target: "K-G7"
+      out.0.summary.0.cure.2.link 
+        s262:   "DEFENDER premise 1" 
+        target: "D5 vs C4"
+      out.0.summary.0.cure.2.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.summary.0.cure.2.why 
+        s262:   "no REFERENCE line for Galatians 4:4" 
+        target: "forced link: a FORCED line for D5 vs C4 (ruling 421); the premise is not counted (pkgKG7)"
+      out.0.summary.0.cure.3.link 
+        s262:   "DEFENDER premise 2" 
+        target: "DEFENDER premise 5"
+      out.0.summary.0.cure.3.why 
+        s262:   "no REFERENCE line for Luke 3:23" 
+        target: "no REFERENCE line for Luke 1:34"
+      out.0.summary.0.cure.4.rule 
+        s262:   "K-R" 
+        target: "K-CMT"
+      out.0.summary.0.cure.4.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.cure.4.link 
+        s262:   "DEFENDER premise 3" 
+        target: "contested grades without a commitment"
+      out.0.summary.0.cure.4.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.summary.0.cure.4.why 
+        s262:   "no REFERENCE line for Matthew 1:18" 
+        target: "the response names the commitment, or NOT A GRADE"
+      out.0.summary.0.cure.5.rule 
+        s262:   "K-R" 
+        target: "K-CMTL"
+      out.0.summary.0.cure.5.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.cure.5.link 
+        s262:   "DEFENDER premise 4" 
+        target: "line 1"
+      out.0.summary.0.cure.5.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.summary.0.cure.5.why 
+        s262:   "no REFERENCE line for Matthew 1:20" 
+        target: "the response names the commitment, or NOT A GRADE"
+      out.0.summary.0.cure.6.rule 
+        s262:   "K-R" 
+        target: "K-CMTL"
+      out.0.summary.0.cure.6.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.cure.6.link 
+        s262:   "DEFENDER premise 5" 
+        target: "line 2"
+      out.0.summary.0.cure.6.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.summary.0.cure.6.why 
+        s262:   "no REFERENCE line for Luke 1:34" 
+        target: "the response names the commitment, or NOT A GRADE"
+      out.0.summary.0.cure.7.rule 
+        s262:   "K-CMT" 
+        target: "K-CMTL"
+      out.0.summary.0.cure.7.link 
+        s262:   "contested grades without a commitment" 
+        target: "line 3"
+      out.0.summary.0.cure.8.link 
+        s262:   "line 1" 
+        target: "line 4"
+      out.0.summary.0.cure.9.link 
+        s262:   "line 2" 
+        target: "line 5"
+      out.0.summary.0.cure.10.link 
+        s262:   "line 3" 
+        target: "line 6"
+      out.0.summary.0.cure.11.link 
+        s262:   "line 4" 
+        target: "line 7"
+      out.0.summary.0.cure.12.link 
+        s262:   "line 5" 
+        target: "line 8"
+      out.0.summary.0.cure.13.link 
+        s262:   "line 6" 
+        target: "line 9"
+      out.0.summary.0.cure.14.link 
+        s262:   "line 7" 
+        target: "line 10"
+      out.0.summary.0.cure.15.rule 
+        s262:   "K-RUL" 
+        target: "K-CMTL"
+      out.0.summary.0.cure.15.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.cure.15.link 
+        s262:   "DEFENDER premise 1" 
+        target: "line 11"
+      out.0.summary.0.cure.15.why 
+        s262:   "a valid ruling card for DEFENDER premise 1" 
+        target: "the response names the commitment, or NOT A GRADE"
+      out.0.summary.0.cure.16.rule 
+        s262:   "K-RUL" 
+        target: "K-CMTL"
+      out.0.summary.0.cure.16.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.cure.16.link 
+        s262:   "DEFENDER premise 3" 
+        target: "line 12"
+      out.0.summary.0.cure.16.why 
+        s262:   "a valid ruling card for DEFENDER premise 3" 
+        target: "the response names the commitment, or NOT A GRADE"
+      out.0.summary.0.cure.17.rule 
+        s262:   "K-RUL" 
+        target: "K-CMTL"
+      out.0.summary.0.cure.17.link 
+        s262:   "keystone" 
+        target: "line 13"
+      out.0.summary.0.cure.17.why 
+        s262:   "a valid ruling card for keystone" 
+        target: "the response names the commitment, or NOT A GRADE"
+      out.0.summary.0.cure.18.rule 
+        s262:   "K-UNX" 
+        target: "K-RUL"
+      out.0.summary.0.cure.18.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.cure.18.link 
+        s262:   "DEFENDER premise 1" 
+        target: "keystone"
+      out.0.summary.0.cure.18.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.summary.0.cure.18.why 
+        s262:   "TRIAL rule (K-UNX): no STATEMENT for the item, and no CORRECTED COUNT below 2" 
+        target: "a valid ruling card for keystone"
+      out.0.summary.0.cure.19.rule 
+        s262:   "K-UNX" 
+        target: "K-RUL"
+      out.0.summary.0.cure.19.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.cure.19.link 
+        s262:   "DEFENDER premise 3" 
+        target: "D3 vs C3"
+      out.0.summary.0.cure.19.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.summary.0.cure.19.why 
+        s262:   "no written response" 
+        target: "a valid ruling card for D3 vs C3"
+      out.0.summary.0.cure.20 
+        s262:   undefined 
+        target: {"rule":"K-RUL","side":"JUDGE","link":"D4 vs C5","status":"CURED","kinds":[],"why":"a valid ruling card for D4 vs C5"}
+      out.0.summary.0.cure.21 
+        s262:   undefined 
+        target: {"rule":"K-RUL","side":"JUDGE","link":"D5 vs C4","status":"CURED","kinds":[],"why":"a valid ruling card for D5 vs C4"}
+      out.0.summary.0.cure.22 
+        s262:   undefined 
+        target: {"rule":"K-UNX","side":"CHALLENGER","link":"CHALLENGER premise 2","status":"CURED","kinds":[],"why":"TRIAL rule (K-UNX-A): CORRECTED COUNT 1 takes the premise out of the count"}
+      out.0.summary.0.alternate_of 
+        s262:   undefined 
+        target: "haiku"
+      out.0.panel_effective.1 
+        s262:   "haiku" 
+        target: "sol"
+      out.0.panel_effective.2 
+        s262:   "sol" 
+        target: "sonnet"
+      out.0.enforcer_log.284.cure_status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.enforcer_log.284.cure_reason 
+        s262:   "SEND-BACK CHANGE TO: D1 vs C2 (Acts 2:30): STANDS -- the challenger's answer rests on Mary's lineage, which no quoted row gives, and the defender's answer fits the verse -- GROUND: [L1] Acts 2:30 'that of the fruit of his loins, according to the flesh' | [L2] karpos (G2590, fruit) | [L3] 2 Samuel 7 
+        target: "SEND-BACK CHANGE TO: D1 vs C2 (Acts 2:30): STANDS -- the challenger's answer rests on Mary's lineage, which no quoted row gives, and the defender's answer fits the verse -- GROUND: [L1] Acts 2:30 'that of the fruit of his loins, according to the flesh' | [L2] karpos (G2590, fruit) | [L3] 2 Samuel 7
+      out.0.alternates_seated.0 
+        s262:   undefined 
+        target: {"removed_seat":"haiku","alternate_seat":"sonnet","alternate_api_model":"anthropic/claude-sonnet-5.5"}
+      out.0.drv_removed.0 
+        s262:   undefined 
+        target: {"removed_rules":["K-F (cure) x1"],"removed_rules_total":1,"removed_rules_match":false,"seat":"haiku","api_model":"anthropic/claude-haiku-5.5","verdict_tag":"BROKEN","defense_standing":"COLLAPSED","challenge_standing":"SELF-SUPPORTED","drv_uncured":2,"verdict_raw":"{\"verdict_tag\":\"BROKEN\",\"defe
+      out.0.alternates_tried.1.result 
+        s262:   "NOT SEATED" 
+        target: "SEATED"
+      out.0.alternates_tried.1.why 
+        s262:   "unseated after its enforcer send-back and gate: 1 uncured item(s)" 
+        target: undefined
+      out.0.alternates_tried.1.verdict_raw 
+        s262:   "{\"verdict_tag\":\"BROKEN\",\"defense_standing\":\"PROP-DEPENDENT\",\"challenge_standing\":\"PROP-DEPENDENT\",\"conceded_links\":2,\"challenger_conceded_links\":1,\"counted_premises_defender\":[2,3],\"counted_premises_challenger\":[1,2],\"reasoning\":\"BROKEN. D3, D4 and D5 each fail against presse 
+        target: undefined
+      out.0.alt_apply.0.unseated 
+        s262:   true 
+        target: false
+      out.0.alt_apply.0.why 
+        s262:   "unseated after its enforcer send-back and gate: 1 uncured item(s)" 
+        target: undefined
+      out.0.alt_apply.0.uncured 
+        s262:   [] 
+        target: undefined
+CHANGED Second Alternate?#0                x 314 | s262 reproduces stored true | reads field false  
+      out.0.a2r.seats.0 
+        s262:   "haiku" 
+        target: undefined
+      out.0.a2r.why 
+        s262:   "no pool model is left after round 1 (pool: haiku, sonnet; tried: anthropic/claude-sonnet-5.5)" 
+        target: "every tried alternate is seated"
+      out.0.__a379.R.bodies.0 
+        s262:   "{\"payload\":{\"debate_id\":\"14bac268-52c2-41a2-8ee8-465184af0792\",\"judge_seat\":\"haiku\",\"judge_api_model\":\"anthropic/claude-haiku-5.5\",\"verdict_raw\":\"{\\\"verdict_tag\\\":\\\"BROKEN\\\",\\\"defense_standing\\\":\\\"COLLAPSED\\\",\\\"challenge_standing\\\":\\\"SELF-SUPPORTED\\\",\\\"con 
+        target: "{\"payload\":{\"debate_id\":\"14bac268-52c2-41a2-8ee8-465184af0792\",\"judge_seat\":\"sonnet\",\"judge_api_model\":\"anthropic/claude-sonnet-5.5\",\"verdict_raw\":\"{\\\"verdict_tag\\\":\\\"BROKEN\\\",\\\"defense_standing\\\":\\\"PROP-DEPENDENT\\\",\\\"challenge_standing\\\":\\\"PROP-DEPENDENT\\\",
+      out.0.__a379.R.summary.0.seat 
+        s262:   "haiku" 
+        target: "sonnet"
+      out.0.__a379.R.summary.0.node 
+        s262:   "Panel Reserve openrouter" 
+        target: "Alternate Call openrouter"
+      out.0.__a379.R.summary.0.api_model 
+        s262:   "anthropic/claude-haiku-5.5" 
+        target: "anthropic/claude-sonnet-5.5"
+      out.0.__a379.R.summary.0.raw_chars 
+        s262:   4505 
+        target: 19284
+      out.0.__a379.R.summary.0.drv.0.rule 
+        s262:   "K-F" 
+        target: "K-G7"
+      out.0.__a379.R.summary.0.drv.0.side 
+        s262:   "BOTH" 
+        target: "DEFENDER"
+      out.0.__a379.R.summary.0.drv.0.link 
+        s262:   "D2 vs C1" 
+        target: "D3 vs C3"
+      out.0.__a379.R.summary.0.drv.0.line 
+        s262:   "FORCED: D2 vs C1 -- MEANS [DR1]: \"The seed according to the flesh came forth through a woman, made under the law.\" -- ANSWER [CR2]: \"made of a woman names the mother and the mortality idiom said of men with named fathers\" -- FAILS: \"mortality idiom said of men with named fathers\" -- GROUND: [ 
+        target: "D3 vs C3 (Luke 3:23): DEFENDER LINK BROKEN -- the named man is not shown to be the father of that flesh; the answer shows supposing as mistaken -- GROUND: [L1] Luke 3:23 'being (as was supposed) the son of Joseph' | [L2] nomizo (G3543, to deem, regard, suppose) | [L3] Luke 2:44 'But they, supposing
+      out.0.__a379.R.summary.0.drv.0.why 
+        s262:   "the MEANS quotation is not in [DR1]" 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.0.premise 
+        s262:   undefined 
+        target: 2
+      out.0.__a379.R.summary.0.drv.0.conc 
+        s262:   undefined 
+        target: 0
+      out.0.__a379.R.summary.0.drv.0.st 
+        s262:   undefined 
+        target: "PROP-DEPENDENT"
+      out.0.__a379.R.summary.0.drv.0.L 
+        s262:   undefined 
+        target: 5
+      out.0.__a379.R.summary.0.drv.1.rule 
+        s262:   "K-FC" 
+        target: "K-G7"
+      out.0.__a379.R.summary.0.drv.1.side 
+        s262:   "BOTH" 
+        target: "DEFENDER"
+      out.0.__a379.R.summary.0.drv.1.link 
+        s262:   "D2 vs C1" 
+        target: "D4 vs C5"
+      out.0.__a379.R.summary.0.drv.1.ref 
+        s262:   null 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.1.means 
+        s262:   "The seed according to the flesh came forth through a woman, made under the law." 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.1.why 
+        s262:   "the FORCED line has no CARRIED BY: \"<the words of the pressed verse that state its MEANS>\" (W3 B7)" 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.1.line 
+        s262:   "FORCED line for D2 vs C1: the FORCED line has no CARRIED BY: \"<the words of the pressed verse that state its MEANS>\" (W3 B7). Write the FORCED line again with CARRIED BY: \"<the words of the pressed verse that state the MEANS sentence, quoted from the KJV>\" between FAILS and GROUND, or RETRACTED 
+        target: "D4 vs C5 (Matthew 1:18): DEFENDER LINK BROKEN -- no row gives a union before the taking; the answer's own 'dates the finding' puts the conception before the coming together -- GROUND: [L1] Matthew 1:18 'before they came together, she was found with child of the Holy Ghost' | [L2] synerchomai (G4905
+      out.0.__a379.R.summary.0.drv.1.premise 
+        s262:   undefined 
+        target: 3
+      out.0.__a379.R.summary.0.drv.1.conc 
+        s262:   undefined 
+        target: 0
+      out.0.__a379.R.summary.0.drv.1.st 
+        s262:   undefined 
+        target: "PROP-DEPENDENT"
+      out.0.__a379.R.summary.0.drv.1.L 
+        s262:   undefined 
+        target: 5
+      out.0.__a379.R.summary.0.drv.2.rule 
+        s262:   "K-R" 
+        target: "K-G7"
+      out.0.__a379.R.summary.0.drv.2.link 
+        s262:   "DEFENDER premise 1" 
+        target: "D5 vs C4"
+      out.0.__a379.R.summary.0.drv.2.key 
+        s262:   "Galatians 4:4" 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.2.premise 
+        s262:   1 
+        target: 5
+      out.0.__a379.R.summary.0.drv.2.line 
+        s262:   "premise 1: Galatians 4:4 is PROVEN BY REFERENCE (PROVEN IN [DR1]) and has no REFERENCE line" 
+        target: "D5 vs C4 (Matthew 1:20): DEFENDER LINK BROKEN -- the begetting is attributed to the Holy Ghost and the answer shows no fit for Joseph as begetter -- GROUND: [L1] Matthew 1:20 'for that which is conceived in her is of the Holy Ghost' | [L2] gennao (G1080, to procreate, properly of the father) | [L3]
+      out.0.__a379.R.summary.0.drv.2.means 
+        s262:   "The seed according to the flesh came forth through a woman, made under the law." 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.2.round 
+        s262:   "DR1" 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.2.why 
+        s262:   "no REFERENCE line" 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.2.conc 
+        s262:   undefined 
+        target: 0
+      out.0.__a379.R.summary.0.drv.2.st 
+        s262:   undefined 
+        target: "PROP-DEPENDENT"
+      out.0.__a379.R.summary.0.drv.2.L 
+        s262:   undefined 
+        target: 5
+      out.0.__a379.R.summary.0.drv.3.link 
+        s262:   "DEFENDER premise 2" 
+        target: "DEFENDER premise 5"
+      out.0.__a379.R.summary.0.drv.3.key 
+        s262:   "Luke 3:23" 
+        target: "Luke 1:34"
+      out.0.__a379.R.summary.0.drv.3.premise 
+        s262:   2 
+        target: 5
+      out.0.__a379.R.summary.0.drv.3.line 
+        s262:   "premise 2: Luke 3:23 is PROVEN BY REFERENCE (PROVEN IN [DR1]) and has no REFERENCE line" 
+        target: "REFERENCE: Luke 1:34 -- [DR1] -- NOT CONFIRMED -- \"Mary's explicit absence of carnal knowledge of a man\" / \"Mary conceived when she said I know not a man\"; the MEANS adds a conception at the time of speaking. The premise is VOID in any case."
+      out.0.__a379.R.summary.0.drv.3.means 
+        s262:   "Joseph's paternal relation is defined by scripture as supposed rather than biological." 
+        target: "Mary conceived when she said I know not a man."
+      out.0.__a379.R.summary.0.drv.3.why 
+        s262:   "no REFERENCE line" 
+        target: "the REFERENCE line is not in the form REFERENCE: <press> -- [<round>] -- CONFIRMED | NOT CONFIRMED -- \"<block meaning>\" / \"<MEANS sentence>\""
+      out.0.__a379.R.summary.0.drv.4.rule 
+        s262:   "K-R" 
+        target: "K-CMT"
+      out.0.__a379.R.summary.0.drv.4.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.__a379.R.summary.0.drv.4.link 
+        s262:   "DEFENDER premise 3" 
+        target: "contested grades without a commitment"
+      out.0.__a379.R.summary.0.drv.4.key 
+        s262:   "Matthew 1:18" 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.4.premise 
+        s262:   3 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.4.line 
+        s262:   "premise 3: Matthew 1:18 is PROVEN BY REFERENCE (PROVEN IN [DR1]) and has no REFERENCE line" 
+        target: "13 contested grade lines name no commitment (answer each with its Commitment N, or NOT A GRADE); first: \"BROKEN. D3, D4 and D5 each fail against pressed witnesses and the defender's answers show no fit. [L1] Matthew 1:18 'before they came together, she was found wi\"; \"CONCEDED LINKS: 0 -- Premis
+      out.0.__a379.R.summary.0.drv.4.means 
+        s262:   "The conception took place before the husband and wife came together." 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.4.round 
+        s262:   "DR1" 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.4.why 
+        s262:   "no REFERENCE line" 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.5.rule 
+        s262:   "K-R" 
+        target: "K-CMTL"
+      out.0.__a379.R.summary.0.drv.5.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.__a379.R.summary.0.drv.5.link 
+        s262:   "DEFENDER premise 4" 
+        target: "line 1"
+      out.0.__a379.R.summary.0.drv.5.key 
+        s262:   "Matthew 1:20" 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.5.premise 
+        s262:   4 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.5.line 
+        s262:   "premise 4: Matthew 1:20 is PROVEN BY REFERENCE (PROVEN IN [DR1]) and has no REFERENCE line" 
+        target: "\"BROKEN. D3, D4 and D5 each fail against pressed witnesses and the defender's answers show no fit. [L1] Matthew 1:18 'before they came together, she was found with child of the Holy Ghost' and Matthew 1:20 'that which is conceived in her is of the Holy Ghost' [conceived: Gr. begotten] cannot take 
+      out.0.__a379.R.summary.0.drv.5.means 
+        s262:   "The procreation in Mary's womb is directly attributed to the Holy Ghost." 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.5.round 
+        s262:   "DR1" 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.5.why 
+        s262:   "no REFERENCE line" 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.6.rule 
+        s262:   "K-R" 
+        target: "K-CMTL"
+      out.0.__a379.R.summary.0.drv.6.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.__a379.R.summary.0.drv.6.link 
+        s262:   "DEFENDER premise 5" 
+        target: "line 2"
+      out.0.__a379.R.summary.0.drv.6.key 
+        s262:   "Luke 1:34" 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.6.premise 
+        s262:   5 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.6.line 
+        s262:   "premise 5: Luke 1:34 is PROVEN BY REFERENCE (PROVEN IN [DR1]) and has no REFERENCE line" 
+        target: "\"CONCEDED LINKS: 0 -- Premise 1 (LINK 1): not counted. Galatians 4:4 and Luke 1:32 were answered in [CR2] and [CR4], and the answers MEET. Premise 2 (LINK 3): not counted. Luke 3:23 and Luke 2:49 were named in answers, and the Luke 3:23 answer MISSES, which is graded at D3 and not counted. Premise
+      out.0.__a379.R.summary.0.drv.6.means 
+        s262:   "Mary conceived when she said I know not a man." 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.6.round 
+        s262:   "DR1" 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.6.why 
+        s262:   "no REFERENCE line" 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.7.rule 
+        s262:   "K-CMT" 
+        target: "K-CMTL"
+      out.0.__a379.R.summary.0.drv.7.link 
+        s262:   "contested grades without a commitment" 
+        target: "line 3"
+      out.0.__a379.R.summary.0.drv.7.line 
+        s262:   "7 contested grade lines name no commitment (answer each with its Commitment N, or NOT A GRADE); first: \"BROKEN -- The defender's own declared chain carries at least one listed link refuted from the text, and the defender's keystone link is not shown.\"; \"KEYSTONE: D5 -- BROKEN -- Link D5 (Christ  
+        target: "\"D3 vs C3 (Luke 3:23): DEFENDER LINK BROKEN -- the named man is not shown to be the father of that flesh; the answer shows supposing as mistaken -- GROUND: [L1] Luke 3:23 'being (as was supposed) the son of Joseph' | [L2] nomizo (G3543, to deem, regard, suppose) | [L3] Luke 2:44 'But they, supposi
+      out.0.__a379.R.summary.0.drv.8.link 
+        s262:   "line 1" 
+        target: "line 4"
+      out.0.__a379.R.summary.0.drv.8.line 
+        s262:   "\"BROKEN -- The defender's own declared chain carries at least one listed link refuted from the text, and the defender's keystone link is not shown.\" -- this contested grade line names no commitment. TRIAL rule: answer it with RESPONSE: K-CMTL line 1 | (Commitment N), the commitment the grade appl 
+        target: "\"D4 vs C5 (Matthew 1:18): DEFENDER LINK BROKEN -- no row gives a union before the taking; the answer's own 'dates the finding' puts the conception before the coming together -- GROUND: [L1] Matthew 1:18 'before they came together, she was found with child of the Holy Ghost' | [L2] synerchomai (G49
+      out.0.__a379.R.summary.0.drv.9.link 
+        s262:   "line 2" 
+        target: "line 5"
+      out.0.__a379.R.summary.0.drv.9.line 
+        s262:   "\"KEYSTONE: D5 -- BROKEN -- Link D5 (Christ had a biological father, Joseph) is graded DEFENDER LINK BROKEN at the collision with C5 and C3 on the words of Matthew 1:20 and Luke 1:35, and the defender's own answer to the pressed Luke 1:34 does not meet its press.\" -- this contested grade line name 
+        target: "\"D5 vs C4 (Matthew 1:20): DEFENDER LINK BROKEN -- the begetting is attributed to the Holy Ghost and the answer shows no fit for Joseph as begetter -- GROUND: [L1] Matthew 1:20 'for that which is conceived in her is of the Holy Ghost' | [L2] gennao (G1080, to procreate, properly of the father) | [L
+      out.0.__a379.R.summary.0.drv.10.link 
+        s262:   "line 3" 
+        target: "line 6"
+      out.0.__a379.R.summary.0.drv.10.line 
+        s262:   "\"D2: DEFENDER LINK BROKEN vs C1 (Romans 1:3): the link that the seed of David according to the flesh requires a male begetter is not shown by Galatians 4:4 \"made of a woman\"; the defender's answer does not show the fit. GROUND: [L1] Galatians 4:4 \"made of a woman, made under the law\" | [L2] gi 
+        target: "\"ANSWER CHECK: Luke 3:23 -- [CR4] -- MEANS: \"Joseph's paternal relation is defined by scripture as supposed rather than biological.\" -- ANSWER: \"shows supposing mistaken. It stands with Luke 2:48 thy father.\" -- MISSES -- the fact that Joseph is the begetter is not given by the rows; Luke 2:44
+      out.0.__a379.R.summary.0.drv.11.link 
+        s262:   "line 4" 
+        target: "line 7"
+      out.0.__a379.R.summary.0.drv.11.line 
+        s262:   "\"FORCED: D2 vs C1 -- MEANS [DR1]: \"The seed according to the flesh came forth through a woman, made under the law.\" -- ANSWER [CR2]: \"made of a woman names the mother and the mortality idiom said of men with named fathers\" -- FAILS: \"mortality idiom said of men with named fathers\" -- GROUND: 
+        target: "\"ANSWER CHECK: Matthew 1:18 -- [CR4] -- MEANS: \"The conception took place before the husband and wife came together.\" -- ANSWER: \"The coming together is the taking.\" -- MISSES -- the fact of a union between espousal and taking is not given by the rows; Matthew 1:24 puts the taking after the fi
+      out.0.__a379.R.summary.0.drv.12.link 
+        s262:   "line 5" 
+        target: "line 8"
+      out.0.__a379.R.summary.0.drv.12.line 
+        s262:   "\"D3: DEFENDER LINK BROKEN vs C3 (Luke 2:48, Luke 3:23): the defender's naming of Joseph as father rests on common speech; Luke 3:23 \"(as was supposed) the son of Joseph\" marks the reckoning. GROUND: [L1] Luke 3:23 \"(as was supposed) the son of Joseph\" | [L2] nomizo (G3543, to deem or regard, s 
+        target: "\"ANSWER CHECK: Matthew 1:19 -- [CR2] -- MEANS: \"Joseph sought to put Mary away because he was not the father of the child in her womb.\" -- ANSWER: \"his mind to put away states intent from two angles, just and sparing scorn\" -- MISSES -- Mark 7:7 and 7:8 are about doctrines of men and washing o
+      out.0.__a379.R.summary.0.drv.13.link 
+        s262:   "line 6" 
+        target: "line 9"
+      out.0.__a379.R.summary.0.drv.13.line 
+        s262:   "\"D4: DEFENDER LINK BROKEN vs C5 (Luke 1:34): the claim that Joseph knew Mary in the espousal is not shown against Matthew 1:18 \"before they came together\"; the answer rests on Genesis 4:1 without showing the coming together is cohabitation. GROUND: [L1] Matthew 1:18 \"before they came together\" 
+        target: "\"ANSWER CHECK: Luke 1:35 -- [CR4] -- MEANS: \"The child born of Mary is generated by the Holy Ghost and power of the Highest.\" -- ANSWER: \"Both state anointing and presence, and shall be called states title.\" -- MISSES -- Acts 1:8 and Matthew 17:5 concern others, and the verse's 'therefore also
+      out.0.__a379.R.summary.0.drv.14.link 
+        s262:   "line 7" 
+        target: "line 10"
+      out.0.__a379.R.summary.0.drv.14.line 
+        s262:   "\"D5: DEFENDER LINK BROKEN vs C5 (Luke 1:34, Isaiah 7:14): the defender's conclusion that Christ had a biological father is not shown against Mary's \"I know not a man\" and the virgin sign. GROUND: [L1] Luke 1:34 \"seeing I know not a man\" | [L2] ginosko (G1097, to know).\" -- this contested grad 
+        target: "\"ANSWER CHECK: Galatians 4:4 -- [DR3] -- MEANS: \"Made of a woman is said of men with named fathers in Job 14:1.\" -- ANSWER: \"the text specifies he was \\\"made of a woman\\\" without coupling a man\" -- MISSES -- the fact that ginomai excludes a father is not given by the rows, and Romans 1:3 u
+      out.0.__a379.R.summary.0.drv.15.rule 
+        s262:   "K-RUL" 
+        target: "K-CMTL"
+      out.0.__a379.R.summary.0.drv.15.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.__a379.R.summary.0.drv.15.link 
+        s262:   "DEFENDER premise 1" 
+        target: "line 11"
+      out.0.__a379.R.summary.0.drv.15.ruling 
+        s262:   "DEFENDER premise 1" 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.15.krul_ctx 
+        s262:   {"ks":"D5","ps":{"1":["DEFENDER"],"3":["DEFENDER"]}} 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.15.line 
+        s262:   "deciding ruling DEFENDER premise 1: no ruling card; answer with the five-line card (RULING, CLAIM, NAMED BY, RULE, APPLIED)" 
+        target: "\"ANSWER CHECK: Romans 1:3 -- [DR3] -- MEANS: \"Seed according to the flesh is out of bowels and loins in 2 Samuel 7:12.\" -- ANSWER: \"Mary herself is of David's house and lineage\" -- MISSES -- the fact of Mary's house is not given by the rows.\" -- this contested grade line names no commitment. 
+      out.0.__a379.R.summary.0.drv.16.rule 
+        s262:   "K-RUL" 
+        target: "K-CMTL"
+      out.0.__a379.R.summary.0.drv.16.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.__a379.R.summary.0.drv.16.link 
+        s262:   "DEFENDER premise 3" 
+        target: "line 12"
+      out.0.__a379.R.summary.0.drv.16.ruling 
+        s262:   "DEFENDER premise 3" 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.16.krul_ctx 
+        s262:   {"ks":"D5","ps":{"1":["DEFENDER"],"3":["DEFENDER"]}} 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.16.line 
+        s262:   "deciding ruling DEFENDER premise 3: no ruling card; answer with the five-line card (RULING, CLAIM, NAMED BY, RULE, APPLIED)" 
+        target: "\"ANSWER CHECK: Luke 1:32 -- [DR3] -- MEANS: \"The throne of his father David is given with the covenant Son title in Luke 1:32.\" -- ANSWER: \"Davidic descent is preserved through his maternal birth\" -- MISSES -- the fact of Mary's house is not given by the rows.\" -- this contested grade line na
+      out.0.__a379.R.summary.0.drv.17.rule 
+        s262:   "K-RUL" 
+        target: "K-CMTL"
+      out.0.__a379.R.summary.0.drv.17.link 
+        s262:   "keystone" 
+        target: "line 13"
+      out.0.__a379.R.summary.0.drv.17.ruling 
+        s262:   "keystone" 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.17.krul_ctx 
+        s262:   {"ks":"D5","ps":{"1":["DEFENDER"],"3":["DEFENDER"]}} 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.17.line 
+        s262:   "deciding ruling keystone: no ruling card; answer with the five-line card (RULING, CLAIM, NAMED BY, RULE, APPLIED)" 
+        target: "\"REFERENCE: Luke 1:34 -- [DR1] -- NOT CONFIRMED -- \"Mary's explicit absence of carnal knowledge of a man\" / \"Mary conceived when she said I know not a man\"; the MEANS adds a conception at the time of speaking. The premise is VOID in any case.\" -- this contested grade line names no commitment.
+      out.0.__a379.R.summary.0.drv.18.rule 
+        s262:   "K-UNX" 
+        target: "K-RUL"
+      out.0.__a379.R.summary.0.drv.18.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.__a379.R.summary.0.drv.18.link 
+        s262:   "DEFENDER premise 1" 
+        target: "keystone"
+      out.0.__a379.R.summary.0.drv.18.premise 
+        s262:   1 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.18.kinds 
+        s262:   ["L1","L3"] 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.18.conc 
+        s262:   2 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.18.why 
+        s262:   "counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L3 and the count names no layer the block lacks" 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.18.line 
+        s262:   "DEFENDER premise 1: counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L3 and the count names no layer the block lacks. Name the missing layer in a STATEMENT for this item (\"[L1]\", \"[L2]\", \"[L3]\" or \"[L4]\", one the block does not exhibit); or, if the step takes for g 
+        target: "deciding ruling keystone: the RULE quote differs from your accepted line for Commitment 3 (\"A link that cannot agree with a pressed verse's shown meaning fails. I do not accept \"no verse states it\" as a ground, a\"); answer with the five-line card (RULING, CLAIM, NAMED BY, RULE, APPLIED)"
+      out.0.__a379.R.summary.0.drv.18.ruling 
+        s262:   undefined 
+        target: "keystone"
+      out.0.__a379.R.summary.0.drv.18.krul_ctx 
+        s262:   undefined 
+        target: {"ks":"D5","ps":{"1":["CHALLENGER"],"2":["CHALLENGER"]}}
+      out.0.__a379.R.summary.0.drv.19.rule 
+        s262:   "K-UNX" 
+        target: "K-RUL"
+      out.0.__a379.R.summary.0.drv.19.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.__a379.R.summary.0.drv.19.link 
+        s262:   "DEFENDER premise 3" 
+        target: "D3 vs C3"
+      out.0.__a379.R.summary.0.drv.19.premise 
+        s262:   3 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.19.kinds 
+        s262:   ["L1","L3"] 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.19.conc 
+        s262:   2 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.19.why 
+        s262:   "counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L3 and the count names no layer the block lacks" 
+        target: undefined
+      out.0.__a379.R.summary.0.drv.19.line 
+        s262:   "DEFENDER premise 3: counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L3 and the count names no layer the block lacks. Name the missing layer in a STATEMENT for this item (\"[L1]\", \"[L2]\", \"[L3]\" or \"[L4]\", one the block does not exhibit); or, if the step takes for g 
+        target: "deciding ruling D3 vs C3: the RULE quote differs from your accepted line for Commitment 3 (\"A link that cannot agree with a pressed verse's shown meaning fails. I do not accept \"no verse states it\" as a ground, a\"); answer with the five-line card (RULING, CLAIM, NAMED BY, RULE, APPLIED)"
+      out.0.__a379.R.summary.0.drv.19.ruling 
+        s262:   undefined 
+        target: "D3 vs C3"
+      out.0.__a379.R.summary.0.drv.19.krul_ctx 
+        s262:   undefined 
+        target: {"ks":"D5","ps":{"1":["CHALLENGER"],"2":["CHALLENGER"]}}
+      out.0.__a379.R.summary.0.drv.20 
+        s262:   undefined 
+        target: {"rule":"K-RUL","side":"JUDGE","link":"D4 vs C5","ruling":"D4 vs C5","krul_ctx":{"ks":"D5","ps":{"1":["CHALLENGER"],"2":["CHALLENGER"]}},"line":"deciding ruling D4 vs C5: the RULE quote differs from your accepted line for Commitment 3 (\"A link that cannot agree with a pressed verse's shown meaning 
+      out.0.__a379.R.summary.0.drv.21 
+        s262:   undefined 
+        target: {"rule":"K-RUL","side":"JUDGE","link":"D5 vs C4","ruling":"D5 vs C4","krul_ctx":{"ks":"D5","ps":{"1":["CHALLENGER"],"2":["CHALLENGER"]}},"line":"deciding ruling D5 vs C4: the RULE quote differs from your accepted line for Commitment 3 (\"A link that cannot agree with a pressed verse's shown meaning 
+      out.0.__a379.R.summary.0.drv.22 
+        s262:   undefined 
+        target: {"rule":"K-UNX","a":"ASSUMES","asm":"","side":"CHALLENGER","link":"CHALLENGER premise 2","premise":2,"kinds":["L1","L3"],"conc":2,"l1":"He shall be great, and shall be called the Son of the Highest: and the Lord God shall give unto him the throne of his father David:","l1ref":"Luke 1:32","press":"",
+      out.0.__a379.R.summary.0.ecg 
+        s262:   [] 
+        target: undefined
+      out.0.__a379.R.summary.0.substitute 
+        s262:   true 
+        target: false
+      out.0.__a379.R.summary.0.cure.0.rule 
+        s262:   "K-F" 
+        target: "K-G7"
+      out.0.__a379.R.summary.0.cure.0.side 
+        s262:   "BOTH" 
+        target: "DEFENDER"
+      out.0.__a379.R.summary.0.cure.0.link 
+        s262:   "D2 vs C1" 
+        target: "D3 vs C3"
+      out.0.__a379.R.summary.0.cure.0.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.__a379.R.summary.0.cure.0.why 
+        s262:   "no FORCED line for D2 vs C1, no RETRACTED line and no RESTATED line regrading it" 
+        target: "forced link: a FORCED line for D3 vs C3 (ruling 421); the premise is not counted (pkgKG7)"
+      out.0.__a379.R.summary.0.cure.1.rule 
+        s262:   "K-FC" 
+        target: "K-G7"
+      out.0.__a379.R.summary.0.cure.1.side 
+        s262:   "BOTH" 
+        target: "DEFENDER"
+      out.0.__a379.R.summary.0.cure.1.link 
+        s262:   "D2 vs C1" 
+        target: "D4 vs C5"
+      out.0.__a379.R.summary.0.cure.1.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.__a379.R.summary.0.cure.1.why 
+        s262:   "TRIAL rule (K-FC): no FORCED line for D2 vs C1 with CARRIED BY, no RETRACTED line and no RESTATED line regrading it" 
+        target: "forced link: a FORCED line for D4 vs C5 (ruling 421); the premise is not counted (pkgKG7)"
+      out.0.__a379.R.summary.0.cure.2.rule 
+        s262:   "K-R" 
+        target: "K-G7"
+      out.0.__a379.R.summary.0.cure.2.link 
+        s262:   "DEFENDER premise 1" 
+        target: "D5 vs C4"
+      out.0.__a379.R.summary.0.cure.2.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.__a379.R.summary.0.cure.2.why 
+        s262:   "no REFERENCE line for Galatians 4:4" 
+        target: "forced link: a FORCED line for D5 vs C4 (ruling 421); the premise is not counted (pkgKG7)"
+      out.0.__a379.R.summary.0.cure.3.link 
+        s262:   "DEFENDER premise 2" 
+        target: "DEFENDER premise 5"
+      out.0.__a379.R.summary.0.cure.3.why 
+        s262:   "no REFERENCE line for Luke 3:23" 
+        target: "no REFERENCE line for Luke 1:34"
+      out.0.__a379.R.summary.0.cure.4.rule 
+        s262:   "K-R" 
+        target: "K-CMT"
+      out.0.__a379.R.summary.0.cure.4.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.__a379.R.summary.0.cure.4.link 
+        s262:   "DEFENDER premise 3" 
+        target: "contested grades without a commitment"
+      out.0.__a379.R.summary.0.cure.4.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.__a379.R.summary.0.cure.4.why 
+        s262:   "no REFERENCE line for Matthew 1:18" 
+        target: "the response names the commitment, or NOT A GRADE"
+      out.0.__a379.R.summary.0.cure.5.rule 
+        s262:   "K-R" 
+        target: "K-CMTL"
+      out.0.__a379.R.summary.0.cure.5.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.__a379.R.summary.0.cure.5.link 
+        s262:   "DEFENDER premise 4" 
+        target: "line 1"
+      out.0.__a379.R.summary.0.cure.5.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.__a379.R.summary.0.cure.5.why 
+        s262:   "no REFERENCE line for Matthew 1:20" 
+        target: "the response names the commitment, or NOT A GRADE"
+      out.0.__a379.R.summary.0.cure.6.rule 
+        s262:   "K-R" 
+        target: "K-CMTL"
+      out.0.__a379.R.summary.0.cure.6.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.__a379.R.summary.0.cure.6.link 
+        s262:   "DEFENDER premise 5" 
+        target: "line 2"
+      out.0.__a379.R.summary.0.cure.6.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.__a379.R.summary.0.cure.6.why 
+        s262:   "no REFERENCE line for Luke 1:34" 
+        target: "the response names the commitment, or NOT A GRADE"
+      out.0.__a379.R.summary.0.cure.7.rule 
+        s262:   "K-CMT" 
+        target: "K-CMTL"
+      out.0.__a379.R.summary.0.cure.7.link 
+        s262:   "contested grades without a commitment" 
+        target: "line 3"
+      out.0.__a379.R.summary.0.cure.8.link 
+        s262:   "line 1" 
+        target: "line 4"
+      out.0.__a379.R.summary.0.cure.9.link 
+        s262:   "line 2" 
+        target: "line 5"
+      out.0.__a379.R.summary.0.cure.10.link 
+        s262:   "line 3" 
+        target: "line 6"
+      out.0.__a379.R.summary.0.cure.11.link 
+        s262:   "line 4" 
+        target: "line 7"
+      out.0.__a379.R.summary.0.cure.12.link 
+        s262:   "line 5" 
+        target: "line 8"
+      out.0.__a379.R.summary.0.cure.13.link 
+        s262:   "line 6" 
+        target: "line 9"
+      out.0.__a379.R.summary.0.cure.14.link 
+        s262:   "line 7" 
+        target: "line 10"
+      out.0.__a379.R.summary.0.cure.15.rule 
+        s262:   "K-RUL" 
+        target: "K-CMTL"
+      out.0.__a379.R.summary.0.cure.15.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.__a379.R.summary.0.cure.15.link 
+        s262:   "DEFENDER premise 1" 
+        target: "line 11"
+      out.0.__a379.R.summary.0.cure.15.why 
+        s262:   "a valid ruling card for DEFENDER premise 1" 
+        target: "the response names the commitment, or NOT A GRADE"
+      out.0.__a379.R.summary.0.cure.16.rule 
+        s262:   "K-RUL" 
+        target: "K-CMTL"
+      out.0.__a379.R.summary.0.cure.16.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.__a379.R.summary.0.cure.16.link 
+        s262:   "DEFENDER premise 3" 
+        target: "line 12"
+      out.0.__a379.R.summary.0.cure.16.why 
+        s262:   "a valid ruling card for DEFENDER premise 3" 
+        target: "the response names the commitment, or NOT A GRADE"
+      out.0.__a379.R.summary.0.cure.17.rule 
+        s262:   "K-RUL" 
+        target: "K-CMTL"
+      out.0.__a379.R.summary.0.cure.17.link 
+        s262:   "keystone" 
+        target: "line 13"
+      out.0.__a379.R.summary.0.cure.17.why 
+        s262:   "a valid ruling card for keystone" 
+        target: "the response names the commitment, or NOT A GRADE"
+      out.0.__a379.R.summary.0.cure.18.rule 
+        s262:   "K-UNX" 
+        target: "K-RUL"
+      out.0.__a379.R.summary.0.cure.18.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.__a379.R.summary.0.cure.18.link 
+        s262:   "DEFENDER premise 1" 
+        target: "keystone"
+      out.0.__a379.R.summary.0.cure.18.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.__a379.R.summary.0.cure.18.why 
+        s262:   "TRIAL rule (K-UNX): no STATEMENT for the item, and no CORRECTED COUNT below 2" 
+        target: "a valid ruling card for keystone"
+      out.0.__a379.R.summary.0.cure.19.rule 
+        s262:   "K-UNX" 
+        target: "K-RUL"
+      out.0.__a379.R.summary.0.cure.19.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.__a379.R.summary.0.cure.19.link 
+        s262:   "DEFENDER premise 3" 
+        target: "D3 vs C3"
+      out.0.__a379.R.summary.0.cure.19.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.__a379.R.summary.0.cure.19.why 
+        s262:   "no written response" 
+        target: "a valid ruling card for D3 vs C3"
+      out.0.__a379.R.summary.0.cure.20 
+        s262:   undefined 
+        target: {"rule":"K-RUL","side":"JUDGE","link":"D4 vs C5","status":"CURED","kinds":[],"why":"a valid ruling card for D4 vs C5"}
+      out.0.__a379.R.summary.0.cure.21 
+        s262:   undefined 
+        target: {"rule":"K-RUL","side":"JUDGE","link":"D5 vs C4","status":"CURED","kinds":[],"why":"a valid ruling card for D5 vs C4"}
+      out.0.__a379.R.summary.0.cure.22 
+        s262:   undefined 
+        target: {"rule":"K-UNX","side":"CHALLENGER","link":"CHALLENGER premise 2","status":"CURED","kinds":[],"why":"TRIAL rule (K-UNX-A): CORRECTED COUNT 1 takes the premise out of the count"}
+      out.0.__a379.R.summary.0.alternate_of 
+        s262:   undefined 
+        target: "haiku"
+      out.0.__a379.R.panel_effective.1 
+        s262:   "haiku" 
+        target: "sol"
+      out.0.__a379.R.panel_effective.2 
+        s262:   "sol" 
+        target: "sonnet"
+      out.0.__a379.R.enforcer_log.284.cure_status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.__a379.R.enforcer_log.284.cure_reason 
+        s262:   "SEND-BACK CHANGE TO: D1 vs C2 (Acts 2:30): STANDS -- the challenger's answer rests on Mary's lineage, which no quoted row gives, and the defender's answer fits the verse -- GROUND: [L1] Acts 2:30 'that of the fruit of his loins, according to the flesh' | [L2] karpos (G2590, fruit) | [L3] 2 Samuel 7 
+        target: "SEND-BACK CHANGE TO: D1 vs C2 (Acts 2:30): STANDS -- the challenger's answer rests on Mary's lineage, which no quoted row gives, and the defender's answer fits the verse -- GROUND: [L1] Acts 2:30 'that of the fruit of his loins, according to the flesh' | [L2] karpos (G2590, fruit) | [L3] 2 Samuel 7
+      out.0.__a379.R.alternates_seated.0 
+        s262:   undefined 
+        target: {"removed_seat":"haiku","alternate_seat":"sonnet","alternate_api_model":"anthropic/claude-sonnet-5.5"}
+      out.0.__a379.R.drv_removed.0 
+        s262:   undefined 
+        target: {"removed_rules":["K-F (cure) x1"],"removed_rules_total":1,"removed_rules_match":false,"seat":"haiku","api_model":"anthropic/claude-haiku-5.5","verdict_tag":"BROKEN","defense_standing":"COLLAPSED","challenge_standing":"SELF-SUPPORTED","drv_uncured":2,"verdict_raw":"{\"verdict_tag\":\"BROKEN\",\"defe
+      out.0.__a379.R.alternates_tried.1.result 
+        s262:   "NOT SEATED" 
+        target: "SEATED"
+      out.0.__a379.R.alternates_tried.1.why 
+        s262:   "unseated after its enforcer send-back and gate: 1 uncured item(s)" 
+        target: undefined
+      out.0.__a379.R.alternates_tried.1.verdict_raw 
+        s262:   "{\"verdict_tag\":\"BROKEN\",\"defense_standing\":\"PROP-DEPENDENT\",\"challenge_standing\":\"PROP-DEPENDENT\",\"conceded_links\":2,\"challenger_conceded_links\":1,\"counted_premises_defender\":[2,3],\"counted_premises_challenger\":[1,2],\"reasoning\":\"BROKEN. D3, D4 and D5 each fail against presse 
+        target: undefined
+      out.0.__a379.R.alt_apply.0.unseated 
+        s262:   true 
+        target: false
+      out.0.__a379.R.alt_apply.0.why 
+        s262:   "unseated after its enforcer send-back and gate: 1 uncured item(s)" 
+        target: undefined
+      out.0.__a379.R.alt_apply.0.uncured 
+        s262:   [] 
+        target: undefined
+NONCODE Second Alternate Needed?#0 input differs: s262 vs stored false | target vs s262 true
+CHANGED Alternate Merge#0                  x 316 | s262 reproduces stored true | reads field false  
+      out.0.bodies.0 
+        s262:   "{\"payload\":{\"debate_id\":\"14bac268-52c2-41a2-8ee8-465184af0792\",\"judge_seat\":\"haiku\",\"judge_api_model\":\"anthropic/claude-haiku-5.5\",\"verdict_raw\":\"{\\\"verdict_tag\\\":\\\"BROKEN\\\",\\\"defense_standing\\\":\\\"COLLAPSED\\\",\\\"challenge_standing\\\":\\\"SELF-SUPPORTED\\\",\\\"con 
+        target: "{\"payload\":{\"debate_id\":\"14bac268-52c2-41a2-8ee8-465184af0792\",\"judge_seat\":\"sonnet\",\"judge_api_model\":\"anthropic/claude-sonnet-5.5\",\"verdict_raw\":\"{\\\"verdict_tag\\\":\\\"BROKEN\\\",\\\"defense_standing\\\":\\\"PROP-DEPENDENT\\\",\\\"challenge_standing\\\":\\\"PROP-DEPENDENT\\\",
+      out.0.summary.0.seat 
+        s262:   "haiku" 
+        target: "sonnet"
+      out.0.summary.0.node 
+        s262:   "Panel Reserve openrouter" 
+        target: "Alternate Call openrouter"
+      out.0.summary.0.api_model 
+        s262:   "anthropic/claude-haiku-5.5" 
+        target: "anthropic/claude-sonnet-5.5"
+      out.0.summary.0.raw_chars 
+        s262:   4505 
+        target: 19284
+      out.0.summary.0.drv.0.rule 
+        s262:   "K-F" 
+        target: "K-G7"
+      out.0.summary.0.drv.0.side 
+        s262:   "BOTH" 
+        target: "DEFENDER"
+      out.0.summary.0.drv.0.link 
+        s262:   "D2 vs C1" 
+        target: "D3 vs C3"
+      out.0.summary.0.drv.0.line 
+        s262:   "FORCED: D2 vs C1 -- MEANS [DR1]: \"The seed according to the flesh came forth through a woman, made under the law.\" -- ANSWER [CR2]: \"made of a woman names the mother and the mortality idiom said of men with named fathers\" -- FAILS: \"mortality idiom said of men with named fathers\" -- GROUND: [ 
+        target: "D3 vs C3 (Luke 3:23): DEFENDER LINK BROKEN -- the named man is not shown to be the father of that flesh; the answer shows supposing as mistaken -- GROUND: [L1] Luke 3:23 'being (as was supposed) the son of Joseph' | [L2] nomizo (G3543, to deem, regard, suppose) | [L3] Luke 2:44 'But they, supposing
+      out.0.summary.0.drv.0.why 
+        s262:   "the MEANS quotation is not in [DR1]" 
+        target: undefined
+      out.0.summary.0.drv.0.premise 
+        s262:   undefined 
+        target: 2
+      out.0.summary.0.drv.0.conc 
+        s262:   undefined 
+        target: 0
+      out.0.summary.0.drv.0.st 
+        s262:   undefined 
+        target: "PROP-DEPENDENT"
+      out.0.summary.0.drv.0.L 
+        s262:   undefined 
+        target: 5
+      out.0.summary.0.drv.1.rule 
+        s262:   "K-FC" 
+        target: "K-G7"
+      out.0.summary.0.drv.1.side 
+        s262:   "BOTH" 
+        target: "DEFENDER"
+      out.0.summary.0.drv.1.link 
+        s262:   "D2 vs C1" 
+        target: "D4 vs C5"
+      out.0.summary.0.drv.1.ref 
+        s262:   null 
+        target: undefined
+      out.0.summary.0.drv.1.means 
+        s262:   "The seed according to the flesh came forth through a woman, made under the law." 
+        target: undefined
+      out.0.summary.0.drv.1.why 
+        s262:   "the FORCED line has no CARRIED BY: \"<the words of the pressed verse that state its MEANS>\" (W3 B7)" 
+        target: undefined
+      out.0.summary.0.drv.1.line 
+        s262:   "FORCED line for D2 vs C1: the FORCED line has no CARRIED BY: \"<the words of the pressed verse that state its MEANS>\" (W3 B7). Write the FORCED line again with CARRIED BY: \"<the words of the pressed verse that state the MEANS sentence, quoted from the KJV>\" between FAILS and GROUND, or RETRACTED 
+        target: "D4 vs C5 (Matthew 1:18): DEFENDER LINK BROKEN -- no row gives a union before the taking; the answer's own 'dates the finding' puts the conception before the coming together -- GROUND: [L1] Matthew 1:18 'before they came together, she was found with child of the Holy Ghost' | [L2] synerchomai (G4905
+      out.0.summary.0.drv.1.premise 
+        s262:   undefined 
+        target: 3
+      out.0.summary.0.drv.1.conc 
+        s262:   undefined 
+        target: 0
+      out.0.summary.0.drv.1.st 
+        s262:   undefined 
+        target: "PROP-DEPENDENT"
+      out.0.summary.0.drv.1.L 
+        s262:   undefined 
+        target: 5
+      out.0.summary.0.drv.2.rule 
+        s262:   "K-R" 
+        target: "K-G7"
+      out.0.summary.0.drv.2.link 
+        s262:   "DEFENDER premise 1" 
+        target: "D5 vs C4"
+      out.0.summary.0.drv.2.key 
+        s262:   "Galatians 4:4" 
+        target: undefined
+      out.0.summary.0.drv.2.premise 
+        s262:   1 
+        target: 5
+      out.0.summary.0.drv.2.line 
+        s262:   "premise 1: Galatians 4:4 is PROVEN BY REFERENCE (PROVEN IN [DR1]) and has no REFERENCE line" 
+        target: "D5 vs C4 (Matthew 1:20): DEFENDER LINK BROKEN -- the begetting is attributed to the Holy Ghost and the answer shows no fit for Joseph as begetter -- GROUND: [L1] Matthew 1:20 'for that which is conceived in her is of the Holy Ghost' | [L2] gennao (G1080, to procreate, properly of the father) | [L3]
+      out.0.summary.0.drv.2.means 
+        s262:   "The seed according to the flesh came forth through a woman, made under the law." 
+        target: undefined
+      out.0.summary.0.drv.2.round 
+        s262:   "DR1" 
+        target: undefined
+      out.0.summary.0.drv.2.why 
+        s262:   "no REFERENCE line" 
+        target: undefined
+      out.0.summary.0.drv.2.conc 
+        s262:   undefined 
+        target: 0
+      out.0.summary.0.drv.2.st 
+        s262:   undefined 
+        target: "PROP-DEPENDENT"
+      out.0.summary.0.drv.2.L 
+        s262:   undefined 
+        target: 5
+      out.0.summary.0.drv.3.link 
+        s262:   "DEFENDER premise 2" 
+        target: "DEFENDER premise 5"
+      out.0.summary.0.drv.3.key 
+        s262:   "Luke 3:23" 
+        target: "Luke 1:34"
+      out.0.summary.0.drv.3.premise 
+        s262:   2 
+        target: 5
+      out.0.summary.0.drv.3.line 
+        s262:   "premise 2: Luke 3:23 is PROVEN BY REFERENCE (PROVEN IN [DR1]) and has no REFERENCE line" 
+        target: "REFERENCE: Luke 1:34 -- [DR1] -- NOT CONFIRMED -- \"Mary's explicit absence of carnal knowledge of a man\" / \"Mary conceived when she said I know not a man\"; the MEANS adds a conception at the time of speaking. The premise is VOID in any case."
+      out.0.summary.0.drv.3.means 
+        s262:   "Joseph's paternal relation is defined by scripture as supposed rather than biological." 
+        target: "Mary conceived when she said I know not a man."
+      out.0.summary.0.drv.3.why 
+        s262:   "no REFERENCE line" 
+        target: "the REFERENCE line is not in the form REFERENCE: <press> -- [<round>] -- CONFIRMED | NOT CONFIRMED -- \"<block meaning>\" / \"<MEANS sentence>\""
+      out.0.summary.0.drv.4.rule 
+        s262:   "K-R" 
+        target: "K-CMT"
+      out.0.summary.0.drv.4.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.drv.4.link 
+        s262:   "DEFENDER premise 3" 
+        target: "contested grades without a commitment"
+      out.0.summary.0.drv.4.key 
+        s262:   "Matthew 1:18" 
+        target: undefined
+      out.0.summary.0.drv.4.premise 
+        s262:   3 
+        target: undefined
+      out.0.summary.0.drv.4.line 
+        s262:   "premise 3: Matthew 1:18 is PROVEN BY REFERENCE (PROVEN IN [DR1]) and has no REFERENCE line" 
+        target: "13 contested grade lines name no commitment (answer each with its Commitment N, or NOT A GRADE); first: \"BROKEN. D3, D4 and D5 each fail against pressed witnesses and the defender's answers show no fit. [L1] Matthew 1:18 'before they came together, she was found wi\"; \"CONCEDED LINKS: 0 -- Premis
+      out.0.summary.0.drv.4.means 
+        s262:   "The conception took place before the husband and wife came together." 
+        target: undefined
+      out.0.summary.0.drv.4.round 
+        s262:   "DR1" 
+        target: undefined
+      out.0.summary.0.drv.4.why 
+        s262:   "no REFERENCE line" 
+        target: undefined
+      out.0.summary.0.drv.5.rule 
+        s262:   "K-R" 
+        target: "K-CMTL"
+      out.0.summary.0.drv.5.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.drv.5.link 
+        s262:   "DEFENDER premise 4" 
+        target: "line 1"
+      out.0.summary.0.drv.5.key 
+        s262:   "Matthew 1:20" 
+        target: undefined
+      out.0.summary.0.drv.5.premise 
+        s262:   4 
+        target: undefined
+      out.0.summary.0.drv.5.line 
+        s262:   "premise 4: Matthew 1:20 is PROVEN BY REFERENCE (PROVEN IN [DR1]) and has no REFERENCE line" 
+        target: "\"BROKEN. D3, D4 and D5 each fail against pressed witnesses and the defender's answers show no fit. [L1] Matthew 1:18 'before they came together, she was found with child of the Holy Ghost' and Matthew 1:20 'that which is conceived in her is of the Holy Ghost' [conceived: Gr. begotten] cannot take 
+      out.0.summary.0.drv.5.means 
+        s262:   "The procreation in Mary's womb is directly attributed to the Holy Ghost." 
+        target: undefined
+      out.0.summary.0.drv.5.round 
+        s262:   "DR1" 
+        target: undefined
+      out.0.summary.0.drv.5.why 
+        s262:   "no REFERENCE line" 
+        target: undefined
+      out.0.summary.0.drv.6.rule 
+        s262:   "K-R" 
+        target: "K-CMTL"
+      out.0.summary.0.drv.6.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.drv.6.link 
+        s262:   "DEFENDER premise 5" 
+        target: "line 2"
+      out.0.summary.0.drv.6.key 
+        s262:   "Luke 1:34" 
+        target: undefined
+      out.0.summary.0.drv.6.premise 
+        s262:   5 
+        target: undefined
+      out.0.summary.0.drv.6.line 
+        s262:   "premise 5: Luke 1:34 is PROVEN BY REFERENCE (PROVEN IN [DR1]) and has no REFERENCE line" 
+        target: "\"CONCEDED LINKS: 0 -- Premise 1 (LINK 1): not counted. Galatians 4:4 and Luke 1:32 were answered in [CR2] and [CR4], and the answers MEET. Premise 2 (LINK 3): not counted. Luke 3:23 and Luke 2:49 were named in answers, and the Luke 3:23 answer MISSES, which is graded at D3 and not counted. Premise
+      out.0.summary.0.drv.6.means 
+        s262:   "Mary conceived when she said I know not a man." 
+        target: undefined
+      out.0.summary.0.drv.6.round 
+        s262:   "DR1" 
+        target: undefined
+      out.0.summary.0.drv.6.why 
+        s262:   "no REFERENCE line" 
+        target: undefined
+      out.0.summary.0.drv.7.rule 
+        s262:   "K-CMT" 
+        target: "K-CMTL"
+      out.0.summary.0.drv.7.link 
+        s262:   "contested grades without a commitment" 
+        target: "line 3"
+      out.0.summary.0.drv.7.line 
+        s262:   "7 contested grade lines name no commitment (answer each with its Commitment N, or NOT A GRADE); first: \"BROKEN -- The defender's own declared chain carries at least one listed link refuted from the text, and the defender's keystone link is not shown.\"; \"KEYSTONE: D5 -- BROKEN -- Link D5 (Christ  
+        target: "\"D3 vs C3 (Luke 3:23): DEFENDER LINK BROKEN -- the named man is not shown to be the father of that flesh; the answer shows supposing as mistaken -- GROUND: [L1] Luke 3:23 'being (as was supposed) the son of Joseph' | [L2] nomizo (G3543, to deem, regard, suppose) | [L3] Luke 2:44 'But they, supposi
+      out.0.summary.0.drv.8.link 
+        s262:   "line 1" 
+        target: "line 4"
+      out.0.summary.0.drv.8.line 
+        s262:   "\"BROKEN -- The defender's own declared chain carries at least one listed link refuted from the text, and the defender's keystone link is not shown.\" -- this contested grade line names no commitment. TRIAL rule: answer it with RESPONSE: K-CMTL line 1 | (Commitment N), the commitment the grade appl 
+        target: "\"D4 vs C5 (Matthew 1:18): DEFENDER LINK BROKEN -- no row gives a union before the taking; the answer's own 'dates the finding' puts the conception before the coming together -- GROUND: [L1] Matthew 1:18 'before they came together, she was found with child of the Holy Ghost' | [L2] synerchomai (G49
+      out.0.summary.0.drv.9.link 
+        s262:   "line 2" 
+        target: "line 5"
+      out.0.summary.0.drv.9.line 
+        s262:   "\"KEYSTONE: D5 -- BROKEN -- Link D5 (Christ had a biological father, Joseph) is graded DEFENDER LINK BROKEN at the collision with C5 and C3 on the words of Matthew 1:20 and Luke 1:35, and the defender's own answer to the pressed Luke 1:34 does not meet its press.\" -- this contested grade line name 
+        target: "\"D5 vs C4 (Matthew 1:20): DEFENDER LINK BROKEN -- the begetting is attributed to the Holy Ghost and the answer shows no fit for Joseph as begetter -- GROUND: [L1] Matthew 1:20 'for that which is conceived in her is of the Holy Ghost' | [L2] gennao (G1080, to procreate, properly of the father) | [L
+      out.0.summary.0.drv.10.link 
+        s262:   "line 3" 
+        target: "line 6"
+      out.0.summary.0.drv.10.line 
+        s262:   "\"D2: DEFENDER LINK BROKEN vs C1 (Romans 1:3): the link that the seed of David according to the flesh requires a male begetter is not shown by Galatians 4:4 \"made of a woman\"; the defender's answer does not show the fit. GROUND: [L1] Galatians 4:4 \"made of a woman, made under the law\" | [L2] gi 
+        target: "\"ANSWER CHECK: Luke 3:23 -- [CR4] -- MEANS: \"Joseph's paternal relation is defined by scripture as supposed rather than biological.\" -- ANSWER: \"shows supposing mistaken. It stands with Luke 2:48 thy father.\" -- MISSES -- the fact that Joseph is the begetter is not given by the rows; Luke 2:44
+      out.0.summary.0.drv.11.link 
+        s262:   "line 4" 
+        target: "line 7"
+      out.0.summary.0.drv.11.line 
+        s262:   "\"FORCED: D2 vs C1 -- MEANS [DR1]: \"The seed according to the flesh came forth through a woman, made under the law.\" -- ANSWER [CR2]: \"made of a woman names the mother and the mortality idiom said of men with named fathers\" -- FAILS: \"mortality idiom said of men with named fathers\" -- GROUND: 
+        target: "\"ANSWER CHECK: Matthew 1:18 -- [CR4] -- MEANS: \"The conception took place before the husband and wife came together.\" -- ANSWER: \"The coming together is the taking.\" -- MISSES -- the fact of a union between espousal and taking is not given by the rows; Matthew 1:24 puts the taking after the fi
+      out.0.summary.0.drv.12.link 
+        s262:   "line 5" 
+        target: "line 8"
+      out.0.summary.0.drv.12.line 
+        s262:   "\"D3: DEFENDER LINK BROKEN vs C3 (Luke 2:48, Luke 3:23): the defender's naming of Joseph as father rests on common speech; Luke 3:23 \"(as was supposed) the son of Joseph\" marks the reckoning. GROUND: [L1] Luke 3:23 \"(as was supposed) the son of Joseph\" | [L2] nomizo (G3543, to deem or regard, s 
+        target: "\"ANSWER CHECK: Matthew 1:19 -- [CR2] -- MEANS: \"Joseph sought to put Mary away because he was not the father of the child in her womb.\" -- ANSWER: \"his mind to put away states intent from two angles, just and sparing scorn\" -- MISSES -- Mark 7:7 and 7:8 are about doctrines of men and washing o
+      out.0.summary.0.drv.13.link 
+        s262:   "line 6" 
+        target: "line 9"
+      out.0.summary.0.drv.13.line 
+        s262:   "\"D4: DEFENDER LINK BROKEN vs C5 (Luke 1:34): the claim that Joseph knew Mary in the espousal is not shown against Matthew 1:18 \"before they came together\"; the answer rests on Genesis 4:1 without showing the coming together is cohabitation. GROUND: [L1] Matthew 1:18 \"before they came together\" 
+        target: "\"ANSWER CHECK: Luke 1:35 -- [CR4] -- MEANS: \"The child born of Mary is generated by the Holy Ghost and power of the Highest.\" -- ANSWER: \"Both state anointing and presence, and shall be called states title.\" -- MISSES -- Acts 1:8 and Matthew 17:5 concern others, and the verse's 'therefore also
+      out.0.summary.0.drv.14.link 
+        s262:   "line 7" 
+        target: "line 10"
+      out.0.summary.0.drv.14.line 
+        s262:   "\"D5: DEFENDER LINK BROKEN vs C5 (Luke 1:34, Isaiah 7:14): the defender's conclusion that Christ had a biological father is not shown against Mary's \"I know not a man\" and the virgin sign. GROUND: [L1] Luke 1:34 \"seeing I know not a man\" | [L2] ginosko (G1097, to know).\" -- this contested grad 
+        target: "\"ANSWER CHECK: Galatians 4:4 -- [DR3] -- MEANS: \"Made of a woman is said of men with named fathers in Job 14:1.\" -- ANSWER: \"the text specifies he was \\\"made of a woman\\\" without coupling a man\" -- MISSES -- the fact that ginomai excludes a father is not given by the rows, and Romans 1:3 u
+      out.0.summary.0.drv.15.rule 
+        s262:   "K-RUL" 
+        target: "K-CMTL"
+      out.0.summary.0.drv.15.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.drv.15.link 
+        s262:   "DEFENDER premise 1" 
+        target: "line 11"
+      out.0.summary.0.drv.15.ruling 
+        s262:   "DEFENDER premise 1" 
+        target: undefined
+      out.0.summary.0.drv.15.krul_ctx 
+        s262:   {"ks":"D5","ps":{"1":["DEFENDER"],"3":["DEFENDER"]}} 
+        target: undefined
+      out.0.summary.0.drv.15.line 
+        s262:   "deciding ruling DEFENDER premise 1: no ruling card; answer with the five-line card (RULING, CLAIM, NAMED BY, RULE, APPLIED)" 
+        target: "\"ANSWER CHECK: Romans 1:3 -- [DR3] -- MEANS: \"Seed according to the flesh is out of bowels and loins in 2 Samuel 7:12.\" -- ANSWER: \"Mary herself is of David's house and lineage\" -- MISSES -- the fact of Mary's house is not given by the rows.\" -- this contested grade line names no commitment. 
+      out.0.summary.0.drv.16.rule 
+        s262:   "K-RUL" 
+        target: "K-CMTL"
+      out.0.summary.0.drv.16.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.drv.16.link 
+        s262:   "DEFENDER premise 3" 
+        target: "line 12"
+      out.0.summary.0.drv.16.ruling 
+        s262:   "DEFENDER premise 3" 
+        target: undefined
+      out.0.summary.0.drv.16.krul_ctx 
+        s262:   {"ks":"D5","ps":{"1":["DEFENDER"],"3":["DEFENDER"]}} 
+        target: undefined
+      out.0.summary.0.drv.16.line 
+        s262:   "deciding ruling DEFENDER premise 3: no ruling card; answer with the five-line card (RULING, CLAIM, NAMED BY, RULE, APPLIED)" 
+        target: "\"ANSWER CHECK: Luke 1:32 -- [DR3] -- MEANS: \"The throne of his father David is given with the covenant Son title in Luke 1:32.\" -- ANSWER: \"Davidic descent is preserved through his maternal birth\" -- MISSES -- the fact of Mary's house is not given by the rows.\" -- this contested grade line na
+      out.0.summary.0.drv.17.rule 
+        s262:   "K-RUL" 
+        target: "K-CMTL"
+      out.0.summary.0.drv.17.link 
+        s262:   "keystone" 
+        target: "line 13"
+      out.0.summary.0.drv.17.ruling 
+        s262:   "keystone" 
+        target: undefined
+      out.0.summary.0.drv.17.krul_ctx 
+        s262:   {"ks":"D5","ps":{"1":["DEFENDER"],"3":["DEFENDER"]}} 
+        target: undefined
+      out.0.summary.0.drv.17.line 
+        s262:   "deciding ruling keystone: no ruling card; answer with the five-line card (RULING, CLAIM, NAMED BY, RULE, APPLIED)" 
+        target: "\"REFERENCE: Luke 1:34 -- [DR1] -- NOT CONFIRMED -- \"Mary's explicit absence of carnal knowledge of a man\" / \"Mary conceived when she said I know not a man\"; the MEANS adds a conception at the time of speaking. The premise is VOID in any case.\" -- this contested grade line names no commitment.
+      out.0.summary.0.drv.18.rule 
+        s262:   "K-UNX" 
+        target: "K-RUL"
+      out.0.summary.0.drv.18.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.drv.18.link 
+        s262:   "DEFENDER premise 1" 
+        target: "keystone"
+      out.0.summary.0.drv.18.premise 
+        s262:   1 
+        target: undefined
+      out.0.summary.0.drv.18.kinds 
+        s262:   ["L1","L3"] 
+        target: undefined
+      out.0.summary.0.drv.18.conc 
+        s262:   2 
+        target: undefined
+      out.0.summary.0.drv.18.why 
+        s262:   "counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L3 and the count names no layer the block lacks" 
+        target: undefined
+      out.0.summary.0.drv.18.line 
+        s262:   "DEFENDER premise 1: counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L3 and the count names no layer the block lacks. Name the missing layer in a STATEMENT for this item (\"[L1]\", \"[L2]\", \"[L3]\" or \"[L4]\", one the block does not exhibit); or, if the step takes for g 
+        target: "deciding ruling keystone: the RULE quote differs from your accepted line for Commitment 3 (\"A link that cannot agree with a pressed verse's shown meaning fails. I do not accept \"no verse states it\" as a ground, a\"); answer with the five-line card (RULING, CLAIM, NAMED BY, RULE, APPLIED)"
+      out.0.summary.0.drv.18.ruling 
+        s262:   undefined 
+        target: "keystone"
+      out.0.summary.0.drv.18.krul_ctx 
+        s262:   undefined 
+        target: {"ks":"D5","ps":{"1":["CHALLENGER"],"2":["CHALLENGER"]}}
+      out.0.summary.0.drv.19.rule 
+        s262:   "K-UNX" 
+        target: "K-RUL"
+      out.0.summary.0.drv.19.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.drv.19.link 
+        s262:   "DEFENDER premise 3" 
+        target: "D3 vs C3"
+      out.0.summary.0.drv.19.premise 
+        s262:   3 
+        target: undefined
+      out.0.summary.0.drv.19.kinds 
+        s262:   ["L1","L3"] 
+        target: undefined
+      out.0.summary.0.drv.19.conc 
+        s262:   2 
+        target: undefined
+      out.0.summary.0.drv.19.why 
+        s262:   "counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L3 and the count names no layer the block lacks" 
+        target: undefined
+      out.0.summary.0.drv.19.line 
+        s262:   "DEFENDER premise 3: counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L3 and the count names no layer the block lacks. Name the missing layer in a STATEMENT for this item (\"[L1]\", \"[L2]\", \"[L3]\" or \"[L4]\", one the block does not exhibit); or, if the step takes for g 
+        target: "deciding ruling D3 vs C3: the RULE quote differs from your accepted line for Commitment 3 (\"A link that cannot agree with a pressed verse's shown meaning fails. I do not accept \"no verse states it\" as a ground, a\"); answer with the five-line card (RULING, CLAIM, NAMED BY, RULE, APPLIED)"
+      out.0.summary.0.drv.19.ruling 
+        s262:   undefined 
+        target: "D3 vs C3"
+      out.0.summary.0.drv.19.krul_ctx 
+        s262:   undefined 
+        target: {"ks":"D5","ps":{"1":["CHALLENGER"],"2":["CHALLENGER"]}}
+      out.0.summary.0.drv.20 
+        s262:   undefined 
+        target: {"rule":"K-RUL","side":"JUDGE","link":"D4 vs C5","ruling":"D4 vs C5","krul_ctx":{"ks":"D5","ps":{"1":["CHALLENGER"],"2":["CHALLENGER"]}},"line":"deciding ruling D4 vs C5: the RULE quote differs from your accepted line for Commitment 3 (\"A link that cannot agree with a pressed verse's shown meaning 
+      out.0.summary.0.drv.21 
+        s262:   undefined 
+        target: {"rule":"K-RUL","side":"JUDGE","link":"D5 vs C4","ruling":"D5 vs C4","krul_ctx":{"ks":"D5","ps":{"1":["CHALLENGER"],"2":["CHALLENGER"]}},"line":"deciding ruling D5 vs C4: the RULE quote differs from your accepted line for Commitment 3 (\"A link that cannot agree with a pressed verse's shown meaning 
+      out.0.summary.0.drv.22 
+        s262:   undefined 
+        target: {"rule":"K-UNX","a":"ASSUMES","asm":"","side":"CHALLENGER","link":"CHALLENGER premise 2","premise":2,"kinds":["L1","L3"],"conc":2,"l1":"He shall be great, and shall be called the Son of the Highest: and the Lord God shall give unto him the throne of his father David:","l1ref":"Luke 1:32","press":"",
+      out.0.summary.0.ecg 
+        s262:   [] 
+        target: undefined
+      out.0.summary.0.substitute 
+        s262:   true 
+        target: false
+      out.0.summary.0.cure.0.rule 
+        s262:   "K-F" 
+        target: "K-G7"
+      out.0.summary.0.cure.0.side 
+        s262:   "BOTH" 
+        target: "DEFENDER"
+      out.0.summary.0.cure.0.link 
+        s262:   "D2 vs C1" 
+        target: "D3 vs C3"
+      out.0.summary.0.cure.0.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.summary.0.cure.0.why 
+        s262:   "no FORCED line for D2 vs C1, no RETRACTED line and no RESTATED line regrading it" 
+        target: "forced link: a FORCED line for D3 vs C3 (ruling 421); the premise is not counted (pkgKG7)"
+      out.0.summary.0.cure.1.rule 
+        s262:   "K-FC" 
+        target: "K-G7"
+      out.0.summary.0.cure.1.side 
+        s262:   "BOTH" 
+        target: "DEFENDER"
+      out.0.summary.0.cure.1.link 
+        s262:   "D2 vs C1" 
+        target: "D4 vs C5"
+      out.0.summary.0.cure.1.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.summary.0.cure.1.why 
+        s262:   "TRIAL rule (K-FC): no FORCED line for D2 vs C1 with CARRIED BY, no RETRACTED line and no RESTATED line regrading it" 
+        target: "forced link: a FORCED line for D4 vs C5 (ruling 421); the premise is not counted (pkgKG7)"
+      out.0.summary.0.cure.2.rule 
+        s262:   "K-R" 
+        target: "K-G7"
+      out.0.summary.0.cure.2.link 
+        s262:   "DEFENDER premise 1" 
+        target: "D5 vs C4"
+      out.0.summary.0.cure.2.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.summary.0.cure.2.why 
+        s262:   "no REFERENCE line for Galatians 4:4" 
+        target: "forced link: a FORCED line for D5 vs C4 (ruling 421); the premise is not counted (pkgKG7)"
+      out.0.summary.0.cure.3.link 
+        s262:   "DEFENDER premise 2" 
+        target: "DEFENDER premise 5"
+      out.0.summary.0.cure.3.why 
+        s262:   "no REFERENCE line for Luke 3:23" 
+        target: "no REFERENCE line for Luke 1:34"
+      out.0.summary.0.cure.4.rule 
+        s262:   "K-R" 
+        target: "K-CMT"
+      out.0.summary.0.cure.4.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.cure.4.link 
+        s262:   "DEFENDER premise 3" 
+        target: "contested grades without a commitment"
+      out.0.summary.0.cure.4.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.summary.0.cure.4.why 
+        s262:   "no REFERENCE line for Matthew 1:18" 
+        target: "the response names the commitment, or NOT A GRADE"
+      out.0.summary.0.cure.5.rule 
+        s262:   "K-R" 
+        target: "K-CMTL"
+      out.0.summary.0.cure.5.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.cure.5.link 
+        s262:   "DEFENDER premise 4" 
+        target: "line 1"
+      out.0.summary.0.cure.5.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.summary.0.cure.5.why 
+        s262:   "no REFERENCE line for Matthew 1:20" 
+        target: "the response names the commitment, or NOT A GRADE"
+      out.0.summary.0.cure.6.rule 
+        s262:   "K-R" 
+        target: "K-CMTL"
+      out.0.summary.0.cure.6.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.cure.6.link 
+        s262:   "DEFENDER premise 5" 
+        target: "line 2"
+      out.0.summary.0.cure.6.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.summary.0.cure.6.why 
+        s262:   "no REFERENCE line for Luke 1:34" 
+        target: "the response names the commitment, or NOT A GRADE"
+      out.0.summary.0.cure.7.rule 
+        s262:   "K-CMT" 
+        target: "K-CMTL"
+      out.0.summary.0.cure.7.link 
+        s262:   "contested grades without a commitment" 
+        target: "line 3"
+      out.0.summary.0.cure.8.link 
+        s262:   "line 1" 
+        target: "line 4"
+      out.0.summary.0.cure.9.link 
+        s262:   "line 2" 
+        target: "line 5"
+      out.0.summary.0.cure.10.link 
+        s262:   "line 3" 
+        target: "line 6"
+      out.0.summary.0.cure.11.link 
+        s262:   "line 4" 
+        target: "line 7"
+      out.0.summary.0.cure.12.link 
+        s262:   "line 5" 
+        target: "line 8"
+      out.0.summary.0.cure.13.link 
+        s262:   "line 6" 
+        target: "line 9"
+      out.0.summary.0.cure.14.link 
+        s262:   "line 7" 
+        target: "line 10"
+      out.0.summary.0.cure.15.rule 
+        s262:   "K-RUL" 
+        target: "K-CMTL"
+      out.0.summary.0.cure.15.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.cure.15.link 
+        s262:   "DEFENDER premise 1" 
+        target: "line 11"
+      out.0.summary.0.cure.15.why 
+        s262:   "a valid ruling card for DEFENDER premise 1" 
+        target: "the response names the commitment, or NOT A GRADE"
+      out.0.summary.0.cure.16.rule 
+        s262:   "K-RUL" 
+        target: "K-CMTL"
+      out.0.summary.0.cure.16.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.cure.16.link 
+        s262:   "DEFENDER premise 3" 
+        target: "line 12"
+      out.0.summary.0.cure.16.why 
+        s262:   "a valid ruling card for DEFENDER premise 3" 
+        target: "the response names the commitment, or NOT A GRADE"
+      out.0.summary.0.cure.17.rule 
+        s262:   "K-RUL" 
+        target: "K-CMTL"
+      out.0.summary.0.cure.17.link 
+        s262:   "keystone" 
+        target: "line 13"
+      out.0.summary.0.cure.17.why 
+        s262:   "a valid ruling card for keystone" 
+        target: "the response names the commitment, or NOT A GRADE"
+      out.0.summary.0.cure.18.rule 
+        s262:   "K-UNX" 
+        target: "K-RUL"
+      out.0.summary.0.cure.18.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.cure.18.link 
+        s262:   "DEFENDER premise 1" 
+        target: "keystone"
+      out.0.summary.0.cure.18.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.summary.0.cure.18.why 
+        s262:   "TRIAL rule (K-UNX): no STATEMENT for the item, and no CORRECTED COUNT below 2" 
+        target: "a valid ruling card for keystone"
+      out.0.summary.0.cure.19.rule 
+        s262:   "K-UNX" 
+        target: "K-RUL"
+      out.0.summary.0.cure.19.side 
+        s262:   "DEFENDER" 
+        target: "JUDGE"
+      out.0.summary.0.cure.19.link 
+        s262:   "DEFENDER premise 3" 
+        target: "D3 vs C3"
+      out.0.summary.0.cure.19.status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.summary.0.cure.19.why 
+        s262:   "no written response" 
+        target: "a valid ruling card for D3 vs C3"
+      out.0.summary.0.cure.20 
+        s262:   undefined 
+        target: {"rule":"K-RUL","side":"JUDGE","link":"D4 vs C5","status":"CURED","kinds":[],"why":"a valid ruling card for D4 vs C5"}
+      out.0.summary.0.cure.21 
+        s262:   undefined 
+        target: {"rule":"K-RUL","side":"JUDGE","link":"D5 vs C4","status":"CURED","kinds":[],"why":"a valid ruling card for D5 vs C4"}
+      out.0.summary.0.cure.22 
+        s262:   undefined 
+        target: {"rule":"K-UNX","side":"CHALLENGER","link":"CHALLENGER premise 2","status":"CURED","kinds":[],"why":"TRIAL rule (K-UNX-A): CORRECTED COUNT 1 takes the premise out of the count"}
+      out.0.summary.0.alternate_of 
+        s262:   undefined 
+        target: "haiku"
+      out.0.panel_effective.1 
+        s262:   "haiku" 
+        target: "sol"
+      out.0.panel_effective.2 
+        s262:   "sol" 
+        target: "sonnet"
+      out.0.enforcer_log.289.cure_status 
+        s262:   "UNCURED" 
+        target: "CURED"
+      out.0.enforcer_log.289.cure_reason 
+        s262:   "SEND-BACK CHANGE TO: D1 vs C2 (Acts 2:30): STANDS -- the challenger's answer rests on Mary's lineage, which no quoted row gives, and the defender's answer fits the verse -- GROUND: [L1] Acts 2:30 'that of the fruit of his loins, according to the flesh' | [L2] karpos (G2590, fruit) | [L3] 2 Samuel 7 
+        target: "SEND-BACK CHANGE TO: D1 vs C2 (Acts 2:30): STANDS -- the challenger's answer rests on Mary's lineage, which no quoted row gives, and the defender's answer fits the verse -- GROUND: [L1] Acts 2:30 'that of the fruit of his loins, according to the flesh' | [L2] karpos (G2590, fruit) | [L3] 2 Samuel 7
+      out.0.alternates_seated.0 
+        s262:   undefined 
+        target: {"removed_seat":"haiku","alternate_seat":"sonnet","alternate_api_model":"anthropic/claude-sonnet-5.5"}
+      out.0.drv_removed.0 
+        s262:   undefined 
+        target: {"removed_rules":["K-F (cure) x1"],"removed_rules_total":1,"removed_rules_match":false,"seat":"haiku","api_model":"anthropic/claude-haiku-5.5","verdict_tag":"BROKEN","defense_standing":"COLLAPSED","challenge_standing":"SELF-SUPPORTED","drv_uncured":2,"verdict_raw":"{\"verdict_tag\":\"BROKEN\",\"defe
+      out.0.alternates_tried.1.result 
+        s262:   "NOT SEATED" 
+        target: "SEATED"
+      out.0.alternates_tried.1.why 
+        s262:   "unseated after its enforcer send-back and gate: 1 uncured item(s)" 
+        target: undefined
+      out.0.alternates_tried.1.verdict_raw 
+        s262:   "{\"verdict_tag\":\"BROKEN\",\"defense_standing\":\"PROP-DEPENDENT\",\"challenge_standing\":\"PROP-DEPENDENT\",\"conceded_links\":2,\"challenger_conceded_links\":1,\"counted_premises_defender\":[2,3],\"counted_premises_challenger\":[1,2],\"reasoning\":\"BROKEN. D3, D4 and D5 each fail against presse 
+        target: undefined
+      out.0.alt_apply.0.unseated 
+        s262:   true 
+        target: false
+      out.0.alt_apply.0.why 
+        s262:   "unseated after its enforcer send-back and gate: 1 uncured item(s)" 
+        target: undefined
+      out.0.alt_apply.0.uncured 
+        s262:   [] 
+        target: undefined
+NONCODE Dry?#0 input differs: s262 vs stored false | target vs s262 true
+same    Panel Done#0                       x 325 | s262 reproduces stored true | reads field false  | tgt ERR FAIL-CLOSED: alternates were seated but Record Alternates did not write them. run_token=OD
+same    Panel Tokens#0                     x 326 | s262 reproduces stored true | reads field false  
+same    Format Markdown#0                  x 333 | s262 reproduces stored false | reads field false  
+same    Plain Rule Lines#0                 x 334 | s262 reproduces stored false | reads field false  
+NONCODE Save to Drive#0 input differs: s262 vs stored true | target vs s262 false
+same    Raise If Incomplete#0              x 336 | s262 reproduces stored true | reads field false  
+START x 264 | code-node runs changed: 5
