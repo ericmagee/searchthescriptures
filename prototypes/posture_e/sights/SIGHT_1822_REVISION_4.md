@@ -1,0 +1,89 @@
+# Sight 1822 Revision 4 (proposal, not written)
+
+Sight 1822, "Flesh After His Kind". Drafted by W3 (session_01H1X3ANsGiMnhnbkfphocmo) on 2026-11-17 at 19:41 CST.
+
+Every verse below was pulled live from kjv_verses (book, chapter, verse and text only), and every gloss from lexicon_words, in this session. Strong's numbers come from kjv_word_map.
+
+## Cause
+
+The operator, 2026-11-17 19:41 CST:
+1. "I want to make sure our Corpus doesn't entertain that" (that is, reading "for that which is conceived in her is of the Holy Ghost" as an impregnation).
+2. "it's clearly saying the Child was conceived. Everywhere in the scripture 'conceived' in between a man and a wife."
+3. "I asked that 1 Corinthians 15:40 be added with Genesis 1:11-12 & Leviticus 19:19."
+
+Check of live Sight 1822:
+- 1 Corinthians 15:37-40 is quoted whole.
+- Genesis 1:12 is present.
+- Leviticus 19:19 is present, with Deuteronomy 22:9.
+- Genesis 1:11 is absent. The 3 Nov wording named only "Gen 1:12".
+- The sight has no study of the word "conceived".
+
+## Change A: add Genesis 1:11
+
+In the block "L1. THE CREATOR'S ORDER: SEED AFTER HIS KIND", insert Genesis 1:11 before Genesis 1:12:
+
+Genesis 1:11: "And God said, Let the earth bring forth grass, the herb yielding seed, [and] the fruit tree yielding fruit after his kind, whose seed [is] in itself, upon the earth: and it was so. [grass: Heb. tender grass]"
+
+## Change B: new block, after "L1-L2-L3. MATTHEW 1:20 WHOLE"
+
+L1-L2. "CONCEIVED" IN SCRIPTURE: THE LORD GIVES THE CONCEPTION, AND THE HUSBAND STANDS IN THE SAME ROW.
+
+Where the text says the LORD gave the conception, it names the husband in the same row or chain:
+
+- Ruth 4:13: "So Boaz took Ruth, and she was his wife: and when he went in unto her, the LORD gave her conception, and she bare a son."
+- 1 Samuel 1:19: "And they rose up in the morning early, and worshipped before the LORD, and returned, and came to their house to Ramah: and Elkanah knew Hannah his wife; and the LORD remembered her."
+- 1 Samuel 1:20: "Wherefore it came to pass, when the time was come about after Hannah had conceived, that she bare a son, and called his name Samuel, [saying], Because I have asked him of the LORD. [when...: Heb. in revolution of days] [Samuel: that is, Asked of God]"
+- Genesis 21:1: "And the LORD visited Sarah as he had said, and the LORD did unto Sarah as he had spoken."
+- Genesis 21:2: "For Sarah conceived, and bare Abraham a son in his old age, at the set time of which God had spoken to him."
+- Genesis 21:3: "And Abraham called the name of his son that was born unto him, whom Sarah bare to him, Isaac."
+- Genesis 25:21: "And Isaac intreated the LORD for his wife, because she [was] barren: and the LORD was intreated of him, and Rebekah his wife conceived."
+- Genesis 29:31: "And when the LORD saw that Leah [was] hated, he opened her womb: but Rachel [was] barren."
+- Genesis 29:32: "And Leah conceived, and bare a son, and she called his name Reuben: for she said, Surely the LORD hath looked upon my affliction; now therefore my husband will love me. [Reuben: that is, See a son]"
+- Genesis 30:22: "And God remembered Rachel, and God hearkened to her, and opened her womb."
+- Genesis 30:23: "And she conceived, and bare a son; and said, God hath taken away my reproach:"
+- Luke 1:13: "But the angel said unto him, Fear not, Zacharias: for thy prayer is heard; and thy wife Elisabeth shall bear thee a son, and thou shalt call his name John."
+- Luke 1:24: "And after those days his wife Elisabeth conceived, and hid herself five months, saying,"
+
+Luke 1:13 has the same shape as Matthew 1:20. An angel speaks to the husband ("Fear not, Zacharias"; "Joseph ... fear not"), names "thy wife", and names the son. The conception follows in the house of the husband.
+
+L2. The words for "conceive":
+- harah (H2029): "to be (or become) pregnant, conceive (literally or figuratively)".
+- syllambanō (G4815, Luke 1:24, 31, 36; 2:21): "to clasp, i.e. seize ... specially, to conceive (literally or figuratively)".
+- At Matthew 1:20 the KJV "conceived" is gennaō (G1080, margin "Gr. begotten"): "to procreate (properly, of the father, but by extension of the mother)".
+- At Romans 9:10, "conceived by one, [even] by our father Isaac" is koitē (G2845): "a couch; by extension, cohabitation; by implication, the male sperm". The text names the conception as the father's.
+
+Romans 9:10: "And not only [this]; but when Rebecca also had conceived by one, [even] by our father Isaac;"
+
+THE WHOLE COUNT. The canon (66 books) has 60 rows with "conceive", "conceived" or "conceiving". The 4 Apocrypha rows (2 Esdras 13:16; Sirach 16:20; Wisdom 7:15; Judith 9:9) are all of the mind.
+1. 33 rows narrate a woman's conception:
+   - Genesis 4:1, 4:17, 16:4, 16:5, 21:2, 25:21, 29:32-35, 30:5, 30:7, 30:17, 30:19, 30:23, 38:3-5, 38:18;
+   - Exodus 2:2; 1 Samuel 1:20, 2:21; 2 Samuel 11:5; 2 Kings 4:17; 1 Chronicles 7:23; Isaiah 8:3; Hosea 1:3, 1:6, 1:8;
+   - Luke 1:24, 1:36; Romans 9:10; Hebrews 11:11.
+   In every one, a man is at the conception, named in the row or in its chain. In two of them the woman was not his wife:
+   - Genesis 38:18, Judah and Tamar: "came in unto her, and she conceived by him";
+   - 2 Samuel 11:5, David and Bathsheba ("he lay with her", 11:4).
+   At Isaiah 8:3 the text says "I went unto the prophetess [went: Heb. approached]".
+2. 7 rows announce a conception and do not tell the means: Isaiah 7:14; Judges 13:3, 5, 7; Luke 1:31; Luke 2:21; Matthew 1:20. In Judges 13 the woman is "his wife" (13:2, Manoah). In Matthew 1:20 she is "Mary thy wife".
+3. 4 rows are of cattle (Genesis 30:38, 39, 41; 31:10). At 31:10, "the rams which leaped upon the cattle".
+4. 2 rows are laws for a man's wife or a woman (Leviticus 12:2; Numbers 5:28).
+5. 4 rows name a mother who conceived (Job 3:3; Psalm 51:5; Song of Solomon 3:4; Hosea 2:5).
+6. 10 rows are of the mind (Numbers 11:12; Job 15:35; Psalm 7:14; Isaiah 33:11; 59:4; 59:13; Jeremiah 49:30; Ezekiel 38:10 margin; Acts 5:4; James 1:15).
+
+No row in the canon gives a woman's conception without a man.
+
+## Change C: new [L4] point (5)
+
+(5) In every row where scripture tells how a woman conceived, a man came in unto her. Where it says the LORD gave the conception, the husband stands in the same row or its chain:
+- "when he went in unto her, the LORD gave her conception" (Ruth 4:13);
+- "Elkanah knew Hannah his wife; and the LORD remembered her" (1 Samuel 1:19).
+
+The LORD's hand named at a conception never removes the husband. Matthew 1:20 carries both in one row: God's part ("of the Holy Ghost") and the husband ("Joseph, thou son of David ... Mary thy wife"). Read precept upon precept (Isaiah 28:10), "conceived ... of the Holy Ghost" says the child was conceived. It does not say the Holy Ghost impregnated her. That reading has no row in scripture.
+
+## OPEN for the graders (must be answered before the operator's card)
+
+1. Romans 9:10 uses ek (G1537) with the conception: "conceived by (ek) one, our father Isaac". Matthew 1:20 uses the same ek: "of (ek) the Holy Ghost". Sight 10 reads ek + God/Spirit as covenant origin.
+   - An opponent will set Romans 9:10 against Sight 10 and say that ek with a conception names the begetter.
+   - The two rows use different verbs: koitē at Romans 9:10, gennaō at Matthew 1:20.
+   - The graders must say whether Change B and Change C hold whole with Sight 10 and DG-8 (DG-59: none cancels another), or whether Romans 9:10 needs its own line.
+2. Luke 1:34, "seeing I know not a man", is held by Sight 32 (present state, not a vow). The graders must say whether Change C must cite Sight 32.
+3. Size: the summary is 9,261 characters now. Changes A to C add about 3,500.
