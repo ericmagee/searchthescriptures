@@ -34,6 +34,12 @@ if '--write' not in sys.argv: sys.exit()
 req(URL,'PUT',{'name':live['name'],'nodes':T['nodes'],'connections':T['connections'],'settings':live['settings']})
 back=req(URL);KN={x['name']:x for x in back['nodes']};fail=['param '+x['name'] for x in T['nodes'] if js(x['parameters'])!=js(KN.get(x['name'],{}).get('parameters'))]
 if js(back['connections'])!=js(T['connections']): fail.append('connections')
+if '--topology' in sys.argv:  # ASK 382 (advisor/W check): an added node is read back whole, every key the target gives (credentials, executeOnce, retry, onError, alwaysOutputData, position)
+  for n in ADD:
+    t=TN[n];b=KN.get(n)
+    if b is None: fail.append('missing '+n);continue
+    for k in t:
+      if js(t[k])!=js(b.get(k)): fail.append('added node '+n+' key '+k)
 if back.get('activeVersionId')!=back.get('versionId') or not back.get('active'): fail.append('NOT PUBLISHED')
 json.dump(back,open(D+'fetchback_'+tag+'.json','w'))
 print('back',back.get('versionId'),len(KN),'FAIL' if fail else 'READBACK OK',fail[:10])

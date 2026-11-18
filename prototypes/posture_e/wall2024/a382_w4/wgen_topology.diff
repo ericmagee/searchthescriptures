@@ -13,3 +13,10 @@
 >   print('ADDED',ADD)
 > else: assert js(TG['connections'])==js(live['connections']),'connections differ'
 > diff=[a['name'] for a,b in zip(live['nodes'],T['nodes']) if js(a)!=js(b)];print('diff',diff)  # added nodes are listed by ADDED
+27a37,42
+> if '--topology' in sys.argv:  # ASK 382 (advisor/W check): an added node is read back whole, every key the target gives (credentials, executeOnce, retry, onError, alwaysOutputData, position)
+>   for n in ADD:
+>     t=TN[n];b=KN.get(n)
+>     if b is None: fail.append('missing '+n);continue
+>     for k in t:
+>       if js(t[k])!=js(b.get(k)): fail.append('added node '+n+' key '+k)

@@ -41,3 +41,9 @@ const o6=run(code(T,'L2 Count Plan'),{'L2 Gloss Plan':plan,'L2 Gloss Read':R6,'L
 console.log('PLANT 6 (ceiling, 12,000 rows): pages planned',n6.length,'offsets',n6[0].offset+'..'+n6[n6.length-1].offset,'|',gl(o6).filter(x=>/^H1121 /.test(x)).join(' || '));
 // bound: reads and rows
 const readsWorst=30*10,rowsPeak=A.PP.length*1000;console.log('BOUND: at most 30 numbers x 10 pages = '+readsWorst+' ren reads a run; this replay: '+P.filter(p=>p.k==='ren').length+' first pages + '+A.PP.length+' further pages; rows held in L2 Count Plan for H1 and H1121: '+(FULL.H1.length+4836));
+// DoD 5 evidence (W1 8392, W2 8393): the whole gloss record for H1 and H1121, live and target, and the rendering rows behind each FOUND
+const rec=(out,n)=>out[0].json.e340.gloss.filter(g=>g.num===n);
+for(const n of ['H1','H1121']){console.log('EVIDENCE',n,'live  :',JSON.stringify(rec(run(code(L,'L2 Count Plan'),{}),n)));console.log('EVIDENCE',n,'target:',JSON.stringify(rec(A.out,n)));
+ const rows=FULL[n];const by={};for(const r of rows){const w=String(r.kjv_word||'').toLowerCase().replace(/[^a-z' -]/g,'');by[w]=(by[w]||0)+1;}
+ console.log('EVIDENCE',n,'renderings over all',rows.length,'rows (word: rows):',Object.entries(by).sort((a,b)=>b[1]-a[1]).map(([w,c])=>w+': '+c).join(', '));
+ const part=n==='H1'?'father':'son';const hits=rows.filter(r=>String(r.kjv_word).toLowerCase()===part);console.log('EVIDENCE',n,'rows rendered "'+part+'":',hits.length,'| first in id order:',hits.slice(0,3).map(r=>r.book+' '+r.chapter+':'+r.verse+' w'+r.word_position).join('; '),'| rows of it in the first page alone:',rows.slice(0,1000).filter(r=>String(r.kjv_word).toLowerCase()===part).length);}
