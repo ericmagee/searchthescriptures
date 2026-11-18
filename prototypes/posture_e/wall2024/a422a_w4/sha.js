@@ -9,3 +9,9 @@ const __SHA422=(s)=>{const u=[];for(let i=0;i<s.length;i++){let c=s.charCodeAt(i
   H[0]=(H[0]+a)>>>0;H[1]=(H[1]+b)>>>0;H[2]=(H[2]+c)>>>0;H[3]=(H[3]+d)>>>0;H[4]=(H[4]+e)>>>0;H[5]=(H[5]+f)>>>0;H[6]=(H[6]+g)>>>0;H[7]=(H[7]+h)>>>0;}
  return H.map(x=>x.toString(16).padStart(8,'0')).join('');};
 const __LIBSHA422=(code)=>{const s=String(code||'');const a=s.indexOf('\n/*LIB*/'),b=s.indexOf('\n/*MAP*/');if(a<0||b<a)return null;try{return __SHA422(JSON.stringify(JSON.parse(s.slice(a+8,b)))).slice(0,16);}catch(e){return null;}}; /* never throws: an unreadable library gives null, which the child check refuses */
+/* ASK 422(a) rev 3 item 10-11: map_sha = first 16 hex of SHA-256(JSON.stringify([[key, entry], ...])) over the child MAP keys in sorted order,
+   each entry from this workflow's own MAP. The engine takes its own keys less the named engine-only list (__MAPEXTRA422), and gives null unless every
+   listed key is present; so a child key missing from the engine, an unlisted engine-only key, or one changed shared entry gives a different map_sha. */
+const __MAPEXTRA422=["REFP"];
+const __MAPSHA422=(code,side)=>{const s=String(code||'');const a=s.lastIndexOf('\n/*MAP*/'),b=s.lastIndexOf('\n/*END*/');if(a<0||b<a)return null;try{const M=JSON.parse(s.slice(a+8,b));let k=Object.keys(M);
+ if(side==='engine'){if(!__MAPEXTRA422.every(x=>k.includes(x)))return null;k=k.filter(x=>!__MAPEXTRA422.includes(x));}return __SHA422(JSON.stringify(k.sort().map(x=>[x,M[x]]))).slice(0,16);}catch(e){return null;}}; /* never throws */

@@ -10,6 +10,8 @@ Checks:
  2. VERSIONS: the live engine and child versionIds equal the ones given (the readback-matched versions of the last write), and each is active
     and published (activeVersionId equals versionId).
  3. LIBRARY (ASK 422(a) item 8): lib_sha of the engine and the child bodies are equal, and each equals the sha its own header names.
+    map_sha (ASK 422(a) rev 3 item 10-11) of the engine and the child are equal: the child's MAP keys sorted, the engine's less MAPEXTRA ['REFP'],
+    which the engine must hold; a changed shared entry, a child key missing from the engine, or an unlisted engine-only key differs.
  4. ONE COPY (ASK 385): a385/reg385.cjs passes on the live pair (skipped with --no385, which is printed).
  5. BODY: the body file parses; it has defender {engine, profile}, challenger {engine, profile} and a non-empty topic, and no other key;
     which seats may debate is the start webhook's own check, not repeated here; with --body-sha, the file's sha256 starts with the given prefix (the released body).
@@ -24,6 +26,13 @@ def libsha(w):
   c=[n for n in w['nodes'] if n['name']=='Shared Library'][0]['parameters']['jsCode'];a=c.index('\n/*LIB*/')+8;b=c.index('\n/*MAP*/')
   s=hashlib.sha256(json.dumps(json.loads(c[a:b]),ensure_ascii=False,separators=(',',':')).encode('utf-8')).hexdigest()[:16]
   h=re.search(r'library sha ([0-9a-f]{16})',c[:a]);return s,(h.group(1) if h else None)
+MAPEXTRA=['REFP']
+def mapsha(w,side):
+  c=[n for n in w['nodes'] if n['name']=='Shared Library'][0]['parameters']['jsCode'];M=json.loads(c[c.rindex('\n/*MAP*/')+8:c.rindex('\n/*END*/')]);k=list(M)
+  if side=='engine':
+    if not all(x in k for x in MAPEXTRA): return None
+    k=[x for x in k if x not in MAPEXTRA]
+  return hashlib.sha256(json.dumps([[x,M[x]] for x in sorted(k)],ensure_ascii=False,separators=(',',':')).encode('utf-8')).hexdigest()[:16]
 bad=[];ok=[]
 def chk(cond,good,fail): (ok if cond else bad).append(good if cond else fail)
 want={'engine':arg('--engine'),'child':arg('--child')};body=arg('--body')
@@ -52,6 +61,11 @@ for k in WF:
   except Exception as e: S[k]=('unreadable','?');bad.append('3 %s LIBRARY UNREADABLE: %s'%(k,str(e)[:100]))
 chk(S['engine'][0]==S['child'][0],'3 library sha equal %s'%S['engine'][0],'3 LIBRARY DIFFERS: engine %s, child %s'%(S['engine'][0],S['child'][0]))
 for k in WF: chk(S[k][0]==S[k][1],'3 %s header names its sha'%k,'3 %s HEADER names %s, body is %s'%(k,S[k][1],S[k][0]))
+MS={}
+for k in WF:
+  try: MS[k]=mapsha(W[k],k)
+  except Exception as e: MS[k]='unreadable';bad.append('3 %s MAP UNREADABLE: %s'%(k,str(e)[:100]))
+chk(MS['engine'] is not None and MS['engine']==MS['child'],'3 map_sha equal %s'%MS['engine'],'3 MAP DIFFERS: engine %s, child %s'%(MS['engine'] or 'none (an engine-only listed key is missing)',MS['child']))
 # 4 one copy
 if '--no385' in A: ok.append('4 ASK 385 check SKIPPED (--no385)')
 else:

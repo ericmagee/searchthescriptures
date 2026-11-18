@@ -12,6 +12,8 @@
 == g. child library one line drifted: exit 1, REFUSED (2)
    FAIL  3 LIBRARY DIFFERS: engine 7b1cd78b3c25da5c, child ed453db91725e9f0
    FAIL  3 child HEADER names 7b1cd78b3c25da5c, body is ed453db91725e9f0
+== g2. child MAP one entry changed, library lines equal (ASK 422(a) rev 3): exit 1, REFUSED (1)
+   FAIL  3 MAP DIFFERS: engine f02f306459eb63ff, child 57ce535c28000c50
 == h. body with an extra key: exit 1, REFUSED (1)
    FAIL  5 BODY KEYS ['challenger', 'defender', 'extra', 'topic'], expected defender, challenger, topic
 == i. body without a topic: exit 1, REFUSED (2)
