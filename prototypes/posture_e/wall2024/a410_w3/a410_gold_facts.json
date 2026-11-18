@@ -4,7 +4,7 @@
  "source": "debate_enforcer_log.prompt_sent of each enforcer_row (rule E-ASSUME): the premise block '######## DEFENDER PREMISE n ...' with its ASSUMES, ROWS GIVE and THE ANSWERING BLOCK. Read the block from the DB by enforcer_row; the 'assumes' text here is the ASSUMES line, with markup removed.",
  "unit": "one premise. Each labeler gives one label per premise, independently, before seeing any model output or the other labeler's labels.",
  "labels": {
-  "STATED": "every fact the ASSUMES names is given by verse words the answering block quotes (one verse, or several verses read together, precept upon precept). Only quoted verse words count: the side's own sentences, the ROWS GIVE line, and the block's reasoning do not.",
+  "STATED": "every fact the ASSUMES names is given by verse words the answering block quotes (one verse, or several verses read together, precept upon precept). Only quoted verse words count: the side's own sentences, the ROWS GIVE line, and the block's reasoning do not. The verse words may give the fact in other words (in sense), as long as the words themselves say it; a fact that needs a step of reasoning from the words is NOT STATED.",
   "NOT STATED": "at least one fact the ASSUMES names is given by no verse words the block quotes; the block reaches it only by its own reasoning, or not at all.",
   "INFERRED ACT": "every fact the ASSUMES names is an inferred act (such as a begetting or a knowing), which the rule says is never an ASSUMES."
  },
@@ -812,5 +812,6 @@
    "gold_W1": null,
    "gold_W2": null
   }
- ]
+ ],
+ "why_premise_unit": "A model splits facts its own way, so facts cannot be matched one to one across models. The premise is the unit pkgBNS acts on (any fact BOTH NOT STATED on the premise). The denominator for wrong-if G is 72 premises plus 5 plants."
 }
