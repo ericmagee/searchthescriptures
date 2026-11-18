@@ -1,0 +1,46 @@
+== 405 PLANT: A G pair whose word spells a row of a bound Old Testament verse (W1 8723)
+  live output unchanged: true | {"lines":1,"marks":1,"changed":1,"reworded":0,"pair_fail":0,"pair_pass":0}
+  CHANGE CR1 IGNORED -> NOT COUNTED (today: none; re-read: G1254)
+== 405 PLANT: Both spans hold tag words (W2 8724): reads as today
+  live output unchanged: true | {"lines":0,"marks":0,"changed":0,"reworded":0,"pair_fail":0,"pair_pass":1}
+== 405 PLANT: A pair that is one row in a bound verse passes
+  live output unchanged: true | {"lines":1,"marks":1,"changed":1,"reworded":0,"pair_fail":0,"pair_pass":1}
+  CHANGE CR1 IGNORED -> COUNTED (today: none; re-read: G1097, ginosko)
+== 405 PLANT: First [L2] preceded only by another [L] mark with no tag word between (limit, W1 8723 A3): reads as today
+  live output unchanged: true | {"lines":0,"marks":0,"changed":0,"reworded":0,"pair_fail":0,"pair_pass":0}
+== 405 PLANT: Mark after its claim, two marks on one line (8722 A2b form)
+  live output unchanged: true | {"lines":1,"marks":2,"changed":1,"reworded":1,"pair_fail":0,"pair_pass":2}
+  CHANGE CR1 COUNTED -> COUNTED (today: H3610; re-read: H7250)
+  CHANGE CR1 IGNORED -> COUNTED (today: none; re-read: H3610)
+== 406 PLANT: word (Gnnnn), meaning "gloss"
+  tags unchanged: true | live glosses: 0 | target glosses: 1 (new form 1)
+  GLOSS sarx G4561 parts: body | meat
+  E340 G4561 "body" LEXICON WORDING
+  E340 G4561 "meat" LEXICON WORDING
+== 406 PLANT: word (Gnnnn), "gloss"
+  tags unchanged: true | live glosses: 0 | target glosses: 1 (new form 1)
+  GLOSS sarx G4561 parts: body | meat
+  E340 G4561 "body" LEXICON WORDING
+  E340 G4561 "meat" LEXICON WORDING
+== 406 PLANT: word (Gnnnn): "gloss"
+  tags unchanged: true | live glosses: 0 | target glosses: 1 (new form 1)
+  GLOSS sarx G4561 parts: body | meat
+  E340 G4561 "body" LEXICON WORDING
+  E340 G4561 "meat" LEXICON WORDING
+== 406 PLANT: word Gnnnn "gloss", no parentheses
+  tags unchanged: true | live glosses: 0 | target glosses: 1 (new form 1)
+  GLOSS sarx G4561 parts: body | meat
+  E340 G4561 "body" LEXICON WORDING
+  E340 G4561 "meat" LEXICON WORDING
+== 406 PLANT: a parenthesis inside the quoted gloss
+  tags unchanged: true | live glosses: 0 | target glosses: 1 (new form 1)
+  GLOSS ginosko G1097 parts: know absolutely | perceive
+  E340 G1097 "know absolutely" FOUND
+  E340 G1097 "perceive" FOUND
+== 406 PLANT: today's form word (Gnnnn, gloss) is unchanged
+  tags unchanged: true | live glosses: 1 | target glosses: 1 (new form 0)
+  GLOSS sarx G4561 parts: body | meat
+  E340 G4561 "body" LEXICON WORDING
+  E340 G4561 "meat" LEXICON WORDING
+== 406 PLANT: a quote that does not follow at once is not read
+  tags unchanged: true | live glosses: 0 | target glosses: 0 (new form 0)
