@@ -1,0 +1,38 @@
+// ASK 394 part 2 shim: each site's s262 regex (old) against the proposed reader role (new), over a pool of stored lines, both directions.
+const fs=require('fs');const mk=t=>new Function(t+';return __RL;')();
+const RL=mk(fs.readFileSync(__dirname+'/rl_1.js','utf8')),RI=mk(fs.readFileSync(__dirname+'/rl_0.js','utf8'));
+const rd=(R,l)=>{try{const r=R.readLine(String(l==null?'':l));return r&&r.form&&r.f&&!r.f.restated?r:null;}catch(e){return null;}}; // = ri5Rd2024
+const col=(R,l,gr)=>{const r=rd(R,l);if(r&&r.form==='COLLISION'&&r.f.pair&&gr.includes(r.f.grade)){const p=String(r.f.pair).match(/^(D\d+)\s+vs\.?\s+(C\d+)$/i);if(p)return {pair:p[1].toUpperCase()+' vs '+p[2].toUpperCase(),grade:r.f.grade};}return null;};
+const ls=(R,l,gr)=>{const r=rd(R,l);if(r&&r.form==='LINK STATE'&&/^D\d+$/i.test(r.f.link||'')&&gr.includes(r.f.grade))return {link:r.f.link.toUpperCase(),grade:r.f.grade};return null;};
+const S=s=>String(s==null?'':s).replace(/[*_`]+/g,'');const P=(a,b)=>a.toUpperCase()+' vs '+b.toUpperCase();
+const DLB='DEFENDER LINK BROKEN',CLB='CHALLENGER LINK BROKEN',UND='UNDERDETERMINED';
+const SITES={
+ '1 __UD':{R:RI,old:l=>{const m=l.match(/^[\s>*_-]*(D\d+)\s+vs\.?\s+(C\d+)\b[^\n]{0,200}?:\s*\**\s*UNDERDETERMINED\b/i);return m?P(m[1],m[2]):null;},nu:(R,l)=>{const c=col(R,l,[UND]);return c?c.pair:null;}},
+ '2 COL':{R:RI,old:l=>{const m=S(l.trim()).match(/^[\s>*_-]*(?:\d+[.)]\s*)?\**\s*(D\d+)\s+vs\.?\s+(C\d+)\b[^\n]{0,200}?:\s*\**\s*(STANDS|UNDERDETERMINED)\b/i);return m?P(m[1],m[2])+'|'+m[3].toUpperCase():null;},nu:(R,l)=>{const t=l.trim();const c=col(R,t,[UND]);if(c)return c.pair+'|'+c.grade;const s=ls(R,t,['STANDS']);return s?s.link+'|STANDS':null;}},
+ '3 g':{R:RI,old:l=>{const t=S(l).trim();const m=t.match(/^D(\d+)\s+vs\.?\s+C(\d+)\b/i),g=(t.match(/^D\d+\s+vs\.?\s+C\d+\s*(?:\([^)]*\))?\s*:\s*(DEFENDER|CHALLENGER) LINK BROKEN\b/)||[])[1];return m&&g?'D'+m[1]+' vs C'+m[2]+'|'+g:null;},nu:(R,l)=>{const c=col(R,S(l).trim(),[DLB,CLB]);return c?c.pair+'|'+c.grade.split(' ')[0]:null;}},
+ '4 G2':{R:RI,old:l=>{const t=S(l).trim();return /^\s*(?:[-•*]\s*|\d+[.)]\s*)?\**D\d+\s+vs\.?\s+C\d+\b(?:\s*\([^)\n]*\))?[^:\n(]*:\s*\**(?:DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN)\b/.test(t)?'Y':null;},nu:(R,l)=>col(R,S(l).trim(),[DLB,CLB])?'Y':null},
+ '5 GR3':{R:RL,old:l=>{const t=S(l).trim();if(!t||/^\[(?:AUDIT|EXTRACTOR)\b/.test(t)||/^(?:DEFENSE|CHALLENGE) STANDING\s*:/.test(t))return null;const o=[...t.matchAll(/\b(D\d+)\s+vs\.?\s+(C\d+)\b(?:\s*\([^)\n]{0,80}\))?\s*:\s*\**\s*(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|STANDS|HELD|BROKEN|COLLISION)\b/g)].map(m=>P(m[1],m[2])+'|'+m[3]);return o.length?o.join(';'):null;},nu:(R,l)=>{const t=S(l).trim();if(!t||/^\[(?:AUDIT|EXTRACTOR)\b/.test(t))return null;const c=col(R,t,[DLB,CLB,UND]);return c?c.pair+'|'+c.grade:null;}},
+ '6 GR1':{R:RL,old:l=>/^\s*(?:[-•*]\s*|\d+[.)]\s*)?\**D\d+\s+vs\.?\s+C\d+\b(?:\s*\([^)\n]*\))?[^:\n(]*:\s*\**(?:DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|STANDS|WITHDRAWN)\b/.test(l)?'Y':null,nu:(R,l)=>col(R,l,[DLB,CLB,UND])?'Y':null},
+ '8 GRADED1':{R:RI,old:l=>{const ns=[...l.matchAll(/\bD(\d+)\s+vs/gi)].map(m=>m[1]);for(const n of ns){const m=l.match(new RegExp('\\bD'+n+'\\s+vs\\.?\\s+C\\d+\\b[^\\n]{0,200}?:\\s*\\**\\s*(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|WITHDRAWN AFTER)','i'));if(m)return 'D'+n;}return null;},nu:(R,l)=>{for(const x of String(l).split('\n')){const c=col(R,x,[DLB,CLB,UND]);if(c)return c.pair.split(' ')[0];}return null;}},
+ '9 hm':{R:RL,old:l=>{const t=S(l).trim();const m=t.match(/^(?:[-•]\s*|\d+[.)]\s*)?(D\d+\s+vs\.?\s+C\d+)\b[^\n]*?:\s*UNDERDETERMINED\b/i);return m?m[1].replace(/\s+vs\.?\s+/i,' vs ').toUpperCase().replace('VS','vs'):null;},nu:(R,l)=>{const c=col(R,S(l).trim(),[UND]);return c?c.pair:null;}},
+ '10 HOLD':{R:RI,old:l=>{const x=l.replace(/^[\s*\-•]+/,'');const m=x.match(/^([DC]\d+(?:\s*vs\.?\s*[DC]\d+)?)\s*(?:\([^)]*\))?\s*:\s*(STANDS|UNDERDETERMINED)\b/);if(!m||/LINK BROKEN/.test(x))return null;return m[1].replace(/\s+/g,' ').replace(/\s*vs\.?\s*/,' vs ')+'|'+m[2];},nu:(R,l)=>{const x=l.replace(/^[\s*\-•]+/,'');if(/LINK BROKEN/.test(x))return null;const c=col(R,x,[UND]);if(c)return c.pair+'|'+c.grade;const s=ls(R,x,['STANDS']);return s?s.link+'|STANDS':null;}},
+ '11 bnsSTANDS':{R:RL,old:l=>{const s=String(l).replace(/\\+/g,'').replace(/[*_`]+/g,'');const m=s.match(/^\s*(?:[-•]\s*|\d+[.)]\s*)?(?:FORCED(?:\s*\([^)]*\))?\s*:\s*)?D(\d+)\s+vs\.?\s+C\d+\b(?:\s*\([^)\n]*\))?[^:\n(]*:\s*STANDS\b/i);return m?'D'+m[1]:null;},nu:(R,l)=>{const s=String(l).replace(/\\+/g,'').replace(/[*_`]+/g,'');const x=ls(R,s,['STANDS']);return x?x.link:null;}},
+ '12 rudPair':{R:RL,old:l=>{const t=S(l).trim();const m=t.match(/^(?:[-•]\s*|\d+[.)]\s*)?(D\d+\s+vs\.?\s+C\d+)\b[^\n]*?:\s*UNDERDETERMINED\b/i);return m?m[1].replace(/\s+vs\.?\s+/i,' vs ').toUpperCase().replace('VS','vs'):null;},nu:(R,l)=>{const c=col(R,S(l).trim(),[UND]);return c?c.pair:null;}},
+ '13 brokenD':{R:RI,old:l=>{const x=l.replace(/^[\s*\-•]+/,'');const m=x.match(/^(?:FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*)?D(\d+)\s*(?:vs\.?\s*C\d+)?\s*(?:\([^)]*\))?\s*:\s*DEFENDER LINK BROKEN\b/);return m?'D'+m[1]:null;},nu:(R,l)=>{const x=l.replace(/^[\s*\-•]+/,'');const c=col(R,x,[DLB]);if(c)return c.pair.split(' ')[0];const k=ls(R,x,[DLB]);return k?k.link:null;}}, /* Wall 8242 (W1) / 8243 (W3): LINK STATE "D<i>: DEFENDER LINK BROKEN" also counts */
+ '14 pkgECG':{R:RL,old:l=>{const t=S(l).trim();const m=t.match(/^D(\d+)\s+vs\.?\s+C(\d+)\b\s*(?:\([^)]*\))?\s*:\s*(DEFENDER|CHALLENGER) LINK BROKEN\b/);return m?'D'+m[1]+' vs C'+m[2]+'|'+m[3]:null;},nu:(R,l)=>{const c=col(R,S(l).trim(),[DLB,CLB]);return c?c.pair+'|'+c.grade.split(' ')[0]:null;}},
+ '15 ri6':{R:RL,old:l=>{const r=rd(RL,l);if(r&&r.form==='COLLISION'&&r.f.pair&&[DLB,CLB,'WITHDRAWN'].includes(r.f.grade)){const p=String(r.f.pair).match(/^(D\d+)\s+vs\.?\s+(C\d+)$/i);if(p)return P(p[1],p[2]);}const m=String(l).match(/^\s*(?:[-•*]\s*|\d+[.)]\s*)?\**(D\d+)\s+vs\.?\s+(C\d+)\b(?:\s*\([^)\n]*\))?[^:\n(]*:\s*\**(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|WITHDRAWN)\b/);return m?P(m[1],m[2]):null;},nu:(R,l)=>{const c=col(R,l,[DLB,CLB]);return c?c.pair:null;}},
+};
+// pool
+const Lf=require('./lenient.cjs');const pool=new Map();const add=(l,src)=>{if(!l||!l.trim()||l.length>4000)return;if(!pool.has(l))pool.set(l,new Set());pool.get(l).add(src);};
+for(const j of require('./judall.json')){const t=Lf(j.verdict_raw);if(t)for(const l of t.r.split('\n'))add(l,'J'+j.id);}
+let E=[];try{E=require('./enf.json');}catch(e){}
+const tx=r=>String(r||'').replace(/\\n/g,'\n').replace(/\\"/g,'"');
+for(const e of E){for(const f of ['flagged_line','response_line','full_reply']){for(const l of tx(e[f]).split('\n')){add(l,'E'+e.id);const m=l.match(/^\s*(?:S\d+\s*[:.-]\s*)?CHANGE TO\s*:\s*(.+)$/i);if(m)add(m[1],'E'+e.id);}}}
+console.log('pool lines',pool.size,'(judgments 624, enforcer rows',E.length+')');
+const res={};
+for(const [name,s] of Object.entries(SITES)){const r={same:0,oldOnly:[],newOnly:[],differ:[],bothNull:0};
+ for(const [l,src] of pool){let o,n;try{o=s.old(l);}catch(e){o='ERR';}try{n=s.nu(s.R,l);}catch(e){n='ERR';}
+  if(o==null&&n==null){r.bothNull++;continue;}if(o===n){r.same++;continue;}const rec={l:l.slice(0,220),o,n,src:[...src].slice(0,4),nsrc:src.size};
+  if(n==null)r.oldOnly.push(rec);else if(o==null)r.newOnly.push(rec);else r.differ.push(rec);}
+ res[name]=r;console.log(name.padEnd(14),'same',r.same,'| old only (dropped by move)',r.oldOnly.length,'| new only (gained)',r.newOnly.length,'| both read, differ',r.differ.length);}
+fs.writeFileSync(__dirname+'/shim394.json',JSON.stringify(res,null,1));

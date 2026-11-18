@@ -27,7 +27,7 @@ const E=[ // [site, line-finder text, old, new]
  ['12 rudPair','const m=l.match(/^(?:[-•]\\s*|\\d+[.)]\\s*)?(D\\d+\\s+vs','const m=l.match(/^(?:[-•]\\s*|\\d+[.)]\\s*)?(D\\d+\\s+vs\\.?\\s+C\\d+)\\b[^\\n]*?:\\s*UNDERDETERMINED\\b/i);',
   "const m=(c=>c?[c[0],c[1]+' vs '+c[2]]:null)(ri6Col2024(l,"+NO+",["+UND+"])); /* ASK 394 site 12 */"],
  ['13 brokenD','const m=l.match(/^(?:FORCED(?:','const m=l.match(/^(?:FORCED(?:\\s*\\(\\s*Commitment\\s+\\d+\\s*\\))?\\s*:\\s*)?D(\\d+)\\s*(?:vs\\.?\\s*C\\d+)?\\s*(?:\\([^)]*\\))?\\s*:\\s*DEFENDER LINK BROKEN\\b/);',
-  "const m=(c=>c?[c[0],String(c[1]).slice(1)]:null)(ri6Col2024(l,"+NO+",["+DLB+"])); /* ASK 394 site 13 (rev 7): COLLISION graded DEFENDER LINK BROKEN */"],
+  "const m=(c=>c?[c[0],String(c[1]).slice(1)]:null)(ri6Col2024(l,"+NO+",["+DLB+"]))||((r=>r&&r.form==='LINK STATE'&&/^D\\d+$/i.test(String(r.f.link||''))&&r.f.grade==='DEFENDER LINK BROKEN'?[l,String(r.f.link).slice(1)]:null)(ri5Rd2024(l))); /* ASK 394 site 13 (rev 7; Wall 8240 ruling W1/W3): COLLISION graded DEFENDER LINK BROKEN, or LINK STATE \"D<i>: DEFENDER LINK BROKEN\" */"],
  ['14 pkgECG','t.match(/^D(\\d+)\\s+vs','t.match(/^D(\\d+)\\s+vs\\.?\\s+C(\\d+)\\b\\s*(?:\\([^)]*\\))?\\s*:\\s*(DEFENDER|CHALLENGER) LINK BROKEN\\b/)',
   "((c=>c?[c[0],String(c[1]).slice(1),String(c[2]).slice(1),String(c[3]).split(' ')[0]]:null)(ri6Col2024(t,"+NO+",["+DLB+","+CLB+"]))) /* ASK 394 site 14 */"],
  ['15 ri6','ri6Col2024(l,/^\\s*(?:[-•*]','ri6Col2024(l,/^\\s*(?:[-•*]\\s*|\\d+[.)]\\s*)?\\**(D\\d+)\\s+vs\\.?\\s+(C\\d+)\\b(?:\\s*\\([^)\\n]*\\))?[^:\\n(]*:\\s*\\**(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|WITHDRAWN)\\b/,[\'DEFENDER LINK BROKEN\',\'CHALLENGER LINK BROKEN\',\'WITHDRAWN\'])',
