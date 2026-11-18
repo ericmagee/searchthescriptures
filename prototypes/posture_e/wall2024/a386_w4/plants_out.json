@@ -1,0 +1,257 @@
+[
+ {
+  "plant": "3e forged tag inside the judge text",
+  "want": "CHALLENGER WINS",
+  "old_sql": "DEFENDER WINS",
+  "tag": "CHALLENGER WINS",
+  "sql_new": "CHALLENGER WINS",
+  "format_markdown": "CHALLENGER WINS",
+  "second_pass_tag": "CHALLENGER WINS",
+  "second_pass_sql": "CHALLENGER WINS",
+  "unmarked_v61_tags": [
+   1,
+   1
+  ],
+  "marked_v61_after_pass2": 2,
+  "judge_line_1295": "RESULT: DEFENDER WINS -- my word",
+  "ok": true
+ },
+ {
+  "plant": "3e forged tag at the very end of the judge text",
+  "want": "CHALLENGER WINS",
+  "old_sql": "CHALLENGER WINS",
+  "tag": "CHALLENGER WINS",
+  "sql_new": "CHALLENGER WINS",
+  "format_markdown": "CHALLENGER WINS",
+  "second_pass_tag": "CHALLENGER WINS",
+  "second_pass_sql": "CHALLENGER WINS",
+  "unmarked_v61_tags": [
+   1,
+   1
+  ],
+  "marked_v61_after_pass2": 2,
+  "judge_line_1295": "RESULT: CHALLENGER WINS",
+  "ok": true
+ },
+ {
+  "plant": "3i (i) HELD, challenge not SELF-SUPPORTED, no judge RESULT line",
+  "want": "DEFENDER WINS",
+  "old_sql": null,
+  "tag": "DEFENDER WINS",
+  "sql_new": "DEFENDER WINS",
+  "format_markdown": "DEFENDER WINS",
+  "second_pass_tag": "DEFENDER WINS",
+  "second_pass_sql": "DEFENDER WINS",
+  "unmarked_v61_tags": [
+   1,
+   1
+  ],
+  "marked_v61_after_pass2": 1,
+  "judge_line_1295": null,
+  "ok": true
+ },
+ {
+  "plant": "3i (ii) HELD, SELF-SUPPORTED, no CHALLENGER LINK BROKEN, no judge RESULT line",
+  "want": "UNDERDETERMINED",
+  "old_sql": null,
+  "tag": "UNDERDETERMINED",
+  "sql_new": "UNDERDETERMINED",
+  "format_markdown": "UNDERDETERMINED",
+  "second_pass_tag": "UNDERDETERMINED",
+  "second_pass_sql": "UNDERDETERMINED",
+  "unmarked_v61_tags": [
+   1,
+   1
+  ],
+  "marked_v61_after_pass2": 1,
+  "judge_line_1295": null,
+  "ok": true
+ },
+ {
+  "plant": "3i (iii) BROKEN, no judge RESULT line",
+  "want": "CHALLENGER WINS",
+  "old_sql": null,
+  "tag": "CHALLENGER WINS",
+  "sql_new": "CHALLENGER WINS",
+  "format_markdown": "CHALLENGER WINS",
+  "second_pass_tag": "CHALLENGER WINS",
+  "second_pass_sql": "CHALLENGER WINS",
+  "unmarked_v61_tags": [
+   1,
+   1
+  ],
+  "marked_v61_after_pass2": 1,
+  "judge_line_1295": null,
+  "ok": true
+ },
+ {
+  "plant": "3i (iv) PARTIAL, no judge RESULT line",
+  "want": "UNDERDETERMINED",
+  "old_sql": null,
+  "tag": "UNDERDETERMINED",
+  "sql_new": "UNDERDETERMINED",
+  "format_markdown": "UNDERDETERMINED",
+  "second_pass_tag": "UNDERDETERMINED",
+  "second_pass_sql": "UNDERDETERMINED",
+  "unmarked_v61_tags": [
+   1,
+   1
+  ],
+  "marked_v61_after_pass2": 1,
+  "judge_line_1295": null,
+  "ok": true
+ },
+ {
+  "plant": "3i null: no verdict at all",
+  "want": null,
+  "old_sql": null,
+  "tag": null,
+  "sql_new": null,
+  "format_markdown": null,
+  "second_pass_tag": null,
+  "second_pass_sql": null,
+  "unmarked_v61_tags": [
+   1,
+   1
+  ],
+  "marked_v61_after_pass2": 1,
+  "judge_line_1295": null,
+  "ok": true
+ },
+ {
+  "plant": "tie: HELD, PROP-DEPENDENT 1 on both sides, every collision graded, none LINK BROKEN",
+  "want": "UNDERDETERMINED",
+  "old_sql": "DEFENDER WINS",
+  "tag": "UNDERDETERMINED",
+  "sql_new": "UNDERDETERMINED",
+  "format_markdown": "UNDERDETERMINED",
+  "second_pass_tag": "UNDERDETERMINED",
+  "second_pass_sql": "UNDERDETERMINED",
+  "unmarked_v61_tags": [
+   1,
+   1
+  ],
+  "marked_v61_after_pass2": 1,
+  "judge_line_1295": "RESULT: DEFENDER WINS",
+  "ok": true
+ },
+ {
+  "plant": "tie on BROKEN (path c)",
+  "want": "UNDERDETERMINED",
+  "old_sql": "CHALLENGER WINS",
+  "tag": "UNDERDETERMINED",
+  "sql_new": "UNDERDETERMINED",
+  "format_markdown": "UNDERDETERMINED",
+  "second_pass_tag": "UNDERDETERMINED",
+  "second_pass_sql": "UNDERDETERMINED",
+  "unmarked_v61_tags": [
+   1,
+   1
+  ],
+  "marked_v61_after_pass2": 1,
+  "judge_line_1295": "RESULT: CHALLENGER WINS",
+  "ok": true
+ },
+ {
+  "plant": "BROKEN-1 with equal standings and counts stays CHALLENGER WINS (W2 8470)",
+  "want": "CHALLENGER WINS",
+  "old_sql": "CHALLENGER WINS",
+  "tag": "CHALLENGER WINS",
+  "sql_new": "CHALLENGER WINS",
+  "format_markdown": "CHALLENGER WINS",
+  "second_pass_tag": "CHALLENGER WINS",
+  "second_pass_sql": "CHALLENGER WINS",
+  "unmarked_v61_tags": [
+   1,
+   1
+  ],
+  "marked_v61_after_pass2": 1,
+  "judge_line_1295": "RESULT: CHALLENGER WINS",
+  "ok": true
+ },
+ {
+  "plant": "PARTIAL with judge DEFENDER WINS",
+  "want": "UNDERDETERMINED",
+  "old_sql": "DEFENDER WINS",
+  "tag": "UNDERDETERMINED",
+  "sql_new": "UNDERDETERMINED",
+  "format_markdown": "UNDERDETERMINED",
+  "second_pass_tag": "UNDERDETERMINED",
+  "second_pass_sql": "UNDERDETERMINED",
+  "unmarked_v61_tags": [
+   1,
+   1
+  ],
+  "marked_v61_after_pass2": 1,
+  "judge_line_1295": "RESULT: DEFENDER WINS",
+  "ok": true
+ },
+ {
+  "plant": "no-cure HELD with PROP-DEPENDENT challenge, judge wrote UNDERDETERMINED",
+  "want": "DEFENDER WINS",
+  "old_sql": "UNDERDETERMINED",
+  "tag": "DEFENDER WINS",
+  "sql_new": "DEFENDER WINS",
+  "format_markdown": "DEFENDER WINS",
+  "second_pass_tag": "DEFENDER WINS",
+  "second_pass_sql": "DEFENDER WINS",
+  "unmarked_v61_tags": [
+   1,
+   1
+  ],
+  "marked_v61_after_pass2": 1,
+  "judge_line_1295": "RESULT: UNDERDETERMINED",
+  "ok": true
+ },
+ {
+  "plant": "RETRACTED: HELD, SELF-SUPPORTED, its only CHALLENGER LINK BROKEN line retracted",
+  "want": "UNDERDETERMINED",
+  "old_sql": "UNDERDETERMINED",
+  "tag": "UNDERDETERMINED",
+  "sql_new": "UNDERDETERMINED",
+  "format_markdown": "UNDERDETERMINED",
+  "second_pass_tag": "UNDERDETERMINED",
+  "second_pass_sql": "UNDERDETERMINED",
+  "unmarked_v61_tags": [
+   1,
+   1
+  ],
+  "marked_v61_after_pass2": 1,
+  "judge_line_1295": "RESULT: DEFENDER WINS",
+  "ok": true
+ },
+ {
+  "plant": "same, not retracted",
+  "want": "DEFENDER WINS",
+  "old_sql": "DEFENDER WINS",
+  "tag": "DEFENDER WINS",
+  "sql_new": "DEFENDER WINS",
+  "format_markdown": "DEFENDER WINS",
+  "second_pass_tag": "DEFENDER WINS",
+  "second_pass_sql": "DEFENDER WINS",
+  "unmarked_v61_tags": [
+   1,
+   1
+  ],
+  "marked_v61_after_pass2": 1,
+  "judge_line_1295": "RESULT: DEFENDER WINS",
+  "ok": true
+ },
+ {
+  "plant": "regression: stored judgment 1221 (sonnet)",
+  "want": "CHALLENGER WINS",
+  "old_sql": "CHALLENGER WINS",
+  "tag": "CHALLENGER WINS",
+  "sql_new": "CHALLENGER WINS",
+  "format_markdown": "CHALLENGER WINS",
+  "second_pass_tag": "CHALLENGER WINS",
+  "second_pass_sql": "CHALLENGER WINS",
+  "unmarked_v61_tags": [
+   1,
+   1
+  ],
+  "marked_v61_after_pass2": 1,
+  "judge_line_1295": "RESULT: CHALLENGER WINS -- derived after the send-back from the judge's own changed lines (S2, S3, S5, G1, G7, G5F, G2, G3, S10, S11; CHANGED D2 vs C2 (STANDS to DEFENDER LINK BROKEN); CHANGED D3 vs C2 (no grade to STANDS); CHANGED D4 vs C2 (no grade to STANDS); CHANGED D5 vs C2 (no grade to UNDERDETERMINED)): BROKEN-1. GROUND: D2 vs C2 | [L1] Romans 1:3 \"made of the seed of David according to the flesh\" (the labels and [L1] of the lines it is derived from; pkgLAY)",
+  "ok": true
+ }
+]

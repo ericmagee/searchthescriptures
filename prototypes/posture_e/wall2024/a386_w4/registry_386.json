@@ -1,0 +1,62 @@
+{
+ "names": [
+  "psGrades",
+  "REFP",
+  "ackFoot2024",
+  "ackForm2024",
+  "unxAcFail",
+  "unxaCheck",
+  "lbFoot",
+  "ri5Rd2024",
+  "ri6Col2024",
+  "__RL",
+  "rd386",
+  "ert386",
+  "rcLines",
+  "cureJText"
+ ],
+ "accepted": [
+  {
+   "name": "psGrades",
+   "sha_a": "6d76a01adf18",
+   "sha_b": "8de08f33d202",
+   "reason": "live s262: text B (the 3 Send Back Record stubs) lacks pkgRI3B and pkgPSQ; merge waits on W2's replay condition",
+   "wall": "Wall 8086, 8087"
+  },
+  {
+   "name": "psGrades",
+   "sha_a": "d81bef05e71e",
+   "sha_b": "3468bff70fd5",
+   "reason": "ASK 381 target t381/c381: both texts carry the ASK 381 fix; the A/B difference is unchanged",
+   "wall": "Wall 8085"
+  },
+  {
+   "name": "__RL",
+   "sha_a": "0f43c34b3f94",
+   "sha_b": "3be38199f953",
+   "reason": "live before ASK 394: 30 node copies are older than the 66 library copies (library adds K-kind RETRACTED, PRESSED and SHORT pipe forms, C-vs-D reversal); 394 adds no copy; merge is ASK 395",
+   "wall": "Wall 8242, 8243, 8246"
+  },
+  {
+   "name": "REFP",
+   "sha_a": "00d90255b2e3",
+   "sha_b": "3f80dae54ad4",
+   "reason": "ASK 384 (Wall 8405, 8419): trimmed copies (BK and BOOKS only, no keys, parse or book call): Quote Report keeps the old BARE line, the 16 library stubs carry the new BARE line from the shared library lines; the full copy 00d90255b2e3 is the ASK 384 reader. Quote Report moves under the second card",
+   "wall": "Wall 8126, 8405, 8419"
+  },
+  {
+   "name": "REFP",
+   "sha_a": "00d90255b2e3",
+   "sha_b": "7aa185e3802e",
+   "reason": "ASK 384 (Wall 8405, 8419): trimmed copies (BK and BOOKS only, no keys, parse or book call): Quote Report keeps the old BARE line, the 16 library stubs carry the new BARE line from the shared library lines; the full copy 00d90255b2e3 is the ASK 384 reader. Quote Report moves under the second card",
+   "wall": "Wall 8126, 8405, 8419"
+  },
+  {
+   "name": "REFP",
+   "sha_a": "3f80dae54ad4",
+   "sha_b": "7aa185e3802e",
+   "reason": "ASK 384 (Wall 8405, 8419): trimmed copies (BK and BOOKS only, no keys, parse or book call): Quote Report keeps the old BARE line, the 16 library stubs carry the new BARE line from the shared library lines; the full copy 00d90255b2e3 is the ASK 384 reader. Quote Report moves under the second card",
+   "wall": "Wall 8126, 8405, 8419"
+  }
+ ]
+}

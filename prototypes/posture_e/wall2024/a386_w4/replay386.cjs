@@ -20,7 +20,8 @@ for(const j of J){const raw=j.v;let F={};try{const a=raw.indexOf('{');const b=K.
  const head=F;if(DB[j.id]){F=DB[j.id];if(head.verdict_tag!==F.verdict_tag)inc('head verdict differs from column');}
  const t=K.cureJText(raw,true);const P=K.rcLines(t);const bodyRes=String(t).split('\n').map(l=>l.replace(/[*_`]+/g,'').trim()).filter(l=>/^RESULT\s*:/i.test(l));
  const bw=P.result?((P.result.u.match(/^RESULT\s*:\s*(DEFENDER WINS|CHALLENGER WINS|UNDERDETERMINED)/)||[])[1]||null):null;
- const d=rd386({verdict:F.verdict_tag,cst:F.challenge_standing,dst:F.defense_standing,cd:F.conceded_links,cc:F.challenger_conceded_links,col:P.col});
+ const rm=raw.match(/\[AUDIT v21: CORRECTED RESULT -- SEAT: ([^;\]]*); ORIGINAL: \w+; COUNTED: \w+ \([A-Z]+-\d\)(?:; RETRACTED: ([^\]]*))?\]/);const RET=(rm&&rm[1]===j.seat&&rm[2]&&rm[2].trim()!=='none')?rm[2].split(/\s*,\s*/).map(x=>x.trim().toUpperCase()):[];const colR=P.col.filter(c=>!RET.includes(String(c.link).toUpperCase()));if(colR.length!==P.col.length)inc('retracted lines excluded');
+ const d=rd386({verdict:F.verdict_tag,cst:F.challenge_standing,dst:F.defense_standing,cd:F.conceded_links,cc:F.challenger_conceded_links,col:colR});
  const s=sqlWord(raw,j.seat,F.challenge_standing);const unread=P.col.filter(z=>!z.grade).length;
  const eng=/recomputed after the cure|derived after the send-back/i.test(P.result?P.result.raw:'');const v25=/\[AUDIT v25:/.test(raw),v37=/\[AUDIT v37:/.test(raw);
  const path=v37?'b':v25?'a':'c';
