@@ -25,3 +25,8 @@ REVOKE EXECUTE on engine_manual_apply FROM PUBLIC, anon, authenticated (end of a
 
 ## After the card (prod)
 pg_proc readback of the three signatures; test 1; test 2 on a Wall root opened for the test (not 2024 or 8816); test 3 on that root; test 6 above.
+
+## W4 8854 notes, recorded
+- N1. A write through engine_manual_apply fires trg_engine_manual_audit (engine_manual_guard writes audit_log), which needs truth.session_id.
+  The function does not set it, so call it in one batch: begin; SET LOCAL truth.session_id='<session>'; select engine_manual_apply(...); commit;
+- N2. Limit: the occurrence count counts non-overlapping matches; an old text that overlaps itself ("aa" in "aaa") reads as 1. Real pairs are long sentences.
