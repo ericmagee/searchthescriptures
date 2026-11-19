@@ -9,7 +9,7 @@ const mk=a=>({first:()=>({json:a[0]}),all:()=>a.map(json=>({json})),isExecuted:t
 const $=n=>({'Init Seats':mk([S]),'Fetch Models':mk(M),'Fetch Drift Guards':mk([]),'Fetch Tensions':mk([])})[n];
 const RS=new Function('$','$execution',N['Resolve Seats'].parameters.jsCode)($,{customData:{set(){}}})[0].json;
 console.log('RS.enforcer',JSON.stringify(RS.enforcer),'| RS.deepseek',JSON.stringify(RS.deepseek));
-const ds=RS&&RS.enforcer&&RS.enforcer.api_model?RS.enforcer:null;const R=JSON.parse(fs.readFileSync(H+'requests_luna.json'));
+const ds=RS&&RS.enforcer&&RS.enforcer.api_model?RS.enforcer:null;const RQ=[H+'requests_luna.json',path.join(__dirname,'../a410_w4/luna/requests_luna.json')].find(f=>fs.existsSync(f)); /* W1 9013 N1: the committed copy is a410_w4/luna */const R=JSON.parse(fs.readFileSync(RQ));
 // E-ASSUME
 const acb=N['Assume Check Build'].parameters.jsCode;const i=acb.indexOf('const body={model:ds.api_model');const st=acb.slice(i,acb.indexOf("{role:'user',content:user}]};",i)+29);
 const ea=R.find(r=>r.set==='EA'&&r.rep===1);const b1=new Function('ds','user',st+'\nreturn body;')(ds,ea.body.messages[1].content);
