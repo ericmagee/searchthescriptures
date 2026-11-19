@@ -31,7 +31,7 @@ CREATE TABLE public.ask_aar_snapshots (
 );
 ALTER TABLE public.ask_aar_snapshots ENABLE ROW LEVEL SECURITY;
 REVOKE ALL ON TABLE public.ask_aar_snapshots FROM PUBLIC, anon, authenticated, berean_ro;
-REVOKE ALL ON SEQUENCE public.ask_aar_snapshots_id_seq FROM PUBLIC, anon, authenticated;
+REVOKE ALL ON SEQUENCE public.ask_aar_snapshots_id_seq FROM PUBLIC, anon, authenticated, service_role, lab_seat;
 REVOKE ALL ON TABLE public.ask_aar_snapshots FROM service_role, lab_seat;
 GRANT SELECT ON TABLE public.ask_aar_snapshots TO service_role, lab_seat;
 
@@ -104,6 +104,9 @@ DO $c$ BEGIN
      OR has_table_privilege('authenticated','public.ask_aar_snapshots','insert') OR has_table_privilege('authenticated','public.ask_aar_snapshots','select')
      OR has_table_privilege('berean_ro','public.ask_aar_snapshots','select') THEN
     RAISE EXCEPTION 'ASK 493 step: anon, authenticated or berean_ro has access'; END IF;
+  IF EXISTS (SELECT 1 FROM unnest(ARRAY['anon','authenticated','service_role','lab_seat']) g
+             WHERE has_sequence_privilege(g,'public.ask_aar_snapshots_id_seq','USAGE,SELECT,UPDATE')) THEN
+    RAISE EXCEPTION 'ASK 493 step: a non-owner role has the id sequence'; END IF;
   IF (SELECT count(*) FROM pg_trigger WHERE tgrelid='public.ask_aar_snapshots'::regclass AND NOT tgisinternal) <> 4 THEN RAISE EXCEPTION 'ASK 493 step: trigger count is not 4'; END IF;
   IF NOT (SELECT relrowsecurity FROM pg_class WHERE oid='public.ask_aar_snapshots'::regclass) THEN RAISE EXCEPTION 'ASK 493 step: RLS off'; END IF;
 END $c$;
