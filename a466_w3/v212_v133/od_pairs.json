@@ -1,0 +1,14 @@
+[
+ {
+  "old": "`log_audit_event(...)` (SECURITY DEFINER, for anon workflows)",
+  "new": "`log_audit_event(...)` (SECURITY DEFINER; since ASK 466 executable by service_role, lab_seat and postgres only; the n8n nodes that call it use the native \"Supabase account\" credential)"
+ },
+ {
+  "old": "**Anon default-deny:** anon-keyed raw-table writes return `42501`; route through the SECURITY DEFINER RPC `log_audit_event`.",
+  "new": "**Anon default-deny:** anon-keyed raw-table writes return `42501`, and since ASK 466 so does an anon call to `log_audit_event`; an audit row is written by service_role (the n8n \"Supabase account\" credential), by `lab_seat`, or by postgres through MCP."
+ },
+ {
+  "old": "(Incident: operational_doc v38 \u00a731.)",
+  "new": "(Incident: operational_doc v38 \u00a731.) **The public key cannot write audit text (ASK 466).** anon holds no INSERT on `audit_log` and no anon write policy on it (anon keeps its two read policies); the RPC writers that copy caller text into an audit row are not executable by anon, authenticated or PUBLIC; the row triggers that audit tables anon still writes run SECURITY DEFINER with search_path fixed, and `log_override_arming` names the request role, not current_user. The tables seats write by MCP (the_wall, the manuals, journal_entries, day_room_posts and the rest of the ASK 466 list) refuse anon INSERT and UPDATE. GATED LOAD: the gated load runs through MCP (postgres) or through Supavisor as `lab_seat` (sol_seat's path); both keep their own grants on `init_load_session`, `complete_session_close` and `complete_security_check`, which refuse the anon key, so a seat on the public key cannot load. `complete_load_step` and `link_seat_to_load` still accept anon. To let a REST seat load again, `init_load_session` would become definer with a fixed actor and the other two would be granted to anon again, on the operator's word. A seat that must write an audit row from a container sets SUPABASE_SERVICE_KEY in its environment, never in git or memory; without it the audit row tool prints the SQL to run through the MCP connector."
+ }
+]
