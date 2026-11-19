@@ -1,8 +1,7 @@
 {
- "about": "ASK 493 dry-run fill rev 0 (W3, 11-19). W1's sample rev 2 (a493_w1/sample493.json 6702cc31) mapped onto plan493 rev 4 (b068cc76) columns and the 13 approved field groups. Changes from W1's sample: verdict_norm on every grade; equal_to elements for 487 (W2 9710, W1 9715); objectives, reasons and manuals from AAR rev 2 (5d758566) and the manual writes (v213 to v216, op doc v134); md5_match recomputed by the trigger rule. Not inserted anywhere.",
+ "about": "ASK 493 dry-run fill rev 1 (W3, 11-19). W1's sample rev 2 (a493_w1/sample493.json 6702cc31) mapped onto plan493 rev 4 (b068cc76) columns and the 13 approved field groups. Changes from W1's sample: verdict_norm on every grade; equal_to elements for 487 (W2 9710, W1 9715); objectives, reasons and manuals from AAR rev 2 (5d758566) and the manual writes (v213 to v216, op doc v134); md5_match recomputed by the trigger rule. Not inserted anywhere. Rev 1: one grade element per graded file md5 (W1 9870).",
  "md5_match_differences": [
-  "ASK 483: W1 sample md5_match True, rule gives False; written ['ad028df9'], PASS-graded ['5f980836'], FAIL []",
-  "ASK 482: W1 sample md5_match True, rule gives False; written ['062698a7', '6944e18b'], PASS-graded ['062698a7'], FAIL []"
+  "Resolved (W1 9870): the posts that graded the plan also graded each file. 483 step ad028df9 in W1 9611 and W3 9612; 482 odv1.js 6944e18b in W3 9700 and W2 9706 (checked: each post names that md5). The fill now has one grade element per file md5 graded, so md5_match is true for both. 487 stays false: the gemini_deb row SQL f3c17684 has no grade element."
  ],
  "rows": [
   {
@@ -307,12 +306,26 @@
      "md5_graded": "5f980836",
      "wall_id": 9612,
      "verdict_norm": "PASS"
+    },
+    {
+     "seat": "W1",
+     "verdict": "PASS with C1 C2",
+     "verdict_norm": "PASS",
+     "md5_graded": "ad028df9",
+     "wall_id": 9611
+    },
+    {
+     "seat": "W3",
+     "verdict": "PASS with C1 C2",
+     "verdict_norm": "PASS",
+     "md5_graded": "ad028df9",
+     "wall_id": 9612
     }
    ],
    "md5_written": [
     "ad028df9"
    ],
-   "md5_match": false,
+   "md5_match": true,
    "audit_ids": [
     38515,
     38516,
@@ -834,13 +847,27 @@
      "md5_graded": "062698a7",
      "wall_id": 9706,
      "verdict_norm": "PASS"
+    },
+    {
+     "seat": "W3",
+     "verdict": "PASS",
+     "verdict_norm": "PASS",
+     "md5_graded": "6944e18b",
+     "wall_id": 9700
+    },
+    {
+     "seat": "W2",
+     "verdict": "PASS",
+     "verdict_norm": "PASS",
+     "md5_graded": "6944e18b",
+     "wall_id": 9706
     }
    ],
    "md5_written": [
     "062698a7",
     "6944e18b"
    ],
-   "md5_match": false,
+   "md5_match": true,
    "audit_ids": [
     38591,
     38592,
