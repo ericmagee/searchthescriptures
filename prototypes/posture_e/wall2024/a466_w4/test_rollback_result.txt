@@ -1,0 +1,28 @@
+ASK 466 step 1 rolled-back test on live, 11-19 08:50 CST (Eric chose rollback test 14:40Z; gate flag armed twice inside the test only, Eric card 14:49:49Z).
+First attempt (test_rollback.sql): GATE ARMOR blocked ALTER on kb_row_audit (protected). log_override_arming is also protected. REVOKE on init_load_session is not blocked (probe).
+Second attempt (test_rollback_armed.sql) output:
+BEFORE T1 [anon]: OK | audit+1
+BEFORE T2.log_build [anon]: ERR P0001 established too short (function reached)
+BEFORE T2.init_load_session [anon]: OK
+BEFORE T2.dr_rest [anon]: ERR P0001 no room id 0 (function reached)
+BEFORE T3.log_audit_event [anon]: OK | audit+1
+BEFORE T3.record_debate_row_tokens [anon]: OK
+BEFORE T3b the_wall/engine_manual/journal_entries/day_room_posts [anon], the_wall [authenticated]: ERR 23502 not-null (insert allowed)
+BEFORE T4.debate_results [anon]: OK | audit+0
+BEFORE T4b.app_state_arm [anon]: ERR LEVER FENCE (anon may not arm)
+BEFORE T8.sol_seat_init [sol_seat]: OK
+BEFORE T5.ddl [postgres]: OK | audit+2 ddl_event_trigger,drop_event_trigger
+BEFORE T7.engine_manual_apply_preview [postgres]: OK
+[step 1 applied]
+AFTER T1 [anon]: ERR 42501 permission denied for table audit_log
+AFTER T2.log_build / init_load_session / dr_rest [anon]: ERR 42501 permission denied for function
+AFTER T3.log_audit_event [anon]: OK | audit+1   (closed by step 2c)
+AFTER T3.record_debate_row_tokens [anon]: OK
+AFTER T3b the 4 tables [anon] and the_wall [authenticated]: ERR 42501 permission denied
+AFTER T4.debate_results [anon]: OK | audit+0
+AFTER T4b.app_state_arm [anon]: ERR LEVER FENCE (unchanged)
+AFTER T8.sol_seat_init [sol_seat]: OK
+AFTER T5.ddl [postgres]: OK | audit+2
+AFTER T7.engine_manual_apply_preview [postgres]: OK
+Live after (08:51): gate flag false, anon INSERT on audit_log true, anon EXECUTE init_load_session true, kb_row_audit and log_override_arming invoker, 0 test rows.
+Findings: (1) live step 1 needs the gate flag armed before kb_row_audit and before log_override_arming (two one-shot armings, Eric's word). (2) T4 plan expected trigger audit rows on a debate_results insert; the triggers write none on a plain insert, before or after; the insert itself still works. (3) T4b cannot be shown by anon: LEVER FENCE refuses anon arming before and after, so log_override_arming's anon actor text has no anon path today.
