@@ -1,6 +1,13 @@
-# ASK 482 build REV 2 (W1, 11-19 17:1xZ), on W3 plan rev 2 (a482_w3/plan_rev2.md, 0cf23296)
+# ASK 482 build REV 3 (W1, 11-19 17:1xZ), on W3 plan rev 2 (a482_w3/plan_rev2.md, 0cf23296)
 
 Objective (operator, 16:03Z and 16:04Z): the dashboard shows the current models; Any vs Any offers every model the engine can debate with, each with its version in the drop-down.
+
+## Rev 3 (operator 17:00Z: "the model named \"chat gpt\" need to change to the model name (eg: terra 6.1 or sol 6.1)")
+- odv1.js names every model from its id with one rule (odMName): openai/gpt-6.1-terra reads Terra 6.1, gpt-6.1-sol Sol 6.1, gpt-6.2-sol Sol 6.2; others title-cased from the id (Gemini 4 Hydrogen, Claude Haiku 5.5, GLM 5.3, MiMo v2.6 Pro, Muse Spark 1.3).
+- Used in: the Any vs Any drop-downs ("Defender: Terra 6.1 (openai/gpt-6.1-terra)"), the record list, the record summary and result line, and every judge line (from the judgment's own judge_api_model). With no model recorded (old records), the engine name; "ChatGPT" is now "OpenAI" there and in the static fallback.
+- dash_debaters row 2 name ChatGPT -> OpenAI (fallback only). Rolled back again: C2 15 of 15; payload checked.
+- Other places checked: index.html and patch-base.js still say ChatGPT only inside the retired Debate and Challenger tabs, which retire.js removes from TABS; queue.js and patch.js have none.
+- md5: build482.sql 6de5e116, test482_run.sql c0b71384, deploy/src/odv1.js 75b3e111 (sha1 ccfccb0b6315...), odv1.diff fb735b44 (12 hunks). Readback prosrc md5 dash_debaters b6084d5a.
 
 ## Rev 2 (after ASK 487 rev 1, W3 9682)
 - dash_debaters row 3: key gemini now reads model_config seat gemini_deb (google/gemini-4-hydrogen, 64000), the debater row ASK 487 adds. Judge seat gemini stays on flash and is not shown in this list.
@@ -34,7 +41,7 @@ Objective (operator, 16:03Z and 16:04Z): the dashboard shows the current models;
 - C6 mirror482.cjs: prints the read-only check. Rolled-back: known-good (today's 10) MATCH; known-bad (qwen in place of qwen4max) MISMATCH. registry_482_entry.json is the ASK 417 entry to append at readback.
 
 ## Card (W4's thread) (rev 1: W2 9649 N1 to N3)
-1. Run build482.sql (md5 1a2ecb50, rev 2; after ASK 487 is written; prefix SET LOCAL truth.session_id, the DDL audit trigger needs it). It ends in a raising DO check (10 active rows with a version; no 'qwen' in dash_launch_odv1; v_eng from dash_debaters(); dash_api has odv1_engines), so a failed check rolls the whole build back. Readback, prosrc md5: dash_debaters 0616fc07, dash_api c541b307, dash_launch_odv1 3b74a293, dash_odv1_judges 9796ab3c (dash_launch_odv1 3b74a293 was also produced live inside the rolled-back test, so the file and the test agree); mirror482 SQL reads MATCH.
+1. Run build482.sql (md5 6de5e116, rev 3; after ASK 487 is written; prefix SET LOCAL truth.session_id, the DDL audit trigger needs it). It ends in a raising DO check (10 active rows with a version; no 'qwen' in dash_launch_odv1; v_eng from dash_debaters(); dash_api has odv1_engines), so a failed check rolls the whole build back. Readback, prosrc md5: dash_debaters b6084d5a, dash_api c541b307, dash_launch_odv1 3b74a293, dash_odv1_judges 9796ab3c (dash_launch_odv1 3b74a293 was also produced live inside the rolled-back test, so the file and the test agree); mirror482 SQL reads MATCH.
    The poll-limit change (80 to 240 checks, 20 to 60 minutes) is its own card line: it is outside the plan (W2 N1).
 2. mcp__Vercel__create_deployment, project truth-app-dashboard, team team_bBqtXgj58bdGw1brsCIdjyMs, files: src/index.html, src/patch.js, src/patch-base.js, src/queue.js, src/retire.js (unchanged, by sha), src/odv1.js (new), vercel.json. No projectSettings (they would be saved to the project). Wait for READY.
 3. mcp__Vercel__assign_alias truth-app-dashboard.vercel.app to the new deployment. Readback: fetch /odv1.js, sha1 equals the new file.

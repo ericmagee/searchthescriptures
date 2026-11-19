@@ -12,7 +12,7 @@ AS $function$
   select l.ord, l.key, l.name, l.mc_seat, m.api_model, coalesce(m.active, false)
   from (values
     (1,'claude','Claude','claude_synthesis'),
-    (2,'chatgpt','ChatGPT','chatgpt'),
+    (2,'chatgpt','OpenAI','chatgpt'),
     (3,'gemini','Gemini','gemini_deb'),
     (4,'grok','Grok','grok'),
     (5,'mimo','MiMo','mimo'),

@@ -1,3 +1,4 @@
+-- REV 3 (W1, 11-19 17:0xZ): row 2 name ChatGPT -> OpenAI (engine fallback only); the dashboard names every model from its id (operator 17:00Z).
 -- REV 2 (W1, 11-19 17:1xZ): dash_debaters row 3 reads model_config seat gemini_deb (ASK 487 rev 1, W3 9682): the gemini debater runs google/gemini-4-hydrogen at 64000 while judge seat gemini stays on flash. Write ASK 487's gemini_deb row BEFORE this build; the closing DO check (10 active rows with a version) refuses otherwise.
 -- ASK 482 build (W1, 11-19). Bases read live 16:2xZ: dash_api prosrc md5 0cb68ad8, dash_launch_odv1 0e6fe0f3, dash_odv1_judges f5580573. Changed lines only: dash_api +1 WHEN (odv1_engines); dash_launch_odv1 v_eng line; dash_odv1_judges display order (Init Seats ORDER0). Run as one transaction on W4 card.
 BEGIN;
@@ -11,7 +12,7 @@ AS $function$
   select l.ord, l.key, l.name, l.mc_seat, m.api_model, coalesce(m.active, false)
   from (values
     (1,'claude','Claude','claude_synthesis'),
-    (2,'chatgpt','ChatGPT','chatgpt'),
+    (2,'chatgpt','OpenAI','chatgpt'),
     (3,'gemini','Gemini','gemini_deb'),
     (4,'grok','Grok','grok'),
     (5,'mimo','MiMo','mimo'),
