@@ -1,3 +1,4 @@
+-- REV 4 (W1, 11-19 17:1xZ): dash_odv1_debates judges carry 'model' (W3 9696 C2); odv1.js record headings name the model (C1).
 -- REV 3 (W1, 11-19 17:0xZ): row 2 name ChatGPT -> OpenAI (engine fallback only); the dashboard names every model from its id (operator 17:00Z).
 -- REV 2 (W1, 11-19 17:1xZ): dash_debaters row 3 reads model_config seat gemini_deb (ASK 487 rev 1, W3 9682): the gemini debater runs google/gemini-4-hydrogen at 64000 while judge seat gemini stays on flash. Write ASK 487's gemini_deb row BEFORE this build; the closing DO check (10 active rows with a version) refuses otherwise.
 -- ASK 482 build (W1, 11-19). Bases read live 16:2xZ: dash_api prosrc md5 0cb68ad8, dash_launch_odv1 0e6fe0f3, dash_odv1_judges f5580573. Changed lines only: dash_api +1 WHEN (odv1_engines); dash_launch_odv1 v_eng line; dash_odv1_judges display order (Init Seats ORDER0). Run as one transaction on W4 card.
@@ -151,10 +152,36 @@ AS $function$
   from debate_judgments where debate_id = p_id;
 $function$;
 -- W2 9649 N2: closing checks; any failure raises and the whole build rolls back.
+-- ASK 482 rev 4 (W3 9696 C2): the record list's judges carry their own model, so the list names each judge by its model; display order as dash_odv1_judges.
+CREATE OR REPLACE FUNCTION public.dash_odv1_debates()
+ RETURNS jsonb
+ LANGUAGE sql
+ SECURITY DEFINER
+ SET search_path TO 'public'
+AS $function$
+  select coalesce(jsonb_agg(to_jsonb(x) order by x.created_at desc), '[]'::jsonb) from (
+    select r.id, r.topic, r.created_at, r.run_token,
+           r.defender_engine, r.defender_profile, r.defender_model,
+           r.challenger_engine, r.challenger_profile, r.challenger_model,
+           r.outcome, r.panel_verdict, r.panel_split, r.framework_verdict,
+           r.defense_standing, r.challenge_standing, r.conceded_links, r.challenger_conceded_links,
+           r.review_notes,
+           case when (r.defender_engine='mimo' and r.defender_model like '%/%')
+                  or (r.challenger_engine='mimo' and r.challenger_model like '%/%')
+                then 'MiMo ran through OpenRouter (mis-routed)' end as note,
+           (select coalesce(jsonb_agg(jsonb_build_object('seat', j.judge_seat, 'model', j.judge_api_model, 'verdict', j.verdict_tag,
+                      'defense_standing', j.defense_standing, 'conceded_links', j.conceded_links,
+                      'challenge_standing', j.challenge_standing, 'challenger_conceded_links', j.challenger_conceded_links)
+                    order by array_position(array['chatgpt','sol','sol62','haiku','gemini','hydrogen','spark','qwen4max','argon','sonnet'], j.judge_seat)), '[]'::jsonb)
+              from debate_judgments j where j.debate_id = r.id) as judges
+    from debate_results r where r.variant='ORACLE_DEBATE_V1'
+    order by r.created_at desc limit 40) x;
+$function$;
 DO $chk$ BEGIN
   IF (SELECT count(*) FROM dash_debaters() WHERE active AND api_model IS NOT NULL) <> 10 THEN RAISE EXCEPTION 'ASK 482 check: dash_debaters() does not return 10 active rows with a version'; END IF;
   IF position($q$'qwen'$q$ in (SELECT prosrc FROM pg_proc WHERE proname='dash_launch_odv1')) > 0 THEN RAISE EXCEPTION 'ASK 482 check: dash_launch_odv1 still names qwen'; END IF;
   IF position('array(select key from dash_debaters())' in (SELECT prosrc FROM pg_proc WHERE proname='dash_launch_odv1')) = 0 THEN RAISE EXCEPTION 'ASK 482 check: v_eng is not read from dash_debaters()'; END IF;
   IF position('odv1_engines' in (SELECT prosrc FROM pg_proc WHERE proname='dash_api')) = 0 THEN RAISE EXCEPTION 'ASK 482 check: dash_api has no odv1_engines action'; END IF;
+  IF position('judge_api_model' in (SELECT prosrc FROM pg_proc WHERE proname='dash_odv1_debates')) = 0 THEN RAISE EXCEPTION 'ASK 482 check: dash_odv1_debates judges carry no model'; END IF;
 END $chk$;
 COMMIT;

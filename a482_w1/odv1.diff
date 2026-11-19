@@ -42,6 +42,10 @@
 <   else if(window.__odn>80){odStop();odBtn();showErr('No result after 20 minutes. Check n8n executions and debate_errors.');loadOdv1List('');}
 ---
 >   else if(window.__odn>240){odStop();odBtn();showErr('No result after 60 minutes. Check n8n executions and debate_errors.');loadOdv1List('');}
+68c76
+<   var D=odSide(d.defender_engine,d.defender_profile),C=odSide(d.challenger_engine,d.challenger_profile);
+---
+>   var D=odSide(d.defender_engine,d.defender_profile,d.defender_model),C=odSide(d.challenger_engine,d.challenger_profile,d.challenger_model);
 75c83
 <   var won=d.outcome?((/DEFENDER/i.test(d.outcome)?'Defender, '+odEng(d.defender_engine)+': ':/CHALLENGER/i.test(d.outcome)?'Challenger, '+odEng(d.challenger_engine)+': ':'')+d.outcome):'Not decided: the panel did not finish';
 ---

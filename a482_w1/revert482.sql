@@ -123,12 +123,38 @@ AS $function$
   from debate_judgments where debate_id = p_id;
 $function$;
 
+-- rev 4: dash_odv1_debates back to its base (prosrc md5 ed3d654a)
+CREATE OR REPLACE FUNCTION public.dash_odv1_debates()
+ RETURNS jsonb
+ LANGUAGE sql
+ SECURITY DEFINER
+ SET search_path TO 'public'
+AS $function$
+  select coalesce(jsonb_agg(to_jsonb(x) order by x.created_at desc), '[]'::jsonb) from (
+    select r.id, r.topic, r.created_at, r.run_token,
+           r.defender_engine, r.defender_profile, r.defender_model,
+           r.challenger_engine, r.challenger_profile, r.challenger_model,
+           r.outcome, r.panel_verdict, r.panel_split, r.framework_verdict,
+           r.defense_standing, r.challenge_standing, r.conceded_links, r.challenger_conceded_links,
+           r.review_notes,
+           case when (r.defender_engine='mimo' and r.defender_model like '%/%')
+                  or (r.challenger_engine='mimo' and r.challenger_model like '%/%')
+                then 'MiMo ran through OpenRouter (mis-routed)' end as note,
+           (select coalesce(jsonb_agg(jsonb_build_object('seat', j.judge_seat, 'verdict', j.verdict_tag,
+                      'defense_standing', j.defense_standing, 'conceded_links', j.conceded_links,
+                      'challenge_standing', j.challenge_standing, 'challenger_conceded_links', j.challenger_conceded_links)
+                    order by array_position(array['deepseek','gemini','grok','chatgpt','mimo','glm','qwen'], j.judge_seat)), '[]'::jsonb)
+              from debate_judgments j where j.debate_id = r.id) as judges
+    from debate_results r where r.variant='ORACLE_DEBATE_V1'
+    order by r.created_at desc limit 40) x;
+$function$;
 DROP FUNCTION IF EXISTS public.dash_debaters();
 -- W2 9649 N2: closing checks; any failure raises and the revert rolls back.
 DO $chk$ BEGIN
   IF (SELECT md5(prosrc) FROM pg_proc WHERE proname='dash_api') <> '0cb68ad80ddd6113a210b87ec73671e2' THEN RAISE EXCEPTION 'ASK 482 revert check: dash_api md5 differs from base'; END IF;
   IF (SELECT md5(prosrc) FROM pg_proc WHERE proname='dash_launch_odv1') <> '0e6fe0f3c35b4b308e92fab386092091' THEN RAISE EXCEPTION 'ASK 482 revert check: dash_launch_odv1 md5 differs from base'; END IF;
   IF (SELECT md5(prosrc) FROM pg_proc WHERE proname='dash_odv1_judges') <> 'f5580573a592b68dffd130344be0065c' THEN RAISE EXCEPTION 'ASK 482 revert check: dash_odv1_judges md5 differs from base'; END IF;
+  IF (SELECT md5(prosrc) FROM pg_proc WHERE proname='dash_odv1_debates') <> 'ed3d654af2f51f80dee22bd10b6f0d72' THEN RAISE EXCEPTION 'ASK 482 revert check: dash_odv1_debates md5 differs from base'; END IF;
   IF EXISTS (SELECT 1 FROM pg_proc WHERE proname='dash_debaters') THEN RAISE EXCEPTION 'ASK 482 revert check: dash_debaters still exists'; END IF;
 END $chk$;
 COMMIT;

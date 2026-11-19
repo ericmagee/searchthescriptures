@@ -73,7 +73,7 @@ function odOpen(id){
  rpc('odv1_by_id',{p_id:id}).then(function(d){
   var x='<button class="closeb" onclick="closeSheet()">&times;</button>';
   if(!d||d.error){sh.innerHTML=x+'<p>Not found.</p>';return;}
-  var D=odSide(d.defender_engine,d.defender_profile),C=odSide(d.challenger_engine,d.challenger_profile);
+  var D=odSide(d.defender_engine,d.defender_profile,d.defender_model),C=odSide(d.challenger_engine,d.challenger_profile,d.challenger_model);
   var h=x+'<h3>'+esc(d.topic||'')+'</h3><div class="meta"><span class="tag t-teal">'+esc(D)+' defends</span><span class="tag t-gold">'+esc(C)+' challenges</span><span class="tag '+odTagCls(d.panel_verdict)+'">Panel: '+esc(d.panel_verdict||'?')+(d.panel_split?' ('+esc(d.panel_split)+')':'')+'</span>'+(d.outcome?'<span class="tag t-violet">'+esc(d.outcome)+'</span>':'')+'<span class="tag t-mut">'+esc(odCT(d.created_at))+'</span>'+(d.note?'<span class="tag t-red">'+esc(d.note)+'</span>':'')+'</div>';
   h+='<p class="stamp">Every grade on this page is '+esc(odVSideT(d))+'.</p>';
   var J=d.judges||[];
