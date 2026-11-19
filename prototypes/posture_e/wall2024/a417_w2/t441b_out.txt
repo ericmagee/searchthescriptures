@@ -1,0 +1,9 @@
+t441b.sql (the 4 merged entries, 443, 444 A2, 455, 456) on the 6 newest stored runs, 06:5x Z 11-19. Format ask=case/mark.
+ODV1-39266-7g9lzgbr 443=true/1 444 A2=true/1 455=true/0 456=true/-
+ODV1-39015-pnpoj45j 443=true/1 444 A2=true/2 455=true/0 456=false/-
+ODV1-38661-b6km61d3 443=true/1 444 A2=true/1 455=true/0 456=false/-
+ODV1-38593-vh0jqefy 443=true/1 444 A2=true/1 455=true/0 456=true/-
+ODV1-38450-bz66jhy3 443=true/1 444 A2=true/2 455=true/0 456=true/-
+ODV1-38226-mydua15p 443=true/1 444 A2=true/2 455=true/0 456=true/-
+All four parse and run. 455 reads 0 (MISSED) on every stored run, as it must: those runs predate the write and say DEEPSEEK.
+456's case is wider than its effect: 38226 holds the case, but the W2 replay (a8456_w2/r456_38226.txt) shows no output change there.

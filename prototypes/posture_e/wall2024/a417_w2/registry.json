@@ -277,6 +277,46 @@
    "case_sql": "exists(select 1 from r where r.review_notes ~ 'ASK 406 forms: ')",
    "mark_sql": "(select count(*) from r where r.review_notes ~ 'ASK 406 forms: [0-9]+ glosses read, [0-9]+ left out by the 250-gloss and 100-number caps\\)')",
    "note": "Plan a439_w2/plan_rev0.md item 6. Before the write the words read \"60-gloss and 30-number caps\", so --all on an older run reads MISSED."
+  },
+  {
+   "ask": "443",
+   "title": "engine Library Check after Debate Start: header sha against LIB sha (pkgLIB2)",
+   "live_since": "2026-11-19T06:38:29Z",
+   "version": "c1256eec",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from r)",
+   "mark_sql": "(select case when exists(select 1 from x where coalesce(x.error_message,'')||coalesce(x.error_detail::text,'') like '%pkgLIB2%') or exists(select 1 from r where to_jsonb(r)::text like '%pkgLIB2%') then 0 else 1 end)",
+   "note": "As 409, 422(a) and 428: the case is any run, the mark is the absence of a pkgLIB2 stop, so EXERCISED means the engine library matched its header at run start, nothing firmer. A pkgLIB2 stop reads MISSED and goes to the operator first (ASK 427)."
+  },
+  {
+   "ask": "444 A2",
+   "title": "comments removed from Alternate Build and Early Alternate Build (one reasoning_details comment kept)",
+   "live_since": "2026-11-19T06:38:29Z",
+   "version": "c1256eec",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from e where e.kind='alternate_reply')",
+   "mark_sql": "(select case when exists(select 1 from x where coalesce(x.error_message,'')||coalesce(x.error_detail::text,'') ~ 'pkgLIB:') or exists(select 1 from r where to_jsonb(r)::text ~ 'pkgLIB:') then 0 else (select count(*) from e where e.kind='alternate_reply') end)",
+   "note": "The two nodes run only when an alternate is seated, so the case is an alternate_reply row; the mark is that row count with no pkgLIB: stub stop. Token-equal change (C2), so EXERCISED means the edited stubs ran, nothing firmer."
+  },
+  {
+   "ask": "455",
+   "title": "enforcer labels: ENFORCER in place of DEEPSEEK in the assumption check record and skip texts; deepseek row no longer required",
+   "live_since": "2026-11-19T06:38:29Z",
+   "version": "c1256eec",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from e where e.rule='E-ASSUME' and e.seat='assumption check')",
+   "mark_sql": "(select case when exists(select 1 from e where e.rule='E-ASSUME' and e.seat='assumption check' and coalesce(e.cure_reason,'') ~ 'DEEPSEEK') then 0 else (select count(*) from e where e.rule='E-ASSUME' and e.seat='assumption check' and coalesce(e.cure_reason,'') ~ 'ENFORCER') end)",
+   "note": "Case: an E-ASSUME assumption check row. Mark: those rows say ENFORCER and none says DEEPSEEK. Part A (Resolve Seats fallback) has no mark while the deepseek model_config row is active (W1 9231 note 1)."
+  },
+  {
+   "ask": "456",
+   "title": "7 pkgLIB stubs name every node their library code reads (pkgBKC keep, English set-aside, ROWS GIVE verses restored)",
+   "live_since": "2026-11-19T06:38:29Z",
+   "version": "c1256eec",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from e where e.rule='E-ASSUME' and e.seat='assumption check' and coalesce(e.cure_reason,'') ~ 'BOTH NOT STATED' and coalesce(e.cure_reason,'') ~ 'COUNTED')",
+   "mark_sql": null,
+   "note": "Case: a BOTH NOT STATED fact that a judge COUNTED (as 38593, chatgpt). Read by hand (W2 9239 item 6): that judge's Panel Payloads body must not carry the AUDIT v49 K-UNX line for that side and premise. Extract Independent Verdict and the child stubs: no stored case."
   }
  ]
 }
