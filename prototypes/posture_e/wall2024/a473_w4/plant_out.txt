@@ -1,0 +1,4 @@
+DIFF D1 Build openrouter xiaomi/mimo-v2.6-pro {"model":"m","messages":[{"role":"system","content":"SYS"},{"role":"user","content":"U"}],"temperature":0,"session_id":"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk | {"model":"m","messages":[{"role":"system"
+DIFF D1 Build openrouter xiaomi/mimo-v2.6-pro {"model":"m","max_tokens":1000,"messages":[{"role":"system","content":[{"type":"text","text":"S"}]},{"role":"user","content":"U"}],"session_id":"kkkkkkkkkkkkkkk | {"model":"m","max_tokens":131072,"message
+D1 Build                     arity 4 cases 928 diffs 2
+TOTAL calls compared 14848 | differing request bodies 2 | FAIL

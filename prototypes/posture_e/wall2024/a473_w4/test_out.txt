@@ -1,0 +1,17 @@
+D1 Build                     arity 4 cases 928 diffs 0
+C1 Build                     arity 4 cases 928 diffs 0
+D2 Build                     arity 4 cases 928 diffs 0
+C2 Build                     arity 4 cases 928 diffs 0
+D3 Build                     arity 4 cases 928 diffs 0
+C3 Build                     arity 4 cases 928 diffs 0
+Build Synthesis              arity 4 cases 928 diffs 0
+Build Independent Verdict    arity 4 cases 928 diffs 0
+Build Diagnostic Prompt      arity 4 cases 928 diffs 0
+Panel Build                  arity 4 cases 928 diffs 0
+Reserve Build                arity 4 cases 928 diffs 0
+D4 Build                     arity 4 cases 928 diffs 0
+C4 Build                     arity 4 cases 928 diffs 0
+Accept Build                 arity 3 cases 116 diffs 0
+lib:Alternate Build          arity 4 cases 928 diffs 0
+lib:R2 Alternate Build       arity 4 cases 928 diffs 0
+TOTAL calls compared 14848 | differing request bodies 0 | PASS
