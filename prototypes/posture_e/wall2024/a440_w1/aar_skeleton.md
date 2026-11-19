@@ -1,4 +1,4 @@
-# AAR: ASK 440 run (skeleton, W1 11-19; fill within minutes of the run ending)
+# AAR: ASK 440 run (skeleton, W1 11-19, rows 1 to 12 merged from W2 9482; fill within minutes of the run ending)
 
 Order and words: Wall manual v18 §7.4. Post style §7: formal English, no em dash, enumerate, no record number alone, Central time.
 Sent by the coordinator only, in the project chat and on the Wall under the run's root, naming W4's run report by Wall number.
@@ -11,22 +11,22 @@ Body: body_39266 (sha 53763d9544a6), defender spark/oracle, challenger gemini/pl
 ## OBJECTIVE
 Run objective: show, on one live run, that the changes live since run 39266 work as built, before the transcript work begins.
 Met: [YES / IN PART / NO]. An item with NO CASE is not met by this run; it stays live and unexercised.
-Per ASK (merged run-validation checklist; items 1 to 12 W2, 13 to 24 W1 a440_w1/validation_13_24.md; grade words EXERCISED, NO CASE, MISSED, READ BY HAND, NO RUN PROBE):
+Per ASK (merged run-validation checklist p440_w2/runval_merged.md, commit 7139779d: steps 1 to 5 there; items 1 to 12 W2, 13 to 24 W1; grade words EXERCISED, NO CASE, MISSED, READ BY HAND, NO RUN PROBE):
 
 | # | ASK | Objective (what it achieves) | Check | Result | Evidence |
 |---|---|---|---|---|---|
-| 1 | 443 | [W2] | [W2] | [..] | [..] |
-| 2 | 444 A2 | [W2] | [W2] | [..] | [..] |
-| 3 | 445 | [W2] | [W2] | [..] | [..] |
-| 4 | 446 | [W2] | [W2] | [..] | [..] |
-| 5 | 447 | [W2] | [W2] | [..] | [..] |
-| 6 | 448 | [W2] | [W2] | [..] | [..] |
-| 7 | 449 | [W2] | [W2] | [..] | [..] |
-| 8 | 450 | [W2] | [W2] | [..] | [..] |
-| 9 | 451 | [W2] | [W2] | [..] | [..] |
-| 10 | 454 | [W2] | [W2] | [..] | [..] |
-| 11 | 455 | [W2] | [W2] | [..] | [..] |
-| 12 | 456 | [W2] | [W2] | [..] | [..] |
+| 1 | 443 | the engine checks the library header sha against LIB at start (pkgLIB2) | exercise 443 (run can show it: Yes) | [..] | [..] |
+| 2 | 444 A2 | Alternate Build and Early Alternate Build run with comments removed | exercise 444 A2 (run can show it: only with an alternate seated) | [..] | [..] |
+| 3 | 445 | several writes go on one card | none (run can show it: No (write procedure)) | [..] | [..] |
+| 4 | 446 | the run-start post quotes runstart GO | runval 446 (run can show it: Yes) | [..] | [..] |
+| 5 | 447 | the run uses the tools in tools/ | runval 447 (run can show it: Yes) | [..] | [..] |
+| 6 | 448 | Wall guard (448) | runval 448 (run can show it: partly: held, not refused) | [..] | [..] |
+| 7 | 449 | Wall guard (449) | runval 449 (run can show it: partly) | [..] | [..] |
+| 8 | 450 | Wall guard (450) | runval 450 (run can show it: partly) | [..] | [..] |
+| 9 | 451 | Wall guard (451) | runval 451 (run can show it: partly) | [..] | [..] |
+| 10 | 454 | KV_EXCL reads makes and excludes (422(c)) | exercise 422(c) (run can show it: only if a judge writes the form) | [..] | [..] |
+| 11 | 455 | enforcer labels and openrouter step names in place of DeepSeek | exercise 455, 455 D; hand (c) (run can show it: (b) and D yes; (a) no; (c) no in practice) | [..] | [..] |
+| 12 | 456 | the pkgLIB stubs name every node their code reads | exercise 456; hand read (run can show it: only with a COUNTED BOTH NOT STATED fact) | [..] | [..] |
 | 13 | 458 | no seat or node calls DeepSeek; the engine runs without the removed steps | SQL 458: 0 errors naming deepseek, a missing node, Provider Removed | [..] | [..] |
 | 14 | 459 | the cure sub-workflow never calls DeepSeek | SQL 459; N1 | [..] | [..] |
 | 15 | 460 | Panel Judge Call has no DeepSeek path | SQL 460 | [..] | [..] |
