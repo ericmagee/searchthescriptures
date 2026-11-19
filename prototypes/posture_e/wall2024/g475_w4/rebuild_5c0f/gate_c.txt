@@ -1,0 +1,3 @@
+BASE b10fcad2-4c7f-4e41-a759-78f74b571e99 CAND b10fcad2-4c7f-4e41-a759-78f74b571e99 CHANGED ["Shared Library"] CONNECTIONS equal
+COMMENTS: no changed Code node gains a comment text its base lacks
+NOT COVERED by the chain replay: ["Shared Library"]. Rerun with --spec SPEC.json --rows ROWS.json (a418_w4/replay418.cjs form).

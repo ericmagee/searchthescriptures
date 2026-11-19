@@ -1,0 +1,3 @@
+BASE 5c0f00ab-b79d-4b75-9d72-7e5968b55396 CAND 5c0f00ab-b79d-4b75-9d72-7e5968b55396 CHANGED ["C2B Build","C2B Extract","C3B Build","C3B Extract","C4B Build","C4B Extract","D2B Build","D2B Extract","D3B Build","D3B Extract","D4B Build","D4B Extract","Shared Library"] CONNECTIONS equal
+COMMENTS: no changed Code node gains a comment text its base lacks
+NOT COVERED by the chain replay: ["C2B Build","C2B Extract","C3B Build","C3B Extract","C4B Build","C4B Extract","D2B Build","D2B Extract","D3B Build","D3B Extract","D4B Build","D4B Extract","Shared Library"]. Rerun with --spec SPEC.json --rows ROWS.json (a418_w4/replay418.cjs form).
