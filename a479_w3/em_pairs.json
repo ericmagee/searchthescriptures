@@ -1,7 +1,7 @@
 [
  {
   "old": "Since ASK 455 it no longer requires the ACTIVE `deepseek` row: when that row is missing, the `deepseek` field takes the luna row (\u00a79).",
-  "new": "Since ASK 455 it no longer requires the ACTIVE `deepseek` row: when that row is missing, the `deepseek` field takes the luna row (\u00a79). Since ASK 479 the `deepseek` and `deepseek_debate` model_config rows are inactive (operator, 09:04 CST 11-19: no DeepSeek anywhere), so the `deepseek` field always takes the luna row. Limit: a revert of ASK 455 that restores need('deepseek') in Resolve Seats stops every run while these rows are inactive; revert 455 with the variant that keeps the live Resolve Seats line, or set the row active first on the operator's word. To revert ASK 479: set both rows active, on the operator's word."
+  "new": "Since ASK 455 it no longer requires the ACTIVE `deepseek` row: when that row is missing, the `deepseek` field takes the luna row (\u00a79). Since ASK 479 the `deepseek` and `deepseek_debate` model_config rows are inactive (operator, 09:04 CST 11-19: no DeepSeek anywhere), so the `deepseek` field always takes the luna row. Limits: the rows do not stop workflows that call api.deepseek.com directly (the W-series; some fall back to a hardcoded deepseek-chat). A revert of ASK 455 that restores need('deepseek') in Resolve Seats stops every run while these rows are inactive; revert 455 with the variant that keeps the live Resolve Seats line, or set the row active first on the operator's word. To revert ASK 479: set both rows active, on the operator's word."
  },
  {
   "old": "The `deepseek` seat is called on its own endpoint (api.deepseek.com); ",
