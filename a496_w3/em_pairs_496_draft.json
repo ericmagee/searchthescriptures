@@ -1,0 +1,6 @@
+[
+ {
+  "old": "    - Revert: publish the workflow again, on the operator's word.\n\n## 12.",
+  "new": "    - Revert: publish the workflow again, on the operator's word.\n  - THE DEBATE FINDINGS PIPELINE IS PAUSED (ASK 496; n8n workflow i3bLxvLj6EL4yfak):\n    - Why: the operator chose \"B. Pause it\" on W2's card, 18:25:54Z 2026-11-19. Since 09-09 every hourly run re-read the same debate, got \"[]\" back and wrote nothing; since 11-15 every run errored on the Anthropic usage limit (W2 9839, W1 9850).\n    - What: \"TRUTH — Debate Findings Pipeline\" is inactive (unpublished), not deleted; no node, text or setting changed (version 66f18454 kept). Its queued debates stay queued. Fixing its loop is a separate ASK.\n    - Live: LIVE_LINE\n    - Revert: publish the workflow again, on the operator's word.\n\n## 12."
+ }
+]
