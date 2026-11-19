@@ -1,3 +1,4 @@
 BASE 828dc91d-3cc1-4fe4-9f0b-5f4c4b6acca1 CAND 828dc91d-3cc1-4fe4-9f0b-5f4c4b6acca1 CHANGED ["Alternate Merge"] CONNECTIONS equal
 COMMENTS: no changed Code node gains a comment text its base lacks
-node:internal/modules/cjs/loader:1433
+NOT COVERED by the chain replay: ["Alternate Merge"]. Rerun with --spec SPEC.json --rows ROWS.json (a418_w4/replay418.cjs form).
+exit 4
