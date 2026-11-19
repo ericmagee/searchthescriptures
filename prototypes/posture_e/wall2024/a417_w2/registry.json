@@ -317,6 +317,26 @@
    "case_sql": "exists(select 1 from e where e.rule='E-ASSUME' and e.seat='assumption check' and coalesce(e.cure_reason,'') ~ 'BOTH NOT STATED' and coalesce(e.cure_reason,'') ~ 'COUNTED')",
    "mark_sql": null,
    "note": "Case: a BOTH NOT STATED fact that a judge COUNTED (as 38593, chatgpt). Read by hand (W2 9239 item 6): that judge's Panel Payloads body must not carry the AUDIT v49 K-UNX line for that side and premise. Extract Independent Verdict and the child stubs: no stored case."
+  },
+  {
+   "ask": "455 D",
+   "title": "22 openrouter steps renamed from deepseek to openrouter (18 engine, 4 child; library MAP names)",
+   "live_since": "2026-11-19T06:49:24Z",
+   "version": "4cb54cf0",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from r)",
+   "mark_sql": "(select case when exists(select 1 from x where coalesce(x.error_message,'')||coalesce(x.error_detail::text,'') ~* '(deepseek|doesn''t exist|Provider Removed)') then 0 else 1 end)",
+   "note": "Case: any run. Mark: no error in the run window naming deepseek, a missing node, or Provider Removed Stop."
+  },
+  {
+   "ask": "458",
+   "title": "DeepSeek steps removed (29 engine, 6 child); seats on the DeepSeek family stop at Provider Removed Stop; Accept DS Return Build kept, its DeepSeek read cut",
+   "live_since": "2026-11-19T07:10:01Z",
+   "version": "828dc91d",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from r)",
+   "mark_sql": "(select case when exists(select 1 from x where coalesce(x.error_message,'')||coalesce(x.error_detail::text,'') ~* '(deepseek|doesn''t exist|Provider Removed)') then 0 else 1 end)",
+   "note": "Case: any run. Mark: no error in the run window naming deepseek, a missing node (\"Referenced node doesn't exist\"), or Provider Removed Stop. Engine 828dc91d, child 33adc248."
   }
  ]
 }
