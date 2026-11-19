@@ -1,0 +1,10 @@
+[
+ {
+  "old": "BARE=/^\\s?(?:,\\s?(?:and\\s)?(\\d{1,3})(?!\\d|:\\d|\\s+[A-Z])|",
+  "new": "BARE=/^\\s?(?:(?:,\\s?(?:and\\s)?|;)(\\d{1,3})(?!\\d|:\\d)|"
+ },
+ {
+  "old": "if((x=rest.match(BARE))){const n=+(x[1]||x[2]);",
+  "new": "if((x=rest.match(BARE))){const n=+(x[1]||x[2]);{const nb=(rest.slice(x[0].length).match(/^\\s+([A-Z][A-Za-z]+)/)||[])[1];if(nb&&(BK[key(n+nb)]||(n<=3&&/^\\s+[A-Z][A-Za-z]+\\.?\\s+\\d{1,3}:\\d/.test(rest.slice(x[0].length)))||!/^\\s?[,;]/.test(x[0])))break;}"
+ }
+]

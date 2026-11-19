@@ -1,0 +1,12 @@
+PASS "Psalms 2:7, 12 Kiss the Son" live => 2:7 | target => 2:7 | 2:12 (want 2:7 | 2:12)
+PASS "Psalms 2:7;12 Kiss the Son" live => 2:7 | target => 2:7 | 2:12 (want 2:7 | 2:12)
+PASS "Psalms 2:7; 12 Kiss" live => 2:7 | target => 2:7 (want 2:7)
+PASS "Romans 3:23;10:9" live => 3:23 | 10:9 | target => 3:23 | 10:9 (want 3:23 | 10:9)
+PASS "Romans 3:23; 10:9" live => 3:23 | 10:9 | target => 3:23 | 10:9 (want 3:23 | 10:9)
+PASS "John 3:16;1 John 4:8" live => 3:16 | 4:8 | target => 3:16 | 4:8 (want 3:16 | 4:8)
+PASS "Matthew 1:18;2 witnesses" live => 1:18 | target => 1:18 (want 1:18)
+PASS "Luke 21:26;35" live => 21:26 | target => 21:26 | 21:35 (want 21:26 | 21:35)
+PASS "Acts 1:8, 14" live => 1:8 | 1:14 | target => 1:8 | 1:14 (want 1:8 | 1:14)
+PASS "John 3:16, 18" live => 3:16 | 3:18 | target => 3:16 | 3:18 (want 3:16 | 3:18)
+PASS "Numbers 1:2, 18" live => 1:2 | 1:18 | target => 1:2 | 1:18 (want 1:2 | 1:18)
+11 of 11 pass on the target
