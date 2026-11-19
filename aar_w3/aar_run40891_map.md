@@ -6,7 +6,7 @@ Pairing: spark (oracle) vs gemini (plain); panel expected chatgpt, sol, sol62 (W
 |---|---|---|---|
 | 16 | 494 A1 | Engine saves run as service_role, and the row saves (P1 to P5) | W4's result post; two non-writer checks; edge logs role on record_debate_row, record_debate_judgment, derive_debate_outcome, record_debate_row_tokens |
 | 15 | 492 | "without breaking any live writer": the engine save succeeds after the direct-insert close | debate_results row for the run token exists |
-| 3 | 484 | sol62 answers with no Azure cut | the sol62 judgment row and its provider; no content-filter error |
+| 3 | 484 | sol62 answers with no Azure cut | the sol62 call's provider in call_costs (not Azure); no content-filter error (W1 N2) |
 | 8 | 487 | the gemini debater runs google/gemini-4-hydrogen | the run row's gemini model |
 | 13 | 490 | the transcript names models, never "ChatGPT" or a bare seat key | the run's Drive transcript names (operator's view, or a seat that can read Drive) |
 | 7 | 486 | only if a reserve or alternate is drawn: haiku is last | Init Seats output for the run |
