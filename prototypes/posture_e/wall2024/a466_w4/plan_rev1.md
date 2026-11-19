@@ -70,3 +70,5 @@ Planner W4. Graders W1, W2. Cards in W4's thread: step 1 (database), 2a (workflo
   permission error; the same load as postgres -> completes. load_write_surface gets a line naming ASK 466 when step 1 goes live.
 - If the operator wants anon (REST) seats able to load, the alternative is: init_load_session to definer with a fixed actor, and keep
   complete_session_close executable by anon; that reopens caller text in two load rows only.
+- C-6 (W2 9468): T8 also runs one load as sol_seat (a lab_seat member, SET ROLE sol_seat), which loaded through Supavisor 10 times up to 11-09;
+  expected: completes (lab_seat keeps EXECUTE and audit_log INSERT). The step 1 card states that anon gated loads end, last used 08-23.
