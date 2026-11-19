@@ -367,6 +367,16 @@
    "case_sql": "exists(select 1 from j)",
    "mark_sql": "(select case when exists(select 1 from x where coalesce(x.error_message,'')||coalesce(x.error_detail::text,'') ~* '(deepseek|FAIL-CLOSED|removed direct provider|Provider Removed)') then 0 else 1 end)",
    "note": "Workflow WALL-2024 Panel Judge Call (Y1VIsNB6KBrs1znP). Case: a run with judgments. Mark: no error in the run window naming FAIL-CLOSED or a removed provider. The Provider Route list still names deepseek, openai, gemini, grok, mimo as indexes 0 to 4 so the engine's ppj_provider values keep their outputs."
+  },
+  {
+   "ask": "464",
+   "title": "Code node comments removed in ODV1 Cure Call (Skip Return, Provider Removed Stop), Panel Judge Call (Wrap) and Early Alternate (Early Alternate Shape); tokens unchanged",
+   "live_since": "2026-11-19T13:24:13Z",
+   "version": "fb18e79a / 15a91429 / f47f5955",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from r)",
+   "mark_sql": "(select case when exists(select 1 from x where coalesce(x.error_message,'')||coalesce(x.error_detail::text,'') ~* '(Skip Return|Wrap|Early Alternate Shape)') then 0 else 1 end)",
+   "note": "Comment-only change in three sub-workflows (not the engine). Case: any run. Mark: no error in the run window naming a changed node."
   }
  ]
 }
