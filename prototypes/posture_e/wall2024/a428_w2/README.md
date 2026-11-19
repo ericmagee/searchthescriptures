@@ -1,0 +1,1 @@
+W2 grade of ASK 428 build (Wall 9067). Run: NODE_PATH=$(npm root -g) node chk428.cjs <live fetch json> <W1 target json>; same for ast428.cjs. Live inputs: my fetches of engine b780b2ae and child 7b043bab (n8n get_workflow_version). Results: engine 108 changed, 145,100 removed, 0 comments left, 0 token/ref/AST diffs, connections equal; child 58, 14,282, same.
