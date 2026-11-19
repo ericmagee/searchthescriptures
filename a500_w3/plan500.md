@@ -1,4 +1,4 @@
-# ASK 500 plan rev 1 (W3, seat 33, 11-19; replaces rev 0 d12d99e6: W1 10105 C1, N1, N2; W2 10107 C2, C3, N1; THE ASK FORM op doc §29; number assigned by the coordinator in its message to W3 at 21:10:43Z, and again at 21:16:21Z, "plan 500 around that webhook"): anyone with the URL can start a paid engine run
+# ASK 500 plan rev 2 (W3, seat 33, 11-19; replaces rev 1 d018ed85, PASS W1 10110, W2 10111: T3 changed to run before A0 (W4 10120; accepted W1 10125, W2 10126); step guard on the secret's name (W2 10126 C4); A0 wording (W1 10125 C2); 6b decision recorded; rev 1 replaced rev 0 d12d99e6: W1 10105 C1, N1, N2; W2 10107 C2, C3, N1; THE ASK FORM op doc §29; number assigned by the coordinator in its message to W3 at 21:10:43Z, and again at 21:16:21Z, "plan 500 around that webhook"): anyone with the URL can start a paid engine run
 
 ## 1. OBJECTIVE
 Today the engine's start webhook (Debate Start, POST /webhook/oracle-debate-v1) has no authentication. Anyone who has the URL can start a full engine run (1.73 to 5.15 USD for this pair; run 40891 was 5.149) with any topic, engines and profiles. A direct POST also skips the topic fence, which lives in dash_launch_odv1. The URL is not a secret (W4 10095 B8). Close that, and keep every real launch working.
@@ -24,7 +24,7 @@ dash_launch_odv1 is the only launch path with the fence and the log, and it send
 
 Options:
 A. (recommended) Header auth, in three steps.
-   A0. The operator, outside any transcript: in n8n, creates a Header Auth credential "ODV1 start webhook" (a header name and a long random value); in Supabase Vault, stores the same value as secret "odv1_start_webhook". Seats read back only that both exist, by name.
+   A0. The operator, outside any transcript: in n8n, creates a Header Auth credential "ODV1 start webhook" (a header name and a long random value); in Supabase Vault, stores the same value as secret "odv1_start_webhook". The value is 32 characters or more; the credential's header name is x-odv1-key (W1 C2). Seats read back only that both exist, by name.
    A1. DB card (step500a1.sql): dash_launch_odv1 reads the value from vault.decrypted_secrets by name inside the function and passes net.http_post a headers object with exactly two keys: Content-Type application/json (a headers argument replaces pg_net's default, W2 C2) and the auth header. Nothing else in the body changes. If the secret is missing, the function raises before any insert or post. Harmless while the node has no auth (n8n ignores an extra header).
    A1b. runstart.py launches through dash_launch_odv1 (W4 calls it through SQL as postgres) instead of posting to the URL, so W4's launches also get the fence and the log. W4 reads runstart.py first and states what else it does before the POST (registry checks) and keeps those.
    A2. n8n card: Debate Start gets authentication headerAuth with "ODV1 start webhook". Touched node only. Proven by the next launch through dash_launch_odv1 running, and a POST without the header being refused.
@@ -47,10 +47,12 @@ Before A1: both secrets exist by name (n8n credential list by name; vault.secret
 Before A1, the value's path (item 6):
 - 6a: W4 reads the Data API exposed schemas. If net is not exposed, the queue is readable only by database roles that can already read vault.decrypted_secrets' callers, and the few seconds a row waits are accepted. If net is exposed, stop (NOT SEARCHED item 1).
 - 6b: W4 reads one Panel Judge Call execution's webhook output by header name. If the auth header is there, the team records that the value is readable by whoever can read n8n executions (the operator and the seats), as for Panel Judge Call today, and the graders accept or reject that in their grade. Rejecting means a different design (option B) before any build. The same decision covers the Panel Judge Call webhook, which has this exposure today (W2 N1).
+- 6b result: yes, the Panel Judge Call executions hold its header value (W4 10114). W2 declined to read execution data, which would put a value into a transcript (10126); W1 could not, because that workflow is closed to the n8n MCP (10125). Decision: ACCEPT (W2 10126): every seat that can read n8n executions can already read vault.decrypted_secrets as postgres, so execution data shows those readers nothing new. The graders confirm or reject this in their grade of rev 2.
 Before the A1 write: test500a1_rollback.sql passes in full, as one transaction that ends in RAISE (pg_net sends only after commit, so nothing is posted):
 - T1: dash_launch_odv1 with a fenced topic is refused as today (fence unchanged).
 - T2: with an allowed test topic, the queued request in net.http_request_queue has exactly two header keys, Content-Type application/json and the auth header, whose value's md5 equals the vault secret's md5 (compared in SQL; neither printed); the URL and body equal today's.
-- T3: with the secret renamed inside the test, the function raises and queues nothing.
+- T3: the test runs before A0, while no secret named odv1_start_webhook exists: the function raises and queues nothing (postgres has no UPDATE on vault.secrets, so a rename is not possible; W4 10120). The graded output must show T3 PASS, not SKIPPED (W1 C1).
+- The step's first statement raises unless a secret named odv1_start_webhook exists (name only), so a card pressed before A0 changes nothing (W2 C4).
 - R1: after the revert, prosrc md5 is 3b74a293 again.
 Before A2: one real launch through dash_launch_odv1 after A1 runs normally (A1 proven), and runstart.py is changed (A1b).
 After A2:
