@@ -1,0 +1,11 @@
+engine header 4d19497f4f93879b computed 4d19497f4f93879b equal true | one-byte change -> e1f34cde05eb8b1b differs true
+child header 4d19497f4f93879b computed 4d19497f4f93879b equal true | one-byte change -> e1f34cde05eb8b1b differs true
+ms per hash 53.6
+engine triggers [
+  'Manual Start -> [[{"node":"Dry Run Config","type":"main","index":0}]]',
+  'Debate Start -> [[{"node":"Accept Models","type":"main","index":0}]]',
+  'Respond Accepted -> [[{"node":"Regrade?","type":"main","index":0}]]'
+]
+child triggers [
+  'Alternate Pass In -> [[{"node":"Library Check (ASK 422a)","type":"main","index":0}]]'
+]

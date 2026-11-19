@@ -1,0 +1,11 @@
+const fs=require('fs');const [T]=process.argv.slice(2);const w=JSON.parse(fs.readFileSync(T));
+const code=w.nodes.find(n=>n.name==='Library Check').parameters.jsCode;const L0=w.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;
+const run=L=>{const $=k=>({params:{jsCode:L}});const $input={all:()=>[{json:{x:1}}]};try{const r=new Function('$','$input',code)($,$input);return 'PASS items '+r.length}catch(e){return 'THROW '+e.message}};
+const i=L0.indexOf('\n/*LIB*/')+20;
+console.log('C1 live text      :',run(L0));
+console.log('C2 one byte in LIB:',run(L0.slice(0,i)+(L0[i]==='a'?'b':'a')+L0.slice(i+1)));
+console.log('C2 header changed :',run(L0.replace(/library sha [0-9a-f]{16}/,'library sha 0000000000000000')));
+console.log('C2 no header      :',run(L0.replace(/library sha [0-9a-f]{16}/,'library')));
+console.log('C2 LIB unreadable :',run(L0.replace('\n/*LIB*/','\n/*LIX*/')));
+const t0=Date.now();for(let k=0;k<5;k++)run(L0);console.log('C4 ms per run    :',(Date.now()-t0)/5);
+console.log('comment lines in node:',code.split('\n').filter(l=>/^\s*\/\//.test(l)).length);

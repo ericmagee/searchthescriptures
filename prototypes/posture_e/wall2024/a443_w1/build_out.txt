@@ -1,0 +1,3 @@
+base 7cd61791-5ffa-4355-8d28-9b10181b6f8c nodes 426 node text sha256 a23c43a33630 chars 2825
+7cd61791-5ffa-4355-8d28-9b10181b6f8c 2026-11-19T05:20:02.938Z nodes 425 426 param diffs 1 [ 'Library Check' ] conn equal false lib ed76416f413149ca ed76416f413149ca
+REASONING GUARD: no model-setting change.
