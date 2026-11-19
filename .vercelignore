@@ -1,0 +1,8 @@
+# ASK option 4 (W1, 11-19): upload only what the two Vercel projects serve or build.
+# The app is index.html, api/chat.js, package.json and vercel.json (docs/ left out: nothing uses it, W3 9530).
+# Everything else (prototypes/, wall2024/, manual and ask folders, .claude/) stays out of every deploy.
+/*
+!/index.html
+!/api/
+!/package.json
+!/vercel.json
