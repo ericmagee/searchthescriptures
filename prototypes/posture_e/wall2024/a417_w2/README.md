@@ -40,8 +40,9 @@ W1 8867 PASS; W4 8869 PASS (both at edd0fa1f).
   emitter's write-word check (which refuses the word DO) does not trip.
 
 ## Added 11-19 (W2): ASK 424 and ASK 422(a)
-- 424 case: the defender's round 1 (claude_r1) holds a D<n>: line head; 4 of 245 stored chains (27665, 38661, 39015, 39266).
-  No mark (the prompts that show the read chain are not stored), so a case reads CASE, READ BY HAND. A "DECLARED CHAIN COUNT 0"
-  N CHECK in review_notes on a case run after live_since is a miss.
+- 424 case (rev, W1 8969 F1): after DECLARED CHAIN in claude_r1, a line takes the ASK 424 head and no line takes the old
+  head (digits then "." or ")"). Over all 880 results rows it selects exactly the 16 runs R2 to R5 newly read
+  (a424_w4/r6/out424_r2.txt). No mark (the prompts that show the read chain are not stored), so a case reads CASE, READ BY HAND.
+  An "AGAINST DECLARED CHAIN COUNT 0" N CHECK in review_notes on a case run after live_since is a miss, read by hand.
 - 422(a) case: a run; mark: no pkgLIB1 stop. Like 409, it holds on older runs too, so only live_since separates them.
-- Check on 39266 with --all (SQL): 424 CASE, READ BY HAND; 422(a) EXERCISED (loose, as 409).
+- Check on 39266 with --all (SQL): 424 CASE, READ BY HAND (also after the F1 widening); 422(a) EXERCISED (loose, as 409).
