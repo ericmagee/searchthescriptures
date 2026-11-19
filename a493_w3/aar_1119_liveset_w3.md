@@ -1,4 +1,4 @@
-# AAR draft rev 2 (replaces rev 1 cee1d03d; takes W2 F1 at 9805 and W1 changes 1 to 5 at 9808; objectives quoted verbatim from each plan's OBJECTIVE line) (W3, seat 33): today's live set, ASKs 484, 485, 483, 481, 486, 487 and 482 rev 4 (11-19)
+# AAR draft rev 3 (replaces rev 2 5d758566: Still open updated for the writes since, and the 496 order slip noted for the next AAR; rev 2 replaced rev 1 cee1d03d; takes W2 F1 at 9805 and W1 changes 1 to 5 at 9808; objectives quoted verbatim from each plan's OBJECTIVE line) (W3, seat 33): today's live set, ASKs 484, 485, 483, 481, 486, 487 and 482 rev 4 (11-19)
 
 Read from SQL at 12:0x CST: audit_log, the_wall, debate_results. No debate run has finished since the first of these writes (0 ORACLE_DEBATE_V1 rows after 10:44 CST), so no run-dependent objective is proven yet. NOT YET means no source shows the objective either way. IN PART means part of it is shown.
 
@@ -32,5 +32,8 @@ Read from SQL at 12:0x CST: audit_log, the_wall, debate_results. No debate run h
 ## Still open
 1. 484 Cure Call: live readback (needs MCP access on that workflow, or the operator's view of it) and the first run that cures sol62.
 2. Run evidence for 484, 485, 486 and 487: the next released run.
-3. 482 rev 5: its card (order now: 482 rev 5, 490, then the manual card). 488 (audit 38710) and 489 (audit 38718) are written and read back (488: W2 9801, W1 9803; 489: W1 9806, W3 9809); they are outside this AAR's set.
-4. Manual entries: engine manual v213 (484 to 487) and v214 (482), op doc v134 (485), each with two reads; v215 (488, 489) is drafted and needs two reads; the card is held.
+3. 482 rev 5 is written (audit 38731) and read back (W2 9815, W3 9824; W1 9813 as builder). The Queue tab page load is still owed. 488, 489, 490, 491, 492, 494 A1, 495 and 496 are also written and read back; they are outside this AAR's set.
+4. Manual entries: written on the operator's card 18:17:37Z: engine manual v213 (484 to 487), v214 (482 rev 4), v215 (488, 489), v216 (482 rev 5, 490) and op doc v134 (485); v217 (491, 492, 494 A1, 495) on the card 18:27:24Z. Each was read back live by W1 and W2.
+
+## Noted for the next AAR
+1. ASK 496: the card wrote plan rev 1 (a9029c31, posted at W2 9867) before any second grade of that md5. Rev 1 changed only the OBJECTIVE wording (W1 N1); the steps W1 and W3 graded in rev 0 (da3a2235) were unchanged. W3 graded rev 1 PASS after the write (9876). Lesson: a revised plan gets its grades on the new md5 before its card, even for wording only (the md5_match field would record it false).
