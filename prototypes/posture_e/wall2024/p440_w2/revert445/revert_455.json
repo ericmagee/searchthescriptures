@@ -1,0 +1,152 @@
+{
+ "ask": "455",
+ "stack_card": "Write all four, 06:37:05Z 11-19",
+ "base": {
+  "engine": "7cd61791",
+  "child": "e9a13846"
+ },
+ "after": {
+  "engine": "c1256eec",
+  "child": "cd11b411"
+ },
+ "restore": [
+  {
+   "workflow": "engine",
+   "node": "Resolve Seats",
+   "action": "replace text",
+   "field": "jsCode",
+   "pkg_md5": "3ad17b49c5c93080a701f7c2d0ac36c7",
+   "base_md5": "d7031dbbd5696831389696cec08d1526",
+   "hunks": [
+    {
+     "pkg_text": "enf=need('luna');const ds=M['deepseek']||enf",
+     "base_text": "ds=need('deepseek');const enf=need('luna')"
+    }
+   ]
+  },
+  {
+   "workflow": "engine",
+   "node": "Enforcer Build",
+   "action": "replace text",
+   "field": "jsCode",
+   "pkg_md5": "d52a386b8a6ac9d9083c791f28483467",
+   "base_md5": "7ddd1db9aca101778bd896377cb403cd",
+   "hunks": [
+    {
+     "pkg_text": "item was asked':'no ENFORCER model_config row'}}",
+     "base_text": "item was asked':'no DeepSeek model_config row'}}"
+    }
+   ]
+  },
+  {
+   "workflow": "engine",
+   "node": "Anticheat Build",
+   "action": "replace text",
+   "field": "jsCode",
+   "pkg_md5": "df2c9d17c95e2c23e9baaaee3d9f13bd",
+   "base_md5": "d4c1c122e83c25bc6f4430eeea015dc9",
+   "hunks": [
+    {
+     "pkg_text": "o rounds found':'no ENFORCER model_config row',i",
+     "base_text": "o rounds found':'no DeepSeek model_config row',i"
+    }
+   ]
+  },
+  {
+   "workflow": "engine",
+   "node": "Shared Library",
+   "action": "replace text",
+   "field": "jsCode",
+   "pkg_md5": "3381f5fa400aab06c9f09809d8ebe3c3",
+   "base_md5": "7cca60e92add32da98113a9e0a7a6579",
+   "hunks": [
+    {
+     "pkg_text": "po).\n// library sha cad3b4f8239c2504, 3503 lines\nreturn ",
+     "base_text": "po).\n// library sha 4d19497f4f93879b, 3503 lines\nreturn "
+    },
+    {
+     "pkg_text": "!ds)return skip('no ENFORCER model_config row');",
+     "base_text": "!ds)return skip('no DeepSeek model_config row');"
+    }
+   ]
+  },
+  {
+   "workflow": "engine",
+   "node": "Close Enforcer Build",
+   "action": "replace text",
+   "field": "jsCode",
+   "pkg_md5": "2b0d6b6577c6727d4bef7392079d1d88",
+   "base_md5": "325c1490f104a21d14ae63520403e7b0",
+   "hunks": [
+    {
+     "pkg_text": "unds found':!ds?'no ENFORCER model_config row':'",
+     "base_text": "unds found':!ds?'no DeepSeek model_config row':'"
+    }
+   ]
+  },
+  {
+   "workflow": "engine",
+   "node": "Judge Contradiction Build",
+   "action": "replace text",
+   "field": "jsCode",
+   "pkg_md5": "ac7b5fcbab3146dc1b38867c11131d3b",
+   "base_md5": "80a1ea3c43963781d73fb42eab9a5bb1",
+   "hunks": [
+    {
+     "pkg_text": "unds found':!ds?'no ENFORCER model_config row':'",
+     "base_text": "unds found':!ds?'no DeepSeek model_config row':'"
+    }
+   ]
+  },
+  {
+   "workflow": "engine",
+   "node": "Assume Check Build",
+   "action": "replace text",
+   "field": "jsCode",
+   "pkg_md5": "3e25746ade7939e6643ab487e8ef4761",
+   "base_md5": "5ea2a84bbec02d968d7f50bacbf45beb",
+   "hunks": [
+    {
+     "pkg_text": "unds found':!ds?'no ENFORCER model_config row':'",
+     "base_text": "unds found':!ds?'no DeepSeek model_config row':'"
+    }
+   ]
+  },
+  {
+   "workflow": "engine",
+   "node": "Assume Check Record",
+   "action": "replace text",
+   "field": "jsCode",
+   "pkg_md5": "3378e2514984776e64c400b6b4f4bcdb",
+   "base_md5": "bc82c2463168128c1d946aba3cd0571e",
+   "hunks": [
+    {
+     "pkg_text": "/.test(f.deepseek)?'ENFORCER '+f.deepseek:(f.dee",
+     "base_text": "/.test(f.deepseek)?'DEEPSEEK '+f.deepseek:(f.dee"
+    },
+    {
+     "pkg_text": "ER',\n  cure_reason:'ENFORCER: '+f.deepseek+' -- ",
+     "base_text": "ER',\n  cure_reason:'DEEPSEEK: '+f.deepseek+' -- "
+    }
+   ]
+  },
+  {
+   "workflow": "child",
+   "node": "Shared Library",
+   "action": "replace text",
+   "field": "jsCode",
+   "pkg_md5": "7663e7395926217d68efb39c9508e318",
+   "base_md5": "bb0620e08e24bdf77416016b92ff20d5",
+   "hunks": [
+    {
+     "pkg_text": "po).\n// library sha cad3b4f8239c2504, 3503 lines\nreturn ",
+     "base_text": "po).\n// library sha 4d19497f4f93879b, 3503 lines\nreturn "
+    },
+    {
+     "pkg_text": "!ds)return skip('no ENFORCER model_config row');",
+     "base_text": "!ds)return skip('no DeepSeek model_config row');"
+    }
+   ]
+  }
+ ]
+}

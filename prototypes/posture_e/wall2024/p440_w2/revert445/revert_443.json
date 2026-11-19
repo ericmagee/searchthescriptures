@@ -1,0 +1,60 @@
+{
+ "ask": "443",
+ "stack_card": "Write all four, 06:37:05Z 11-19",
+ "base": {
+  "engine": "7cd61791",
+  "child": "e9a13846"
+ },
+ "after": {
+  "engine": "c1256eec",
+  "child": "cd11b411"
+ },
+ "restore": [
+  {
+   "workflow": "engine",
+   "node": "Library Check",
+   "action": "remove node",
+   "pkg_md5": "7f14d77598f91900678a98078825373e"
+  }
+ ],
+ "connections": {
+  "Debate Start": {
+   "pkg": {
+    "main": [
+     [
+      {
+       "node": "Library Check",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "base": {
+    "main": [
+     [
+      {
+       "node": "Accept Models",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   }
+  },
+  "Library Check": {
+   "pkg": {
+    "main": [
+     [
+      {
+       "node": "Accept Models",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "base": null
+  }
+ }
+}
