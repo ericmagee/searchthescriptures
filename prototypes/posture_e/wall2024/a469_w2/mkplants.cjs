@@ -6,4 +6,5 @@ if(mode==='url')n.parameters.jsCode="const __u='https://example.org/a//b';\n"+c;
 if(mode==='sha')n.parameters.jsCode=c.replace(/library sha [0-9a-f]+/,'library sha 0000000000000000');
 if(mode==='shaadd')n.parameters.jsCode='// extra header line\n'+c;
 if(mode==='eab')n.parameters.jsCode=c+'\n;';
+if(mode==='eabswap'){const i=c.indexOf('/*',3150);const j=c.indexOf('*/',i);n.parameters.jsCode=c.slice(0,i)+'/* a different comment */'+c.slice(j+2);}
 fs.writeFileSync(out,JSON.stringify(w));
