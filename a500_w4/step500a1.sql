@@ -1,5 +1,9 @@
--- ASK 500 A1 (W4, build of plan500.md rev 1 d018ed85; W1 10110, W2 10111). dash_launch_odv1 sends the start-webhook header. Run only on a card pressed in W4's thread, in one call with SET LOCAL truth.session_id and truth.card, after A0 (vault secret "odv1_start_webhook" exists).
+-- ASK 500 A1 rev 1 (adds the C4 guard, W2 10126) (W4, build of plan500.md rev 1 d018ed85; W1 10110, W2 10111). dash_launch_odv1 sends the start-webhook header. Run only on a card pressed in W4's thread, in one call with SET LOCAL truth.session_id and truth.card, after A0 (vault secret "odv1_start_webhook" exists).
 -- The new source is built from the live source by three exact replacements (each anchor must occur once), so the CRLF line ends and every other byte stay as they are. Header name: x-odv1-key (the operator uses this name in the n8n credential "ODV1 start webhook"). The value is read inside the function only; it is never printed.
+-- C4 (W2 10126): the Vault secret must exist, checked by name only; no value is read.
+do $g$ begin
+  if not exists (select 1 from vault.secrets where name = 'odv1_start_webhook') then raise exception 'ASK 500 A1: Vault secret odv1_start_webhook does not exist; A0 first'; end if;
+end $g$;
 do $s$
 declare src text; nsrc text; a1 text; a2 text; a3 text; b1 text; b2 text; b3 text;
 begin
