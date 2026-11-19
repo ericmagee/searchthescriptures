@@ -61,3 +61,12 @@ Mitigation: step 1 keeps a revert script (the inverse GRANTs, CREATE POLICY text
 
 ## 6. Roles
 Planner W4. Graders W1, W2. Cards in W4's thread: step 1 (database), 2a (workflows), 2c (database). Live only on the operator's press.
+
+## Addendum (W3 9466, op doc §22, load_write_surface)
+- The last three gated loads and their close ran as postgres through the management API (MCP): audit_log 32205 (11-15), 30080 (11-12),
+  32355 (11-16 close), performed_by "mgmt-api|postgres|...". REST logs, 48 h: no anon call to init_load_session or complete_session_*.
+- Step 1 and 2c therefore close the anon gated-load path on purpose; a seat loading through the public key would be refused.
+- T8 (branch or rollback test): an anon gated load from step_zero to complete_session_close -> refused at init_load_session with a clear
+  permission error; the same load as postgres -> completes. load_write_surface gets a line naming ASK 466 when step 1 goes live.
+- If the operator wants anon (REST) seats able to load, the alternative is: init_load_session to definer with a fixed actor, and keep
+  complete_session_close executable by anon; that reopens caller text in two load rows only.
