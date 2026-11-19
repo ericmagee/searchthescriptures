@@ -1,0 +1,26 @@
+Build Diagnostic Prompt | NOT RUN in this execution
+Build Save Body | EQUAL 275446 chars | heads 0
+Panel Done | EQUAL 393 chars | heads 0
+Format Markdown | EQUAL 1391589 chars | heads 0
+Replay Rows | NOT RUN in this execution
+Failure Salvage | NOT RUN in this execution
+Cure Check | NOT RUN in this execution
+Panel Cure Check | EQUAL EXCEPT HEAD | SUPERSEDED BY CURE: verdict BROKEN to HELD; see the cure lines below => SUPERSEDED BY RECOMPUTE: verdict BROKEN to HELD; see the recompute lines below
+Alternate Merge Seat | EQUAL 1377214 chars | heads 0
+Enforcer Build | EQUAL 66 chars | heads 0
+Enforcer Record | EQUAL 273570 chars | heads 1
+Judge Enforcer Build | EQUAL 748630 chars | heads 0
+Send Back Build | DIFFER BEYOND THE HEAD
+   OLD … words both readings rest on>\" and what the record leaves open (for example: \"the record leaves open whether ...\"). A KEEP does not cure this item.","ecl":null,"ecw":null,"lay":null,"und":{"kind":"E-HOLD-UND"},"abs":null,"pab":null,"mnp":null,"imp":null,"ksc":null,"b7":null,"epk":null,"reason_full":null,"xcut":null},{"sid":"S7","rule":"E-HOLD","item":"COLLISION D1 vs C2","line":"D1 vs C2 (Roman
+   NEW … words both readings rest on>\" and what the record leaves open (for example: \"the record leaves open whether ...\"). A KEEP does not cure this item. | UNDERDETERMINED GIVES ITS GROUNDS (E-HOLD on UNDERDETERMINED, ENFORCED, pkgUND): the enforcer reads this line as BROKEN; the decision stays yours. Either regrade it (CHANGE TO the BROKEN line in its counted layers, Commitment 13 (on a witness the 
+Send Back Record | EQUAL 488146 chars | heads 1
+Gate Build | EQUAL 620753 chars | heads 1
+Gate Record | EQUAL 396106 chars | heads 1
+Alt Seated | EQUAL 344569 chars | heads 0
+Alt Judge Enforcer Build | EQUAL 83031 chars | heads 0
+Alt Send Back Record | EQUAL 396252 chars | heads 0
+Alternate Merge 1 | EQUAL 1535588 chars | heads 0
+Alternate Merge | EQUAL 1671377 chars | heads 0
+Late Gate Build | EQUAL 54 chars | heads 0
+Pass Accumulate | NOT RUN in this execution
+TOTAL {"nodes":23,"ran":18,"not_run":5,"errors":0,"equal":16,"equal_masked":1,"differ":1,"heads_old":6,"heads_new":6,"heads_changed":1} changed heads by step {"RECOMPUTE":1}

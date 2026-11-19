@@ -1,0 +1,28 @@
+Build Diagnostic Prompt | NOT RUN in this execution
+Build Save Body | EQUAL 244046 chars | heads 0
+Panel Done | EQUAL 376 chars | heads 0
+Format Markdown | DIFFER BEYOND THE HEAD
+   OLD … layers, and C4 expressly constructs rather than silently assumes its maternal-route inference.\n\n---\n\n*Debate complete.*\n\n**Run time:** 499 min 2 s (started Nov 18, 3:25 PM CST, transcript written Nov 18, 11:44 PM CST).\n\n---\n\n## What the judges were sent\n\nEvery text the system sent to a judge in this debate, verbatim. Each distinct text is printed once; its heading names every seat and
+   NEW … layers, and C4 expressly constructs rather than silently assumes its maternal-route inference.\n\n---\n\n*Debate complete.*\n\n**Run time:** 499 min 3 s (started Nov 18, 3:25 PM CST, transcript written Nov 18, 11:44 PM CST).\n\n---\n\n## What the judges were sent\n\nEvery text the system sent to a judge in this debate, verbatim. Each distinct text is printed once; its heading names every seat and
+Replay Rows | NOT RUN in this execution
+Failure Salvage | NOT RUN in this execution
+Cure Check | NOT RUN in this execution
+Panel Cure Check | EQUAL 345305 chars | heads 0
+Alternate Merge Seat | EQUAL 1573049 chars | heads 0
+Enforcer Build | EQUAL 66 chars | heads 0
+Enforcer Record | EQUAL 345422 chars | heads 0
+Judge Enforcer Build | EQUAL 792285 chars | heads 0
+Send Back Build | DIFFER BEYOND THE HEAD
+   OLD … words both readings rest on>\" and what the record leaves open (for example: \"the record leaves open whether ...\"). A KEEP does not cure this item.","ecl":null,"ecw":null,"lay":null,"und":{"kind":"E-HOLD-UND"},"abs":null,"pab":null,"mnp":null,"imp":null,"ksc":null,"b7":null,"epk":null,"reason_full":null,"xcut":null},{"sid":"S10","rule":"E-HOLD","item":"COLLISION D5 vs C2","line":"D5 vs C2 (Matt
+   NEW … words both readings rest on>\" and what the record leaves open (for example: \"the record leaves open whether ...\"). A KEEP does not cure this item. | UNDERDETERMINED GIVES ITS GROUNDS (E-HOLD on UNDERDETERMINED, ENFORCED, pkgUND): the enforcer reads this line as BROKEN; the decision stays yours. Either regrade it (CHANGE TO the BROKEN line in its counted layers, Commitment 13 (on a witness the 
+Send Back Record | EQUAL 566515 chars | heads 0
+Gate Build | EQUAL 547301 chars | heads 0
+Gate Record | EQUAL 451566 chars | heads 0
+Alt Seated | EQUAL 353059 chars | heads 0
+Alt Judge Enforcer Build | EQUAL 353750 chars | heads 0
+Alt Send Back Record | EQUAL 460188 chars | heads 0
+Alternate Merge 1 | EQUAL 1984794 chars | heads 0
+Alternate Merge | EQUAL 2222266 chars | heads 0
+Late Gate Build | EQUAL 54 chars | heads 0
+Pass Accumulate | NOT RUN in this execution
+TOTAL {"nodes":23,"ran":18,"not_run":5,"errors":0,"equal":16,"equal_masked":0,"differ":2,"heads_old":0,"heads_new":0,"heads_changed":0} changed heads by step {}

@@ -1,0 +1,9 @@
+Alternate Pass Check | EQUAL 1020 chars | heads 0
+Cure Check | NOT RUN in this execution
+Panel Cure Check | EQUAL 327076 chars | heads 0
+R2 Alternate Merge Seat | EQUAL 1550360 chars | heads 0
+R2 Alt Seated | EQUAL 366471 chars | heads 0
+R2 Alt Judge Enforcer Build | EQUAL 279886 chars | heads 0
+R2 Alt Send Back Record | EQUAL 419743 chars | heads 0
+R2 Alternate Merge | EQUAL 1873790 chars | heads 0
+TOTAL {"nodes":8,"ran":7,"not_run":1,"errors":0,"equal":7,"equal_masked":0,"differ":0,"heads_old":0,"heads_new":0,"heads_changed":0} changed heads by step {}

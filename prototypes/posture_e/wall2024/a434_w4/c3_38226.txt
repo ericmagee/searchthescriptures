@@ -1,0 +1,24 @@
+Build Diagnostic Prompt | NOT RUN in this execution
+Build Save Body | EQUAL 239119 chars | heads 0
+Panel Done | EQUAL 396 chars | heads 0
+Format Markdown | EQUAL 1547030 chars | heads 0
+Replay Rows | NOT RUN in this execution
+Failure Salvage | NOT RUN in this execution
+Cure Check | NOT RUN in this execution
+Panel Cure Check | EQUAL 261949 chars | heads 0
+Alternate Merge Seat | EQUAL EXCEPT HEAD | SUPERSEDED BY CURE: verdict HELD to BROKEN; see the cure lines below => SUPERSEDED BY SEND-BACK: verdict HELD to BROKEN; see the send-back lines below
+Enforcer Build | EQUAL 66 chars | heads 0
+Enforcer Record | EQUAL 261428 chars | heads 0
+Judge Enforcer Build | EQUAL 543814 chars | heads 0
+Send Back Build | EQUAL 815460 chars | heads 0
+Send Back Record | EQUAL 470021 chars | heads 0
+Gate Build | EQUAL 826680 chars | heads 0
+Gate Record | EQUAL 418539 chars | heads 0
+Alt Seated | EQUAL 339024 chars | heads 0
+Alt Judge Enforcer Build | EQUAL 297874 chars | heads 0
+Alt Send Back Record | EQUAL 392562 chars | heads 0
+Alternate Merge 1 | EQUAL 1728624 chars | heads 1
+Alternate Merge | EQUAL 1949411 chars | heads 1
+Late Gate Build | EQUAL 288423 chars | heads 0
+Pass Accumulate | NOT RUN in this execution
+TOTAL {"nodes":23,"ran":18,"not_run":5,"errors":0,"equal":17,"equal_masked":1,"differ":0,"heads_old":3,"heads_new":3,"heads_changed":1} changed heads by step {"SEND-BACK":1}

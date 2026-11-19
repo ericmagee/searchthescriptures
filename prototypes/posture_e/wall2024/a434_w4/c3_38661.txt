@@ -1,0 +1,26 @@
+Build Diagnostic Prompt | NOT RUN in this execution
+Build Save Body | EQUAL 177217 chars | heads 0
+Panel Done | EQUAL 890 chars | heads 0
+Format Markdown | EQUAL 1295817 chars | heads 0
+Replay Rows | NOT RUN in this execution
+Failure Salvage | NOT RUN in this execution
+Cure Check | NOT RUN in this execution
+Panel Cure Check | EQUAL 313396 chars | heads 0
+Alternate Merge Seat | EQUAL 1292628 chars | heads 0
+Enforcer Build | EQUAL 66 chars | heads 0
+Enforcer Record | EQUAL 312989 chars | heads 0
+Judge Enforcer Build | EQUAL 555236 chars | heads 0
+Send Back Build | DIFFER BEYOND THE HEAD
+   OLD … words both readings rest on>\" and what the record leaves open (for example: \"the record leaves open whether ...\"). A KEEP does not cure this item.","ecl":null,"ecw":null,"lay":null,"und":{"kind":"E-HOLD-UND"},"abs":null,"pab":null,"mnp":null,"imp":null,"ksc":null,"b7":null,"epk":null,"reason_full":null,"xcut":null},{"sid":"S11","rule":"E-PREM","item":"premise listed against the defender 2","li
+   NEW … words both readings rest on>\" and what the record leaves open (for example: \"the record leaves open whether ...\"). A KEEP does not cure this item. | UNDERDETERMINED GIVES ITS GROUNDS (E-HOLD on UNDERDETERMINED, ENFORCED, pkgUND): the enforcer reads this line as BROKEN; the decision stays yours. Either regrade it (CHANGE TO the BROKEN line in its counted layers, Commitment 13 (on a witness the 
+Send Back Record | EQUAL 507028 chars | heads 0
+Gate Build | EQUAL 487291 chars | heads 0
+Gate Record | EQUAL 403922 chars | heads 0
+Alt Seated | EQUAL 276308 chars | heads 0
+Alt Judge Enforcer Build | EQUAL 282209 chars | heads 0
+Alt Send Back Record | EQUAL 362645 chars | heads 0
+Alternate Merge 1 | EQUAL 1682628 chars | heads 0
+Alternate Merge | EQUAL 1842152 chars | heads 0
+Late Gate Build | EQUAL 54 chars | heads 0
+Pass Accumulate | NOT RUN in this execution
+TOTAL {"nodes":23,"ran":18,"not_run":5,"errors":0,"equal":17,"equal_masked":0,"differ":1,"heads_old":0,"heads_new":0,"heads_changed":0} changed heads by step {}
