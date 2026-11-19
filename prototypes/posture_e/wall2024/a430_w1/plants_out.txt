@@ -12,9 +12,17 @@ NOT   -> NOT   | "bee" vs KJV ["bed"] | plant
 NOT   -> NOT   | "need" vs KJV ["nee"] | plant
 NOT   -> NOT   | "sprung up" vs KJV ["sprang"] | not an -ed form: stays NOT FOUND
 NOT   -> NOT   | "used" vs KJV ["us"] | KNOWN-BAD (m430 G1096): rev 1 needs 3 letters before -ed
-NOT   -> FOUND | "used" vs KJV ["use"] | rev 1: -d strip still reads use
+NOT   -> NOT   | "used" vs KJV ["use"] | rev 2: limit, a -d strip needs a 4-letter stem
 NOT   -> FOUND | "intended" vs KJV ["intend"] | rev 1: -ed strip, stem 6
 NOT   -> NOT   | "seed" vs KJV ["see"] | KNOWN-BAD (W2 9119): rev 2 makes no -d form on -ee/-eed
 NOT   -> NOT   | "see" vs KJV ["seed"] | KNOWN-BAD reverse
 NOT   -> NOT   | "freed" vs KJV ["free"] | rev 2 limit: -ee verbs not read
 NOT   -> FOUND | "love" vs KJV ["loved"] | rev 2: -d still read after a non-e letter
+NOT   -> NOT   | "shed" vs KJV ["she"] | KNOWN-BAD (W2 9119 N2): rev 2 needs a 4-letter stem
+NOT   -> NOT   | "wed" vs KJV ["we"] | KNOWN-BAD
+NOT   -> NOT   | "red" vs KJV ["re"] | KNOWN-BAD
+NOT   -> FOUND | "lived" vs KJV ["live"] | rev 2: 4-letter stem read
+NOT   -> FOUND | "named" vs KJV ["name"] | rev 2: 4-letter stem read
+NOT   -> NOT   | "she" vs KJV ["shed"] | KNOWN-BAD forward: rev 2 adds -d only to a 4-letter stem
+NOT   -> NOT   | "we" vs KJV ["wed"] | KNOWN-BAD forward
+NOT   -> FOUND | "name" vs KJV ["named"] | forward, 4-letter stem
