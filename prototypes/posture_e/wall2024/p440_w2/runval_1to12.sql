@@ -18,4 +18,10 @@ select a.ask||' no landed root 2024 post in the run window fails wall_2024_check
   case when not exists(select 1 from r) then 'NO RUN'
        when not exists(select 1 from post2) then 'NO CASE'
        when exists(select 1 from post2 where wall_2024_check(body,true,created_at) like 'ASK '||a.ask||'%') then 'MISSED' else 'HELD' end
-from (values ('448'),('449'),('450'),('451')) a(ask);
+from (values ('448'),('449'),('450'),('451')) a(ask)
+union all
+select '478 no call_costs entry names deepseek (ASK 455 ENFORCER on luna; W1 9522)',
+  (select count(*)::text||' calls; deepseek: '||count(*) filter (where e->>'m' ~* 'deepseek')||'; luna: '||count(*) filter (where e->>'m' ~* 'luna') from r, jsonb_array_elements(case when jsonb_typeof(r.call_costs)='array' then r.call_costs else '[]'::jsonb end) e),
+  case when not exists(select 1 from r) then 'NO RUN'
+       when not exists(select 1 from r where jsonb_typeof(call_costs)='array' and jsonb_array_length(call_costs)>0) then 'NO CASE'
+       when exists(select 1 from r, jsonb_array_elements(r.call_costs) e where e->>'m' ~* 'deepseek') then 'MISSED' else 'EXERCISED' end;

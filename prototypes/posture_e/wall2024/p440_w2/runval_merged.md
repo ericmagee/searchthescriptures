@@ -5,7 +5,7 @@ Detail: p440_w2/runval_1to12.md (W2) and a440_w1/validation_13_24.md (W1). This 
 ## Steps after the run ends (all read only)
 
 1. `node tools/exercise.cjs <token>`, run the SQL (rows 443, 444 A2, 422(c) for 454, 455, 455 D, 456).
-2. p440_w2/runval_1to12.sql with the token (446, 447, 448 to 451).
+2. p440_w2/runval_1to12.sql with the token (446, 447, 448 to 451, 478).
 3. a440_w1/validation_13_24.sql with the token (458 to 475).
 4. n8n checks N1, N2; fetch the engine execution and run `python3 -I a440_w1/check_exec.py <file>` (N3: 468, 475).
 5. Hand reads: 455 (c), 456, 470 when its mark is 0, Q474.
@@ -38,5 +38,6 @@ Detail: p440_w2/runval_1to12.md (W2) and a440_w1/validation_13_24.md (W1). This 
 | 22 | 472 | W1 SQL 472, 472b | Only with a SEND-BACK ITEM line |
 | 23 | 474 | W1 SQL 474, Q474 | Only with a send-back on CONCEDED LINKS |
 | 24 | 475 | W1 SQL 475, N3 | Yes |
+| 25 | 478 / 455 no DeepSeek call (W1 9522) | runval 478: 0 call_costs entries with m ~ deepseek | Yes, positive record (luna count shown) |
 
 Cannot be shown by any run: 445, 455 (a), 462, 465. Shown only in part: 448 to 451 (the guard is seen to have held, not to have refused), and every absence mark (458, 459, 460, 464, 475, 443, 455 D), which also reads clean on a run before the change (control 39266).
