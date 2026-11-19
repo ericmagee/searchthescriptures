@@ -1,0 +1,26 @@
+== T1 restw dry, Panel Judge Call, target = live (no change)
+REASONING GUARD: no model-setting change.
+PLAN removed [] added [] changed [] connections []
+DRY: checks pass, nothing written
+== T2 restw --write without --seat/--card (must refuse before any check)
+REFUSED: --write needs --seat and --card
+== T3 restw stale base (460 fetchback, live is 461): must refuse
+REFUSED: versionId moved 474d8def-edcf-44e3-8269-33215ae3add9
+== T4 libw dry on live engine+child, targets = live
+    '/tmp/claude-0/-home-user/86d59483-62fd-5fa0-b8c4-6322500f4823/scratchpad/gw/prototypes/posture_e/wall2024/a385_w4/reg385.cjs'
+  ]
+}
+
+Node.js v22.23.4
+REFUSED: ASK 385 one-copy check failed
+== T5 libw --write without --seat/--card (targets = live): must refuse after dry checks
+Node.js v22.23.4
+REFUSED: ASK 385 one-copy check failed
+== T6 audit notes from real pairs (--dry)
+W4_2026_11_06: n8n write on the operator card "Write it". Workflow ODV1 Cure Call (c7366RPLb8vdMQg6) version 5accea17-eb7b-4b9f-bc8f-daecadb543bf to e2fa573a-9f7f-456e-972a-1b4487ac1c8b, 6 to 5 nodes, published True. Removed: Cure Call deepseek. Added: none. Changed: Provider Removed Stop. Connections changed from: Cure Call Route.
+W4_2026_11_06: n8n write on the operator card "Write it". Workflow WALL-2024 Panel Judge Call (Y1VIsNB6KBrs1znP) version 5297cdd3-9d64-4abb-a4d7-9b1eaef313d0 to b48bddee-7bfb-4e49-bc6c-aa5a8ab360f7, 10 to 10 nodes, published True. Removed: Call deepseek. Added: Provider Removed Reply. Changed: none. Connections changed from: Call deepseek, Provider Removed Reply, Provider Route.
+W4_2026_11_06: n8n write on the operator card "Write it". Workflow WALL-2024 Panel Judge Call (Y1VIsNB6KBrs1znP) version b48bddee-7bfb-4e49-bc6c-aa5a8ab360f7 to 474d8def-edcf-44e3-8269-33215ae3add9, 10 to 6 nodes, published True. Removed: Call gemini, Call grok, Call mimo, Call openai. Added: none. Changed: none. Connections changed from: Call gemini, Call grok, Call mimo, Call openai, Provider Route.
+== T7 post failure path (bad key): must print SQL and exit 3
+AUDIT ROW NOT WRITTEN (HTTP Error 401: Unauthorized). Run by hand:
+select log_audit_event('t463_test', 'x', 'n8n');
+exit 3

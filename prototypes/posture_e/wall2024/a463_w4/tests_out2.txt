@@ -1,0 +1,8 @@
+== T4 libw dry on live engine+child, targets = live
+child changed [] added []
+REASONING GUARD: no model-setting change.
+library sha engine 0f221f86024a2c69 child 0f221f86024a2c69
+DRY: nothing written
+== T5 libw --write without --seat/--card (targets = live): must refuse after dry checks, before any PUT
+library sha engine 0f221f86024a2c69 child 0f221f86024a2c69
+REFUSED: --write needs --seat and --card (ASK 463)
