@@ -38,4 +38,14 @@ A run starts only on the operator's own word. An item the run does not reach is 
 12. ASK 448 to 451, the Wall guard: not engine; no run check. Shown by every Wall post since 9242.
 13. PENDING, not live: ASK 455 part D (22 enforcer steps renamed to "openrouter", W2 9251). If written before the run: the enforcer steps run under the new names,
    no "Node ... hasn't been executed" or missing-node error, and Assume Check Record, Judge Enforcer Record and Close Enforcer Record hold their rows.
-14. Run 39266 (started 21:24Z 11-18, success, run token ODV1-39266-7g9lzgbr) is the last stored run, after 39015; it predates all of tonight's writes.
+14. Run 39266 (started 21:24Z 11-18, success, run token ODV1-39266-7g9lzgbr) is the last stored run, after 39015; it predates all of tonight's writes and the 11-18 evening writes in item 15.
+15. LIVE SINCE BEFORE TONIGHT, NOT YET EXERCISED BY ANY RUN (W1 9258 condition). Each is read by its registry entry (a417_w2/registry.json).
+   a. Live after run 39266 (created 21:37Z 11-18):
+      422(c) KV_EXCL reads makes and excludes (live 22:52:47Z 11-18);
+      423 LINK D<n>/LINK C<n> labels rewritten to LINK <n>, AUDIT v27 LINK LABELS line (23:06:39Z);
+      424 one link head for every reader of the declared chain (23:54:07Z);
+      422(a) library and MAP sha checked at child load, pkgLIB1 (23:56:49Z). Its firmer mark is read by hand: lib422 in the child execution,
+      only when a second alternate pass runs; otherwise its load check is UNEXERCISED.
+   b. Live before 39266, but 39266 read NO CASE: 374 step 2 (both-not-stated refusal of DEFENDER LINK BROKEN on a challenger premise),
+      376 (K-V exclusion wording counts as a K-V kind), 394 s11 (bnsRefuse2024 reads the CHANGE TO line), 399/402 (retracted pairs; v62 tag),
+      406 (L2 gloss forms counted on the v57 line).
