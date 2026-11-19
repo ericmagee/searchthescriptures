@@ -1,0 +1,6 @@
+../../../../run/exec_38450.json
+  with deepseek row: base runs | live runs | base output = stored: false | live = base: true
+  base vs stored, differing keys: enforcer,jlabel
+  without deepseek row: base REFUSES: ORACLE_DEBATE_V1 Resolve refused: seat "deepseek" has no ACTIVE model_config row. | live runs
+  live, without vs with: keys differing: deepseek
+  live without: deepseek field api_model = openai/gpt-6-luna (luna row api_model = openai/gpt-6-luna)

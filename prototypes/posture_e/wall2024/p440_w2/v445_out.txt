@@ -1,0 +1,12 @@
+package 443 changes 1 nodes: Library Check
+package 455 changes 8 nodes: Resolve Seats, Enforcer Build, Anticheat Build, Shared Library, Close Enforcer Build, Judge Contradiction Build, Assume Check Build, Assume Check Record
+package 456 changes 5 nodes: Extract Independent Verdict, Panel Payloads, Alternate Payloads, Send Back Record, Alt Send Back Record
+package 444 A2 changes 2 nodes: Alternate Build, Early Alternate Build
+nodes changed by two packages: none
+stack2 = base + every package's own nodes: yes (426 node names)
+connection sets among targets: [["443"],["455","456","444 A2"]] | stack2 connections equal t443: true
+revert 443 : restore 1 nodes from the other targets; 1 node(s) absent in base (added by the package, revert removes them): Library Check
+revert 455 : restore 8 nodes from the other targets
+revert 456 : restore 5 nodes from the other targets
+revert 444 A2 : restore 2 nodes from the other targets
+RESULT: each package is separable; its revert is the stack with its own nodes set back to base
