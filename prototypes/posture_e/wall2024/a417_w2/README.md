@@ -38,3 +38,10 @@ W1 8867 PASS; W4 8869 PASS (both at edd0fa1f).
   "does not/do not/never [word] makes|excludes" with "exclu" and "quot"; mark = that row CURED. Over all stored K-V rows
   the case reads false; the same pattern with "make|exclude" matches 26 rows (control). "do" is written d(o|oes) so the
   emitter's write-word check (which refuses the word DO) does not trip.
+
+## Added 11-19 (W2): ASK 424 and ASK 422(a)
+- 424 case: the defender's round 1 (claude_r1) holds a D<n>: line head; 4 of 245 stored chains (27665, 38661, 39015, 39266).
+  No mark (the prompts that show the read chain are not stored), so a case reads CASE, READ BY HAND. A "DECLARED CHAIN COUNT 0"
+  N CHECK in review_notes on a case run after live_since is a miss.
+- 422(a) case: a run; mark: no pkgLIB1 stop. Like 409, it holds on older runs too, so only live_since separates them.
+- Check on 39266 with --all (SQL): 424 CASE, READ BY HAND; 422(a) EXERCISED (loose, as 409).

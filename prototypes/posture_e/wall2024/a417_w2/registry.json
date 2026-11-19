@@ -45,6 +45,14 @@
     {"ask": "423", "title": "LINK D<n> / LINK C<n> labels in kept rounds rewritten to LINK <n>; AUDIT v27 LINK LABELS line", "live_since": "2026-11-18T23:06:39Z", "version": "db091b9e", "probe": "sql",
      "case_sql": "exists(select 1 from r where coalesce(r.engine_r2,'')||E'\\n'||coalesce(r.engine_r3,'')||E'\\n'||coalesce(r.challenger_r3,'') ~ '(^|\\n)[ \\t]*[*_]*[ \\t]*LINK[ \\t]*[*_]*[ \\t]*[DC][0-9]' or coalesce(r.review_notes,'') like '%LINK LABELS (%')",
      "mark_sql": "(select count(*) from r where coalesce(r.review_notes,'') like '%(ASK 423) -- REWRITTEN%')",
-     "note": "Case and mark from W3 plan rev 2 item 1 (a423_w3/plan_rev2.md lines 73 to 75). A run after live_since whose kept text still carries a [DC] label at a line head and no AUDIT v27 line reads MISSED."}
+     "note": "Case and mark from W3 plan rev 2 item 1 (a423_w3/plan_rev2.md lines 73 to 75). A run after live_since whose kept text still carries a [DC] label at a line head and no AUDIT v27 line reads MISSED."},
+    {"ask": "424", "title": "every reader of the defender's declared chain takes one link head (D1:, D1., **1.**, 1 --)", "live_since": "2026-11-18T23:54:07Z", "version": "040e0e02", "probe": "sql",
+     "case_sql": "exists(select 1 from r where coalesce(r.claude_r1,'') ~* '(^|\\n)[ \\t]*(#+[ \\t]*)?[*_]*[ \\t]*D[0-9]+[*_]*[ \\t]*:')",
+     "mark_sql": null,
+     "note": "Case: the defender's round 1 writes its chain with D<n>: heads (4 of the 245 stored chains, 27665, 38661, 39015, 39266; SQL by W2 at 00:15Z 11-19). No stored mark: the judge and round 4 prompts that show the read chain are not stored, so a case reads CASE, READ BY HAND. Read by hand: D4 Build's YOUR DECLARED CHAIN carries the conclusion link, and review_notes holds no 'DECLARED CHAIN COUNT 0' N CHECK; such a flag on a case run is a MISS."},
+    {"ask": "422(a)", "title": "library and MAP sha checked at child load (pkgLIB1)", "live_since": "2026-11-18T23:56:49Z", "version": "1861543f", "probe": "sql",
+     "case_sql": "exists(select 1 from r)",
+     "mark_sql": "(select case when exists(select 1 from x where coalesce(x.error_message,'')||coalesce(x.error_detail::text,'') like '%pkgLIB1%') or exists(select 1 from r where to_jsonb(r)::text like '%pkgLIB1%') then 0 else 1 end)",
+     "note": "As 409: the case is a run, and the mark is the absence of a pkgLIB1 stop (W4 8956 C1), so EXERCISED means ran without drift. That a second alternate pass carried lib422 (8956 C2) is read in the child execution by hand."}
   ]
 }
