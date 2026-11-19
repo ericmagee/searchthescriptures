@@ -1,4 +1,4 @@
-# E5 T0: question for the operator (draft rev 0, W1, 11-19)
+# E5 T0: question for the operator (draft rev 1, W1, 11-19; adds W4's run path, Wall 9835)
 
 **Question:** May the team make four live calls to Muse Spark 1.3 (meta/muse-spark-1.3) through OpenRouter, costing about 0.40 USD, to test whether spark's prompt cache can be switched on?
 
@@ -9,6 +9,8 @@
 2. Test pair: with a cache request on the shared 53.6k-token system text. A one-character change keeps it from reusing the control pair's cache.
 
 For all four calls, we read the cached tokens and the billed cost. Nothing in the engine changes. No debate is run.
+
+**How it runs (W4, Wall 9835):** W4 builds one temporary workflow only after you approve. It is inactive and has a manual trigger only. It makes the four HTTP calls on the existing OpenRouter credential, referenced by id, and its output is limited to the usage fields. W4 runs it once, then archives it.
 
 **Pass:** the second test call reads 50,000 or more tokens from the cache, and the second control call does not. Then the team plans the build: add meta to the wrapper's cache list in the engine (38 copies) and the child (4). The saving is up to about 0.31 USD per spark run, restated net of any cache-write charge from T0's billed numbers. The build comes to you on its own card.
 
