@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""ASK 440 run validation, n8n part (W1): items 468 and 475 (N3) on the engine execution of the run.
+"""ASK 440 run validation, n8n part (W1): items 468 and 475 (N3), and item 11 (455 a, since ASK 479) on the engine execution of the run.
 Usage: python3 -I check_exec.py <engine_execution.json>   (the full execution with data, as get_workflow_execution returns it)
 Read only. Prints one line per B round and the pkgLAYB count in the run data (node code is not searched)."""
 import json,sys
@@ -34,3 +34,20 @@ s=json.dumps(rd)
 n=s.count('pkgLAYB:')
 print('pkgLAYB: in run data:',n)
 print('468/475 VERDICT:', 'EXERCISED' if ok and n==0 else 'CHECK BY HAND')
+# Item 11, 455 (a) (W2 9549 B1): with the deepseek rows inactive (ASK 479), Resolve Seats' deepseek field must carry the luna row.
+def dig(o,k):
+  if isinstance(o,dict):
+    if k in o: return o[k]
+    for v in o.values():
+      r=dig(v,k)
+      if r is not None: return r
+  elif isinstance(o,list):
+    for v in o:
+      r=dig(v,k)
+      if r is not None: return r
+  return None
+rs=items('Resolve Seats')
+am=[(dig(i.get('deepseek'),'api_model') if i.get('deepseek') is not None else dig(i,'deepseek')) for i in rs]
+am=[a if isinstance(a,str) else (dig(a,'api_model') if a is not None else None) for a in am]
+print('Resolve Seats items %d, deepseek.api_model: %s'%(len(rs),sorted(set(map(str,am)))))
+print('455 (a) VERDICT:', 'EXERCISED (luna)' if rs and all(a=='openai/gpt-6-luna' for a in am) else ('NOT RUN' if not rs else 'CHECK BY HAND'))
