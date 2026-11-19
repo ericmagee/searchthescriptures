@@ -67,7 +67,7 @@ for k in WF:
   for x in t['nodes']:
     b=KN.get(x['name'])
     if b is None:fail.append('missing '+x['name']);continue
-    keys=x.keys() if x['name'] in ADD[k] else ['parameters']
+    keys=x.keys() if x['name'] in ADD[k] else ['parameters','type','typeVersion','credentials','onError','id']
     fail+=[x['name']+' '+kk for kk in keys if js(x.get(kk))!=js(b.get(kk))]
   if js(back['connections'])!=js(t['connections']):fail.append('connections')
   fail+=['still present '+n for n in RMS[k] if n in KN]
