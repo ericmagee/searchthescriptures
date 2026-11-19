@@ -1,4 +1,4 @@
--- ASK AAR snapshot rows for the 11-19 pm AAR, DRAFT rev 2 (W3; replaces rev 0 8d7abf3d and rev 1 77a99b51, which was never graded: builder rows added (W1 10014 F1; W2 10015 F1); manual times labelled as card times (W1 N1; W2 N3); 498 objective marked abridged and 5b48fb0f grades added (W2 N1, N2). Rows 18 and 19 are corrected by W2's fix_rows_18_19_draft.sql, not here). For W1 and W2 to grade. NOT RUN.
+-- ASK AAR snapshot rows for the 11-19 pm AAR, DRAFT rev 3 (W3; replaces rev 0 8d7abf3d and rev 1 77a99b51, which was never graded: builder rows added (W1 10014 F1; W2 10015 F1); manual times labelled as card times (W1 N1; W2 N3); 498 objective marked abridged and 5b48fb0f grades added (W2 N1, N2). Rows 18 and 19 are corrected by W2's fix_rows_18_19_draft.sql, not here). Rev 3: closing reads start after the correction rows, written 20:14:13Z as snapshot ids 26 and 27 with builder ids 18 and 19; the next snapshot id is 28. For W1 and W2 to grade. NOT RUN.
 -- The coordinator (seat 36) runs it once, after the grades, before the AAR is sent. No card.
 -- Covers ASK 497 and ASK 498 (written and read back), with one ask_aar_builders row each. Not yet included: the run 40891 row
 -- (aar_494a1_run_template.sql e6c5c08e, prior_row 16, after W4 reports the run) and the 494 A2 row (after its write).
@@ -76,8 +76,8 @@ JOIN (VALUES
 ) AS b(ask, rev, src) ON s.ask = b.ask AND s.rev = b.rev AND s.prior_row IS NULL
 WHERE s.id > 25 AND s.aar_at = now();
 
-SELECT id, ask, rev, prior_row, md5_match FROM ask_aar_snapshots WHERE id > 25 ORDER BY id;
-SELECT id, snapshot_id, builder_seats FROM ask_aar_builders WHERE id > 17 ORDER BY id;
+SELECT id, ask, rev, prior_row, md5_match FROM ask_aar_snapshots WHERE id > 27 ORDER BY id;
+SELECT id, snapshot_id, builder_seats FROM ask_aar_builders WHERE id > 19 ORDER BY id;
 SELECT * FROM ask_aar_snapshots_check() WHERE check_code <> 'd';
-SELECT * FROM ask_aar_grades_check() WHERE snapshot_id > 25;
+SELECT * FROM ask_aar_grades_check() WHERE snapshot_id > 27;
 COMMIT;
