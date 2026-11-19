@@ -9,7 +9,7 @@ Pairing: spark (oracle) vs gemini (plain); panel expected chatgpt, sol, sol62 (W
 | 3 | 484 | sol62 answers with no Azure cut | the sol62 call's provider in call_costs (not Azure); no content-filter error (W1 N2) |
 | 8 | 487 | the gemini debater runs google/gemini-4-hydrogen | the run row's gemini model |
 | 13 | 490 | the transcript names models, never "ChatGPT" or a bare seat key | the run's Drive transcript names (operator's view, or a seat that can read Drive) |
-| 7 | 486 | only if a reserve or alternate is drawn: haiku is last | Init Seats output for the run |
+| 7 | 486 | haiku is last in the reserve and alternate order; shown by every run's Init Seats output, whether or not a reserve is seated (W2 N1) | Init Seats output for the run |
 | 4 | 485 | only if a reserve is seated: send-back sent, E-GATE rows | send_back and E-GATE rows for the reserve |
 | 11 | 488 | only if the counted seats' RESULT words agree while tags split | derive_debate_outcome output and the judgments |
 | 14 | 491 | not shown by a webhook run (no queue claim) | none |
