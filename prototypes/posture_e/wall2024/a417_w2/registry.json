@@ -195,8 +195,8 @@
    "version": "2d40e6ad",
    "probe": "sql",
    "case_sql": "exists(select 1 from e where e.kind in ('enforcer_check','send_back') and e.prompt_sent is not null)",
-   "mark_sql": "(select case when exists(select 1 from e where e.kind in ('enforcer_check','send_back') and e.prompt_sent ~ '(\\((A[0-9]+(\\.[0-9]+)?, )?(argon|chatgpt|deepseek|ember|gemini|glm_legal|glm|grok|haiku|hydrogen|luna|mimo|qwen|sol62|sol|sonnet|ernie|alt_minimax31|spark|claude)\\)|line of (argon|chatgpt|deepseek|ember|gemini|glm_legal|glm|grok|haiku|hydrogen|luna|mimo|qwen|sol62|sol|sonnet|ernie|alt_minimax31|spark|claude)\\M)') then 0 else (select count(*) from e where e.kind in ('enforcer_check','send_back') and e.prompt_sent ~ 'Judge [0-9]') end)",
-   "note": "Plan a429_w3/plan_rev2.md item 6 (W2 9060 C-2, W1 9065 N1). Seat ids are matched only inside label forms: a seat id alone in parentheses (optionally after an A-number and comma) or after \"line of\", so \"remember\" and \"solution\" never match. prompt_sent is stored only on the first row of a batch. Any labelled seat id gives 0 (MISSED); else the mark counts rows that hold \"Judge k\". Known-bad: 39266 --all (labels such as (chatgpt), (sol62)). Seat list: every judge_seat in debate_judgments plus enforcer and alternate seats; a new seat must be added here."
+   "mark_sql": "(select case when exists(select 1 from e where e.kind in ('enforcer_check','send_back') and e.prompt_sent ~ ('\\((A[0-9]+(\\.[0-9]+)?, )?(' || (select string_agg(m.seat,'|' order by length(m.seat) desc) from model_config m) || ')\\)|line of (' || (select string_agg(m.seat,'|' order by length(m.seat) desc) from model_config m) || ')\\M')) then 0 else (select count(*) from e where e.kind in ('enforcer_check','send_back') and e.prompt_sent ~ 'Judge [0-9]') end)",
+   "note": "Plan a429_w3/plan_rev2.md item 6 (W2 9060 C-2, W1 9065 N1). Seat ids are matched only inside label forms: a seat id alone in parentheses (optionally after an A-number and comma) or after \"line of\", so \"remember\" and \"solution\" never match. prompt_sent is stored only on the first row of a batch. Any labelled seat id gives 0 (MISSED); else the mark counts rows that hold \"Judge k\". Known-bad: 39266 --all (labels such as (chatgpt), (sol62)). Seat list: every seat in model_config at the time of the check (W1 9215 note 1), longest first so sol62 is tried before sol."
   },
   {
    "ask": "430",
@@ -250,13 +250,13 @@
   },
   {
    "ask": "437",
-   "title": "removed models (HY4, HY4 Flash, Ember, GLM Legal, Qwen 3.8, MiniMax) never seated",
+   "title": "removed models never seated (HY4, HY4 Flash, Ember, GLM Legal, GLM Flash, Qwen 3.8, MiniMax, Kimi, Ernie, DeepSeek)",
    "live_since": "2026-11-19T04:27:07Z",
    "version": "60bf6007",
    "probe": "sql",
    "case_sql": "exists(select 1 from r)",
-   "mark_sql": "(select case when exists(select 1 from j where j.judge_seat in ('ember','glm_legal','qwen','alt_minimax31') or j.judge_api_model ~* '(minimax|hunyuan|hy4|muse-ember|glm-5\\.3-flashx-legal|qwen3\\.8)') or exists(select 1 from r where concat_ws(' ',r.defender_model,r.challenger_model) ~* '(minimax|hunyuan|hy4|muse-ember|glm-5\\.3-flashx-legal|qwen3\\.8)') then 0 else 1 end)",
-   "note": "Plan a437_w4/plan_rev1.md item 6 reads Init Seats and Accept Build in the n8n execution; this SQL is a looser proxy over seated judges and debaters. Stored seat ids: ember (meta/muse-ember), glm_legal (z-ai/glm-5.3-flashx-legal), qwen (qwen/qwen3.8-max-0902); HY4 and MiniMax by api name. As 409: EXERCISED means none was seated, nothing firmer. The refusal text for a requested removed model needs a request and is UNEXERCISED in a normal run."
+   "mark_sql": "(select case when exists(select 1 from j where j.judge_seat in ('ember','glm_legal','glm_flash','hy4','hy4_flash','qwen','qwen_flash','alt_minimax3','alt_minimax31','kimi','ernie','deepseek','deepseek_debate') or exists(select 1 from model_config m where m.seat in ('ember','glm_legal','glm_flash','hy4','hy4_flash','qwen','qwen_flash','alt_minimax3','alt_minimax31','kimi','ernie','deepseek','deepseek_debate') and j.judge_api_model like '%'||m.api_model)) or exists(select 1 from r, model_config m where m.seat in ('ember','glm_legal','glm_flash','hy4','hy4_flash','qwen','qwen_flash','alt_minimax3','alt_minimax31','kimi','ernie','deepseek','deepseek_debate') and (coalesce(r.defender_model,'') like '%'||m.api_model or coalesce(r.challenger_model,'') like '%'||m.api_model)) then 0 else 1 end)",
+   "note": "Plan a437_w4/plan_rev1.md item 6 reads Init Seats and Accept Build in the n8n execution; this SQL is a looser proxy over seated judges and debaters. Removed seats (ASK 437 and the operator's removal list, W1 9215 note 2): ember, glm_legal, glm_flash, hy4, hy4_flash, qwen, qwen_flash, alt_minimax3, alt_minimax31, kimi, ernie, deepseek, deepseek_debate; matched by judge seat and by their model_config api_model at the end of the stored judge, defender or challenger model. As 409: EXERCISED means none was seated, nothing firmer. The refusal text for a requested removed model needs a request and is UNEXERCISED in a normal run."
   },
   {
    "ask": "438",

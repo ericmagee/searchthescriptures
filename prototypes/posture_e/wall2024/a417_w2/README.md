@@ -55,7 +55,7 @@ Check over stored runs (case/mark, all predate the writes, so these are --all re
 - 429 MISSED on 39266, 38593, 39015 (seat ids in label forms such as "(chatgpt)", "(sol62)"): the known-bad case.
 - 434 MISSED on 38593 (a CURE head only; W4 C3 shows the new code would write SEND-BACK there).
 - 435 MISSED on 26163, 24355, 32157 (the known-good cases of W4 9208, read before the write).
-- 437 MISSED on 39266 (glm_legal seated); EXERCISED on older runs with no removed seat (loose, as 409).
+- 437 MISSED on 39266 and 26163 (a removed seat present); EXERCISED on 39015 and 38593 (loose, as 409). Rev 1 per W1 9215.
 - 430 and 431 have no stored mark: CASE, READ BY HAND (431 case holds on 39015).
 - 436: no stored list has 25 or more renderings (max 18 in 6 runs), so it has no known-bad case on stored data.
 - 438 and 439: no stored run carries the ASK 406 forms block above 60 glosses; NO CASE on all six.
