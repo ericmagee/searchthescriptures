@@ -1,0 +1,14 @@
+[
+{
+"old": "A grade names the package, its commit, the replay or test it ran, and PASS or FAIL.",
+"new": "A grade names the package, its commit, the replay or test it ran, and PASS or FAIL. A grade also carries a line RULES READ: naming each manual section whose rules the change touches, read in full before the grade (ASK 448)."
+},
+{
+"old": "A revision restates each heading it changes and names the revision it replaces.\n",
+"new": "A revision restates each heading it changes and names the revision it replaces.\n\nSTACKED PACKAGES (ASK 445). Packages graded as a stack go live on one card and one write per workflow; the builder keeps one revert file per package.\n\nSHARED TOOLS (ASK 447). The shared check tools are kept in prototypes/posture_e/wall2024/tools/ on the working branch, each listed in tools/README.md there with its use and its ASK; the engine manual is written only through engine_manual_apply.\n"
+},
+{
+"old": "the coordinator asks the operator for the run.",
+"new": "the coordinator asks the operator for the run. A released run starts only after tools/runstart.py prints GO for the released versions and body; the run-start post quotes the GO output and the body sha (ASK 446)."
+}
+]
