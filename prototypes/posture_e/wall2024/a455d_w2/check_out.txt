@@ -4,13 +4,13 @@ engine D2 library: reverse map of lines and MAP text equals the base (header sha
 engine D2 reverse map gives the base exactly: true
 engine D4 ids/types/positions/credentials unchanged: true
 engine D5 renamed steps whose request is not to openrouter.ai: 0
-engine D3 stubs 31 all rebuild with the right byte count; unnamed reads: base 5 target 5 | new in target: 0 
+engine D3 stubs 31 all rebuild with the right byte count; unnamed reads: base 0 target 0 | new in target: 0 
 child D1 new names already in base: 0
 child D2 library: reverse map of lines and MAP text equals the base (header sha and byte counts aside): true
 child D2 reverse map gives the base exactly: true
 child D4 ids/types/positions/credentials unchanged: true
 child D5 renamed steps whose request is not to openrouter.ai: 0
-child D3 stubs 13 all rebuild with the right byte count; unnamed reads: base 2 target 2 | new in target: 0 
+child D3 stubs 13 all rebuild with the right byte count; unnamed reads: base 0 target 0 | new in target: 0 
 library: engine and child equal before the map line, base true target true
 D6 library MAP entries equal across engine and child: yes, 46
 ALL PASS
