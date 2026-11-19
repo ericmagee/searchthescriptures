@@ -1,0 +1,19 @@
+workflows 195
+== moMxiV4Irg1uRBZN TRUTH - ORACLE_DEBATE_V1 (BB-4607) ver 828dc91d pub True active True from ['root']
+   deepseek nodes ['Dry Run Config', 'Init Seats', 'Resolve Seats', 'D1 Build', 'C1 Build', 'D2 Build', 'C2 Build', 'D3 Build', 'C3 Build', 'Build Synthesis', 'Build Independent Verdict', 'Build Diagnostic Prompt', 'Build Save Body', 'Panel Build', 'Format Markdown', 'Reserve Build', 'Failure Salvage', 'Panel Tokens', 'D4 Build', 'C4 Build', 'Accept Build', 'Accept DS Return Build', 'Shared Library', 'Panel Judges Prep', 'Provider Removed Stop', 'Reread Build', 'Alt Reread Build', 'Assume Check Record'] conn hits 0
+   calls [('exec', 'MqQHRl7mQQ0z8QdT'), ('exec', 'SX4ZWtgHNs96uBOo'), ('exec', 'c7366RPLb8vdMQg6'), ('hook', 'wall2024-panel-judge-call'), ('idref', 'MqQHRl7mQQ0z8QdT'), ('idref', 'SX4ZWtgHNs96uBOo'), ('idref', 'c7366RPLb8vdMQg6'), ('idref', 'v02XXRlIhoHzMTjJ')]
+== MqQHRl7mQQ0z8QdT ODV1 Alternate Pass ver 33adc248 pub True active True from ['moMxiV4Irg1uRBZN', 'root']
+   deepseek nodes ['R2 Alt Reread Build', 'Shared Library'] conn hits 0
+   calls [('exec', 'c7366RPLb8vdMQg6'), ('idref', 'c7366RPLb8vdMQg6'), ('idref', 'v02XXRlIhoHzMTjJ')]
+== c7366RPLb8vdMQg6 ODV1 Cure Call ver e2fa573a pub True active True from ['MqQHRl7mQQ0z8QdT', 'moMxiV4Irg1uRBZN']
+   deepseek nodes ['Provider Removed Stop'] conn hits 0
+   calls [('idref', 'v02XXRlIhoHzMTjJ')]
+== Y1VIsNB6KBrs1znP WALL-2024 Panel Judge Call ver 5297cdd3 pub True active True from ['moMxiV4Irg1uRBZN']
+   deepseek nodes ['Provider Route', 'Call deepseek'] conn hits 2
+   calls []
+== SX4ZWtgHNs96uBOo WALL-2024 Early Alternate ver 30a47a4a pub True active True from ['moMxiV4Irg1uRBZN']
+   deepseek nodes [] conn hits 0
+   calls []
+== v02XXRlIhoHzMTjJ TRUTH — Error Handler ver 5115b808 pub True active True from ['MqQHRl7mQQ0z8QdT', 'c7366RPLb8vdMQg6', 'moMxiV4Irg1uRBZN']
+   deepseek nodes [] conn hits 0
+   calls []
