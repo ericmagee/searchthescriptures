@@ -1,0 +1,12 @@
+base D2B resend false why no barred move harvested | build lay_check ABSENT | bar.layers ABSENT
+base C2B resend false why no barred move harvested | build lay_check ABSENT | bar.layers ABSENT
+base D3B resend false why no barred move harvested | build lay_check ABSENT | bar.layers ABSENT
+base C3B resend false why no round text | build lay_check ABSENT | bar.layers ABSENT
+base D4B resend false why no barred move harvested | build lay_check ABSENT | bar.layers ABSENT
+base C4B resend false why no round text | build lay_check ABSENT | bar.layers ABSENT
+target D2B resend false why no barred move harvested | build lay_check items 0 | bar.layers {"first":{"applies":true,"items":[],"pass":true}}
+target C2B resend false why no barred move harvested | build lay_check items 0 | bar.layers {"first":{"applies":true,"items":[],"pass":true}}
+target D3B resend false why no barred move harvested | build lay_check items 0 | bar.layers {"first":{"applies":true,"items":[],"pass":true}}
+target C3B resend false why no round text | build lay_check items 0 | bar.layers {"first":{"applies":false,"items":[]}}
+target D4B resend false why no barred move harvested | build lay_check items 0 | bar.layers {"first":{"applies":true,"items":[],"pass":true}}
+target C4B resend false why no round text | build lay_check items 0 | bar.layers {"first":{"applies":false,"items":[]}}
