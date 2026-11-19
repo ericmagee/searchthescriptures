@@ -1,0 +1,5 @@
+REASONING GUARD: no model-setting change.
+exit 0
+REASONING GUARD: model-setting text changes in 1 node(s): Shared Library
+REFUSED: needs the operator's own instruction (--allow with his words).
+exit 1
