@@ -233,8 +233,8 @@ BEGIN
   IF to_regprocedure('public.ask_aar_snapshots_check()') IS NULL THEN
     INSERT INTO t498 VALUES ('T7 ASK 497 check', 'not live; not run');
   ELSE
-    EXECUTE 'SELECT string_agg(check_code || '' '' || detail, ''; '') FROM public.ask_aar_snapshots_check() WHERE check_code IN (''b'',''c'',''e'')' INTO r;
-    INSERT INTO t498 VALUES ('T7 ASK 497 check b, c, e findings', coalesce(r, 'none'));
+    EXECUTE 'SELECT string_agg(check_code || '' '' || detail, ''; '') FROM public.ask_aar_snapshots_check() WHERE check_code IN (''a'',''b'',''c'',''e'')' INTO r;
+    INSERT INTO t498 VALUES ('T7 ASK 497 check a, b, c, e findings', coalesce(r, 'none'));
   END IF;
 END $t$;
 -- R1: revert needs an empty table, so the test rows are removed first with the no-change trigger disabled (inside this rolled-back test only)
