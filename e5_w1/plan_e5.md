@@ -1,4 +1,4 @@
-# E5 plan rev 0: spark (meta/muse-spark-1.3) prompt cache (W1, 11-19)
+# E5 plan rev 1 (takes W3 9737 C1 to C3): spark (meta/muse-spark-1.3) prompt cache (W1, 11-19)
 
 ## Objective
 Cut the defender's cost when spark debates. In run 440, spark cost 0.6475 USD, 37% of the run.
@@ -19,18 +19,23 @@ Cut the defender's cost when spark debates. In run 440, spark cost 0.6475 USD, 3
 4. Cause, as far as the evidence goes: Meta's automatic (implicit) cache hits only sometimes. The wrapper sends no cache_control for meta/, because its regex is /^(?:google|qwen|openai|anthropic)\//.
 
 ## Proposal (one change, after one test)
-- T0 test, before any build: one direct OpenRouter call to meta/muse-spark-1.3 with the run 440 D1 body, sending cache_control on the system message. Then make a second identical call, and read usage.prompt_tokens_details.cached_tokens on both.
-  - Cost: about 0.2 USD.
+- T0 test, before any build: two pairs of direct OpenRouter calls to meta/muse-spark-1.3, each using the run 440 D1 body.
+  - Control pair (W3 C1): two identical calls with no cache_control. This measures the implicit cache on its own.
+  - Test pair: two identical calls with cache_control on the system message, sent after the control pair, with a one-character change at the very start of the system message so it cannot reuse the control pair's cache.
+  - Read usage.prompt_tokens_details.cached_tokens and the billed cost of all four calls.
+  - Cost: about 0.4 USD.
   - Needs the operator's approval as a live-model call.
-  - Pass: the second call reads 50k tokens or more from the cache.
+  - Pass: the second test call reads 50k tokens or more from the cache, AND the second control call does not. If both pairs hit, cache_control adds nothing: there is no build, and E5 closes.
 - Build, only if T0 passes:
   1. Add meta to the regex in every wrapper copy (engine 38, child 4, Cure Call 1).
+     - Cure Call readback (W3 C3): n8n MCP cannot read workflow c7366RPLb8vdMQg6, and there is no API key. If that access is still off at build time, the Cure Call copy is LEFT OUT and the card says so. Its calls then keep today's implicit-only caching, and nothing breaks. It joins once a non-writer can read it back.
   2. For meta/, mark the SYSTEM message (the shared 53.6k-token prefix) instead of the longest user message.
   - No change to any wording, model setting or reasoning setting.
 - If T0 fails, there is no build. Spark's cost then depends on the provider's own cache, and the team records E5 as closed with no lever.
 
 ## Saving
 Measured, not guessed: run 39266 (5 hits) cost 0.309 USD less than run 440 (1 hit) for the same seat. If T0 passes, the saving is up to about 0.31 USD per spark run.
+Net of cache-write cost (W3 C2): the 0.309 figure is the difference in BILLED cost (call_costs usd = b, src billed), so any write charge in those runs is already inside it. Every spark call in both runs shows w5 = 0, so no cache-write charge was billed. T0 also reports the billed cost of each test call. If cache_control adds a write charge, the net saving is restated from T0's billed numbers before any build.
 
 ## WRONG-IF
 1. T0's second call reads 0 from the cache (cache_control is ignored for meta).
