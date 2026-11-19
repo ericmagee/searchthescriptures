@@ -6,11 +6,15 @@ NOT   -> FOUND | "carried" vs KJV ["carry"] | -ied reverse
 NOT   -> FOUND | "stop" vs KJV ["stopped"] | doubled
 NOT   -> FOUND | "stopped" vs KJV ["stop"] | doubled reverse
 FOUND -> FOUND | "seed" vs KJV ["seeds"] | old -s, unchanged
-NOT   -> FOUND | "fee" vs KJV ["feed"] | KNOWN-BAD plant: different word
-NOT   -> FOUND | "feed" vs KJV ["fee"] | KNOWN-BAD reverse plant (W4 9093 N2)
+NOT   -> NOT   | "fee" vs KJV ["feed"] | KNOWN-BAD plant: different word
+NOT   -> NOT   | "feed" vs KJV ["fee"] | KNOWN-BAD reverse plant (W4 9093 N2)
 NOT   -> NOT   | "bee" vs KJV ["bed"] | plant
-NOT   -> FOUND | "need" vs KJV ["nee"] | plant
+NOT   -> NOT   | "need" vs KJV ["nee"] | plant
 NOT   -> NOT   | "sprung up" vs KJV ["sprang"] | not an -ed form: stays NOT FOUND
 NOT   -> NOT   | "used" vs KJV ["us"] | KNOWN-BAD (m430 G1096): rev 1 needs 3 letters before -ed
 NOT   -> FOUND | "used" vs KJV ["use"] | rev 1: -d strip still reads use
 NOT   -> FOUND | "intended" vs KJV ["intend"] | rev 1: -ed strip, stem 6
+NOT   -> NOT   | "seed" vs KJV ["see"] | KNOWN-BAD (W2 9119): rev 2 makes no -d form on -ee/-eed
+NOT   -> NOT   | "see" vs KJV ["seed"] | KNOWN-BAD reverse
+NOT   -> NOT   | "freed" vs KJV ["free"] | rev 2 limit: -ee verbs not read
+NOT   -> FOUND | "love" vs KJV ["loved"] | rev 2: -d still read after a non-e letter
