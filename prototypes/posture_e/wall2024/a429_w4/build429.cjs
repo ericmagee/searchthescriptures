@@ -43,5 +43,5 @@ const P=[{old:DS,new:DS+HELPER},
 for(const k of ['Judge Enforcer Build','Alt Judge Enforcer Build','R2 Alt Judge Enforcer Build'])P.push({map:k,old:"\"Resolve Seats\":()=>$('Resolve Seats')};",new:"\"Resolve Seats\":()=>$('Resolve Seats'),"+PPL+"};"});
 fs.writeFileSync(path.join(__dirname,'pairs_429.json'),JSON.stringify(P,null,1));
 const EI=EO+'.pre',CI=CO+'.pre';fs.writeFileSync(EI,JSON.stringify(E));fs.writeFileSync(CI,JSON.stringify(C));
-cp.execFileSync('node',[path.join(__dirname,'../a422a/lib_apply.cjs'),EI,CI,path.join(__dirname,'pairs_429.json'),EO,CO],{stdio:'inherit'});
+cp.execFileSync('node',[path.join(__dirname,'lib_apply.cjs'),EI,CI,path.join(__dirname,'pairs_429.json'),EO,CO],{stdio:'inherit'});
 console.log('BUILT',EO,CO,'pairs',P.length);
