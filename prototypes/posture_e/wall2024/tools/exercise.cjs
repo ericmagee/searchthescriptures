@@ -31,6 +31,6 @@ select (select tok from p) run_token, ev.ask, ev.title,
       else 'MISSED' end grade,
  ev.cse "case", ev.fired, to_char(ev.live_since at time zone 'UTC','MM-DD HH24:MI"Z"') live_since
 from ev order by ev.n;`;
-const bad = out.match(/\b(insert|update|delete|drop|alter|create|truncate|grant|revoke|copy|call|do|perform|set_config|pg_read_file)\b/gi);
+const bad = out.replace(/'(?:[^']|'')*'/g, "''").match(/\b(insert|update|delete|drop|alter|create|truncate|grant|revoke|copy|call|do|perform|set_config|pg_read_file)\b/gi);
 if (bad) { console.error('refused: write word in statement: ' + [...new Set(bad)].join(',')); process.exit(3); }
 process.stdout.write(out + '\n');
