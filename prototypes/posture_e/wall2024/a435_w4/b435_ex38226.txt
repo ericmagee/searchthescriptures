@@ -1,0 +1,32 @@
+Init with Guards | EQUAL 318071 chars
+C1 Extract | EQUAL 35627 chars
+D2 Build | EQUAL 70780 chars
+D2 Extract | EQUAL 33488 chars
+C2 Build | EQUAL 290259 chars
+C2 Extract | EQUAL 32560 chars
+D3 Build | EQUAL 65715 chars
+D3 Extract | EQUAL 33507 chars
+C3 Build | EQUAL 237880 chars
+C3 Extract | EQUAL 31002 chars
+Build Synthesis | EQUAL 310421 chars
+Build Independent Verdict | NOT RUN in this execution
+Build Save Body | EQUAL 239119 chars
+Panel Build | EQUAL 606600 chars
+Format Markdown | EQUAL 1547030 chars
+Citation Scan | EQUAL 159626 chars
+D4 Build | EQUAL 63593 chars
+D4 Extract | EQUAL 48115 chars
+C4 Build | EQUAL 244882 chars
+C4 Extract | EQUAL 9517 chars
+L2 Count Plan | EQUAL 198558 chars
+C4G Extract | EQUAL 9690 chars
+C3G Extract | EQUAL 30556 chars
+C1B Extract | EQUAL 37023 chars
+D2B Extract | EQUAL 33032 chars
+C2B Extract | EQUAL 32102 chars
+D3B Extract | EQUAL 37745 chars
+C3B Extract | EQUAL 30813 chars
+D4B Extract | EQUAL 50285 chars
+C4B Extract | EQUAL 9947 chars
+L2 Gloss Plan | EQUAL 3643 chars
+TOTAL {"nodes":31,"ran":30,"not_run":1,"errors":0,"equal":30,"differ":0}
