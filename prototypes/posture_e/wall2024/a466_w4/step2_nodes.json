@@ -1,0 +1,275 @@
+{
+ "ABtaFpBlEuCc0ZFl": {
+  "workflow": "TRUTH \u2014 Daily Drive Sync",
+  "base_version": "19a02b5b-3b84-4745-9d2b-dc896bb52181",
+  "node": "Log Sync",
+  "before": {
+   "executeOnce": true,
+   "id": "70c6f9d1-c4ba-468e-8d07-9bb54919371f",
+   "name": "Log Sync",
+   "parameters": {
+    "contentType": "json",
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "apikey",
+       "value": "<PUBLIC JWT>"
+      },
+      {
+       "name": "Authorization",
+       "value": "Bearer <PUBLIC JWT>"
+      },
+      {
+       "name": "Content-Type",
+       "value": "application/json"
+      },
+      {
+       "name": "Prefer",
+       "value": "return=minimal"
+      }
+     ]
+    },
+    "jsonBody": "={{ JSON.stringify({ session_date: $now.toISODate(), session_title: 'Daily Drive Sync', engine: 'n8n-automated', notes: 'Full sync: bible_context + anti_drift + registry + journal + session_log + publishing + disaster_recovery + build_log + operational_doc + engine_manual' }) }}",
+    "method": "POST",
+    "sendBody": true,
+    "sendHeaders": true,
+    "specifyBody": "json",
+    "specifyHeaders": "keypair",
+    "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/log_audit_event"
+   },
+   "position": [
+    7168,
+    0
+   ],
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3
+  },
+  "after": {
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "pXKaH407uaHabRxo",
+     "name": "Supabase_Service_Role"
+    }
+   },
+   "executeOnce": true,
+   "id": "70c6f9d1-c4ba-468e-8d07-9bb54919371f",
+   "name": "Log Sync",
+   "parameters": {
+    "authentication": "genericCredentialType",
+    "contentType": "json",
+    "genericAuthType": "httpHeaderAuth",
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "apikey",
+       "value": "<PUBLIC JWT>"
+      },
+      {
+       "name": "Content-Type",
+       "value": "application/json"
+      },
+      {
+       "name": "Prefer",
+       "value": "return=minimal"
+      }
+     ]
+    },
+    "jsonBody": "={{ JSON.stringify({ session_date: $now.toISODate(), session_title: 'Daily Drive Sync', engine: 'n8n-automated', notes: 'Full sync: bible_context + anti_drift + registry + journal + session_log + publishing + disaster_recovery + build_log + operational_doc + engine_manual' }) }}",
+    "method": "POST",
+    "sendBody": true,
+    "sendHeaders": true,
+    "specifyBody": "json",
+    "specifyHeaders": "keypair",
+    "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/log_audit_event"
+   },
+   "position": [
+    7168,
+    0
+   ],
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3
+  }
+ },
+ "ROh4Px5Eap2tGKIc": {
+  "workflow": "TRUTH \u2014 Every-3-Day Orphan Tables Snapshot",
+  "base_version": "b4c71d9e-27b6-4ec4-bb4c-c3f61b9ada90",
+  "node": "Log Orphan Snapshot to audit_log",
+  "before": {
+   "executeOnce": true,
+   "id": "66ee4d85-6783-4d4c-97e7-392c281e2074",
+   "name": "Log Orphan Snapshot to audit_log",
+   "parameters": {
+    "contentType": "json",
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "apikey",
+       "value": "<PUBLIC JWT>"
+      },
+      {
+       "name": "Authorization",
+       "value": "Bearer <PUBLIC JWT>"
+      },
+      {
+       "name": "Content-Type",
+       "value": "application/json"
+      },
+      {
+       "name": "Prefer",
+       "value": "return=minimal"
+      }
+     ]
+    },
+    "jsonBody": "={{ JSON.stringify({ session_date: $now.toISODate(), session_title: \"Every-3-Day Orphan Snapshot (conclusions, fold_history, pamphlets, books, chapters)\", engine: \"n8n-automated\", notes: \"Orphan-table full-data backup pushed to Drive study folder. Counts: conclusions=\" + $(\"Build Orphan Snapshot\").first().json.counts.kb_conclusions + \" fold_history=\" + $(\"Build Orphan Snapshot\").first().json.counts.fold_history + \" pamphlets=\" + $(\"Build Orphan Snapshot\").first().json.counts.kb_pamphlets + \" books=\" + $(\"Build Orphan Snapshot\").first().json.counts.kb_books + \" chapters=\" + $(\"Build Orphan Snapshot\").first().json.counts.kb_book_chapters + \" chapter_chars=\" + $(\"Build Orphan Snapshot\").first().json.counts.chapter_chars + \" operational_doc=\" + $(\"Build Orphan Snapshot\").first().json.counts.operational_doc }) }}",
+    "method": "POST",
+    "sendBody": true,
+    "sendHeaders": true,
+    "specifyBody": "json",
+    "specifyHeaders": "keypair",
+    "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/log_audit_event"
+   },
+   "position": [
+    1344,
+    0
+   ],
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3
+  },
+  "after": {
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "pXKaH407uaHabRxo",
+     "name": "Supabase_Service_Role"
+    }
+   },
+   "executeOnce": true,
+   "id": "66ee4d85-6783-4d4c-97e7-392c281e2074",
+   "name": "Log Orphan Snapshot to audit_log",
+   "parameters": {
+    "authentication": "genericCredentialType",
+    "contentType": "json",
+    "genericAuthType": "httpHeaderAuth",
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "apikey",
+       "value": "<PUBLIC JWT>"
+      },
+      {
+       "name": "Content-Type",
+       "value": "application/json"
+      },
+      {
+       "name": "Prefer",
+       "value": "return=minimal"
+      }
+     ]
+    },
+    "jsonBody": "={{ JSON.stringify({ session_date: $now.toISODate(), session_title: \"Every-3-Day Orphan Snapshot (conclusions, fold_history, pamphlets, books, chapters)\", engine: \"n8n-automated\", notes: \"Orphan-table full-data backup pushed to Drive study folder. Counts: conclusions=\" + $(\"Build Orphan Snapshot\").first().json.counts.kb_conclusions + \" fold_history=\" + $(\"Build Orphan Snapshot\").first().json.counts.fold_history + \" pamphlets=\" + $(\"Build Orphan Snapshot\").first().json.counts.kb_pamphlets + \" books=\" + $(\"Build Orphan Snapshot\").first().json.counts.kb_books + \" chapters=\" + $(\"Build Orphan Snapshot\").first().json.counts.kb_book_chapters + \" chapter_chars=\" + $(\"Build Orphan Snapshot\").first().json.counts.chapter_chars + \" operational_doc=\" + $(\"Build Orphan Snapshot\").first().json.counts.operational_doc }) }}",
+    "method": "POST",
+    "sendBody": true,
+    "sendHeaders": true,
+    "specifyBody": "json",
+    "specifyHeaders": "keypair",
+    "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/log_audit_event"
+   },
+   "position": [
+    1344,
+    0
+   ],
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3
+  }
+ },
+ "YWk9m3grughoRpWi": {
+  "workflow": "TRUTH \u2014 Every-3-Day SQL Snapshot",
+  "base_version": "12e28dd7-7c6d-4140-80b5-9a39afc3e3e9",
+  "node": "Log Snapshot to audit_log",
+  "before": {
+   "executeOnce": true,
+   "id": "8364eab5-81bf-4e2e-a96f-cfbfef6e7c30",
+   "name": "Log Snapshot to audit_log",
+   "parameters": {
+    "contentType": "json",
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "apikey",
+       "value": "<PUBLIC JWT>"
+      },
+      {
+       "name": "Authorization",
+       "value": "Bearer <PUBLIC JWT>"
+      },
+      {
+       "name": "Content-Type",
+       "value": "application/json"
+      },
+      {
+       "name": "Prefer",
+       "value": "return=minimal"
+      }
+     ]
+    },
+    "jsonBody": "={{ JSON.stringify({ session_date: $now.toISODate(), session_title: \"Every-3-Day SQL Snapshot + Schema Export\", engine: \"n8n-automated\", notes: \"Snapshot + schema definitions pushed to Drive study folder. Counts: sights=\" + $(\"Build SQL Snapshot\").first().json.counts.sights + \" tensions=\" + $(\"Build SQL Snapshot\").first().json.counts.tensions + \" journal=\" + $(\"Build SQL Snapshot\").first().json.counts.journal + \" guards=\" + $(\"Build SQL Snapshot\").first().json.counts.drift_guards + \" origin_log=\" + $(\"Build SQL Snapshot\").first().json.counts.origin_log + \" schema_chars=\" + $(\"Build SQL Snapshot\").first().json.counts.schema_chars }) }}",
+    "method": "POST",
+    "sendBody": true,
+    "sendHeaders": true,
+    "specifyBody": "json",
+    "specifyHeaders": "keypair",
+    "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/log_audit_event"
+   },
+   "position": [
+    1792,
+    0
+   ],
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3
+  },
+  "after": {
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "pXKaH407uaHabRxo",
+     "name": "Supabase_Service_Role"
+    }
+   },
+   "executeOnce": true,
+   "id": "8364eab5-81bf-4e2e-a96f-cfbfef6e7c30",
+   "name": "Log Snapshot to audit_log",
+   "parameters": {
+    "authentication": "genericCredentialType",
+    "contentType": "json",
+    "genericAuthType": "httpHeaderAuth",
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "apikey",
+       "value": "<PUBLIC JWT>"
+      },
+      {
+       "name": "Content-Type",
+       "value": "application/json"
+      },
+      {
+       "name": "Prefer",
+       "value": "return=minimal"
+      }
+     ]
+    },
+    "jsonBody": "={{ JSON.stringify({ session_date: $now.toISODate(), session_title: \"Every-3-Day SQL Snapshot + Schema Export\", engine: \"n8n-automated\", notes: \"Snapshot + schema definitions pushed to Drive study folder. Counts: sights=\" + $(\"Build SQL Snapshot\").first().json.counts.sights + \" tensions=\" + $(\"Build SQL Snapshot\").first().json.counts.tensions + \" journal=\" + $(\"Build SQL Snapshot\").first().json.counts.journal + \" guards=\" + $(\"Build SQL Snapshot\").first().json.counts.drift_guards + \" origin_log=\" + $(\"Build SQL Snapshot\").first().json.counts.origin_log + \" schema_chars=\" + $(\"Build SQL Snapshot\").first().json.counts.schema_chars }) }}",
+    "method": "POST",
+    "sendBody": true,
+    "sendHeaders": true,
+    "specifyBody": "json",
+    "specifyHeaders": "keypair",
+    "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/log_audit_event"
+   },
+   "position": [
+    1792,
+    0
+   ],
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3
+  }
+ }
+}

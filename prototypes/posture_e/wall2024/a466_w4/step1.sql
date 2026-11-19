@@ -70,5 +70,9 @@ DROP POLICY IF EXISTS anon_ins ON public.app_source;      DROP POLICY IF EXISTS 
 DROP POLICY IF EXISTS anon_ins ON public.blackboard_manual; DROP POLICY IF EXISTS anon_ins ON public.debate_prompts;
 DROP POLICY IF EXISTS anon_ins ON public.engine_manual;   DROP POLICY IF EXISTS anon_ins ON public.journal_entries;
 DROP POLICY IF EXISTS anon_ins ON public.kb_book_chapters; DROP POLICY IF EXISTS anon_ins ON public.operational_doc;
--- day_room, day_room_posts and the_wall policies also name authenticated; they stay (anon loses the grant, so they no longer apply to anon).
+-- C-5 (W2 9455): authenticated also holds writes on 4 of them (auth.users has 0 rows today; sign-up state not readable from SQL), so revoke:
+REVOKE INSERT, UPDATE ON public.the_wall, public.day_room FROM authenticated;
+REVOKE INSERT ON public.day_room_posts FROM authenticated;
+REVOKE INSERT, UPDATE ON public.journal_entries FROM authenticated;
+-- day_room, day_room_posts and the_wall policies name anon and authenticated; they stay but no longer apply (no grant).
 COMMIT;
