@@ -1,0 +1,41 @@
+live form 3 stubs 44 | live with 0 comments 44
+old packer: 0 comments 0/44 | equal to live after the read line 0/44
+new packer: 0 comments 44/44 | equal to live after the read line 44/44
+read line equal 7/44
+  live_7cd6.json | Extract Independent Verdict | all-nodes call in live: false | packer adds: $("Assume Check Record")$("Cited Verses")$("L2 Count Plan")$("Panel Build") | packer drops: 
+  live_7cd6.json | Panel Payloads | all-nodes call in live: false | packer adds: $("Assume Check Record")$("L2 Count Plan") | packer drops: $("Close Enforcer Record")$("Judge Contradiction Record")
+  live_7cd6.json | Cure Normalize | all-nodes call in live: true | packer adds: $("Assume Check Record")$("Cited Verses")$("L2 Count Plan")$("Panel Build") | packer drops: 
+  live_7cd6.json | Cure Check | all-nodes call in live: true | packer adds: $("Assume Check Record")$("Cited Verses")$("Final Output")$("L2 Count Plan")$("Regrade Load") | packer drops: 
+  live_7cd6.json | Panel Cure Normalize 1 | all-nodes call in live: true | packer adds: $("Assume Check Record")$("Cited Verses")$("L2 Count Plan")$("Panel Build") | packer drops: 
+  live_7cd6.json | Panel Cure Normalize 2 | all-nodes call in live: true | packer adds: $("Assume Check Record")$("Cited Verses")$("L2 Count Plan")$("Panel Build") | packer drops: 
+  live_7cd6.json | Panel Cure Normalize 3 | all-nodes call in live: true | packer adds: $("Assume Check Record")$("Cited Verses")$("L2 Count Plan")$("Panel Build") | packer drops: 
+  live_7cd6.json | Panel Cure Check | all-nodes call in live: true | packer adds: $("Assume Check Record")$("Final Output")$("L2 Count Plan")$("Regrade Load") | packer drops: 
+  live_7cd6.json | Alternate Payloads | all-nodes call in live: false | packer adds: $("Assume Check Record")$("L2 Count Plan") | packer drops: $("Close Enforcer Record")$("Judge Contradiction Record")
+  live_7cd6.json | Alternate Cure Normalize | all-nodes call in live: true | packer adds: $("Assume Check Record")$("Cited Verses")$("L2 Count Plan")$("Panel Build") | packer drops: 
+  live_7cd6.json | Alternate Merge Seat | all-nodes call in live: true | packer adds: $("Assume Check Record")$("Cited Verses")$("Final Output")$("L2 Count Plan")$("Regrade Load") | packer drops: 
+  live_7cd6.json | Judge Enforcer Build | all-nodes call in live: false | packer adds:  | packer drops: $("Close Enforcer Record")$("Judge Contradiction Record")
+  live_7cd6.json | Judge Enforcer Record | all-nodes call in live: false | packer adds:  | packer drops: 
+  live_7cd6.json | Send Back Build | all-nodes call in live: true | packer adds: $("L2 Count Plan") | packer drops: 
+  live_7cd6.json | Send Back Record | all-nodes call in live: false | packer adds: $("L2 Count Plan") | packer drops: 
+  live_7cd6.json | Gate Build | all-nodes call in live: true | packer adds: $("Assume Check Record")$("Cited Verses") | packer drops: 
+  live_7cd6.json | Gate Record | all-nodes call in live: true | packer adds: $("Assume Check Record")$("L2 Count Plan") | packer drops: 
+  live_7cd6.json | Alt Judge Enforcer Build | all-nodes call in live: false | packer adds:  | packer drops: $("Close Enforcer Record")$("Judge Contradiction Record")
+  live_7cd6.json | Alt Judge Enforcer Record | all-nodes call in live: false | packer adds:  | packer drops: 
+  live_7cd6.json | Alt Send Back Build | all-nodes call in live: true | packer adds: $("L2 Count Plan") | packer drops: 
+  live_7cd6.json | Alt Send Back Record | all-nodes call in live: false | packer adds: $("L2 Count Plan") | packer drops: 
+  live_7cd6.json | Alt Gate Build | all-nodes call in live: true | packer adds: $("Assume Check Record")$("Cited Verses")$("Panel Build") | packer drops: 
+  live_7cd6.json | Alt Gate Record | all-nodes call in live: true | packer adds: $("Assume Check Record")$("L2 Count Plan")$("Panel Build") | packer drops: 
+  live_7cd6.json | Alternate Merge 1 | all-nodes call in live: true | packer adds: $("Assume Check Record") | packer drops: 
+  live_7cd6.json | Late Gate Build | all-nodes call in live: true | packer adds: $("Assume Check Record")$("L2 Count Plan") | packer drops: $("L2 Lexicon")$("L2 Words")
+  live_7cd6.json | Alt Late Gate Build | all-nodes call in live: true | packer adds: $("Assume Check Record")$("L2 Count Plan")$("Panel Build") | packer drops: $("L2 Lexicon")$("L2 Words")
+  child_e9a1.json | R2 Alternate Merge Seat | all-nodes call in live: true | packer adds: $("Assume Check Record")$("Cited Verses")$("Final Output")$("L2 Count Plan")$("Regrade Load") | packer drops: 
+  child_e9a1.json | R2 Alt Judge Enforcer Build | all-nodes call in live: false | packer adds:  | packer drops: $("Close Enforcer Record")$("Judge Contradiction Record")
+  child_e9a1.json | R2 Alt Judge Enforcer Record | all-nodes call in live: false | packer adds:  | packer drops: 
+  child_e9a1.json | R2 Alt Send Back Build | all-nodes call in live: true | packer adds: $("L2 Count Plan") | packer drops: 
+  child_e9a1.json | R2 Alt Send Back Record | all-nodes call in live: false | packer adds: $("L2 Count Plan") | packer drops: 
+  child_e9a1.json | R2 Alt Gate Build | all-nodes call in live: true | packer adds: $("Assume Check Record")$("Cited Verses")$("Panel Build") | packer drops: 
+  child_e9a1.json | R2 Alt Gate Record | all-nodes call in live: true | packer adds: $("Assume Check Record")$("L2 Count Plan")$("Panel Build") | packer drops: 
+  child_e9a1.json | R2 Alt Late Gate Build | all-nodes call in live: true | packer adds: $("Assume Check Record")$("L2 Count Plan")$("Panel Build") | packer drops: $("L2 Lexicon")$("L2 Words")
+  child_e9a1.json | R2 Alternate Payloads | all-nodes call in live: false | packer adds: $("Assume Check Record")$("L2 Count Plan") | packer drops: $("Close Enforcer Record")$("Judge Contradiction Record")
+  child_e9a1.json | R2 Alternate Cure Normalize | all-nodes call in live: true | packer adds: $("Assume Check Record")$("Cited Verses")$("L2 Count Plan")$("Panel Build") | packer drops: 
+  child_e9a1.json | R2 Alternate Merge | all-nodes call in live: true | packer adds: $("Assume Check Record") | packer drops: 

@@ -1,0 +1,5 @@
+C4 (tools/, run 05:5xZ 11-19):
+- exercise.cjs ODV1-39266-7g9lzgbr --all: SQL byte-equal to a417_w2/exercise.cjs output (cmp)
+- mrb.cjs 198 199 a420b_w1/pairs_v191_v192.json: exit 0, prints SQL
+- runstart.py: compiles; no-argument run prints usage (live checks need the n8n key, not run by W2)
+- rbx.cjs, lib.cjs: already in tools/, unchanged

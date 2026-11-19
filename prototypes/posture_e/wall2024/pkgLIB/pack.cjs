@@ -33,9 +33,8 @@ const STUBHEAD=(name,s)=>"// pkgLIB stub: \""+name+"\". The node's full code (sh
 const STUBRUN="const __LT=$('Shared Library').params.jsCode;const __L=JSON.parse(__LT.slice(__LT.indexOf('\\n/*LIB*/')+8,__LT.lastIndexOf('\\n/*END*/')));\n"
  +"const __S=__P.map(e=>typeof e==='number'?__L[e]:typeof e[0]==='string'?e[0]:__L.slice(e[0],e[1]+1).join('\\n')).join('\\n');\n"
  +"if(__S.length!==__N)throw new Error('pkgLIB: rebuilt source is '+__S.length+' bytes, expected '+__N+' (Shared Library does not match this stub)');\n"
- +"return await new Function('$','$input','return (async()=>{\\n'+__S+'\\n})();')($,$input); /* the n8n task runner refuses the AsyncFunction constructor (probe 11:45 CST): a plain Function returns an async IIFE */\n";
-const STUBHEAD3=name=>"// pkgLIB stub, form 3: \""+name+"\". The node's full code is rebuilt line for line from the \"Shared Library\" node, which holds the shared lines once\n"
- +"// and, under this node's name, its line list, its own lines and its length. This stub changes only when the nodes it reads change. The code runs unchanged with the same $ and $input.\n";
+ +"return await new Function('$','$input','return (async()=>{\\n'+__S+'\\n})();')($,$input);\n";
+const STUBHEAD3=name=>""; /* ASK 444: form 3 stubs carry no header comment (ASK 428 removed it live; the packer no longer writes it back) */
 const STUBRUN3=name=>"const __LT=$('Shared Library').params.jsCode;const __L=JSON.parse(__LT.slice(__LT.indexOf('\\n/*LIB*/')+8,__LT.lastIndexOf('\\n/*MAP*/')));const __M=JSON.parse(__LT.slice(__LT.lastIndexOf('\\n/*MAP*/')+8,__LT.lastIndexOf('\\n/*END*/')))["+JSON.stringify(name)+"];if(!__M)throw new Error('pkgLIB: the Shared Library holds no entry for "+name.replace(/'/g,'')+"');\n"
  +"const __N=__M.n,__P=__M.p;\n"
  +STUBRUN.slice(STUBRUN.indexOf('const __S='));
@@ -44,7 +43,7 @@ F.forEach((f,k)=>{const P=[];for(const l of LINES[k]){if(cnt.get(l)>=2){const i=
    if(typeof t==='number'&&t+1===i)P[P.length-1]=[t,i];else if(Array.isArray(t)&&typeof t[0]==='number'&&t.length===2&&t[1]+1===i)t[1]=i;else P.push(i);}
   else P.push([l]);} /* number: one library line; [a,b]: library lines a..b; [string]: a line only this node has */
  const name=f.replace(/\.js$/,'').replace(/_/g,' ');const RN=needs(SRC[k]);if(!RN.parsed||RN.env||RN.execution||RN.prevNode)throw new Error(f+': full source needs runner data pkgLIB v2 does not pass on');
- const REFS=[...RN.nodes].sort();const REFLINE=REFS.length||RN.all?'if(false){'+REFS.map(r=>'$('+JSON.stringify(r)+');').join('')+(RN.all?'$(String());':'')+'} /* pkgLIB v2: never runs. The task runner sends a Code node only the nodes its code text names in literal $() calls (all nodes on a non-literal $() call); the rebuilt source below is string data the runner cannot see, so its reads are named here. Run 33094. */\n':'';
+ const REFS=[...RN.nodes].sort();const REFLINE=REFS.length||RN.all?'if(false){'+REFS.map(r=>'$('+JSON.stringify(r)+');').join('')+(RN.all?'$(String());':'')+'}\n':'';
  if(STUBV===3)MAP[name]={n:SRC[k].length,p:P};
  const stub=STUBV===3?STUBHEAD3(name)+REFLINE+STUBRUN3(name):STUBHEAD(name,SRC[k])+REFLINE+'const __N='+SRC[k].length+';\nconst __P='+JSON.stringify(P)+';\n'+STUBRUN;
  fs.writeFileSync('pkgLIB/patched/'+f,stub);plan.nodes.push({file:f,name,src:SRCOF[f],base_sha:sha(SRC[k]),base_bytes:SRC[k].length,stub_sha:sha(stub),stub_bytes:stub.length,refs:REFS,all_nodes:RN.all,own_lines:P.filter(e=>Array.isArray(e)&&typeof e[0]==='string').length});});
