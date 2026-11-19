@@ -1,6 +1,6 @@
--- ASK AAR snapshot rows for the 11-19 pm AAR, DRAFT rev 1 (W3; replaces rev 0 8d7abf3d: builder rows added (W1 10014 F1), correction row for 19 added (W1 10014 item 3), manual times labelled as card times (N1)). For W1 and W2 to grade. NOT RUN.
+-- ASK AAR snapshot rows for the 11-19 pm AAR, DRAFT rev 2 (W3; replaces rev 0 8d7abf3d and rev 1 77a99b51, which was never graded: builder rows added (W1 10014 F1; W2 10015 F1); manual times labelled as card times (W1 N1; W2 N3); 498 objective marked abridged and 5b48fb0f grades added (W2 N1, N2). Rows 18 and 19 are corrected by W2's fix_rows_18_19_draft.sql, not here). For W1 and W2 to grade. NOT RUN.
 -- The coordinator (seat 36) runs it once, after the grades, before the AAR is sent. No card.
--- Covers ASK 497 and ASK 498 (written and read back), a correction row for snapshot row 19 (ASK 493: its manuals were written at 19:07Z, before its aar_at 19:16:19Z, but it says "pending"), and one ask_aar_builders row per new snapshot row. Not yet included: the run 40891 row
+-- Covers ASK 497 and ASK 498 (written and read back), with one ask_aar_builders row each. Not yet included: the run 40891 row
 -- (aar_494a1_run_template.sql e6c5c08e, prior_row 16, after W4 reports the run) and the 494 A2 row (after its write).
 BEGIN;
 SET LOCAL truth.session_id = 'session_01H1X3APzb2DidJoZ9Avizjn';
@@ -35,7 +35,7 @@ INSERT INTO ask_aar_snapshots (ask, rev, title, objective, objective_met, object
  '[9918, 9920, 9921, 9925, 9979, 9980, 9981, 9985, 9986, 9987, 9991, 9992, 9993, "audit 39025"]'::jsonb),
 
 (498, '3', 'AAR grade count (two non-builder grades)',
- 'The GRADING rule needs two non-builder seats to grade what is written. ... Expected effect: for every snapshot row, a read shows whether each written md5 had PASS grades from two distinct seats that did not build it, and a row that falls short is reported in the AAR. Rows already inserted are not changed. (a498_w3/plan498.md rev 3)',
+ 'The GRADING rule needs two non-builder seats to grade what is written. ... Expected effect: for every snapshot row, a read shows whether each written md5 had PASS grades from two distinct seats that did not build it, and a row that falls short is reported in the AAR. Rows already inserted are not changed. (a498_w3/plan498.md rev 3; abridged at the "...")',
  'in part',
  'The table and function are written (audit 39084 to 39098) and read back by W2 (10001) and W1 (10002). The builder rows for snapshot rows 3 to 19 are in (ids 1 to 17, 14:05 CST), and ask_aar_grades_check() shows snapshot 12 (489, 0fd91b1c, n 1) and snapshot 16 (494 A1, 6eac56a9, n 0) ok false. Reporting them in this AAR completes it.',
  '10000, 10001, 10002, 10009',
@@ -50,6 +50,8 @@ INSERT INTO ask_aar_snapshots (ask, rev, title, objective, objective_met, object
    {"seat":"W2","verdict":"PASS (plan rev 3)","wall_id":9953,"md5_graded":"79b5d9c5","verdict_norm":"PASS"},
    {"seat":"W2","verdict":"PASS WITH C-1 (build)","wall_id":9965,"md5_graded":"0d5ddbc8","verdict_norm":"PASS"},
    {"seat":"W1","verdict":"PASS with N1 to N3 (build)","wall_id":9967,"md5_graded":"0d5ddbc8","verdict_norm":"PASS"},
+   {"seat":"W2","verdict":"PASS (test file rev 1)","wall_id":9968,"md5_graded":"5b48fb0f","verdict_norm":"PASS"},
+   {"seat":"W1","verdict":"PASS (test file rev 1)","wall_id":9969,"md5_graded":"5b48fb0f","verdict_norm":"PASS"},
    {"seat":"W1","verdict":"PASS (test output)","wall_id":9996,"md5_graded":"0d5ddbc8","verdict_norm":"PASS"},
    {"seat":"W2","verdict":"PASS (test output)","wall_id":9997,"md5_graded":"0d5ddbc8","verdict_norm":"PASS"}]'::jsonb,
  ARRAY['0d5ddbc8'],
@@ -62,44 +64,16 @@ INSERT INTO ask_aar_snapshots (ask, rev, title, objective, objective_met, object
  '{"case":"DONE (iii): builder rows in, and this AAR shows row 12 ok false"}'::jsonb,
  '{"engine_manual":"v220 31f2c3c0 (card 20:05:04Z, guard audit 39107 20:05:21Z; readbacks 10009, 10010)","op_doc":"v137 381bfe47 (card 20:05:04Z, guard audit 39108 20:05:34Z; readbacks 10009, 10010)"}'::jsonb,
  'read back',
- '[9951, 9952, 9953, 9963, 9965, 9966, 9967, 9968, 9969, 9995, 9996, 9997, 10000, 10001, 10002, 10008, 10009, 10010, "audit 39098"]'::jsonb),
+ '[9951, 9952, 9953, 9963, 9965, 9966, 9967, 9968, 9969, 9995, 9996, 9997, 10000, 10001, 10002, 10008, 10009, 10010, "audit 39098"]'::jsonb);
 
-(493, '8', 'ASK AAR snapshots table',
- 'The operator, 11:54 CST 11-19: "so now, the team must needs to agree on what they want recorded and how ... whatever they decide i will approve.  I will need the operation manual updated to explain who is responsible for updating the new ASK AAR table ... when to update it ... and how.  As a rule, the table will need to be updated before the report is given to me." (a493_w3/plan493.md)',
- 'yes',
- 'CORRECTION of row 19, whose manuals field said "v218 pending" and "v135 pending" although both were written before its aar_at (19:16:19Z). The table is written (audit 38890) and read back by W2 (9903) and W1 (9904). The op doc paragraph (v135) and engine manual entry (v218) were written on the card "Write it" at 19:06:43Z in W3''s thread (guard audit 38916 19:07:34Z, 38917 19:07:49Z; W3 9912) and read back by W1 (9913) and W2 (9916). Rows 3 to 19 were inserted before the AAR they served (13:16 CST).',
- '9902, 9903, 9904, 9912, 9913, 9916, 10014',
- 'session_01H1X3APzb2DidJoZ9Avizjn', 19,
- '[{"at":"11:54 CST","text":"so now, the team must needs to agree on what they want recorded and how ... whatever they decide i will approve.","source":"a493_w3/plan493.md"}]'::jsonb,
- '{"answer":"Write it","thread":"W4","press_time":"18:44:56Z","source":"audit 38890"}'::jsonb,
- 'W3',
- '{"md5":"4af9b456","path":"a493_w3/plan493.md","commit":"a7956ff6","wall_id":9889}'::jsonb,
- '[{"md5":"2769dff6","path":"a493_w4/step493.sql","commit":"5ff09ab1"}]'::jsonb,
- '{"md5":"514a3efa","path":"a493_w4/revert493.sql"}'::jsonb,
- '[{"seat":"W2","verdict":"PASS","wall_id":9890,"md5_graded":"4af9b456","verdict_norm":"PASS"},
-   {"seat":"W1","verdict":"PASS with C1 and C2 (build)","wall_id":9891,"md5_graded":"4af9b456","verdict_norm":"PASS"},
-   {"seat":"W2","verdict":"PASS","wall_id":9896,"md5_graded":"2769dff6","verdict_norm":"PASS"},
-   {"seat":"W1","verdict":"PASS","wall_id":9899,"md5_graded":"2769dff6","verdict_norm":"PASS"},
-   {"seat":"W2","verdict":"PASS (test output)","wall_id":9900,"md5_graded":"2769dff6","verdict_norm":"PASS"}]'::jsonb,
- ARRAY['2769dff6'],
- '[38885,38886,38887,38888,38889,38890]'::jsonb,
- '[{"kind":"table","name":"public.ask_aar_snapshots with 4 triggers and 3 functions","before":null,"after":"after_insert b55dbe2c, before_insert 8d309b66, no_change 2f315710 (prosrc)"}]'::jsonb,
- '[{"file":"a493_w4/test493_rollback.sql","md5":"ce04b37c","result":"all as expected; T4 berean_ro by the closing check","wall_id":9897}]'::jsonb,
- '[{"seat":"W2","result":"CONFIRMED","wall_id":9903},{"seat":"W1","result":"CONFIRMED","wall_id":9904}]'::jsonb,
- '{"case":"DONE (iii): rows 3 to 19, before the AAR"}'::jsonb,
- '{"engine_manual":"v218 673f42fe (card 19:06:43Z, guard audit 38916 19:07:34Z; readbacks 9913, 9916)","op_doc":"v135 2df94c29 (card 19:06:43Z, guard audit 38917 19:07:49Z; readbacks 9913, 9916)"}'::jsonb,
- 'read back',
- '[9889, 9890, 9891, 9893, 9896, 9897, 9899, 9900, 9902, 9903, 9904, 9906, 9912, 9913, 9916, 10014, "audit 38890", "audit 38916", "audit 38917"]'::jsonb);
-
--- One builder row per new snapshot row (GRADE COUNT). snapshot_id is taken from the rows this transaction just inserted (aar_at = now(), id > 25), by ask, rev and prior_row; no id is guessed.
+-- One builder row per new snapshot row (GRADE COUNT). snapshot_id is taken from the rows this transaction just inserted (aar_at = now(), id > 25), by ask and rev with prior_row null; no id is guessed. Run W2's fix_rows_18_19 script (c03a3b9a) separately; its rows have prior_row set and are not matched here.
 INSERT INTO ask_aar_builders (snapshot_id, prior_row, builder_seats, sources, written_by)
 SELECT s.id, NULL, ARRAY['W4'], b.src, 'session_01H1X3APzb2DidJoZ9Avizjn'
 FROM ask_aar_snapshots s
 JOIN (VALUES
- (497, '5', false, '[{"seat":"W4","what":"built step497.sql rev 0 and rev 1 (6df72062)","wall_id":9919},{"seat":"W4","what":"wrote 497 on its card","wall_id":9985}]'::jsonb),
- (498, '3', false, '[{"seat":"W4","what":"built step498.sql 0d5ddbc8","wall_id":9963},{"seat":"W4","what":"wrote 498 on its card","wall_id":10000}]'::jsonb),
- (493, '8', true,  '[{"seat":"W4","what":"built step493.sql 2769dff6","wall_id":9893},{"seat":"W4","what":"wrote 493 on its card","wall_id":9902}]'::jsonb)
-) AS b(ask, rev, corr, src) ON s.ask = b.ask AND s.rev = b.rev AND (s.prior_row IS NOT NULL) = b.corr
+ (497, '5', '[{"seat":"W4","what":"built step497.sql rev 0 and rev 1 (6df72062)","wall_id":9919},{"seat":"W4","what":"wrote 497 on its card","wall_id":9985}]'::jsonb),
+ (498, '3', '[{"seat":"W4","what":"built step498.sql 0d5ddbc8","wall_id":9963},{"seat":"W4","what":"wrote 498 on its card","wall_id":10000}]'::jsonb)
+) AS b(ask, rev, src) ON s.ask = b.ask AND s.rev = b.rev AND s.prior_row IS NULL
 WHERE s.id > 25 AND s.aar_at = now();
 
 SELECT id, ask, rev, prior_row, md5_match FROM ask_aar_snapshots WHERE id > 25 ORDER BY id;
