@@ -2,7 +2,7 @@
 // C1 every node other than the changed stubs is JSON-equal; connections and settings equal. C2 in each changed stub only the first
 // line differs, and the old line's text is a prefix of the new (names only added). C3 rebuild(new)==rebuild(old). C4 after the change
 // every form 3 stub names every node its rebuilt source reads, or holds $(String()). C5 every added name is a node of the workflow.
-const fs=require('fs');const {rebuild}=require('../pkgLIB/unpack.cjs');const {needs}=require('../pkgLIB/runner_model.cjs');
+const fs=require('fs');const dyn=require('./dyn.cjs');const {rebuild}=require('../pkgLIB/unpack.cjs');const {needs}=require('../pkgLIB/runner_model.cjs');
 const names=l=>new Set([...l.matchAll(/\$\(("(?:[^"\\]|\\.)*")\)/g)].map(m=>JSON.parse(m[1])));
 const a=process.argv.slice(2);let fail=0;
 for(let i=0;i<a.length;i+=2){const L=JSON.parse(fs.readFileSync(a[i],'utf8')),T=JSON.parse(fs.readFileSync(a[i+1],'utf8'));
@@ -19,7 +19,7 @@ for(let i=0;i<a.length;i+=2){const L=JSON.parse(fs.readFileSync(a[i],'utf8')),T=
    ch.push(t.name+' C2 '+(ok2?'ok':'FAIL')+' C3 '+(ok3?'ok':'FAIL')+' C5 '+(ok5?'ok':'FAIL'));if(!(ok2&&ok3&&ok5))fail++;}
   const s=(t.parameters||{}).jsCode;if(typeof s==='string'&&t.name!=='Shared Library'&&s.includes('\nreturn await new Function(')){
    const line=s.startsWith('if(false){')?s.slice(0,s.indexOf('\n')):'';if(line.includes('$(String())'))continue;
-   const h=names(line);const m=[...needs(rebuild(s,lib)).nodes].filter(z=>!h.has(z));if(m.length)uncov.push(t.name+': '+m.join(', '));}}
+   const h=names(line);const src=rebuild(s,lib);const RN=needs(src);const m=[...RN.nodes].filter(z=>!h.has(z));for(const d of dyn(src,all)){if(d===null||!d.length)m.push('dynamic read with no listed target');else d.filter(z=>!h.has(z)).forEach(z=>m.push(z+' (dynamic)'));}if(m.length)uncov.push(t.name+': '+m.join(', '));}}
  console.log(a[i+1].split('/').pop(),'| nodes',TN.length,'| unchanged',same,'| changed',ch.length);ch.forEach(z=>console.log('  '+z));
  console.log('  C4 stubs with an unnamed read:',uncov.length,uncov.join(' | '));if(uncov.length)fail++;}
 console.log(fail?'FAIL '+fail:'ALL PASS');process.exit(fail?1:0);
