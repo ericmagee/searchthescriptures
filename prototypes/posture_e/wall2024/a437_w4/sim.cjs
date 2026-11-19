@@ -4,6 +4,7 @@ const [BASE]=process.argv.slice(2);const w=W(BASE);const code0=w.nodes.find(n=>n
 const edits=[[/const ENG=\{[^\n]*\};/, s=>s.replace("gemini:{fam:'openrouter',mc:'gemini'},","").replace("qwen:{fam:'openrouter',mc:'qwen'},","")],
  [/const ORDER0=\[[^\]]*\]/,()=>"const ORDER0=['chatgpt','sol','sol62','haiku','hydrogen','spark','qwen4max','argon','sonnet']"],
  [/const __ALT=\[[^\]]*\]/,()=>"const __ALT=['haiku','hydrogen','spark','qwen4max','argon','sonnet']"],
+ [/fail\('DeepSeek never debates \(ruling 421\): it is the enforcer\.'\)/,()=>"fail('DeepSeek never debates (operator 21:24 CST 11-18): flash models are out of debating, judging and the panel.')"],
  [/const ALT_MODELS=\{[^\n]*?\}\};/,()=>"const ALT_MODELS={};"]];
 let code1=code0;for(const [re,f] of edits){const m=code1.match(re);if(!m)throw new Error('no match '+re);code1=code1.replace(re,()=>f(m[0]));}
 fs.writeFileSync('init_new.js',code1);
@@ -13,7 +14,7 @@ const run=(code,d,c)=>{const ORD=(code.match(/const ORDER0=(\[[^\]]*\])/)[1]);co
  const $=n=>({all:()=>[...JFL].map(s=>({json:{seat:s,jfl_move:true}}))});const $execution={id:1,customData:{set(){}}};
  try{return new Function('$input','$','$execution',code)($input,$,$execution)[0].json;}catch(e){return {err:e.message.slice(0,110)};}};
 const engs=['claude','chatgpt','gemini','grok','mimo','haiku','opus','glm','qwen4max','qwen','spark'];
-const REM=['ember','glm_legal','hy4','hy4_flash','gemini','qwen','ernie','kimi','alt_minimax3','alt_minimax31','qwen_flash','glm_flash'];
+const REM=['ember','glm_legal','hy4','hy4_flash','gemini','qwen','ernie','kimi','alt_minimax3','alt_minimax31','qwen_flash','glm_flash','deepseek','deepseek_debate'];
 let n=0,bad=0,refused=0,thin=[];
 for(const d of engs)for(const c of engs){if(d===c)continue;const o=run(code0,d,c),x=run(code1,d,c);n++;
  if(x.err){refused++;if(!/gemini|qwen"/.test(x.err)&&!(['gemini','qwen'].includes(d)||['gemini','qwen'].includes(c)))console.log('NEW REFUSED',d,c,x.err);continue;}
