@@ -1,6 +1,0 @@
-[
- {
-  "old": "The check sets TimeZone UTC itself, so row_md5 is the same from any session; compute no md5 by hand.",
-  "new": "The check sets TimeZone UTC itself, so row_md5 is the same from any session; compute no md5 by hand. GRADE COUNT (ASK 498): before step (2), the coordinator also inserts one ask_aar_builders row per new snapshot row, naming every seat that built or rebased any part of what was written and citing each seat's own Wall post; a wrong builder row is corrected by a new row with prior_row, never edited. In step (3) each grader also runs SELECT * FROM ask_aar_grades_check() and checks each builder row against its cited posts. A row with ok false (fewer than two non-builder PASS seats, a FAIL, or an equal_to with no proof seat) or ok null (no builder row), a one-seat proof, and every finding the function lists are reported in the AAR."
- }
-]
