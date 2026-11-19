@@ -8,3 +8,5 @@ ODV1-39015-pnpoj45j 429=true/0 430=true/- 431=true/- 434=false/0 435=false/0 436
 Over all debate_results: lists "KJV renders:" in 6 rows, longest 18 names; none with 25 or more.
 Rev 1 (W1 9215 notes 1 and 2), 429 and 437 marks re-read: 39266 (0,0) 26163 (0,0) 39015 (0,1) 38593 (0,1) as (429 mark, 437 mark).
 429 now builds its seat list from model_config; 437 adds glm_flash, qwen_flash, alt_minimax3, kimi, ernie, deepseek, deepseek_debate and matches api_model from model_config.
+Rev 2 (W3 9220 C), 435 case and mark take ", N Word" (Word any capitalized word, e.g. KJV), ", and N" and ";N". Case matches on stored runs:
+24355: 1 Corinthians 2:2; Isaiah 28:12; 1 Cor 2:2 | 26163: John 12:32 | 27613: Matt 1:25 | 32157: Galatians 4:29; Romans 1:2 | 39266: none. Bound in citation_check: 0 on each (all predate the write).
