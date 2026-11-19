@@ -1,21 +1,17 @@
-Run 11-19 05:55Z (23:55 CST 11-18), c1c2.sql: pg_temp copy of wall_2024_check from guard.sql; the DO block ends in RAISE, so nothing persists.
-C1 451a bad (no read-through): ASK 451: root 2024 takes posts only through wall_reply(root, body, by, session, kind, read_through).
-C1 451a good: ACCEPT
-C1 451b bad (no stamp): ASK 451: the post must end with the database stamp; append wall_stamp().
-C1 451b bad (old stamp): ASK 451: the stamp 01:00 CST | 2026-11-18 is more than 2 minutes from the database clock (23:55 2026-11-18); append wall_stamp().
-C1 451b good (stamp inline end): ACCEPT
-C1 449 bad (PASS, no commit): ASK 449: a post that gives PASS or FAIL names the commit of what it judged (8 or more hex characters).
-C1 449 bad (all-letter hex word only, "deadbeef"): ASK 449: (same)
-C1 448 bad (commit, no RULES READ): ASK 448: a post that gives PASS or FAIL carries a line RULES READ: ...
-C1 448/449 good: ACCEPT
-C1 450 bad (plan, no SEARCH): ASK 450: a plan carries SEARCH: ...
-C1 450 good: ACCEPT
-C1 450 not a plan (grade of a plan, no SEARCH): ACCEPT
-C2 replay, root 2024 posts 9060 to 9210 (150 posts), read-through taken as given, clock = each post's created_at:
- refused 96: ASK 448 (PASS/FAIL without RULES READ:) 84; ASK 449 (PASS/FAIL without a hex id) 4: 9170, 9176, 9184, 9204;
- ASK 450 (plan without SEARCH) 4: 9089, 9095, 9111, 9198; ASK 451 (no stamp) 4: 9066, 9069, 9077, 9083 (coordinator).
- ASK 448 refusals: 9060 9061 9063 9064 9065 9067 9068 9070 9072 9073 9088 9090 9091 9093 9094 9096 9098 9099 9101 9102 9103 9104
- 9105 9107 9108 9109 9112 9113 9114 9115 9116 9117 9119 9120 9121 9126 9127 9129 9130 9131 9132 9133 9134 9135 9136 9137 9138
- 9139 9140 9141 9142 9143 9144 9145 9146 9149 9150 9151 9152 9157 9158 9159 9160 9161 9162 9163 9164 9165 9166 9167 9168 9171
- 9172 9174 9175 9177 9180 9195 9200 9202 9203 9206 9207 9209
- Every stamped post is within 2 minutes of its created_at (0 refused for clock).
+Run rev 1, 11-19 05:59Z (23:59 CST 11-18), after W1 9212, c1c2.sql: pg_temp copy of wall_2024_check from guard.sql; the DO block ends in RAISE, so nothing persists.
+C1 (rev 1, 16 cases):
+451a bad (no read-through): refused 451 | 451a good: ACCEPT | 451b bad (no stamp): refused 451 | 451b bad (old stamp): refused 451
+451b good (stamp at the end of a line): ACCEPT | 451b good (CDT label): ACCEPT
+449 bad (grade, PASS, no commit): refused 449 | 449 bad (grade, all-letter hex word only): refused 449
+448 bad (grade, commit, no RULES READ): refused 448 | 448/449 good: ACCEPT | 448 bad (lower-case "Two grades"): refused 448
+not a grade (build "for grade by W2", criteria PASS): ACCEPT | not a grade (withdrawal quoting FAIL): ACCEPT
+450 bad (plan, no SEARCH): refused 450 | 450 good: ACCEPT | 450 not a plan (grade of a plan): ACCEPT
+C2 replay rev 1, root 2024 posts 9060 to 9213 (153 posts), read-through taken as given, clock = each post's created_at:
+ refused 63 (rev 0: 96).
+ ASK 451, no stamp, 4: 9066 9069 9077 9083 (coordinator).
+ ASK 450, plan without SEARCH in the post, 5: 9063 (W3 ASK 429 rev 1) 9089 9095 9111 9198. All are plans.
+ ASK 449, grade without a hex id, 1: 9170 (W1 correction of a grade).
+ ASK 448, grade without RULES READ:, 53: 9060 9064 9065 9067 9068 9090 9093 9094 9098 9099 9102 9103 9104 9107 9108 9109 9114 9116 9117 9119 9127 9129 9131 9132 9133 9136 9137 9138 9139 9140 9141 9142 9143 9144 9145 9150 9151 9152 9159 9161 9163 9164 9166 9167 9168 9172 9175 9202 9203 9206 9207 9209 9210
+   Read by the first 400 characters only: grades or posts holding a grade, 49. Not a grade, 4: 9104 (W4 write record listing grades), 9143 ("for build grades by W2"),
+   9152 (W2 "both grades in"), 9140 (W1 "ASK 430 has both build grades"; B is a step result). These 4 would need a RULES READ line they do not need.
+ Accepted under rev 1 that rev 0 refused: builds giving criteria PASS (9195, 9200, 9205), 9177, 9180, 9184, 9204 (withdrawal), 9211 and 9212 (carry RULES READ).
