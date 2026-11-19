@@ -1,8 +1,8 @@
-# E5 T0: question for the operator (draft rev 1, W1, 11-19; adds W4's run path, Wall 9835)
+# E5 T0: question for the operator (draft rev 2, W1, 11-19; adds W4's run path, Wall 9835, and W2's C-1 and N1, Wall 9858)
 
 **Question:** May the team make four live calls to Muse Spark 1.3 (meta/muse-spark-1.3) through OpenRouter, costing about 0.40 USD, to test whether spark's prompt cache can be switched on?
 
-**Why:** spark is the most expensive defender. In run 440 it cost 0.6475 USD, 37% of the run. Its cache hit on only 1 of its 6 calls. On 11-18, run ODV1-39266 hit 5 of 6 for 0.3389 USD with the same engine code. The engine never asks Meta to cache, because the wrapper's cache list leaves out meta/. (Plan: e5/plan_e5.md rev 1, md5 699f94a0, graded PASS by W3 at 9739 and W2 at 9740.)
+**Why:** spark is the most expensive defender. In run 440 it cost 0.6475 USD, 37% of the run. Its cache hit on only 1 of its 6 calls. On 11-18, run ODV1-39266 hit 5 of 6 for 0.3389 USD with the same cache wrapper. The engine never asks Meta to cache, because the wrapper's cache list leaves out meta/. But Meta also caches without being asked: in both runs the second call read 64,113 cached tokens with no request. So run 440's four misses are not explained by the missing request alone. Routing and timing were checked and do not explain them either (every call went to provider Meta, and one miss came 2 seconds after a hit). (Plan: e5/plan_e5.md rev 1, md5 699f94a0, graded PASS by W3 at 9739 and W2 at 9740.)
 
 **What T0 does:** two pairs of identical calls, each using run 440's first defender request.
 1. Control pair: no cache request. This measures Meta's own cache.
@@ -16,9 +16,9 @@ For all four calls, we read the cached tokens and the billed cost. Nothing in th
 
 **Fail:** the second test call reads 0 from the cache, or OpenRouter rejects the request. There is no build, and E5 closes with no lever.
 
-**Both pairs hit:** asking for the cache adds nothing. There is no build, and E5 closes.
+**Both pairs hit (the LIKELY result, W2 9858):** asking for the cache adds nothing that four calls can show. There is no build, and E5 closes, but run 440's misses stay unexplained.
 
 **Options:**
-1. Approve T0 (about 0.40 USD). This is recommended, because it is the only way to measure, before any build, whether one change can save up to 0.31 USD a run.
+1. Approve T0 (about 0.40 USD). This is recommended, because it is the only measurement possible before any build. Expect "both hit", which closes E5 for 0.40 USD; a pass would open a saving of up to 0.31 USD a run.
 2. No test, and close E5. Spark's cost stays whatever Meta's own cache gives (about 0.34 to 0.67 USD a run).
 3. Hold E5 until later.
