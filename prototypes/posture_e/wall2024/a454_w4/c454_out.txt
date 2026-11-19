@@ -1,0 +1,4 @@
+KV_EXCL old: \bexclu(?:sions?|des?|ding)\b[^.;]{0,40}\b(?:quote|quoted|quotation)\b[^.;]{0,40}\b(?:do(?:es)?\s+not|never)\s+(?:[a-z]+\s+)?(?:make|exclude)\b\s*(?=$|[.;,:)\]])|\b(?:quote|quoted|quotation)\b[^.;]{0,60}\b(?:do(?:es)?\s+not|never)\s+(?:[a-z]+\s+)?(?:make|exclude)\b\s+(?:that|this|the|such|an|any)\s+\bexclu(?:sions?|des?|ding)\b\s*(?=$|[.;,:)\]])
+KV_EXCL live: \bexclu(?:sions?|des?|ding)\b[^.;]{0,40}\b(?:quote|quoted|quotation)\b[^.;]{0,40}\b(?:do(?:es)?\s+not|never)\s+(?:[a-z]+\s+)?(?:makes?|excludes?)\b\s*(?=$|[.;,:)\]])|\b(?:quote|quoted|quotation)\b[^.;]{0,60}\b(?:do(?:es)?\s+not|never)\s+(?:[a-z]+\s+)?(?:makes?|excludes?)\b\s+(?:that|this|the|such|an|any)\s+\bexclu(?:sions?|des?|ding)\b\s*(?=$|[.;,:)\]])
+C2: ASK 422(c) cases on LIVE 19 fail 0
+C1: judgments 630 lines 25809 lines holding make/exclude forms 2208 | K-V and alternate lines 560 | LINES CHANGED 0

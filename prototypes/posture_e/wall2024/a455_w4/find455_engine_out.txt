@@ -1,0 +1,77 @@
+Resolve Seats | 9 | const ds=need('deepseek');const enf=need('luna');
+Resolve Seats | 28 | return [{json:{run_token:TOK,defender:D,challenger:C,deepseek:{api_model:ds.api_model,max_tokens:Number(ds.max_tokens)},enforcer:{seat:'luna',api_model:enf.api_model,max_tokens:Number(enf.max_tokens)},judges,reserve,alte
+Build Synthesis | 98 | const R=$('Resolve Seats').first().json;const SS=$('Init Seats').first().json;const ORS=[SS.defender&&SS.defender.profile==='oracle'?'DEFENDER':null,SS.challenger&&SS.challenger.profile==='oracle'?'CHALLENGER':null].filt
+Build Independent Verdict | 394 | const __out={...d,audit_prompt:'ODV1-A2',verdictBody:{model:$('Resolve Seats').first().json.deepseek.api_model,max_tokens:Math.max($('Resolve Seats').first().json.deepseek.max_tokens||0,8000),messages:[{role:'system',con
+Extract Independent Verdict | 657 | if(clause!==expect){rej('CLAUSE '+clause+' AGAINST ITS OWN COUNTS n='+n+' w='+w+' k='+k+' ds='+defense_standing+', WHICH GIVE '+expect+'.');}
+Extract Independent Verdict | 714 | if(e2!==e1&&clause!==e2){rej('CLAUSE '+clause+' AGAINST ITS OWN COUNTS WITH THE WITHDRAWALS CR3 STATES AND THE JUDGE MISSED (D'+K2.miss.join(', D')+'): n='+n+' w='+w+'+'+K2.miss.length+' k='+k+' keystone='+ks2+' ds='+def
+Extract Independent Verdict | 718 | const EK=(ds)=>(k>=1)?'BROKEN-1':((2*wa>n||ksa==='WITHDRAWN')?'BROKEN-2':((wa>=1)?'PARTIAL-1':((ds==='COLLAPSED')?'PARTIAL-2':'HELD-1')));const ecK=EK(K3.d.calc);
+Extract Independent Verdict | 719 | if(ecK!==EK(defense_standing)&&clause!==ecK){rej('CLAUSE '+clause+' AGAINST ITS OWN COUNTS WITH THE DEFENSE STANDING ITS L AND c GIVE (L='+K3.d.L+' c='+K3.d.c+' ds='+K3.d.calc+') n='+n+' w='+wa+' k='+k+' keystone='+ksa+'
+Build Diagnostic Prompt | 2 | const d=$('Cure Check').first().json;const csf=$('Init with Guards').first().json.fref;const mc=$('Resolve Seats').first().json.deepseek;const vt=d.verdict_tag;const roles=$('Init with Guards').first().json.posline+'\n'+
+Accept Build | 30 | const out=[];let ds=null;
+Accept Build | 33 | if(s==='deepseek'){ds={seat:s,role:'judge',api_model:x.api_model,fam:'deepseek',body:{model:x.api_model,max_tokens:Math.max(mt,8000),messages:m}};continue;}
+Accept Build | 35 | out.push({json:{acc:{seat:s,role:'judge',api_model:x.api_model,fam:'openrouter',body:__orc(body,x.api_model,$execution.id+':accept:'+s)},ds}});}
+Accept Build | 37 | out.forEach(o=>{o.json.ds=ds;});
+Accept DS Build | 1 | const ds=$('Accept Build').first().json.ds;return [{json:ds?{acc:ds}:{skip:true}}];
+Enforcer Build | 94 | const ds=RS&&RS.enforcer&&RS.enforcer.api_model?RS.enforcer:null;const __jl=(s,d)=>{let M={};try{M=(RS&&RS.jlabel)||{};}catch(e){M={};}if(s&&Object.prototype.hasOwnProperty.call(M,s))return M[s];if(s==='single judge')ret
+Enforcer Build | 95 | if(!rows.length||!ds)return [{json:{enf_skip:true,why:!rows.length?'no K-W or K-S3 item was asked':'no DeepSeek model_config row'}}];
+Enforcer Build | 132 | const body={model:ds.api_model,max_tokens:Math.max(Number(ds.max_tokens)||0,16000),temperature:0,messages:[{role:'system',content:SYS+__JAGR},{role:'user',content:USER}]};
+Enforcer Build | 133 | return [{json:{enf_skip:false,body,ids:ids.map(x=>({id:x.id,seat:x.row.seat,seat_role:x.row.seat_role,rule:x.row.rule,item:x.row.item,flagged_line:x.row.flagged_line,response_line:x.row.response_line,cure_status:x.row.cu
+Anticheat Build | 4 | const ds=RS&&RS.enforcer&&RS.enforcer.api_model?RS.enforcer:null;
+Anticheat Build | 5 | if(!F||!ds)return [{json:{acx_skip:true,why:!F?'no rounds found':'no DeepSeek model_config row',items:[]}}];
+Anticheat Build | 39 | return {model:ds.api_model,max_tokens:Math.max(Number(ds.max_tokens)||0,16000),temperature:0,messages:[{role:'system',content:SYS},{role:'user',content:RULES+'\n\n'+parts.join('\n\n')}]};};
+Anticheat Build | 41 | return calls.filter(l=>l.length).map((l,ci)=>({json:{acx_skip:false,call:ci+1,calls:calls.length,body:mk(l),items:l.map(x=>({id:x.id,side:x.side,verse:x.verse,oth:x.oth,inR3:x.inR3})),not_checked:NC,model:ds.api_model,ru
+Judge Enforcer Build | 5 | const ds=RS&&RS.enforcer&&RS.enforcer.api_model?RS.enforcer:null;const __jl=(s,d)=>{let M={};try{M=(RS&&RS.jlabel)||{};}catch(e){M={};}if(s&&Object.prototype.hasOwnProperty.call(M,s))return M[s];if(s==='single judge')ret
+Judge Enforcer Build | 7 | if(!ds)return skip('no DeepSeek model_config row');
+Judge Enforcer Build | 266 | for(const j of judges){const ls=linesOf(j.t);const res=pickL(ls,'RESULT'),cl=pickL(ls,'CLAUSE'),ky=pickL(ls,'KEYSTONE'),ds=pickL(ls,'DEFENSE STANDING'),cs=pickL(ls,'CHALLENGE STANDING'),dc=pickL(ls,'CONCEDED LINKS'),cc=p
+Judge Enforcer Build | 276 | const coll=/COLLAPSED/.test((ds.match(/^DEFENSE STANDING\s*:\s*([A-Z-]+)/)||[])[1]||'');
+Judge Enforcer Build | 288 | stand(ds,dc,'DEFENSE');stand(cs,cc,'CHALLENGE');
+Judge Enforcer Build | 352 | return calls.filter(c=>c.length).map((c,ci)=>({json:{je_skip:false,code_rows:ci===0?code_rows:[],call:ci+1,calls:calls.length,model:ds.api_model,run_token:S.run_token,not_checked,
+Judge Enforcer Build | 353 | ids:c.flatMap(x=>x.ids),body:{model:ds.api_model,max_tokens:Math.max(Number(ds.max_tokens)||0,16000),temperature:0,messages:[{role:'system',content:SYS+__JAGR},{role:'user',content:RULES+'\n\n'+c.map(x=>x.text+(Array.isA
+Send Back Build | 715 | if(__d){__d.ecl={...__c,ds:true};__d.cure_reason=String(__d.cure_reason||'')+' | LAYER CHECK (pkgECL, Commitment 13): '+__c.why;}
+Send Back Build | 716 | else dis.push({seat:__x.seat,seat_role:'panel',rule:'E-COL',item:__x.item,flagged_line:__x.flagged_line,response_line:__x.response_line,cure_reason:'ENFORCER DISAGREE: LAYER CHECK (pkgECL, Commitment 13): '+__c.why,ecl:{
+Send Back Build | 726 | if(__d){__d.abs={...__c,ds:true};__d.cure_reason=String(__d.cure_reason||'')+' | ABSENCE CHECK (pkgABS): '+__c.why;}
+Send Back Build | 727 | else dis.push({seat:__x.seat,seat_role:'panel',rule:__x.rule,item:__x.item,flagged_line:__x.flagged_line,response_line:__x.response_line,cure_reason:'ENFORCER DISAGREE: ABSENCE CHECK (pkgABS): '+__c.why,abs:{...__c,ds:fa
+Send Back Build | 829 | const ds=rule==='E-ANS'?rs.match(/\(right:\s*MISSES\)\s*:?\s*([\s\S]*?)(?:\s*\(judge wrote|$)/i):rule==='E-HOLD'?rs.match(/\(right:\s*BROKEN\)\s*:?\s*([\s\S]*?)(?:\s*\(judge wrote|$)/i):null;
+Send Back Build | 830 | if(!ds)return null;const why=ds[1];let code;
+Send Back Record | 761 | const __c=ECL.check(__to,ECL.ctxLive());if(__c.faults.length)return res(false,'CHANGE TO still fails the layer check (pkgECL): '+__c.why);if(!it.ecl.ds)return res(true,'CHANGE TO carries its layers (pkgECL): '+__c.why);}
+Send Back Record | 837 | const ds=rule==='E-ANS'?rs.match(/\(right:\s*MISSES\)\s*:?\s*([\s\S]*?)(?:\s*\(judge wrote|$)/i):rule==='E-HOLD'?rs.match(/\(right:\s*BROKEN\)\s*:?\s*([\s\S]*?)(?:\s*\(judge wrote|$)/i):null;
+Send Back Record | 838 | if(!ds)return null;const why=ds[1];let code;
+Alt Judge Enforcer Build | 5 | const ds=RS&&RS.enforcer&&RS.enforcer.api_model?RS.enforcer:null;const __jl=(s,d)=>{let M={};try{M=(RS&&RS.jlabel)||{};}catch(e){M={};}if(s&&Object.prototype.hasOwnProperty.call(M,s))return M[s];if(s==='single judge')ret
+Alt Judge Enforcer Build | 7 | if(!ds)return skip('no DeepSeek model_config row');
+Alt Judge Enforcer Build | 266 | for(const j of judges){const ls=linesOf(j.t);const res=pickL(ls,'RESULT'),cl=pickL(ls,'CLAUSE'),ky=pickL(ls,'KEYSTONE'),ds=pickL(ls,'DEFENSE STANDING'),cs=pickL(ls,'CHALLENGE STANDING'),dc=pickL(ls,'CONCEDED LINKS'),cc=p
+Alt Judge Enforcer Build | 276 | const coll=/COLLAPSED/.test((ds.match(/^DEFENSE STANDING\s*:\s*([A-Z-]+)/)||[])[1]||'');
+Alt Judge Enforcer Build | 288 | stand(ds,dc,'DEFENSE');stand(cs,cc,'CHALLENGE');
+Alt Judge Enforcer Build | 354 | const rows=L.filter(r=>r&&r.kind==='cure'&&r.seat_role==='alternate'&&(r.rule==='K-W'||r.rule==='K-S3'));if(!rows.length||!ds)return [];
+Alt Judge Enforcer Build | 390 | return [{json:{je_skip:false,eak:true,code_rows:[],call:0,calls:0,model:ds.api_model,run_token:S.run_token,not_checked:[],
+Alt Judge Enforcer Build | 392 | body:{model:ds.api_model,max_tokens:Math.max(Number(ds.max_tokens)||0,16000),temperature:0,messages:[{role:'system',content:SYS+__JAGR},{role:'user',content:USER}]}}}];}catch(e){return [];}}
+Alt Judge Enforcer Build | 394 | const __eak2=[].concat(calls.filter(c=>c.length).map((c,ci)=>({json:{je_skip:false,code_rows:ci===0?code_rows:[],call:ci+1,calls:calls.length,model:ds.api_model,run_token:S.run_token,not_checked,
+Alt Judge Enforcer Build | 395 | ids:c.flatMap(x=>x.ids),body:{model:ds.api_model,max_tokens:Math.max(Number(ds.max_tokens)||0,16000),temperature:0,messages:[{role:'system',content:SYS+__JAGR},{role:'user',content:RULES+'\n\n'+c.map(x=>x.text+(Array.isA
+Alt Send Back Build | 715 | if(__d){__d.ecl={...__c,ds:true};__d.cure_reason=String(__d.cure_reason||'')+' | LAYER CHECK (pkgECL, Commitment 13): '+__c.why;}
+Alt Send Back Build | 716 | else dis.push({seat:__x.seat,seat_role:'alternate',rule:'E-COL',item:__x.item,flagged_line:__x.flagged_line,response_line:__x.response_line,cure_reason:'ENFORCER DISAGREE: LAYER CHECK (pkgECL, Commitment 13): '+__c.why,e
+Alt Send Back Build | 726 | if(__d){__d.abs={...__c,ds:true};__d.cure_reason=String(__d.cure_reason||'')+' | ABSENCE CHECK (pkgABS): '+__c.why;}
+Alt Send Back Build | 727 | else dis.push({seat:__x.seat,seat_role:'alternate',rule:__x.rule,item:__x.item,flagged_line:__x.flagged_line,response_line:__x.response_line,cure_reason:'ENFORCER DISAGREE: ABSENCE CHECK (pkgABS): '+__c.why,abs:{...__c,d
+Alt Send Back Build | 829 | const ds=rule==='E-ANS'?rs.match(/\(right:\s*MISSES\)\s*:?\s*([\s\S]*?)(?:\s*\(judge wrote|$)/i):rule==='E-HOLD'?rs.match(/\(right:\s*BROKEN\)\s*:?\s*([\s\S]*?)(?:\s*\(judge wrote|$)/i):null;
+Alt Send Back Build | 830 | if(!ds)return null;const why=ds[1];let code;
+Alt Send Back Record | 761 | const __c=ECL.check(__to,ECL.ctxLive());if(__c.faults.length)return res(false,'CHANGE TO still fails the layer check (pkgECL): '+__c.why);if(!it.ecl.ds)return res(true,'CHANGE TO carries its layers (pkgECL): '+__c.why);}
+Alt Send Back Record | 837 | const ds=rule==='E-ANS'?rs.match(/\(right:\s*MISSES\)\s*:?\s*([\s\S]*?)(?:\s*\(judge wrote|$)/i):rule==='E-HOLD'?rs.match(/\(right:\s*BROKEN\)\s*:?\s*([\s\S]*?)(?:\s*\(judge wrote|$)/i):null;
+Alt Send Back Record | 838 | if(!ds)return null;const why=ds[1];let code;
+Shared Library | 6 | /*LIB*/["const __seatC=new Map(),__seatBad={};const __seatOf=x=>{if(__seatC.has(x))return __seatC.get(x);let s;try{s=JSON.parse(x).payload.judge_seat;}catch(e){s=__seatBad;}__seatC.set(x,s);return s;};","const PRS=(()=>{
+Shared Library | 7 | /*MAP*/{"Alt Gate Build":{"n":247012,"p":[[1,103],714,105,714,714,[108,110],714,714,714,115,714,714,714,[122,130],714,[146,147],714,714,714,714,714,714,1645,714,714,714,714,714,714,714,714,2377,[234,235],349,[237,335],34
+Close Enforcer Build | 102 | const ds=RS&&RS.enforcer&&RS.enforcer.api_model?RS.enforcer:null;
+Close Enforcer Build | 104 | if(!F||!ds||F&&(!String(F.cr4||'').trim()&&!String(F.dr4||'').trim()))return [{json:{cec_skip:true,why:!F?'no rounds found':!ds?'no DeepSeek model_config row':'no closing round',run_token:S.run_token}}];
+Close Enforcer Build | 118 | const body={model:ds.api_model,max_tokens:Math.max(Number(ds.max_tokens)||0,16000),temperature:0,messages:[{role:'system',content:SYS},{role:'user',content:user}]};
+Close Enforcer Build | 119 | out.push({json:{cec_skip:false,side:sd,body,links,cands:cs,missing_rounds:miss,model:ds.api_model,run_token:S.run_token,copy:1}});out.push({json:{cec_skip:false,side:sd,body:{...body,temperature:0.6},links,cands:cs,missi
+Judge Contradiction Build | 18 | const ds=RS&&RS.enforcer&&RS.enforcer.api_model?RS.enforcer:null;const __L={"Panel Payloads":()=>$('Panel Payloads')};const __jl=(s,d)=>{let M={};try{M=(RS&&RS.jlabel)||{};}catch(e){M={};}if(s&&Object.prototype.hasOwnPro
+Judge Contradiction Build | 20 | if(!F||!ds||F&&(!String(F.cr4||'').trim()&&!String(F.dr4||'').trim()))return [{json:{cec_skip:true,why:!F?'no rounds found':!ds?'no DeepSeek model_config row':'no closing round',run_token:S.run_token}}];
+Judge Contradiction Build | 45 | const body={model:ds.api_model,max_tokens:Math.max(Number(ds.max_tokens)||0,16000),temperature:0,messages:[{role:'system',content:'You check each debater against its own earlier words. You bring nothing from outside the 
+Judge Contradiction Build | 46 | return [{json:{cec_skip:false,cands_only:true,answered_before,body,links,cands,missing_rounds:miss,model:ds.api_model,run_token:S.run_token,copy:1}},{json:{cec_skip:false,cands_only:true,answered_before,body:{...body,tem
+Assume Check Build | 17 | const ds=RS&&RS.enforcer&&RS.enforcer.api_model?RS.enforcer:null;
+Assume Check Build | 26 | if(!F||!ds||!prem.length)return [{json:{acx_skip:true,why:!F?'no rounds found':!ds?'no DeepSeek model_config row':'no UNSUPPORTED-L4 premise carries ASSUMES',prem,run_token:S.run_token}}];
+Assume Check Build | 29 | const body={model:ds.api_model,max_tokens:Math.max(Number(ds.max_tokens)||0,8000),temperature:0,messages:[{role:'system',content:'You check whether quoted scripture states a fact. You bring nothing from outside the words
+Assume Check Build | 30 | return [{json:{acx_skip:false,body,prem,model:ds.api_model,run_token:S.run_token}}];
+Assume Check Record | 30 | const ds=[];for(const line of String(txt||'').split('\n')){const s=line.trim();if(!s)continue;const m=s.match(LN);if(!m)continue;
+Assume Check Record | 34 | ds.push(x);}
+Assume Check Record | 36 | for(const p of B.prem){let mine=ds.filter(x=>x.side===p.side&&x.n===p.n);if(!mine.length)mine=[{side:p.side,n:p.n,k:0,fact:p.assumes,answer:err?'NO REPLY':'NO ANSWER',rest:'',line:null}];
+Assume Check Record | 43 | cure_status:f.both_not_stated?'BOTH NOT STATED':/^NO (ANSWER|REPLY)$/.test(f.deepseek)?'DEEPSEEK '+f.deepseek:(f.deepseek==='STATED'&&f.code!=='NOT STATED')?'NO ITEM (STATED)':f.deepseek==='INFERRED ACT'?'NO ITEM (INFERR
+Assume Check Record | 44 | cure_reason:'DEEPSEEK: '+f.deepseek+' -- CODE: '+f.code+(f.names.length?' (names '+f.names.join(', ')+(f.missing.length?'; not in the block\'s quoted verse words: '+f.missing.join(', '):'')+')':'')+' -- JUDGES: '+gtxt(f.
+names with deepseek 42
