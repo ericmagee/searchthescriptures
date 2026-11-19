@@ -1,0 +1,7 @@
+BUILT /tmp/claude-0/-home-claude/25c53118-408e-5b9f-a314-6593b8f02ba2/scratchpad/t436.json | L2 Count Plan text sha256 23bf623ceefd -> 2867ea2fb87f | length 46027 -> 46445 | lines 274 274 | changed lines 156,157,159,167
+2d40e6ad-5755-4826-af6d-44982301a458 2026-11-19T03:41:01.962Z nodes 425 425 param diffs 1 [ 'L2 Count Plan' ] conn equal true lib 1378018044ad4a52 1378018044ad4a52
+comments 0
+compiles
+REASONING GUARD: no model-setting change.
+RESULT: PASS
+EQUAL
