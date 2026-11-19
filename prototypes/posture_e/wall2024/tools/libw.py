@@ -74,7 +74,9 @@ for k in WF:
   if back.get('activeVersionId')!=back.get('versionId') or not back.get('active'):fail.append('NOT PUBLISHED')
   json.dump(back,open(D+'fetchback_%s_%s.json'%(tag,k),'w'));out[k]=(back['versionId'],libsha(back),back.get('updatedAt'))
   print(k,'back',back['versionId'],'nodes',len(KN),'lib',out[k][1],'FAIL' if fail else 'READBACK OK',fail[:10])
-  if fail:sys.exit('STOPPED after %s; no audit row written for it; revert from %sprewrite_%s_*.json'%(k,D,tag))
+  if fail:
+    for w in BACK:audit_row.post('n8n_workflow_publish',audit_row.notes(seat,card,live[w],BACK[w],'Tag %s_%s; written and read back before %s failed its readback; revert %sprewrite_%s_%s.json.'%(tag,w,k,D,tag,w)),fatal=False)
+    sys.exit('STOPPED after %s; no audit row for it; rows written for %s; revert from %sprewrite_%s_*.json'%(k,list(BACK),D,tag))
   BACK[k]=back
 print('BOTH LIBRARIES', 'EQUAL' if out['engine'][1]==out['child'][1] else 'DIFFER', out['engine'][1], out['child'][1])
 for k in WF:
