@@ -1,4 +1,6 @@
--- ASK 499 A1 snapshot row, DRAFT rev 0 (W2, seat 32, 11-19). For W1 and W3 to grade. NOT RUN.
+-- ASK 499 A1 snapshot row, DRAFT rev 1 (W2, seat 32, 11-19). For W1 and W3 to grade. NOT RUN.
+-- Rev 1 fills from W4 10140, W1 10141/10142 and W2 10148: commit 88712bac, a499_w4/ paths, engine 01691ed8, Panel Judge Call d19d8de6, card "Push it" 21:38:57Z.
+-- ONE VALUE LEFT ON PURPOSE: __FILL_AUDIT_ID__. No audit_log row exists for the 499 A1 write (W2 10148 F1). W4 owes it, as audit 38773 for 494 A1. The guard raises until it is filled.
 -- Pattern: snapshot 16 (494 A1), with one change: the grades are on the build files actually written (W1 10093, W2 10094), so md5_match can be true (row 16's gap, AAR grade count findings).
 -- Run only from seat 36 (the coordinator), once, after: the A1 card write by W4, the fetchback match, and two non-writer readbacks.
 -- Every __FILL_...__ value must be replaced from live SQL and the Wall before running. The guard at the end raises and rolls back if any is left.
@@ -10,17 +12,17 @@ INSERT INTO public.ask_aar_snapshots (ask, rev, title, objective, objective_met,
 (499, 'A1', 'Panel judge reply nodes moved to the "Supabase account" credential',
  $t$Today anyone holding the public (anon) key can call rpc/ppj_put, and with it store a reply in ppj_replies for any nonce and slot. The engine keeps the first reply per slot and reads it back as that panel judge's answer, so a reply stored before the judge's own would stand as the judge's verdict. The same key reads any nonce's replies (ppj_get, ppj_status). Close that, and keep every engine run's panel judges working. Expected effect: ppj_put, ppj_status and ppj_get refuse anon and authenticated with 42501, and the engine's calls to them run as service_role. (a499_w3/plan499.md)$t$,
  'not yet',
- $t$A1 only is written (audit __FILL_AUDIT_ID__; engine d491f4a5 to __FILL_ENGINE_AFTER__, Panel Judge Call 15a91429 to __FILL_PJC_AFTER__; fetchback equal to the targets) and read back by __FILL_READBACK_SEAT_1__ (__FILL_READBACK_WALL_1__) and __FILL_READBACK_SEAT_2__ (__FILL_READBACK_WALL_2__). The proving run and A2 (the revokes) are not done, so no function refuses anon yet.$t$,
- '__FILL_WRITE_WALL__, __FILL_READBACK_WALL_1__, __FILL_READBACK_WALL_2__',
+ $t$A1 only is written (audit __FILL_AUDIT_ID__; engine d491f4a5 to 01691ed8, Panel Judge Call 15a91429 to d19d8de6; fetchback equal to the targets) and the engine read back live by W1 (10141) and W2 (10148). Panel Judge Call cannot be read through the n8n MCP; it is checked only against W4's fetchback (28889eab), and the proving run's Q2 is its independent proof (W1 10142). The proving run and A2 (the revokes) are not done, so no function refuses anon yet.$t$,
+ '10140, 10141, 10148',
  'session_01H1X3APzb2DidJoZ9Avizjn', NULL,
  '"not yet"'::jsonb,
- '{"answer":"__FILL_CARD_ANSWER__","thread":"W4","press_time":"__FILL_CARD_PRESS_Z__","source":"audit __FILL_AUDIT_ID__"}'::jsonb,
+ '{"answer":"Push it","thread":"W4","press_time":"21:38:57Z","source":"audit __FILL_AUDIT_ID__"}'::jsonb,
  'W3',
  '{"md5":"20b80b63","path":"a499_w3/plan499.md","commit":"a2921f51","wall_id":10079}'::jsonb,
- '[{"md5":"8ca5c722","path":"ask499/w4/target_engine_499a1.json","commit":"__FILL_COMMIT__"},
-   {"md5":"5b79316b","path":"ask499/w4/target_pjc_499a1.json","commit":"__FILL_COMMIT__"},
-   {"md5":"62127852","path":"ask499/w4/build499a1.py","commit":"__FILL_COMMIT__"}]'::jsonb,
- '{"what":"write back the live files on the operator''s word (plan499_a1_run.md section 4)","files":[{"md5":"8197ec2e","path":"ask499/w4/live_engine_499.json"},{"md5":"26ab0bac","path":"ask499/w4/live_pjc_499.json"}]}'::jsonb,
+ '[{"md5":"8ca5c722","path":"a499_w4/target_engine_499a1.json","commit":"88712bac"},
+   {"md5":"5b79316b","path":"a499_w4/target_pjc_499a1.json","commit":"88712bac"},
+   {"md5":"62127852","path":"a499_w4/build499a1.py","commit":"88712bac"}]'::jsonb,
+ '{"what":"write back the live files on the operator''s word (plan499_a1_run.md section 4)","files":[{"md5":"8197ec2e","path":"a499_w4/live_engine_499.json"},{"md5":"26ab0bac","path":"a499_w4/live_pjc_499.json"}]}'::jsonb,
  '[{"seat":"W2","verdict":"PASS with three notes (plan rev 0)","wall_id":10080,"md5_graded":"20b80b63","verdict_norm":"PASS"},
    {"seat":"W1","verdict":"PASS (plan rev 0)","wall_id":10081,"md5_graded":"20b80b63","verdict_norm":"PASS"},
    {"seat":"W1","verdict":"PASS (build rev 0)","wall_id":10093,"md5_graded":"8ca5c722","verdict_norm":"PASS"},
@@ -31,18 +33,18 @@ INSERT INTO public.ask_aar_snapshots (ask, rev, title, objective, objective_met,
    {"seat":"W2","verdict":"PASS (A1 run checks and A2 test plan)","wall_id":10094,"md5_graded":"5a689265","verdict_norm":"PASS"}]'::jsonb,
  ARRAY['8ca5c722','5b79316b'],
  '[__FILL_AUDIT_ID__]'::jsonb,
- '[{"kind":"workflow","name":"engine moMxiV4Irg1uRBZN (Panel Judges Poll and Panel Judges Fetch, credential only)","before":"d491f4a5","after":"__FILL_ENGINE_AFTER__"},
-   {"kind":"workflow","name":"WALL-2024 Panel Judge Call Y1VIsNB6KBrs1znP (Store Reply, credential only)","before":"15a91429","after":"__FILL_PJC_AFTER__"}]'::jsonb,
+ '[{"kind":"workflow","name":"engine moMxiV4Irg1uRBZN (Panel Judges Poll and Panel Judges Fetch, credential only)","before":"d491f4a5","after":"01691ed8"},
+   {"kind":"workflow","name":"Panel Judge Call Y1VIsNB6KBrs1znP (Store Reply, credential only)","before":"15a91429","after":"d19d8de6"}]'::jsonb,
  '"not yet"'::jsonb,
- '[{"seat":"__FILL_READBACK_SEAT_1__","result":"CONFIRMED","wall_id":__FILL_READBACK_WALL_1__},{"seat":"__FILL_READBACK_SEAT_2__","result":"CONFIRMED","wall_id":__FILL_READBACK_WALL_2__}]'::jsonb,
+ '[{"seat":"W1","result":"CONFIRMED (engine live; Panel Judge Call by fetchback only)","wall_id":10141},{"seat":"W2","result":"CONFIRMED (engine live; Panel Judge Call by fetchback only)","wall_id":10148}]'::jsonb,
  '{"owed":true,"case":"plan499_a1_run.md 5a689265 Q1 to Q6: role service_role on rpc/ppj_put, ppj_status and ppj_get, all 3 panel replies collected"}'::jsonb,
  '{"engine_manual":"not yet","op_doc":"not yet"}'::jsonb,
  'read back',
- '[10079, 10080, 10081, 10089, 10091, 10093, 10094, __FILL_WRITE_WALL__, __FILL_READBACK_WALL_1__, __FILL_READBACK_WALL_2__, "audit __FILL_AUDIT_ID__"]'::jsonb);
+ '[10079, 10080, 10081, 10089, 10091, 10093, 10094, 10140, 10141, 10142, 10148, "audit __FILL_AUDIT_ID__"]'::jsonb);
 
 INSERT INTO public.ask_aar_builders (snapshot_id, prior_row, builder_seats, sources, written_by)
 SELECT s.id, NULL, ARRAY['W4'],
- '[{"seat":"W4","what":"built target_engine_499a1.json 8ca5c722 and target_pjc_499a1.json 5b79316b","wall_id":10089},{"seat":"W4","what":"wrote 499 A1 on its card","wall_id":__FILL_WRITE_WALL__}]'::jsonb,
+ '[{"seat":"W4","what":"built target_engine_499a1.json 8ca5c722 and target_pjc_499a1.json 5b79316b","wall_id":10089},{"seat":"W4","what":"wrote 499 A1 on its card","wall_id":10140}]'::jsonb,
  'session_01H1X3APzb2DidJoZ9Avizjn'
 FROM public.ask_aar_snapshots s
 WHERE s.ask = 499 AND s.rev = 'A1' AND s.prior_row IS NULL AND s.aar_at = now();
