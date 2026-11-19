@@ -1,0 +1,26 @@
+== C1 onlyjs
+a428_w1/out/moMxiV4Irg1uRBZN_b780b2ae_target.json: jsCode changed in 108 nodes (listed 108); other differences 0
+a428_w1/out/MqQHRl7mQQ0z8QdT_7b043bab_target.json: jsCode changed in 58 nodes (listed 58); other differences 0
+== C2a reasoning guard
+REASONING GUARD: model-setting text changes in 1 node(s): Alternate Merge
+REFUSED: needs the operator's own instruction (--allow with his words).
+REASONING GUARD: no model-setting change.
+== C4 ASK 385 before
+  e9a19f8dfba7 x32  e.g. fb_engine.json lib:Alt Gate Build; fb_engine.json lib:Alt Gate Record; fb_engine.json lib:Alternate Merge 1
+NAME cjrLoose2024: 54 copies, 1 text(s)
+  2eabafad8478 x54  e.g. fb_engine.json lib:Alt Gate Build; fb_engine.json lib:Alt Gate Record; fb_engine.json lib:Alternate Cure Build
+RESULT: PASS
+== C4 ASK 385 after
+  e9a19f8dfba7 x32  e.g. moMxiV4Irg1uRBZN_b780b2ae_target.json lib:Alt Gate Build; moMxiV4Irg1uRBZN_b780b2ae_target.json lib:Alt Gate Record; moMxiV4Irg1uRBZN_b780b2ae_target.json lib:Alternate Merge 1
+NAME cjrLoose2024: 54 copies, 1 text(s)
+  2eabafad8478 x54  e.g. moMxiV4Irg1uRBZN_b780b2ae_target.json lib:Alt Gate Build; moMxiV4Irg1uRBZN_b780b2ae_target.json lib:Alt Gate Record; moMxiV4Irg1uRBZN_b780b2ae_target.json lib:Alternate Cure Build
+RESULT: PASS
+== excluded nodes byte-equal
+moMxiV4Irg1uRBZN_b780b2ae_target.json Shared Library byte-equal
+moMxiV4Irg1uRBZN_b780b2ae_target.json Alternate Build byte-equal
+moMxiV4Irg1uRBZN_b780b2ae_target.json Early Alternate Build byte-equal
+MqQHRl7mQQ0z8QdT_7b043bab_target.json Shared Library byte-equal
+== C4 lib_sha
+engine b780b2ae-26de-4e0f-aaf6-f4e1391b9985 body c91b9f1489e9c132 header c91b9f1489e9c132 map_sha 99d7d2c673d59735
+child 7b043bab-71a0-47c5-9102-d3606756f9b2 body c91b9f1489e9c132 header c91b9f1489e9c132 map_sha 99d7d2c673d59735
+EQUAL

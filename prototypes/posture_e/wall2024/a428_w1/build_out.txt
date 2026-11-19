@@ -1,0 +1,22 @@
+moMxiV4Irg1uRBZN_b780b2ae: Code nodes 183; kept by name 3 (Alternate Build, Shared Library, Early Alternate Build); no comments 72
+  changed 108: (a) 45 nodes, 46081 chars; (b) 31 stubs, 22471 chars; (c) 32 library readers, 76548 chars
+  Code node chars 3577507 -> 3432407 (145100 less)
+  tokens: 108/108
+  tree: 108/108
+  lines_ok: 108/108
+  no_comment_left: 108/108
+  compiles: 108/108
+  names_equal: 108/108
+  rebuild equal (b): 31/31
+  BUILD PASS
+MqQHRl7mQQ0z8QdT_7b043bab: Code nodes 63; kept by name 1 (Shared Library); no comments 4
+  changed 58: (a) 44 nodes, 3941 chars; (b) 13 stubs, 9478 chars; (c) 1 library readers, 863 chars
+  Code node chars 1134191 -> 1119909 (14282 less)
+  tokens: 58/58
+  tree: 58/58
+  lines_ok: 58/58
+  no_comment_left: 58/58
+  compiles: 58/58
+  names_equal: 58/58
+  rebuild equal (b): 13/13
+  BUILD PASS
