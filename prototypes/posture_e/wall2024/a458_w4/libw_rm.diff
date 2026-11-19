@@ -1,0 +1,27 @@
+2c2
+< """ASK 455 D variant (W4): adds --renames (target nodes matched to live by node id; renamed nodes declared). ASK 422(a): one writer for the engine and its child ("two copies, one writer, checked at load"). Joins rdf/wgen.py and rdf/wchild.py.
+---
+> """ASK 458 variant (W4): adds --removes (live nodes absent from the target are removed, listed, and checked absent after the write). ASK 455 D variant (W4): adds --renames (target nodes matched to live by node id; renamed nodes declared). ASK 422(a): one writer for the engine and its child ("two copies, one writer, checked at load"). Joins rdf/wgen.py and rdf/wchild.py.
+32c32
+< T={};ADD={'engine':(arg('--add-eng') or '').split(',') if arg('--add-eng') else [],'child':(arg('--add-child') or '').split(',') if arg('--add-child') else []}
+---
+> T={};RMS={};ADD={'engine':(arg('--add-eng') or '').split(',') if arg('--add-eng') else [],'child':(arg('--add-child') or '').split(',') if arg('--add-child') else []}
+42c42,45
+<   if set(LN)-set(TN):sys.exit('REFUSED: %s target lacks live nodes %s'%(k,sorted(set(LN)-set(TN))))
+---
+>   RM=sorted(set(LN)-set(TN))
+>   if RM and '--removes' not in A:sys.exit('REFUSED: %s target lacks live nodes %s'%(k,RM))
+>   if RM:print(k,'REMOVES',len(RM),RM)
+>   live_kept=[x for x in live[k]['nodes'] if REN.get(x['name'],x['name']) not in RM];LN=[n for n in LN if n not in RM]
+46c49
+<   if not ADD[k] and not REN and js(t['connections'])!=js(live[k]['connections']):sys.exit('REFUSED: %s connections differ with no node added'%k)
+---
+>   if not ADD[k] and not REN and not RM and js(t['connections'])!=js(live[k]['connections']):sys.exit('REFUSED: %s connections differ with no node added'%k)
+49,50c52,53
+<   print(k,'changed',[b['name'] for a,b in zip(live[k]['nodes'],t['nodes']) if js({kk:v for kk,v in a.items() if kk!='name'})!=js({kk:v for kk,v in b.items() if kk!='name'})],'added',ADD[k])
+<   T[k]=t;json.dump(t,open(D+'_guard_%s_%s.json'%(tag,k),'w'))
+---
+>   print(k,'changed',[b['name'] for a,b in zip(live_kept,t['nodes']) if js({kk:v for kk,v in a.items() if kk!='name'})!=js({kk:v for kk,v in b.items() if kk!='name'})],'added',ADD[k])
+>   T[k]=t;RMS[k]=RM;json.dump(t,open(D+'_guard_%s_%s.json'%(tag,k),'w'))
+65a69
+>   fail+=['still present '+n for n in RMS[k] if n in KN]
