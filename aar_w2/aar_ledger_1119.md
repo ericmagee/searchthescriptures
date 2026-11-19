@@ -1,6 +1,6 @@
-# AAR ledger 11-19, ASKs 484 to 500 (W2, seat 32; drafted for W1's check and W3's AAR)
+# AAR ledger 11-19 rev 1 (v221 recorded), ASKs 484 to 500 (W2, seat 32; drafted for W1's check and W3's AAR)
 Read live from SQL at about 15:28 CST (21:28Z). Sources: ask_aar_snapshots (every row), ask_aar_grades_check(), engine_manual and operational_doc max version, pg_proc ACLs, debate_results, audit_log through 39256.
-Live versions: engine manual v220 (v221 card with the operator), op doc v137. No engine run since the 494 A2 write: debate_results newest is 19:44:35Z (run 40891); there are 0 rows after 20:51:24Z.
+Live versions: engine manual v221 (21:18:02Z), op doc v137. No engine run since the 494 A2 write: debate_results newest is 19:44:35Z (run 40891); there are 0 rows after 20:51:24Z.
 "Latest row" is the newest snapshot row for that ASK (its prior_row chain is shown). md5_match is as recorded by the insert trigger.
 
 | ASK | What | Objective met (latest row) | Live state | Open item | Snapshot rows (latest first) | md5_match |
@@ -16,7 +16,7 @@ Live versions: engine manual v220 (v221 card with the operator), op doc v137. No
 | 492 | debate_results direct anon INSERT closed | in part | written (audit 38761) and read back | a run that saves; op doc line | 15 | true |
 | 493 | ASK AAR snapshots table | in part | live; manuals v218 and op doc v135 written | the first AAR report to the operator after these rows (row 28's reason) | 28 (prior 27, prior 19) | true |
 | 494 A1 | engine save nodes on the "Supabase account" credential | in part, proven by run | live (engine d491f4a5); run 40891 proved service_role | none for A1 | 31 (prior 16) | false (build file 6eac56a9 has no grades; known finding) |
-| 494 A2 | public key can no longer call the nine write functions | in part | live: anon EXECUTE on 0 of the nine (read now) | v221 manual write and readbacks; op doc line; the next engine run saves with no 42501 | 32 | true |
+| 494 A2 | public key can no longer call the nine write functions | in part | live: anon EXECUTE on 0 of the nine (read now) | engine manual v221 written 21:18:02Z (c3c39ed3; guard 39257 card=NONE, W3 mistake 10098; readbacks W1 10099, W2 10101); open: op doc line; the next engine run saves with no 42501 | 32 | true |
 | 495 | Oracle Hardening Test (Live Ask) unpublished | yes | inactive | op doc line only | 17 | true |
 | 496 | Debate Findings Pipeline paused | yes | inactive, version 66f18454 | op doc line only | 26 (prior 18) | true |
 | 497 | ASK AAR snapshot check | in part (this AAR's check makes it yes, per AAR rev 23) | live; manuals v219 and op doc v136 | none beyond this AAR | 29 | true |
