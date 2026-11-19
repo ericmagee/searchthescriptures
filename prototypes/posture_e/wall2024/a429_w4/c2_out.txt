@@ -1,0 +1,44 @@
+== engine run 39266
+Enforcer Build | items 1 | old==stored true | non-body fields equal true | bodies changed 0 | labels written 0 | seat ids in label form (new) 0 | other changes 0
+Judge Enforcer Build | items 8 | old==stored true | non-body fields equal true | bodies changed 8 | labels written 162 | seat ids in label form (new) 0 | other changes 0
+Alt Judge Enforcer Build | items 4 | old==stored true | non-body fields equal true | bodies changed 4 | labels written 58 | seat ids in label form (new) 0 | other changes 0
+Judge Contradiction Build | items 1 | old==stored true | non-body fields equal true | bodies changed 0 | labels written 0 | seat ids in label form (new) 0 | other changes 0
+Reread Build | items 2 | old==stored true | non-body fields equal true | bodies changed 2 | labels written 23 | seat ids in label form (new) 0 | other changes 0
+Alt Reread Build | items 1 | old==stored true | non-body fields equal true | bodies changed 0 | labels written 0 | seat ids in label form (new) 0 | other changes 0
+SEAT -> LABEL {"sol62 -> Judge 1":51,"chatgpt -> Judge 2":49,"sol -> Judge 3":54,"glm_legal -> Judge 2":54,"UNALIGNED Reread Build":2}
+== engine run 38661
+Enforcer Build | items 1 | old==stored true | non-body fields equal true | bodies changed 0 | labels written 0 | seat ids in label form (new) 0 | other changes 0
+Judge Enforcer Build | items 6 | old==stored true | non-body fields equal true | bodies changed 6 | labels written 115 | seat ids in label form (new) 0 | other changes 0
+Alt Judge Enforcer Build | items 3 | old==stored true | non-body fields equal true | bodies changed 3 | labels written 48 | seat ids in label form (new) 0 | other changes 0
+Judge Contradiction Build | items 1 | old==stored true | non-body fields equal true | bodies changed 0 | labels written 0 | seat ids in label form (new) 0 | other changes 0
+Reread Build | items 1 | old==stored true | non-body fields equal true | bodies changed 1 | labels written 19 | seat ids in label form (new) 0 | other changes 0
+Alt Reread Build | items 1 | old==stored true | non-body fields equal true | bodies changed 1 | labels written 4 | seat ids in label form (new) 0 | other changes 0
+SEAT -> LABEL {"chatgpt -> Judge 2":41,"sol -> Judge 3":50,"haiku -> Judge 1":18,"sonnet -> Judge 1":45,"UNALIGNED Reread Build":1,"UNALIGNED Alt Reread Build":1}
+== engine run 38593
+Enforcer Build | items 1 | old==stored true | non-body fields equal true | bodies changed 1 | labels written 1 | seat ids in label form (new) 0 | other changes 0
+Judge Enforcer Build | items 4 | old==stored true | non-body fields equal true | bodies changed 4 | labels written 86 | seat ids in label form (new) 0 | other changes 0
+Alt Judge Enforcer Build | items 2 | old==stored true | non-body fields equal true | bodies changed 2 | labels written 30 | seat ids in label form (new) 0 | other changes 0
+Judge Contradiction Build | items 1 | old==stored true | non-body fields equal true | bodies changed 0 | labels written 0 | seat ids in label form (new) 0 | other changes 0
+Reread Build | items 1 | old==stored true | non-body fields equal true | bodies changed 1 | labels written 13 | seat ids in label form (new) 0 | other changes 0
+Alt Reread Build | items 1 | old==stored true | non-body fields equal true | bodies changed 1 | labels written 5 | seat ids in label form (new) 0 | other changes 0
+SEAT -> LABEL {"chatgpt -> Judge 2":34,"sol -> Judge 3":37,"haiku -> Judge 1":12,"sonnet -> Judge 1":28,"UNALIGNED Reread Build":1,"UNALIGNED Alt Reread Build":1}
+== engine run 38450
+Enforcer Build | items 1 | old==stored true | non-body fields equal true | bodies changed 0 | labels written 0 | seat ids in label form (new) 0 | other changes 0
+Judge Enforcer Build | items 7 | old==stored true | non-body fields equal true | bodies changed 7 | labels written 139 | seat ids in label form (new) 0 | other changes 0
+Alt Judge Enforcer Build | items 1 | old==stored true | non-body fields equal true | bodies changed 1 | labels written 11 | seat ids in label form (new) 0 | other changes 0
+Judge Contradiction Build | items 1 | old==stored true | non-body fields equal true | bodies changed 0 | labels written 0 | seat ids in label form (new) 0 | other changes 0
+Reread Build | items 2 | old==stored true | non-body fields equal true | bodies changed 2 | labels written 32 | seat ids in label form (new) 0 | other changes 0
+Alt Reread Build | items 1 | old==stored true | non-body fields equal true | bodies changed 1 | labels written 2 | seat ids in label form (new) 0 | other changes 0
+SEAT -> LABEL {"sol62 -> Judge 1":47,"chatgpt -> Judge 2":37,"sol -> Judge 3":48,"haiku -> Judge 2":10,"UNALIGNED Reread Build":2,"UNALIGNED Alt Reread Build":1}
+== engine run 38226
+Enforcer Build | items 1 | old==stored true | non-body fields equal true | bodies changed 0 | labels written 0 | seat ids in label form (new) 0 | other changes 0
+Judge Enforcer Build | items 6 | old==stored true | non-body fields equal true | bodies changed 6 | labels written 113 | seat ids in label form (new) 0 | other changes 0
+Alt Judge Enforcer Build | items 3 | old==stored true | non-body fields equal true | bodies changed 3 | labels written 52 | seat ids in label form (new) 0 | other changes 0
+Judge Contradiction Build | items 2 | old==stored true | non-body fields equal true | bodies changed 2 | labels written 2 | seat ids in label form (new) 0 | other changes 0
+Reread Build | items 2 | old==stored true | non-body fields equal true | bodies changed 2 | labels written 29 | seat ids in label form (new) 0 | other changes 0
+Alt Reread Build | items 1 | old==stored true | non-body fields equal true | bodies changed 1 | labels written 5 | seat ids in label form (new) 0 | other changes 0
+SEAT -> LABEL {"chatgpt -> Judge 1":48,"luna -> Judge 3":39,"sol -> Judge 2":22,"grok -> Judge 3":49,"UNALIGNED Reread Build":2,"UNALIGNED Alt Reread Build":1}
+== child run 39058
+R2 Alt Judge Enforcer Build | items 3 | old==stored true | non-body fields equal true | bodies changed 3 | labels written 42 | seat ids in label form (new) 0 | other changes 0
+R2 Alt Reread Build | items 1 | old==stored true | non-body fields equal true | bodies changed 1 | labels written 5 | seat ids in label form (new) 0 | other changes 0
+SEAT -> LABEL {"sonnet -> Judge 2":39,"UNALIGNED R2 Alt Reread Build":1}

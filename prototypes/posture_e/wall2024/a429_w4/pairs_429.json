@@ -1,0 +1,57 @@
+[
+ {
+  "old": "const ds=RS&&RS.enforcer&&RS.enforcer.api_model?RS.enforcer:null;",
+  "new": "const ds=RS&&RS.enforcer&&RS.enforcer.api_model?RS.enforcer:null;const __jl=(s,d)=>{let M={};try{M=(RS&&RS.jlabel)||{};}catch(e){M={};}if(s&&Object.prototype.hasOwnProperty.call(M,s))return M[s];if(s==='single judge')return s;const g=n=>{try{if(typeof __L!=='undefined'&&__L&&typeof __L[n]==='function')return __L[n]();}catch(e){}return null;};for(const n of ['Alt Seated','R2 Alt Seated']){try{const x=g(n);if(x&&x.isExecuted){const a=(((x.first()||{}).json||{}).alt_seats||[]).find(y=>y&&y.seat===s);if(a&&a.removed_seat&&a.removed_seat!==s&&(d||0)<3){const r=__jl(a.removed_seat,(d||0)+1);if(r!=='a judge')return r;}}}catch(e){}}try{const x=g('Panel Payloads');if(x&&x.isExecuted){const sb=((x.first()||{}).json||{}).substitution;if(sb&&sb.substitute===s&&M[sb.failed_seat])return M[sb.failed_seat];}}catch(e){}return 'a judge';};"
+ },
+ {
+  "old": "ids.map((x,k)=>'- '+x.id+' ('+x.seat+'): '+cut(x.response_line,400)",
+  "new": "ids.map((x,k)=>'- '+x.id+' ('+__jl(x.seat)+'): '+cut(x.response_line,400)"
+ },
+ {
+  "old": "ids.map(x=>'- '+x.id+' ('+x.seat+'): '+cut(x.response_line,500)",
+  "new": "ids.map(x=>'- '+x.id+' ('+__jl(x.seat)+'): '+cut(x.response_line,500)"
+ },
+ {
+  "old": "ids.map(x=>x.id+' ('+x.seat+')').join(",
+  "new": "ids.map(x=>x.id+' ('+__jl(x.seat)+')').join("
+ },
+ {
+  "old": "(E-HOLD, a collision line graded '+g.grade+'):\\nTHE LINE ('+id+', '+g.seat+'): '",
+  "new": "(E-HOLD, a collision line graded '+g.grade+'):\\nTHE LINE ('+id+', '+__jl(g.seat)+'): '"
+ },
+ {
+  "old": "(E-KEY, the keystone line):\\nTHE LINE ('+id+', '+g.seat+'): '",
+  "new": "(E-KEY, the keystone line):\\nTHE LINE ('+id+', '+__jl(g.seat)+'): '"
+ },
+ {
+  "old": "ids.map((x,k)=>'- '+x.id+' ('+x.seat+'): '+__show(",
+  "new": "ids.map((x,k)=>'- '+x.id+' ('+__jl(x.seat)+'): '+__show("
+ },
+ {
+  "old": "(E-RES, the RESULT line of '+j.seat+'):",
+  "new": "(E-RES, the RESULT line of '+__jl(j.seat)+'):"
+ },
+ {
+  "old": "THIS JUDGE\\'S COUNT ('+id+', '+j.seat+'): '",
+  "new": "THIS JUDGE\\'S COUNT ('+id+', '+__jl(j.seat)+'): '"
+ },
+ {
+  "old": "return '- '+id+' ('+r.seat+'): RESPONSE: '",
+  "new": "return '- '+id+' ('+__jl(r.seat)+'): RESPONSE: '"
+ },
+ {
+  "map": "Judge Enforcer Build",
+  "old": "\"Resolve Seats\":()=>$('Resolve Seats')};",
+  "new": "\"Resolve Seats\":()=>$('Resolve Seats'),\"Panel Payloads\":()=>$('Panel Payloads')};"
+ },
+ {
+  "map": "Alt Judge Enforcer Build",
+  "old": "\"Resolve Seats\":()=>$('Resolve Seats')};",
+  "new": "\"Resolve Seats\":()=>$('Resolve Seats'),\"Panel Payloads\":()=>$('Panel Payloads')};"
+ },
+ {
+  "map": "R2 Alt Judge Enforcer Build",
+  "old": "\"Resolve Seats\":()=>$('Resolve Seats')};",
+  "new": "\"Resolve Seats\":()=>$('Resolve Seats'),\"Panel Payloads\":()=>$('Panel Payloads')};"
+ }
+]
