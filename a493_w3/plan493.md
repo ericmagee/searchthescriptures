@@ -1,4 +1,4 @@
-# ASK 493 plan rev 2 (W3, seat 33, 11-19; replaces rev 1 a81823fd: adds equal_to to grades, W1 F5 at 9796; rev 1 replaced rev 0 2a5a6bdd; takes W1 9788/9789 C1 and N1 to N3, W2 9790 C-1 and note 6; restates headings 3, 4, 5 and 8): the ASK AAR snapshot table, and the op doc rule for filling it
+# ASK 493 plan rev 4 (W3, seat 33, 11-19; rev 4 replaces rev 3 af32d362: field 13 says "equal in content" (W1 C2, 9807), T5a renamed (W1 N4), equal_to verdict_norm and FAIL carry-over (W2 N1, N2, 9804); rev 3 added the seat-36 registration sentence; rev 2 replaced rev 1 a81823fd: adds equal_to to grades, W1 F5 at 9796; rev 1 replaced rev 0 2a5a6bdd; takes W1 9788/9789 C1 and N1 to N3, W2 9790 C-1 and note 6; restates headings 3, 4, 5 and 8): the ASK AAR snapshot table, and the op doc rule for filling it
 
 ## 1. OBJECTIVE
 The operator, 11:54 CST 11-19: "so now, the team must needs to agree on what they want recorded and how ... whatever they decide i will approve.  I will need the operation manual updated to explain who is responsible for updating the new ASK AAR table ... when to update it ... and how.  As a rule, the table will need to be updated before the report is given to me."
@@ -27,7 +27,7 @@ Table design (W4 builds from this):
   4 aar_at timestamptz not null default now(); 5 written_by text not null (the coordinator's session id); 6 prior_row bigint references ask_aar_snapshots(id);
   7 operator_words jsonb (array of {text, at, source}); 8 card jsonb ({thread, press_time, answer, source});
   9 owner_seat text; 10 plan jsonb ({path, md5, commit, wall_id}); 11 build_files jsonb (array of {path, md5, commit}); 12 revert jsonb ({path, md5});
-  13 grades jsonb (array of {seat, verdict, verdict_norm, md5_graded, wall_id}). verdict is the posted text (for example "PASS WITH C-1" or "PASS ON FORM"); verdict_norm is one of PASS, FAIL or FAIL ON FORM, required in every element, and the insert trigger refuses an element without it (W2 C-1). An element may also carry equal_to {md5, wall_id}: the md5_graded of this element was shown byte-equal to an earlier PASS-graded md5 by the post wall_id (W1 F5, the ASK 487 rebase: written file 93fe9adc, graded file 32bf6cba, shown equal at W2 9710 and W1 9715). The trigger counts such an element as PASS only when equal_to.md5 itself has a PASS element in the same row;
+  13 grades jsonb (array of {seat, verdict, verdict_norm, md5_graded, wall_id}). verdict is the posted text (for example "PASS WITH C-1" or "PASS ON FORM"); verdict_norm is one of PASS, FAIL or FAIL ON FORM, required in every element, and the insert trigger refuses an element without it (W2 C-1). An element may also carry equal_to {md5, wall_id}: the md5_graded of this element was shown equal in content (same nodes, parameters and connections, or same SQL text) to an earlier PASS-graded md5 by the post wall_id (W1 C2). Such an element carries verdict_norm PASS when the named post confirms the equality, and FAIL when it does not; its verdict_norm is not counted a second time for equal_to.md5 (W2 N1) (W1 F5, the ASK 487 rebase: written file 93fe9adc, graded file 32bf6cba, shown equal at W2 9710 and W1 9715). The trigger counts such an element as PASS only when equal_to.md5 itself has a PASS element in the same row;
   14 md5_written text[], and md5_match boolean, set by the insert trigger (see below);
   15 audit_ids jsonb (array of int); 16 objects jsonb (array of {kind, name, before, after});
   17 tests jsonb (array of {file, md5, result, wall_id}); 18 readbacks jsonb (array of {seat, result, wall_id}); 19 run_evidence jsonb ({case, mark, run_token} or {owed: true});
@@ -43,9 +43,9 @@ BEFORE THE BUILD (rolled-back test by W4, on the operator's approval prompt):
  T3 UPDATE and DELETE as postgres: refused.
  T4 anon and authenticated: INSERT and SELECT refused (42501).
  T5 a row whose md5_written includes an md5 not graded PASS: accepted, with md5_match false.
- T5 includes one grade posted as "PASS WITH C-1" (verdict_norm PASS) on the written md5: md5_match true. T5b adds a FAIL ON FORM grade on the same md5: md5_match false.
+ T5a includes one grade posted as "PASS WITH C-1" (verdict_norm PASS) on the written md5: md5_match true. T5b adds a FAIL ON FORM grade on the same md5: md5_match false.
  T6 sources empty: refused.
- T5c a written md5 graded only through an equal_to element whose equal_to.md5 has a PASS element: md5_match true; the same without that PASS element: false.
+ T5c a written md5 graded only through an equal_to element whose equal_to.md5 has a PASS element: md5_match true; the same without that PASS element: false; the same when equal_to.md5 also has a FAIL or FAIL ON FORM element: false (W2 N2).
  T7 an insert with a seat 34 session set (not the coordinator): refused (W1 C1).
  T8 a grades element without verdict_norm: refused.
  R1 the revert leaves no table, no triggers and no function.
