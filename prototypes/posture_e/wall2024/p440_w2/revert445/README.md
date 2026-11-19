@@ -10,5 +10,5 @@ Team vote (Wall 9485): a literal revert file is required for each package. YES f
 ## Fresh reverts against live (coordinator 14:51Z)
 - build_reverts_live.cjs builds revert_455_e0a61271.json and revert_456_e0a61271.json: each node's package hunks applied to the live text (engine e0a61271, child 4982c042). The 455 library header sha is recomputed for the reverted library (abbe880eb3fc5147 on both), not set back to 4d19497f; only library line 2965 changes and no MAP length moves.
 - check_live_out.txt: both apply cleanly to live; the reverted library header sha equals its text sha on both workflows.
-- Library Check (443 revert): in live, only the Debate Start connection names it; no node text does.
+- Library Check (443 revert): in live, only the Debate Start connection names it; no node text does. Before using revert_443.json read a445_w3/revert_443_dependencies.md (registry 443 entry, held 476, manual entries). For 444 A2 use a445_w3/revert_444A2_nocomments.json (no code change needed).
 - W1 9494 nit taken (dead APPLY text removed); W3 9495 nit taken (stack runs relabelled in check_out.txt).
