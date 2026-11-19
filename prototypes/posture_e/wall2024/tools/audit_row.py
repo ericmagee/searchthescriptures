@@ -2,11 +2,11 @@
 """ASK 463: after a verified n8n write, record one audit_log row through rpc log_audit_event (SECURITY DEFINER, anon EXECUTE).
 Called by tools/restw.py and tools/libw.py only after their readback passed. The row lists every removed, added and changed node
 and every changed connection key, from the prewrite against the fetchback, with the card that authorized the write.
-Key: env SUPABASE_PUBLISHABLE_KEY, else the project's publishable key (public by design). On failure it prints the SQL to run by hand
+Key (ASK 466 step 2): env SUPABASE_SERVICE_KEY, required; the public key no longer executes log_audit_event. Never written to repo or memory. On failure it prints the SQL to run by hand
 and exits 3 (fatal=True), or returns None so a caller can finish its other writes and exit 3 at the end; a missing row is never silent."""
 import json,os,sys,urllib.request
 URL='https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/log_audit_event'
-KEY=os.environ.get('SUPABASE_PUBLISHABLE_KEY','sb_publishable_rgfWFjynRqBdzyEeBRHcig_c6pHysAi')
+KEY=os.environ.get('SUPABASE_SERVICE_KEY','')
 js=lambda x:json.dumps(x,sort_keys=True)
 
 def diff(pre,back):
@@ -25,6 +25,10 @@ def notes(seat,card,pre,back,extra=''):
       (' '+extra) if extra else ''))
 
 def post(title,text,fatal=True):
+  if not KEY:
+    q=text.replace("'","''");print('AUDIT ROW NOT WRITTEN (no SUPABASE_SERVICE_KEY). Run by hand:\nselect log_audit_event(\'%s\', \'%s\', \'n8n\');'%(title,q))
+    if fatal:sys.exit(3)
+    return None
   body=json.dumps({'session_title':title,'notes':text,'engine':'n8n'}).encode()
   r=urllib.request.Request(URL,data=body,method='POST',headers={'apikey':KEY,'Authorization':'Bearer '+KEY,'Content-Type':'application/json'})
   try:
