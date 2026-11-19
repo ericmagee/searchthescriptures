@@ -1,0 +1,7 @@
+ASK 466 check466.sql on live, 11-19 ~14:25Z (before any 466 write). 35 rows.
+audit_log anon INSERT=true; policy anon_ins=true
+classC (9): anon=true auth=true public=true for all
+classB (10 incl. log_override_arming): definer=false cfg=- for all
+step2: log_audit_event, complete_session_close, complete_security_check: anon=true service=true
+C3 tables (11): anon ins=true, upd=false for all. Policies: the_wall (the_wall_update, the_wall_write), day_room (day_room_update, day_room_write),
+  day_room_posts (day_room_posts_write), the other 8 anon_ins. The two *_update policies grant nothing: anon holds no UPDATE.
