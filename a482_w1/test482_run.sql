@@ -1,5 +1,7 @@
 -- ASK 482 rolled-back test (C1, C2). Applies the build inside a transaction, checks, then ROLLS BACK. A pg_net request made in a rolled-back transaction is never sent (W4 9619 K3); the odv1_launches rows are rolled back too.
 BEGIN;
+-- rev 2: stand-in for ASK 487's gemini_deb row (rolled back with the rest)
+INSERT INTO model_config(seat,role,provider,api_model,endpoint,max_tokens,active,family,notes) VALUES ('gemini_deb','engine','openrouter','google/gemini-4-hydrogen','https://openrouter.ai/api/v1/chat/completions',64000,true,'google','ASK 482 rev 2 rolled-back test stand-in for the ASK 487 row');
 -- ASK 482 (i): the engines a debate may seat. A MIRROR of the engine's Init Seats ENG (workflow moMxiV4Irg1uRBZN, version e0a61271) less the refused engines (deepseek; any minimax). The engine list lives in engine code; the ASK 417 registry check for 482 (C6) compares the two at every engine readback and run start. The version is read live from model_config, never typed here.
 CREATE OR REPLACE FUNCTION public.dash_debaters()
  RETURNS TABLE(ord integer, key text, name text, mc_seat text, api_model text, active boolean)
@@ -11,7 +13,7 @@ AS $function$
   from (values
     (1,'claude','Claude','claude_synthesis'),
     (2,'chatgpt','ChatGPT','chatgpt'),
-    (3,'gemini','Gemini','gemini'),
+    (3,'gemini','Gemini','gemini_deb'),
     (4,'grok','Grok','grok'),
     (5,'mimo','MiMo','mimo'),
     (6,'haiku','Haiku','haiku'),

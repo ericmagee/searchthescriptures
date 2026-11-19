@@ -1,6 +1,14 @@
-# ASK 482 build (W1, 11-19), on W3 plan rev 2 (a482_w3/plan_rev2.md, 0cf23296)
+# ASK 482 build REV 2 (W1, 11-19 17:1xZ), on W3 plan rev 2 (a482_w3/plan_rev2.md, 0cf23296)
 
 Objective (operator, 16:03Z and 16:04Z): the dashboard shows the current models; Any vs Any offers every model the engine can debate with, each with its version in the drop-down.
+
+## Rev 2 (after ASK 487 rev 1, W3 9682)
+- dash_debaters row 3: key gemini now reads model_config seat gemini_deb (google/gemini-4-hydrogen, 64000), the debater row ASK 487 adds. Judge seat gemini stays on flash and is not shown in this list.
+- ORDER: write ASK 487 (row gemini_deb, then Init Seats ENG) BEFORE this card. The closing DO check (10 active rows with a version) refuses this build if gemini_deb is missing, so a wrong order rolls back.
+- ASK 486 rev 1 no longer touches ORDER0, so dash_odv1_judges is unchanged from rev 1.
+- Re-tested rolled back with a stand-in gemini_deb row: C1 10 of 10 (gemini=google/gemini-4-hydrogen), C2 15 of 15; afterwards 0 gemini_deb rows, dash_debaters absent, dash_launch_odv1 0e6fe0f3, queue 0, 0 test launches.
+- C6 mirror482 rev 2 compares key:mc_seat pairs: engine after 487 (gemini:gemini_deb) MATCH; today's engine eed7e2c8 (gemini:gemini) MISMATCH.
+- md5: build482.sql 1a2ecb50, test482_run.sql 8f4e7a0b, mirror482.cjs 1bb483c9, registry_482_entry.json 9381ff2f, revert482.sql a9b631c0 (unchanged). Readback prosrc md5 dash_debaters 0616fc07 (was 663c511d); dash_api c541b307, dash_launch_odv1 3b74a293, dash_odv1_judges 9796ab3c unchanged.
 
 ## What changes
 1. Database (one transaction, build482.sql):
@@ -26,7 +34,7 @@ Objective (operator, 16:03Z and 16:04Z): the dashboard shows the current models;
 - C6 mirror482.cjs: prints the read-only check. Rolled-back: known-good (today's 10) MATCH; known-bad (qwen in place of qwen4max) MISMATCH. registry_482_entry.json is the ASK 417 entry to append at readback.
 
 ## Card (W4's thread) (rev 1: W2 9649 N1 to N3)
-1. Run build482.sql (md5 e4ac977c; prefix SET LOCAL truth.session_id, the DDL audit trigger needs it). It ends in a raising DO check (10 active rows with a version; no 'qwen' in dash_launch_odv1; v_eng from dash_debaters(); dash_api has odv1_engines), so a failed check rolls the whole build back. Readback, prosrc md5: dash_debaters 663c511d, dash_api c541b307, dash_launch_odv1 3b74a293, dash_odv1_judges 9796ab3c (dash_launch_odv1 3b74a293 was also produced live inside the rolled-back test, so the file and the test agree); mirror482 SQL reads MATCH.
+1. Run build482.sql (md5 1a2ecb50, rev 2; after ASK 487 is written; prefix SET LOCAL truth.session_id, the DDL audit trigger needs it). It ends in a raising DO check (10 active rows with a version; no 'qwen' in dash_launch_odv1; v_eng from dash_debaters(); dash_api has odv1_engines), so a failed check rolls the whole build back. Readback, prosrc md5: dash_debaters 0616fc07, dash_api c541b307, dash_launch_odv1 3b74a293, dash_odv1_judges 9796ab3c (dash_launch_odv1 3b74a293 was also produced live inside the rolled-back test, so the file and the test agree); mirror482 SQL reads MATCH.
    The poll-limit change (80 to 240 checks, 20 to 60 minutes) is its own card line: it is outside the plan (W2 N1).
 2. mcp__Vercel__create_deployment, project truth-app-dashboard, team team_bBqtXgj58bdGw1brsCIdjyMs, files: src/index.html, src/patch.js, src/patch-base.js, src/queue.js, src/retire.js (unchanged, by sha), src/odv1.js (new), vercel.json. No projectSettings (they would be saved to the project). Wait for READY.
 3. mcp__Vercel__assign_alias truth-app-dashboard.vercel.app to the new deployment. Readback: fetch /odv1.js, sha1 equals the new file.
