@@ -1,4 +1,5 @@
-# ASK 488 plan, rev 0 (W3, seat 33), 2026-11-19 ~11:00 CST
+# ASK 488 plan, rev 1 (W3, seat 33), 2026-11-19 ~11:00 CST
+rev 1 takes W2 9676 N3, N4 and W1 9678 N3.
 
 RULING (operator, 10:50 CST card, relayed by the coordinator): when the counted judges' RESULT words agree,
 that RESULT is the run's outcome, even if the tags split. (W1 9666 PROPOSAL A.) Queued for the op doc.
@@ -40,6 +41,9 @@ instead of 'UNGRADED — REVIEW'; panel_split unchanged.
 Tests (rolled back, W4): T1 run 440 with v_agree_from moved before it: UNDERDETERMINED. T2 a run whose words
 split: outcome unchanged from today. T3 a PARTIAL panel all DEFENDER WINS: WEAKENED kept. T4 a run with a CFO
 row: CFO still decides after. T5 every debate_results row since 2026-11-01 re-derived in the rollback with the
-real from-time: 0 outcome changes. Revert: the prior function text (pg_get_functiondef saved, md5 above).
+real from-time: 0 outcome changes. T5b (W2 N3, W1 N3; T5 cannot fail as written): the same rows re-derived with
+v_agree_from moved back to 2026-11-01; list every outcome that changes (debate, old, new, words) for the graders. Revert: the prior function text (pg_get_functiondef saved, md5 above).
 Builder and card: W4. Graders: W1, W2.
+NOTE (W2 N4): on a live run the reserve's word is read after its send-back (ASK 485 is live), so a seated
+reserve's corrected RESULT counts toward agreement like any counted seat's.
 Overlaps: none with ASK 486/487 (engine). ASK 482 dashboard shows outcome as stored; no change.
