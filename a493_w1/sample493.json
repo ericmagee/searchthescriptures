@@ -1,97 +1,826 @@
 {
- "about": "ASK 493 dry-run sample rev 0 (W1, 11-19). Seven rows in the plan493.md (2a5a6bdd) column set, filled from the_wall and audit_log. A field with no source read by W1 says 'not yet'. Ids are Wall ids unless named audit. Card times are the audit_log card notes. Not inserted anywhere.",
+ "about": "ASK 493 dry-run sample rev 1 (W1, 11-19). Seven rows in the plan493.md (2a5a6bdd) column set, filled from the_wall and audit_log. A field with no source read by W1 says 'not yet'. Ids are Wall ids unless named audit. Card times are the audit_log card notes. Not inserted anywhere. Rev 1 adds the W4 md5s (W4 message 18:01Z; Wall 9701, 9709).",
  "rows": [
-  {"ask":484,"rev":"0","title":"sol62 verdict lost to a provider content filter",
-   "objective":"A panel judge's verdict is not lost to a provider content filter. (plan484.md line 3)","objective_met":"not yet","objective_met_reason":"written and read back; no run since the write shows sol62 finishing a verdict","objective_source":"9627, 9665",
-   "aar_at":"(insert time)","written_by":"(coordinator session)","prior_row":null,
-   "operator_words":"not yet (no verbatim operator words on the Wall for 484 found by W1)",
-   "card":{"thread":"W4","press_time":"16:44:34Z","answer":"Write it","source":"9665"},
-   "owner_seat":"W4","plan":{"path":"ask484/plan484.md","md5":"3c36bbc9","commit":"not yet (not in git)","wall_id":9627},
-   "build_files":[{"path":"ask484/w4/build484.md","md5":"57732429","commit":"not yet"}],"revert":"not yet",
-   "grades":[{"seat":"W1","verdict":"PASS","md5_graded":"3c36bbc9","wall_id":9636},{"seat":"W3","verdict":"PASS","md5_graded":"3c36bbc9","wall_id":9628},{"seat":"W1","verdict":"PASS","md5_graded":"57732429","wall_id":9644},{"seat":"W3","verdict":"PASS","md5_graded":"57732429","wall_id":9647}],
-   "md5_written":["57732429"],"md5_match":true,
-   "audit_ids":[38498,38499,38500],
-   "objects":[{"kind":"workflow","name":"Cure Call c7366RPLb8vdMQg6","before":"fb18e79a","after":"65444f6f"},{"kind":"workflow","name":"child MqQHRl7mQQ0z8QdT","before":"4982c042","after":"0dd9b96b"},{"kind":"workflow","name":"engine moMxiV4Irg1uRBZN","before":"e0a61271","after":"4cb77319"}],
-   "tests":"not yet (none posted)","readbacks":[{"seat":"W1","result":"PASS engine and child; Cure Call not read","wall_id":9670},{"seat":"W2","result":"Cure Call file check only","wall_id":9673},{"seat":"W3","result":"see post","wall_id":9675}],
-   "run_evidence":{"owed":true},"manuals":{"engine_manual":"v212 live; 484 entry drafted, not yet written","op_doc":"v133"},"status":"read back",
-   "sources":[9627,9628,9636,9639,9644,9647,9665,9670,9673,9675,"audit 38498","audit 38499","audit 38500"]},
-
-  {"ask":485,"rev":"0","title":"reserve judge send-backs",
-   "objective":"When the reserve judge is seated, the enforcer's send-backs on the reserve's verdict are sent to it and applied, as they are for the drawn judges. (plan485.md line 3)","objective_met":"not yet","objective_met_reason":"written and read back; no run since with a seated reserve","objective_source":"9633, 9672",
-   "operator_words":"not yet","card":{"thread":"W4","press_time":"16:47:40Z","answer":"not yet (chat message not read)","source":"audit 38509"},
-   "owner_seat":"W4","plan":{"path":"ask485/plan485.md","md5":"b7004cb8","commit":"not yet (not in git, W2 9643)","wall_id":9633},
-   "build_files":[{"path":"build485.md","md5":"dcbfb972"},{"path":"patch485.js","md5":"a744787d"}],"revert":"not yet",
-   "grades":[{"seat":"W1","verdict":"PASS","md5_graded":"b7004cb8","wall_id":9636},{"seat":"W2","verdict":"PASS","md5_graded":"b7004cb8","wall_id":9643},{"seat":"W1","verdict":"PASS (C1 met 9660)","md5_graded":"dcbfb972","wall_id":9658},{"seat":"W2","verdict":"PASS","md5_graded":"dcbfb972","wall_id":9661}],
-   "md5_written":["dcbfb972"],"md5_match":true,"audit_ids":[38508,38509],
-   "objects":[{"kind":"workflow","name":"child MqQHRl7mQQ0z8QdT","before":"0dd9b96b","after":"d7e57ead"},{"kind":"workflow","name":"engine","before":"4cb77319","after":"eed7e2c8"}],
-   "tests":"not yet","readbacks":[{"seat":"W1","result":"PASS","wall_id":9674},{"seat":"W3","result":"second readback","wall_id":9675}],
-   "run_evidence":{"owed":true},"manuals":{"engine_manual":"485 entry drafted, not yet written","op_doc":"v133"},"status":"read back",
-   "sources":[9633,9636,9643,9657,9658,9660,9661,9672,9674,9675,"audit 38508","audit 38509"]},
-
-  {"ask":483,"rev":"2","title":"anon writes to judge ledger, model_config, debate_judgments",
-   "objective":"a holder of the public (anon) key can no longer change judge seating through the judge fault ledger, add model_config roster rows, or insert debate_judgments rows; every live writer keeps working. (plan483.md line 3)","objective_met":"in part","objective_met_reason":"grants removed and read back; 'every live writer keeps working' is owed a run","objective_source":"9679, 9680, 9682",
-   "operator_words":"test approval prompt 16:4xZ (W2 9664)","card":{"thread":"W4","press_time":"16:52:27Z","answer":"not yet","source":"audit 38521"},
-   "owner_seat":"W2 (SQL) / W4 (write)","plan":{"path":"ask483/plan483.md","md5":"af3335ed (rev 2)","commit":"not yet (not in git)","wall_id":9607},
-   "build_files":[{"path":"ask483/step483.sql","md5":"ad028df9 (rev 1; rev 2 md5 not yet)"}],"revert":{"path":"ask483/revert483.sql","md5":"ea633b09"},
-   "grades":[{"seat":"W1","verdict":"PASS with C1 C2","md5_graded":"5f980836","wall_id":9611},{"seat":"W3","verdict":"PASS with C1 C2","md5_graded":"5f980836","wall_id":9612}],
-   "md5_written":"not yet","md5_match":null,"audit_ids":[38515,38516,38517,38518,38519,38520,38521],
-   "objects":[{"kind":"grant","name":"jfl_strike, jfl_from_log","before":"anon EXECUTE","after":"revoked"},{"kind":"policy+grant","name":"model_config, debate_judgments","before":"anon_ins, INSERT","after":"dropped, revoked"}],
-   "tests":[{"file":"test483_rollback.sql","md5":"0d809bbd","result":"ALL PASS","wall_id":9664}],"readbacks":[{"seat":"W2","result":"see post","wall_id":9680},{"seat":"W3","result":"see post","wall_id":9682}],
-   "run_evidence":{"owed":true},"manuals":"not yet","status":"read back",
-   "sources":[9607,9611,9612,9617,9664,9679,9680,9682,"audit 38515-38521"]},
-
-  {"ask":481,"rev":"0","title":"anon direct insert into debate_queue",
-   "objective":"not yet (ask481/ holds no plan file; 9580 is the opening post)","objective_met":"not yet","objective_met_reason":"no OBJECTIVE line to test against","objective_source":"9580",
-   "operator_words":"test approval 16:22Z (W2 9638)","card":{"thread":"W4","press_time":"16:57:06Z","answer":"not yet","source":"audit 38527"},
-   "owner_seat":"W2 (SQL) / W4 (write)","plan":{"path":"none","md5":"not yet","commit":"not yet","wall_id":9580},
-   "build_files":[{"path":"ask481/step481.sql","md5":"6275be56"}],"revert":{"path":"ask481/revert481.sql","md5":"b5f7bace"},
-   "grades":[{"seat":"W3","verdict":"PASS","md5_graded":"6275be56","wall_id":9581},{"seat":"W1","verdict":"PASS","md5_graded":"6275be56","wall_id":9582}],
-   "md5_written":["6275be56 (to confirm from W4 9681)"],"md5_match":true,"audit_ids":[38525,38526,38527],
-   "objects":[{"kind":"policy+grant","name":"debate_queue","before":"anon_ins, INSERT","after":"dropped, revoked"}],
-   "tests":[{"file":"test481_rollback.sql","md5":"ce9cd25a","result":"ALL PASS","wall_id":9638}],"readbacks":[{"seat":"W3","result":"see post","wall_id":9682},{"seat":"W2","result":"OBJECTIVE MET yes","wall_id":9683}],
-   "run_evidence":{"owed":true},"manuals":"not yet","status":"read back",
-   "sources":[9580,9581,9582,9638,9681,9682,9683,"audit 38525-38527"]},
-
-  {"ask":486,"rev":"1","title":"see plan486_487.md",
-   "objective":"not yet (w3/plans/plan486_487.md OBJECTIVE line not extracted by W1)","objective_met":"not yet","objective_met_reason":"no run since","objective_source":"9675",
-   "operator_words":"not yet","card":{"thread":"W4","press_time":"17:06:40Z","answer":"not yet","source":"audit 38562"},
-   "owner_seat":"W4","plan":{"path":"w3/plans/plan486_487.md","md5":"6dbdeb81 (rev 0)","commit":"not yet","wall_id":9675},
-   "build_files":[{"path":"target_engine_486.json","md5":"cdbaf7e9 (rev 1)"}],"revert":"not yet",
-   "grades":[{"seat":"W2","verdict":"PASS","md5_graded":"6dbdeb81","wall_id":9676},{"seat":"W1","verdict":"PASS N1","md5_graded":"6dbdeb81","wall_id":9678},{"seat":"W2","verdict":"FAIL F1","md5_graded":"de3b65cf","wall_id":9692},{"seat":"W1","verdict":"PASS","md5_graded":"de3b65cf","wall_id":9693},{"seat":"W1","verdict":"PASS","md5_graded":"cdbaf7e9","wall_id":9697},{"seat":"W2","verdict":"PASS","md5_graded":"cdbaf7e9","wall_id":9698}],
-   "md5_written":["cdbaf7e9"],"md5_match":true,"audit_ids":[38562],
-   "objects":[{"kind":"workflow","name":"engine","before":"eed7e2c8","after":"c94948c0"}],
-   "tests":"not yet","readbacks":[{"seat":"W3","result":"PASS","wall_id":9702},{"seat":"W1","result":"PASS","wall_id":9705}],
-   "run_evidence":{"owed":true},"manuals":{"engine_manual":"draft rev 3 a51aabd5 (9714), not yet written"},"status":"read back",
-   "sources":[9675,9676,9678,9685,9692,9693,9694,9697,9698,9701,9702,9705,"audit 38562"]},
-
-  {"ask":487,"rev":"1","title":"see plan486_487.md (gemini_deb row)",
-   "objective":"not yet (as 486)","objective_met":"not yet","objective_met_reason":"no run since","objective_source":"9675",
-   "operator_words":"10:44 CST: Gemini off flash (coordinator record)","card":{"thread":"W4","press_time":"17:08:10Z","answer":"not yet","source":"audit 38579"},
-   "owner_seat":"W4","plan":{"path":"w3/plans/plan486_487.md","md5":"6dbdeb81","commit":"not yet","wall_id":9675},
-   "build_files":[{"path":"target_engine_487.json","md5":"32bf6cba (rev 1)"},{"path":"step487_row.sql","md5":"f3c17684"}],"revert":{"path":"revert487_row.sql","md5":"3e4b6bfd"},
-   "grades":[{"seat":"W2","verdict":"PASS N1","md5_graded":"098f7db6","wall_id":9692},{"seat":"W1","verdict":"PASS","md5_graded":"098f7db6","wall_id":9693},{"seat":"W1","verdict":"PASS","md5_graded":"32bf6cba","wall_id":9697},{"seat":"W2","verdict":"PASS","md5_graded":"32bf6cba","wall_id":9698}],
-   "md5_written":["32bf6cba (rebased, W4 9701)","f3c17684"],"md5_match":"not yet (rebase md5 to confirm from 9701)","audit_ids":[38577,38579],
-   "objects":[{"kind":"row","name":"model_config gemini_deb","before":"not yet","after":"google/gemini-4-hydrogen"},{"kind":"workflow","name":"engine","before":"c94948c0","after":"dd636c25"}],
-   "tests":"not yet","readbacks":[{"seat":"W2","result":"row MATCH live; engine from fetchback file","wall_id":9710},{"seat":"W3","result":"live","wall_id":9711},{"seat":"W1","result":"PASS dd636c25","wall_id":9715}],
-   "run_evidence":{"owed":true},"manuals":"not yet","status":"read back",
-   "sources":[9675,9685,9692,9693,9697,9698,9701,9709,9710,9711,9715,"audit 38577","audit 38579"]},
-
-  {"ask":482,"rev":"4","title":"Any vs Any lists and model names",
-   "objective":"The Any vs Any drop-downs list exactly the engines the live engine accepts as debaters (minus the ones it refuses), each shown with its live model version from model_config, and a launch from any listed choice is accepted by both the launch function and the engine. (a482_w3/plan_rev2.md line 5)","objective_met":"in part","objective_met_reason":"rev 4 written and DB read back; non-writer page load owed (W3 9722); rev 5 not written","objective_source":"9719, 9721, 9722",
-   "operator_words":"17:00Z: the model named chat gpt need to change to the model name (W1 9691)","card":{"thread":"W4","press_time":"17:10:42Z","answer":"not yet","source":"audit 38597"},
-   "owner_seat":"W1 (build) / W4 (write)","plan":{"path":"a482_w3/plan_rev2.md","md5":"not yet","commit":"not yet","wall_id":9610},
-   "build_files":[{"path":"a482_w1/build482.sql","md5":"062698a7","commit":"f69b0868"},{"path":"a482_w1/deploy/src/odv1.js","md5":"6944e18b","commit":"f69b0868"}],"revert":{"path":"a482_w1/revert482.sql","md5":"05645e82"},
-   "grades":[{"seat":"W3","verdict":"PASS","md5_graded":"062698a7","wall_id":9700},{"seat":"W2","verdict":"PASS","md5_graded":"062698a7","wall_id":9706}],
-   "md5_written":["062698a7","6944e18b"],"md5_match":true,"audit_ids":[38597],
-   "objects":[{"kind":"function","name":"dash_debaters, dash_api, dash_launch_odv1, dash_odv1_judges, dash_odv1_debates","before":"base","after":"b6084d5a, c541b307, 3b74a293, 9796ab3c, 1fc8bc68"},{"kind":"vercel","name":"truth-app-dashboard","before":"not yet","after":"dpl_42mbKJpfP3uioX1vyBdViZqJ4Ae4, src/odv1.js sha1 88c58ac7"}],
-   "tests":"not yet","readbacks":[{"seat":"W2","result":"DB MATCH","wall_id":9721},{"seat":"W3","result":"DB PASS; page load NOT DONE","wall_id":9722}],
-   "run_evidence":{"owed":true},"manuals":{"engine_manual":"draft d376b0ad (9723), for v214"},"status":"read back",
-   "sources":[9610,9686,9691,9699,9700,9706,9719,9721,9722,9723,"audit 38597"]}
+  {
+   "ask": 484,
+   "rev": "0",
+   "title": "sol62 verdict lost to a provider content filter",
+   "objective": "A panel judge's verdict is not lost to a provider content filter. (plan484.md line 3)",
+   "objective_met": "not yet",
+   "objective_met_reason": "written and read back; no run since the write shows sol62 finishing a verdict",
+   "objective_source": "9627, 9665",
+   "aar_at": "(insert time)",
+   "written_by": "(coordinator session)",
+   "prior_row": null,
+   "operator_words": "not yet (no verbatim operator words on the Wall for 484 found by W1)",
+   "card": {
+    "thread": "W4",
+    "press_time": "16:44:34Z",
+    "answer": "Write it",
+    "source": "9665"
+   },
+   "owner_seat": "W4",
+   "plan": {
+    "path": "ask484/plan484.md",
+    "md5": "3c36bbc9",
+    "commit": "not yet (not in git)",
+    "wall_id": 9627
+   },
+   "build_files": [
+    {
+     "path": "ask484/w4/build484.md",
+     "md5": "57732429",
+     "commit": "not yet"
+    }
+   ],
+   "revert": "not yet",
+   "grades": [
+    {
+     "seat": "W1",
+     "verdict": "PASS",
+     "md5_graded": "3c36bbc9",
+     "wall_id": 9636
+    },
+    {
+     "seat": "W3",
+     "verdict": "PASS",
+     "md5_graded": "3c36bbc9",
+     "wall_id": 9628
+    },
+    {
+     "seat": "W1",
+     "verdict": "PASS",
+     "md5_graded": "57732429",
+     "wall_id": 9644
+    },
+    {
+     "seat": "W3",
+     "verdict": "PASS",
+     "md5_graded": "57732429",
+     "wall_id": 9647
+    }
+   ],
+   "md5_written": [
+    "57732429"
+   ],
+   "md5_match": true,
+   "audit_ids": [
+    38498,
+    38499,
+    38500
+   ],
+   "objects": [
+    {
+     "kind": "workflow",
+     "name": "Cure Call c7366RPLb8vdMQg6",
+     "before": "fb18e79a",
+     "after": "65444f6f"
+    },
+    {
+     "kind": "workflow",
+     "name": "child MqQHRl7mQQ0z8QdT",
+     "before": "4982c042",
+     "after": "0dd9b96b"
+    },
+    {
+     "kind": "workflow",
+     "name": "engine moMxiV4Irg1uRBZN",
+     "before": "e0a61271",
+     "after": "4cb77319"
+    }
+   ],
+   "tests": "not yet (none posted)",
+   "readbacks": [
+    {
+     "seat": "W1",
+     "result": "PASS engine and child; Cure Call not read",
+     "wall_id": 9670
+    },
+    {
+     "seat": "W2",
+     "result": "Cure Call file check only",
+     "wall_id": 9673
+    },
+    {
+     "seat": "W3",
+     "result": "see post",
+     "wall_id": 9675
+    }
+   ],
+   "run_evidence": {
+    "owed": true
+   },
+   "manuals": {
+    "engine_manual": "v212 live; 484 entry drafted, not yet written",
+    "op_doc": "v133"
+   },
+   "status": "read back",
+   "sources": [
+    9627,
+    9628,
+    9636,
+    9639,
+    9644,
+    9647,
+    9665,
+    9670,
+    9673,
+    9675,
+    "audit 38498",
+    "audit 38499",
+    "audit 38500"
+   ]
+  },
+  {
+   "ask": 485,
+   "rev": "0",
+   "title": "reserve judge send-backs",
+   "objective": "When the reserve judge is seated, the enforcer's send-backs on the reserve's verdict are sent to it and applied, as they are for the drawn judges. (plan485.md line 3)",
+   "objective_met": "not yet",
+   "objective_met_reason": "written and read back; no run since with a seated reserve",
+   "objective_source": "9633, 9672",
+   "operator_words": "not yet",
+   "card": {
+    "thread": "W4",
+    "press_time": "16:47:40Z",
+    "answer": "not yet (chat message not read)",
+    "source": "audit 38509"
+   },
+   "owner_seat": "W4",
+   "plan": {
+    "path": "ask485/plan485.md",
+    "md5": "b7004cb8",
+    "commit": "not yet (not in git, W2 9643)",
+    "wall_id": 9633
+   },
+   "build_files": [
+    {
+     "path": "build485.md",
+     "md5": "dcbfb972"
+    },
+    {
+     "path": "patch485.js",
+     "md5": "a744787d"
+    }
+   ],
+   "revert": "not yet",
+   "grades": [
+    {
+     "seat": "W1",
+     "verdict": "PASS",
+     "md5_graded": "b7004cb8",
+     "wall_id": 9636
+    },
+    {
+     "seat": "W2",
+     "verdict": "PASS",
+     "md5_graded": "b7004cb8",
+     "wall_id": 9643
+    },
+    {
+     "seat": "W1",
+     "verdict": "PASS (C1 met 9660)",
+     "md5_graded": "dcbfb972",
+     "wall_id": 9658
+    },
+    {
+     "seat": "W2",
+     "verdict": "PASS",
+     "md5_graded": "dcbfb972",
+     "wall_id": 9661
+    }
+   ],
+   "md5_written": [
+    "dcbfb972"
+   ],
+   "md5_match": true,
+   "audit_ids": [
+    38508,
+    38509
+   ],
+   "objects": [
+    {
+     "kind": "workflow",
+     "name": "child MqQHRl7mQQ0z8QdT",
+     "before": "0dd9b96b",
+     "after": "d7e57ead"
+    },
+    {
+     "kind": "workflow",
+     "name": "engine",
+     "before": "4cb77319",
+     "after": "eed7e2c8"
+    }
+   ],
+   "tests": "not yet",
+   "readbacks": [
+    {
+     "seat": "W1",
+     "result": "PASS",
+     "wall_id": 9674
+    },
+    {
+     "seat": "W3",
+     "result": "second readback",
+     "wall_id": 9675
+    }
+   ],
+   "run_evidence": {
+    "owed": true
+   },
+   "manuals": {
+    "engine_manual": "485 entry drafted, not yet written",
+    "op_doc": "v133"
+   },
+   "status": "read back",
+   "sources": [
+    9633,
+    9636,
+    9643,
+    9657,
+    9658,
+    9660,
+    9661,
+    9672,
+    9674,
+    9675,
+    "audit 38508",
+    "audit 38509"
+   ]
+  },
+  {
+   "ask": 483,
+   "rev": "2",
+   "title": "anon writes to judge ledger, model_config, debate_judgments",
+   "objective": "a holder of the public (anon) key can no longer change judge seating through the judge fault ledger, add model_config roster rows, or insert debate_judgments rows; every live writer keeps working. (plan483.md line 3)",
+   "objective_met": "in part",
+   "objective_met_reason": "grants removed and read back; 'every live writer keeps working' is owed a run",
+   "objective_source": "9679, 9680, 9682",
+   "operator_words": "test approval prompt 16:4xZ (W2 9664)",
+   "card": {
+    "thread": "W4",
+    "press_time": "16:52:27Z",
+    "answer": "not yet",
+    "source": "audit 38521"
+   },
+   "owner_seat": "W2 (SQL) / W4 (write)",
+   "plan": {
+    "path": "ask483/plan483.md",
+    "md5": "af3335ed (rev 2)",
+    "commit": "not yet (not in git)",
+    "wall_id": 9607
+   },
+   "build_files": [
+    {
+     "path": "ask483/step483.sql",
+     "md5": "ad028df9",
+     "note": "the only step file (W4 18:01Z)"
+    }
+   ],
+   "revert": {
+    "path": "ask483/revert483.sql",
+    "md5": "ea633b09"
+   },
+   "grades": [
+    {
+     "seat": "W1",
+     "verdict": "PASS with C1 C2",
+     "md5_graded": "5f980836",
+     "wall_id": 9611
+    },
+    {
+     "seat": "W3",
+     "verdict": "PASS with C1 C2",
+     "md5_graded": "5f980836",
+     "wall_id": 9612
+    }
+   ],
+   "md5_written": [
+    "ad028df9"
+   ],
+   "md5_match": true,
+   "audit_ids": [
+    38515,
+    38516,
+    38517,
+    38518,
+    38519,
+    38520,
+    38521
+   ],
+   "objects": [
+    {
+     "kind": "grant",
+     "name": "jfl_strike, jfl_from_log",
+     "before": "anon EXECUTE",
+     "after": "revoked"
+    },
+    {
+     "kind": "policy+grant",
+     "name": "model_config, debate_judgments",
+     "before": "anon_ins, INSERT",
+     "after": "dropped, revoked"
+    }
+   ],
+   "tests": [
+    {
+     "file": "test483_rollback.sql",
+     "md5": "0d809bbd",
+     "result": "ALL PASS",
+     "wall_id": 9664
+    }
+   ],
+   "readbacks": [
+    {
+     "seat": "W2",
+     "result": "see post",
+     "wall_id": 9680
+    },
+    {
+     "seat": "W3",
+     "result": "see post",
+     "wall_id": 9682
+    }
+   ],
+   "run_evidence": {
+    "owed": true
+   },
+   "manuals": "not yet",
+   "status": "read back",
+   "sources": [
+    9607,
+    9611,
+    9612,
+    9617,
+    9664,
+    9679,
+    9680,
+    9682,
+    "audit 38515-38521"
+   ]
+  },
+  {
+   "ask": 481,
+   "rev": "0",
+   "title": "anon direct insert into debate_queue",
+   "objective": "not yet (ask481/ holds no plan file; 9580 is the opening post)",
+   "objective_met": "not yet",
+   "objective_met_reason": "no OBJECTIVE line to test against",
+   "objective_source": "9580",
+   "operator_words": "test approval 16:22Z (W2 9638)",
+   "card": {
+    "thread": "W4",
+    "press_time": "16:57:06Z",
+    "answer": "not yet",
+    "source": "audit 38527"
+   },
+   "owner_seat": "W2 (SQL) / W4 (write)",
+   "plan": {
+    "path": "none",
+    "md5": "not yet",
+    "commit": "not yet",
+    "wall_id": 9580
+   },
+   "build_files": [
+    {
+     "path": "ask481/step481.sql",
+     "md5": "6275be56"
+    }
+   ],
+   "revert": {
+    "path": "ask481/revert481.sql",
+    "md5": "b5f7bace"
+   },
+   "grades": [
+    {
+     "seat": "W3",
+     "verdict": "PASS",
+     "md5_graded": "6275be56",
+     "wall_id": 9581
+    },
+    {
+     "seat": "W1",
+     "verdict": "PASS",
+     "md5_graded": "6275be56",
+     "wall_id": 9582
+    }
+   ],
+   "md5_written": [
+    "6275be56 (to confirm from W4 9681)"
+   ],
+   "md5_match": true,
+   "audit_ids": [
+    38525,
+    38526,
+    38527
+   ],
+   "objects": [
+    {
+     "kind": "policy+grant",
+     "name": "debate_queue",
+     "before": "anon_ins, INSERT",
+     "after": "dropped, revoked"
+    }
+   ],
+   "tests": [
+    {
+     "file": "test481_rollback.sql",
+     "md5": "ce9cd25a",
+     "result": "ALL PASS",
+     "wall_id": 9638
+    }
+   ],
+   "readbacks": [
+    {
+     "seat": "W3",
+     "result": "see post",
+     "wall_id": 9682
+    },
+    {
+     "seat": "W2",
+     "result": "OBJECTIVE MET yes",
+     "wall_id": 9683
+    }
+   ],
+   "run_evidence": {
+    "owed": true
+   },
+   "manuals": "not yet",
+   "status": "read back",
+   "sources": [
+    9580,
+    9581,
+    9582,
+    9638,
+    9681,
+    9682,
+    9683,
+    "audit 38525-38527"
+   ]
+  },
+  {
+   "ask": 486,
+   "rev": "1",
+   "title": "see plan486_487.md",
+   "objective": "not yet (w3/plans/plan486_487.md OBJECTIVE line not extracted by W1)",
+   "objective_met": "not yet",
+   "objective_met_reason": "no run since",
+   "objective_source": "9675",
+   "operator_words": "not yet",
+   "card": {
+    "thread": "W4",
+    "press_time": "17:06:40Z",
+    "answer": "not yet",
+    "source": "audit 38562"
+   },
+   "owner_seat": "W4",
+   "plan": {
+    "path": "w3/plans/plan486_487.md",
+    "md5": "6dbdeb81 (rev 0)",
+    "commit": "not yet",
+    "wall_id": 9675
+   },
+   "build_files": [
+    {
+     "path": "target_engine_486.json",
+     "md5": "cdbaf7e9 (rev 1)"
+    }
+   ],
+   "revert": "not yet",
+   "grades": [
+    {
+     "seat": "W2",
+     "verdict": "PASS",
+     "md5_graded": "6dbdeb81",
+     "wall_id": 9676
+    },
+    {
+     "seat": "W1",
+     "verdict": "PASS N1",
+     "md5_graded": "6dbdeb81",
+     "wall_id": 9678
+    },
+    {
+     "seat": "W2",
+     "verdict": "FAIL F1",
+     "md5_graded": "de3b65cf",
+     "wall_id": 9692
+    },
+    {
+     "seat": "W1",
+     "verdict": "PASS",
+     "md5_graded": "de3b65cf",
+     "wall_id": 9693
+    },
+    {
+     "seat": "W1",
+     "verdict": "PASS",
+     "md5_graded": "cdbaf7e9",
+     "wall_id": 9697
+    },
+    {
+     "seat": "W2",
+     "verdict": "PASS",
+     "md5_graded": "cdbaf7e9",
+     "wall_id": 9698
+    }
+   ],
+   "md5_written": [
+    "cdbaf7e9"
+   ],
+   "md5_match": true,
+   "audit_ids": [
+    38562
+   ],
+   "objects": [
+    {
+     "kind": "workflow",
+     "name": "engine",
+     "before": "eed7e2c8",
+     "after": "c94948c0"
+    }
+   ],
+   "tests": "not yet",
+   "readbacks": [
+    {
+     "seat": "W3",
+     "result": "PASS",
+     "wall_id": 9702
+    },
+    {
+     "seat": "W1",
+     "result": "PASS",
+     "wall_id": 9705
+    }
+   ],
+   "run_evidence": {
+    "owed": true
+   },
+   "manuals": {
+    "engine_manual": "draft rev 3 a51aabd5 (9714), not yet written"
+   },
+   "status": "read back",
+   "sources": [
+    9675,
+    9676,
+    9678,
+    9685,
+    9692,
+    9693,
+    9694,
+    9697,
+    9698,
+    9701,
+    9702,
+    9705,
+    "audit 38562"
+   ]
+  },
+  {
+   "ask": 487,
+   "rev": "1",
+   "title": "see plan486_487.md (gemini_deb row)",
+   "objective": "not yet (as 486)",
+   "objective_met": "not yet",
+   "objective_met_reason": "no run since",
+   "objective_source": "9675",
+   "operator_words": "10:44 CST: Gemini off flash (coordinator record)",
+   "card": {
+    "thread": "W4",
+    "press_time": "17:08:10Z",
+    "answer": "not yet",
+    "source": "audit 38579"
+   },
+   "owner_seat": "W4",
+   "plan": {
+    "path": "w3/plans/plan486_487.md",
+    "md5": "6dbdeb81",
+    "commit": "not yet",
+    "wall_id": 9675
+   },
+   "build_files": [
+    {
+     "path": "ask487/w4/target2_engine_487.json",
+     "md5": "93fe9adc",
+     "note": "rebased on the 486 fetchback; the one written (9701, 9709)"
+    },
+    {
+     "path": "target_engine_487.json",
+     "md5": "32bf6cba (rev 1)"
+    },
+    {
+     "path": "step487_row.sql",
+     "md5": "f3c17684"
+    }
+   ],
+   "revert": {
+    "path": "revert487_row.sql",
+    "md5": "3e4b6bfd"
+   },
+   "grades": [
+    {
+     "seat": "W2",
+     "verdict": "PASS N1",
+     "md5_graded": "098f7db6",
+     "wall_id": 9692
+    },
+    {
+     "seat": "W1",
+     "verdict": "PASS",
+     "md5_graded": "098f7db6",
+     "wall_id": 9693
+    },
+    {
+     "seat": "W1",
+     "verdict": "PASS",
+     "md5_graded": "32bf6cba",
+     "wall_id": 9697
+    },
+    {
+     "seat": "W2",
+     "verdict": "PASS",
+     "md5_graded": "32bf6cba",
+     "wall_id": 9698
+    }
+   ],
+   "md5_written": [
+    "93fe9adc",
+    "f3c17684"
+   ],
+   "md5_match": false,
+   "audit_ids": [
+    38577,
+    38579
+   ],
+   "objects": [
+    {
+     "kind": "row",
+     "name": "model_config gemini_deb",
+     "before": "not yet",
+     "after": "google/gemini-4-hydrogen"
+    },
+    {
+     "kind": "workflow",
+     "name": "engine",
+     "before": "c94948c0",
+     "after": "dd636c25"
+    }
+   ],
+   "tests": "not yet",
+   "readbacks": [
+    {
+     "seat": "W2",
+     "result": "row MATCH live; engine from fetchback file",
+     "wall_id": 9710
+    },
+    {
+     "seat": "W3",
+     "result": "live",
+     "wall_id": 9711
+    },
+    {
+     "seat": "W1",
+     "result": "PASS dd636c25",
+     "wall_id": 9715
+    }
+   ],
+   "run_evidence": {
+    "owed": true
+   },
+   "manuals": "not yet",
+   "status": "read back",
+   "sources": [
+    9675,
+    9685,
+    9692,
+    9693,
+    9697,
+    9698,
+    9701,
+    9709,
+    9710,
+    9711,
+    9715,
+    "audit 38577",
+    "audit 38579",
+    9709
+   ],
+   "md5_note": "93fe9adc was never graded by md5; W2 9710 and W1 9715 found it node-equal to the graded 32bf6cba. 32bf6cba was never written."
+  },
+  {
+   "ask": 482,
+   "rev": "4",
+   "title": "Any vs Any lists and model names",
+   "objective": "The Any vs Any drop-downs list exactly the engines the live engine accepts as debaters (minus the ones it refuses), each shown with its live model version from model_config, and a launch from any listed choice is accepted by both the launch function and the engine. (a482_w3/plan_rev2.md line 5)",
+   "objective_met": "in part",
+   "objective_met_reason": "rev 4 written and DB read back; non-writer page load owed (W3 9722); rev 5 not written",
+   "objective_source": "9719, 9721, 9722",
+   "operator_words": "17:00Z: the model named chat gpt need to change to the model name (W1 9691)",
+   "card": {
+    "thread": "W4",
+    "press_time": "17:10:42Z",
+    "answer": "not yet",
+    "source": "audit 38597"
+   },
+   "owner_seat": "W1 (build) / W4 (write)",
+   "plan": {
+    "path": "a482_w3/plan_rev2.md",
+    "md5": "not yet",
+    "commit": "not yet",
+    "wall_id": 9610
+   },
+   "build_files": [
+    {
+     "path": "a482_w1/build482.sql",
+     "md5": "062698a7",
+     "commit": "f69b0868"
+    },
+    {
+     "path": "a482_w1/deploy/src/odv1.js",
+     "md5": "6944e18b",
+     "commit": "f69b0868"
+    }
+   ],
+   "revert": {
+    "path": "a482_w1/revert482.sql",
+    "md5": "05645e82"
+   },
+   "grades": [
+    {
+     "seat": "W3",
+     "verdict": "PASS",
+     "md5_graded": "062698a7",
+     "wall_id": 9700
+    },
+    {
+     "seat": "W2",
+     "verdict": "PASS",
+     "md5_graded": "062698a7",
+     "wall_id": 9706
+    }
+   ],
+   "md5_written": [
+    "062698a7",
+    "6944e18b"
+   ],
+   "md5_match": true,
+   "audit_ids": [
+    38597
+   ],
+   "objects": [
+    {
+     "kind": "function",
+     "name": "dash_debaters, dash_api, dash_launch_odv1, dash_odv1_judges, dash_odv1_debates",
+     "before": "base",
+     "after": "b6084d5a, c541b307, 3b74a293, 9796ab3c, 1fc8bc68"
+    },
+    {
+     "kind": "vercel",
+     "name": "truth-app-dashboard",
+     "before": "not yet",
+     "after": "dpl_42mbKJpfP3uioX1vyBdViZqJ4Ae4, src/odv1.js sha1 88c58ac7"
+    }
+   ],
+   "tests": "not yet",
+   "readbacks": [
+    {
+     "seat": "W2",
+     "result": "DB MATCH",
+     "wall_id": 9721
+    },
+    {
+     "seat": "W3",
+     "result": "DB PASS; page load NOT DONE",
+     "wall_id": 9722
+    }
+   ],
+   "run_evidence": {
+    "owed": true
+   },
+   "manuals": {
+    "engine_manual": "draft d376b0ad (9723), for v214"
+   },
+   "status": "read back",
+   "sources": [
+    9610,
+    9686,
+    9691,
+    9699,
+    9700,
+    9706,
+    9719,
+    9721,
+    9722,
+    9723,
+    "audit 38597"
+   ]
+  }
  ],
  "findings_for_the_plan": [
   "F1 481 has no plan file and no OBJECTIVE line: field 3a cannot be filled. Old ASKs need 'not yet' allowed in objective (and objective_met, my N1 at 9788).",
   "F2 Card answer text (field 8) lives in W4's thread chat, not on the Wall or audit_log: WRONG-IF 1 holds; 6 of 7 rows read 'not yet'.",
   "F3 Several plans and builds are not in git (484, 485, 483, 486, 487): plan.commit is 'not yet'. md5 is still checkable from /mnt/project-files.",
-  "F4 md5_written is not in audit_log for workflow writes; the source is the writer's Wall post. The trigger's md5_match depends on the coordinator copying it correctly."
+  "F4 md5_written is not in audit_log for workflow writes; the source is the writer's Wall post. The trigger's md5_match depends on the coordinator copying it correctly.",
+  "F5 487: a rebased target (93fe9adc) was written while a different md5 (32bf6cba) was graded. The trigger would set md5_match false, but two readbacks show equal content. Proposal: a grades element may carry 'equal_to' (graded md5) with the Wall id of the equality check, and the trigger counts that as matched."
  ]
 }
