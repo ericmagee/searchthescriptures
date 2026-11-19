@@ -1,0 +1,12 @@
+no   -> READ | n0 null -> G4905 | "sunerchomai (G4905), meaning " "came together" | the form of the ASK: must be read
+READ -> READ | n0 G4905 -> G4905 | "(G4905), " "x" | comma, read today
+READ -> READ | n0 G4905 -> G4905 | "(G4905): " "x" | colon, read today
+READ -> READ | n0 G4905 -> G4905 | "(G4905) meaning " "x" | word, read today
+READ -> READ | n0 G4905 -> G4905 | "(G4905) means " "x" | read today
+READ -> READ | n0 G4905 -> G4905 | "(G4905) = " "x" | equals, read today
+no   -> READ | n0 null -> G4905 | "(G4905), is " "a word Paul uses" | KNOWN-BAD reading risk: ", is" now read (WRONG-IF case; the quote decides)
+no   -> no   | n0 null -> null | "(G4905), is used in Matthew 1:18: " "came together" | KNOWN-BAD (plan 5): not read, since words stand between ", is" and the quote
+no   -> no   | n0 null -> null | "(G4905). The verse says " "came together" | sentence then quote: not read old or new
+no   -> no   | n0 null -> null | "(G4905), and Paul writes " "x" | not read old or new
+no   -> no   | n0 null -> null | "G2675 i.e. " "x" | "i.e.": not read old or new (W1 9099 N2)
+no   -> no   | n0 null -> G4905 | "(G4905), meaning " "in Matthew 1:18 came together" | verse inside the quote: the \d+:\d+ guard drops it, old and new

@@ -1,0 +1,8 @@
+BUILT /tmp/claude-0/-home-claude/25c53118-408e-5b9f-a314-6593b8f02ba2/scratchpad/t433.json | Init with Guards text sha256 f8cf500c6d8a -> 592ad3977142 | length 30812 -> 30902 | lines 55 55 | changed lines 31 | clause count 1
+db713b6a-f92d-4af8-a0fb-eb8eed034d95 2026-11-19T04:55:55.217Z nodes 425 425 param diffs 1 [ 'Init with Guards' ] conn equal true lib 86e2fcc598aab3ee 86e2fcc598aab3ee
+comments 0
+compiles
+TEXT: SEED is sperma (G4690): 'something sown, i.e. seed (including the male \"sperm\"); by implication, offspring'; the KJV renders it seed (40 times), seeds (3) and issue (1, Matthew 22:25), in 41 verses; the seed of David in Romans 1:3 is sperma. An ASSUMES you c
+REASONING GUARD: no model-setting change.
+RESULT: PASS
+EQUAL
