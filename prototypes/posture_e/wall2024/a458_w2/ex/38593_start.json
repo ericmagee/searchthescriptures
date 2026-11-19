@@ -1,0 +1,1 @@
+{"data":{"resultData":{"runData":{"Debate Start":[{"source":[],"data":{"main":[[{"json":{"body":{"challenger":{"engine":"spark","profile":"oracle"},"defender":{"engine":"gemini","profile":"plain"},"topic":"Did Christ have a biological father?"},"webhookUrl":"https://truthapp.app.n8n.cloud/webhook/oracle-debate-v1","executionMode":"production"}}]]}}]}}}}

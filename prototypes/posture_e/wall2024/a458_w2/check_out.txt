@@ -1,0 +1,42 @@
+engine C1 nodes 426 -> 397 removed 29: DeepSeek Synthesis Call; Independent Verdict Call; DeepSeek Diagnostic Call; Panel Judge 1 deepseek; C1 Call deepseek; D1 Call deepseek; D2 Call deepseek; C2 Call deepseek; D3 Call deepseek; C3 Call deepseek; Panel Reserve deepseek; D4 Call deepseek; C4 Call deepseek; Panel Judge 1 Empty?; Panel Judge 1 deepseek retry; Accept DS Build; Accept DS?; Accept Call deepseek; Accept DS Return?; Accept Return Call deepseek; C4G Call deepseek; C3G Call deepseek; C1B Call deepseek; D2B Call deepseek; C2B Call deepseek; D3B Call deepseek; C3B Call deepseek; D4B Call deepseek; C4B Call deepseek
+engine C1 steps posting to api.deepseek.com: 0 | steps still named deepseek (none posts to api.deepseek.com; ASK 455 D renames them): 18 | removed names still quoted anywhere: 0 
+engine C2 kept nodes with id/type/version/position/credentials changed: 0 | kept nodes whose parameters changed 11: Panel Payloads; Panel Check; Panel Tokens; Alternate Payloads; Accept Check; Accept Return Build; Accept Final; Accept DS Return Build; Shared Library; Provider Removed Stop; Alternate Pass Call
+engine C2 edges removed 76 (between kept nodes: 0) | edges added 24:
+   + D1 Route #6 -> Provider Removed Stop
+   + C1 Route #6 -> Provider Removed Stop
+   + D2 Route #6 -> Provider Removed Stop
+   + C2 Route #6 -> Provider Removed Stop
+   + D3 Route #6 -> Provider Removed Stop
+   + C3 Route #6 -> Provider Removed Stop
+   + Synthesis Judge Route #0 -> Provider Removed Stop
+   + Diagnostic Judge Route #0 -> Provider Removed Stop
+   + Verdict Judge Route #0 -> Provider Removed Stop
+   + Panel Judge 1 Route #0 -> Provider Removed Stop
+   + Reserve Route #0 -> Provider Removed Stop
+   + D4 Route #6 -> Provider Removed Stop
+   + C4 Route #6 -> Provider Removed Stop
+   + Accept Call openrouter #0 -> Accept Check
+   + Accept DS Return Build #0 -> Accept Final
+   + C4G Route #6 -> Provider Removed Stop
+   + C3G Route #6 -> Provider Removed Stop
+   + C1B Route #6 -> Provider Removed Stop
+   + D2B Route #6 -> Provider Removed Stop
+   + C2B Route #6 -> Provider Removed Stop
+   + D3B Route #6 -> Provider Removed Stop
+   + C3B Route #6 -> Provider Removed Stop
+   + D4B Route #6 -> Provider Removed Stop
+   + C4B Route #6 -> Provider Removed Stop
+engine C3 Library Check: lines sha 0f221f86024a2c69 header 0f221f86024a2c69 lines 3503 header 3503 PASS
+engine C3 stubs 31 rebuild failures 0  | code parsed (changed nodes and all stub sources) 38 errors 0 
+engine C3 expressions of Alternate Pass Call parsed: 1
+child C1 nodes 162 -> 156 removed 6: A379 Gate 26; Panel Judge 1 deepseek; A379 Tick 26; A379 Gate 31; Panel Reserve deepseek; A379 Tick 31
+child C1 steps posting to api.deepseek.com: 0 | steps still named deepseek (none posts to api.deepseek.com; ASK 455 D renames them): 4 | removed names still quoted anywhere: 0 
+child C2 kept nodes with id/type/version/position/credentials changed: 0 | kept nodes whose parameters changed 3: Alternate Pass Check; R2 Alternate Payloads; Shared Library
+child C2 edges removed 12 (between kept nodes: 0) | edges added 4:
+   + A379 Gate 25 #1 -> A379 Gate 27
+   + A379 Tick 25 #0 -> A379 Gate 27
+   + A379 Gate 30 #1 -> A379 Gate 32
+   + A379 Tick 30 #0 -> A379 Gate 32
+child C3 Library Check: lines sha 0f221f86024a2c69 header 0f221f86024a2c69 lines 3503 header 3503 PASS
+child C3 stubs 13 rebuild failures 0  | code parsed (changed nodes and all stub sources) 14 errors 0 
+ALL PASS
