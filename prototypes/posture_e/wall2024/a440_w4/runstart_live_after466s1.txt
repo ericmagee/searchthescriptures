@@ -1,0 +1,17 @@
+ok    1 nothing running
+ok    1 waiting in other workflows, not refused: 19745 (workflow baHaafyFRjSFD9q3), 19744 (workflow baHaafyFRjSFD9q3)
+ok    2 engine version e0a61271-0e44-442d-af14-7cefb19ab547
+ok    2 engine active and published
+ok    2 child version 4982c042-4784-42c1-9cca-052373bf0e67
+ok    2 child active and published
+ok    3 library sha equal 8bd8d2a7dc9d2ed0
+ok    3 engine header names its sha
+ok    3 child header names its sha
+ok    3 map_sha equal 1b07df73d8db134d
+ok    4 ASK 385 check PASS
+ok    5 body keys
+ok    5 defender spark/oracle
+ok    5 challenger gemini/plain
+ok    5 topic "Did Christ have a biological father?"
+ok    5 body sha256 53763d9544a6 matches the released prefix
+GO
