@@ -1,0 +1,20 @@
+PASS "Psalms 2:7, 12 Kiss the Son" old: Psalms 2:7 | new: Psalms 2:7; Psalms 2:12
+PASS "John 3:16, 1 John 4:8" old: John 3:16; 1 John 4:8 | new: John 3:16; 1 John 4:8
+PASS "Genesis 1:1, 2 Kings 3:4" old: Genesis 1:1; 2 Kings 3:4 | new: Genesis 1:1; 2 Kings 3:4
+PASS "Romans 8:28, 1 Cor 2:9" old: Romans 8:28; 1 Corinthians 2:9 | new: Romans 8:28; 1 Corinthians 2:9
+PASS "Luke 21:26, 35" old: Luke 21:26; Luke 21:35 | new: Luke 21:26; Luke 21:35
+PASS "Matthew 1:20, 18 says" old: Matthew 1:20 | new: Matthew 1:20
+PASS "Luke 1:36, 5 makes" old: Luke 1:36 | new: Luke 1:36
+PASS "Isaiah 7:11, 7:14" old: Isaiah 7:11; Isaiah 7:14 | new: Isaiah 7:11; Isaiah 7:14
+PASS "John 10:14, 16 These sheep" old: John 10:14 | new: John 10:14; John 10:16
+PASS "Matt 1:21, 25 Joseph names" old: Matthew 1:21 | new: Matthew 1:21; Matthew 1:25
+PASS "Psalms 2:7 and 12 Kiss" old: Psalms 2:7 | new: Psalms 2:7
+PASS "Genesis 3:15, 3 John 1:2" old: Genesis 3:15; 3 John 1:2 | new: Genesis 3:15; 3 John 1:2
+fixtures 12 of 12
+texts 1835 texts x modes with a difference 12 items gained 12 items lost 0
+   24355 challenger_r3 Isaiah 28:12 :: Isaiah 28:9–10, 12 KJV**: - v.9: *"Whom shall he teach knowledge? and 
+   24566 claude_r1 John 10:16 :: John 10:14, 16  These sheep are already described as his: “other sheep
+   26163 claude_r2 John 12:32 :: John 12:20–24, 32 Greeks, the hour, draw all when lifted up. [L2] ἀγαγ
+   26285 engine_r1 John 12:32 :: 12:20, 32  This ground is #59. I accept the defender's reading that "t
+   27613 claude_r1 Matthew 1:25 :: Matt 1:21, 25 Joseph names the child; [L2] Luke 2:48 *ho pater sou* in
+   32157 claude_r2 Galatians 4:29 :: In Galatians 4:23, 29 Paul uses *gegennētai* (γεγέννηται: "has been be
