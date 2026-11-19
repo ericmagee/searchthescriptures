@@ -1,0 +1,59 @@
+== 3mV1UBs09SZTfK0u | TRUTH — DS Direct Single Call | active=True | last exec none  | versionId f88ec195
+   BUILD node: Build DS Request | fallback: [] | literal models: ['deepseek-chat']
+   CALL node: DeepSeek Direct Call | models in node: [] | cred: ['DeepSeek Key']
+== ALwKqNIw0i0YLcGC | TRUTH — DS-W3 DeepSeek Leads | active=True | last exec none  | versionId 4f178362
+   CALL node: DeepSeek Opens | models in node: ['deepseek-chat'] | cred: ['DeepSeek Key']
+   CALL node: DeepSeek Challenges | models in node: ['deepseek-chat'] | cred: ['DeepSeek Key']
+   BUILD node: Build Save | fallback: [] | literal models: ['deepseek-chat']
+   MC read: Fetch Models | ['model_config?select=*']
+== DB7E7eb3i4DPJaHx | TRUTH — Group W2 Dialog (Gemini+Grok+ChatGPT+DeepSeek) | active=True | last exec none  | versionId 96b50ce6
+   BUILD node: Build DeepSeek | fallback: ["M['deepseek']||{api_model:'deepseek-chat',max_tokens:1200}"] | literal models: ['deepseek-chat']
+   CALL node: DeepSeek R1 | models in node: [] | cred: ['DeepSeek Key']
+   MC read: Fetch Models | ['model_config?select=seat,api_model,max_tokens&active=eq.true']
+== L2dnmMe0HPiT9vxb | TRUTH — W7 Adversarial L2 Specialist | active=True | last exec none  | versionId 27f09be8
+   CALL node: Root Fallacy Attack | models in node: ['deepseek-chat'] | cred: ['DeepSeek Key']
+   CALL node: LXX Attack | models in node: ['deepseek-chat'] | cred: ['DeepSeek Key']
+   CALL node: DSS Attack | models in node: ['deepseek-chat'] | cred: ['DeepSeek Key']
+   BUILD node: Save Result | fallback: ["M['deepseek']||{}"] | literal models: ['deepseek-chat']
+   MC read: Fetch Models | ['model_config?select=seat,api_model,max_tokens&active=eq.true']
+== O4hG1nxEbQiztSMa | TRUTH — DS-W4 DeepSeek Steel Man | active=True | last exec none  | versionId 761b39f9
+   BUILD node: Build Steel Man | fallback: ["M['deepseek']||{api_model:'deepseek-chat',max_tokens:8000}"] | literal models: ['deepseek-chat']
+   CALL node: DeepSeek Steel Man Call | models in node: [] | cred: ['DeepSeek Key']
+   BUILD node: Final Output W4 | fallback: [] | literal models: ['deepseek-chat']
+   MC read: Fetch Models | ['model_config?select=*']
+== OuzlkGSKXryID4Y7 | TRUTH — W7 Engine-Led Adversarial Construction | active=True | last exec none  | versionId 734cf103
+   BUILD node: Build DeepSeek Construction | fallback: ["M['deepseek']||{api_model:'deepseek-chat',max_tokens:4000}"] | literal models: ['deepseek-chat']
+   CALL node: DeepSeek Construction Call | models in node: [] | cred: ['DeepSeek Key']
+   BUILD node: Final Output W7 | fallback: [] | literal models: ['deepseek-chat']
+   MC read: Fetch Models | ['model_config?select=seat,api_model,max_tokens&active=eq.true']
+== QCMqpp3zxPA9XFe4 | TRUTH — W14 L1 Textual Integrity Analysis | active=True | last exec none  | versionId 1c3d15aa
+   CALL node: DeepSeek Cross-Check | models in node: ['deepseek-chat'] | cred: ['DeepSeek Key']
+   BUILD node: Save Result | fallback: [] | literal models: ['deepseek-chat']
+   MC read: Fetch Models | ['model_config?select=seat,api_model,max_tokens&active=eq.true']
+== Udlm6jD9QwTp6E5x | TRUTH — Independent Synthesis (Claude-Free Verdict) | active=True | last exec none  | versionId fdcbdc24
+   BUILD node: Build Neutral Verdict | fallback: [] | literal models: ['deepseek-chat']
+   CALL node: DeepSeek Neutral Call | models in node: [] | cred: ['DeepSeek Key']
+   BUILD node: Final Output IndSyn | fallback: ["M['deepseek']||{api_model:'deepseek-chat'}"] | literal models: ['deepseek-chat']
+   MC read: Fetch Models | ['model_config?select=seat,api_model,max_tokens&active=eq.true']
+== WzzlumCCL4ZT1Sgk | Challenger - Bible AI Tribunal | active=True | last exec 2026-11-01T22:07:58.573Z error | versionId 4a6fccdb
+   CALL node: Vanilla DeepSeek | models in node: ['deepseek-chat'] | cred: ['DeepSeek Key']
+   MC read: Fetch Models | ['model_config?select=seat,api_model,max_tokens&active=eq.true']
+== b17zNbN3hjV7vFBi | TRUTH — W16 L1-A Literary Genre Analysis | active=True | last exec none  | versionId a74e94b7
+   CALL node: DeepSeek Cross-Check | models in node: ['deepseek-chat'] | cred: ['DeepSeek Key']
+   BUILD node: Save Result | fallback: [] | literal models: ['deepseek-chat']
+   MC read: Fetch Models | ['model_config?select=seat,api_model,max_tokens&active=eq.true']
+== cVvQhy2Y1jwfW3TM | TRUTH — DS-W2 DeepSeek Dialog | active=True | last exec none  | versionId d6b23052
+   BUILD node: Build DeepSeek R1 | fallback: [] | literal models: ['deepseek-chat']
+   CALL node: DeepSeek R1 | models in node: [] | cred: ['DeepSeek Key']
+   BUILD node: Build DeepSeek R2 | fallback: [] | literal models: ['deepseek-chat']
+   CALL node: DeepSeek R2 | models in node: [] | cred: ['DeepSeek Key']
+   BUILD node: Final Output W2 | fallback: [] | literal models: ['deepseek-chat']
+   MC read: Fetch Models | ['model_config?select=*&active=eq.true']
+== rveOzNV4Ir0OzcGI | TRUTH — DS-W5 DeepSeek Blind Analysis | active=True | last exec none  | versionId e4ce0d26
+   BUILD node: Build Standard Position | fallback: [] | literal models: ['deepseek-chat']
+   CALL node: DeepSeek Standard Call | models in node: [] | cred: ['DeepSeek Key']
+   BUILD node: Build Framework ID Prompt | fallback: [] | literal models: ['deepseek-chat']
+   CALL node: DeepSeek Framework ID Call | models in node: [] | cred: ['DeepSeek Key']
+   BUILD node: Build Blind Analysis | fallback: [] | literal models: ['deepseek-chat']
+   CALL node: DeepSeek Blind Analysis Call | models in node: [] | cred: ['DeepSeek Key']
+   MC read: Fetch Models | ['model_config?select=seat,api_model,max_tokens&active=eq.true']
