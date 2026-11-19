@@ -129,12 +129,19 @@ def jl(v):
 def tl(v): return "$t$" + v + "$t$"
 def arr(a): return "ARRAY[" + ",".join("'" + x + "'" for x in a) + "]::text[]" if a else "NULL"
 JCOLS = ['operator_words','card','plan','build_files','revert','grades','audit_ids','objects','tests','readbacks','run_evidence','manuals','sources']
-out = ["-- ASK AAR snapshot rows, first real fill (W2 draft for the coordinator; run once from seat 36, before the AAR is sent).",
+out = ["-- ASK AAR snapshot rows, first real fill, rev 1 (W2 draft for the coordinator; rev 1: the 485 row writes the rebased files with equal_to, W1 9924 F1; run once from seat 36, before the AAR is sent).",
        "BEGIN;", f"SET LOCAL truth.session_id = '{COORD}';"]
 rows = []
 for r in dry:
     r = dict(r)
     r.pop('aar_at', None); r.pop('md5_match', None); r['prior_ask'] = None
+    if r['ask'] == 485:
+        r['grades'] = r['grades'] + [g('W1','PASS','ed2f37f8',9658), g('W1','PASS','436d1db0',9658), g('W2','PASS','ed2f37f8',9661), g('W2','PASS','436d1db0',9661),
+            dict(g('W1','shown equal in content (after the write)','c6541680',9924), equal_to={"md5":"ed2f37f8","wall_id":9924}),
+            dict(g('W1','shown equal in content (after the write)','32153f8d',9924), equal_to={"md5":"436d1db0","wall_id":9924})]
+        r['md5_written'] = ['c6541680','32153f8d']
+        r['build_files'] = r['build_files'] + [{"path":"ask485/w4/target2_engine.json","md5":"c6541680","commit":NY},{"path":"ask485/w4/target2_child.json","md5":"32153f8d","commit":NY}]
+        r['sources'] = r['sources'] + [9665, 9924]
     rows.append(r)
 rows += new
 for r in rows:
