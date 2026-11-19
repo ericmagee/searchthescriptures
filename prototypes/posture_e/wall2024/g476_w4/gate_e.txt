@@ -1,0 +1,3 @@
+BASE 6519f616-071e-453c-9f65-2035ddc49dac CAND 6519f616-071e-453c-9f65-2035ddc49dac CHANGED ["Alternate Pass Call"] CONNECTIONS equal
+COMMENTS: no changed Code node gains a comment text its base lacks
+NOT COVERED by the chain replay: ["Alternate Pass Call"]. Rerun with --spec SPEC.json --rows ROWS.json (a418_w4/replay418.cjs form).

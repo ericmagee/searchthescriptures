@@ -1,0 +1,20 @@
+same R2 Alternate Build             99389
+same R2 Alternate Merge Seat        385920
+same R2 Alt Judge Enforcer Build    125107
+same R2 Alt Judge Enforcer Record   59481
+same R2 Alt Send Back Build         162872
+same R2 Alt Send Back Record        177780
+same R2 Alt Gate Build              247033
+same R2 Alt Gate Record             315757
+same R2 Alt Late Gate Build         298536
+same R2 Alternate Payloads          236288
+same R2 Alternate Cure Build        98637
+same R2 Alternate Cure Normalize    253418
+same R2 Alternate Merge             181987
+stubs 13 differing 0
+Library Check, engine text: {"engine":"0f221f86024a2c69","child":"0f221f86024a2c69","engine_map":"97e30a319eca64f4","child_map":"97e30a319eca64f4","same":true,"received":1068800} | lib kept in output: false | other pass keys kept: ["lib_sha","map_sha","sa"]
+Library Check, changed text: PASSED (wrong)
+Library Check, lib line changed: REFUSED: pkgLIB1: library drift, engine lib 0f221f86024a2c69 map 97e30a319eca64f4, child lib 2e1415
+Library Check, no lib: REFUSED: pkgLIB1: library drift, engine lib 0f221f86024a2c69 map 97e30a319eca64f4, child lib none m
+Library Check, child library sent: REFUSED: pkgLIB1: library drift, engine lib 0f221f86024a2c69 map 97e30a319eca64f4, child lib 0f221f
+base Library Check: {"engine":"0f221f86024a2c69","child":"0f221f86024a2c69","engine_map":"97e30a319eca64f4","child_map":"97e30a319eca64f4","same":true}
