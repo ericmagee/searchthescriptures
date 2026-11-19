@@ -24,7 +24,7 @@ Detail: p440_w2/runval_1to12.md (W2) and a440_w1/validation_13_24.md (W1). This 
 | 8 | 450 Wall guard | runval 450 | Partly |
 | 9 | 451 Wall guard | runval 451 | Partly |
 | 10 | 454 (422(c)) | exercise 422(c) | Only if a judge writes the form |
-| 11 | 455 A to D | exercise 455, 455 D; hand (c) | (b), D yes; (a) no, deepseek row still ACTIVE; (c) no in practice |
+| 11 | 455 A to D | exercise 455, 455 D; hand (c); N3 Resolve Seats | (b), D yes; (a) yes since ASK 479 (rows inactive 15:16Z 11-19): Resolve Seats output deepseek.api_model = openai/gpt-6-luna (W2 9549); (c) no in practice |
 | 12 | 456 | exercise 456 + hand read | Only with a COUNTED BOTH NOT STATED fact |
 | 13 | 458 | W1 SQL 458 | Yes, absence mark |
 | 14 | 459 | W1 SQL 459, N1 | Yes with a cure row, absence mark |
@@ -40,4 +40,4 @@ Detail: p440_w2/runval_1to12.md (W2) and a440_w1/validation_13_24.md (W1). This 
 | 24 | 475 | W1 SQL 475, N3 | Yes |
 | 25 | 478 / 455 no DeepSeek call (W1 9522) | runval 478: 0 call_costs entries with m ~ deepseek | Yes, positive record (luna count shown) |
 
-Cannot be shown by any run: 445, 455 (a), 462, 465. Shown only in part: 448 to 451 (the guard is seen to have held, not to have refused), and every absence mark (458, 459, 460, 464, 475, 443, 455 D), which also reads clean on a run before the change (control 39266).
+Cannot be shown by any run: 445, 462, 465. (455 (a) is shown since ASK 479, item 11.) Shown only in part: 448 to 451 (the guard is seen to have held, not to have refused), and every absence mark (458, 459, 460, 464, 475, 443, 455 D), which also reads clean on a run before the change (control 39266).
