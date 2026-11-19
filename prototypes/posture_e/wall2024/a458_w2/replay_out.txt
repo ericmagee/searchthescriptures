@@ -4,13 +4,12 @@
 38593 Panel Tokens | OLD 01c6b3b2b3 NEW 01c6b3b2b3 STORED 6ae171eac9 | OLD==NEW true | OLD==STORED false | NEW==STORED false
 38593 Accept Check | OLD a239ea254e NEW a239ea254e STORED a239ea254e | OLD==NEW true | OLD==STORED true | NEW==STORED true
 38593 Accept Final | OLD fd668037af NEW fd668037af STORED 5c0bb11796 | OLD==NEW true | OLD==STORED false | NEW==STORED false
-38593 Accept Return Build | NOT RUN
-38593 Accept DS Return Build | NOT RUN
 38226 Panel Check | OLD 3414dc568d NEW 3414dc568d STORED 3414dc568d | OLD==NEW true | OLD==STORED true | NEW==STORED true
 38226 Panel Payloads | OLD 5e77e79427 NEW 5e77e79427 STORED 5e77e79427 | OLD==NEW true | OLD==STORED true | NEW==STORED true
 38226 Alternate Payloads | OLD a8ef174792 NEW a8ef174792 STORED a8ef174792 | OLD==NEW true | OLD==STORED true | NEW==STORED true
 38226 Panel Tokens | NOT RUN
 38226 Accept Check | NOT RUN
 38226 Accept Final | NOT RUN
-38226 Accept Return Build | NOT RUN
-38226 Accept DS Return Build | NOT RUN
+-- with the new input
+NEW input: Accept Call openrouter, 8 items; OLD input: 1 items
+Accept Check | OLD a239ea254e NEW a239ea254e STORED a239ea254e | OLD==NEW true | OLD==STORED true | NEW==STORED true

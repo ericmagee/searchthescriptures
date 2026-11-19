@@ -1,5 +1,5 @@
 # ASK 458 plan rev 1 (W2; rev 0 FAIL by W1 9261 and W3 9264): remove the DeepSeek steps (the operator 21:24 CST 11-18: "just make sure they're gone if they are"; coordinator 06:46Z 11-19)
-Base: live engine c1256eec, child cd11b411 (ASK 455 part D, if written first, is a rename of other steps; the build is rerun on whatever is live).
+Base: live engine 4cb54cf0, child 3e0810d5 (ASK 455 part D written 06:49:24Z; fetched by version id, parameters and connections equal to the a455d_w2 targets).
 
 1. OBJECTIVE. No step of either workflow calls DeepSeek or exists only to carry a DeepSeek reply. A seat that ever resolves to the DeepSeek family stops the run
    fail-closed at "Provider Removed Stop", as the other removed providers already do, instead of calling api.deepseek.com.
@@ -31,11 +31,11 @@ Base: live engine c1256eec, child cd11b411 (ASK 455 part D, if written first, is
    OUT: model_config rows (no row is touched); the JFAM family index 0 (the Switch keeps its output count); reasoning, effort, max_tokens, temperature:
       none of the 24 DeepSeek call bodies holds any such text, and the reasoning guard must stay clean on the edited nodes.
 4. CRITERIA and DONE.
-   C1: no node calls api.deepseek.com; steps still named deepseek are counted (ASK 455 D renames them; none posts to api.deepseek.com); no quoted reference to a removed name remains anywhere (nodes, connections, library).
+   C1: no node calls api.deepseek.com; no node name holds "deepseek"; no quoted reference to a removed name remains anywhere (nodes, connections, library).
    C2: every node not in SCOPE is JSON-equal to live; connections differ only as listed in 3.
    C3: every pkgLIB stub rebuilds with the right byte count; Library Check passes; the a_scan_w2 scan finds 0 reads the runner does not send.
    C4: replay of the edited Code nodes, old against new, with the runner's gating, on stored executions 38593 and 38226: Panel Check, Panel Payloads,
-       Alternate Payloads, Panel Tokens, Accept Check and Accept Final (Accept Check and Accept Final with their new inputs per W3 9264),
+       Alternate Payloads, Panel Tokens, Accept Check and Accept Final (Accept Check also with its new input, the 8 items of Accept Call openrouter, per W3 9264; Accept Final's input path from Accept Return? #1 is unchanged),
        outputs equal, except where the old output named a removed node that never ran (listed one by one).
    C5: reasoning guard clean on both workflows.
    DONE: two PASS grades, card, write, readback, and a run that completes (RUN EVIDENCE).
