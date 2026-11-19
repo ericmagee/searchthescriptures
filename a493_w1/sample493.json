@@ -1,5 +1,5 @@
 {
- "about": "ASK 493 dry-run sample rev 1 (W1, 11-19). Seven rows in the plan493.md (2a5a6bdd) column set, filled from the_wall and audit_log. A field with no source read by W1 says 'not yet'. Ids are Wall ids unless named audit. Card times are the audit_log card notes. Not inserted anywhere. Rev 1 adds the W4 md5s (W4 message 18:01Z; Wall 9701, 9709).",
+ "about": "ASK 493 dry-run sample rev 2 (W1, 11-19). Seven rows in the plan493.md (2a5a6bdd) column set, filled from the_wall and audit_log. A field with no source read by W1 says 'not yet'. Ids are Wall ids unless named audit. Card times are the audit_log card notes. Not inserted anywhere. Rev 1 adds the W4 md5s (W4 message 18:01Z; Wall 9701, 9709). Rev 2: 482 rev 4 audit ids 38591 to 38597 (W1 9808 mistake 1).",
  "rows": [
   {
    "ask": 484,
@@ -765,6 +765,12 @@
    ],
    "md5_match": true,
    "audit_ids": [
+    38591,
+    38592,
+    38593,
+    38594,
+    38595,
+    38596,
     38597
    ],
    "objects": [
@@ -812,7 +818,8 @@
     9721,
     9722,
     9723,
-    "audit 38597"
+    "audit 38597",
+    "audit 38591-38596"
    ]
   }
  ],
