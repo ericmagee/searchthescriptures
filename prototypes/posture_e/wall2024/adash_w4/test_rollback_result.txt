@@ -1,0 +1,7 @@
+DASH ROLLBACK TEST on live, 11-19 ~09:27 CST (nothing kept):
+no engine: {"status":"error","message":"Name an engine: chatgpt, gemini or grok."}
+deepseek: same error
+bogus: same error
+gemini: queued engine gemini; http queued by gemini row: 1
+http queued by W4/null/deepseek rows: 0
+anon EXECUTE kept: true
