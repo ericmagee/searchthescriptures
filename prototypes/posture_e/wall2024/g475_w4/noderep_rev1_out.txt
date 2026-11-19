@@ -1,0 +1,76 @@
+== 39266
+NODES RUN IN THIS EXECUTION: D2B Build, D2B Extract, C2B Build, C2B Extract, D3B Build, D3B Extract, C3B Build, C3B Extract, D4B Build, D4B Extract, C4B Build, C4B Extract
+NODE D2B Build              | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE D2B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true | s262 ERR Cannot read properties of undefined (reading 'json') | target ERR Cannot read properties of undefined (reading 'json')
+NODE C2B Build              | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE C2B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE D3B Build              | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE D3B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE C3B Build              | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE C3B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true | s262 ERR Cannot read properties of undefined (reading 'json') | target ERR Cannot read properties of undefined (reading 'json')
+NODE D4B Build              | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE D4B Extract            | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE C4B Build              | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE C4B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true | s262 ERR Cannot read properties of undefined (reading 'json') | target ERR Cannot read properties of undefined (reading 'json')
+NO NODE OUTPUT CHANGES
+== 38661
+NODES RUN IN THIS EXECUTION: D2B Build, D2B Extract, C2B Build, C2B Extract, D3B Build, D3B Extract, C3B Build, C3B Extract, D4B Build, D4B Extract, C4B Build, C4B Extract
+NODE D2B Build              | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE D2B Extract            | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE C2B Build              | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE C2B Extract            | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE D3B Build              | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE D3B Extract            | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE C3B Build              | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE C3B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true | s262 ERR Cannot read properties of undefined (reading 'json') | target ERR Cannot read properties of undefined (reading 'json')
+NODE D4B Build              | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE D4B Extract            | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE C4B Build              | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE C4B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true | s262 ERR Cannot read properties of undefined (reading 'json') | target ERR Cannot read properties of undefined (reading 'json')
+NO NODE OUTPUT CHANGES
+== 38593
+NODES RUN IN THIS EXECUTION: D2B Build, D2B Extract, C2B Build, C2B Extract, D3B Build, D3B Extract, C3B Build, C3B Extract, D4B Build, D4B Extract, C4B Build, C4B Extract
+NODE D2B Build              | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE D2B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true | s262 ERR Cannot read properties of undefined (reading 'json') | target ERR Cannot read properties of undefined (reading 'json')
+NODE C2B Build              | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE C2B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE D3B Build              | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE D3B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE C3B Build              | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE C3B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true | s262 ERR Cannot read properties of undefined (reading 'json') | target ERR Cannot read properties of undefined (reading 'json')
+NODE D4B Build              | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE D4B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true | s262 ERR Cannot read properties of undefined (reading 'json') | target ERR Cannot read properties of undefined (reading 'json')
+NODE C4B Build              | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE C4B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true | s262 ERR Cannot read properties of undefined (reading 'json') | target ERR Cannot read properties of undefined (reading 'json')
+NO NODE OUTPUT CHANGES
+== 38450
+NODES RUN IN THIS EXECUTION: D2B Build, D2B Extract, C2B Build, C2B Extract, D3B Build, D3B Extract, C3B Build, C3B Extract, D4B Build, D4B Extract, C4B Build, C4B Extract
+NODE D2B Build              | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE D2B Extract            | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE C2B Build              | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE C2B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true | s262 ERR Cannot read properties of undefined (reading 'json') | target ERR Cannot read properties of undefined (reading 'json')
+NODE D3B Build              | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE D3B Extract            | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE C3B Build              | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE C3B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true | s262 ERR Cannot read properties of undefined (reading 'json') | target ERR Cannot read properties of undefined (reading 'json')
+NODE D4B Build              | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE D4B Extract            | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE C4B Build              | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE C4B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true | s262 ERR Cannot read properties of undefined (reading 'json') | target ERR Cannot read properties of undefined (reading 'json')
+NO NODE OUTPUT CHANGES
+== 38226
+NODES RUN IN THIS EXECUTION: D2B Build, D2B Extract, C2B Build, C2B Extract, D3B Build, D3B Extract, C3B Build, C3B Extract, D4B Build, D4B Extract, C4B Build, C4B Extract
+NODE D2B Build              | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE D2B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true | s262 ERR Cannot read properties of undefined (reading 'json') | target ERR Cannot read properties of undefined (reading 'json')
+NODE C2B Build              | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE C2B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true | s262 ERR Cannot read properties of undefined (reading 'json') | target ERR Cannot read properties of undefined (reading 'json')
+NODE D3B Build              | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE D3B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE C3B Build              | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE C3B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true | s262 ERR Cannot read properties of undefined (reading 'json') | target ERR Cannot read properties of undefined (reading 'json')
+NODE D4B Build              | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE D4B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE C4B Build              | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE C4B Extract            | s262 reproduces stored (time stamps aside): false | target == s262: true | s262 ERR Cannot read properties of undefined (reading 'json') | target ERR Cannot read properties of undefined (reading 'json')
+NO NODE OUTPUT CHANGES
+5bb099b78337baa992ae7d5ba40550f0  /tmp/claude-0/-home-user/86d59483-62fd-5fa0-b8c4-6322500f4823/scratchpad/g469/t475r1_engine.json
