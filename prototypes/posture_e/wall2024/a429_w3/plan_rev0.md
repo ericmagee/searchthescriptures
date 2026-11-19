@@ -1,0 +1,32 @@
+# ASK 429 plan rev 0 (W3): the enforcer model sees judges as "Judge 1/2/3", never by seat id
+
+1. OBJECTIVE. No enforcer prompt names a model, seat or maker: debaters already reach it only as DEFENDER and CHALLENGER (W4 9053 Q1 item 4; W1 9054 item 5), and after this ASK the judges reach it only as Judge 1, Judge 2 and Judge 3. Expected effect: the enforcer model (luna, an OpenAI model) can no longer tell from a label which judge is an OpenAI seat (chatgpt, sol, sol62) or any other maker's seat. On stored prompts, 0 of 418 then name a model (W1 9054 item 3). No verdict rule, code check or count changes; the enforcer's readings are unchanged except for the label. Source: the operator 20:47 CST 11-18, "mask the name by simply calling each 'Debate Defender' and 'Debate Challenger'".
+
+2. ROLES. Planner W3. Builder W4 (n8n sites). Graders W1 and W2. Write: W4, on the operator's card in W4's thread.
+
+3. SCOPE. The 11 label sites W4 listed (9053 Q1): Enforcer Build ("'- '+id+' ('+r.seat+'): RESPONSE: '"); Judge Contradiction Build (the two "('+c.seats.join(', ')+')" forms); Shared Library Judge Enforcer lines 3029, 3032, 3061, 3090, 3102, 3121, 3153, 3193 and line 3236; in the engine and, through the Shared Library, the child (Alt Judge Enforcer, R2 Alt Judge Enforcer). The label is the judge's panel position in this run: the seat in panel slot k is "Judge k"; an alternate or the reserve takes the number of the slot it fills. The line ids (A1.1 and so on) stay. Plus: any judge prompt that names a debater model, if W4's Q4 (Wall 9055) finds one; that part is added in rev 1 with its sites.
+Not in scope: records. debate_enforcer_log and judgment rows keep the seat (judge_model, seat columns); only the text sent to the enforcer model changes. Not in scope: Anticheat, Close Enforcer and Assume Check Builds (no seat today).
+SEARCH (planner's, from the Wall): W4 9053 (live b780b2ae, every enforcer build and library Judge Enforcer line); W1 9054 (418 stored prompts, 41 debate texts, audit tags SEAT:/MODEL: 0 of 418). Owed by the builder at step 1, every hit posted: a search of engine and child for every other place a judge seat id or api_model is joined into text the enforcer model receives (r.seat, x.seat, g.seat, j.seat, c.seats, .api_model), and of every reader that parses the "(seat)" label back out of an enforcer prompt or reply (for example a parser keyed on "(chatgpt)").
+
+4. CRITERIA and DONE.
+- C1. On the built targets, the 11 sites write "Judge k"; a search of the built Code text finds no seat id or api_model joined into an enforcer prompt.
+- C2. Replay over the 418 stored enforcer_check prompts (W1 9054 population): rebuilt prompts differ from stored ones only in the label; 0 name a model, seat or maker. Found nothing is not a pass: the count of changed prompts is above zero.
+- C3. The slot map: on stored runs with an alternate seated (for example run 39015, where sonnet sat), the alternate's label is the number of the slot it filled; no two judges share a number in one run.
+- C4. Any reader of the "(seat)" form found at step 1 is changed with it, or shown to read the record columns instead.
+- C5. ASK 385 check PASS; lib_sha changes and child Library Check passes on the targets (both workflows carry the same library).
+- C6. Live after the write: rbx.cjs 0 diffs on both workflows against the graded targets; W1 and W2 read back.
+DONE when C1 to C6 pass and the engine manual carries the entry.
+
+5. WRONG-IF. If the enforcer model needs the seat id to do its job (for example a rule that compares one named judge's line with that same judge's record), masking breaks that rule and the plan aims at the wrong thing. Check before the build (W4 at step 1): for each of the 11 sites, does any instruction text ask the enforcer to act on the seat name rather than the line id? Known-good: E-ANS item text names the judge only as a label. Known-bad case to show the check can fail: a planted item "compare chatgpt's line with chatgpt's grade" is flagged.
+
+6. RUN EVIDENCE. ASK 417 registry entry (W2 adds it): case = any run after the write with a seated panel; mark = debate_enforcer_log rows of kind enforcer_check whose stored prompt_sent holds "Judge 1" and holds none of the live seat ids; probe limited to rows that store prompt_sent.
+
+7. INPUTS IN GIT. This plan at a429_w3/plan_rev0.md. Build in a429_w4/ (targets, step 1 search, replay over the 418 prompts with outputs).
+
+8. STEPS.
+1. W4: step 1 search and the WRONG-IF check, posted; Q4 answered. (No card.)
+2. W3: rev 1 if step 1 or Q4 adds sites. (No card.)
+3. W4: build on fresh fetch-backs, on top of ASK 428 if 428 is written first (ASK 412 stacking; both change the library and the child). (No card.)
+4. W1 and W2 grade. (No card.)
+5. W4 posts the write card in W4's thread. Not undoable except by W4's revert files. (Waits on the operator's card.)
+6. W4 writes; W1 and W2 read back; W3 writes the engine manual entry on the operator's card in W3's thread.
