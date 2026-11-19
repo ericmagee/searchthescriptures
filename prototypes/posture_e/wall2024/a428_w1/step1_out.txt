@@ -1,0 +1,6 @@
+b780b2ae-26de-4e0f-aaf6-f4e1391b9985 Code 183 SharedLib readers 65 form3 33 std run line 31 nonstd Alternate Build|Early Alternate Build | other readers 32
+  known-good (2 header lines + REFLINE comment removed, rebuild equal): 31 bad 0 | known-bad (run line removed) refused: 31
+  other readers: Init with Guards; C1 Extract; D2 Build; D2 Extract; C2 Build; C2 Extract; D3 Build; D3 Extract; C3 Build; C3 Extract; Build Synthesis; Build Independent Verdict; Build Save Body; Panel Build; Format Markdown; Citation Scan; D4 Build; D4 Extract; C4 Build; C4 Extract; L2 Count Plan; C4G Extract; C3G Extract; C1B Extract; D2B Extract; C2B Extract; D3B Extract; C3B Extract; D4B Extract; C4B Extract; Alternate Merge; Library Sha (ASK 422a)
+7b043bab-71a0-47c5-9102-d3606756f9b2 Code 63 SharedLib readers 14 form3 13 std run line 13 nonstd none | other readers 1
+  known-good (2 header lines + REFLINE comment removed, rebuild equal): 13 bad 0 | known-bad (run line removed) refused: 13
+  other readers: Library Check (ASK 422a)
