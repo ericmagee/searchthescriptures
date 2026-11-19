@@ -1,0 +1,6 @@
+[
+ {
+  "old": "the engine manual is written only through engine_manual_apply.\n\n\n## 30. Run cadence",
+  "new": "the engine manual is written only through engine_manual_apply.\n\nASK AAR SNAPSHOTS (ASK 493). Before the coordinator sends an AAR to the operator, the coordinator inserts one row into ask_aar_snapshots for each ASK revision the AAR covers. This is a rule: no AAR is sent before its rows are in. Each row is filled from SQL (the_wall, audit_log, pg_proc and the live version reads) and from the seats' posted md5s, and every field cites its source id in sources. A field with no source reads \"not yet\", never a guess. Rows are never edited: a later change to an ASK is a new row whose prior_row names the earlier one. The table refuses UPDATE and DELETE, has no anon or authenticated path, and writes an audit_log row on every insert. md5_match false means a written md5 was not among the PASS-graded md5s; the AAR reports it. The seats' duties do not change.\n\n\n## 30. Run cadence"
+ }
+]
