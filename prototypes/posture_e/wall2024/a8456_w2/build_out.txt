@@ -1,0 +1,9 @@
+engine | Extract Independent Verdict | adds Assume Check Record, Cited Verses, L2 Count Plan, Panel Build | md5 fb8118d3a174 -> 033da4396b6d
+engine | Panel Payloads | adds Assume Check Record, L2 Count Plan | md5 12ea8219d3e7 -> 108c8d787940
+engine | Alternate Payloads | adds Assume Check Record, L2 Count Plan | md5 9b8eb619d4fd -> d1d7eafca4e9
+engine | Send Back Record | adds L2 Count Plan | md5 ee1b5ad0d93b -> 4893e90a3189
+engine | Alt Send Back Record | adds L2 Count Plan | md5 cec6a595be3e -> 9cffdb88deb9
+engine changed 5 | target a8456_w2/out/engine_target.json md5 622f269e9c8e
+child | R2 Alt Send Back Record | adds L2 Count Plan | md5 dc50295f6114 -> c502e4d45f3d
+child | R2 Alternate Payloads | adds Assume Check Record, L2 Count Plan | md5 6a65e72fec78 -> d71434549a69
+child changed 2 | target a8456_w2/out/child_target.json md5 9d328c208c69
