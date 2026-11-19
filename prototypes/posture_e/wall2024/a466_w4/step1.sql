@@ -1,4 +1,4 @@
--- ASK 466 step 1 (W4 build, rev 1 plan). NOT APPLIED. Branch first; live only on the operator's card.
+-- ASK 466 step 1 rev 3 (W4 build, rev 1 plan; rev 3 adds the two gate armings). NOT APPLIED. Branch first; live only on the operator's card.
 BEGIN;
 -- 1a direct audit_log inserts
 REVOKE INSERT ON public.audit_log FROM anon, authenticated;
@@ -15,10 +15,14 @@ ALTER FUNCTION public.debate_results_write_guard() SECURITY DEFINER SET search_p
 ALTER FUNCTION public.truth_date_normalize() SECURITY DEFINER SET search_path = public, pg_temp;
 ALTER FUNCTION public.debate_judgments_write_guard() SECURITY DEFINER SET search_path = public, pg_temp;
 ALTER FUNCTION public.debate_prompts_guard() SECURITY DEFINER SET search_path = public, pg_temp;
+-- GATE ARMOR (test 11-19, Wall 9496): kb_row_audit and log_override_arming are protected; the one-shot flag is armed on the operator's word, once per change.
+UPDATE public.app_state SET value = 'true' WHERE key = 'gate_mutation_authorized';
 ALTER FUNCTION public.kb_row_audit() SECURITY DEFINER SET search_path = public, pg_temp;
 ALTER FUNCTION public.log_app_state_build() SECURITY DEFINER SET search_path = public, pg_temp;
 ALTER FUNCTION public.sight_embedding_fence() SECURITY DEFINER SET search_path = public, pg_temp;
 -- log_override_arming: definer, actor from the request role (C-1). Only the current_user line changes.
+-- GATE ARMOR (test 11-19, Wall 9496): kb_row_audit and log_override_arming are protected; the one-shot flag is armed on the operator's word, once per change.
+UPDATE public.app_state SET value = 'true' WHERE key = 'gate_mutation_authorized';
 CREATE OR REPLACE FUNCTION public.log_override_arming()
  RETURNS trigger LANGUAGE plpgsql SECURITY DEFINER SET search_path = public, pg_temp
 AS $function$
@@ -75,4 +79,6 @@ REVOKE INSERT, UPDATE ON public.the_wall, public.day_room FROM authenticated;
 REVOKE INSERT ON public.day_room_posts FROM authenticated;
 REVOKE INSERT, UPDATE ON public.journal_entries FROM authenticated;
 -- day_room, day_room_posts and the_wall policies name anon and authenticated; they stay but no longer apply (no grant).
+-- the flag must be false again here (each arming is consumed by its change)
+DO $c$ BEGIN IF (SELECT value FROM public.app_state WHERE key='gate_mutation_authorized') <> 'false' THEN RAISE EXCEPTION 'ASK 466: gate flag not consumed'; END IF; END $c$;
 COMMIT;
