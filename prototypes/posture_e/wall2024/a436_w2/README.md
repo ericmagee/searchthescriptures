@@ -1,0 +1,2 @@
+# ASK 436 build grade (W2)
+c436_c4.cjs: L2 Count Plan replay, ASK 430 target against ASK 436 target (a436_w1/build436.cjs), on runs 37510, 36677, 35526. Renderings sets a438_w2/ren_c4.json and per-word counts a438_w2/ct_c4.json, both by SQL on kjv_word_map with the node word fold, injected in place of the REN builder in both; col and kjv reads answered as failed in both. Checks every changed kjv list against the expected order and the "and N more" entry. Output c436_c4_out.txt.
