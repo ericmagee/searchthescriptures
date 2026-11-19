@@ -3,7 +3,7 @@
 Called by tools/restw.py and tools/libw.py only after their readback passed. The row lists every removed, added and changed node
 and every changed connection key, from the prewrite against the fetchback, with the card that authorized the write.
 Key: env SUPABASE_PUBLISHABLE_KEY, else the project's publishable key (public by design). On failure it prints the SQL to run by hand
-and exits 3, so a missing row is never silent."""
+and exits 3 (fatal=True), or returns None so a caller can finish its other writes and exit 3 at the end; a missing row is never silent."""
 import json,os,sys,urllib.request
 URL='https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/log_audit_event'
 KEY=os.environ.get('SUPABASE_PUBLISHABLE_KEY','sb_publishable_rgfWFjynRqBdzyEeBRHcig_c6pHysAi')
@@ -24,13 +24,15 @@ def notes(seat,card,pre,back,extra=''):
       back.get('activeVersionId')==back.get('versionId'),', '.join(rm) or 'none',', '.join(add) or 'none',', '.join(ch) or 'none',', '.join(cc) or 'none',
       (' '+extra) if extra else ''))
 
-def post(title,text):
+def post(title,text,fatal=True):
   body=json.dumps({'session_title':title,'notes':text,'engine':'n8n'}).encode()
   r=urllib.request.Request(URL,data=body,method='POST',headers={'apikey':KEY,'Authorization':'Bearer '+KEY,'Content-Type':'application/json'})
   try:
     rid=json.load(urllib.request.urlopen(r,timeout=60));print('AUDIT ROW',rid);return rid
   except Exception as e:
-    q=text.replace("'","''");print('AUDIT ROW NOT WRITTEN (%s). Run by hand:\nselect log_audit_event(\'%s\', \'%s\', \'n8n\');'%(e,title,q));sys.exit(3)
+    q=text.replace("'","''");print('AUDIT ROW NOT WRITTEN (%s). Run by hand:\nselect log_audit_event(\'%s\', \'%s\', \'n8n\');'%(e,title,q))
+    if fatal:sys.exit(3)
+    return None
 
 if __name__=='__main__':
   # manual use: audit_row.py <title> <seat> <card> <prewrite.json> <fetchback.json> [--dry]

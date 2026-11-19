@@ -1,6 +1,6 @@
 # tools/: the shared check tools (lab item 8 of Wall 8821; ASK 447)
 
-Run from this folder or give paths. Each tool is read-only against live systems; none writes n8n or the database.
+Run from this folder or give paths. Each tool is read-only against live systems, except the writers restw.py and libw.py (n8n, only on an operator card) and audit_row.py (one audit_log row after a verified write).
 
 | Tool | ASK | Use | When |
 |---|---|---|---|

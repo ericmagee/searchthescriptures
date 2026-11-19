@@ -1,0 +1,24 @@
+== rev1 T1 restw dry on live, wrapped target {data:...}
+REASONING GUARD: no model-setting change.
+PLAN removed [] added [] changed [] connections []
+DRY: checks pass, nothing written
+== rev1 T2 restw --write without --seat/--card
+REFUSED: --write needs --seat and --card
+== rev1 compare check (6 keys): fetchback vs graded target, and a planted credential change
+rdf/fetchback_w460_ppj.json diffs []
+  planted credential change caught: ['Call openrouter']
+rdf/fetchback_w461_ppj.json diffs []
+  planted credential change caught: ['Call openrouter']
+== rev1 T4 libw dry
+library sha engine 0f221f86024a2c69 child 0f221f86024a2c69
+DRY: nothing written
+== rev1 T7 non-fatal post returns None, no exit
+AUDIT ROW NOT WRITTEN (HTTP Error 401: Unauthorized). Run by hand:
+select log_audit_event('t463_test', 'x', 'n8n');
+returned None and continued
+exit 0
+== rev1 T8 fatal post still exits 3
+exit 3
+== rev1 T4b libw dry after move
+library sha engine 0f221f86024a2c69 child 0f221f86024a2c69
+DRY: nothing written

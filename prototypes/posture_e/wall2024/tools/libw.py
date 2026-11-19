@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""ASK 463 (tools copy): after each workflow's readback passes, one audit_log row is written through tools/audit_row.py; a failed readback writes none. ASK 458 variant (W4): adds --removes (live nodes absent from the target are removed, listed, and checked absent after the write). ASK 455 D variant (W4): adds --renames (target nodes matched to live by node id; renamed nodes declared). ASK 422(a): one writer for the engine and its child ("two copies, one writer, checked at load"). Joins rdf/wgen.py and rdf/wchild.py.
+"""ASK 463 (tools copy): both workflows are written and read back first; only then one audit_log row per workflow is written through tools/audit_row.py (a failed row prints its SQL and the script exits 3 at the end); a failed readback writes no row. ASK 458 variant (W4): adds --removes (live nodes absent from the target are removed, listed, and checked absent after the write). ASK 455 D variant (W4): adds --renames (target nodes matched to live by node id; renamed nodes declared). ASK 422(a): one writer for the engine and its child ("two copies, one writer, checked at load"). Joins rdf/wgen.py and rdf/wchild.py.
 usage: python3 tools/libw.py <eng_versionId> <child_versionId> <eng_base.json> <child_base.json> <tag>
          (--pairs pairs.json | --targets eng_target.json child_target.json) [--add-eng n1,n2] [--add-child n1,n2] [--allow-reasoning] [--write --seat <seat> --card "<card text and time>"]
 --pairs: one set of library pairs, applied to both Shared Libraries by a422a/lib_apply.cjs (refuses unless both bodies give one sha).
@@ -60,7 +60,7 @@ if se!=sc:sys.exit('REFUSED: the two library bodies differ')
 if '--write' not in A:print('DRY: nothing written');sys.exit()
 seat,card=arg('--seat'),arg('--card')
 if not (seat and card):sys.exit('REFUSED: --write needs --seat and --card (ASK 463)')
-out={}
+out={};AUDIT_FAIL=[];BACK={}
 for k in WF:
   t=T[k];req(API+'workflows/'+WF[k],'PUT',{'name':live[k]['name'],'nodes':t['nodes'],'connections':t['connections'],'settings':live[k]['settings']})
   back=req(API+'workflows/'+WF[k]);KN={x['name']:x for x in back['nodes']};fail=[]
@@ -75,5 +75,8 @@ for k in WF:
   json.dump(back,open(D+'fetchback_%s_%s.json'%(tag,k),'w'));out[k]=(back['versionId'],libsha(back),back.get('updatedAt'))
   print(k,'back',back['versionId'],'nodes',len(KN),'lib',out[k][1],'FAIL' if fail else 'READBACK OK',fail[:10])
   if fail:sys.exit('STOPPED after %s; no audit row written for it; revert from %sprewrite_%s_*.json'%(k,D,tag))
-  audit_row.post('n8n_workflow_publish',audit_row.notes(seat,card,live[k],back,'Tag %s_%s; library sha %s; revert %sprewrite_%s_%s.json.'%(tag,k,out[k][1],D,tag,k)))
+  BACK[k]=back
 print('BOTH LIBRARIES', 'EQUAL' if out['engine'][1]==out['child'][1] else 'DIFFER', out['engine'][1], out['child'][1])
+for k in WF:
+  if audit_row.post('n8n_workflow_publish',audit_row.notes(seat,card,live[k],BACK[k],'Tag %s_%s; library sha %s; revert %sprewrite_%s_%s.json.'%(tag,k,out[k][1],D,tag,k)),fatal=False) is None:AUDIT_FAIL.append(k)
+if AUDIT_FAIL:sys.exit('BOTH WRITTEN AND READ BACK, but the audit row failed for %s: run the printed SQL by hand (ASK 463)'%AUDIT_FAIL)
