@@ -1,0 +1,4 @@
+RS.enforcer {"seat":"luna","api_model":"openai/gpt-6-luna","max_tokens":64000} | RS.deepseek {"api_model":"deepseek-flash","max_tokens":64000}
+E-ASSUME EA_28742_luna_r1 EQUAL true
+E-ANS (D4) D4_45264_luna_r1 EQUAL true
+statements: const body={model:ds.api_model,max_tokens:Math.max(Number(ds.max_tokens)||0,8000),temperat ... | {model:ds.api_model,max_tokens:Math.max(Number(ds.max_tokens)||0,16000),temperature:0,mess ...
