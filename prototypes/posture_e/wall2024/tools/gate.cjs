@@ -8,6 +8,13 @@ const key=n=>JSON.stringify([n.type,n.typeVersion,n.parameters]);const bm=new Ma
 const changed=[...new Set([...bm.keys(),...cm.keys()])].filter(k=>bm.get(k)!==cm.get(k)).sort();
 const conn=JSON.stringify(B.connections)===JSON.stringify(C.connections);
 console.log('BASE',B.versionId,'CAND',C.versionId||'(target)','CHANGED',JSON.stringify(changed),'CONNECTIONS',conn?'equal':'differ');
+const acorn=require('acorn');const cmts=(c,k)=>{if(k==='Shared Library'){const i=c.indexOf('/*LIB*/');return (i<0?c:c.slice(0,i)).split('\n').filter(l=>/^\s*\/\//.test(l));}const o=[];acorn.parse('(async function(){'+c+'\n})',{ecmaVersion:'latest',onComment:(b,t)=>o.push(t)});return o;};
+const bn=new Map(B.nodes.map(n=>[n.name,n])),cn=new Map(C.nodes.map(n=>[n.name,n]));const cbad=[];
+for(const k of changed){const x=cn.get(k);if(!x||typeof (x.parameters||{}).jsCode!=='string')continue;const y=bn.get(k),yc=y&&typeof (y.parameters||{}).jsCode==='string'?y.parameters.jsCode:'';
+ let a,b;try{a=cmts(yc,k).length;b=cmts(x.parameters.jsCode,k).length;}catch(e){cbad.push(k+' (cannot parse: '+e.message+')');continue;}
+ if(b>a)cbad.push(k+' ('+a+' -> '+b+' comments)');}
+if(cbad.length){console.log('COMMENT IN A CHANGED CODE NODE (engine manual s15, ASK 469): '+cbad.join('; '));process.exit(6);}
+console.log('COMMENTS: no changed Code node gains a comment');
 if(!changed.length){console.log('NOTHING TO REPLAY');process.exit(0);}
 const {replay,save,net}=require(path.join(__dirname,'..','a430_w1','chain430.cjs'));
 const CHAIN=['Citation Scan','Cited Verses','Quote Compare','Find Words','L2 Words Plan','L2 Words','L2 Lexicon Plan','L2 Lexicon','L2 Gloss Plan','L2 Gloss Any','L2 Gloss Read','L2 Gloss Pages Plan','L2 Gloss Pages Any','L2 Gloss Pages Read','L2 Count Plan'];

@@ -1,0 +1,63 @@
+== T1 base equals candidate (live engine 828dc91d vs itself)
+BASE 828dc91d-3cc1-4fe4-9f0b-5f4c4b6acca1 CAND 828dc91d-3cc1-4fe4-9f0b-5f4c4b6acca1 CHANGED [] CONNECTIONS equal
+COMMENTS: no changed Code node gains a comment
+NOTHING TO REPLAY
+exit 0
+== T2 line comment planted in Panel Check (outside the chain)
+BASE 828dc91d-3cc1-4fe4-9f0b-5f4c4b6acca1 CAND (target) CHANGED ["Panel Check"] CONNECTIONS equal
+COMMENT IN A CHANGED CODE NODE (engine manual s15, ASK 469): Panel Check (0 -> 1 comments)
+exit 6
+== T3 block comment planted in Panel Check
+BASE 828dc91d-3cc1-4fe4-9f0b-5f4c4b6acca1 CAND (target) CHANGED ["Panel Check"] CONNECTIONS equal
+COMMENT IN A CHANGED CODE NODE (engine manual s15, ASK 469): Panel Check (0 -> 1 comments)
+exit 6
+== T4 '//' inside a string literal in Panel Check (not a comment)
+BASE 828dc91d-3cc1-4fe4-9f0b-5f4c4b6acca1 CAND (target) CHANGED ["Panel Check"] CONNECTIONS equal
+COMMENTS: no changed Code node gains a comment
+NOT COVERED by the chain replay: ["Panel Check"]. Rerun with --spec SPEC.json --rows ROWS.json (a418_w4/replay418.cjs form).
+exit 4
+== T5 Shared Library header sha line changed (no new comment line)
+BASE 828dc91d-3cc1-4fe4-9f0b-5f4c4b6acca1 CAND (target) CHANGED ["Shared Library"] CONNECTIONS equal
+COMMENTS: no changed Code node gains a comment
+NOT COVERED by the chain replay: ["Shared Library"]. Rerun with --spec SPEC.json --rows ROWS.json (a418_w4/replay418.cjs form).
+exit 4
+== T6 Shared Library header gains a comment line
+BASE 828dc91d-3cc1-4fe4-9f0b-5f4c4b6acca1 CAND (target) CHANGED ["Shared Library"] CONNECTIONS equal
+COMMENT IN A CHANGED CODE NODE (engine manual s15, ASK 469): Shared Library (4 -> 5 comments)
+exit 6
+== T7 Early Alternate Build changed, its one kept comment unchanged (1 -> 1)
+BASE 828dc91d-3cc1-4fe4-9f0b-5f4c4b6acca1 CAND (target) CHANGED ["Early Alternate Build"] CONNECTIONS equal
+COMMENTS: no changed Code node gains a comment
+NOT COVERED by the chain replay: ["Early Alternate Build"]. Rerun with --spec SPEC.json --rows ROWS.json (a418_w4/replay418.cjs form).
+exit 4
+== T8 ASK 464 c7366RPLb8vdMQg6 base -> target (comments removed)
+BASE e2fa573a-9f7f-456e-972a-1b4487ac1c8b CAND e2fa573a-9f7f-456e-972a-1b4487ac1c8b CHANGED ["Provider Removed Stop","Skip Return"] CONNECTIONS equal
+COMMENTS: no changed Code node gains a comment
+NOT COVERED by the chain replay: ["Provider Removed Stop","Skip Return"]. Rerun with --spec SPEC.json --rows ROWS.json (a418_w4/replay418.cjs form).
+exit 4
+== T9 ASK 464 c7366RPLb8vdMQg6 reversed, target -> base (comments added back)
+BASE x CAND e2fa573a-9f7f-456e-972a-1b4487ac1c8b CHANGED ["Provider Removed Stop","Skip Return"] CONNECTIONS equal
+COMMENT IN A CHANGED CODE NODE (engine manual s15, ASK 469): Provider Removed Stop (0 -> 1 comments); Skip Return (0 -> 1 comments)
+exit 6
+== T8 ASK 464 Y1VIsNB6KBrs1znP base -> target (comments removed)
+BASE 474d8def-edcf-44e3-8269-33215ae3add9 CAND 474d8def-edcf-44e3-8269-33215ae3add9 CHANGED ["Wrap"] CONNECTIONS equal
+COMMENTS: no changed Code node gains a comment
+NOT COVERED by the chain replay: ["Wrap"]. Rerun with --spec SPEC.json --rows ROWS.json (a418_w4/replay418.cjs form).
+exit 4
+== T9 ASK 464 Y1VIsNB6KBrs1znP reversed, target -> base (comments added back)
+BASE x CAND 474d8def-edcf-44e3-8269-33215ae3add9 CHANGED ["Wrap"] CONNECTIONS equal
+COMMENT IN A CHANGED CODE NODE (engine manual s15, ASK 469): Wrap (0 -> 3 comments)
+exit 6
+== T8 ASK 464 SX4ZWtgHNs96uBOo base -> target (comments removed)
+BASE 30a47a4a-308c-49ee-b0af-b5a4ea32b1d9 CAND 30a47a4a-308c-49ee-b0af-b5a4ea32b1d9 CHANGED ["Early Alternate Shape"] CONNECTIONS equal
+COMMENTS: no changed Code node gains a comment
+NOT COVERED by the chain replay: ["Early Alternate Shape"]. Rerun with --spec SPEC.json --rows ROWS.json (a418_w4/replay418.cjs form).
+exit 4
+== T9 ASK 464 SX4ZWtgHNs96uBOo reversed, target -> base (comments added back)
+BASE x CAND 30a47a4a-308c-49ee-b0af-b5a4ea32b1d9 CHANGED ["Early Alternate Shape"] CONNECTIONS equal
+COMMENT IN A CHANGED CODE NODE (engine manual s15, ASK 469): Early Alternate Shape (0 -> 1 comments)
+exit 6
+== T10 the real miss: ASK 460 rev 1 target (381a6020) against its live base 5297cdd3-9d64-4abb-a4d7-9b1eaef313d0
+BASE 5297cdd3-9d64-4abb-a4d7-9b1eaef313d0 CAND 5297cdd3-9d64-4abb-a4d7-9b1eaef313d0 CHANGED ["Call deepseek","Provider Removed Reply"] CONNECTIONS differ
+COMMENT IN A CHANGED CODE NODE (engine manual s15, ASK 469): Provider Removed Reply (0 -> 1 comments)
+exit 6
