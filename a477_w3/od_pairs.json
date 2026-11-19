@@ -1,0 +1,6 @@
+[
+ {
+  "old": "every insert forces an `audit_log` row (version, md5, length).",
+  "new": "every insert forces an `audit_log` row (version, md5, length, and since ASK 477 card, session and the prior version with its md5). The writer sets `SET LOCAL truth.card = '<card label> <press time>Z <thread seat>'` in the same call as the insert; without it the row says card=NONE and the insert still succeeds. The card field is the writer's claim, not proof of a press."
+ }
+]
