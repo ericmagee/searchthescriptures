@@ -1,0 +1,39 @@
+live 1861543f-515b-42dc-8e61-6093daa300db | before ASK 374 9fc1d4a8-6c3d-49f5-9269-d5ae87ca4619 | stored excerpt md5 88c2e566920b18f7931a103dda8e76ea
+CUT step 1 live acb <- node:Assume Check Build (plain Code node) sha 11c3898d85f5
+FREE NAMES step 1: none
+CUT step 2 live acr <- node:Assume Check Record (plain Code node) sha cad74a6dd29d
+FREE NAMES step 2: none
+CUT step 3 live bnsRefuse2024: 1 copy, 1 text [a7ed00b8efc0] (stub rebuilt from the library)
+CUT step 3 live bnsFacts2024: 1 copy, 1 text [73a81bc845df] (stub rebuilt from the library)
+CUT step 3 live __RL: 1 copy, 1 text [76a3944807b7] (stub rebuilt from the library)
+FREE NAMES step 3: none
+CUT step 3 pre-374 bnsRefuse2024: 1 copy, 1 text [f47008953921] (stub rebuilt from the library)
+CUT step 3 pre-374 bnsFacts2024: 1 copy, 1 text [73a81bc845df] (stub rebuilt from the library)
+CUT step 3 pre-374 __RL: 1 copy, 1 text [76a3944807b7] (stub rebuilt from the library)
+== 1 W2-C1 form, BOTH NOT STATED (premise 2)
+  PASS step 1 Assume Check Build: CHALLENGER premise n 2 link 2 ASSUMES "Mary was a virgin of the tribe of Levi --" | block 1452 chars, quotes 4 | answer round DR3 | premises 1 | prompt carries it: true
+  PASS step 2 Assume Check Record: BOTH NOT STATED facts [{"side":"CHALLENGER","n":2,"link":2,"both_not_stated":true}] | all facts [["CHALLENGER",2,"NOT STATED","NOT STATED"]]
+  PASS step 3 "D4 vs C2 (Luke 1:35): DEFENDER LINK BROKEN -- GROUND: x": live REFUSED: the change sets D4 vs C2 to DEFENDER LINK BROKEN, but E-ASSUME found the fact challenger premise 2 ASSUMES, "Mary was a virgin of the tribe of Levi",  (want REFUSED) | before 374: applied
+  PASS step 3 "D4 vs C2 (Luke 1:35): CHALLENGER LINK BROKEN -- GROUND: x": live applied (want applied) | before 374: applied
+  PASS step 3 "D4 vs C2 (Luke 1:35): STANDS -- GROUND: x": live applied (want applied) | before 374: applied
+  PASS step 3 "FORCED (D4 vs C2): D4 vs C2 (Luke 1:35): DEFENDER LINK BROKE": live REFUSED: the change sets D4 vs C2 to DEFENDER LINK BROKEN, but E-ASSUME found the fact challenger premise 2 ASSUMES, "Mary was a virgin of the tribe of Levi",  (want REFUSED) | before 374: applied
+== 2 same plant, STATED reply
+  PASS step 1 Assume Check Build: CHALLENGER premise n 2 link 2 ASSUMES "Mary was a virgin of the tribe of Levi --" | block 1452 chars, quotes 4 | answer round DR3 | premises 1 | prompt carries it: true
+  PASS step 2 Assume Check Record: BOTH NOT STATED facts [] | all facts [["CHALLENGER",2,"STATED","NOT STATED"]]
+  PASS step 3 "D4 vs C2 (Luke 1:35): DEFENDER LINK BROKEN -- GROUND: x": live applied (want applied) | before 374: applied
+== 3 W2-C2 (i): the fact on premise 3
+  PASS step 1 Assume Check Build: CHALLENGER premise n 3 link 3 ASSUMES "Mary was a virgin of the tribe of Levi --" | block 0 chars, quotes 0 | answer round DR3 | premises 1 | prompt carries it: true
+  PASS step 2 Assume Check Record: BOTH NOT STATED facts [{"side":"CHALLENGER","n":3,"link":3,"both_not_stated":true}] | all facts [["CHALLENGER",3,"NOT STATED","NOT STATED"]]
+  PASS step 3 "D4 vs C2 (Luke 1:35): DEFENDER LINK BROKEN -- GROUND: x": live applied (want applied) | before 374: applied
+== 4 W2-C2 (ii): premise 2 labelled LINK 4
+  PASS step 1 Assume Check Build: CHALLENGER premise n 2 link 4 ASSUMES "Mary was a virgin of the tribe of Levi --" | block 0 chars, quotes 0 | answer round DR3 | premises 1 | prompt carries it: true
+  PASS step 2 Assume Check Record: BOTH NOT STATED facts [{"side":"CHALLENGER","n":2,"link":4,"both_not_stated":true}] | all facts [["CHALLENGER",2,"NOT STATED","NOT STATED"]]
+  PASS step 3 "D1 vs C2 (Matthew 1:16): DEFENDER LINK BROKEN -- GROUND: x": live REFUSED: the change sets D1 vs C2 to DEFENDER LINK BROKEN, but E-ASSUME found the fact challenger premise 2 ASSUMES, "Mary was a virgin of the tribe of Levi",  (want REFUSED) | before 374: applied
+  PASS step 3 "D4 vs C4 (Luke 1:35): DEFENDER LINK BROKEN -- GROUND: x": live applied (want applied) | before 374: applied
+== 5 W2-C2 (iii): a defender fact on link 4 beside the challenger fact
+  PASS step 1 Assume Check Build: CHALLENGER premise n 2 link 2 ASSUMES "Mary was a virgin of the tribe of Levi --" | block 1452 chars, quotes 4 | answer round DR3 | premises 2 | prompt carries it: true
+  PASS step 2 Assume Check Record: BOTH NOT STATED facts [{"side":"DEFENDER","n":3,"link":4,"both_not_stated":true},{"side":"CHALLENGER","n":2,"link":2,"both_not_stated":true}] | all facts [["DEFENDER",3,"NOT STATED","NOT STATED"],["CHALLENGER",2,"NOT STATED","NOT STATED"]]
+  PASS step 3 "D4 vs C2 (Luke 1:35): STANDS -- GROUND: x": live REFUSED: the change sets D4 to STANDS, but E-ASSUME found the fact its premise 3 ASSUMES, "Joseph was of the tribe of Levi", BOTH NOT STATED: no quoted verse s (want REFUSED) | before 374: REFUSED
+  PASS step 3 "D4 vs C2 (Luke 1:35): DEFENDER LINK BROKEN -- GROUND: x": live REFUSED: the change sets D4 vs C2 to DEFENDER LINK BROKEN, but E-ASSUME found the fact challenger premise 2 ASSUMES, "Mary was a virgin of the tribe of Levi",  (want REFUSED) | before 374: applied
+  PASS step 3 "D3 vs C2 (Luke 1:35): STANDS -- GROUND: x": live applied (want applied) | before 374: applied
+RESULT: PASS

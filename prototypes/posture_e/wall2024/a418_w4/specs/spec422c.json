@@ -1,0 +1,187 @@
+{
+ "cut": [
+  {
+   "from": "lib:Cure Check",
+   "names": [
+    "KV_KIND",
+    "KV_EXCL"
+   ]
+  }
+ ],
+ "stubs": "const mask=s=>String(s).replace(/[\"“][^\"”\\n]*[\"”]/g,'\"Q\"').replace(/(^|[\\s(\\[:;,])['‘](?:[^'’\\n]|['’](?=[A-Za-z]))+?['’](?=$|[\\s.,;:!?)\\]])/g,\"$1'Q'\");const kind=s=>KV_KIND.test(s)||KV_KIND.test(mask(s))||KV_EXCL.test(mask(s));",
+ "call": "kind(row.t)",
+ "empty": "out===false",
+ "cases": [
+  {
+   "id": "a",
+   "row": {
+    "id": "a",
+    "t": "an exclusion the quote never makes."
+   },
+   "want": true,
+   "want_base": false
+  },
+  {
+   "id": "b",
+   "row": {
+    "id": "b",
+    "t": "the quotation never makes that exclusion"
+   },
+   "want": true,
+   "want_base": false
+  },
+  {
+   "id": "c",
+   "row": {
+    "id": "c",
+    "t": "excludes a reading that the quoted words never excludes."
+   },
+   "want": true,
+   "want_base": false
+  },
+  {
+   "id": "d",
+   "row": {
+    "id": "d",
+    "t": "the exclusion is one the quote's words do not makes;"
+   },
+   "want": true,
+   "want_base": false
+  },
+  {
+   "id": "e1 W3 GOOD RESPONSE 43873",
+   "row": {
+    "id": "e1 W3 GOOD RESPONSE 43873",
+    "t": "The mark is accepted: the ruling's kind is an exclusion the quote's words do not make."
+   },
+   "want": true,
+   "want_base": true
+  },
+  {
+   "id": "e2 W3 GOOD STATEMENT 43873",
+   "row": {
+    "id": "e2 W3 GOOD STATEMENT 43873",
+    "t": "The charge says \"rather than as the consequence of the Spirit's overshadowing\"; the quotation's connection back to verse 32 does not itself make that exclusion."
+   },
+   "want": true,
+   "want_base": true
+  },
+  {
+   "id": "e3 W3 GOOD VOID terra",
+   "row": {
+    "id": "e3 W3 GOOD VOID terra",
+    "t": "excludes a reading that the quoted connection back to verse 32 does not itself exclude"
+   },
+   "want": true,
+   "want_base": true
+  },
+  {
+   "id": "e4 W3 BAD quoted charge",
+   "row": {
+    "id": "e4 W3 BAD quoted charge",
+    "t": "The charge says \"excludes Joseph\"; the quotation does not make it plain."
+   },
+   "want": false,
+   "want_base": false
+  },
+  {
+   "id": "e5 W3 BAD topic prose",
+   "row": {
+    "id": "e5 W3 BAD topic prose",
+    "t": "The exclusion of Joseph is the defender's whole case."
+   },
+   "want": false,
+   "want_base": false
+  },
+  {
+   "id": "e6 W3 BAD topic + quote",
+   "row": {
+    "id": "e6 W3 BAD topic + quote",
+    "t": "The exclusion of Joseph from the line is what the quotation is about, and it does not make sense otherwise."
+   },
+   "want": false,
+   "want_base": false
+  },
+  {
+   "id": "e7 W3 curly quote's",
+   "row": {
+    "id": "e7 W3 curly quote's",
+    "t": "an exclusion the quote’s words do not make"
+   },
+   "want": true,
+   "want_base": true
+  },
+  {
+   "id": "e8 W3 BAD after-order prose",
+   "row": {
+    "id": "e8 W3 BAD after-order prose",
+    "t": "The quotation does not make the exclusion of Joseph plain."
+   },
+   "want": false,
+   "want_base": false
+  },
+  {
+   "id": "e9 W3 BAD quoted charge after-order",
+   "row": {
+    "id": "e9 W3 BAD quoted charge after-order",
+    "t": "The quotation does not make \"that exclusion\"."
+   },
+   "want": false,
+   "want_base": false
+  },
+  {
+   "id": "f",
+   "row": {
+    "id": "f",
+    "t": "The quotation never makes the exclusion of Joseph plain."
+   },
+   "want": false,
+   "want_base": false
+  },
+  {
+   "id": "g1",
+   "row": {
+    "id": "g1",
+    "t": "the quote makes no exclusion"
+   },
+   "want": false,
+   "want_base": false
+  },
+  {
+   "id": "g2",
+   "row": {
+    "id": "g2",
+    "t": "exclusions are made by the quote"
+   },
+   "want": false,
+   "want_base": false
+  },
+  {
+   "id": "g3",
+   "row": {
+    "id": "g3",
+    "t": "the quote did not make that exclusion"
+   },
+   "want": false,
+   "want_base": false
+  },
+  {
+   "id": "g4",
+   "row": {
+    "id": "g4",
+    "t": "the quote has not made that exclusion"
+   },
+   "want": false,
+   "want_base": false
+  },
+  {
+   "id": "h",
+   "row": {
+    "id": "h",
+    "t": "The quotation never makes \"that exclusion\"."
+   },
+   "want": false,
+   "want_base": false
+  }
+ ]
+}

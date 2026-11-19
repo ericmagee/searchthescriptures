@@ -1,0 +1,34 @@
+base 36fcf36b-ed74-47e4-96ce-fecc74f0245d | cand 3257a833-d661-4767-ad98-bf620e21e542 | spec spec422c.json sha 295e95c81b12
+CUT base KV_KIND: 1 copy, 1 text [9bca7b5f4196] (library MAP Cure Check)
+CUT base KV_EXCL: 1 copy, 1 text [7baafdc11b58] (library MAP Cure Check)
+CUT cand KV_KIND: 1 copy, 1 text [9bca7b5f4196] (library MAP Cure Check)
+CUT cand KV_EXCL: 1 copy, 1 text [1f33a5fc4521] (library MAP Cure Check)
+FREE NAMES (base): none
+FREE NAMES (cand): none
+ROWS 1600 from rows422c.json sha 675b369db50d
+  EQUAL 1600 (non-empty 459, empty 1141)
+  CHANGED 0
+  NEWLY NON-EMPTY 0
+  EMPTIED 0
+  ERROR 0
+CASE PASS a | base false | cand true
+CASE PASS b | base false | cand true
+CASE PASS c | base false | cand true
+CASE PASS d | base false | cand true
+CASE PASS e1 W3 GOOD RESPONSE 43873 | base true | cand true
+CASE PASS e2 W3 GOOD STATEMENT 43873 | base true | cand true
+CASE PASS e3 W3 GOOD VOID terra | base true | cand true
+CASE PASS e4 W3 BAD quoted charge | base false | cand false
+CASE PASS e5 W3 BAD topic prose | base false | cand false
+CASE PASS e6 W3 BAD topic + quote | base false | cand false
+CASE PASS e7 W3 curly quote's | base true | cand true
+CASE PASS e8 W3 BAD after-order prose | base false | cand false
+CASE PASS e9 W3 BAD quoted charge after-order | base false | cand false
+CASE PASS f | base false | cand false
+CASE PASS g1 | base false | cand false
+CASE PASS g2 | base false | cand false
+CASE PASS g3 | base false | cand false
+CASE PASS g4 | base false | cand false
+CASE PASS h | base false | cand false
+CASES 19, failed 0 | ERROR rows 0 | CHANGED or EMPTIED outside allow_changed 0
+RESULT: PASS
