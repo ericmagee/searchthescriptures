@@ -31,4 +31,4 @@ DONE when C1 to C6 pass and the engine manual carries the entry.
 5. W4 posts the write card in W4's thread. Not undoable except by W4's revert files. (Waits on the operator's card.)
 6. W4 writes; W1 and W2 read back; W3 writes the engine manual entry on the operator's card in W3's thread.
 
-LIMIT (W2 9060 N2). Writing style can still show which model wrote a judge's line; no count measures that, and this ASK does not claim it.
+LIMIT (W2 9060 N2). Writing style can still show which model wrote a judge's line; no count measures that, and this ASK does not claim it. ACCEPTED by the operator (20:55 CST 11-18): "I don't think enforcers will have time for awareness to recognize writing styles ... I think that threat is low. I like the approach that's currently in play."
