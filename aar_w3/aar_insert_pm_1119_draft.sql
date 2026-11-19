@@ -1,4 +1,4 @@
--- ASK AAR snapshot rows for the 11-19 pm AAR, DRAFT rev 3 (W3; replaces rev 0 8d7abf3d and rev 1 77a99b51, which was never graded: builder rows added (W1 10014 F1; W2 10015 F1); manual times labelled as card times (W1 N1; W2 N3); 498 objective marked abridged and 5b48fb0f grades added (W2 N1, N2). Rows 18 and 19 are corrected by W2's fix_rows_18_19_draft.sql, not here). Rev 3: closing reads start after the correction rows, written 20:14:13Z as snapshot ids 26 and 27 with builder ids 18 and 19; the next snapshot id is 28. For W1 and W2 to grade. NOT RUN.
+-- ASK AAR snapshot rows for the 11-19 pm AAR, DRAFT rev 4 (W3; replaces rev 0 8d7abf3d and rev 1 77a99b51, which was never graded: builder rows added (W1 10014 F1; W2 10015 F1); manual times labelled as card times (W1 N1; W2 N3); 498 objective marked abridged and 5b48fb0f grades added (W2 N1, N2). Rows 18 and 19 are corrected by W2's fix_rows_18_19_draft.sql, not here). Rev 3: closing reads start after the correction rows, written 20:14:13Z as snapshot ids 26 and 27 with builder ids 18 and 19. Rev 4 (W2 10021 N1, N3): 497 builder sources add W4 9914; the new ids follow whatever correction rows run first (fix_row_27, if run first, takes 28), so read them from the closing reads. For W1 and W2 to grade. NOT RUN.
 -- The coordinator (seat 36) runs it once, after the grades, before the AAR is sent. No card.
 -- Covers ASK 497 and ASK 498 (written and read back), with one ask_aar_builders row each. Not yet included: the run 40891 row
 -- (aar_494a1_run_template.sql e6c5c08e, prior_row 16, after W4 reports the run) and the 494 A2 row (after its write).
@@ -71,7 +71,7 @@ INSERT INTO ask_aar_builders (snapshot_id, prior_row, builder_seats, sources, wr
 SELECT s.id, NULL, ARRAY['W4'], b.src, 'session_01H1X3APzb2DidJoZ9Avizjn'
 FROM ask_aar_snapshots s
 JOIN (VALUES
- (497, '5', '[{"seat":"W4","what":"built step497.sql rev 0 and rev 1 (6df72062)","wall_id":9919},{"seat":"W4","what":"wrote 497 on its card","wall_id":9985}]'::jsonb),
+ (497, '5', '[{"seat":"W4","what":"built step497.sql rev 0","wall_id":9914},{"seat":"W4","what":"built step497.sql rev 1 6df72062","wall_id":9919},{"seat":"W4","what":"wrote 497 on its card","wall_id":9985}]'::jsonb),
  (498, '3', '[{"seat":"W4","what":"built step498.sql 0d5ddbc8","wall_id":9963},{"seat":"W4","what":"wrote 498 on its card","wall_id":10000}]'::jsonb)
 ) AS b(ask, rev, src) ON s.ask = b.ask AND s.rev = b.rev AND s.prior_row IS NULL
 WHERE s.id > 25 AND s.aar_at = now();
