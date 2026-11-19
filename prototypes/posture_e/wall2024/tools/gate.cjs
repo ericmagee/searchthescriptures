@@ -22,4 +22,4 @@ for(const r of D){let x,y;try{x=replay(B,r);y=replay(C,r);}catch(e){t.errors++;e
  if(ch)t.changed++;}
 save();
 console.log('RUNS '+t.runs+' ERRORS '+t.errors+' CHANGED '+t.changed+' NET_READS '+net());for(const e of err)console.log(e);for(const o of out)console.log(o);
-process.exit(t.errors?5:0);
+process.exit(t.errors?5:(outChain.length&&!opt.spec?4:0));

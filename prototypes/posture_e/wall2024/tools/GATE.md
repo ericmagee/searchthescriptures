@@ -9,4 +9,5 @@
   base against candidate, on every stored run in debates.json, with cached REST reads (a430_w1/chain430.cjs). Output per changed run:
   "=== <run> | <node>" then OLD and NEW in full. Totals: RUNS, ERRORS, CHANGED.
 - Nodes outside the chain: exit 4 with NOT COVERED unless --spec is given; then replay418.cjs runs them.
-- Exit 5 on any replay error.
+- Exit 5 on any replay error. Exit 4 when any changed node is NOT COVERED and --spec is not given, even when the chain replay is clean.
+- RUNS counts the runs that replayed without error; ERRORS counts the rest.
