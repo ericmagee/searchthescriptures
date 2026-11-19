@@ -80,5 +80,5 @@ REVOKE INSERT ON public.day_room_posts FROM authenticated;
 REVOKE INSERT, UPDATE ON public.journal_entries FROM authenticated;
 -- day_room, day_room_posts and the_wall policies name anon and authenticated; they stay but no longer apply (no grant).
 -- the flag must be false again here (each arming is consumed by its change)
-DO $c$ BEGIN IF (SELECT value FROM public.app_state WHERE key='gate_mutation_authorized') <> 'false' THEN RAISE EXCEPTION 'ASK 466: gate flag not consumed'; END IF; END $c$;
+DO $c$ BEGIN IF (SELECT value FROM public.app_state WHERE key='gate_mutation_authorized') IS DISTINCT FROM 'false' THEN RAISE EXCEPTION 'ASK 466: gate flag not consumed'; END IF; END $c$;
 COMMIT;

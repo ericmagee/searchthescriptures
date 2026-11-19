@@ -11,10 +11,14 @@ ALTER FUNCTION public.debate_results_write_guard() SECURITY INVOKER RESET search
 ALTER FUNCTION public.truth_date_normalize() SECURITY INVOKER RESET search_path;
 ALTER FUNCTION public.debate_judgments_write_guard() SECURITY INVOKER RESET search_path;
 ALTER FUNCTION public.debate_prompts_guard() SECURITY INVOKER RESET search_path;
+-- GATE ARMOR: protected; one-shot flag armed on the operator's word, once per change.
+UPDATE public.app_state SET value = 'true' WHERE key = 'gate_mutation_authorized';
 ALTER FUNCTION public.kb_row_audit() SECURITY INVOKER RESET search_path;
 ALTER FUNCTION public.log_app_state_build() SECURITY INVOKER RESET search_path;
 ALTER FUNCTION public.sight_embedding_fence() SECURITY INVOKER RESET search_path;
 -- log_override_arming: the text before step 1 (inline; R-1)
+-- GATE ARMOR: protected; one-shot flag armed on the operator's word, once per change.
+UPDATE public.app_state SET value = 'true' WHERE key = 'gate_mutation_authorized';
 CREATE OR REPLACE FUNCTION public.log_override_arming()
  RETURNS trigger
  LANGUAGE plpgsql
@@ -73,4 +77,6 @@ CREATE POLICY anon_ins ON public.operational_doc FOR INSERT TO anon WITH CHECK (
 GRANT INSERT, UPDATE ON public.the_wall, public.day_room TO authenticated;
 GRANT INSERT ON public.day_room_posts TO authenticated;
 GRANT INSERT, UPDATE ON public.journal_entries TO authenticated;
+-- the flag must be false again here
+DO $c$ BEGIN IF (SELECT value FROM public.app_state WHERE key='gate_mutation_authorized') IS DISTINCT FROM 'false' THEN RAISE EXCEPTION 'ASK 466: gate flag not consumed'; END IF; END $c$;
 COMMIT;
