@@ -66,3 +66,7 @@ BEGIN
 END;
 $function$
 ;
+DO $d$ DECLARE v text := pg_get_functiondef('public.dash_api(text,text,jsonb)'::regprocedure); BEGIN
+  EXECUTE replace(v, $q$dash_launch_debate(p_arg->>'p_topic', p_arg->>'p_engine',$q$, $q$dash_launch_debate(p_arg->>'p_topic', coalesce(p_arg->>'p_engine','deepseek'),$q$);
+  IF md5(pg_get_functiondef('public.dash_api(text,text,jsonb)'::regprocedure)) <> '654218463b8e13245546ec1381acce85' THEN RAISE EXCEPTION 'dash_api revert md5 mismatch'; END IF;
+END $d$;

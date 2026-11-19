@@ -5,3 +5,12 @@ bogus: same error
 gemini: queued engine gemini; http queued by gemini row: 1
 http queued by W4/null/deepseek rows: 0
 anon EXECUTE kept: true
+
+REV 1 dash_api rolled-back test on live, 11-19 ~09:31 CST (nothing kept):
+after: WHEN 'launch_debate' THEN dash_launch_debate(p_arg->>'p_topic', p_arg->>'p_engine', coalesce((p_arg->>'p_rounds')::int,3))::jsonb
+after md5 3dba85dc70e481f2766c170e6060384d; 'deepseek' count in dash_api 0; anon EXECUTE kept
+revert md5 654218463b8e13245546ec1381acce85 equals base: true
+
+REV 2 fire_debate_workflow rolled-back test on live, 11-19 ~09:32 CST (nothing kept):
+W4-variant, null-engine and deepseek rows: status failed, error "No live route: DeepSeek routes are removed. ..."; 0 http requests; 0 left pending
+gemini W1 row: pending, 1 http request

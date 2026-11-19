@@ -1,4 +1,4 @@
--- Dashboard default away from DeepSeek (W4 draft, NOT APPLIED). Number: coordinator assigns.
+-- Dashboard default away from DeepSeek (W4 draft rev 2, NOT APPLIED). Number: coordinator assigns.
 SET LOCAL truth.session_id='session_01H1X3AP1fjeQaEbxPP9UEZH';
 SET LOCAL truth.card='<card label> <press time>Z W4 thread';
 -- 1. dash_launch_debate: no default engine; deepseek, empty or unknown is refused (was: silently deepseek)
@@ -36,13 +36,16 @@ DECLARE
   base text := 'https://truthapp.app.n8n.cloud/webhook/';
 BEGIN
   IF COALESCE(NEW.variant, 'W1') NOT IN ('W1') THEN
-    RETURN NEW;  -- W4 and W5 variants routed only to DeepSeek workflows (unpublished, ASK 480)
+    UPDATE debate_queue SET status = 'failed', completed_at = now(), error_message = 'No live route: DeepSeek routes are removed. Name an engine: chatgpt, gemini or grok.' WHERE id = NEW.id;  -- rev 2 (W1 9567 D4): W4 and W5 variants routed only to DeepSeek workflows (unpublished, ASK 480); closed so the busy gate does not count it
+    RETURN NEW;
   END IF;
   CASE NEW.engine
     WHEN 'chatgpt' THEN webhook_url := base || 'claude-vs-chatgpt';
     WHEN 'gemini'  THEN webhook_url := base || 'claude-vs-gemini';
     WHEN 'grok'    THEN webhook_url := base || 'grok-w1';
-    ELSE RETURN NEW;  -- deepseek, null or unknown: nothing is sent
+    ELSE  -- deepseek, null or unknown: nothing is sent; closed as failed (rev 2)
+      UPDATE debate_queue SET status = 'failed', completed_at = now(), error_message = 'No live route: DeepSeek routes are removed. Name an engine: chatgpt, gemini or grok.' WHERE id = NEW.id;
+      RETURN NEW;
   END CASE;
   PERFORM net.http_post(
     url := webhook_url,
@@ -53,6 +56,12 @@ BEGIN
   RETURN NEW;
 END;
 $function$;
+-- 3. dash_api (rev 1, W2 9565): the launch_debate line passes p_engine as given; the 'deepseek' literal goes. Only that line changes.
+DO $d$ DECLARE v text := pg_get_functiondef('public.dash_api(text,text,jsonb)'::regprocedure); BEGIN
+  IF md5(v) <> '654218463b8e13245546ec1381acce85' THEN RAISE EXCEPTION 'dash_api moved from its read base'; END IF;
+  IF (length(v) - length(replace(v, $q$coalesce(p_arg->>'p_engine','deepseek')$q$, ''))) / length($q$coalesce(p_arg->>'p_engine','deepseek')$q$) <> 1 THEN RAISE EXCEPTION 'dash_api: literal count not 1'; END IF;
+  EXECUTE replace(v, $q$coalesce(p_arg->>'p_engine','deepseek')$q$, $q$p_arg->>'p_engine'$q$);
+END $d$;
 INSERT INTO public.audit_log (session_date, session_title, engine, notes, performed_by)
 VALUES ((now() AT TIME ZONE 'America/Chicago')::date, 'ASK <n>: dashboard default engine away from DeepSeek', 'W4_2026_11_06',
- 'card=' || current_setting('truth.card') || ' | session=' || current_setting('truth.session_id') || ' | dash_launch_debate: default deepseek -> none, deepseek refused | fire_debate_workflow: deepseek, W4, W5 and else routes removed | revert: revert.sql', 'W4_2026_11_06|dash');
+ 'card=' || current_setting('truth.card') || ' | session=' || current_setting('truth.session_id') || ' | dash_launch_debate: default deepseek -> none, deepseek refused | fire_debate_workflow: deepseek, W4, W5 and else routes removed | dash_api launch_debate: deepseek literal removed | revert: revert.sql', 'W4_2026_11_06|dash');
