@@ -164,6 +164,10 @@ BEGIN
   INSERT INTO t493 SELECT 'T5a PASS WITH C-1', coalesce(md5_match::text,'null') FROM public.ask_aar_snapshots WHERE id = id1;
   id1 := pg_temp.t493_ins(c, ARRAY['aaa'], '[{"seat":"W1","verdict":"PASS WITH C-1","verdict_norm":"PASS","md5_graded":"aaa","wall_id":1},{"seat":"W2","verdict":"FAIL ON FORM","verdict_norm":"FAIL ON FORM","md5_graded":"aaa","wall_id":2}]', '[1]');
   INSERT INTO t493 SELECT 'T5b plus FAIL ON FORM', coalesce(md5_match::text,'null') FROM public.ask_aar_snapshots WHERE id = id1;
+  id1 := pg_temp.t493_ins(c, ARRAY['f1','f2'], '[{"seat":"W1","verdict":"PASS","verdict_norm":"PASS","md5_graded":"f1","wall_id":1},{"seat":"W1","verdict":"PASS","verdict_norm":"PASS","md5_graded":"f2","wall_id":1}]', '[1]');
+  INSERT INTO t493 SELECT 'T5a2 one grade over two files (one element per file md5)', coalesce(md5_match::text,'null') FROM public.ask_aar_snapshots WHERE id = id1;
+  id1 := pg_temp.t493_ins(c, ARRAY['f1','f2'], '[{"seat":"W1","verdict":"PASS","verdict_norm":"PASS","md5_graded":"f1","wall_id":1}]', '[1]');
+  INSERT INTO t493 SELECT 'T5a3 two files written, only one graded', coalesce(md5_match::text,'null') FROM public.ask_aar_snapshots WHERE id = id1;
   -- T5c
   id1 := pg_temp.t493_ins(c, ARRAY['new'], '[{"seat":"W1","verdict":"PASS","verdict_norm":"PASS","md5_graded":"old","wall_id":1},{"seat":"W2","verdict":"PASS","verdict_norm":"PASS","md5_graded":"new","wall_id":2,"equal_to":{"md5":"old","wall_id":2}}]', '[1]');
   INSERT INTO t493 SELECT 'T5c equal_to with PASS', coalesce(md5_match::text,'null') FROM public.ask_aar_snapshots WHERE id = id1;
