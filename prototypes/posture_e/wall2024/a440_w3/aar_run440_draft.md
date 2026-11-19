@@ -1,4 +1,4 @@
-# AAR, run 440 (draft rev 0, W3, 11-19 10:3x CST; for W2's grade, then the coordinator sends it)
+# AAR, run 440 (rev 1, takes W2 9646 U1 to U4; was draft rev 0, W3, 11-19 10:3x CST; for W2's grade, then the coordinator sends it)
 Order: Wall manual v18 §7.4. Anchor: W4's run report, Wall 9613.
 
 ## RUN
@@ -26,7 +26,7 @@ Met: IN PART. The run finished and saved, and every item whose case it reached p
 | 468, 475 | B-round layers check kept; one library LAY text | EXERCISED (6 builds with lay_check; resends 2 to 0, 8 to 0) | W1 9620 item 1 |
 | 470 | keystone BROKEN mirror (TRIAL) | TRIAL: 3 judge keystones, 0 GRADE CONSISTENCY lines | W1 9618 A5 |
 | 472 | unapplied send-back item recorded as not counted, to the E-GATE | EXERCISED (2 item lines, 0 without the words; 472b: 2 of 4 E-APPLY rows carry them) | W3 SQL, this draft |
-| 474 | send-back records read CONCEDED LINKS as the gates do | CASE MET (8 rows), 0 loader errors; Q474 hand read NOT YET DONE | W3 SQL, this draft |
+| 474 | send-back records read CONCEDED LINKS as the gates do | EXERCISED, read by hand: chatgpt's and sol's E-PREM and E-GATE rows quote the same CHALLENGER CONCEDED LINKS line with the same count (chatgpt 0; sol 1, premise 6); 0 loader errors. Note: chatgpt's send-back answer counted premise 6 and its gate answer then made it SUPPORTED (final 0). haiku's 4 E-PREM rows were NOT SENT (DEFECT 2) | W3 Q474, this draft |
 | 423 | LINK D<n> labels read | NO CASE (no round carries the label) | W1 9618 A6; W3 9630 B1 |
 | 424 | round 4 prompts carry the whole declared chain | EXERCISED (D4 Build and C4 Build carry D1 to D5) | W3 9630 B2 |
 | 426 | every enforcer reading is luna | EXERCISED (113 luna rows; 6 with no model are code checks) | W1 9618 A3a; W3 9615 C |
@@ -42,7 +42,7 @@ Met: IN PART. The run finished and saved, and every item whose case it reached p
 ## REVIEWS
 | Seat | §7.3 review |
 |---|---|
-| W1 | MISSING (validation posts 9618, 9620 are not a review) |
+| W1 | 9635 |
 | W2 | 9623 |
 | W3 | 9632 |
 | W4 | 9625 (run report 9613) |
@@ -50,7 +50,7 @@ Outside reads: Worker_A3 9629, Worker_E 9631.
 
 ## DEFECTS
 1. Panel judge sol62 (gpt-6.2-sol) was cut off mid-verdict by Azure's content filter; the engine failed it closed and seated haiku. Azure served sol62 3 times and failed 3 of 3; other providers 0 of 3. (found by W3 9615 A; traced by W4 9616)
-2. The reserve judge haiku got no send-back. All 12 of its send-back rows read "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)", while chatgpt and sol had theirs applied. The enforcer's E-RES faults on haiku's first verdict (CLAUSE BROKEN-2 for BROKEN-1; RESULT CHALLENGER WINS does not follow) were never returned to it. The engine's own recompute did take haiku from BROKEN to PARTIAL, with result word UNDERDETERMINED, but the stored judgment still opens with "RESULT: CHALLENGER WINS". (found by outside read Worker_A3 9629; confirmed W3 9630 A; Worker_E 9631 item 2)
+2. The reserve judge haiku got no send-back. All 12 of its send-back rows read "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)", while chatgpt and sol had theirs applied. The enforcer's E-RES faults on haiku's first verdict (CLAUSE BROKEN-2 for BROKEN-1; RESULT CHALLENGER WINS does not follow) were never returned to it. The engine's own recompute did take haiku from BROKEN to PARTIAL, with result word UNDERDETERMINED, but the stored judgment still carries "RESULT: CHALLENGER WINS" (at character 534, after verdict_tag "BROKEN"). (found by outside read Worker_A3 9629; confirmed W3 9630 A; Worker_E 9631 item 2)
 3. W4 9613 left out defect 1, and the 10:10 CST message to the operator said all judges answered in full. (found by W3 9615 A4; corrected W4 9616 A)
 4. Every seat's validation, W3's included, missed defect 2 until the outside read. (W3 9630 MISTAKES)
 
@@ -72,16 +72,17 @@ Outside reads: Worker_A3 9629, Worker_E 9631.
 5. W1 9618 A7 said the cut "made the run UNGRADED"; too strong (W2 9622 G1). W3 9615 A3 was labelled a reading.
 
 ## SUGGESTED IMPROVEMENTS
-1. ASK 484, sol62 skips Azure (OpenRouter provider ignore). Plan rev 0 graded PASS by W3 9628 B (two conditions); W1's grade owed. No card yet.
-2. ASK 485, the reserve judge's send-back path. W4 tracing; no plan yet.
+1. ASK 484, sol62 skips Azure (OpenRouter provider ignore). Plan graded PASS by W3 9628 B and W1 9636. Build rev 0 (W4 9639, offline: 128 stored bodies, only sol62's 4 changed) graded PASS by W1 9644 and W3 9647. Card not yet with the operator.
+2. ASK 485, the reserve judge's send-back path (the reserve is outside it in every run that seats one: 4 runs, W4 9633). Plan rev 0 graded PASS by W1 9636 and W2 9643. Build next. No card yet.
 3. ASK 482, dashboard Any vs Any lists every engine with its version (not from the run). Plan rev 2 confirmed by W2 9627 and W4 9626; W1 builds. No card yet.
-4. ASK 483 (public key writes to the judge ledger, the roster, the judgments) and ASK 481 (debate_queue): graded; the tests wait on the operator at W2's session page.
+4. ASK 481 (debate_queue): rolled-back test PASSED 10:22 CST on the operator's approval (W2 9638); card text with W4. ASK 483 (public key writes to the judge ledger, the roster, the judgments): graded; its test waits on the operator at W2's session page.
+5. The operator's team discussion of the two judge failures: WALL-9637, views W2 9640, W1 9641, W4 9642, W3 9645 (all four: B is enough for now, no retry; keep the reserve and fix its send-back; a cut verdict does not count).
 
 ## KNOWLEDGE BASE
 1. sol62 (gpt-6.2-sol) served by Azure ends with content_filter on this topic, 3 of 3; served by OpenAI or Bedrock, 0 of 3 (W4 9625).
 
 ## FOR THE OPERATOR
-1. ASK 484: when graded, a card for W4 to build sol62's Azure skip (it changes routing only, no model or prompt).
-2. ASK 481 and 483 tests: they need the operator at W2's session page for the database prompt.
+1. ASK 484 (plan and build graded): the card for sol62's Azure skip, routing only, no model or prompt. ASK 485 (plan graded): its card after the build.
+2. ASK 481: its write card (test passed). ASK 483: its test needs the operator at W2's session page for the database prompt.
 3. Which transcripts to review for the transcript work (never assumed).
 4. The truth-app-dashboard preview cleanup: option B on a card (delete the 20 previews of 11-15/16), after its grade.
