@@ -187,6 +187,96 @@
    "case_sql": "exists(select 1 from r)",
    "mark_sql": "(select case when exists(select 1 from x where coalesce(x.error_message,'')||coalesce(x.error_detail::text,'') ~ 'pkgLIB(:|1)') or exists(select 1 from r where to_jsonb(r)::text ~ 'pkgLIB(:|1)') then 0 else 1 end)",
    "note": "Plan a428_w3/plan_rev3.md item 6. As 409 and 422(a): the case is any run after the write, and the mark is the absence of a pkgLIB: (stub rebuild) or pkgLIB1 (library sha) stop, so EXERCISED means it ran without a stub or library failure, nothing firmer. Read by hand: lib422 in the child execution names c91b9f1489e9c132 on both sides when a second alternate pass runs. Merged by W2 after the write (W4 9073; engine 06967796 saved 03:14:41Z, child e1f2b1c4 03:14:45Z)."
+  },
+  {
+   "ask": "429",
+   "title": "enforcer sees judges as Judge k, no seat id in label forms",
+   "live_since": "2026-11-19T03:41:02Z",
+   "version": "2d40e6ad",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from e where e.kind in ('enforcer_check','send_back') and e.prompt_sent is not null)",
+   "mark_sql": "(select case when exists(select 1 from e where e.kind in ('enforcer_check','send_back') and e.prompt_sent ~ '(\\((A[0-9]+(\\.[0-9]+)?, )?(argon|chatgpt|deepseek|ember|gemini|glm_legal|glm|grok|haiku|hydrogen|luna|mimo|qwen|sol62|sol|sonnet|ernie|alt_minimax31|spark|claude)\\)|line of (argon|chatgpt|deepseek|ember|gemini|glm_legal|glm|grok|haiku|hydrogen|luna|mimo|qwen|sol62|sol|sonnet|ernie|alt_minimax31|spark|claude)\\M)') then 0 else (select count(*) from e where e.kind in ('enforcer_check','send_back') and e.prompt_sent ~ 'Judge [0-9]') end)",
+   "note": "Plan a429_w3/plan_rev2.md item 6 (W2 9060 C-2, W1 9065 N1). Seat ids are matched only inside label forms: a seat id alone in parentheses (optionally after an A-number and comma) or after \"line of\", so \"remember\" and \"solution\" never match. prompt_sent is stored only on the first row of a batch. Any labelled seat id gives 0 (MISSED); else the mark counts rows that hold \"Judge k\". Known-bad: 39266 --all (labels such as (chatgpt), (sol62)). Seat list: every judge_seat in debate_judgments plus enforcer and alternate seats; a new seat must be added here."
+  },
+  {
+   "ask": "430",
+   "title": "-d and -ed gloss forms read as the KJV word (L2 Count Plan)",
+   "live_since": "2026-11-19T04:46:25Z",
+   "version": "9a7841f0",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from r where r.review_notes ~ 'PART B \\(record-only[^:]*: [1-9][0-9]* gloss parts checked')",
+   "mark_sql": null,
+   "note": "Plan a430_w1/plan_rev2.md item 6: the AUDIT v57 PART B line counts statuses and lists only NOT IN THE KJV RENDERINGS rows, so a FOUND row cannot be seen. Read by hand: no listed NOT IN THE KJV RENDERINGS row has a gloss that ends in -d or -ed whose stem (3 or more letters before -ed) is in its own KJV list; such a row is a miss."
+  },
+  {
+   "ask": "431",
+   "title": "judges' GLOSS CHECK reads word (Gnnnn), meaning \"gloss\"",
+   "live_since": "2026-11-19T05:20:02Z",
+   "version": "7cd61791",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from r where concat_ws(E'\\n',r.claude_r1,r.engine_r1,r.claude_r2,r.engine_r2,r.engine_r3,r.challenger_r3,r.defender_r4,r.challenger_r4) ~ '\\((G|H)[0-9]+\\), meaning [\"“]')",
+   "mark_sql": null,
+   "note": "Plan a431_w3/plan_rev1.md item 6. The judges' GLOSS CHECK text is in the prompt, which is not stored; read Panel Build's output in the n8n execution for a GLOSS ADDED row naming that number (W1 9185). A judge's verdict_raw may echo \"GLOSS ADDED\" but need not. Over stored rows the case holds on 6 runs."
+  },
+  {
+   "ask": "434",
+   "title": "a superseded verdict head names its step (CURE, SEND-BACK, RECOMPUTE)",
+   "live_since": "2026-11-19T05:17:03Z",
+   "version": "4877ce74",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from j where j.verdict_raw ~ 'SUPERSEDED BY (CURE|SEND-BACK|RECOMPUTE):')",
+   "mark_sql": "(select count(*) from j where j.verdict_raw ~ 'SUPERSEDED BY (SEND-BACK|RECOMPUTE):')",
+   "note": "Plan a434_w3/plan_rev3.md item 6. Before the write every stored head reads CURE (15 judgments). A case run whose every change really was a cure reads MISSED here and is read by hand: the plan's mark also requires that no CURE head stands over a v37 tag later than its cure lines. W4 C3 (9197): 3 of the stored heads would now read SEND-BACK or RECOMPUTE (38226, 38450, 38593)."
+  },
+  {
+   "ask": "435",
+   "title": "bare verse number after a comma binds to the same chapter (\"Psalms 2:7, 12 Kiss\")",
+   "live_since": "2026-11-19T04:55:55Z",
+   "version": "db713b6a",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from r, regexp_matches(concat_ws(E'\\n',r.claude_r1,r.engine_r1,r.claude_r2,r.engine_r2,r.engine_r3,r.challenger_r3,r.defender_r4,r.challenger_r4), '(\\m[1-3]? ?[A-Z][a-z]+) ([0-9]+):[0-9]+(?:[-–][0-9]+)?, ([0-9]+) [A-Z][a-z]+', 'g') m)",
+   "mark_sql": "(select count(*) from r, regexp_matches(concat_ws(E'\\n',r.claude_r1,r.engine_r1,r.claude_r2,r.engine_r2,r.engine_r3,r.challenger_r3,r.defender_r4,r.challenger_r4), '(\\m[1-3]? ?[A-Z][a-z]+) ([0-9]+):[0-9]+(?:[-–][0-9]+)?, ([0-9]+) [A-Z][a-z]+', 'g') m where r.citation_check::text like '%\"ref\": \"'||m[1]||' '||m[2]||':'||m[3]||'\"%')",
+   "note": "Plan a435_w2/plan_rev2.md item 6. Case: a full reference then \", N Word\" in any round. Mark: the bound reference book c:N in citation_check items. Limits: the case does not test that N+Word is not a book (\"2 Kings\" after a comma is a book, not a bound verse) and an abbreviated book (\"Matt\") will not equal citation_check's full name; both read MISSED and are read by hand. Known-good on stored text (W4 9208): 26163 John 12:32, 24355 Isaiah 28:12, 27613, 32157; all predate the write, so --all reads them MISSED (old code)."
+  },
+  {
+   "ask": "436",
+   "title": "KJV rendering list in PART B ordered by count, cut at 24 with \"and N more\"",
+   "live_since": "2026-11-19T04:46:25Z",
+   "version": "9a7841f0",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from r where r.review_notes ~ 'KJV renders: ([^,)]+, ){24}' or r.review_notes ~ 'KJV renders: [^)]* and [0-9]+ more\\)')",
+   "mark_sql": "(select case when r.review_notes ~ 'KJV renders: ([^,)]+, ){24}' then 0 else (select count(*) from regexp_matches(r.review_notes, 'KJV renders: [^)]* and [0-9]+ more\\)', 'g')) end from r)",
+   "note": "Plan a436_w1/plan_rev1.md item 6. Case: a listed number with more than 24 renderings. A list of 25 or more names after the write is a miss (0); else the mark counts \"and N more)\" lists. The order by count is read by hand (son, children, sons first for H1121)."
+  },
+  {
+   "ask": "437",
+   "title": "removed models (HY4, HY4 Flash, Ember, GLM Legal, Qwen 3.8, MiniMax) never seated",
+   "live_since": "2026-11-19T04:27:07Z",
+   "version": "60bf6007",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from r)",
+   "mark_sql": "(select case when exists(select 1 from j where j.judge_seat in ('ember','glm_legal','qwen','alt_minimax31') or j.judge_api_model ~* '(minimax|hunyuan|hy4|muse-ember|glm-5\\.3-flashx-legal|qwen3\\.8)') or exists(select 1 from r where concat_ws(' ',r.defender_model,r.challenger_model) ~* '(minimax|hunyuan|hy4|muse-ember|glm-5\\.3-flashx-legal|qwen3\\.8)') then 0 else 1 end)",
+   "note": "Plan a437_w4/plan_rev1.md item 6 reads Init Seats and Accept Build in the n8n execution; this SQL is a looser proxy over seated judges and debaters. Stored seat ids: ember (meta/muse-ember), glm_legal (z-ai/glm-5.3-flashx-legal), qwen (qwen/qwen3.8-max-0902); HY4 and MiniMax by api name. As 409: EXERCISED means none was seated, nothing firmer. The refusal text for a requested removed model needs a request and is UNEXERCISED in a normal run."
+  },
+  {
+   "ask": "438",
+   "title": "gloss caps raised to 250 glosses and 100 numbers (L2 Gloss Plan)",
+   "live_since": "2026-11-19T04:46:25Z",
+   "version": "9a7841f0",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from r where (regexp_match(r.review_notes, 'ASK 406 forms: ([0-9]+) glosses read, ([0-9]+) left out'))[1]::int + (regexp_match(r.review_notes, 'ASK 406 forms: ([0-9]+) glosses read, ([0-9]+) left out'))[2]::int > 60)",
+   "mark_sql": "(select case when (regexp_match(r.review_notes, 'ASK 406 forms: ([0-9]+) glosses read, ([0-9]+) left out'))[1]::int > 60 then 1 else 0 end from r)",
+   "note": "Plan a438_w2/plan_rev0.md item 6. Case: the ASK 406 forms count (read plus left out) above 60. Mark: more than 60 read, which the old 60-gloss cap could not give. The 30-number cap is not visible in the summary; read by hand. None of the last 8 stored runs had a case, so NO CASE is likely."
+  },
+  {
+   "ask": "439",
+   "title": "AUDIT v57 names the 250-gloss and 100-number caps",
+   "live_since": "2026-11-19T05:17:03Z",
+   "version": "4877ce74",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from r where r.review_notes ~ 'ASK 406 forms: ')",
+   "mark_sql": "(select count(*) from r where r.review_notes ~ 'ASK 406 forms: [0-9]+ glosses read, [0-9]+ left out by the 250-gloss and 100-number caps\\)')",
+   "note": "Plan a439_w2/plan_rev0.md item 6. Before the write the words read \"60-gloss and 30-number caps\", so --all on an older run reads MISSED."
   }
  ]
 }

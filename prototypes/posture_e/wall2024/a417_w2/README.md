@@ -48,3 +48,15 @@ W1 8867 PASS; W4 8869 PASS (both at edd0fa1f).
   Read by hand (W3 8970 C2): check 3 "3 map_sha equal <x>" in the run-start post; lib422 in the child execution when a
   second alternate pass runs. With no second alternate pass, the load check is UNEXERCISED.
 - Check on 39266 with --all (SQL): 424 CASE, READ BY HAND (also after the F1 widening); 422(a) EXERCISED (loose, as 409).
+
+## Added 11-19 (W2, ASK 441 = 8821 item 2): ASK 429, 430, 431, 434, 435, 436, 437, 438, 439
+Each entry follows the RUN EVIDENCE heading of its own plan; live_since is the n8n save time of the engine version that made it live.
+Check over stored runs (case/mark, all predate the writes, so these are --all readings): t441_out.txt.
+- 429 MISSED on 39266, 38593, 39015 (seat ids in label forms such as "(chatgpt)", "(sol62)"): the known-bad case.
+- 434 MISSED on 38593 (a CURE head only; W4 C3 shows the new code would write SEND-BACK there).
+- 435 MISSED on 26163, 24355, 32157 (the known-good cases of W4 9208, read before the write).
+- 437 MISSED on 39266 (glm_legal seated); EXERCISED on older runs with no removed seat (loose, as 409).
+- 430 and 431 have no stored mark: CASE, READ BY HAND (431 case holds on 39015).
+- 436: no stored list has 25 or more renderings (max 18 in 6 runs), so it has no known-bad case on stored data.
+- 438 and 439: no stored run carries the ASK 406 forms block above 60 glosses; NO CASE on all six.
+Not covered: ASK 432 (measured, built as 438) and ASK 433 (dropped). ASK 440 to 455 are added when each is written.
