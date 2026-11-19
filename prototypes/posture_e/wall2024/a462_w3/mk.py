@@ -37,7 +37,7 @@ anchor="""    RETURN 'ASK 448: a grade carries a line RULES READ: naming each ma
   END IF;
 """
 assert live.count(anchor)==1
-add="""  IF g AND p_body !~ 'OBJECTIVE MET:' THEN
+add=r"""  IF g AND p_body !~* '(^|\n)OBJECTIVE MET: *(yes|in part|no)\M' THEN
     RETURN 'ASK 462: a grade carries a line OBJECTIVE MET: saying yes, in part or no, with the reason (operational_doc §29, AT THE GRADE).';
   END IF;
 """

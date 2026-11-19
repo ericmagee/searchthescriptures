@@ -24,7 +24,7 @@ BEGIN
   IF g AND p_body !~ 'RULES READ:' THEN
     RETURN 'ASK 448: a grade carries a line RULES READ: naming each manual section whose rules the change touches, read in full.';
   END IF;
-  IF g AND p_body !~ 'OBJECTIVE MET:' THEN
+  IF g AND p_body !~* '(^|\n)OBJECTIVE MET: *(yes|in part|no)\M' THEN
     RETURN 'ASK 462: a grade carries a line OBJECTIVE MET: saying yes, in part or no, with the reason (operational_doc §29, AT THE GRADE).';
   END IF;
   pl := left(p_body,400) ~ '\mPLANS? rev' AND NOT g;

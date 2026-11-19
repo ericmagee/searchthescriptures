@@ -24,7 +24,7 @@ BEGIN
   IF g AND p_body !~ 'RULES READ:' THEN
     RETURN 'ASK 448: a grade carries a line RULES READ: naming each manual section whose rules the change touches, read in full.';
   END IF;
-  IF g AND p_body !~ 'OBJECTIVE MET:' THEN
+  IF g AND p_body !~* '(^|\n)OBJECTIVE MET: *(yes|in part|no)\M' THEN
     RETURN 'ASK 462: a grade carries a line OBJECTIVE MET: saying yes, in part or no, with the reason (operational_doc §29, AT THE GRADE).';
   END IF;
   pl := left(p_body,400) ~ '\mPLANS? rev' AND NOT g;
@@ -34,4 +34,5 @@ BEGIN
   RETURN NULL;
 END $function$
 ;
-select r, count(*), array_agg(id order by id) ids from (select id, coalesce(pg_temp.wc462(body,true,created_at),'ACCEPT') r from the_wall where id between 9242 and 9309) s group by r;
+select left(r,40) r, count(*), array_agg(id order by id) ids from (select id, coalesce(pg_temp.wc462(body,true,created_at),'ACCEPT') r from the_wall where id between 9242 and 9314
+union all select v.id, coalesce(pg_temp.wc462(v.b || E'\n' || wall_stamp(), true, now()),'ACCEPT') from (values (-1, E'W3: GRADE of X. PASS. commit aa81bc4d\nRULES READ: s29\nOBJECTIVE MET: yes, because.'), (-2, E'W3: GRADE of X. PASS. commit aa81bc4d\nRULES READ: s29\nOBJECTIVE MET: in part, one kept.'), (-3, E'W3: GRADE of X. PASS. commit aa81bc4d\nRULES READ: s29\nobjective met: no.'), (-4, E'W3: GRADE of X. PASS. commit aa81bc4d\nRULES READ: s29\nThe line "OBJECTIVE MET: yes" is quoted here.'), (-5, E'W3: GRADE of X. PASS. commit aa81bc4d\nRULES READ: s29\nOBJECTIVE MET: maybe')) v(id,b)) s group by 1;
