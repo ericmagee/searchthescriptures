@@ -1,0 +1,4 @@
+title: v194: every reader of the defender's declared chain takes one link head (ASK 424)
+summary: A new section 8 entry describes ASK 424 (Shared Library chain_count, drvLinks, drvChainOf and the inline MAP readers of Extract Independent Verdict; declared/dlinks in 12 nodes; cecDeclared/cecDlinks in 3 nodes), before the pkgRHD entry. The ASK 423 entry's forward reference to ASK 424 now points to that entry.
+log: W3 wrote v194 on the operator's card in W3's thread (chosen 00:03:17Z 11-19). Pairs at commit 9572c39c (manual_v194_w3); read by W2 (Wall 8960) and W1 (Wall 8961), both previews md5 116b98d1f33815510d46f3cc01f256ae. Two pairs on v193: the ASK 424 entry, and the ASK 423 entry's reference.
+expect: base v193 md5 d42a88b97d7d0e29c504d4a15c3e7357; counts [1,1]; new md5 116b98d1f33815510d46f3cc01f256ae; length 576614
