@@ -1,4 +1,4 @@
-# ASK 500 plan rev 1 (W3, seat 33, 11-19; replaces rev 0 d12d99e6: W1 10105 C1, N1, N2; THE ASK FORM op doc §29; number assigned by the coordinator in its message to W3 at 21:10:43Z, and again at 21:16:21Z, "plan 500 around that webhook"): anyone with the URL can start a paid engine run
+# ASK 500 plan rev 1 (W3, seat 33, 11-19; replaces rev 0 d12d99e6: W1 10105 C1, N1, N2; W2 10107 C2, C3, N1; THE ASK FORM op doc §29; number assigned by the coordinator in its message to W3 at 21:10:43Z, and again at 21:16:21Z, "plan 500 around that webhook"): anyone with the URL can start a paid engine run
 
 ## 1. OBJECTIVE
 Today the engine's start webhook (Debate Start, POST /webhook/oracle-debate-v1) has no authentication. Anyone who has the URL can start a full engine run (1.73 to 5.15 USD for this pair; run 40891 was 5.149) with any topic, engines and profiles. A direct POST also skips the topic fence, which lives in dash_launch_odv1. The URL is not a secret (W4 10095 B8). Close that, and keep every real launch working.
@@ -25,7 +25,7 @@ dash_launch_odv1 is the only launch path with the fence and the log, and it send
 Options:
 A. (recommended) Header auth, in three steps.
    A0. The operator, outside any transcript: in n8n, creates a Header Auth credential "ODV1 start webhook" (a header name and a long random value); in Supabase Vault, stores the same value as secret "odv1_start_webhook". Seats read back only that both exist, by name.
-   A1. DB card (step500a1.sql): dash_launch_odv1 reads the value from vault.decrypted_secrets by name inside the function and passes it in net.http_post's headers. Nothing else in the body changes. If the secret is missing, the function raises before any insert or post. Harmless while the node has no auth (n8n ignores an extra header).
+   A1. DB card (step500a1.sql): dash_launch_odv1 reads the value from vault.decrypted_secrets by name inside the function and passes net.http_post a headers object with exactly two keys: Content-Type application/json (a headers argument replaces pg_net's default, W2 C2) and the auth header. Nothing else in the body changes. If the secret is missing, the function raises before any insert or post. Harmless while the node has no auth (n8n ignores an extra header).
    A1b. runstart.py launches through dash_launch_odv1 (W4 calls it through SQL as postgres) instead of posting to the URL, so W4's launches also get the fence and the log. W4 reads runstart.py first and states what else it does before the POST (registry checks) and keeps those.
    A2. n8n card: Debate Start gets authentication headerAuth with "ODV1 start webhook". Touched node only. Proven by the next launch through dash_launch_odv1 running, and a POST without the header being refused.
 B. A launch ticket: dash_launch_odv1 writes a random ticket to odv1_launches and sends it in the body; a new engine node checks the ticket (service_role RPC) before Accept Call. No shared secret, but new engine nodes and a new function. Not recommended: more engine change for the same effect.
@@ -46,16 +46,16 @@ NOT SEARCHED:
 Before A1: both secrets exist by name (n8n credential list by name; vault.secrets by name), with no value read or printed.
 Before A1, the value's path (item 6):
 - 6a: W4 reads the Data API exposed schemas. If net is not exposed, the queue is readable only by database roles that can already read vault.decrypted_secrets' callers, and the few seconds a row waits are accepted. If net is exposed, stop (NOT SEARCHED item 1).
-- 6b: W4 reads one Panel Judge Call execution's webhook output by header name. If the auth header is there, the team records that the value is readable by whoever can read n8n executions (the operator and the seats), as for Panel Judge Call today, and the graders accept or reject that in their grade. Rejecting means a different design (option B) before any build.
+- 6b: W4 reads one Panel Judge Call execution's webhook output by header name. If the auth header is there, the team records that the value is readable by whoever can read n8n executions (the operator and the seats), as for Panel Judge Call today, and the graders accept or reject that in their grade. Rejecting means a different design (option B) before any build. The same decision covers the Panel Judge Call webhook, which has this exposure today (W2 N1).
 Before the A1 write: test500a1_rollback.sql passes in full, as one transaction that ends in RAISE (pg_net sends only after commit, so nothing is posted):
 - T1: dash_launch_odv1 with a fenced topic is refused as today (fence unchanged).
-- T2: with an allowed test topic, the queued request in net.http_request_queue carries the header name and a value whose md5 equals the vault secret's md5 (compared in SQL; neither printed), and the URL and body equal today's.
+- T2: with an allowed test topic, the queued request in net.http_request_queue has exactly two header keys, Content-Type application/json and the auth header, whose value's md5 equals the vault secret's md5 (compared in SQL; neither printed); the URL and body equal today's.
 - T3: with the secret renamed inside the test, the function raises and queues nothing.
 - R1: after the revert, prosrc md5 is 3b74a293 again.
 Before A2: one real launch through dash_launch_odv1 after A1 runs normally (A1 proven), and runstart.py is changed (A1b).
 After A2:
 - Q1: the next launch through dash_launch_odv1 starts an engine execution and the row saves.
-- Q2: one POST to the URL with no header (W4, an empty body) is refused by n8n with 403, and no engine execution starts. That call is free.
+- Q2: only on the operator's explicit word (the URL starts paid calls if A2 did not take effect; W2 C3), and only after the live node is read back holding authentication headerAuth with "ODV1 start webhook": one POST to the URL with no header (W4, an empty body) is refused by n8n with 401 or 403, and no engine execution starts.
 - Q3: engine executions after A2 each match an odv1_launches row.
 Revert: A2, write back the saved live engine JSON on the operator's word; A1, revert500a1.sql restores prosrc 3b74a293.
 Done: both writes read back by two non-writers, Q1 to Q3 pass.
@@ -68,7 +68,7 @@ Done: both writes read back by two non-writers, Q1 to Q3 pass.
 5. A1b puts W4's launches behind the fence: a fenced topic in a test launch then needs a reason, as on the dashboard (W1 N2).
 
 ## 6. RUN EVIDENCE
-Q1 is the next real launch; no separate paid run. Q2 is one free refused POST. No ASK 417 registry case.
+Q1 is the next real launch; no separate paid run. Q2 is one refused POST, on the operator's word. No ASK 417 registry case.
 
 ## 7. INPUTS IN GIT
 plan500.md in /mnt/project-files/ask500/w3/ (git a500_w3/). W4's step500a1.sql, revert500a1.sql, test500a1_rollback.sql, the runstart.py change and the node targets after the plan passes.
