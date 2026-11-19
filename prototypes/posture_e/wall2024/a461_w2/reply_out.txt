@@ -1,0 +1,4 @@
+{"slot":3,"provider":"openai","seat":null,"response_text":"{\"error\":{\"message\":\"FAIL-CLOSED (ASK 460): panel slot 3 was routed to the removed direct provider openai. Panel seats must resolve to openrouter.\"}}"}
+{"slot":3,"provider":"gemini","seat":null,"response_text":"{\"error\":{\"message\":\"FAIL-CLOSED (ASK 460): panel slot 3 was routed to the removed direct provider gemini. Panel seats must resolve to openrouter.\"}}"}
+{"slot":3,"provider":"grok","seat":null,"response_text":"{\"error\":{\"message\":\"FAIL-CLOSED (ASK 460): panel slot 3 was routed to the removed direct provider grok. Panel seats must resolve to openrouter.\"}}"}
+{"slot":3,"provider":"mimo","seat":null,"response_text":"{\"error\":{\"message\":\"FAIL-CLOSED (ASK 460): panel slot 3 was routed to the removed direct provider mimo. Panel seats must resolve to openrouter.\"}}"}
