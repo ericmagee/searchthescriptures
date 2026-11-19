@@ -2,7 +2,7 @@
 // C4: a dry qualify_alternate request for MiniMax is refused. Usage: node check437.cjs LIVE TARGET EXEC1.json,EXEC2.json,...
 const fs=require('fs');const W=f=>{const w=JSON.parse(fs.readFileSync(f));return w.data&&w.data.nodes?w.data:w;};
 const [LV,TG,EXS]=process.argv.slice(2);const L=W(LV),T=W(TG);const code=(w,n)=>w.nodes.find(x=>x.name===n).parameters.jsCode;
-const REM=['ember','glm_legal','hy4','hy4_flash','gemini','qwen','ernie','kimi','alt_minimax3','alt_minimax31','qwen_flash','glm_flash','deepseek','deepseek_debate'];
+const REM=['ember','glm_legal','hy4','hy4_flash','qwen','ernie','kimi','alt_minimax3','alt_minimax31','qwen_flash','glm_flash','deepseek','deepseek_debate'];
 const JFL=new Set(['chatgpt','sol','grok','luna']);
 const runInit=(c,body,seats,jfl)=>{const $input={first:()=>({json:{acc:{seats},src:{body}}})};const $=n=>({all:()=>[...jfl].map(s=>({json:{seat:s,jfl_move:true}}))});
  try{return new Function('$input','$','$execution',c)($input,$,{id:1,customData:{set(){}}})[0].json;}catch(e){return {err:e.message.replace(/ run_token=\S+/,'')};}};
