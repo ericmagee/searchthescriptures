@@ -25,6 +25,7 @@ STEP 1 (database only, no workflow change):
  1a. REVOKE INSERT ON audit_log FROM anon, authenticated; DROP POLICY anon_ins ON audit_log.
  1b. Class C (9 invoker RPC writers: log_build, log_change, save_session, abandon_fold_session, blackboard_ack, blackboard_close,
      blackboard_archive_any_author, conclusion_flag, init_load_session): REVOKE EXECUTE FROM anon, authenticated, PUBLIC.
+ 1b2. C-4 (W2 9452): REVOKE EXECUTE on dr_rest and dr_retract (definer; write caller text into day_room, day_room_posts) FROM PUBLIC, anon, authenticated. T2 covers them.
  1c. Class B to SECURITY DEFINER, SET search_path = public, pg_temp (required, not optional: anon still writes debate_results directly):
      debate_results_write_guard, truth_date_normalize, debate_judgments_write_guard, debate_prompts_guard, kb_row_audit,
      log_app_state_build, sight_embedding_fence, log_override_arming.

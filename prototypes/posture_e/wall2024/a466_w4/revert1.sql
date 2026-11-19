@@ -6,6 +6,7 @@ GRANT EXECUTE ON FUNCTION public.log_build(text,text,text), public.log_change(te
   public.abandon_fold_session(text,text), public.blackboard_ack(bigint,text,text,text), public.blackboard_close(bigint,text,text,text),
   public.blackboard_archive_any_author(bigint[],jsonb,text,text,text), public.conclusion_flag(bigint,text), public.init_load_session(boolean)
   TO PUBLIC, anon, authenticated;
+GRANT EXECUTE ON FUNCTION public.dr_rest(bigint,text,text,text), public.dr_retract(bigint,text,text,text,bigint) TO PUBLIC, anon, authenticated;
 ALTER FUNCTION public.debate_results_write_guard() SECURITY INVOKER RESET search_path;
 ALTER FUNCTION public.truth_date_normalize() SECURITY INVOKER RESET search_path;
 ALTER FUNCTION public.debate_judgments_write_guard() SECURITY INVOKER RESET search_path;

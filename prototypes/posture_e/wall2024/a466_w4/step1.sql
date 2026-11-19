@@ -8,6 +8,8 @@ REVOKE EXECUTE ON FUNCTION public.log_build(text,text,text), public.log_change(t
   public.abandon_fold_session(text,text), public.blackboard_ack(bigint,text,text,text), public.blackboard_close(bigint,text,text,text),
   public.blackboard_archive_any_author(bigint[],jsonb,text,text,text), public.conclusion_flag(bigint,text), public.init_load_session(boolean)
   FROM PUBLIC, anon, authenticated;
+-- 1b C-4 (W2 9452): definer RPCs that write caller text into day_room / day_room_posts (definer audit triggers)
+REVOKE EXECUTE ON FUNCTION public.dr_rest(bigint,text,text,text), public.dr_retract(bigint,text,text,text,bigint) FROM PUBLIC, anon, authenticated;
 -- 1c class B: trigger functions to definer
 ALTER FUNCTION public.debate_results_write_guard() SECURITY DEFINER SET search_path = public, pg_temp;
 ALTER FUNCTION public.truth_date_normalize() SECURITY DEFINER SET search_path = public, pg_temp;
