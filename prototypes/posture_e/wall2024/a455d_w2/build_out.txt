@@ -1,0 +1,28 @@
+engine | steps renamed 18 | quoted references moved 61 | old names left anywhere: none
+   Alt Judge Enforcer Call deepseek -> Alt Judge Enforcer Call openrouter
+   Alt Judge Enforcer Resend Call deepseek -> Alt Judge Enforcer Resend Call openrouter
+   Alt Judge Enforcer Retry Call deepseek -> Alt Judge Enforcer Retry Call openrouter
+   Alt Reread Call deepseek -> Alt Reread Call openrouter
+   Anticheat Call deepseek -> Anticheat Call openrouter
+   Assume Check Call deepseek -> Assume Check Call openrouter
+   Close Enforcer Call deepseek -> Close Enforcer Call openrouter
+   Close Group Batch Call deepseek -> Close Group Batch Call openrouter
+   Close Group Retry Call deepseek -> Close Group Retry Call openrouter
+   Enforcer Call deepseek -> Enforcer Call openrouter
+   Enforcer Group Batch Call deepseek -> Enforcer Group Batch Call openrouter
+   Enforcer Resend Call deepseek -> Enforcer Resend Call openrouter
+   Enforcer Retry Call deepseek -> Enforcer Retry Call openrouter
+   Judge Contradiction Call deepseek -> Judge Contradiction Call openrouter
+   Judge Enforcer Call deepseek -> Judge Enforcer Call openrouter
+   Judge Enforcer Resend Call deepseek -> Judge Enforcer Resend Call openrouter
+   Judge Enforcer Retry Call deepseek -> Judge Enforcer Retry Call openrouter
+   Reread Call deepseek -> Reread Call openrouter
+engine | kept 24 : DeepSeek Synthesis Call [api.deepseek.com]; DeepSeek Diagnostic Call [api.deepseek.com]; Panel Judge 1 deepseek [code]; C1 Call deepseek [api.deepseek.com]; D1 Call deepseek [api.deepseek.com]; D2 Call deepseek [api.deepseek.com]; C2 Call deepseek [api.deepseek.com]; D3 Call deepseek [api.deepseek.com]; C3 Call deepseek [api.deepseek.com]; Panel Reserve deepseek [api.deepseek.com]; D4 Call deepseek [api.deepseek.com]; C4 Call deepseek [api.deepseek.com]; Panel Judge 1 deepseek retry [api.deepseek.com]; Accept Call deepseek [api.deepseek.com]; Accept Return Call deepseek [api.deepseek.com]; C4G Call deepseek [api.deepseek.com]; C3G Call deepseek [api.deepseek.com]; C1B Call deepseek [api.deepseek.com]; D2B Call deepseek [api.deepseek.com]; C2B Call deepseek [api.deepseek.com]; D3B Call deepseek [api.deepseek.com]; C3B Call deepseek [api.deepseek.com]; D4B Call deepseek [api.deepseek.com]; C4B Call deepseek [api.deepseek.com]
+engine target md5 b37fd8e7c213
+child | steps renamed 4 | quoted references moved 30 | old names left anywhere: none
+   R2 Alt Judge Enforcer Call deepseek -> R2 Alt Judge Enforcer Call openrouter
+   R2 Alt Judge Enforcer Resend Call deepseek -> R2 Alt Judge Enforcer Resend Call openrouter
+   R2 Alt Judge Enforcer Retry Call deepseek -> R2 Alt Judge Enforcer Retry Call openrouter
+   R2 Alt Reread Call deepseek -> R2 Alt Reread Call openrouter
+child | kept 2 : Panel Judge 1 deepseek [code]; Panel Reserve deepseek [code]
+child target md5 8ad235620a56
