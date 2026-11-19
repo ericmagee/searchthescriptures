@@ -31,7 +31,7 @@ CREATE TABLE public.ask_aar_snapshots (
   sources jsonb NOT NULL CHECK (jsonb_typeof(sources) = 'array' AND jsonb_array_length(sources) >= 1)
 );
 ALTER TABLE public.ask_aar_snapshots ENABLE ROW LEVEL SECURITY;
-REVOKE ALL ON TABLE public.ask_aar_snapshots FROM PUBLIC, anon, authenticated;
+REVOKE ALL ON TABLE public.ask_aar_snapshots FROM PUBLIC, anon, authenticated, berean_ro;
 REVOKE ALL ON SEQUENCE public.ask_aar_snapshots_id_seq FROM PUBLIC, anon, authenticated;
 REVOKE ALL ON TABLE public.ask_aar_snapshots FROM service_role, lab_seat;
 GRANT SELECT ON TABLE public.ask_aar_snapshots TO service_role, lab_seat;
@@ -102,8 +102,9 @@ VALUES ('ASK 493: ask_aar_snapshots table created (insert-only, seat 36 only, au
 DO $c$ BEGIN
   IF to_regclass('public.ask_aar_snapshots') IS NULL THEN RAISE EXCEPTION 'ASK 493 step: table missing'; END IF;
   IF has_table_privilege('anon','public.ask_aar_snapshots','insert') OR has_table_privilege('anon','public.ask_aar_snapshots','select')
-     OR has_table_privilege('authenticated','public.ask_aar_snapshots','insert') OR has_table_privilege('authenticated','public.ask_aar_snapshots','select') THEN
-    RAISE EXCEPTION 'ASK 493 step: anon or authenticated has access'; END IF;
+     OR has_table_privilege('authenticated','public.ask_aar_snapshots','insert') OR has_table_privilege('authenticated','public.ask_aar_snapshots','select')
+     OR has_table_privilege('berean_ro','public.ask_aar_snapshots','select') THEN
+    RAISE EXCEPTION 'ASK 493 step: anon, authenticated or berean_ro has access'; END IF;
   IF (SELECT count(*) FROM pg_trigger WHERE tgrelid='public.ask_aar_snapshots'::regclass AND NOT tgisinternal) <> 4 THEN RAISE EXCEPTION 'ASK 493 step: trigger count is not 4'; END IF;
   IF NOT (SELECT relrowsecurity FROM pg_class WHERE oid='public.ask_aar_snapshots'::regclass) THEN RAISE EXCEPTION 'ASK 493 step: RLS off'; END IF;
 END $c$;
