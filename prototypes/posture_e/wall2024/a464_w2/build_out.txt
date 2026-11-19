@@ -1,0 +1,18 @@
+== c7366RPLb8vdMQg6 ODV1 Cure Call base e2fa573a-9f7f-456e-972a-1b4487ac1c8b nodes 5
+  Skip Return: removed 1 comment(s), 173 -> 51 chars, tokens equal true, comments left 0
+    - pkgCSW: route 6 (cure.skip). Return the parent's Build item unchanged, as the old Route sent it straight to Normalize.
+  Provider Removed Stop: removed 1 comment(s), 597 -> 399 chars, tokens equal true, comments left 0
+    - pkgRPN: the direct openai, gemini, grok and mimo call nodes were removed (every seat runs through openrouter). An item routed here means a seat resolved to a re
+  target md5 6ba6a272e2af57f9836ce5a3da997738
+== Y1VIsNB6KBrs1znP WALL-2024 Panel Judge Call base 474d8def-edcf-44e3-8269-33215ae3add9 nodes 6
+  Wrap: removed 3 comment(s), 1001 -> 651 chars, tokens equal true, comments left 0
+    - pkgPPJ v2 (W1, 11-07): the provider reply for this seat slot, as the payload of rpc ppj_put.
+    - A provider HTTP error item ({error: <reason>}) is passed on with its message, description and status as plain fields,
+    - because an Error's message does not survive JSON. Panel Check reads e.message / e.description and httpCode / status / statusCode.
+  Provider Removed Reply: 0 comments
+  target md5 ec70eedc78d0b2046c04afb8d02e6049
+== SX4ZWtgHNs96uBOo WALL-2024 Early Alternate base 30a47a4a-308c-49ee-b0af-b5a4ea32b1d9 nodes 4
+  Early Alternate Shape: removed 1 comment(s), 659 -> 559 chars, tokens equal true, comments left 0
+    - pkgE4: one record per call, in input order; the reply is stored exactly as the call returned it.
+  target md5 212b1d0a159b682859b8d011a6870729
+ALL CHECKS PASS
