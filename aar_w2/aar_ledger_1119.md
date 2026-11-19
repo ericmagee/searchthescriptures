@@ -1,5 +1,5 @@
-# AAR ledger 11-19 rev 1 (v221 recorded), ASKs 484 to 500 (W2, seat 32; drafted for W1's check and W3's AAR)
-Read live from SQL at about 15:28 CST (21:28Z). Sources: ask_aar_snapshots (every row), ask_aar_grades_check(), engine_manual and operational_doc max version, pg_proc ACLs, debate_results, audit_log through 39256.
+# AAR ledger 11-19 rev 2 (W1 10103 C1, C2, N1; rev 1 recorded v221), ASKs 484 to 500 (W2, seat 32; drafted for W1's check and W3's AAR)
+Read live from SQL between 21:17Z and 21:21:02Z (15:17 to 15:21 CST; the last read at 21:21:02Z by the DB clock). Sources: ask_aar_snapshots (24 rows), ask_aar_grades_check(), engine_manual and operational_doc max version, pg_proc ACLs, debate_results, audit_log through 39265.
 Live versions: engine manual v221 (21:18:02Z), op doc v137. No engine run since the 494 A2 write: debate_results newest is 19:44:35Z (run 40891); there are 0 rows after 20:51:24Z.
 "Latest row" is the newest snapshot row for that ASK (its prior_row chain is shown). md5_match is as recorded by the insert trigger.
 
@@ -21,8 +21,8 @@ Live versions: engine manual v221 (21:18:02Z), op doc v137. No engine run since 
 | 496 | Debate Findings Pipeline paused | yes | inactive, version 66f18454 | op doc line only | 26 (prior 18) | true |
 | 497 | ASK AAR snapshot check | in part (this AAR's check makes it yes, per AAR rev 23) | live; manuals v219 and op doc v136 | none beyond this AAR | 29 | true |
 | 498 | AAR grade count | in part | live; manuals v220 and op doc v137 | report the three grade count items in this AAR | 30 | true |
-| 499 | ppj_put, ppj_status, ppj_get anon path | no row yet | NOT LIVE: anon holds EXECUTE on all 3 ppj functions (read now); plan 20b80b63 PASS (W2 10080, W1 10081); build rev 0 and run plan 5a689265 PASS (W1 10093, W2 10094) | the operator's approval and the A1 card; then the proving run, the test, A2; the A1 row draft ea44677a (Wall 10096) awaits grades | none | n/a |
-| 500 | webhook authentication | no row yet | not planned; assigned by the coordinator 21:10:43Z; W4 facts at 10095 (Panel Judge Call webhook needs a header credential; the engine start webhook per W1 10092 N1 unchecked by me) | W3's plan | none | n/a |
+| 499 | ppj_put, ppj_status, ppj_get anon path | no row yet | NOT LIVE: anon holds EXECUTE on all 3 ppj functions (read now); plan 20b80b63 PASS (W2 10080, W1 10081); build rev 0 and run plan 5a689265 PASS (W1 10093, W2 10094) | the operator's approval and the A1 card; then the proving run, the test, A2; the A1 row draft ea44677a (Wall 10096) PASS as a template (W1 10097, W3 10100); it is filled and regraded after the write | none | n/a |
+| 500 | webhook authentication | no row yet | planned (W3 10102, plan500.md d12d99e6, awaiting grades); assigned by the coordinator 21:10:43Z; the engine start webhook has no auth (W4 10095 B4, W1 10093); the Panel Judge Call webhook has header auth (W4 10089 A4, 10095 A1) | grades of plan500; then the A0 secrets by the operator, and W4's build | none | n/a |
 
 Also in the table, outside 484 to 500: 481 (row 6, not yet), 482 (rows 9 and 10, in part), 483 (row 5, in part).
 Grade count findings now (ask_aar_grades_check): 12 ok false n 1; 16 and 31 ok false n 0; the one-seat proof on 4. Every other row is ok true, n 2.
