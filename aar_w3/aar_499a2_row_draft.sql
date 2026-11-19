@@ -1,4 +1,4 @@
--- ASK 499 A2 snapshot row, DRAFT rev 0 (W3, seat 33, 11-19). For W1 and W2 to grade. NOT RUN.
+-- ASK 499 A2 snapshot row, DRAFT rev 1 (W3, seat 33, 11-19; replaces rev 0 70b65a3d: W1 10127 C1, git paths a499_w4/ and commit 88712bac). For W1 and W2 to grade. NOT RUN.
 -- Pattern: snapshot 32 (494 A2) and W2's 499 A1 template (aar_w2/aar_499a1_row_draft.sql ea44677a: __FILL values and a closing guard).
 -- Run only from seat 36 (the coordinator), once, after: the A1 row is written, the A1 proving run passes (plan499_a1_run.md Q1 to Q6), the A2 rolled-back test passes and is graded, the A2 write on W4's card, and two non-writer readbacks.
 -- Every __FILL_...__ value must be replaced from live SQL and the Wall, and the filled file graded again, before running. Numeric placeholders are written as quoted strings ("__FILL_..__") so the file parses; replace the quotes too, with the bare number. The guard raises and rolls back if any __FILL is left.
@@ -17,8 +17,8 @@ INSERT INTO public.ask_aar_snapshots (ask, rev, title, objective, objective_met,
  '{"answer":"__FILL_CARD_ANSWER__","thread":"W4","press_time":"__FILL_CARD_PRESS_Z__","source":"audit __FILL_AUDIT_LAST__"}'::jsonb,
  'W3',
  '{"md5":"20b80b63","path":"a499_w3/plan499.md","commit":"a2921f51","wall_id":10079}'::jsonb,
- '[{"md5":"73d82a72","path":"ask499/w4/step499.sql","commit":"__FILL_COMMIT__"}]'::jsonb,
- '{"md5":"ba5da3c1","path":"ask499/w4/revert499.sql"}'::jsonb,
+ '[{"md5":"73d82a72","path":"a499_w4/step499.sql","commit":"88712bac"}]'::jsonb,
+ '{"md5":"ba5da3c1","path":"a499_w4/revert499.sql","commit":"88712bac"}'::jsonb,
  '[{"seat":"W2","verdict":"PASS with three notes (plan rev 0)","wall_id":10080,"md5_graded":"20b80b63","verdict_norm":"PASS"},
    {"seat":"W1","verdict":"PASS (plan rev 0)","wall_id":10081,"md5_graded":"20b80b63","verdict_norm":"PASS"},
    {"seat":"W1","verdict":"PASS (build rev 0)","wall_id":10093,"md5_graded":"73d82a72","verdict_norm":"PASS"},
@@ -30,7 +30,7 @@ INSERT INTO public.ask_aar_snapshots (ask, rev, title, objective, objective_met,
  ARRAY['73d82a72'],
  '["__FILL_AUDIT_IDS_AS_NUMBERS__"]'::jsonb,
  '[{"kind":"grants","name":"EXECUTE on ppj_put, ppj_status and ppj_get","before":"anon, authenticated, lab_seat, postgres, service_role on each; no PUBLIC (revert499.sql ba5da3c1 closing check)","after":"postgres, service_role, lab_seat only"}]'::jsonb,
- '[{"file":"ask499/w4/test499_rollback.sql","md5":"f169e22c","result":"__FILL_TEST_RESULT__","output":"__FILL_TEST_OUTPUT_PATH_AND_MD5__","wall_id":"__FILL_TEST_WALL__"}]'::jsonb,
+ '[{"file":"a499_w4/test499_rollback.sql","md5":"f169e22c","result":"__FILL_TEST_RESULT__","output":"__FILL_TEST_OUTPUT_PATH_AND_MD5__","wall_id":"__FILL_TEST_WALL__"}]'::jsonb,
  '[{"seat":"__FILL_READBACK_SEAT_1__","result":"CONFIRMED","wall_id":"__FILL_READBACK_WALL_1__"},{"seat":"__FILL_READBACK_SEAT_2__","result":"CONFIRMED","wall_id":"__FILL_READBACK_WALL_2__"}]'::jsonb,
  '{"case":"not yet: the next engine run collects all 3 panel replies with no 42501"}'::jsonb,
  '{"engine_manual":"__FILL_ENGINE_MANUAL_AT_RUN_TIME__","op_doc":"__FILL_OP_DOC_AT_RUN_TIME__"}'::jsonb,
