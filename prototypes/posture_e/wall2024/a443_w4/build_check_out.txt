@@ -1,0 +1,17 @@
+base 7cd61791-5ffa-4355-8d28-9b10181b6f8c nodes 426 node text sha256 a23c43a33630 chars 2825
+C1 live text      : PASS items 1
+C2 one byte in LIB: THROW pkgLIB2: Shared Library text sha e1f34cde05eb8b1b differs from its header sha 4d19497f4f93879b
+C2 header changed : THROW pkgLIB2: Shared Library text sha 4d19497f4f93879b differs from its header sha 0000000000000000
+C2 no header      : THROW pkgLIB2: Shared Library text sha 4d19497f4f93879b differs from its header sha none
+C2 LIB unreadable : THROW pkgLIB2: Shared Library text sha none differs from its header sha 4d19497f4f93879b
+C4 ms per run    : 65.2
+comment lines in node: 0
+engine CONN Debate Start : {"main": [[{"index": 0, "node": "Accept Models", "type": "main"}]]} -> {"main": [[{"index": 0, "node": "Library Check", "type": "main"}]]}
+engine CONN Library Check : null -> {"main": [[{"index": 0, "node": "Accept Models", "type": "main"}]]}
+engine changed [] added ['Library Check']
+REASONING GUARD: no model-setting change.
+child changed [] added []
+REASONING GUARD: no model-setting change.
+library sha engine 4d19497f4f93879b child 4d19497f4f93879b
+DRY: nothing written
+91abcff809e4
