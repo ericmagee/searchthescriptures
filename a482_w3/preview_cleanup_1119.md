@@ -1,4 +1,4 @@
-# truth-app-dashboard: old deployments and cleanup options (W3, 11-19 16:1xZ, rev 1, read only; rev 0 put the live dashboard on the delete list)
+# truth-app-dashboard: old deployments and cleanup options (W3, 11-19 16:1xZ, rev 2, read only; rev 0 put the live dashboard on the delete list)
 
 Source: Vercel list_deployments for project truth-app-dashboard (prj_z6ZhLZIeI9DiDzRALD5Z9Wye3VIo), team TruthAPP; Vercel docs /docs/deployment-retention (fetched 11-19). Nothing was changed.
 
@@ -6,7 +6,7 @@ Source: Vercel list_deployments for project truth-app-dashboard (prj_z6ZhLZIeI9D
 - READY (these hold build output, which is what Deployment Storage bills): 42 in total.
   - Preview (branch claude/untitled-9jle0o): 20, created 2026-11-15 17:52Z to 2026-11-16 20:32Z.
   - Preview with no git metadata: 1, 2026-10-27 14:28Z (dpl_5n4sLu6gKhDk6DEfEgBAiE8Q9kNj). THIS IS THE LIVE DASHBOARD: the production domain truth-app-dashboard.vercel.app is aliased to it (list_aliases), and it is a CLI upload (src/index.html, odv1.js, patch-base.js, patch.js, queue.js, retire.js). It must never be deleted.
-  - Production (branch main): 21, 2026-09-03 17:09Z to 2026-11-13 03:26Z (newest two are the pkgDFL commit and its revert, 11-13 03:20Z and 03:26Z).
+  - Production: 21, 2026-09-03 17:09Z to 2026-11-13 03:26Z: 4 from git main (newest two are the pkgDFL commit and its revert, 11-13 03:20Z and 03:26Z) and 17 CLI uploads (correction from W1 9614; rev 1 said all 21 were from main).
 - ERROR, BUILDING, QUEUED: 0.
 - CANCELED (no build output; no storage): at least 700, all previews of claude/untitled-9jle0o. Counted by page: 11-19 about 338, 11-18 68, 11-16 3, 11-15 99, 11-14 22, 11-13 34, 11-12 40, 11-11 101, 11-10 75 (from 7 pages of 100; days overlap pages). Pages older than 11-10 were NOT READ, so the total is a floor.
 - The newest deployment (11-19 15:3xZ, commit A f8a9d6d5) is CANCELED, as are all since 11-16 20:32Z.
