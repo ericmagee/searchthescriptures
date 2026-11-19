@@ -45,4 +45,6 @@ W1 8867 PASS; W4 8869 PASS (both at edd0fa1f).
   (a424_w4/r6/out424_r2.txt). No mark (the prompts that show the read chain are not stored), so a case reads CASE, READ BY HAND.
   An "AGAINST DECLARED CHAIN COUNT 0" N CHECK in review_notes on a case run after live_since is a miss, read by hand.
 - 422(a) case: a run; mark: no pkgLIB1 stop. Like 409, it holds on older runs too, so only live_since separates them.
+  Read by hand (W3 8970 C2): check 3 "3 map_sha equal <x>" in the run-start post; lib422 in the child execution when a
+  second alternate pass runs. With no second alternate pass, the load check is UNEXERCISED.
 - Check on 39266 with --all (SQL): 424 CASE, READ BY HAND (also after the F1 widening); 422(a) EXERCISED (loose, as 409).

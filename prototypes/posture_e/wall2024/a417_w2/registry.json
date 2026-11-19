@@ -53,6 +53,6 @@
     {"ask": "422(a)", "title": "library and MAP sha checked at child load (pkgLIB1)", "live_since": "2026-11-18T23:56:49Z", "version": "1861543f", "probe": "sql",
      "case_sql": "exists(select 1 from r)",
      "mark_sql": "(select case when exists(select 1 from x where coalesce(x.error_message,'')||coalesce(x.error_detail::text,'') like '%pkgLIB1%') or exists(select 1 from r where to_jsonb(r)::text like '%pkgLIB1%') then 0 else 1 end)",
-     "note": "As 409: the case is a run, and the mark is the absence of a pkgLIB1 stop (W4 8956 C1), so EXERCISED means ran without drift. That a second alternate pass carried lib422 (8956 C2) is read in the child execution by hand."}
+     "note": "As 409: the case is a run, and the mark is the absence of a pkgLIB1 stop (W4 8956 C1), so EXERCISED means ran without drift, nothing firmer. Two firmer marks are read by hand (W3 8970 C2): (a) run start: W4's run-start post shows check 3 \\\"3 map_sha equal <x>\\\"; (b) load: lib422 in the child execution naming both pairs of values, when a second alternate pass runs. In a run with no second alternate pass the load check is UNEXERCISED."}
   ]
 }
