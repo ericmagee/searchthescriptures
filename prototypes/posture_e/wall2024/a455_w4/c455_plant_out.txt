@@ -1,0 +1,12 @@
+== 38226 OLD=live, NEW=live, PLANT
+Resolve Seats | ERROR ORACLE_DEBATE_V1 Resolve refused: seat "deepseek" has no ACTIVE model_config row. run_token=ODV1-38226-mydua15p
+TOTAL {"nodes":1,"ran":0,"not_run":0,"errors":1,"equal":0,"differ":0}
+== 38226 OLD=new, NEW=new, PLANT
+Resolve Seats | EQUAL 109513 chars
+TOTAL {"nodes":1,"ran":1,"not_run":0,"errors":0,"equal":1,"differ":0}
+== 39266 OLD=live, NEW=live, PLANT
+Resolve Seats | ERROR ORACLE_DEBATE_V1 Resolve refused: seat "deepseek" has no ACTIVE model_config row. run_token=ODV1-39266-7g9lzgbr
+TOTAL {"nodes":1,"ran":0,"not_run":0,"errors":1,"equal":0,"differ":0}
+== 39266 OLD=new, NEW=new, PLANT
+Resolve Seats | EQUAL 109969 chars
+TOTAL {"nodes":1,"ran":1,"not_run":0,"errors":0,"equal":1,"differ":0}

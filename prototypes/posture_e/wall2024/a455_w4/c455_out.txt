@@ -1,0 +1,57 @@
+== 38226
+Resolve Seats | EQUAL 109510 chars
+Enforcer Build | EQUAL 66 chars
+Anticheat Build | EQUAL 118093 chars
+Close Enforcer Build | EQUAL 212565 chars
+Judge Contradiction Build | EQUAL 209737 chars
+Assume Check Build | EQUAL 5993 chars
+Assume Check Record | DIFFER
+   OLD …EFENDER PREMISE 3 FACT 1","cure_reason":"BOTH NOT STATED -- DEEPSEEK: NOT STATED -- CODE: NOT STATED (names Mary, David; not in the block's quoted verse words: David) -- JUDGES: ch
+   NEW …EFENDER PREMISE 3 FACT 1","cure_reason":"BOTH NOT STATED -- ENFORCER: NOT STATED -- CODE: NOT STATED (names Mary, David; not in the block's quoted verse words: David) -- JUDGES: ch
+   equal with DEEPSEEK read as ENFORCER: true
+TOTAL {"nodes":7,"ran":7,"not_run":0,"errors":0,"equal":6,"differ":1}
+== 38450
+Resolve Seats | EQUAL 109656 chars
+Enforcer Build | EQUAL 66 chars
+Anticheat Build | EQUAL 148677 chars
+Close Enforcer Build | EQUAL 249487 chars
+Judge Contradiction Build | EQUAL 151 chars
+Assume Check Build | EQUAL 8297 chars
+Assume Check Record | DIFFER
+   OLD …EFENDER PREMISE 6 FACT 1","cure_reason":"BOTH NOT STATED -- DEEPSEEK: NOT STATED -- CODE: NOT STATED (names Davidic; not in the block's quoted verse words: Davidic) -- JUDGES: sol6
+   NEW …EFENDER PREMISE 6 FACT 1","cure_reason":"BOTH NOT STATED -- ENFORCER: NOT STATED -- CODE: NOT STATED (names Davidic; not in the block's quoted verse words: Davidic) -- JUDGES: sol6
+   equal with DEEPSEEK read as ENFORCER: true
+TOTAL {"nodes":7,"ran":7,"not_run":0,"errors":0,"equal":6,"differ":1}
+== 38593
+Resolve Seats | EQUAL 109535 chars
+Enforcer Build | EQUAL 27794 chars
+Anticheat Build | EQUAL 107777 chars
+Close Enforcer Build | EQUAL 218435 chars
+Judge Contradiction Build | EQUAL 151 chars
+Assume Check Build | EQUAL 10955 chars
+Assume Check Record | DIFFER
+   OLD …EFENDER PREMISE 2 FACT 1","cure_reason":"BOTH NOT STATED -- DEEPSEEK: NOT STATED -- CODE: NOT STATED (names Mary, David; not in the block's quoted verse words: Mary) -- JUDGES: hai
+   NEW …EFENDER PREMISE 2 FACT 1","cure_reason":"BOTH NOT STATED -- ENFORCER: NOT STATED -- CODE: NOT STATED (names Mary, David; not in the block's quoted verse words: Mary) -- JUDGES: hai
+   equal with DEEPSEEK read as ENFORCER: true
+TOTAL {"nodes":7,"ran":7,"not_run":0,"errors":0,"equal":6,"differ":1}
+== 38661
+Resolve Seats | EQUAL 109535 chars
+Enforcer Build | EQUAL 66 chars
+Anticheat Build | EQUAL 95822 chars
+Close Enforcer Build | EQUAL 160367 chars
+Judge Contradiction Build | EQUAL 151 chars
+Assume Check Build | EQUAL 122 chars
+Assume Check Record | EQUAL 92476 chars
+TOTAL {"nodes":7,"ran":7,"not_run":0,"errors":0,"equal":7,"differ":0}
+== 39266
+Resolve Seats | EQUAL 109966 chars
+Enforcer Build | EQUAL 66 chars
+Anticheat Build | EQUAL 99467 chars
+Close Enforcer Build | EQUAL 226007 chars
+Judge Contradiction Build | EQUAL 151 chars
+Assume Check Build | EQUAL 15373 chars
+Assume Check Record | DIFFER
+   OLD …EFENDER PREMISE 1 FACT 1","cure_reason":"BOTH NOT STATED -- DEEPSEEK: NOT STATED -- CODE: NOT STATED (names Joseph, Mary; not in the block's quoted verse words: Joseph, Mary) -- JU
+   NEW …EFENDER PREMISE 1 FACT 1","cure_reason":"BOTH NOT STATED -- ENFORCER: NOT STATED -- CODE: NOT STATED (names Joseph, Mary; not in the block's quoted verse words: Joseph, Mary) -- JU
+   equal with DEEPSEEK read as ENFORCER: true
+TOTAL {"nodes":7,"ran":7,"not_run":0,"errors":0,"equal":6,"differ":1}
