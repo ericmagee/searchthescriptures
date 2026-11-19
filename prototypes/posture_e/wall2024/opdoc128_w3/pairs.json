@@ -9,7 +9,7 @@
 },
 {
 "old": "A revision restates each heading it changes and names the revision it replaces.\n",
-"new": "A revision restates each heading it changes and names the revision it replaces.\n\nSTACKED PACKAGES (ASK 445). Packages graded as a stack go live on one card and one write per workflow; the builder keeps one revert file per package.\n\nSHARED TOOLS (ASK 447). The shared check tools are kept in tools/ on the working branch, each listed in tools/README.md with its use and its ASK; the engine manual is written only through engine_manual_apply.\n"
+"new": "A revision restates each heading it changes and names the revision it replaces.\n\nSTACKED PACKAGES (ASK 445). Packages graded as a stack go live on one card and one write per workflow; the builder keeps one revert file per package.\n\nSHARED TOOLS (ASK 447). The shared check tools are kept in prototypes/posture_e/wall2024/tools/ on the working branch, each listed in tools/README.md there with its use and its ASK; the engine manual is written only through engine_manual_apply.\n"
 },
 {
 "old": "the coordinator asks the operator for the run.",
