@@ -1,4 +1,4 @@
-# AAR: ASK 440 run (skeleton rev 3, W1 11-19 15:47Z: row 26 per W3 (466 save audit rows), rows 27 and 28 (423/424 re-test, luna ENFORCER count); run released 09:42 CST; fill within minutes of the run ending)
+# AAR: ASK 440 run (skeleton rev 4, W1 11-19 15:52Z: row 26 mark per W3 (saves land with no 42501), dashboard fix live at the run; rev 3: row 26 per W3 (466 save audit rows), rows 27 and 28 (423/424 re-test, luna ENFORCER count); run released 09:42 CST; fill within minutes of the run ending)
 
 Order and words: Wall manual v18 §7.4. Post style §7: formal English, no em dash, enumerate, no record number alone, Central time.
 Sent by the coordinator only, in the project chat and on the Wall under the run's root, naming W4's run report by Wall number.
@@ -40,7 +40,7 @@ Per ASK (merged run-validation checklist p440_w2/runval_merged.md, commit 85e91f
 | 23 | 474 | send-back records read CONCEDED LINKS as the gates do | SQL 474; Q474 by hand | [..] | [..] |
 | 24 | 475 | B rounds run the one library LAY text with no loader error | SQL 475; N3 | [..] | [..] |
 | 25 | 478 / 455 / 479 | no call in the run goes to DeepSeek | runval 478: 0 call_costs entries with m ~ deepseek; luna count shown | [..] | [..] |
-| 26 | 466 steps 1 and 2c | the run's saves still write and audit with the public key cut off | W3's SQL: the judgment, row, enforcer and panel saves each leave their audit rows; no permission error in the execution | [..] | [..] |
+| 26 | 466 steps 1 and 2c | the run's saves still write and audit with the public key cut off | W3's SQL w3/run440/item26.sql: the judgment, row, enforcer and panel saves land (row counts > 0) with no 42501 or permission error in the window; these RPCs write no audit row of their own (none on 39266) | [..] | [..] |
 | 27 | 423, 424 | the two defects of 39266 (LINK D<n> labels unread; D1: chain cut at D3 in round 4) do not recur on the same body | hand read of Assume Check, E-PREM and the round 4 prompts | [..] | [..] |
 | 28 | 426 | each luna ENFORCER reading checked against the transcript (W3's promise, 11-18 20:32 CST) | W3 hand read: right and wrong counts | [..] | [..] |
 Also live and never run-validated before 11-19 (readiness addendum C): 422(c), 423, 424, 422(a); 374 s2, 376, 394 s11, 399/402, 406; 443, 444 A2, 454, 455 A to C, 456. Registry: node a417_w2/exercise.cjs <token>. Result per item: [..].
@@ -64,7 +64,7 @@ Missing: [seat, poked at ..] or NONE.
 1. [seat]: [item] (rule broken: [..] or NO RULE COVERS IT).
 
 ## SUGGESTED IMPROVEMENTS
-Carried in and written 11-19 before the run: ASK 466 step 1 (15:00:22Z) and step 2 (2a, 2b, 2c, 15:24:42 to 15:25:14Z); ASK 477 (v209, op doc v131); ASK 479 (15:16Z, v210); ASK 480 (15:22Z, v211; op doc v132 written 15:35:49Z); ASK 478 closed with no change. Held: ASK 473 (14:14:09Z), ASK 476 (14:29:51Z). Not live at the run: the dashboard default fix, ASK 481, the 466 manual entries (v212, v133). Vercel: commits A (f8a9d6d5) and B (242cd545) on the 09:27 card, backlog cancelled 15:37:11Z (W4 9588); not part of the run.
+Carried in and written 11-19 before the run: ASK 466 step 1 (15:00:22Z) and step 2 (2a, 2b, 2c, 15:24:42 to 15:25:14Z); ASK 477 (v209, op doc v131); ASK 479 (15:16Z, v210); ASK 480 (15:22Z, v211; op doc v132 written 15:35:49Z); ASK 478 closed with no change. Held: ASK 473 (14:14:09Z), ASK 476 (14:29:51Z). Live at the run: the dashboard default fix (written 15:42:20Z, before runstart GO at 15:43Z; W4 9591; not on the run path). Not live at the run: ASK 481, the 466 manual entries (v212, v133). Vercel: commits A (f8a9d6d5) and B (242cd545) on the 09:27 card, backlog cancelled 15:37:11Z (W4 9588); not part of the run.
 New from the run: [ASK or package | grades | card with the operator yes/no].
 
 ## KNOWLEDGE BASE
