@@ -1,0 +1,2 @@
+const fs=require('fs');const K='sb_publishable_rgfWFjynRqBdzyEeBRHcig_c6pHysAi',B='https://bhffmkginddovmdcpnty.supabase.co/rest/v1/';
+(async()=>{const r=await fetch(B+'debate_judgments?select=id,debate_id,judge_seat,verdict_tag,verdict_raw&verdict_raw=like.*SUPERSEDED%20BY%20CURE*&order=id',{headers:{apikey:K,Authorization:'Bearer '+K}});const j=await r.json();fs.writeFileSync('a434/rows.json',JSON.stringify(j));console.log(j.length);})();

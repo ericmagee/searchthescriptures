@@ -1,0 +1,45 @@
+[
+ {
+  "old": "function cureSupHead(raw,o,n){",
+  "new": "function cureSupHead(raw,o,n,st){const __st=(st==='SEND-BACK'||st==='RECOMPUTE')?st:'CURE';"
+ },
+ {
+  "old": "const H=/SUPERSEDED BY CURE: verdict [A-Z-]+ to [A-Z-]+; see the cure lines below(?:\\\\n|\\n)/;",
+  "new": "const H=/SUPERSEDED BY (?:CURE|SEND-BACK|RECOMPUTE): verdict [A-Z-]+ to [A-Z-]+; see the (?:cure|send-back|recompute) lines below(?:\\\\n|\\n)/;"
+ },
+ {
+  "old": "'SUPERSEDED BY CURE: verdict '+o+' to '+n+'; see the cure lines below'",
+  "new": "'SUPERSEDED BY '+__st+': verdict '+o+' to '+n+'; see the '+__st.toLowerCase()+' lines below'"
+ },
+ {
+  "old": "if(/^SUPERSEDED BY CURE\\s*:/i.test(h)||",
+  "new": "if(/^SUPERSEDED BY (?:CURE|SEND-BACK|RECOMPUTE)\\s*:/i.test(h)||"
+ },
+ {
+  "old": "b.payload.verdict_raw=cureSupHead(b.payload.verdict_raw,t0,b.payload.verdict_tag);}",
+  "new": "b.payload.verdict_raw=cureSupHead(b.payload.verdict_raw,t0,b.payload.verdict_tag,'SEND-BACK');}"
+ },
+ {
+  "old": "b.payload.verdict_raw=cureSupHead(b.payload.verdict_raw,t0,b.payload.verdict_tag);",
+  "new": "b.payload.verdict_raw=cureSupHead(b.payload.verdict_raw,t0,b.payload.verdict_tag,'SEND-BACK');"
+ },
+ {
+  "old": "b.payload.verdict_raw=cureSupHead(b.payload.verdict_raw,__t0,b.payload.verdict_tag);",
+  "new": "b.payload.verdict_raw=cureSupHead(b.payload.verdict_raw,__t0,b.payload.verdict_tag,(r.drv||[]).length?'CURE':'RECOMPUTE');"
+ },
+ {
+  "map": "Cure Check",
+  "old": "cureSupHead(__raw+'\\n\\n'+__rc.audit,base.verdict_tag,__rc.fields.verdict_tag)",
+  "new": "cureSupHead(__raw+'\\n\\n'+__rc.audit,base.verdict_tag,__rc.fields.verdict_tag,'RECOMPUTE')"
+ },
+ {
+  "map": "Cure Check",
+  "old": "base.verdict_tag,RC&&RC.fields&&RC.fields.verdict_tag?RC.fields.verdict_tag:(cc?cc.word:base.verdict_tag))",
+  "new": "base.verdict_tag,RC&&RC.fields&&RC.fields.verdict_tag?RC.fields.verdict_tag:(cc?cc.word:base.verdict_tag),'CURE')"
+ },
+ {
+  "map": "Panel Cure Check",
+  "old": "b.payload.verdict_raw=cureSupHead(b.payload.verdict_raw,F0.verdict_tag,b.payload.verdict_tag);",
+  "new": "b.payload.verdict_raw=cureSupHead(b.payload.verdict_raw,F0.verdict_tag,b.payload.verdict_tag,'RECOMPUTE');"
+ }
+]

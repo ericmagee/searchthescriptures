@@ -1,0 +1,29 @@
+functions loaded: cureSupHead kcmtGrade2024 rcObjEnd knlNone2024 ri5Fd2024 graded ri5Rd2024 readLine normLine
+C2: rule for the step: any [AUDIT v37 -> SEND-BACK; else any [AUDIT v21 -> CURE; else RECOMPUTE
+PASS 970 chatgpt CURE "SUPERSEDED BY CURE: verdict BROKEN to HELD; see the cure lines below" one-head=true only-label-differs=true idempotent=true CURE-form-equals-old=true
+PASS 973 chatgpt SEND-BACK "SUPERSEDED BY SEND-BACK: verdict HELD to BROKEN; see the send-back lines below" one-head=true only-label-differs=true idempotent=true CURE-form-equals-old=true
+PASS 976 chatgpt SEND-BACK "SUPERSEDED BY SEND-BACK: verdict HELD to BROKEN; see the send-back lines below" one-head=true only-label-differs=true idempotent=true CURE-form-equals-old=true
+PASS 1042 grok SEND-BACK "SUPERSEDED BY SEND-BACK: verdict BROKEN to HELD; see the send-back lines below" one-head=true only-label-differs=true idempotent=true CURE-form-equals-old=true
+PASS 1049 grok SEND-BACK "SUPERSEDED BY SEND-BACK: verdict BROKEN to HELD; see the send-back lines below" one-head=true only-label-differs=true idempotent=true CURE-form-equals-old=true
+PASS 1088 grok SEND-BACK "SUPERSEDED BY SEND-BACK: verdict BROKEN to HELD; see the send-back lines below" one-head=true only-label-differs=true idempotent=true CURE-form-equals-old=true
+PASS 1161 luna SEND-BACK "SUPERSEDED BY SEND-BACK: verdict HELD to BROKEN; see the send-back lines below" one-head=true only-label-differs=true idempotent=true CURE-form-equals-old=true
+PASS 1163 hydrogen SEND-BACK "SUPERSEDED BY SEND-BACK: verdict HELD to BROKEN; see the send-back lines below" one-head=true only-label-differs=true idempotent=true CURE-form-equals-old=true
+PASS 1167 luna SEND-BACK "SUPERSEDED BY SEND-BACK: verdict HELD to BROKEN; see the send-back lines below" one-head=true only-label-differs=true idempotent=true CURE-form-equals-old=true
+PASS 1168 chatgpt SEND-BACK "SUPERSEDED BY SEND-BACK: verdict HELD to BROKEN; see the send-back lines below" one-head=true only-label-differs=true idempotent=true CURE-form-equals-old=true
+PASS 1170 luna SEND-BACK "SUPERSEDED BY SEND-BACK: verdict HELD to BROKEN; see the send-back lines below" one-head=true only-label-differs=true idempotent=true CURE-form-equals-old=true
+PASS 1193 luna SEND-BACK "SUPERSEDED BY SEND-BACK: verdict BROKEN to HELD; see the send-back lines below" one-head=true only-label-differs=true idempotent=true CURE-form-equals-old=true
+PASS 1202 luna SEND-BACK "SUPERSEDED BY SEND-BACK: verdict BROKEN to HELD; see the send-back lines below" one-head=true only-label-differs=true idempotent=true CURE-form-equals-old=true
+PASS 1205 luna SEND-BACK "SUPERSEDED BY SEND-BACK: verdict BROKEN to HELD; see the send-back lines below" one-head=true only-label-differs=true idempotent=true CURE-form-equals-old=true
+PASS 1221 sonnet SEND-BACK "SUPERSEDED BY SEND-BACK: verdict HELD to BROKEN; see the send-back lines below" one-head=true only-label-differs=true idempotent=true CURE-form-equals-old=true
+PASS 1221 (run 38593 sonnet) reads the expected send-back line
+PASS C4 built kcmtGrade2024 false on "SUPERSEDED BY CURE: verdict HELD"
+PASS C4 built kcmtGrade2024 false on "SUPERSEDED BY SEND-BACK: verdict"
+PASS C4 built kcmtGrade2024 false on "SUPERSEDED BY RECOMPUTE: verdict"
+PASS WRONG-IF plant: OLD kcmtGrade2024 grades the SEND-BACK line as a judge line (true): check can fail
+PASS WRONG-IF plant: OLD kcmtGrade2024 grades the RECOMPUTE line (true)
+PASS C4 kcmtGrade2024 old vs built equal on 2677 lines of the 15 rows (diffs 0)
+PASS WRONG-IF chain plant: one line, "SUPERSEDED BY SEND-BACK: verdict BROKEN to HELD; see the send-back lines below"
+PASS no-change call removes the head (as old code)
+PASS RECOMPUTE plant (no stored row has a no-cure recompute): "SUPERSEDED BY RECOMPUTE: verdict HELD to BROKEN; see the recompute lines below"
+PASS unknown step falls back to CURE
+RESULT: PASS

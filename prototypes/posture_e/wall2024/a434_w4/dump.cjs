@@ -1,0 +1,3 @@
+const fs=require('fs');const T=require('../tools/lib.cjs');let w=JSON.parse(fs.readFileSync(process.argv[2]));w=w.data&&w.data.nodes?w.data:w;const U=T.unpack(w);
+const pat=new RegExp(process.argv[3]);U.L.forEach((l,i)=>{if(pat.test(l))console.log('LINE',i+1,'(idx',i+')',l.length,':',l.slice(0,+process.argv[4]||600));});
+for(const [k,e] of Object.entries(U.M)){e.p.forEach((x,j)=>{if(Array.isArray(x)&&typeof x[0]==='string'&&pat.test(x[0])){const t=x[0];let m;const re=new RegExp(process.argv[3],'g');while((m=re.exec(t)))console.log('MAP',k,'part',j,':',t.slice(Math.max(0,m.index-300),m.index+300));}});}
