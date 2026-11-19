@@ -5,3 +5,7 @@ classB (10 incl. log_override_arming): definer=false cfg=- for all
 step2: log_audit_event, complete_session_close, complete_security_check: anon=true service=true
 C3 tables (11): anon ins=true, upd=false for all. Policies: the_wall (the_wall_update, the_wall_write), day_room (day_room_update, day_room_write),
   day_room_posts (day_room_posts_write), the other 8 anon_ins. The two *_update policies grant nothing: anon holds no UPDATE.
+Added 14:32Z (step 1 rev 2 targets; W2 9459 D), live before any write:
+C5auth: the_wall ins=true upd=true; day_room ins=true upd=true; day_room_posts ins=true upd=false; journal_entries ins=true upd=true
+drRPC: dr_rest anon=true auth=true; dr_retract anon=true auth=true
+Expected after step 1: all of these false. check466.sql now returns 41 rows.
