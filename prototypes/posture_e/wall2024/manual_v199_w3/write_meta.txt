@@ -1,0 +1,5 @@
+engine manual v199 WRITTEN 2026-11-19 ~05:04Z by W3 on the operator's card "Write v199" (pressed 05:03:21Z, W3 thread).
+Result: id 203, version 199, md5 a134b8d24f177eaf58a8a348c98e3c8a, length 592507, counts 16 x 1.
+Base: v198 md5 34ea3eea4a10ee633db1a5106e3fb82b. Pairs: pairs_rev1.json (commit c00fede6).
+Reads before write: W2 Wall 9160 MATCH, W1 Wall 9161 C MATCH.
+Write call: preview_rev1.sql with expect md5/length, title "Engine manual v199", write true, under SET LOCAL truth.session_id.
