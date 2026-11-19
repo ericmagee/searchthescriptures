@@ -37,3 +37,12 @@ Live order: 2a and 2b first (both still work before 2c, since service_role alrea
   GET audit_log_b4_probe (service-only) returned 200 with one row; gateway log showed apikey and Authorization both service_role, node had no own headers.
   PROPOSED 2a: use authentication predefinedCredentialType, nodeCredentialType supabaseApi, credential 0Ap4HeISSH05ZS9s, and remove the node's own
   apikey and Authorization headers (keep Content-Type, Prefer). T6a is then the existing proof; a fresh proof needs a temp workflow (a system change, card).
+
+## T6a (11-19 09:1x CST, off-run, no writes by W4)
+The native credential "Supabase account" (0Ap4HeISSH05ZS9s) is in live use today with no own apikey/Authorization headers:
+- Protected Table Snapshot (kXlKbZpceulxtWvQ) node "Fetch Pending Snapshots", predefinedCredentialType supabaseApi, headers Content-Type only,
+  calls rpc/get_pending_snapshots (service_role EXECUTE only; anon and authenticated none): execution 40744 at 15:00:28Z, node status success, rows returned.
+- Conclusion Embeddings Generator (2nMpfmI6IBTGw8Sf) calls rpc/update_conclusion_embeddings and update_sight_embeddings (service-only, writes): success 15:00:02Z and 14:00:02Z.
+- SQL Snapshot (YWk9m3grughoRpWi) node "Update last_sql_backup in app_state" already uses this credential for rpc/mark_sql_backup (service-only).
+So the credential carries the service_role key today. 2a uses it the same way.
+Order rule (W1 9536 C): 2c must not go live before 2a.
