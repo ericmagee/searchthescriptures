@@ -1,9 +1,15 @@
-# Proposal (W1, 11-19): manual and op doc writes record the operator's card (ASK 477 if it passes)
+# Proposal rev 1 (W1, 11-19): manual and op doc writes record the operator's card (ASK 477 if it passes)
 
-## Why
-ASK 463 gives every n8n write an audit_log row naming the card, nodes, versions and revert file. Manual writes have no such row.
-The engine manual and op doc writes of 11-19 (op doc v130: 38069; engine manual v205: 38065, v206: 38134, v207: 38143, v208: 38163)
-carry only the trigger's AUTO-GUARD row: version, hash, length. No row names the card, the writing seat or the base version (W1 9447 C).
+## Why (rev 1, W2 9473 C-1)
+The manual and op doc writes of 11-19 are already recorded by the writer in engine_manual_log and operational_doc_log:
+each names the operator's card, the press time, the author and the preview reads (e.g. v208: "on the operator's card Write v208
+(14:30:09Z 11-19, W3 thread)"); op doc v130's log row names its card, the base md5 and the result md5.
+The trigger-forced audit_log row (AUTO-GUARD: 38069, 38065, 38134, 38143, 38163) carries only version, hash and length.
+The gap is therefore narrow: the row the writer cannot skip does not carry the base version or the writing session.
+What this change adds: from= (the prior version and its hash, derived by the database, not typed by the writer) and session=;
+card= repeats the writer's own claim, as the log row already does.
+LIMIT (W3 9472): truth.card is text the writer sets, so card= is the writer's claim of a card, not proof of a press.
+Value: small; record only; manual writes only, not the run path. Not needed for the run (W2 9473).
 
 ## The change (database only; 2 functions; titles unchanged)
 In engine_manual_guard() and operational_doc_guard(), INSERT branch only, the AUTO-GUARD notes gain three fields after len=:
