@@ -1,58 +1,192 @@
 {
-  "about": "ASK 417 exercise registry (plan W3 a417_w3/plan_rev1.md, build W2). One entry per live package. case_sql and mark_sql are SQL expressions over the CTEs r (debate_results row of the run), j (its debate_judgments rows), e (its debate_enforcer_log rows) and x (debate_errors rows in the run window: 3 hours before r.created_at to 10 minutes after; debate_errors has no run_token). case_sql is boolean; mark_sql is a count, or null when no mark is defined. probe: 'sql', 'NOT IN DB' or 'NO PROBE'. live_since is the UTC save time of the engine version that made the package live (n8n workflow history of moMxiV4Irg1uRBZN, matched to W4's write posts).",
-  "packages": [
-    {"ask": "374 prompt", "title": "D3 Build ASSUMES sentence (defender answers an assumed-fact charge)", "live_since": "2026-11-18T21:19:54Z", "version": "36fcf36b", "probe": "sql",
-     "case_sql": "exists(select 1 from e where e.rule='E-ASSUME' and e.item like 'CHALLENGER PREMISE%')",
-     "mark_sql": "(select coalesce(sum((length(coalesce(r.engine_r3,''))-length(replace(coalesce(r.engine_r3,''),'ASSUMES:','')))/8),0) from r)"},
-    {"ask": "374 step 2", "title": "both-not-stated refusal of DEFENDER LINK BROKEN on a challenger premise", "live_since": "2026-11-18T21:19:54Z", "version": "36fcf36b", "probe": "sql",
-     "case_sql": "exists(select 1 from e, j where e.rule='E-ASSUME' and e.item like 'CHALLENGER PREMISE%' and e.cure_reason like 'BOTH NOT STATED%' and j.verdict_raw ~ ('D[0-9]+ vs C' || substring(e.item from 'CHALLENGER PREMISE ([0-9]+)') || '[^0-9][^\\n]*DEFENDER LINK BROKEN'))",
-     "mark_sql": "(select count(*) from j where j.verdict_raw like '%(pkgBNS, ASK 374)%') + (select count(*) from e where coalesce(e.cure_reason,'')||' '||coalesce(e.response_line,'') like '%(pkgBNS, ASK 374)%')"},
-    {"ask": "376", "title": "K-V exclusion wording counts as a K-V kind (KV_EXCL)", "live_since": "2026-11-18T21:19:22Z", "version": "9fc1d4a8", "probe": "sql",
-     "case_sql": "exists(select 1 from e where e.rule='K-V' and lower(coalesce(e.full_reply,'')||' '||coalesce(e.cure_reason,'')||' '||coalesce(e.flagged_line,'')) like '%exclu%')",
-     "mark_sql": "(select count(*) from e where e.rule='K-V' and e.cure_status='CURED' and lower(coalesce(e.full_reply,'')||' '||coalesce(e.cure_reason,'')||' '||coalesce(e.flagged_line,'')) like '%exclu%')"},
-    {"ask": "394 s11", "title": "bnsRefuse2024 reads the CHANGE TO line by __RL.readLine", "live_since": "2026-11-18T17:51:43Z", "version": "360d569d", "probe": "sql",
-     "case_sql": "exists(select 1 from j where j.verdict_raw ~ 'D[0-9]+ vs C[0-9]+ \\([^)\\n]*\\): STANDS')",
-     "mark_sql": null},
-    {"ask": "399/402", "title": "retracted pair handling; v62 tag when a BROKEN keystone cites a retracted pair", "live_since": "2026-11-18T18:17:56Z", "version": "3c6e1f92", "probe": "sql",
-     "case_sql": "exists(select 1 from j where j.verdict_raw ~ '\\[AUDIT v21: CORRECTED RESULT[^]]*RETRACTED:? D[0-9]+ vs C[0-9]+')",
-     "mark_sql": "(select coalesce(sum((length(j.verdict_raw)-length(replace(j.verdict_raw,'[AUDIT v62','')))/10),0) from j)"},
-    {"ask": "400", "title": "rcLines reads the prefixed and grade-first forms", "live_since": "2026-11-18T17:48:54Z", "version": "32ef4b46", "probe": "NO PROBE"},
-    {"ask": "401", "title": "quote check strips the margin note before splitting", "live_since": "2026-11-18T17:49:37Z", "version": "178e19d2", "probe": "NO PROBE"},
-    {"ask": "403", "title": "engine_manual section 8 cited without a version", "live_since": "2026-11-18T17:50:10Z", "version": "b64a30d5", "probe": "NO PROBE"},
-    {"ask": "404", "title": "BROKEN verdict with an unproven challenge reads UNDERDETERMINED", "live_since": "2026-11-18T18:30:48Z", "version": "697b9f79", "probe": "sql",
-     "case_sql": "exists(select 1 from j where j.verdict_raw ~ '\\[AUDIT v61:[^]]*VERDICT BROKEN' and j.verdict_raw ~ '\\[AUDIT v61:[^]]*CHALLENGE STANDING ' and j.verdict_raw !~ '\\[AUDIT v61:[^]]*CHALLENGE STANDING SELF-SUPPORTED')",
-     "mark_sql": "(select count(*) from j where j.verdict_raw ~ '\\[AUDIT v61:[^]]*WORD: UNDERDETERMINED[^]]*VERDICT BROKEN' and j.verdict_raw !~ '\\[AUDIT v61:[^]]*CHALLENGE STANDING SELF-SUPPORTED')"},
-    {"ask": "405", "title": "v63 mark-after lines in review_notes", "live_since": "2026-11-18T20:18:44Z", "version": "23488cd7", "probe": "sql",
-     "case_sql": "exists(select 1 from r)",
-     "mark_sql": "(select coalesce(sum((length(coalesce(r.review_notes,''))-length(replace(coalesce(r.review_notes,''),'[AUDIT v63','')))/10),0) from r)"},
-    {"ask": "406", "title": "L2 gloss forms counted on the v57 line", "live_since": "2026-11-18T20:18:04Z", "version": "bd06ab8f", "probe": "sql",
-     "case_sql": "exists(select 1 from r where r.review_notes like '%[AUDIT v57%')",
-     "mark_sql": "(select count(*) from r where r.review_notes ~ '\\[AUDIT v57[^\\n]*\\(ASK 406 forms:')"},
-    {"ask": "407", "title": "alternate order (ember, glm_legal, ...)", "live_since": "2026-11-18T19:19:05Z", "version": "4435dd09", "probe": "sql",
-     "case_sql": "exists(select 1 from r where r.drv_removed is not null and jsonb_typeof(r.drv_removed)='array' and jsonb_array_length(r.drv_removed)>0)",
-     "mark_sql": "(select count(*) from r where r.drv_removed::text like '%ALTERNATE TRIED%' and r.drv_removed::text like '%RESULT: SEATED%')"},
-    {"ask": "408", "title": "Oracle defender uses sperma", "live_since": "2026-11-18T20:25:20Z", "version": "cf283937", "probe": "sql",
-     "case_sql": "exists(select 1 from r)",
-     "mark_sql": "(select count(*) from r, regexp_matches(lower(coalesce(r.claude_r1,'')||' '||coalesce(r.claude_r2,'')||' '||coalesce(r.engine_r3,'')||' '||coalesce(r.defender_r4,'')),'sperma','g'))"},
-    {"ask": "409", "title": "REFP block held once in the Shared Library", "live_since": "2026-11-18T20:33:12Z", "version": "95c1b2e9", "probe": "sql",
-     "case_sql": "exists(select 1 from r)",
-     "mark_sql": "(select case when exists(select 1 from x where coalesce(x.error_message,'')||coalesce(x.error_detail::text,'') like '%pkgREFP%') or exists(select 1 from r where to_jsonb(r)::text like '%pkgREFP%') then 0 else 1 end)"},
-    {"ask": "422(c)", "title": "KV_EXCL reads makes and excludes", "live_since": "2026-11-18T22:52:47Z", "version": "3257a833", "probe": "sql",
-     "case_sql": "exists(select 1 from e where e.rule='K-V' and lower(coalesce(e.response_line,'')||' '||coalesce(e.flagged_line,'')) ~ '(d(o|oes) +not|never) +([a-z]+ +)?(makes|excludes)\\M' and lower(coalesce(e.response_line,'')||' '||coalesce(e.flagged_line,'')) like '%exclu%' and lower(coalesce(e.response_line,'')||' '||coalesce(e.flagged_line,'')) like '%quot%')",
-     "mark_sql": "(select count(*) from e where e.rule='K-V' and e.cure_status='CURED' and lower(coalesce(e.response_line,'')||' '||coalesce(e.flagged_line,'')) ~ '(d(o|oes) +not|never) +([a-z]+ +)?(makes|excludes)\\M' and lower(coalesce(e.response_line,'')||' '||coalesce(e.flagged_line,'')) like '%exclu%' and lower(coalesce(e.response_line,'')||' '||coalesce(e.flagged_line,'')) like '%quot%')"},
-    {"ask": "396", "title": "OPEN ENFORCER DISAGREEMENTS header line in the report", "live_since": "2026-11-18T17:51:10Z", "version": "afd50593", "probe": "NOT IN DB",
-     "note": "Drive export line \"OPEN ENFORCER DISAGREEMENTS\"; read by hand."},
-    {"ask": "423", "title": "LINK D<n> / LINK C<n> labels in kept rounds rewritten to LINK <n>; AUDIT v27 LINK LABELS line", "live_since": "2026-11-18T23:06:39Z", "version": "db091b9e", "probe": "sql",
-     "case_sql": "exists(select 1 from r where coalesce(r.engine_r2,'')||E'\\n'||coalesce(r.engine_r3,'')||E'\\n'||coalesce(r.challenger_r3,'') ~ '(^|\\n)[ \\t]*[*_]*[ \\t]*LINK[ \\t]*[*_]*[ \\t]*[DC][0-9]' or coalesce(r.review_notes,'') like '%LINK LABELS (%')",
-     "mark_sql": "(select count(*) from r where coalesce(r.review_notes,'') like '%(ASK 423) -- REWRITTEN%')",
-     "note": "Case and mark from W3 plan rev 2 item 1 (a423_w3/plan_rev2.md lines 73 to 75). A run after live_since whose kept text still carries a [DC] label at a line head and no AUDIT v27 line reads MISSED."},
-    {"ask": "424", "title": "every reader of the defender's declared chain takes one link head (D1:, D1., **1.**, 1 --)", "live_since": "2026-11-18T23:54:07Z", "version": "040e0e02", "probe": "sql",
-     "case_sql": "exists(select 1 from r where position('DECLARED CHAIN' in coalesce(r.claude_r1,''))>0 and substring(substr(coalesce(r.claude_r1,''), position('DECLARED CHAIN' in coalesce(r.claude_r1,''))) from E'\\n(.*)$') ~* E'(^|\\n)[ \\t]*(#+[ \\t]*)?[*_]*[ \\t]*D?[0-9]+[*_]*([.:)](?![0-9])|[ \\t]+[-‐‑‒–—―−]{1,3}([ \\t]|\\n|$))[*_]*[ \\t]*[^ \\t\\n]' and not substring(substr(coalesce(r.claude_r1,''), position('DECLARED CHAIN' in coalesce(r.claude_r1,''))) from E'\\n(.*)$') ~ E'(^|\\n)[ \\t]*[*]*[ \\t]*[0-9]+[.)][ \\t]+[^ \\t\\n]')",
-     "mark_sql": null,
-     "note": "Case (W1 8969 F1): after DECLARED CHAIN in the defender's round 1, a line takes the ASK 424 head and no line takes the old head (digits then . or ), as drvLinks read before). Over the 245 stored chains it selects exactly the 16 runs R2 to R5 newly read (a424_w4/r6/out424_r2.txt), 4 of them with D<n>: heads (SQL by W2 at 00:11Z 11-19, over all 880 results rows). No mark: the prompts that show the read chain are not stored, so a case reads CASE, READ BY HAND. Read by hand: D4 Build's YOUR DECLARED CHAIN carries the conclusion link; an 'AGAINST DECLARED CHAIN COUNT 0' N CHECK in review_notes on a case run is a MISS (W1 8969 N2; the registry has no partial mark form, so it stays a hand read)."},
-    {"ask": "422(a)", "title": "library and MAP sha checked at child load (pkgLIB1)", "live_since": "2026-11-18T23:56:49Z", "version": "1861543f", "probe": "sql",
-     "case_sql": "exists(select 1 from r)",
-     "mark_sql": "(select case when exists(select 1 from x where coalesce(x.error_message,'')||coalesce(x.error_detail::text,'') like '%pkgLIB1%') or exists(select 1 from r where to_jsonb(r)::text like '%pkgLIB1%') then 0 else 1 end)",
-     "note": "As 409: the case is a run, and the mark is the absence of a pkgLIB1 stop (W4 8956 C1), so EXERCISED means ran without drift, nothing firmer. Two firmer marks are read by hand (W3 8970 C2): (a) run start: W4's run-start post shows check 3 \\\"3 map_sha equal <x>\\\"; (b) load: lib422 in the child execution naming both pairs of values, when a second alternate pass runs. In a run with no second alternate pass the load check is UNEXERCISED."}
-  ]
+ "about": "ASK 417 exercise registry (plan W3 a417_w3/plan_rev1.md, build W2). One entry per live package. case_sql and mark_sql are SQL expressions over the CTEs r (debate_results row of the run), j (its debate_judgments rows), e (its debate_enforcer_log rows) and x (debate_errors rows in the run window: 3 hours before r.created_at to 10 minutes after; debate_errors has no run_token). case_sql is boolean; mark_sql is a count, or null when no mark is defined. probe: 'sql', 'NOT IN DB' or 'NO PROBE'. live_since is the UTC save time of the engine version that made the package live (n8n workflow history of moMxiV4Irg1uRBZN, matched to W4's write posts).",
+ "packages": [
+  {
+   "ask": "374 prompt",
+   "title": "D3 Build ASSUMES sentence (defender answers an assumed-fact charge)",
+   "live_since": "2026-11-18T21:19:54Z",
+   "version": "36fcf36b",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from e where e.rule='E-ASSUME' and e.item like 'CHALLENGER PREMISE%')",
+   "mark_sql": "(select coalesce(sum((length(coalesce(r.engine_r3,''))-length(replace(coalesce(r.engine_r3,''),'ASSUMES:','')))/8),0) from r)"
+  },
+  {
+   "ask": "374 step 2",
+   "title": "both-not-stated refusal of DEFENDER LINK BROKEN on a challenger premise",
+   "live_since": "2026-11-18T21:19:54Z",
+   "version": "36fcf36b",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from e, j where e.rule='E-ASSUME' and e.item like 'CHALLENGER PREMISE%' and e.cure_reason like 'BOTH NOT STATED%' and j.verdict_raw ~ ('D[0-9]+ vs C' || substring(e.item from 'CHALLENGER PREMISE ([0-9]+)') || '[^0-9][^\\n]*DEFENDER LINK BROKEN'))",
+   "mark_sql": "(select count(*) from j where j.verdict_raw like '%(pkgBNS, ASK 374)%') + (select count(*) from e where coalesce(e.cure_reason,'')||' '||coalesce(e.response_line,'') like '%(pkgBNS, ASK 374)%')"
+  },
+  {
+   "ask": "376",
+   "title": "K-V exclusion wording counts as a K-V kind (KV_EXCL)",
+   "live_since": "2026-11-18T21:19:22Z",
+   "version": "9fc1d4a8",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from e where e.rule='K-V' and lower(coalesce(e.full_reply,'')||' '||coalesce(e.cure_reason,'')||' '||coalesce(e.flagged_line,'')) like '%exclu%')",
+   "mark_sql": "(select count(*) from e where e.rule='K-V' and e.cure_status='CURED' and lower(coalesce(e.full_reply,'')||' '||coalesce(e.cure_reason,'')||' '||coalesce(e.flagged_line,'')) like '%exclu%')"
+  },
+  {
+   "ask": "394 s11",
+   "title": "bnsRefuse2024 reads the CHANGE TO line by __RL.readLine",
+   "live_since": "2026-11-18T17:51:43Z",
+   "version": "360d569d",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from j where j.verdict_raw ~ 'D[0-9]+ vs C[0-9]+ \\([^)\\n]*\\): STANDS')",
+   "mark_sql": null
+  },
+  {
+   "ask": "399/402",
+   "title": "retracted pair handling; v62 tag when a BROKEN keystone cites a retracted pair",
+   "live_since": "2026-11-18T18:17:56Z",
+   "version": "3c6e1f92",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from j where j.verdict_raw ~ '\\[AUDIT v21: CORRECTED RESULT[^]]*RETRACTED:? D[0-9]+ vs C[0-9]+')",
+   "mark_sql": "(select coalesce(sum((length(j.verdict_raw)-length(replace(j.verdict_raw,'[AUDIT v62','')))/10),0) from j)"
+  },
+  {
+   "ask": "400",
+   "title": "rcLines reads the prefixed and grade-first forms",
+   "live_since": "2026-11-18T17:48:54Z",
+   "version": "32ef4b46",
+   "probe": "NO PROBE"
+  },
+  {
+   "ask": "401",
+   "title": "quote check strips the margin note before splitting",
+   "live_since": "2026-11-18T17:49:37Z",
+   "version": "178e19d2",
+   "probe": "NO PROBE"
+  },
+  {
+   "ask": "403",
+   "title": "engine_manual section 8 cited without a version",
+   "live_since": "2026-11-18T17:50:10Z",
+   "version": "b64a30d5",
+   "probe": "NO PROBE"
+  },
+  {
+   "ask": "404",
+   "title": "BROKEN verdict with an unproven challenge reads UNDERDETERMINED",
+   "live_since": "2026-11-18T18:30:48Z",
+   "version": "697b9f79",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from j where j.verdict_raw ~ '\\[AUDIT v61:[^]]*VERDICT BROKEN' and j.verdict_raw ~ '\\[AUDIT v61:[^]]*CHALLENGE STANDING ' and j.verdict_raw !~ '\\[AUDIT v61:[^]]*CHALLENGE STANDING SELF-SUPPORTED')",
+   "mark_sql": "(select count(*) from j where j.verdict_raw ~ '\\[AUDIT v61:[^]]*WORD: UNDERDETERMINED[^]]*VERDICT BROKEN' and j.verdict_raw !~ '\\[AUDIT v61:[^]]*CHALLENGE STANDING SELF-SUPPORTED')"
+  },
+  {
+   "ask": "405",
+   "title": "v63 mark-after lines in review_notes",
+   "live_since": "2026-11-18T20:18:44Z",
+   "version": "23488cd7",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from r)",
+   "mark_sql": "(select coalesce(sum((length(coalesce(r.review_notes,''))-length(replace(coalesce(r.review_notes,''),'[AUDIT v63','')))/10),0) from r)"
+  },
+  {
+   "ask": "406",
+   "title": "L2 gloss forms counted on the v57 line",
+   "live_since": "2026-11-18T20:18:04Z",
+   "version": "bd06ab8f",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from r where r.review_notes like '%[AUDIT v57%')",
+   "mark_sql": "(select count(*) from r where r.review_notes ~ '\\[AUDIT v57[^\\n]*\\(ASK 406 forms:')"
+  },
+  {
+   "ask": "407",
+   "title": "alternate order (ember, glm_legal, ...)",
+   "live_since": "2026-11-18T19:19:05Z",
+   "version": "4435dd09",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from r where r.drv_removed is not null and jsonb_typeof(r.drv_removed)='array' and jsonb_array_length(r.drv_removed)>0)",
+   "mark_sql": "(select count(*) from r where r.drv_removed::text like '%ALTERNATE TRIED%' and r.drv_removed::text like '%RESULT: SEATED%')"
+  },
+  {
+   "ask": "408",
+   "title": "Oracle defender uses sperma",
+   "live_since": "2026-11-18T20:25:20Z",
+   "version": "cf283937",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from r)",
+   "mark_sql": "(select count(*) from r, regexp_matches(lower(coalesce(r.claude_r1,'')||' '||coalesce(r.claude_r2,'')||' '||coalesce(r.engine_r3,'')||' '||coalesce(r.defender_r4,'')),'sperma','g'))"
+  },
+  {
+   "ask": "409",
+   "title": "REFP block held once in the Shared Library",
+   "live_since": "2026-11-18T20:33:12Z",
+   "version": "95c1b2e9",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from r)",
+   "mark_sql": "(select case when exists(select 1 from x where coalesce(x.error_message,'')||coalesce(x.error_detail::text,'') like '%pkgREFP%') or exists(select 1 from r where to_jsonb(r)::text like '%pkgREFP%') then 0 else 1 end)"
+  },
+  {
+   "ask": "422(c)",
+   "title": "KV_EXCL reads makes and excludes",
+   "live_since": "2026-11-18T22:52:47Z",
+   "version": "3257a833",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from e where e.rule='K-V' and lower(coalesce(e.response_line,'')||' '||coalesce(e.flagged_line,'')) ~ '(d(o|oes) +not|never) +([a-z]+ +)?(makes|excludes)\\M' and lower(coalesce(e.response_line,'')||' '||coalesce(e.flagged_line,'')) like '%exclu%' and lower(coalesce(e.response_line,'')||' '||coalesce(e.flagged_line,'')) like '%quot%')",
+   "mark_sql": "(select count(*) from e where e.rule='K-V' and e.cure_status='CURED' and lower(coalesce(e.response_line,'')||' '||coalesce(e.flagged_line,'')) ~ '(d(o|oes) +not|never) +([a-z]+ +)?(makes|excludes)\\M' and lower(coalesce(e.response_line,'')||' '||coalesce(e.flagged_line,'')) like '%exclu%' and lower(coalesce(e.response_line,'')||' '||coalesce(e.flagged_line,'')) like '%quot%')"
+  },
+  {
+   "ask": "396",
+   "title": "OPEN ENFORCER DISAGREEMENTS header line in the report",
+   "live_since": "2026-11-18T17:51:10Z",
+   "version": "afd50593",
+   "probe": "NOT IN DB",
+   "note": "Drive export line \"OPEN ENFORCER DISAGREEMENTS\"; read by hand."
+  },
+  {
+   "ask": "423",
+   "title": "LINK D<n> / LINK C<n> labels in kept rounds rewritten to LINK <n>; AUDIT v27 LINK LABELS line",
+   "live_since": "2026-11-18T23:06:39Z",
+   "version": "db091b9e",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from r where coalesce(r.engine_r2,'')||E'\\n'||coalesce(r.engine_r3,'')||E'\\n'||coalesce(r.challenger_r3,'') ~ '(^|\\n)[ \\t]*[*_]*[ \\t]*LINK[ \\t]*[*_]*[ \\t]*[DC][0-9]' or coalesce(r.review_notes,'') like '%LINK LABELS (%')",
+   "mark_sql": "(select count(*) from r where coalesce(r.review_notes,'') like '%(ASK 423) -- REWRITTEN%')",
+   "note": "Case and mark from W3 plan rev 2 item 1 (a423_w3/plan_rev2.md lines 73 to 75). A run after live_since whose kept text still carries a [DC] label at a line head and no AUDIT v27 line reads MISSED."
+  },
+  {
+   "ask": "424",
+   "title": "every reader of the defender's declared chain takes one link head (D1:, D1., **1.**, 1 --)",
+   "live_since": "2026-11-18T23:54:07Z",
+   "version": "040e0e02",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from r where position('DECLARED CHAIN' in coalesce(r.claude_r1,''))>0 and substring(substr(coalesce(r.claude_r1,''), position('DECLARED CHAIN' in coalesce(r.claude_r1,''))) from E'\\n(.*)$') ~* E'(^|\\n)[ \\t]*(#+[ \\t]*)?[*_]*[ \\t]*D?[0-9]+[*_]*([.:)](?![0-9])|[ \\t]+[-‐‑‒–—―−]{1,3}([ \\t]|\\n|$))[*_]*[ \\t]*[^ \\t\\n]' and not substring(substr(coalesce(r.claude_r1,''), position('DECLARED CHAIN' in coalesce(r.claude_r1,''))) from E'\\n(.*)$') ~ E'(^|\\n)[ \\t]*[*]*[ \\t]*[0-9]+[.)][ \\t]+[^ \\t\\n]')",
+   "mark_sql": null,
+   "note": "Case (W1 8969 F1): after DECLARED CHAIN in the defender's round 1, a line takes the ASK 424 head and no line takes the old head (digits then . or ), as drvLinks read before). Over the 245 stored chains it selects exactly the 16 runs R2 to R5 newly read (a424_w4/r6/out424_r2.txt), 4 of them with D<n>: heads (SQL by W2 at 00:11Z 11-19, over all 880 results rows). No mark: the prompts that show the read chain are not stored, so a case reads CASE, READ BY HAND. Read by hand: D4 Build's YOUR DECLARED CHAIN carries the conclusion link; an 'AGAINST DECLARED CHAIN COUNT 0' N CHECK in review_notes on a case run is a MISS (W1 8969 N2; the registry has no partial mark form, so it stays a hand read)."
+  },
+  {
+   "ask": "422(a)",
+   "title": "library and MAP sha checked at child load (pkgLIB1)",
+   "live_since": "2026-11-18T23:56:49Z",
+   "version": "1861543f",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from r)",
+   "mark_sql": "(select case when exists(select 1 from x where coalesce(x.error_message,'')||coalesce(x.error_detail::text,'') like '%pkgLIB1%') or exists(select 1 from r where to_jsonb(r)::text like '%pkgLIB1%') then 0 else 1 end)",
+   "note": "As 409: the case is a run, and the mark is the absence of a pkgLIB1 stop (W4 8956 C1), so EXERCISED means ran without drift, nothing firmer. Two firmer marks are read by hand (W3 8970 C2): (a) run start: W4's run-start post shows check 3 \\\"3 map_sha equal <x>\\\"; (b) load: lib422 in the child execution naming both pairs of values, when a second alternate pass runs. In a run with no second alternate pass the load check is UNEXERCISED."
+  },
+  {
+   "ask": "426",
+   "title": "luna (openai/gpt-6-luna) is the enforcer model in place of deepseek-flash",
+   "live_since": "2026-11-19T02:17:21Z",
+   "version": "b780b2ae",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from e where e.kind='enforcer_check')",
+   "mark_sql": "(select case when exists(select 1 from e where e.kind='enforcer_check' and coalesce(e.judge_model,'')<>'openai/gpt-6-luna') then 0 else (select count(*) from e where e.kind='enforcer_check' and e.judge_model='openai/gpt-6-luna') end)",
+   "note": "W2-C1 of the ASK 426 plan grade (9006). EXERCISED = every enforcer_check row of the run has judge_model openai/gpt-6-luna (fired = their count); any row with another judge_model (deepseek-flash, or null) gives MISSED. Live after the readbacks W1 9022, W2 9023."
+  },
+  {
+   "ask": "428",
+   "title": "code comments removed from Code nodes and form 3 pkgLIB stubs (no token change)",
+   "live_since": "2026-11-19T03:14:41Z",
+   "version": "06967796",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from r)",
+   "mark_sql": "(select case when exists(select 1 from x where coalesce(x.error_message,'')||coalesce(x.error_detail::text,'') ~ 'pkgLIB(:|1)') or exists(select 1 from r where to_jsonb(r)::text ~ 'pkgLIB(:|1)') then 0 else 1 end)",
+   "note": "Plan a428_w3/plan_rev3.md item 6. As 409 and 422(a): the case is any run after the write, and the mark is the absence of a pkgLIB: (stub rebuild) or pkgLIB1 (library sha) stop, so EXERCISED means it ran without a stub or library failure, nothing firmer. Read by hand: lib422 in the child execution names c91b9f1489e9c132 on both sides when a second alternate pass runs. Merged by W2 after the write (W4 9073; engine 06967796 saved 03:14:41Z, child e1f2b1c4 03:14:45Z)."
+  }
+ ]
 }
