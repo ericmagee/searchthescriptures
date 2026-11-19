@@ -1,0 +1,8 @@
+engine CONN Debate Start : {"main": [[{"index": 0, "node": "Accept Models", "type": "main"}]]} -> {"main": [[{"index": 0, "node": "Library Check", "type": "main"}]]}
+engine CONN Library Check : null -> {"main": [[{"index": 0, "node": "Accept Models", "type": "main"}]]}
+engine changed ['Resolve Seats', 'Extract Independent Verdict', 'Panel Payloads', 'Alternate Build', 'Alternate Payloads', 'Enforcer Build', 'Anticheat Build', 'Send Back Record', 'Alt Send Back Record', 'Shared Library', 'Early Alternate Build', 'Close Enforcer Build', 'Judge Contradiction Build', 'Assume Check Build', 'Assume Check Record'] added ['Library Check']
+REASONING GUARD: no model-setting change.
+child changed ['R2 Alt Send Back Record', 'R2 Alternate Payloads', 'Shared Library'] added []
+REASONING GUARD: no model-setting change.
+library sha engine cad3b4f8239c2504 child cad3b4f8239c2504
+DRY: nothing written
