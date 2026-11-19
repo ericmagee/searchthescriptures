@@ -1,0 +1,5 @@
+const fs=require('fs');const acorn=require(process.argv[4]);const [A,B]=process.argv.slice(2,4).map(f=>JSON.parse(fs.readFileSync(f)));
+const src=w=>w.nodes.find(x=>x.name==='Build Save Body').parameters.jsCode;const toks=s=>[...acorn.tokenizer('(async function(){'+s+'\n})',{ecmaVersion:'latest',allowReturnOutsideFunction:true})].map(t=>t.type.label+':'+(t.value===undefined?'':t.value));
+const a=toks(src(A)),b=toks(src(B));console.log('tokens',a.length,b.length);let d=[];for(let i=0;i<Math.max(a.length,b.length);i++)if(a[i]!==b[i])d.push(i+' OLD '+a[i]+' | NEW '+b[i]);console.log('differing tokens',d.length);d.forEach(x=>console.log('  '+x));
+const m=new Map(A.nodes.map(x=>[x.name,JSON.stringify(x)]));const ch=B.nodes.filter(n=>m.get(n.name)!==JSON.stringify(n)).map(n=>n.name);console.log('nodes changed:',ch.join(', '),'| nodes',A.nodes.length,B.nodes.length,'| connections equal',JSON.stringify(A.connections)===JSON.stringify(B.connections));
+let k=0;for(const n of B.nodes){const t=JSON.stringify(n.parameters||{});if(t.includes('60-gloss'))k++;}console.log('nodes holding "60-gloss" after:',k);

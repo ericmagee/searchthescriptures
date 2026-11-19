@@ -1,0 +1,7 @@
+tokens 23974 23974
+differing tokens 1
+  13852 OLD string: left out by the 60-gloss and 30-number caps) | NEW string: left out by the 250-gloss and 100-number caps)
+nodes changed: Build Save Body | nodes 425 425 | connections equal true
+nodes holding "60-gloss" after: 0
+REASONING GUARD: no model-setting change.
+RESULT: PASS
