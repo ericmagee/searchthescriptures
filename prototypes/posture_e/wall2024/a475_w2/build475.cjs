@@ -32,7 +32,8 @@ if(ri<0||re<0)throw new Error('REFP loader not found in D2 Build');
 // without it the rebuilt LAY would see no $ and silently read no verse rows. $ is the only free name in the LAY text (free_out.txt).
 const L0=REFPL.slice(ri,re+"})($('Shared Library').params.jsCode);".length).replace(/REFP/g,'LAY');
 const OLDF="return new Function(S+'\\nreturn LAY;')();";if(L0.split(OLDF).length!==2)throw new Error('loader return not found once');
-const LOADER=L0.replace(OLDF,()=>"return new Function('$',S+'\\nreturn LAY;')($);");
+const LOADER=L0.replace(OLDF,()=>"return new Function('$',S+'\\nreturn LAY;')($);").replace(/pkgLAY:/g,'pkgLAYB:');
+// rev 1 (W1 9406): the loader's error tag is pkgLAYB (B rounds), so it is not read as the judge-side pkgLAY (ASK 346).
 for(const [i,nm] of NODES.entries()){const n=EN[nm];const c=n.parameters.jsCode;const f=found[i];n.parameters.jsCode=c.slice(0,f.a)+LOADER+c.slice(f.e);}
 fs.writeFileSync(EO,JSON.stringify(E));fs.writeFileSync(CO,JSON.stringify(C));
 console.log('inline LAY',TXT.length,'chars,',TXT.split('\n').length,'lines, identical in',NODES.length,'nodes, 0 comments');
