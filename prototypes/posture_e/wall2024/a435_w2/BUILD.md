@@ -1,9 +1,9 @@
 # ASK 435 build (W2), rulings 495 and 496 ("Both: 2:7, 12 and 2:7;12")
 
-Base: engine moMxiV4Irg1uRBZN 60bf6007 (live), child MqQHRl7mQQ0z8QdT aa9ed5c5 (live). Library e3f899d169578be0 -> 1a9d23268043980c.
+Base: engine moMxiV4Irg1uRBZN 9a7841f0 (live after the ASK 430+436+438 write; Shared Library equal to 60bf6007's), child MqQHRl7mQQ0z8QdT aa9ed5c5 (live). Library e3f899d169578be0 -> 1a9d23268043980c.
 Build: node lib_apply.cjs ENG CHILD pairs_435s.json ENG_OUT CHILD_OUT. Only the Shared Library changes, at REFP lines 496 (BARE) and 507 (bare-number step).
-Targets: moMxiV4Irg1uRBZN_60bf6007_target_435.json (sha256 07cb14b0f07e), MqQHRl7mQQ0z8QdT_aa9ed5c5_target_435.json (e8553f8039c0).
-Stack: the same pairs apply cleanly to W4's a4x_w4 430+436+438 target (its library equals live); result sha256 ee08410ae1fc, Shared Library the only node changed.
+Targets: moMxiV4Irg1uRBZN_9a7841f0_target_435.json (sha256 e2d03eec4fb5), MqQHRl7mQQ0z8QdT_aa9ed5c5_target_435.json (e8553f8039c0).
+Rebuilt twice: first on 60bf6007 (07cb14b0f07e), then on 9a7841f0. All checks below re-run on 9a7841f0.
 
 Checks
 1. Reasoning guard: no model-setting change (engine and child).
