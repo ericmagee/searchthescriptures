@@ -1,0 +1,56 @@
+-- ASK 499 A2 rolled-back test (W4). Everything rolls back (final RAISE). One transaction; ppj_put's 3-day delete also rolls back (W2 N2 at 10080). Test nonces start ppj-test499-. Database side only; A1 is proven by a run.
+do $t$
+declare r text := ''; v jsonb; a0 text; a1 text; txt text := '{"test":"ask499 T5","x":"é ü 1"}';
+  fl text[] := array['ppj_put','ppj_status','ppj_get'];
+begin
+  perform set_config('truth.session_id', 'session_01H1X3AP1fjeQaEbxPP9UEZH', true);
+  select string_agg(x, '; ' order by x) into a0 from (select p.proname||'='||case when e.grantee=0 then 'PUBLIC' else pg_get_userbyid(e.grantee) end x from pg_proc p, aclexplode(p.proacl) e where p.pronamespace='public'::regnamespace and p.proname = any(fl) and e.privilege_type='EXECUTE') q;
+  set local role anon;
+  begin v := public.ppj_put(jsonb_build_object('nonce','ppj-test499-c1-0000000000000000','slot',1,'provider','test','seat','test','response_text','{"c1":1}')); r := r || 'C1 anon ppj_put before: ' || coalesce(v->>'ok','?') || ' (accepted shows T1 can fail)' || E'\n';
+  exception when others then r := r || 'C1 anon ppj_put before: ERROR ' || sqlstate || E'\n'; end;
+  reset role;
+  revoke execute on function public.ppj_put(jsonb) from public, anon, authenticated;
+  revoke execute on function public.ppj_status(jsonb) from public, anon, authenticated;
+  revoke execute on function public.ppj_get(jsonb) from public, anon, authenticated;
+  set local role anon;
+  begin v := public.ppj_put(jsonb_build_object('nonce','ppj-test499-t1-0000000000000000','slot',1,'response_text','{"t1":1}')); r := r || 'T1 anon ppj_put after: ALLOWED (FAIL)' || E'\n';
+  exception when insufficient_privilege then r := r || 'T1 anon ppj_put after: refused 42501 (PASS)' || E'\n';
+  when others then r := r || 'T1 anon ppj_put after: ' || sqlstate || ' (FAIL)' || E'\n'; end;
+  begin v := public.ppj_status(jsonb_build_object('nonce','ppj-test499-c1-0000000000000000')); r := r || 'T2 anon ppj_status after: ALLOWED (FAIL)' || E'\n';
+  exception when insufficient_privilege then r := r || 'T2 anon ppj_status after: refused 42501 (PASS)' || E'\n';
+  when others then r := r || 'T2 anon ppj_status after: ' || sqlstate || ' (FAIL)' || E'\n'; end;
+  begin v := public.ppj_get(jsonb_build_object('nonce','ppj-test499-c1-0000000000000000')); r := r || 'T3 anon ppj_get after: ALLOWED (FAIL)' || E'\n';
+  exception when insufficient_privilege then r := r || 'T3 anon ppj_get after: refused 42501 (PASS)' || E'\n';
+  when others then r := r || 'T3 anon ppj_get after: ' || sqlstate || ' (FAIL)' || E'\n'; end;
+  reset role;
+  set local role authenticated;
+  begin v := public.ppj_put(jsonb_build_object('nonce','ppj-test499-t4-0000000000000000','slot',1,'response_text','{"t4":1}')); r := r || 'T4a authenticated ppj_put after: ALLOWED (FAIL)' || E'\n';
+  exception when insufficient_privilege then r := r || 'T4a authenticated ppj_put after: refused 42501 (PASS)' || E'\n';
+  when others then r := r || 'T4a authenticated ppj_put after: ' || sqlstate || ' (FAIL)' || E'\n'; end;
+  begin v := public.ppj_status(jsonb_build_object('nonce','ppj-test499-c1-0000000000000000')); r := r || 'T4b authenticated ppj_status after: ALLOWED (FAIL)' || E'\n';
+  exception when insufficient_privilege then r := r || 'T4b authenticated ppj_status after: refused 42501 (PASS)' || E'\n';
+  when others then r := r || 'T4b authenticated ppj_status after: ' || sqlstate || ' (FAIL)' || E'\n'; end;
+  begin v := public.ppj_get(jsonb_build_object('nonce','ppj-test499-c1-0000000000000000')); r := r || 'T4c authenticated ppj_get after: ALLOWED (FAIL)' || E'\n';
+  exception when insufficient_privilege then r := r || 'T4c authenticated ppj_get after: refused 42501 (PASS)' || E'\n';
+  when others then r := r || 'T4c authenticated ppj_get after: ' || sqlstate || ' (FAIL)' || E'\n'; end;
+  reset role;
+  set local role service_role;
+  begin
+    v := public.ppj_put(jsonb_build_object('nonce','ppj-test499-t5-0000000000000000','slot',2,'provider','test','seat','test','response_text',txt));
+    r := r || 'T5a service_role ppj_put after: ' || coalesce(v->>'ok','?') || ' (PASS if true)' || E'\n';
+    v := public.ppj_status(jsonb_build_object('nonce','ppj-test499-t5-0000000000000000'));
+    r := r || 'T5b service_role ppj_status after: ' || (v->'slots')::text || ' (PASS if [2])' || E'\n';
+    v := public.ppj_get(jsonb_build_object('nonce','ppj-test499-t5-0000000000000000'));
+    r := r || 'T5c service_role ppj_get after: text byte-equal ' || ((v->'rows'->0->>'response_text') = txt) || ' (PASS if true)' || E'\n';
+  exception when others then r := r || 'T5 service_role: ERROR ' || sqlstate || ' (FAIL)' || E'\n'; end;
+  reset role;
+  r := r || 'T6 anon or authenticated EXECUTE left on: ' || coalesce((select string_agg(proname, ',') from pg_proc where pronamespace='public'::regnamespace and proname = any(fl) and (has_function_privilege('anon',oid,'execute') or has_function_privilege('authenticated',oid,'execute'))), 'none') || ' (PASS if none)' || E'\n';
+  grant execute on function public.ppj_put(jsonb) to anon, authenticated;
+  grant execute on function public.ppj_status(jsonb) to anon, authenticated;
+  grant execute on function public.ppj_get(jsonb) to anon, authenticated;
+  select string_agg(x, '; ' order by x) into a1 from (select p.proname||'='||case when e.grantee=0 then 'PUBLIC' else pg_get_userbyid(e.grantee) end x from pg_proc p, aclexplode(p.proacl) e where p.pronamespace='public'::regnamespace and p.proname = any(fl) and e.privilege_type='EXECUTE') q;
+  r := r || 'R1 EXECUTE grantees after revert equal before (order-free): ' || (a0 = a1) || ' (PASS if true)' || E'\n';
+  r := r || 'R1 before: ' || a0 || E'\n';
+  if a0 <> a1 then r := r || 'after: ' || a1 || E'\n'; end if;
+  raise exception 'ASK499 TEST ROLLBACK%', E'\n' || r;
+end $t$;
