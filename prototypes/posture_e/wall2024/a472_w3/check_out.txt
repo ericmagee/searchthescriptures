@@ -1,0 +1,9 @@
+lib_apply.cjs eng_t458.json child_t458.json pairs.json eng_472.json child_472.json
+engine 0f221f86024a2c69 -> 40d3eb4e7d3bc276 MAP n changed 13 | child 0f221f86024a2c69 -> 40d3eb4e7d3bc276 MAP n changed 13
+SAME MAP ENTRIES 46 (engine also holds REFP)
+SAME LIBRARY 40d3eb4e7d3bc276
+exit 0
+token check: engine and child, lines changed [1500, 1641], non-string tokens equal true, lines 3503 -> 3503, "reasoning" in changed lines false; nodes differ ["Shared Library"]; connections equal
+gate.cjs (e405598e) engine and child: CHANGED ["Shared Library"], COMMENTS: no changed Code node gains a comment text its base lacks
+SQL jfl_counted('send_back','UNCURED','panel','ODV1-39015-x', reason): old E-APPLY reason false; new E-APPLY reason false; E-GATE "(counted in drv_uncured)" true
+target md5 (first 12): eng_472.json dba2c1b793f6, child_472.json 8e33063a1973

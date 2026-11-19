@@ -1,0 +1,2 @@
+[{"old":"; RECORD-ONLY: no further call is made, it removes no seat. REVIEW THIS ROW.]","new":"; not counted on this row: the item goes to the E-GATE (pkgVP1), where this seat is asked about it, and an item left uncured there is counted in drv_uncured, which can remove the seat. REVIEW THIS ROW.]"},
+ {"old":"cure_reason:'RECORD-ONLY (no further call; it removes no seat): '+z.why","new":"cure_reason:'not counted on this row; it goes to the E-GATE (pkgVP1), and if left uncured there it is counted in drv_uncured: '+z.why"}]
