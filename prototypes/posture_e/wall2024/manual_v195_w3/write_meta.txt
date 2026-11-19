@@ -1,0 +1,3 @@
+title: v195: one Shared Library text in engine and child, checked at run start and at the child load (ASK 422(a))
+expect: base v194 md5 116b98d1f33815510d46f3cc01f256ae; counts [1]; new md5 253c3ebd0ba74046600169fcb3f1878c; length 580347 (rev 2)
+written: version 195, engine_manual id 199, on operator card chosen 00:18:48Z 11-19
