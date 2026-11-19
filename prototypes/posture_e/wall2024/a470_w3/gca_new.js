@@ -1,0 +1,11 @@
+const __gca=raw=>{ 
+ const t=String(raw==null?'':raw).replace(/\\n/g,'\n').replace(/\\"/g,'"');const G=new Map(),out=[];let ks=null;
+ const GR=/\b(D\d+)\s+vs\.?\s+(C\d+)\b(?:\s*\([^)\n]{0,80}\))?\s*:\s*\**\s*(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|STANDS|HELD|BROKEN|COLLISION)\b/g;
+ for(const l0 of t.split('\n')){const l=l0.replace(/[*_`]+/g,'').trim();if(!l||/^\[(?:AUDIT|EXTRACTOR)\b/.test(l)||/^(?:DEFENSE|CHALLENGE) STANDING\s*:/.test(l))continue;
+  const k=l.match(/^KEYSTONE\s*:\s*(D\d+)\s*(?:--|—|–|-|:)?\s*(STANDS|BROKEN|WITHDRAWN)\b/);if(k&&!ks)ks={d:k[1],g:k[2],l};
+  for(const m of l.matchAll(GR)){const key=m[1]+' vs '+m[2];if(!G.has(key))G.set(key,new Set());G.get(key).add(m[3]);}
+  const f=l.match(/^FORCED\s*:\s*(D\d+)\s+vs\.?\s+(C\d+)/);if(f){const key=f[1]+' vs '+f[2];if(!G.has(key))G.set(key,new Set());G.get(key).add('FORCED');}}
+ for(const [key,s] of G){const g=[...s].filter(x=>x!=='FORCED');if(g.length>1)out.push('the pair '+key.replace(' vs ','/')+' carries two grades, '+g.join(' and '));}
+ if(ks&&ks.g==='STANDS'){const bad=[...G].filter(([key,s])=>key.split(' vs ')[0]===ks.d&&(s.has('DEFENDER LINK BROKEN')||s.has('BROKEN')||(s.has('FORCED')&&![...s].some(x=>x!=='FORCED'&&x!=='DEFENDER LINK BROKEN'&&x!=='BROKEN')))).map(([key])=>key);if(bad.length)out.push('the keystone '+ks.d+' is graded STANDS while the pair '+bad.map(x=>x.replace(' vs ','/')).join(', ')+' is graded broken against the defender');}
+ if(ks&&ks.g==='BROKEN'&&!/derived by the engine/i.test(ks.l)){const R=new Set([...t.matchAll(/RETRACTED:?\s+(D\d+)\s+vs\.?\s+(C\d+)/g)].map(m=>m[1]+' vs '+m[2]));for(const key of new Set([...ks.l.matchAll(/\b(D\d+)\s+vs\.?\s+(C\d+)\b/g)].map(m=>m[1]+' vs '+m[2]))){if(key.split(' vs ')[0]!==ks.d||!G.has(key))continue;const g=[...G.get(key)].filter(x=>x!=='FORCED');if(g.length&&!g.some(x=>x==='DEFENDER LINK BROKEN'||x==='BROKEN'))out.push('the keystone '+ks.d+' is graded BROKEN on the pair '+key.replace(' vs ','/')+', which this judge grades '+g.join(' and ')+(R.has(key)?' and marks RETRACTED':''));}}
+ return out;};
