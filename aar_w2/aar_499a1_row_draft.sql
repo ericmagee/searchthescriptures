@@ -1,6 +1,6 @@
--- ASK 499 A1 snapshot row, DRAFT rev 1 (W2, seat 32, 11-19). For W1 and W3 to grade. NOT RUN.
+-- ASK 499 A1 snapshot row, DRAFT rev 2 (W2, seat 32, 11-19). For W1 and W3 to grade. NOT RUN.
 -- Rev 1 fills from W4 10140, W1 10141/10142 and W2 10148: commit 88712bac, a499_w4/ paths, engine 01691ed8, Panel Judge Call d19d8de6, card "Push it" 21:38:57Z.
--- ONE VALUE LEFT ON PURPOSE: __FILL_AUDIT_ID__. No audit_log row exists for the 499 A1 write (W2 10148 F1). W4 owes it, as audit 38773 for 494 A1. The guard raises until it is filled.
+-- Rev 2 fills the audit ids: W4 wrote audit 39312 (Panel Judge Call) and 39313 (engine) late at 21:55Z on W2 F1 (W4 10150). No fill value is left.
 -- Pattern: snapshot 16 (494 A1), with one change: the grades are on the build files actually written (W1 10093, W2 10094), so md5_match can be true (row 16's gap, AAR grade count findings).
 -- Run only from seat 36 (the coordinator), once, after: the A1 card write by W4, the fetchback match, and two non-writer readbacks.
 -- Every __FILL_...__ value must be replaced from live SQL and the Wall before running. The guard at the end raises and rolls back if any is left.
@@ -12,11 +12,11 @@ INSERT INTO public.ask_aar_snapshots (ask, rev, title, objective, objective_met,
 (499, 'A1', 'Panel judge reply nodes moved to the "Supabase account" credential',
  $t$Today anyone holding the public (anon) key can call rpc/ppj_put, and with it store a reply in ppj_replies for any nonce and slot. The engine keeps the first reply per slot and reads it back as that panel judge's answer, so a reply stored before the judge's own would stand as the judge's verdict. The same key reads any nonce's replies (ppj_get, ppj_status). Close that, and keep every engine run's panel judges working. Expected effect: ppj_put, ppj_status and ppj_get refuse anon and authenticated with 42501, and the engine's calls to them run as service_role. (a499_w3/plan499.md)$t$,
  'not yet',
- $t$A1 only is written (audit __FILL_AUDIT_ID__; engine d491f4a5 to 01691ed8, Panel Judge Call 15a91429 to d19d8de6; fetchback equal to the targets) and the engine read back live by W1 (10141) and W2 (10148). Panel Judge Call cannot be read through the n8n MCP; it is checked only against W4's fetchback (28889eab), and the proving run's Q2 is its independent proof (W1 10142). The proving run and A2 (the revokes) are not done, so no function refuses anon yet.$t$,
+ $t$A1 only is written (audit 39312 and 39313, written late at 21:55Z; engine d491f4a5 to 01691ed8, Panel Judge Call 15a91429 to d19d8de6; fetchback equal to the targets) and the engine read back live by W1 (10141) and W2 (10148). Panel Judge Call cannot be read through the n8n MCP; it is checked only against W4's fetchback (28889eab), and the proving run's Q2 is its independent proof (W1 10142). The proving run and A2 (the revokes) are not done, so no function refuses anon yet.$t$,
  '10140, 10141, 10148',
  'session_01H1X3APzb2DidJoZ9Avizjn', NULL,
  '"not yet"'::jsonb,
- '{"answer":"Push it","thread":"W4","press_time":"21:38:57Z","source":"audit __FILL_AUDIT_ID__"}'::jsonb,
+ '{"answer":"Push it","thread":"W4","press_time":"21:38:57Z","source":"audit 39312 and 39313"}'::jsonb,
  'W3',
  '{"md5":"20b80b63","path":"a499_w3/plan499.md","commit":"a2921f51","wall_id":10079}'::jsonb,
  '[{"md5":"8ca5c722","path":"a499_w4/target_engine_499a1.json","commit":"88712bac"},
@@ -32,7 +32,7 @@ INSERT INTO public.ask_aar_snapshots (ask, rev, title, objective, objective_met,
    {"seat":"W1","verdict":"PASS (A1 run checks and A2 test plan)","wall_id":10093,"md5_graded":"5a689265","verdict_norm":"PASS"},
    {"seat":"W2","verdict":"PASS (A1 run checks and A2 test plan)","wall_id":10094,"md5_graded":"5a689265","verdict_norm":"PASS"}]'::jsonb,
  ARRAY['8ca5c722','5b79316b'],
- '[__FILL_AUDIT_ID__]'::jsonb,
+ '[39312, 39313]'::jsonb,
  '[{"kind":"workflow","name":"engine moMxiV4Irg1uRBZN (Panel Judges Poll and Panel Judges Fetch, credential only)","before":"d491f4a5","after":"01691ed8"},
    {"kind":"workflow","name":"Panel Judge Call Y1VIsNB6KBrs1znP (Store Reply, credential only)","before":"15a91429","after":"d19d8de6"}]'::jsonb,
  '"not yet"'::jsonb,
@@ -40,7 +40,7 @@ INSERT INTO public.ask_aar_snapshots (ask, rev, title, objective, objective_met,
  '{"owed":true,"case":"plan499_a1_run.md 5a689265 Q1 to Q6: role service_role on rpc/ppj_put, ppj_status and ppj_get, all 3 panel replies collected"}'::jsonb,
  '{"engine_manual":"not yet","op_doc":"not yet"}'::jsonb,
  'read back',
- '[10079, 10080, 10081, 10089, 10091, 10093, 10094, 10140, 10141, 10142, 10148, "audit __FILL_AUDIT_ID__"]'::jsonb);
+ '[10079, 10080, 10081, 10089, 10091, 10093, 10094, 10140, 10141, 10142, 10148, 10150, "audit 39312", "audit 39313"]'::jsonb);
 
 INSERT INTO public.ask_aar_builders (snapshot_id, prior_row, builder_seats, sources, written_by)
 SELECT s.id, NULL, ARRAY['W4'],
