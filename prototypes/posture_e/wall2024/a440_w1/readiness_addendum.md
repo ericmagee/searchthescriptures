@@ -1,13 +1,14 @@
-# ASK 440 run: readiness addendum to readiness_v2.md (W1, 2026-11-19 ~14:20Z, coordinator order)
+# ASK 440 run: readiness addendum to readiness_v2.md (W1, 2026-11-19, rev 1 14:24Z: 473 held, 475 rebuilt)
 
 readiness_v2.md (a_ready_w2, rev 1 a5779188) was written for engine c1256eec. Items 1 to 15 still apply. This adds the state after the writes of 11-19.
 
 ## A. What the run needs to start
 1. The operator's explicit run release (one press). A one-word reply is not a release.
 2. Write chain settled. Live now: engine 5c0f00ab, child b10fcad2, library 56c66d536f088f5d (ASK 474, read back MATCH by W1 9427 and W2 9426).
-   Still to decide before the release: ASK 473 (rebuild 2f02e0df, two passes; card needs the operator's own words) and ASK 475 (rev 1, two passes; rebuild on the chain head after 473).
-   If either is written, the run's versions move and runstart.py takes the new ids. ASK 476 is advised HOLD and is not in the run.
-3. tools/runstart.py GO, live, at start, quoted in the run-start post (ASK 446). Offline on W1's fetch of 5c0f00ab / b10fcad2 with body_39266 (sha 53763d9544a6) and no running executions: GO, all 15 checks ok (map_sha 436cfc54cf8cc781).
+   ASK 473 is HELD by the operator (card "Hold", 14:14:09Z 11-19): not in the run.
+   ASK 475 is rebuilt on 5c0f00ab / b10fcad2 without 473 (cf92da67, library 8bd8d2a7dc9d2ed0; MATCH W1 9437, W2 9436); its card is next. If written, the run's versions move and runstart.py takes the new ids.
+   ASK 476 is advised HOLD and is not in the run.
+3. tools/runstart.py GO, live, at start, quoted in the run-start post (ASK 446). Re-run after any further write. Offline on W1's fetch of 5c0f00ab / b10fcad2 with body_39266 (sha 53763d9544a6) and no running executions: GO, all 15 checks ok (map_sha 436cfc54cf8cc781).
 4. The body. The released body of 39266 is a419_w4/plants/body_39266.json: defender spark/oracle, challenger gemini/plain, topic "Did Christ have a biological father?". The operator confirms or names another body; the sha prefix goes on the release.
 5. Engine manual v206 (468, 470, 472 entries) written and read back, so the manual matches the engine the run uses (preview MATCH W1 9433, W2 9432).
 
@@ -23,7 +24,6 @@ readiness_v2.md (a_ready_w2, rev 1 a5779188) was written for engine c1256eec. It
 | 470 | engine Alternate Merge | an [AUDIT v54 ...] item "is graded BROKEN on the pair", or none (TRIAL) |
 | 472 | library | an E-APPLY not-applied record in the new words; drv_uncured count unchanged |
 | 474 | library | if a send-back runs: sb_rows read CONCEDED LINKS as the gate nodes do |
-| 473 (if written) | engine, library | request bodies carry session_id, the MiMo and google/qwen forms as before |
 | 475 (if written) | engine B rounds | B rounds record lay_check as before, no "pkgLAYB:" error |
 Not run-tested: 462 (Wall check, DB), 463 (tools), 465 (op doc), 448 to 451 (Wall guard).
 
