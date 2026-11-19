@@ -1,4 +1,4 @@
-# ASK 500 plan rev 0 (W3, seat 33, 11-19; THE ASK FORM op doc §29; number assigned by the coordinator in its message to W3 at 21:10:43Z, and again at 21:16:21Z, "plan 500 around that webhook"): anyone with the URL can start a paid engine run
+# ASK 500 plan rev 1 (W3, seat 33, 11-19; replaces rev 0 d12d99e6: W1 10105 C1, N1, N2; THE ASK FORM op doc §29; number assigned by the coordinator in its message to W3 at 21:10:43Z, and again at 21:16:21Z, "plan 500 around that webhook"): anyone with the URL can start a paid engine run
 
 ## 1. OBJECTIVE
 Today the engine's start webhook (Debate Start, POST /webhook/oracle-debate-v1) has no authentication. Anyone who has the URL can start a full engine run (1.73 to 5.15 USD for this pair; run 40891 was 5.149) with any topic, engines and profiles. A direct POST also skips the topic fence, which lives in dash_launch_odv1. The URL is not a secret (W4 10095 B8). Close that, and keep every real launch working.
@@ -15,6 +15,9 @@ SEARCH (W4 10095, read 21:11Z to 21:16Z; W1 10093; W3 live reads 15:17 CST):
 3. Callers: dash_launch_odv1 (SECURITY DEFINER; EXECUTE postgres, service_role, lab_seat; prosrc md5 3b74a293, 2,865 characters) applies the topic fence (debate_fence_overrides), then calls net.http_post(url, body, timeout 60000) with no headers argument, then logs to odv1_launches. W4's runstart.py posts straight to the URL. 89 engine executions since 11-07, all mode webhook (W4 10095 B6).
 4. Extensions live: supabase_vault 0.3.1 (4 secrets stored now) and pg_net 0.20.3.
 5. The Panel Judge Call webhook (Y1VIsNB6KBrs1znP) already has headerAuth, credential "WALL-2024 PPJ webhook" (W4 10089 A4, 10095 A1). It is the working pattern for this ASK.
+6. Where the value would sit in clear (W1 10105 C1), read live 15:25 CST:
+   a. pg_net holds each request, headers included, in net.http_request_queue until its worker sends it (seconds; 0 rows now), and keeps responses in net._http_response (142 rows; response headers, not request headers). Both are owned by supabase_admin; the queue's ACL grants PUBLIC all privileges, so anon and authenticated can SELECT both. Postgres is not the owner, so a REVOKE by a seat may not be possible.
+   b. An n8n Webhook node passes the request headers on in its output, so after A2 each engine execution's Debate Start data would hold the value. Panel Judge Call has the same exposure today.
 
 Key fact:
 dash_launch_odv1 is the only launch path with the fence and the log, and it sends no header today. If the node required a header first, every dashboard launch would be refused. So the function learns to send the header first, and the node requires it second.
@@ -32,6 +35,8 @@ D. No build. Anyone with the URL can keep starting paid runs.
 Not in scope (noted): whoever holds the "WALL-2024 PPJ webhook" value gets OpenRouter calls with no model or token cap (W4 10095 A3). A cap is a separate decision.
 
 NOT SEARCHED:
+- Whether the net schema is exposed through the Data API (project setting "Exposed schemas"). If it is, the public key can read the queued header and also queue HTTP requests of its own: that is a larger finding, reported to the operator at once, and A1 does not go ahead until it is closed.
+- Whether a Panel Judge Call execution's webhook output holds the auth header (W4 reads by header NAME only, never the value).
 - Whether the 89 engine executions all match odv1_launches or Wall launch records (would show any launch from outside; W4 10095 B6). W4 reads this before the build and reports it.
 - Whether any other active workflow has a webhook trigger with no authentication. W4 lists them before the build.
 - Whether a body can raise a run's cost above 5.15 USD (W4 10095 B7).
@@ -39,6 +44,9 @@ NOT SEARCHED:
 
 ## 4. CRITERIA and DONE
 Before A1: both secrets exist by name (n8n credential list by name; vault.secrets by name), with no value read or printed.
+Before A1, the value's path (item 6):
+- 6a: W4 reads the Data API exposed schemas. If net is not exposed, the queue is readable only by database roles that can already read vault.decrypted_secrets' callers, and the few seconds a row waits are accepted. If net is exposed, stop (NOT SEARCHED item 1).
+- 6b: W4 reads one Panel Judge Call execution's webhook output by header name. If the auth header is there, the team records that the value is readable by whoever can read n8n executions (the operator and the seats), as for Panel Judge Call today, and the graders accept or reject that in their grade. Rejecting means a different design (option B) before any build.
 Before the A1 write: test500a1_rollback.sql passes in full, as one transaction that ends in RAISE (pg_net sends only after commit, so nothing is posted):
 - T1: dash_launch_odv1 with a fenced topic is refused as today (fence unchanged).
 - T2: with an allowed test topic, the queued request in net.http_request_queue carries the header name and a value whose md5 equals the vault secret's md5 (compared in SQL; neither printed), and the URL and body equal today's.
@@ -56,7 +64,8 @@ Done: both writes read back by two non-writers, Q1 to Q3 pass.
 1. A2 runs before A1: every dashboard launch is refused at the webhook.
 2. The n8n and vault values differ: every launch after A2 is refused (Q1 fails; revert A2 on the operator's word).
 3. A launch path outside this SEARCH (another workflow, a script) posts to the URL: it fails after A2. The pre-build reads must list every caller.
-4. The value appears in a transcript, a file or a log line: the secret must be remade. No seat reads or prints it; the test compares md5s in SQL.
+4. The value appears in a transcript, a file or a log line: the secret must be remade. No seat reads or prints it; the test compares md5s in SQL and prints neither (W1 N1). The queued test rows are rolled back. Known resting places are item 6 a and b, decided before the build.
+5. A1b puts W4's launches behind the fence: a fenced topic in a test launch then needs a reason, as on the dashboard (W1 N2).
 
 ## 6. RUN EVIDENCE
 Q1 is the next real launch; no separate paid run. Q2 is one free refused POST. No ASK 417 registry case.
@@ -66,7 +75,7 @@ plan500.md in /mnt/project-files/ask500/w3/ (git a500_w3/). W4's step500a1.sql, 
 
 ## 8. STEPS
 1. A0 secrets. Waits on: the operator.
-2. Pre-build reads (NOT SEARCHED items). W4.
+2. Pre-build reads (NOT SEARCHED items and item 6). W4. A stop at 6a goes to the operator.
 3. A1 rolled-back test. Waits on: the operator's approval prompt.
 4. A1 write. Waits on: W4's card. Then a real launch proves it.
 5. A1b runstart.py change. Waits on: two grades.
