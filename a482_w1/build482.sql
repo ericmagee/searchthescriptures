@@ -148,4 +148,11 @@ AS $function$
          order by array_position(array['chatgpt','sol','sol62','haiku','gemini','hydrogen','spark','qwen4max','argon','sonnet'], judge_seat), created_at), '[]'::jsonb)
   from debate_judgments where debate_id = p_id;
 $function$;
+-- W2 9649 N2: closing checks; any failure raises and the whole build rolls back.
+DO $chk$ BEGIN
+  IF (SELECT count(*) FROM dash_debaters() WHERE active AND api_model IS NOT NULL) <> 10 THEN RAISE EXCEPTION 'ASK 482 check: dash_debaters() does not return 10 active rows with a version'; END IF;
+  IF position($q$'qwen'$q$ in (SELECT prosrc FROM pg_proc WHERE proname='dash_launch_odv1')) > 0 THEN RAISE EXCEPTION 'ASK 482 check: dash_launch_odv1 still names qwen'; END IF;
+  IF position('array(select key from dash_debaters())' in (SELECT prosrc FROM pg_proc WHERE proname='dash_launch_odv1')) = 0 THEN RAISE EXCEPTION 'ASK 482 check: v_eng is not read from dash_debaters()'; END IF;
+  IF position('odv1_engines' in (SELECT prosrc FROM pg_proc WHERE proname='dash_api')) = 0 THEN RAISE EXCEPTION 'ASK 482 check: dash_api has no odv1_engines action'; END IF;
+END $chk$;
 COMMIT;

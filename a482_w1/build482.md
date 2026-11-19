@@ -25,11 +25,13 @@ Objective (operator, 16:03Z and 16:04Z): the dashboard shows the current models;
 - C5: no engine change.
 - C6 mirror482.cjs: prints the read-only check. Rolled-back: known-good (today's 10) MATCH; known-bad (qwen in place of qwen4max) MISMATCH. registry_482_entry.json is the ASK 417 entry to append at readback.
 
-## Card (W4's thread)
-1. Run build482.sql (prefix SET LOCAL truth.session_id, the DDL audit trigger needs it). Readback: prosrc md5 of the four functions; mirror482 SQL reads MATCH.
+## Card (W4's thread) (rev 1: W2 9649 N1 to N3)
+1. Run build482.sql (md5 e4ac977c; prefix SET LOCAL truth.session_id, the DDL audit trigger needs it). It ends in a raising DO check (10 active rows with a version; no 'qwen' in dash_launch_odv1; v_eng from dash_debaters(); dash_api has odv1_engines), so a failed check rolls the whole build back. Readback, prosrc md5: dash_debaters 663c511d, dash_api c541b307, dash_launch_odv1 3b74a293, dash_odv1_judges 9796ab3c (dash_launch_odv1 3b74a293 was also produced live inside the rolled-back test, so the file and the test agree); mirror482 SQL reads MATCH.
+   The poll-limit change (80 to 240 checks, 20 to 60 minutes) is its own card line: it is outside the plan (W2 N1).
 2. mcp__Vercel__create_deployment, project truth-app-dashboard, team team_bBqtXgj58bdGw1brsCIdjyMs, files: src/index.html, src/patch.js, src/patch-base.js, src/queue.js, src/retire.js (unchanged, by sha), src/odv1.js (new), vercel.json. No projectSettings (they would be saved to the project). Wait for READY.
 3. mcp__Vercel__assign_alias truth-app-dashboard.vercel.app to the new deployment. Readback: fetch /odv1.js, sha1 equals the new file.
-Revert: assign_alias back to dpl_5n4sLu6gKhDk6DEfEgBAiE8Q9kNj; run revert482.sql (restores the three bodies read live, then drops dash_debaters).
+4. Readback by a non-writer (W2 N3, since C3 is UNCHECKED): one load of the Any vs Any tab; the two drop-downs list 10 choices, each with its version.
+Revert: assign_alias back to dpl_5n4sLu6gKhDk6DEfEgBAiE8Q9kNj; run revert482.sql (md5 a9b631c0; restores the three bodies read live, then drops dash_debaters; ends in a raising DO check that the three prosrc md5 equal the bases and dash_debaters is gone. That check passes on today's live state, 16:3xZ).
 
 ## Gemini
 Stays in the list. W3 traced the operator's 21:51 CST 11-18 words (W4 9126): "we keep gemini 3.8 flash.. it's good. my mistake on that.. we keep spark too." No ruling is owed.

@@ -124,4 +124,11 @@ AS $function$
 $function$;
 
 DROP FUNCTION IF EXISTS public.dash_debaters();
+-- W2 9649 N2: closing checks; any failure raises and the revert rolls back.
+DO $chk$ BEGIN
+  IF (SELECT md5(prosrc) FROM pg_proc WHERE proname='dash_api') <> '0cb68ad80ddd6113a210b87ec73671e2' THEN RAISE EXCEPTION 'ASK 482 revert check: dash_api md5 differs from base'; END IF;
+  IF (SELECT md5(prosrc) FROM pg_proc WHERE proname='dash_launch_odv1') <> '0e6fe0f3c35b4b308e92fab386092091' THEN RAISE EXCEPTION 'ASK 482 revert check: dash_launch_odv1 md5 differs from base'; END IF;
+  IF (SELECT md5(prosrc) FROM pg_proc WHERE proname='dash_odv1_judges') <> 'f5580573a592b68dffd130344be0065c' THEN RAISE EXCEPTION 'ASK 482 revert check: dash_odv1_judges md5 differs from base'; END IF;
+  IF EXISTS (SELECT 1 FROM pg_proc WHERE proname='dash_debaters') THEN RAISE EXCEPTION 'ASK 482 revert check: dash_debaters still exists'; END IF;
+END $chk$;
 COMMIT;
