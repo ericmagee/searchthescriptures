@@ -8,16 +8,16 @@ AS $f$
 #variable_conflict use_column
 DECLARE
   re text := '\m(ask_aar_snapshots|ask_aar_snapshots_id_seq|ask_aar_snapshots_(bi|ai|nochange|notruncate)|ask_aar_snapshots_(before_insert|after_insert|no_change))\M';
-  b493 bigint; b497 bigint; s497 bigint; t text; e text;
+  b493 bigint; b497 bigint; n497 bigint; s497 bigint; t text; e text;
 BEGIN
   IF to_regclass('public.ask_aar_snapshots') IS NULL THEN
     RETURN QUERY SELECT 'b'::text, NULL::bigint, NULL::text, 'table public.ask_aar_snapshots is missing'::text;
   ELSE
     RETURN QUERY SELECT 'd'::text, s.id, md5(s::text), 'row: compare with the coordinator line'::text
       FROM public.ask_aar_snapshots s ORDER BY s.id;
-    RETURN QUERY SELECT 'a'::text, s.id, md5(s::text), ('written_by is not a session registered to seat 36: ' || s.written_by)::text
+    RETURN QUERY SELECT 'a'::text, s.id, md5(s::text), ('written_by is not a session registered to seat 36 at or before aar_at: ' || s.written_by)::text
       FROM public.ask_aar_snapshots s
-      WHERE NOT EXISTS (SELECT 1 FROM public.seat_addresses a WHERE a.seat_id = 36 AND a.session_id = s.written_by)
+      WHERE NOT EXISTS (SELECT 1 FROM public.seat_addresses a WHERE a.seat_id = 36 AND a.session_id = s.written_by AND a.first_seen <= s.aar_at)
       ORDER BY s.id;
     FOREACH t IN ARRAY ARRAY['ask_aar_snapshots_bi','ask_aar_snapshots_ai','ask_aar_snapshots_nochange','ask_aar_snapshots_notruncate'] LOOP
       SELECT tg.tgenabled::text INTO e FROM pg_trigger tg
@@ -29,14 +29,17 @@ BEGIN
       END IF;
     END LOOP;
   END IF;
-  SELECT max(l.id) INTO b493 FROM public.audit_log l
-   WHERE l.session_title = 'ASK 493: ask_aar_snapshots table created (insert-only, seat 36 only, audit on insert)';
-  IF b493 IS NULL THEN
-    RETURN QUERY SELECT 'c'::text, NULL::bigint, NULL::text, 'the ASK 493 build audit row is missing'::text;
-    b493 := 0;
+  b493 := 38890;
+  IF NOT EXISTS (SELECT 1 FROM public.audit_log l WHERE l.id = 38890
+                 AND l.session_title = 'ASK 493: ask_aar_snapshots table created (insert-only, seat 36 only, audit on insert)') THEN
+    RETURN QUERY SELECT 'c'::text, NULL::bigint, NULL::text, 'audit row 38890 is not the ASK 493 build row'::text;
   END IF;
-  SELECT max(l.id) INTO b497 FROM public.audit_log l
+  SELECT min(l.id), count(*) INTO b497, n497 FROM public.audit_log l
    WHERE l.session_title = 'ASK 497: ask_aar_snapshots_check created (read-only check)';
+  IF n497 > 1 THEN
+    RETURN QUERY SELECT 'c'::text, l.id::bigint, NULL::text, ('a second ASK 497 build row: ' || l.engine || ' at ' || l.created_at::text)::text
+      FROM public.audit_log l WHERE l.session_title = 'ASK 497: ask_aar_snapshots_check created (read-only check)' AND l.id > b497 ORDER BY l.id;
+  END IF;
   IF b497 IS NOT NULL THEN
     SELECT min(l.id) INTO s497 FROM public.audit_log l
      WHERE l.created_at = (SELECT l2.created_at FROM public.audit_log l2 WHERE l2.id = b497);
@@ -129,6 +132,13 @@ BEGIN
     ALTER EVENT TRIGGER priv_audit_trigger ENABLE;
   EXCEPTION WHEN OTHERS THEN r := 'postgres cannot disable it: ' || SQLSTATE || ' ' || left(SQLERRM, 60); END;
   INSERT INTO t497 VALUES ('T7 event trigger disabled', r);
+  INSERT INTO public.ask_aar_snapshots(ask, rev, title, objective, objective_met, objective_met_reason, objective_source, written_by, status, sources, aar_at)
+  VALUES (999, 'rev T', 'backdated row', 'test', 'not yet', 'test', 'test', c, 'written', '[1]', '2026-01-01') RETURNING id INTO id2;
+  SELECT string_agg(row_id::text || ' ' || detail, '; ') INTO r FROM public.ask_aar_snapshots_check() WHERE check_code = 'a' AND row_id = id2;
+  INSERT INTO t497 VALUES ('T9 coordinator row dated before the session was registered: finding a', coalesce(r, 'NONE (bad)'));
+  INSERT INTO audit_log(session_title, engine, notes) VALUES ('ASK 497: ask_aar_snapshots_check created (read-only check)', 'poser', 'T10');
+  SELECT string_agg(detail, '; ') INTO r FROM public.ask_aar_snapshots_check() WHERE check_code = 'c' AND detail LIKE 'a second ASK 497 build row%';
+  INSERT INTO t497 VALUES ('T10 second 497 build row: finding c', coalesce(r, 'NONE (bad)'));
 END $t$;
 -- R1 the revert
 SELECT set_config('truth.session_id', 'session_01H1X3AP1fjeQaEbxPP9UEZH', true);
