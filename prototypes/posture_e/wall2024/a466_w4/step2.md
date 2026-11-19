@@ -29,3 +29,11 @@ T6a: one GET with only the credential to a service-only probe (anon denied) on t
 T6b: the 3 nodes, run once each against the branch URL: rows written as service_role.
 T6c: after 2c, log_audit_event as anon: denied; audit_row_step2.py with the service key: row written; without: exit 3 with hand SQL.
 Live order: 2a and 2b first (both still work before 2c, since service_role already executes log_audit_event), then 2c.
+
+## Rev 1 (11-19 09:05 CST, after W2 9520)
+- C-1: 2c revert written as revert2c.sql (anon on all three; authenticated on log_audit_event).
+- C-2 / T6a: the httpHeaderAuth credential Supabase_Service_Role (pXKaH407uaHabRxo) has never been proven: BB-4367 dropped its node B.
+  The proven credential is the native "Supabase account" (supabaseApi, 0Ap4HeISSH05ZS9s): proof run 23760 on 2026-10-02 (BB-4414, BB-4416),
+  GET audit_log_b4_probe (service-only) returned 200 with one row; gateway log showed apikey and Authorization both service_role, node had no own headers.
+  PROPOSED 2a: use authentication predefinedCredentialType, nodeCredentialType supabaseApi, credential 0Ap4HeISSH05ZS9s, and remove the node's own
+  apikey and Authorization headers (keep Content-Type, Prefer). T6a is then the existing proof; a fresh proof needs a temp workflow (a system change, card).
