@@ -1,0 +1,23 @@
+2c2
+< """ASK 422(a): one writer for the engine and its child ("two copies, one writer, checked at load"). Joins rdf/wgen.py and rdf/wchild.py.
+---
+> """ASK 455 D variant (W4): adds --renames (target nodes matched to live by node id; renamed nodes declared). ASK 422(a): one writer for the engine and its child ("two copies, one writer, checked at load"). Joins rdf/wgen.py and rdf/wchild.py.
+34c34,41
+<   TG=json.load(open(tg[k]));TG=TG.get('data',TG);TN={x['name']:x for x in TG['nodes']};LN=[x['name'] for x in live[k]['nodes']]
+---
+>   TG=json.load(open(tg[k]));TG=TG.get('data',TG);TN={x['name']:x for x in TG['nodes']}
+>   TID={x['id']:x['name'] for x in TG['nodes']};REN={x['name']:TID[x['id']] for x in live[k]['nodes'] if x['id'] in TID and TID[x['id']]!=x['name']}
+>   if REN and '--renames' not in A:sys.exit('REFUSED: %s renames %s not declared (--renames)'%(k,REN))
+>   for o,n in REN.items():
+>     a={kk:v for kk,v in [x for x in live[k]['nodes'] if x['name']==o][0].items() if kk!='name'};b={kk:v for kk,v in TN[n].items() if kk!='name'}
+>     if js(a)!=js(b):print(k,'RENAMED AND CHANGED',o,'->',n)
+>   if REN:print(k,'RENAMES',len(REN),REN)
+>   LN=[REN.get(x['name'],x['name']) for x in live[k]['nodes']]
+39c46
+<   if not ADD[k] and js(t['connections'])!=js(live[k]['connections']):sys.exit('REFUSED: %s connections differ with no node added'%k)
+---
+>   if not ADD[k] and not REN and js(t['connections'])!=js(live[k]['connections']):sys.exit('REFUSED: %s connections differ with no node added'%k)
+42c49
+<   print(k,'changed',[a['name'] for a,b in zip(live[k]['nodes'],t['nodes']) if js(a)!=js(b)],'added',ADD[k])
+---
+>   print(k,'changed',[b['name'] for a,b in zip(live[k]['nodes'],t['nodes']) if js({kk:v for kk,v in a.items() if kk!='name'})!=js({kk:v for kk,v in b.items() if kk!='name'})],'added',ADD[k])
