@@ -1,0 +1,11 @@
+psGrades holders 18 | stubs changed Alt Send Back Record, Cure Check, Panel Cure Check, R2 Alt Send Back Record, Send Back Record | lines 3503 -> 3499 dropped 4 [1643,2644,2645,2646] | lib sha 0f221f86024a2c69 -> 134136ff0b257237
+Alt Send Back Record length 177732 -> 178234
+Cure Check length 299632 -> 299621
+Panel Cure Check length 298664 -> 298653
+R2 Alt Send Back Record length 177780 -> 178282
+Send Back Record length 177760 -> 178262
+dropped line texts:
+ L1643: " for(const c0 of t.split(/;|\\.(?=\\s|$)/).flatMap(x=>x.split(/,\\s*(?=(?:and|but|while|whereas)\\s+premises?\\s+\\d)/i).reduce((o,y)=>{const l=o.length-1;if(l>=0&&!(W.lastIndex=0,W.test(o[l])))o[l]+
+ L2644: "function psGrades(l){const g={};let t=String(l==null?'':l).replace(/\\\\+\"/g,'\"').replace(/[*_`]+/g,'');const m=t.match(/^\\s*(?:[-•]\\s*|\\d+[.)]\\s*)?(DEFENDER\\s+|CHALLENGER\\s+)?CONCEDED LINKS\
+ L2645: " t=t.replace(/\\([^()]*\\)/g,' ');for(let __q;(__q=t.replace(/\\([^()]*\\)/g,x=>/\\b(?:VOID|UNEXHIBITED|CONCEDED|counted|spared|SUPPORTED|NARROWED|STANDS)\\b/i.test(x)?x.replace(/[()]/g,' '):' '))!==
+ L2646: " return {side:m[1]&&/^CHALLENGER/i.test(m[1])?'CHALLENGER':'DEFENDER',n:m[2]!=null?+m[2]:null,g};}"

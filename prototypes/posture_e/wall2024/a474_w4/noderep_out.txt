@@ -1,0 +1,31 @@
+=== execution 39266
+NODES RUN IN THIS EXECUTION: Send Back Record, Alt Send Back Record, Panel Cure Check
+NODE Send Back Record       | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE Alt Send Back Record   | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE Panel Cure Check       | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NO NODE OUTPUT CHANGES
+=== execution 38661
+NODES RUN IN THIS EXECUTION: Send Back Record, Alt Send Back Record, Panel Cure Check
+NODE Send Back Record       | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE Alt Send Back Record   | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE Panel Cure Check       | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NO NODE OUTPUT CHANGES
+=== execution 38593
+NODES RUN IN THIS EXECUTION: Send Back Record, Alt Send Back Record, Panel Cure Check
+NODE Send Back Record       | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NODE Alt Send Back Record   | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE Panel Cure Check       | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NO NODE OUTPUT CHANGES
+=== execution 38450
+NODES RUN IN THIS EXECUTION: Send Back Record, Alt Send Back Record, R2 Alt Send Back Record, Panel Cure Check
+NODE Send Back Record       | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE Alt Send Back Record   | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE R2 Alt Send Back Record | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE Panel Cure Check       | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NO NODE OUTPUT CHANGES
+=== execution 38226
+NODES RUN IN THIS EXECUTION: Send Back Record, Alt Send Back Record, Panel Cure Check
+NODE Send Back Record       | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE Alt Send Back Record   | s262 reproduces stored (time stamps aside): true | target == s262: true  
+NODE Panel Cure Check       | s262 reproduces stored (time stamps aside): false | target == s262: true  
+NO NODE OUTPUT CHANGES
