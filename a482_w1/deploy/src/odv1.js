@@ -8,7 +8,7 @@ function odLoadEng(){return rpc('odv1_engines').then(function(r){if(!Array.isArr
 var ODV1_NOKEY={};
 function odEng(e){for(var i=0;i<ODV1_ENG.length;i++){if(ODV1_ENG[i][0]===e)return ODV1_ENG[i][1];}return e||'?';}
 /* ASK 482 rev 3 (operator 17:00Z: the model, not "chat gpt"): a name built from the model id itself, the same rule as dash_debaters(). openai/gpt-6.1-terra reads Terra 6.1; google/gemini-4-hydrogen reads Gemini 4 Hydrogen. With no model recorded, the engine name. */
-function odMName(m){var s=String(m||'').replace(/^.*\//,'');if(!s)return '';var g=s.match(/^gpt-([0-9.]+)-([a-z]+)$/);if(g)return g[2].charAt(0).toUpperCase()+g[2].slice(1)+' '+g[1];var A={glm:'GLM',mimo:'MiMo',gpt:'GPT'};return s.split('-').map(function(t){return A[t]||(/^[a-z]/.test(t)&&!/^v[0-9]/.test(t)?t.charAt(0).toUpperCase()+t.slice(1):t);}).join(' ');}
+function odMName(m){var s=String(m||'').replace(/^.*\//,'');if(!s)return '';var g=s.match(/^gpt-([0-9.]+)-([a-z]+)$/);if(g)return g[2].charAt(0).toUpperCase()+g[2].slice(1)+' '+g[1];var A={glm:'GLM',mimo:'MiMo',gpt:'GPT',deepseek:'DeepSeek',minimax:'MiniMax'};return s.split('-').map(function(t){return A[t]||(/^[a-z]/.test(t)&&!/^v[0-9]/.test(t)?t.charAt(0).toUpperCase()+t.slice(1):t);}).join(' ');}
 function odRName(e,m){return odMName(m)||odEng(e);}
 function odSide(e,p,m){return odRName(e,m)+(String(p||'')==='oracle'?' as The Oracle':'');}
 function odOpts(pre,sel){return ODV1_PICK.map(function(x){var off=!!ODV1_NOKEY[x[0]];var ver=ODV1_VER[x[0]];return '<option value="'+x[0]+'"'+(off?' disabled':'')+(x[0]===sel&&!off?' selected':'')+'>'+pre+esc(x[1])+(ver?' ('+esc(ver)+')':'')+(off?' (key needed)':'')+'</option>';}).join('');}

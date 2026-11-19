@@ -1,6 +1,13 @@
-# ASK 482 build REV 4 (W1, 11-19 17:1xZ), on W3 plan rev 2 (a482_w3/plan_rev2.md, 0cf23296)
+# ASK 482 build REV 5 (W1, 11-19 17:1xZ), on W3 plan rev 2 (a482_w3/plan_rev2.md, 0cf23296)
 
 Objective (operator, 16:03Z and 16:04Z): the dashboard shows the current models; Any vs Any offers every model the engine can debate with, each with its version in the drop-down.
+
+## Rev 5 (the Queue tab; W2 9706 N1)
+- md5: build482.sql 01ffad5c, revert482.sql 3eda592e, deploy/src/odv1.js efb5c5f9.
+- New odv1_model_name(m) (the odMName rule in SQL; 15 of 15 live ids give the same string as odv1.js) and odv1_side_label(e, m); EXECUTE revoked from PUBLIC, anon, authenticated. odv1_eng_label: ChatGPT -> OpenAI (fallback only).
+- dash_queue: each side is named by its model: a finished run by its own stored model; a launch not yet run by the engine's model now (dash_debaters). Rolled back: the queue's sides read "Muse Spark 1.3 as The Oracle defends · Gemini 3.8 Flash challenges"; 0 rows say ChatGPT.
+- W2 9706 N1: DeepSeek and MiniMax keep their casing in both copies of the rule ("DeepSeek v4", not "Deepseek v4").
+- Build check adds three lines (dash_queue uses odv1_side_label; odv1_model_name('openai/gpt-6.1-terra') = 'Terra 6.1'; odv1_eng_label has no ChatGPT). The revert restores dash_queue (9ccd1295) and odv1_eng_label (9d25f4a0), drops the two helpers, and checks.
 
 ## Rev 4 (W3 9696 C1, C2)
 - odv1.js: the record page's D and C round headings call odSide with the run's own model (C1).
@@ -46,12 +53,12 @@ Objective (operator, 16:03Z and 16:04Z): the dashboard shows the current models;
 - C6 mirror482.cjs: prints the read-only check. Rolled-back: known-good (today's 10) MATCH; known-bad (qwen in place of qwen4max) MISMATCH. registry_482_entry.json is the ASK 417 entry to append at readback.
 
 ## Card (W4's thread) (rev 1: W2 9649 N1 to N3)
-1. Run build482.sql (md5 062698a7, rev 4; after ASK 487 is written; prefix SET LOCAL truth.session_id, the DDL audit trigger needs it). It ends in a raising DO check (10 active rows with a version; no 'qwen' in dash_launch_odv1; v_eng from dash_debaters(); dash_api has odv1_engines), so a failed check rolls the whole build back. Readback, prosrc md5: dash_debaters b6084d5a, dash_api c541b307, dash_launch_odv1 3b74a293, dash_odv1_judges 9796ab3c, dash_odv1_debates 1fc8bc68 (dash_launch_odv1 3b74a293 was also produced live inside the rolled-back test, so the file and the test agree); mirror482 SQL reads MATCH.
+1. Run build482.sql (md5 01ffad5c, rev 5; after ASK 487 is written; prefix SET LOCAL truth.session_id, the DDL audit trigger needs it). It ends in a raising DO check (10 active rows with a version; no 'qwen' in dash_launch_odv1; v_eng from dash_debaters(); dash_api has odv1_engines), so a failed check rolls the whole build back. Readback, prosrc md5: dash_debaters b6084d5a, dash_api c541b307, dash_launch_odv1 3b74a293, dash_odv1_judges 9796ab3c, dash_odv1_debates 1fc8bc68, dash_queue eb3d6380, odv1_eng_label 6598260b, odv1_model_name b5d222dd, odv1_side_label 3d597fe8 (dash_launch_odv1 3b74a293 was also produced live inside the rolled-back test, so the file and the test agree); mirror482 SQL reads MATCH.
    The poll-limit change (80 to 240 checks, 20 to 60 minutes) is its own card line: it is outside the plan (W2 N1).
 2. mcp__Vercel__create_deployment, project truth-app-dashboard, team team_bBqtXgj58bdGw1brsCIdjyMs, files: src/index.html, src/patch.js, src/patch-base.js, src/queue.js, src/retire.js (unchanged, by sha), src/odv1.js (new), vercel.json. No projectSettings (they would be saved to the project). Wait for READY.
 3. mcp__Vercel__assign_alias truth-app-dashboard.vercel.app to the new deployment. Readback: fetch /odv1.js, sha1 equals the new file.
 4. Readback by a non-writer (W2 N3, since C3 is UNCHECKED): one load of the Any vs Any tab; the two drop-downs list 10 choices, each with its version.
-Revert: assign_alias back to dpl_5n4sLu6gKhDk6DEfEgBAiE8Q9kNj; run revert482.sql (md5 05645e82; restores the three bodies read live, then drops dash_debaters; ends in a raising DO check that the three prosrc md5 equal the bases and dash_debaters is gone. That check passes on today's live state, 16:3xZ).
+Revert: assign_alias back to dpl_5n4sLu6gKhDk6DEfEgBAiE8Q9kNj; run revert482.sql (md5 3eda592e; restores the three bodies read live, then drops dash_debaters; ends in a raising DO check that the three prosrc md5 equal the bases and dash_debaters is gone. That check passes on today's live state, 16:3xZ).
 
 ## Gemini
 Stays in the list. W3 traced the operator's 21:51 CST 11-18 words (W4 9126): "we keep gemini 3.8 flash.. it's good. my mistake on that.. we keep spark too." No ruling is owed.
