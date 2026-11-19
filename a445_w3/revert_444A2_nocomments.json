@@ -1,0 +1,10 @@
+{
+ "ask": "444 A2",
+ "stack_card": "Write all four, 06:37:05Z 11-19",
+ "base": {"engine": "7cd61791", "child": "e9a13846"},
+ "replaces_for_use": "p440_w2/revert445/revert_444A2.json (that file restores the comments; this one does not)",
+ "finding": "444 A2 changed comments only. With comments set aside, the package text equals the base text token for token in both nodes (Alternate Build 709 = 709 tokens; Early Alternate Build 1108 = 1108). See tokens444A2_out.txt.",
+ "restore": [],
+ "result": "No code change is needed to revert 444 A2 without comments: live Alternate Build and Early Alternate Build already run the base code. Using this file writes nothing, needs no card and passes gate.cjs COMMENTS trivially.",
+ "kept_comment": "Early Alternate Build keeps one comment (pkgE4 v2) by the reasoning guard, as the package left it; this file does not touch it."
+}
