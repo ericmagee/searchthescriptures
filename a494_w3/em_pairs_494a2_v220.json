@@ -1,0 +1,10 @@
+[
+ {
+  "old": "    - Not yet: the proving run (the operator's release): its edge logs show role service_role on `record_debate_row`, `record_debate_judgment`, `derive_debate_outcome` and `record_debate_row_tokens`, and the row saves. Then A2 (anon EXECUTE revoked on the nine write functions) on its own card.",
+  "new": "    - Shown: proving run ODV1-40891-umeouul3 (released 19:22:48Z 2026-11-19): <RESULT: edge logs show role service_role on record_debate_row, record_debate_judgment, derive_debate_outcome and record_debate_row_tokens, and the row saved; W4 <POST>, checked by <SEAT> (<POST>) and <SEAT> (<POST>)>."
+ },
+ {
+  "old": "    - Revert: revert498.sql (60ee025d), only while ask_aar_builders holds no row.\n\n## 12.",
+  "new": "    - Revert: revert498.sql (60ee025d), only while ask_aar_builders holds no row.\n  - THE PUBLIC KEY CAN NO LONGER CALL THE ENGINE WRITE FUNCTIONS (ASK 494 A2; database grants only, no function body):\n    - Why: anyone holding the public (anon) key could call rpc/record_debate_row and the other engine write functions and write a forged debate row, judgment or outcome (plan494.md b57c4b09). A1 moved the engine's saves to service_role, and run ODV1-40891-umeouul3 proved it (above).\n    - What: EXECUTE revoked from PUBLIC, anon and authenticated on the nine engine write functions: record_debate_row, record_debate_row_tokens, record_debate_judgment, derive_debate_outcome, odv1_record_panel_substitution, odv1_record_panel_alternates, record_enforcer_log, record_replay_judgments, odv1_mark_grading_failed. postgres, service_role and lab_seat keep EXECUTE. No function body changed. odv1_mark_grading_failed's pg_cron watchdog runs as postgres and is unaffected. d5_selftest (SECURITY INVOKER) fails if run as anon.\n    - Live: <CARD TIME, AUDIT, step494.sql MD5, READBACKS: filled after the write>.\n    - Not yet: the next engine run saves its row and judgments with no 42501.\n    - Revert: revert494.sql (dfcfdd2f): restores the EXECUTE grantees of all nine to their state before the step.\n\n## 12."
+ }
+]
