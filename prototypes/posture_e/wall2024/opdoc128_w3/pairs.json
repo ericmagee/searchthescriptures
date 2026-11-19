@@ -1,0 +1,18 @@
+[
+{
+"old": "A grade names the package, its commit, the replay or test it ran, and PASS or FAIL.",
+"new": "A grade names the package, its commit, the replay or test it ran, and PASS or FAIL. A grade also carries a line RULES READ: naming each manual section whose rules the change touches, read in full before the grade (ASK 448)."
+},
+{
+"old": "Partial work is reported as partial, naming what was not reached.\n",
+"new": "Partial work is reported as partial, naming what was not reached.\n\nTHE WALL HOLDS THE FORM (ASK 448 to 451). On root 2024 the Wall refuses: a post not sent through the read-through form of wall_reply, or not ending in wall_stamp(); a grade that names no commit or carries no RULES READ: line; and a plan that carries no SEARCH. The refusal names the ASK. A refusal is an error and undoes every statement sent with the post (an md_notes update included), unlike a LATE answer, which returns and lets the rest commit.\n"
+},
+{
+"old": "A revision restates each heading it changes and names the revision it replaces.\n",
+"new": "A revision restates each heading it changes and names the revision it replaces.\n\nSTACKED PACKAGES (ASK 445). Packages graded as a stack go live on one card and one write per workflow; the builder keeps one revert file per package.\n\nSHARED TOOLS (ASK 447). The shared check tools are kept in tools/ on the working branch, each listed in tools/README.md with its use and its ASK; the engine manual is written only through engine_manual_apply.\n"
+},
+{
+"old": "the coordinator asks the operator for the run.",
+"new": "the coordinator asks the operator for the run. A released run starts only after tools/runstart.py prints GO for the released versions and body; the run-start post quotes the GO output and the body sha (ASK 446)."
+}
+]
