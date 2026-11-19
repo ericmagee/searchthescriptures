@@ -1,7 +1,7 @@
 {
- "about": "ASK 493 dry-run fill rev 1 (W3, 11-19). W1's sample rev 2 (a493_w1/sample493.json 6702cc31) mapped onto plan493 rev 4 (b068cc76) columns and the 13 approved field groups. Changes from W1's sample: verdict_norm on every grade; equal_to elements for 487 (W2 9710, W1 9715); objectives, reasons and manuals from AAR rev 2 (5d758566) and the manual writes (v213 to v216, op doc v134); md5_match recomputed by the trigger rule. Not inserted anywhere. Rev 1: one grade element per graded file md5 (W1 9870).",
+ "about": "ASK 493 dry-run fill rev 2 (W3, 11-19). W1's sample rev 2 (a493_w1/sample493.json 6702cc31) mapped onto plan493 rev 4 (b068cc76) columns and the 13 approved field groups. Changes from W1's sample: verdict_norm on every grade; equal_to elements for 487 (W2 9710, W1 9715); objectives, reasons and manuals from AAR rev 2 (5d758566) and the manual writes (v213 to v216, op doc v134); md5_match recomputed by the trigger rule. Not inserted anywhere. Rev 1: one grade element per graded file md5 (W1 9870). Rev 2: 487 f3c17684 grades added.",
  "md5_match_differences": [
-  "Resolved (W1 9870): the posts that graded the plan also graded each file. 483 step ad028df9 in W1 9611 and W3 9612; 482 odv1.js 6944e18b in W3 9700 and W2 9706 (checked: each post names that md5). The fill now has one grade element per file md5 graded, so md5_match is true for both. 487 stays false: the gemini_deb row SQL f3c17684 has no grade element."
+  "Resolved (W1 9870): the posts that graded the plan also graded each file. 483 step ad028df9 in W1 9611 and W3 9612; 482 odv1.js 6944e18b in W3 9700 and W2 9706 (checked: each post names that md5). The fill now has one grade element per file md5 graded, so md5_match is true for both. Rev 2: 487 gemini_deb row SQL f3c17684 was graded by W2 9692 and W1 9693 (W1 9872; checked: each post names it), so 487 is true too."
  ],
  "rows": [
   {
@@ -715,13 +715,27 @@
       "md5": "32bf6cba",
       "wall_id": 9715
      }
+    },
+    {
+     "seat": "W2",
+     "verdict": "PASS with N1",
+     "verdict_norm": "PASS",
+     "md5_graded": "f3c17684",
+     "wall_id": 9692
+    },
+    {
+     "seat": "W1",
+     "verdict": "PASS",
+     "verdict_norm": "PASS",
+     "md5_graded": "f3c17684",
+     "wall_id": 9693
     }
    ],
    "md5_written": [
     "93fe9adc",
     "f3c17684"
    ],
-   "md5_match": false,
+   "md5_match": true,
    "audit_ids": [
     38577,
     38579
@@ -780,7 +794,8 @@
     9715,
     "audit 38577",
     "audit 38579",
-    9709
+    9709,
+    9694
    ],
    "md5_note": "93fe9adc was never graded by md5; W2 9710 and W1 9715 found it node-equal to the graded 32bf6cba. 32bf6cba was never written."
   },
