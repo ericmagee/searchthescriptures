@@ -1,4 +1,4 @@
-# ASK 440 run: readiness addendum to readiness_v2.md (W1, 2026-11-19, rev 2 14:21Z: 475 written; W2 9444 C)
+# ASK 440 run: readiness addendum to readiness_v2.md (W1, 2026-11-19, rev 3 14:37Z: live runstart GO after 475; 476 held)
 
 readiness_v2.md (a_ready_w2, rev 1 a5779188) was written for engine c1256eec. Items 1 to 15 still apply. This adds the state after the writes of 11-19.
 
@@ -6,8 +6,8 @@ readiness_v2.md (a_ready_w2, rev 1 a5779188) was written for engine c1256eec. It
 1. The operator's explicit run release (one press). A one-word reply is not a release.
 2. Write chain settled. Live now: engine e0a61271, child 4982c042, library 8bd8d2a7dc9d2ed0 (ASK 475, card 14:15:56Z 11-19, from 5c0f00ab / b10fcad2; read back MATCH by W1 and W2 9442).
    ASK 473 is HELD by the operator (card "Hold", 14:14:09Z 11-19): not in the run.
-   ASK 476 is advised HOLD and is not in the run.
-3. tools/runstart.py GO, live, at start, quoted in the run-start post (ASK 446). Re-run after any further write. Offline on the live e0a61271 / 4982c042 with body_39266 (sha 53763d9544a6): GO (W1; W2 9444, map_sha 1b07df73d8db134d, was 436cfc54 on 5c0f00ab). Offline, "nothing running" was not checked live; the live GO at start covers it.
+   ASK 476 is HELD by the operator (card "Hold (team advice)", 14:29:51Z 11-19): not in the run.
+3. tools/runstart.py GO, live, at start, quoted in the run-start post (ASK 446). Re-run after any further write. Offline on the live e0a61271 / 4982c042 with body_39266 (sha 53763d9544a6): GO (W1; W2 9444, map_sha 1b07df73d8db134d, was 436cfc54 on 5c0f00ab). Live, after 475 (W4 9457 A, a440_w4/runstart_live_after475.txt): GO, exit 0, nothing running in the engine. It must still be run again live at start.
 4. The body. The released body of 39266 is a419_w4/plants/body_39266.json: defender spark/oracle, challenger gemini/plain, topic "Did Christ have a biological father?". The operator confirms or names another body; the sha prefix goes on the release.
 5. Engine manual v208 (the ASK 475 entry) written and read back, so the manual matches the engine the run uses. v206 and v207 are written and read back MATCH; v208 preview MATCH (md5 c918ca2f, 625,919; W2 9444, W1).
 
