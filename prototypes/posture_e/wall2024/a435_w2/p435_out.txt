@@ -10,7 +10,11 @@ PASS "John 10:14, 16 These sheep" old: John 10:14 | new: John 10:14; John 10:16
 PASS "Matt 1:21, 25 Joseph names" old: Matthew 1:21 | new: Matthew 1:21; Matthew 1:25
 PASS "Psalms 2:7 and 12 Kiss" old: Psalms 2:7 | new: Psalms 2:7
 PASS "Genesis 3:15, 3 John 1:2" old: Genesis 3:15; 3 John 1:2 | new: Genesis 3:15; 3 John 1:2
-fixtures 12 of 12
+PASS "Psalms 2:7, and 12 Kiss the Son" old: Psalms 2:7 | new: Psalms 2:7; Psalms 2:12
+PASS "John 3:16, 1 Jo 4:8" old: John 3:16; John 4:8 | new: John 3:16; John 4:8
+PASS "Gen 1:1, 2 Esdras 1:1" old: Genesis 1:1; Genesis 1:1 | new: Genesis 1:1; Genesis 1:1
+PASS "Matthew 5:3, 10 In" old: Matthew 5:3 | new: Matthew 5:3; Matthew 5:10
+fixtures 16 of 16
 texts 1835 texts x modes with a difference 12 items gained 12 items lost 0
    24355 challenger_r3 Isaiah 28:12 :: Isaiah 28:9–10, 12 KJV**: - v.9: *"Whom shall he teach knowledge? and 
    24566 claude_r1 John 10:16 :: John 10:14, 16  These sheep are already described as his: “other sheep
