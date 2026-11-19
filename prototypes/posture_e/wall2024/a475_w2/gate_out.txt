@@ -1,0 +1,16 @@
+BASE 6519f616-071e-453c-9f65-2035ddc49dac CAND 6519f616-071e-453c-9f65-2035ddc49dac CHANGED ["C2B Build","C2B Extract","C3B Build","C3B Extract","C4B Build","C4B Extract","D2B Build","D2B Extract","D3B Build","D3B Extract","D4B Build","D4B Extract","Shared Library"] CONNECTIONS equal
+COMMENTS: no changed Code node gains a comment text its base lacks
+NOT COVERED by the chain replay: ["C2B Build","C2B Extract","C3B Build","C3B Extract","C4B Build","C4B Extract","D2B Build","D2B Extract","D3B Build","D3B Extract","D4B Build","D4B Extract","Shared Library"]. Rerun with --spec SPEC.json --rows ROWS.json (a418_w4/replay418.cjs form).
+gate exit 4
+REASONING GUARD: no model-setting change.
+guard exit 0
+BASE 33adc248-b0ea-4666-a092-fd3be311847e CAND 33adc248-b0ea-4666-a092-fd3be311847e CHANGED ["Shared Library"] CONNECTIONS equal
+COMMENTS: no changed Code node gains a comment text its base lacks
+NOT COVERED by the chain replay: ["Shared Library"]. Rerun with --spec SPEC.json --rows ROWS.json (a418_w4/replay418.cjs form).
+gate exit 4
+REASONING GUARD: no model-setting change.
+guard exit 0
+NAME cjrLoose2024: 54 copies, 1 text(s)
+  2eabafad8478 x54  e.g. t_e.json lib:Alt Gate Build; t_e.json lib:Alt Gate Record; t_e.json lib:Alternate Cure Build
+RESULT: PASS
+reg385 exit 0

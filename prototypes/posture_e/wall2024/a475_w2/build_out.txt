@@ -1,0 +1,4 @@
+inline LAY 11691 chars, 59 lines, identical in 12 nodes, 0 comments
+library engine 0f221f86024a2c69 -> 78483786882578e3 lines 3503 -> 3562 | child 0f221f86024a2c69 -> 78483786882578e3 | LAY entry at line 3503 (0-based)
+loader 544 chars: const LAY=(T=>{const L=JSON.parse(T.slice(T.indexOf('\n/*LIB*/')+8,T.lastIndexOf('\n/*MAP*/')));const M=JSON.parse(T.slice(T.lastIndexOf('\n/*MAP*/')+8,T.lastIndexOf('\n/*END*/'))).LAY;if(!M)throw new Error('pkgLAY: the Shared Library holds no LAY entry');const S=M.p.map(e=>typeof e==='number'?L[e]:typeof e[0]==='string'?e[0]:L.slice(e[0],e[1]+1).join('\n')).join('\n');if(S.length!==M.n)throw new Error('pkgLAY: rebuilt LAY is '+S.length+', expected '+M.n);return new Function('$',S+'\nreturn LAY;')($);})($('Shared Library').params.jsCode);
+engine md5 5ab5ce9e3c352f0beeedbd6f1114f8c6 child md5 fcbf6a5f6b51bcd2d781926fc827abf8
