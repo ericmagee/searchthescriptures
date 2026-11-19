@@ -1,0 +1,5 @@
+ASK 438 rev 1, L2 Gloss Read time against its item count (n8n stored executions of moMxiV4Irg1uRBZN, runData executionTime; item count from L2 Gloss Any output):
+37719: 64 items (15 col, 19 kjv, 30 ren) in 2,353 ms; one col read's upstream service time 379 ms.
+38226: 9 items (9 ren) in 1,251 ms (item count from the live replay; L2 Gloss Any not read).
+64 items take under 2 times as long as 9, so the node does not send them one after another. Two points give about 20 ms per added item.
+Estimate for the worst run 37510 on the target: 15 col + 4 kjv + 73 ren = 92 items, about 2.9 s, against 49 items on live, about 2.0 s.
