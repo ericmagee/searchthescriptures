@@ -1,0 +1,13 @@
+NOT   -> FOUND | "prepare" vs KJV ["prepared"] | known-good: G2675
+NOT   -> FOUND | "prepared" vs KJV ["prepare"] | reverse
+NOT   -> FOUND | "conceive" vs KJV ["conceived"] | W4 8744
+NOT   -> FOUND | "carry" vs KJV ["carried"] | -ied
+NOT   -> FOUND | "carried" vs KJV ["carry"] | -ied reverse
+NOT   -> FOUND | "stop" vs KJV ["stopped"] | doubled
+NOT   -> FOUND | "stopped" vs KJV ["stop"] | doubled reverse
+FOUND -> FOUND | "seed" vs KJV ["seeds"] | old -s, unchanged
+NOT   -> FOUND | "fee" vs KJV ["feed"] | KNOWN-BAD plant: different word
+NOT   -> FOUND | "feed" vs KJV ["fee"] | KNOWN-BAD reverse plant (W4 9093 N2)
+NOT   -> NOT   | "bee" vs KJV ["bed"] | plant
+NOT   -> FOUND | "need" vs KJV ["nee"] | plant
+NOT   -> NOT   | "sprung up" vs KJV ["sprang"] | not an -ed form: stays NOT FOUND
