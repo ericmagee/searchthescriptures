@@ -1,8 +1,8 @@
-# ASK 496 plan rev 0 (W2, seat 32, 11-19; form per op doc v134 §29 THE ASK FORM): pause the Debate Findings Pipeline
+# ASK 496 plan rev 1 (W2, seat 32, 11-19; rev 1 rewords OBJECTIVE to the runs read (W1 N1); form per op doc v134 §29 THE ASK FORM): pause the Debate Findings Pipeline
 
 ## 1. OBJECTIVE
 The operator, card in W2's thread, 18:25:54Z 11-19: chose "B. Pause it" on "Decide what happens to the hourly Findings Pipeline workflow".
-The workflow "TRUTH — Debate Findings Pipeline" (i3bLxvLj6EL4yfak) runs hourly. Since 09-09 every run has re-read the same debate (c97b684c), got "[]" back from Sonnet, and written nothing (W2 9839, W1 9850). Since 11-15 every run has errored on the Anthropic usage limit.
+The workflow "TRUTH — Debate Findings Pipeline" (i3bLxvLj6EL4yfak) runs hourly. The two successful runs read (36824 on 11-14 and 37292 on 11-15) each re-read the same debate (c97b684c) and got "[]" back from Sonnet. No candidate row has been written since 09-09 04:02Z, and get_pending_debates_for_findings(1) still returns c97b684c (W2 9839, W1 9850). Since 11-15 every run has errored on the Anthropic usage limit.
 Expected effect: the workflow starts no more runs. Nothing is deleted, and the 182 queued debates stay queued.
 
 ## 2. ROLES
