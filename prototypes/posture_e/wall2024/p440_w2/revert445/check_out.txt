@@ -2,15 +2,15 @@
 APPLY  engine Library Check : removed (unchanged since)
 APPLY  connections Debate Start
 APPLY  connections Library Check
-RESULT: applies cleanly to live
-== 443 against stack2 (the c1256eec target)
-RESULT: applies cleanly to live
+RESULT: applies cleanly
+== 443 against the stack target astk_w4/stack2 (c1256eec / cd11b411)
+RESULT: applies cleanly
 == 444A2 against live e0a61271 / 4982c042
 APPLY  engine Alternate Build : node unchanged since
 APPLY  engine Early Alternate Build : node unchanged since
-RESULT: applies cleanly to live
-== 444A2 against stack2 (the c1256eec target)
-RESULT: applies cleanly to live
+RESULT: applies cleanly
+== 444A2 against the stack target astk_w4/stack2 (c1256eec / cd11b411)
+RESULT: applies cleanly
 == 455 against live e0a61271 / 4982c042
 APPLY  engine Resolve Seats : node unchanged since
 APPLY  engine Enforcer Build : node unchanged since
@@ -22,8 +22,8 @@ APPLY  engine Assume Check Build : node unchanged since
 APPLY  engine Assume Check Record : node unchanged since
 REFUSE child Shared Library : node changed since the package (md5 differs); needs a fresh build
 RESULT: REFUSED, 2 item(s) changed since; a fresh build is needed for them
-== 455 against stack2 (the c1256eec target)
-RESULT: applies cleanly to live
+== 455 against the stack target astk_w4/stack2 (c1256eec / cd11b411)
+RESULT: applies cleanly
 == 456 against live e0a61271 / 4982c042
 APPLY  engine Extract Independent Verdict : node unchanged since
 REFUSE engine Panel Payloads : node changed since the package (md5 differs); needs a fresh build
@@ -33,7 +33,5 @@ APPLY  engine Alt Send Back Record : node unchanged since
 APPLY  child R2 Alt Send Back Record : node unchanged since
 REFUSE child R2 Alternate Payloads : node changed since the package (md5 differs); needs a fresh build
 RESULT: REFUSED, 3 item(s) changed since; a fresh build is needed for them
-== 456 against stack2 (the c1256eec target)
-RESULT: applies cleanly to live
-engine after all four reverts: nodes 425 | not equal to base: none | connections = base (t444a2): true | Library Check gone: true
-child after both reverts, not equal to base: none
+== 456 against the stack target astk_w4/stack2 (c1256eec / cd11b411)
+RESULT: applies cleanly

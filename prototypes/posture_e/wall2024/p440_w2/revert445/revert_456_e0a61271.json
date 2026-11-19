@@ -1,0 +1,108 @@
+{
+ "ask": "456",
+ "from_revert": "revert_456.json (stack base 7cd61791 / e9a13846)",
+ "live": {
+  "engine": "e0a61271",
+  "child": "4982c042"
+ },
+ "restore": [
+  {
+   "workflow": "engine",
+   "node": "Extract Independent Verdict",
+   "action": "replace text",
+   "field": "jsCode",
+   "pkg_md5": "033da4396b6dfd8a68905b0dda4bad84",
+   "base_md5": "fb8118d3a17421a9f9b0765d00ed5718",
+   "hunks": [
+    {
+     "pkg_text": "$(\"Assume Check Record\");$(\"Cited Verses\");$(\"L2 Count Plan\");$(\"Panel Build\");",
+     "base_text": ""
+    }
+   ]
+  },
+  {
+   "workflow": "engine",
+   "node": "Panel Payloads",
+   "action": "replace text",
+   "field": "jsCode",
+   "pkg_md5": "b3185bb1e420f1f3cbb21cb4cdf1093f",
+   "base_md5": "c7631470026e0f680101cbb153e6f325",
+   "hunks": [
+    {
+     "pkg_text": "$(\"Assume Check Record\");$(\"L2 Count Plan\");",
+     "base_text": ""
+    }
+   ]
+  },
+  {
+   "workflow": "engine",
+   "node": "Alternate Payloads",
+   "action": "replace text",
+   "field": "jsCode",
+   "pkg_md5": "979a824bd2ef556e0ee8933c3ea48d91",
+   "base_md5": "e1f5f217169c2add254e422ea421e1ae",
+   "hunks": [
+    {
+     "pkg_text": "$(\"Assume Check Record\");$(\"L2 Count Plan\");",
+     "base_text": ""
+    }
+   ]
+  },
+  {
+   "workflow": "engine",
+   "node": "Send Back Record",
+   "action": "replace text",
+   "field": "jsCode",
+   "pkg_md5": "717b2c6840588b678162e9311e6fe36f",
+   "base_md5": "ee1b5ad0d93b9ae37df6f08cada0085a",
+   "hunks": [
+    {
+     "pkg_text": "(\"Send Back Build\");$(\"Alt Seated\");$(\"L2 Count Plan\");}\nconst __LT=$('Shar",
+     "base_text": "(\"Send Back Build\");}\nconst __LT=$('Shar"
+    }
+   ]
+  },
+  {
+   "workflow": "engine",
+   "node": "Alt Send Back Record",
+   "action": "replace text",
+   "field": "jsCode",
+   "pkg_md5": "9cffdb88deb9a756778c71b64ed50942",
+   "base_md5": "cec6a595be3ed5c6ef739c41d290b655",
+   "hunks": [
+    {
+     "pkg_text": " Cure Normalize 3\");$(\"L2 Count Plan\");}\nconst __LT=$('Shar",
+     "base_text": " Cure Normalize 3\");}\nconst __LT=$('Shar"
+    }
+   ]
+  },
+  {
+   "workflow": "child",
+   "node": "R2 Alt Send Back Record",
+   "action": "replace text",
+   "field": "jsCode",
+   "pkg_md5": "c502e4d45f3d6cf47a13255daff64bed",
+   "base_md5": "dc50295f61143470aeadf5ca1f95354c",
+   "hunks": [
+    {
+     "pkg_text": "t Send Back Build\");$(\"L2 Count Plan\");}\nconst __LT=$('Shar",
+     "base_text": "t Send Back Build\");}\nconst __LT=$('Shar"
+    }
+   ]
+  },
+  {
+   "workflow": "child",
+   "node": "R2 Alternate Payloads",
+   "action": "replace text",
+   "field": "jsCode",
+   "pkg_md5": "0573f316646a411e97c9f49503f8ec13",
+   "base_md5": "c20e297ff2b5e7c5461ba247f9c6c5bc",
+   "hunks": [
+    {
+     "pkg_text": "$(\"Assume Check Record\");$(\"L2 Count Plan\");",
+     "base_text": ""
+    }
+   ]
+  }
+ ]
+}

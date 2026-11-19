@@ -16,7 +16,7 @@ for(const x of r.restore){const w=W[x.workflow];const i=w.nodes.findIndex(n=>n.n
   let nt=t,bad=0;for(const h of x.hunks){const k=nt.split(h.pkg_text).length-1;if(k!==1){bad++;continue;}nt=nt.replace(h.pkg_text,()=>h.base_text);}
   if(bad){console.log('REFUSE',x.workflow,x.node,':',bad,'of',x.hunks.length,'package hunk(s) no longer found once; changed since the package; needs a fresh build');refuse++;continue;}
   if(code)n.parameters.jsCode=nt;else n.parameters=JSON.parse(nt);
-  console.log('APPLY ',x.workflow,x.node,':',same?'node unchanged since':'node changed elsewhere since; package text intact, restored');}
+  console.log('APPLY ',x.workflow,x.node,': node unchanged since');}
 if(r.connections){const c=W.engine.connections;for(const [k,v] of Object.entries(r.connections)){if(JSON.stringify(c[k]||null)!==JSON.stringify(v.pkg)){console.log('REFUSE connections',k,': changed since');refuse++;continue;}
   if(v.base===null)delete c[k];else c[k]=v.base;console.log('APPLY  connections',k);}}
 console.log(refuse?'RESULT: REFUSED, '+refuse+' item(s) changed since; a fresh build is needed for them':'RESULT: applies cleanly');

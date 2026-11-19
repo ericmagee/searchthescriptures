@@ -1,0 +1,22 @@
+== 455_e0a61271 against live e0a61271 / 4982c042
+APPLY  engine Resolve Seats : node unchanged since
+APPLY  engine Enforcer Build : node unchanged since
+APPLY  engine Anticheat Build : node unchanged since
+APPLY  engine Shared Library : node unchanged since
+APPLY  engine Close Enforcer Build : node unchanged since
+APPLY  engine Judge Contradiction Build : node unchanged since
+APPLY  engine Assume Check Build : node unchanged since
+APPLY  engine Assume Check Record : node unchanged since
+APPLY  child Shared Library : node unchanged since
+RESULT: applies cleanly
+== 456_e0a61271 against live e0a61271 / 4982c042
+APPLY  engine Extract Independent Verdict : node unchanged since
+APPLY  engine Panel Payloads : node unchanged since
+APPLY  engine Alternate Payloads : node unchanged since
+APPLY  engine Send Back Record : node unchanged since
+APPLY  engine Alt Send Back Record : node unchanged since
+APPLY  child R2 Alt Send Back Record : node unchanged since
+APPLY  child R2 Alternate Payloads : node unchanged since
+RESULT: applies cleanly
+l455.e.json header sha abbe880eb3fc5147 = text sha abbe880eb3fc5147 true | MAP entries with moved length: 0 | line 2965: "turn skip('no DeepSeek model_config row');"
+l455.c.json header sha abbe880eb3fc5147 = text sha abbe880eb3fc5147 true | MAP entries with moved length: 0 | line 2965: "turn skip('no DeepSeek model_config row');"
