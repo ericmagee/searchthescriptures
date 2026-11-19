@@ -337,6 +337,36 @@
    "case_sql": "exists(select 1 from r)",
    "mark_sql": "(select case when exists(select 1 from x where coalesce(x.error_message,'')||coalesce(x.error_detail::text,'') ~* '(deepseek|doesn''t exist|Provider Removed)') then 0 else 1 end)",
    "note": "Case: any run. Mark: no error in the run window naming deepseek, a missing node (\"Referenced node doesn't exist\"), or Provider Removed Stop. Engine 828dc91d, child 33adc248."
+  },
+  {
+   "ask": "459",
+   "title": "Cure Call deepseek removed from sub-workflow ODV1 Cure Call; a deepseek cure seat fails closed (pkgRPN text names deepseek)",
+   "live_since": "2026-11-19T07:31:46Z",
+   "version": "e2fa573a",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from e where coalesce(e.cure_reason,'')<>'')",
+   "mark_sql": "(select case when exists(select 1 from x where coalesce(x.error_message,'')||coalesce(x.error_detail::text,'') ~* '(deepseek|FAIL-CLOSED|removed direct provider|Provider Removed)') then 0 else 1 end)",
+   "note": "Workflow ODV1 Cure Call (c7366RPLb8vdMQg6), not the engine. Case: a run with a cure row. Mark: no error in the run window naming deepseek or the FAIL-CLOSED removed-provider text."
+  },
+  {
+   "ask": "460",
+   "title": "Call deepseek removed from WALL-2024 Panel Judge Call; Provider Route output 0 goes to Provider Removed Reply (FAIL-CLOSED (ASK 460))",
+   "live_since": "2026-11-19T12:47:02Z",
+   "version": "b48bddee",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from j)",
+   "mark_sql": "(select case when exists(select 1 from x where coalesce(x.error_message,'')||coalesce(x.error_detail::text,'') ~* '(deepseek|FAIL-CLOSED|removed direct provider|Provider Removed)') then 0 else 1 end)",
+   "note": "Workflow WALL-2024 Panel Judge Call (Y1VIsNB6KBrs1znP), reached by webhook wall2024-panel-judge-call. Case: a run with judgments. Mark: no error in the run window naming deepseek or FAIL-CLOSED. Superseded in the same workflow by 461 (474d8def)."
+  },
+  {
+   "ask": "461",
+   "title": "Call openai, gemini, grok and mimo removed from WALL-2024 Panel Judge Call; Provider Route outputs 0 to 4 go to Provider Removed Reply; only openrouter.ai and Supabase hosts remain",
+   "live_since": "2026-11-19T12:49:48Z",
+   "version": "474d8def",
+   "probe": "sql",
+   "case_sql": "exists(select 1 from j)",
+   "mark_sql": "(select case when exists(select 1 from x where coalesce(x.error_message,'')||coalesce(x.error_detail::text,'') ~* '(deepseek|FAIL-CLOSED|removed direct provider|Provider Removed)') then 0 else 1 end)",
+   "note": "Workflow WALL-2024 Panel Judge Call (Y1VIsNB6KBrs1znP). Case: a run with judgments. Mark: no error in the run window naming FAIL-CLOSED or a removed provider. The Provider Route list still names deepseek, openai, gemini, grok, mimo as indexes 0 to 4 so the engine's ppj_provider values keep their outputs."
   }
  ]
 }
