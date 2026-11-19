@@ -1,0 +1,5 @@
+ASK 441 pending entries, checked on run 38593 with exercise.cjs --all (REG = pending441.json with live_since set to a test value), SQL run 06:4xZ 11-19:
+443    case true  mark 1  (EXERCISED: no pkgLIB2 stop; node not live then, so this only shows the SQL runs)
+444 A2 case true  mark 1  (one alternate_reply row, no pkgLIB: stop)
+455    case true  mark 0  (MISSED: the stored row says DEEPSEEK; expected before the write, so the mark separates old from new)
+456    case true  mark null (CASE, READ BY HAND); over all stored runs, 13 E-ASSUME assumption check rows hold BOTH NOT STATED with a COUNTED judge
