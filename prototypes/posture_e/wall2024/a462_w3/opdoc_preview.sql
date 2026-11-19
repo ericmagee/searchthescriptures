@@ -1,0 +1,4 @@
+WITH b AS (SELECT content c FROM operational_doc WHERE version=128 AND md5(content)='eb4e6a8f5683ebd5c1025b393252d653'),
+p AS (SELECT $x$At the grade, a grader states whether the OBJECTIVE was met, not only the criteria.$x$ o1, $x$At the grade, a grader states whether the OBJECTIVE was met, not only the criteria, in a line OBJECTIVE MET: saying yes, in part or no, with the reason (ASK 462).$x$ n1, $x$a grade that names no commit or carries no RULES READ: line;$x$ o2, $x$a grade that names no commit, or carries no RULES READ: line or no OBJECTIVE MET: line;$x$ n2)
+SELECT (length(c)-length(replace(c,o1,'')))/length(o1) k1, (length(c)-length(replace(c,o2,'')))/length(o2) k2, md5(replace(replace(c,o1,n1),o2,n2)) md5, length(replace(replace(c,o1,n1),o2,n2)) len FROM b, p;
+-- result: k1 1, k2 1, md5 c1687620112de1d130f82723996f8a8e, len 68278
