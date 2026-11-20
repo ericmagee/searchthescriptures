@@ -1,7 +1,8 @@
--- Run 40958 AAR rows, DRAFT rev 0 (W2, seat 32, 11-19/20). For W1 and W3 to grade. NOT RUN.
+-- Run 40958 AAR rows, DRAFT rev 1 (W2, seat 32, 11-19/20). For W1 and W3 to grade. NOT RUN.
 -- Two snapshot rows and two builder rows, run once from seat 36 (the coordinator):
 --   R1: ASK 499 A1 proven by run 40958, prior_row 33 (as row 31 did for 16). Built by INSERT ... SELECT from row 33, so the graded fields (build_files, grades, md5_written, audit_ids, card, objects, readbacks, revert, plan) are copied byte for byte; only the run fields change.
 --   R2: ASK 500 A1 (written 22:37:18Z, read back, proven by the launch of run 40958), prior_row NULL; no earlier 500 row exists.
+-- Rev 1: W3 C2 (10179): R2 no longer says the crash is not linked to 500 A1; its cause is not yet known (ASK 501, assigned at Wall 10178). W1 C1 met by 10178.
 -- Facts: W4 10168 (launch), 10170 (result); W1 10171 and W2 10173 (grades of Q1 to Q5); W1 10166 and W2 10167 (500 A1 readbacks); audit 39330, 39331; v222 (W3 10162; W1 10163, W2 10164).
 -- The crash: execution 40958 crashed out of memory at Panel Tokens at 23:54:57Z; the tokens and cost row was never written (ASK 501). record_debate_row_tokens is still unproven after 494 A2.
 BEGIN;
@@ -50,7 +51,7 @@ INSERT INTO public.ask_aar_snapshots (ask, rev, title, objective, objective_met,
  '[{"kind":"function","name":"public.dash_launch_odv1 (three insertions: v_key, Vault read with raise, headers on net.http_post)","before":"3b74a293","after":"6078032f"}]'::jsonb,
  '{"file":{"md5":"f02b043b","path":"a500_w4/test500a1_rollback.sql","commit":"de46f664"},"output":{"md5":"3c0490bc","path":"ask500/w4/test500a1_output_2152Z.txt"},"result":"PASS, all rolled back (B0, S1 6078032f, T1, T2a to T2g, T3 before A0, R1)","wall_id":10146}'::jsonb,
  '[{"seat":"W1","result":"CONFIRMED","wall_id":10166},{"seat":"W2","result":"CONFIRMED","wall_id":10167}]'::jsonb,
- '{"run_token":"ODV1-40958-vufevpqd","launch":"dash_launch_odv1 at 22:48:48Z, odv1_launches row 84","pg_net_request":10078,"http_status":200,"result_post":10168,"checks":[10171,10173],"crashed":"out of memory at Panel Tokens, 23:54:57Z (not tied to 500 A1)"}'::jsonb,
+ '{"run_token":"ODV1-40958-vufevpqd","launch":"dash_launch_odv1 at 22:48:48Z, odv1_launches row 84","pg_net_request":10078,"http_status":200,"result_post":10168,"checks":[10171,10173],"crashed":"out of memory at Panel Tokens, 23:54:57Z; cause not yet known (ASK 501)"}'::jsonb,
  '{"engine_manual":"not yet","op_doc":"not yet"}'::jsonb,
  'proven by run',
  '[10095, 10129, 10130, 10131, 10132, 10133, 10134, 10146, 10147, 10148, 10161, 10163, 10165, 10166, 10167, 10168, 10171, 10173, "audit 39330", "audit 39331"]'::jsonb);
