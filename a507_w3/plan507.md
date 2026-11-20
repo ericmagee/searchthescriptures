@@ -1,4 +1,4 @@
-# ASK 507 plan rev 1 (W3, seat 33, 11-20; rev 1 settles fact (a) from the record and gives C5 its own card line; rev 0 7a551102; live base engine 783e9f44, child d6908ec6, library 680dd2af97c187be, manual v224 f56bd34a): at the verdict, each judge weighs each side's whole position and says which one holds
+# ASK 507 plan rev 2 (W3, seat 33, 11-20; rev 2 takes W4's live check 07:53Z: WHOLE POSITIONS second, after POINTS AT ISSUE and before the RESULT line; the sentence is a new Commitment 17; rev 1 a3acbc64 settled fact (a) from the record and gives C5 its own card line; rev 0 7a551102; live base engine 783e9f44, child d6908ec6, library 680dd2af97c187be, manual v224 f56bd34a): at the verdict, each judge weighs each side's whole position and says which one holds
 
 Team: W3 plans, W4 checks against live and builds (the operator, 03:45:05Z: "Just you two."). The second non-builder grade is HELD.
 
@@ -22,13 +22,13 @@ Team: W3 plans, W4 checks against live and builds (the operator, 03:45:05Z: "Jus
 At the verdict, every judge states each side's whole position, reads each one with all of its witnesses together (Isaiah 28:10), and names the one that holds, in layers, meeting the other side's strongest witness. The judge's grades must agree with that finding. Expected effect: no judgment ends with both positions standing or both propped and no side named; a reader sees which position the judge found holds and why.
 
 ## 4. THE CHANGE (W4 locates every copy from fresh live reads; touched text only; no model settings; reasoning untouched)
-C1. WHOLE POSITIONS, a new section of reasoning after COLLISION POINTS and before the RESULT line (all judge requests: Panel Build, Build Independent Verdict, Reserve, Alternate; and every cure or send-back form that restates the judgment), both sides alike (ruling 364):
+C1. WHOLE POSITIONS, a new section of reasoning, second: after POINTS AT ISSUE and before the RESULT line (live order, Panel Build: POINTS AT ISSUE, RESULT, CLAUSE, KEYSTONE, standings, itemizations, COLLISION POINTS; so the finding comes at the point of the verdict and the RESULT word follows it) (all judge requests: Panel Build, Build Independent Verdict, Reserve, Alternate; and every cure or send-back form that restates the judgment), both sides alike (ruling 364):
    `DEFENDER'S POSITION: "<the whole declared chain on the topic, in plain words>" -- RESTS ON: <each link's own witnesses, [L1]/[L2]/[L3] by reference, read together>`
    `CHALLENGER'S POSITION: "<the opposing view as the challenger pressed it, in plain words>" -- RESTS ON: <its witnesses, read together>`
    `WHICH HOLDS: DEFENDER | CHALLENGER -- DECIDES [L4]: "<the inference, one sentence>" -- FROM: <the lower layers of both positions, read together> -- MEETS: [<round>] "<the strongest witness of the position that does not hold, quoted>" -- WHY IT FAILS: <the lower layer it cannot agree with>`
    The rule text: the two positions answer one question on the topic and cannot both hold. Read each position whole, every witness together, precept upon precept (Isaiah 28:10); a verse that seems to decide one link does not overrule a position's whole witness unless, read with it, it cannot agree. Name the one that holds. A position's standing (how it was argued) is not the finding of which one holds. The DECIDES form is ASK 504's, so the enforcer and dec504() read it unchanged.
 C2. Agreement with the grades: WHICH HOLDS: CHALLENGER requires the verdict BROKEN (k >= 1, or BROKEN-2); WHICH HOLDS: DEFENDER requires the verdict not BROKEN. A mismatch, a missing WHICH HOLDS, or a WHICH HOLDS without its DECIDES form goes back once on the existing E-COL send-back path with both cures: regrade the collision lines the finding contradicts, or change the finding (the judge keeps the decision, ruling 428). Uncured: as ASK 504 R1 (the grade stays, drv_uncured, alt_needed).
-C3. Commitment 13 (one text, byte-identical in every copy): "At the verdict I set the two whole positions side by side, read each with all its witnesses together, and name the one that holds; my grades agree with it."
+C3. A new Commitment 17, after Commitment 16, in every copy (live 13 is the layers commitment, which ASK 506 extended; 14 to 16 are taken), one text, byte-identical: "At the verdict I set the two whole positions side by side, read each with all its witnesses together, and name the one that holds; my grades agree with it."
 C4. The seat's RESULT word: unchanged in this build (rd386, rulings 494, 404, 488; ASK 505 C0). WHICH HOLDS is written, checked and shown, not counted. Whether WHICH HOLDS should decide the seat's RESULT word is a separate card line for the operator, because it revisits ruling 494 and his 22:29 CST 11-19 ruling (a side PROP-DEPENDENT on two or more judges cannot win). W3 recommends asking it only after a run shows WHICH HOLDS in use.
 C5. The recount (W4 told the operator at 01:47 CST it would be its own card line; it is). Located: pkgCEC, then cureRecompute stand(), Shared Library L1346-1347: a side with any link graded BROKEN (brk), or a count of 1 or more, is PROP-DEPENDENT.
    - What stopping it would do in 41024, from the AUDIT v25 originals: the challenge stays SELF-SUPPORTED on all three seats; sol and sol62 (BROKEN) give CHALLENGER WINS, terra (HELD, both SELF-SUPPORTED) gives UNDERDETERMINED; the panel is BROKEN 2-1, giving CHALLENGER PREVAILS. The challenger's confirmed closing contradiction is a close forfeit (cfo_sides for 41024 returns ["CHALLENGER"], read from SQL), so ASK 505 C1 takes that win away: the outcome stays UNDERDETERMINED. What changes is what the reader sees: two seats saying CHALLENGER WINS and a challenge marked SELF-SUPPORTED, though its own link C6 broke by its own closing contradiction. Both sides would not read as propped; the challenger would read as sound when it is not.
@@ -41,7 +41,7 @@ For the operator, one at a time, on W4's cards:
 1. The build card for C1 to C3 (the operator's words in section 1 are the request).
 2. C5a or C5b, its own line on the same card, with the 41024 consequence stated.
 3. Later, only after a run: should WHICH HOLDS decide the seat's RESULT word (C4)? The card quotes ruling 494 and his 22:29 ruling.
-Not for the operator: the form and the Commitment's home (design, the team's).
+Not for the operator: the form, the placement and the Commitment's number (design, the team's).
 
 ## 6. CHECKS
 - B1 (W4, offline): changed nodes and sizes; the added prompt text (about 1k characters per request); the added reply length (three short lines per judge).
@@ -54,6 +54,6 @@ Not for the operator: the form and the Commitment's home (design, the team's).
 3. The section pushes replies past their limits: tighten the form before any limit change (no model setting without the operator's word).
 
 ## 8. STEPS
-1. W4 checks this plan against live (all judge forms and copies, Commitment 13 copies, the E-COL path, dec504 reuse).
+1. Done (W4 07:53Z): checked against live; C2, C4, C5 match; placement and Commitment number taken into rev 2.
 2. W4 builds; B1, B2; W3 grades; W4 tells the operator the second grade is held; his card; write; fetchback.
 3. Q1 on his release. Manual entry (W3) on its own card after.
