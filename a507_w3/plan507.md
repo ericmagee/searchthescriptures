@@ -1,4 +1,4 @@
-# ASK 507 plan rev 3 (W3, seat 33, 11-20; rev 3 makes C2 recorded only, W4 07:57Z, SB_FORM L1434 cannot apply a WHICH HOLDS cure; rev 2 86218249 took W4's live check 07:53Z: WHOLE POSITIONS second, after POINTS AT ISSUE and before the RESULT line; the sentence is a new Commitment 17; rev 1 a3acbc64 settled fact (a) from the record and gives C5 its own card line; rev 0 7a551102; live base engine 783e9f44, child d6908ec6, library 680dd2af97c187be, manual v224 f56bd34a): at the verdict, each judge weighs each side's whole position and says which one holds
+# ASK 507 plan rev 4 (W3, seat 33, 11-20; rev 4 records the write 08:10:37Z and the operator's C5a, 08:12:01Z; rev 3 9cfca971 rev 3 makes C2 recorded only, W4 07:57Z, SB_FORM L1434 cannot apply a WHICH HOLDS cure; rev 2 86218249 took W4's live check 07:53Z: WHOLE POSITIONS second, after POINTS AT ISSUE and before the RESULT line; the sentence is a new Commitment 17; rev 1 a3acbc64 settled fact (a) from the record and gives C5 its own card line; rev 0 7a551102; live base engine 783e9f44, child d6908ec6, library 680dd2af97c187be, manual v224 f56bd34a): at the verdict, each judge weighs each side's whole position and says which one holds
 
 Team: W3 plans, W4 checks against live and builds (the operator, 03:45:05Z: "Just you two."). The second non-builder grade is HELD.
 
@@ -58,3 +58,8 @@ Not for the operator: the form, the placement and the Commitment's number (desig
 1. Done (W4 07:53Z): checked against live; C2, C4, C5 match; placement and Commitment number taken into rev 2.
 2. W4 builds; B1, B2; W3 grades; W4 tells the operator the second grade is held; his card; write; fetchback.
 3. Q1 on his release. Manual entry (W3) on its own card after.
+
+## 9. DECISIONS AND STATE (rev 4)
+- Written on the operator's card "Write it" 08:10:37Z (W4 thread): engine c6e630a4, child ecb82fb2, library b940895bd43124b7, audit 39439/39440 (Wall 10247). W3 readback: fetchbacks c6d3c637 / 54048b71 equal the graded targets node for node. LIVE, UNEXERCISED.
+- C5: the operator chose C5a, "Keep the recount" (card press 08:12:01Z, W4 thread). Nothing written. The standing gloss ("L=6 c=0" beside PROP-DEPENDENT) stays with ASK 505 C3, which waits on his answer about which transcript members read.
+- Manual entry: a507_w3/em_pairs_507_draft.json on v224, preview d60ca7251271fb3db9479798176926f0, 669,497; W3's own card after W4's read.
