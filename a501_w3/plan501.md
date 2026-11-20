@@ -1,4 +1,4 @@
-# ASK 501 plan rev 1 (W3, seat 33, 11-20; replaces rev 0 5b153c41, PASS on design W1 10185 with C1, N1, N2; rebuilt on W4's T0 (10186, t0_501.md 3552efeb), which met WRONG-IF 1 and 2; THE ASK FORM op doc §29; number assigned by the coordinator, posted at Wall 10178): the engine runs out of memory on long runs, and since ASK 487 every run of this pairing is long
+# ASK 501 plan rev 2 (W3, seat 33, 11-20; HELD, NOT FOR GRADING until the ASK 503 rerun numbers are in (coordinator 00:31:29Z); replaces rev 1 76f04359 (not graded), which cited "Gemini off flash" wrongly (AAR rev 29 item 20); rev 1 replaced rev 0 5b153c41, PASS on design W1 10185 with C1, N1, N2; rebuilt on W4's T0 (10186, t0_501.md 3552efeb), which met WRONG-IF 1 and 2; THE ASK FORM op doc §29; number assigned by the coordinator, posted at Wall 10178): the engine runs out of memory on long runs, and since ASK 487 every run of this pairing is long
 
 ## 1. OBJECTIVE
 Run 40958 (ODV1-40958-vufevpqd) crashed after 66 minutes at node Panel Tokens: "Workflow did not finish, possible out-of-memory issue" (W4 10170). The row and judgments were saved, but the tokens and cost row (Write Tokens) and the Drive transcript (Save to Drive) come after Panel Tokens and never ran. The operator, 00:04:17Z 11-20: "how can you be so certain the failure isn't from all the changes.. that's not logical. We are running the same debate... this debate ran 30 minutes yesterday."
@@ -52,20 +52,25 @@ T0 is done (W4 10186). O1 of rev 0 (slim Panel Tokens) is dropped: it would save
 O2. Raise the n8n host's memory. No engine change. The operator's setting; W4 first states what the host has today and how it is set (T1). Fastest, and it covers every crash point.
 O3. Hold less per run: the large pass-through and branch nodes (E10) emit a small item (the keys the next node reads), and later nodes read the full data by $('node') from the node that built it, instead of carrying copies forward. Engine change, W4 build, node by node from the E10 list; each change must leave every downstream read byte-equal. Target: runData of a flash run (40781, 40.8 MB) down by at least a third.
 O4. Save the tail separately: write the tokens row and the transcript in a separate execution started after the row saves. It does not stop the crash; it only keeps the tokens row and transcript when the crash comes at Panel Tokens or later (6 of 9 crashes: Panel Tokens 4, Format Markdown 2). Larger build.
-Not offered: reverting ASK 487 (the operator's ruling "Gemini off flash", 10:44 11-19).
-Recommendation: T1, then O2 to the operator if the host can take more; O3 as the lasting fix, built after O2 or alone if O2 is not possible. O3 and O4 are the team's design choices; O2 is the operator's.
+ASK 503 reverts 487 (the operator, 18:20 CST 11-19: "reinstate gemini flash"), and rev 1's reason for not offering it was wrong. After 503, this ASK is about margin only: is there still a memory problem on flash runs, and on long pairings such as the 11-06/07 sonnet vs opus crashes?
+M1 (first measurement, from the ASK 503 rerun; W4's T0 method, run503_checks.md R6 and R7): stored execution size (jsonSizeBytes), runData size in memory, minutes, enforcer rows and round sizes, against 40958 (66.1 min, 658 rows, not stored) and 40891 (26.9 MB stored) and the flash runs (16.9 to 22.7 MB stored; runData 40.8 MB in 40781 and 57.0 MB in 39266).
+Decision after M1 (the team's, except O2):
+- The rerun finishes and sits inside the flash range: the crash on this pairing is explained by 487 and closed by 503. O2 and O3 stay only if the sonnet vs opus crashes (E6: 8 crashes on 11-06, 11-07 and 11-12, at 28 to 74 minutes and 111k to 150k characters of rounds) still show a margin problem for pairings the operator runs today. If no such pairing is planned, this ASK closes with the measurements recorded and O2 and O3 noted for later.
+- The rerun crashes, or its runData is near the size at which 40958 crashed: margin is a live problem on flash too; go to T1 and O2 (the operator's), with O3 as the lasting fix.
+T1 is done (W4 10188): n8n Cloud memory goes with the plan (640 MiB on Trial, Starter and Pro-1; 1280 MiB on Pro-2; 4096 MiB on Enterprise) and changes only with the plan. Which plan this instance is on is known only to the operator. It is asked of him only if the decision above reaches O2.
 
 ## 5. CRITERIA AND DONE
-Q1. T1 posted: the host's memory today and how it is changed; graded by W1 and W2.
+Q1. M1 posted with the numbers by W4 and checked by W1 and W2; T1 is posted (W4 10188).
 Q2. For O3: an offline replay of each changed node on saved 40781 and 39266 data gives byte-equal outputs at every node that reads it, and the summed runData size drops by the target.
 Q3. Proof run, on the operator's release (paid): this pairing on gemini-4-hydrogen ends success; debate_results has run_cost_usd; Write Tokens returned 200 as service_role (this also proves record_debate_row_tokens under 494 A2); a Drive transcript exists.
 Done: the chosen option written on its card (or set by the operator), read back by two non-writers, and Q3 passes.
 Revert: O3, write back the saved live engine JSON on the operator's word; O2, the operator's setting back.
 
 ## 6. WRONG-IF
-1. T1 shows the host is already at its largest size: O2 is out; O3 only.
+0. M1 is not measured (the rerun kept no node data, as 40958): the decision waits for a run that keeps it.
+1. The operator's plan is already Enterprise (4096 MiB): O2 is out; O3 only.
 2. Q2 shows any downstream read differs: that O3 change altered what a node sees; stop that change.
 3. A hydrogen run crashes after O2 or O3: the margin is still too small; measure that run's runData (it must be saved) before the next change.
 
 ## 7. STEPS
-1. Done: T0 (W4 10186). 2. W4: T1 (the host's memory). 3. W1, W2 grade T0 and T1. 4. O2 to the operator with T1's numbers. 5. O3: W4 builds from the E10 list; W1, W2 grade with Q2; card in W4's thread; write; readback. 6. Q3 proof run on the operator's release. It can be the same run as the ASK 502 A1 proof.
+1. Done: T0 (W4 10186), T1 (W4 10188). 2. ASK 503 written; the rerun on the operator's release. 3. W4: M1 from the rerun; W1, W2 check. 4. This plan is then graded with the decision filled in. 5. Only if margin is still a problem: O2 to the operator with T1's numbers; O3 built from the E10 list, graded with Q2, card in W4's thread, write, readback; Q3 proof run on the operator's release.

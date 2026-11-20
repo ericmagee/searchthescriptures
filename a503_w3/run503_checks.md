@@ -10,8 +10,8 @@ P3. Nothing else running on the engine; runstart.py GO.
 
 Run checks (W4 posts; W1 and W2 check by their own reads):
 R1. Debater on flash: debate_results.challenger_model = google/gemini-3.8-flash; challenger_engine gemini.
-R2. Hydrogen not seated: judged_by, panel_expected, panel_substitution and debate_removals name no hydrogen; no enforcer, cure, gate or alternate call went to google/gemini-4-hydrogen (n8n node data or OpenRouter model field in call_costs).
-R3. The run finished: n8n execution status success (not crashed), last node Raise If Incomplete with no error; no row in debate_errors for the execution.
+R2. Hydrogen not seated: judged_by, panel_expected, panel_substitution, debate_removals (api_model, replaced_by_model) and early_alternate (alt_seat, api_model) name no hydrogen; and no entry of debate_results.call_costs has "m" = google/gemini-4-hydrogen. call_costs is a jsonb array column on debate_results, one entry per model call, "m" is the model; it is written by Write Tokens, so it exists only if the run reached Write Tokens (run 40891: 74 entries, 6 hydrogen).
+R3. The run finished: from the DB, run_cost_usd and call_costs are written (Write Tokens ran) and debate_errors has no row for the execution. The n8n execution status (success, last node Raise If Incomplete) is an n8n read: ask the coordinator first.
 R4. Tokens and cost saved: run_cost_usd not null; Write Tokens called rpc/record_debate_row_tokens as service_role with HTTP 200 and no 42501 (this also proves 494 A2's last function).
 R5. Drive transcript saved (Save to Drive ran; file found by run token).
 R6. Length and size against the pre-487 flash runs, reported as numbers, not judged alone:
@@ -23,7 +23,7 @@ R6. Length and size against the pre-487 flash runs, reported as numbers, not jud
     | stored execution MB | 16.9 to 22.7 | 26.9, not stored | |
     | cost USD | 1.73 to 4.03 | 5.15, not written | |
     Expected: inside or near the flash range. Outside it on the high side: report, and look at seat replacements first (W4's alternate and retry minutes).
-R7. No out-of-memory crash: covered by R3; also the stored execution size (jsonSizeBytes) and runData size, for ASK 501 (W4's T0 method), so 501 has one measured flash run after 503.
+R7. No out-of-memory crash: covered by R3 (DB part). The stored execution size (jsonSizeBytes) and runData size for ASK 501 (W4's T0 method) need an n8n read: ask the coordinator first. Duration is also an n8n read (debate_results has only created_at).
 R8. Model failures, if any, reported to the operator first and plainly (ASK 427).
 R9. 499 A1 and 500 A1 still hold: ppj_put, ppj_status, ppj_get as service_role with HTTP 200; launch through dash_launch_odv1 HTTP 200.
 
