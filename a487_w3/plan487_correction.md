@@ -1,8 +1,9 @@
-# ASK 487 correction, plan rev 0 (W3, seat 33, 11-20; DRAFT, not graded; number to be assigned by the coordinator, next free 503): the gemini debater goes back to gemini-3.8-flash, and the other flash models come out
+# ASK 503 plan rev 1 (W3, seat 33, 11-20; the ASK 487 correction; number assigned by the coordinator 00:19:45Z, posted at Wall 10189; replaces rev 0 989521b0, not graded; rev 1 adds the operator's 18:20 CST order: hydrogen off the panel, and the rerun): the gemini debater goes back to gemini-3.8-flash, gemini-4-hydrogen stops judging, and the other flash models come out
 
 ## 1. THE OPERATOR'S WORDS
 - 21:51 CST 11-18 (relayed by the coordinator; quoted by W4 at Wall 9126, 03:56Z 11-19): "we keep gemini 3.8 flash.. it's good. my mistake on that.. we keep spark too. it's currently debating well"
 - 18:17 CST 11-19 (W4's thread, 00:17:09Z 11-20): "no.. no.. i said later gemini flash was good... remove the other flash models.   Why was that missed"
+- 18:20 CST 11-19 (W4's thread, 00:20:01Z 11-20): "okay. a mistake.  let's remove hydrogen as a judge (it's not a good fit for the panel).  reinstate gemini flash. and rerun."
 
 ## 2. WHY 487 WENT AHEAD (the record, in order)
 1. 21:24 CST 11-18: ASK 437 removed the flash models from debating, judging and the panel. At 21:51 CST the operator kept Gemini 3.8 Flash and Spark (W4 9126). ASK 437 rev 3 kept gemini everywhere.
@@ -25,12 +26,21 @@ C1. Engine: Init Seats line 13, ENG gemini mc 'gemini_deb' becomes 'gemini'. One
 C2. Dashboard, in the same card and before C3: dash_debaters() row 3 ('gemini','Gemini','gemini_deb') becomes 'gemini'. If it does not, C3 makes dash_debaters report gemini as inactive, and dash_launch_odv1, which reads its allowed engines from it, would refuse gemini launches.
 C3. model_config gemini_deb set active false, kept for the record (as 487's revert said).
 C4. "The other flash models": set model_config hy4_flash, glm_legal and qwen_flash to active false, and remove the alt_minimax31 entry from Init Seats ALT_MODELS (line 46). None of these seats anyone today, so no run changes; this makes the record match the ruling. Leave the lookup maps alone (they seat no one), unless the team wants them cleaned.
-C5. Engine manual entry for C1 to C4, written by W3 on its own card.
-The operator should confirm one point before the card: that "the other flash models" means the ones in section 3, and that judge seat gemini (also gemini-3.8-flash) stays.
+C6. Hydrogen off the panel (the operator, 18:20 CST): remove 'hydrogen' from the three seat lists that hold it, and nothing else:
+  - Init Seats line 25 ORDER0: ['chatgpt','sol','sol62','haiku','gemini','spark','qwen4max','argon','sonnet'];
+  - Init Seats line 35 __ALT: ['haiku','gemini','spark','qwen4max','argon','sonnet'];
+  - Accept Build line 26 ORDER: the same as ORDER0.
+  No seat is added and the order of the others does not change; each later seat moves up one place. The lookup maps that name hydrogen (FAM_PANEL, JFAM_I, Resolve Seats JFAM, __JFAM2 in Build Synthesis, Build Independent Verdict and Build Diagnostic Prompt, Accept Build ENG_SEAT) seat no one and are left alone, as ASK 437 did. model_config row hydrogen is left as it is (as 437 left its rows); after C1 and C3 no debater reads it.
+  Effect, derived by hand from Init Seats (W4's offline Init Seats test confirms, Q2):
+  - The rerun pairing (spark/oracle vs gemini/plain): no change. Google and meta debate, so hydrogen, gemini, argon and spark were already off this panel. Panel chatgpt, sol, sol62; reserve qwen4max; alternates qwen4max, sonnet, haiku.
+  - A pairing where an OpenAI seat debates and no google, meta or anthropic seat does (for example chatgpt vs grok): before, panel haiku, gemini, hydrogen, reserve spark; after, panel haiku, gemini, spark, reserve qwen4max, alternates qwen4max, argon, sonnet.
+  - Any other pairing without an OpenAI debater: the panel stays chatgpt, sol, sol62; hydrogen leaves the alternate list, and the seats after it move up.
+C5. Engine manual entry for C1 to C4 and C6, written by W3 on its own card.
+The operator should confirm one point before the card: that "the other flash models" means the ones in section 3. His 18:20 CST words ("reinstate gemini flash") settle that gemini-3.8-flash stays, as judge and as debater.
 
 ## 5. CHECKS
-Q1. Diff live against target: only Init Seats lines 13 and 46 change; connections equal.
-Q2. Init Seats offline on run 40781's input: the debater model is google/gemini-3.8-flash, and the panel, reserve and alternates equal 40781's.
+Q1. Diff live against target: only Init Seats lines 13, 25, 35 and 46 and Accept Build line 26 change; connections equal.
+Q2. Init Seats offline on run 40781's input: the debater model is google/gemini-3.8-flash, and the panel, reserve and alternates equal 40781's except that hydrogen is in no list. The same with the challenger swapped to chatgpt vs grok gives the C6 panel above.
 Q3. dash_debaters() row 3 reads gemini, google/gemini-3.8-flash, active true; dash_launch_odv1 accepts gemini (rolled-back test).
-Q4. Next run with gemini debating: challenger_model google/gemini-3.8-flash. Run time is expected back in the 22 to 57 minute range.
+Q4. The rerun (the operator's "and rerun", 18:20 CST; the release card names the run and its cost, 1.73 to 4.03 USD on this pairing before 487): the same topic and pairing as 40958, challenger_model google/gemini-3.8-flash, no judge or alternate is hydrogen, the run ends success with run_cost_usd written (which also proves record_debate_row_tokens under 494 A2) and a Drive transcript. Run time is expected back in the 22 to 57 minute range.
 Revert: the saved live engine JSON; the dash_debaters body before the change; the rows back to active.
