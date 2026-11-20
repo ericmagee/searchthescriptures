@@ -1,0 +1,19 @@
+{
+ "base_version": 222,
+ "base_md5": "f783df20a3821b21e0df9ac8b039769a",
+ "pairs": [
+  {
+   "old": "    - Revert: write back live_engine_499.json (8197ec2e) and live_pjc_499.json (26ab0bac), on the operator's word.\n\n## 12.",
+   "new": "    - Revert: write back live_engine_499.json (8197ec2e) and live_pjc_499.json (26ab0bac), on the operator's word.\n  - THE GEMINI DEBATER IS BACK ON GEMINI 3.8 FLASH, AND GEMINI 4 HYDROGEN NO LONGER JUDGES (ASK 503; engine Init Seats and Accept Build; dash_debaters; model_config gemini_deb):\n    - Why: ASK 487 moved the debater \"gemini\" to google/gemini-4-hydrogen against the operator's ruling of 21:51 CST 11-18, \"we keep gemini 3.8 flash.. it's good. my mistake on that.. we keep spark too. it's currently debating well\" (W4 9126). The two runs after it ran 61 and 66 minutes against 22 to 57 on flash, and run 40958 crashed out of memory at Panel Tokens (ASK 501). The operator, 18:20 CST 11-19: \"okay. a mistake.  let's remove hydrogen as a judge (it's not a good fit for the panel).  reinstate gemini flash. and rerun.\" At 18:26 CST: \"why are you touching other models. they should already be removed when you removed gemini flash\".\n    - What: Init Seats line 13, ENG gemini mc 'gemini_deb' back to 'gemini' (the debater reads seat gemini, google/gemini-3.8-flash, 64000). 'hydrogen' removed from Init Seats ORDER0 (line 25) and __ALT (line 35) and from Accept Build ORDER (line 26); no seat added, the others keep their order. dash_debaters() row 3 back to seat gemini, so the Any vs Any list names Gemini 3.8 Flash. model_config gemini_deb (the 487 row) set inactive, kept for the record. Hydrogen stays only in the lookup maps (FAM_PANEL, JFAM_I, Resolve Seats JFAM, __JFAM2, Accept Build ENG_SEAT), which seat no one, and its model_config row is unchanged, as ASK 437 left its rows. No other model is touched.\n    - Effect (W4's offline Init Seats test, q2_503_rev2_output.txt 2fa59f23): spark vs gemini, no panel change (sol62, chatgpt, sol; reserve qwen4max; alternates qwen4max, sonnet, haiku). chatgpt vs grok: the panel haiku, gemini, hydrogen with reserve spark becomes haiku, gemini, spark with reserve qwen4max.\n    - Built: build503.py and step503_db.sql (W4 10192), plan a487_w3/plan487_correction.md rev 2 (1cd84663); graded by __FILL_GRADES__.\n    - Live: __FILL_LIVE__ (card, engine 01691ed8 to <after>, dash_debaters b6084d5a to c6621b30, audit rows, two readbacks).\n    - Not yet: the rerun (the operator's release) shows challenger_model google/gemini-3.8-flash, no hydrogen seated, and a finished run with its tokens row.\n    - Revert: write back live_engine_503_pre.json (afd83622), then revert503_db.sql (dash_debaters body b6084d5a, gemini_deb active), on the operator's word.\n\n## 12."
+  },
+  {
+   "old": "    - Revert: the engine token first, then the row made inactive (kept for the record).\n    - Limits: shown by the next run with gemini as a debater.",
+   "new": "    - Revert: the engine token first, then the row made inactive (kept for the record).\n    - Limits: shown by the next run with gemini as a debater.\n    - Undone by ASK 503 (see the ASK 503 entry): it went against the operator's 21:51 CST 11-18 ruling to keep gemini 3.8 flash."
+  }
+ ],
+ "fill": [
+  "__FILL_GRADES__",
+  "__FILL_LIVE__"
+ ],
+ "note": "DRAFT. Not written. Fill the two placeholders from the Wall after the ASK 503 write and its readbacks; then simulate on v222 and send for two reads."
+}
