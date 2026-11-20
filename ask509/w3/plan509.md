@@ -1,11 +1,11 @@
-# ASK 509 plan (W3, seat 33), rev 1, 2026-11-20
+# ASK 509 plan (W3, seat 33), rev 2, 2026-11-20
 
 ## Ruling
 Eric, 08:30:57Z 11-20, W3 thread: "50k". That answered his own question at 08:30:36Z, "remove it or set to 50k.. what do you think?", after W3 recommended 50k. ASK number from the coordinator (08:31:02Z).
 
 ## Record
 - The cap was proposed by Worker_A3 (BB-6416, 19 Oct): at most 6 link sights and 8,000 characters, whole sights only, as a cost bound (+2,367 tokens, 5.1% of run 26613). Advisor_Code_D ruled the design in BB-6417; the context window was "UNMEASURED". It is not an operator ruling.
-- Sight 1822 is 24,114 characters as served, so under 8,000 the link path never serves it. Test: debate_arsenal_guarded('Did the Holy Ghost beget the flesh of Christ?') serves S-1462 only.
+- Sight 1822 is 24,114 characters as served, so under 8,000 the link path never serves it. Test: on 'Is the Holy Ghost the source of the flesh of Christ?' S-1462 is served whole as SIGHT LINK and S-1822 only as a plain row (row 15) cut to 300 characters by Init with Guards.
 - All approved linked sights: 25, 55, 519, 1462, 1822 = 30,204 characters.
 
 ## The change (debate_sight_links only)
@@ -18,7 +18,7 @@ Target def md5 d43c0860b9593b3fcde9169b55502a6c, 3,537 chars; "8000" occurs 0 ti
 
 ## Checks
 - Fetchback def md5 equals the target.
-- A topic that fires link group 11 and no guard word, e.g. "Is the Holy Ghost the source of the flesh of Christ?" (holy, ghost; none of the DG-8 words, before or after ASK 508): before, S-1462 only; after, S-1462 and S-1822, both "SIGHT LINK (group 11, link 10 ...)".
+- A topic that fires link group 11 and no guard word, e.g. "Is the Holy Ghost the source of the flesh of Christ?" (holy, ghost; none of the DG-8 words, before or after ASK 508): before, S-1462 whole as SIGHT LINK and S-1822 as a 300-character excerpt (plain row); after, S-1822 whole with "SIGHT LINK (group 11, link 10 ...)". (Corrected in rev 2: rev 1 said S-1462 only.)
 - 'Did Christ have a biological father?' returns the same 30 rows as before (1822 and 519 come by the guard set and are removed from the link path first).
 - Not measured: prompt size against each debater's context limit. The most the link path can now add is 30,204 characters (all linked sights).
 
