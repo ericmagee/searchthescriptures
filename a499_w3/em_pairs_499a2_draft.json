@@ -1,0 +1,24 @@
+{
+ "base_version": "latest at write time: after the ASK 503 entry and the 499 A1 Shown card",
+ "base_md5": "__FILL_BASE__",
+ "pairs": [
+  {
+   "old": "    - Not yet: A2 (anon EXECUTE revoked on the three) on its own card.",
+   "new": "    - A2, THE REVOKES (step499.sql 73d82a72; no engine node changes): EXECUTE on ppj_put(jsonb), ppj_status(jsonb) and ppj_get(jsonb) revoked from PUBLIC, anon and authenticated; postgres, service_role and lab_seat keep it. The step's closing check raises if anon or authenticated can still call any of the three, or if service_role or lab_seat lost it. Rolled-back test test499_rollback.sql (f169e22c): __FILL_TEST_RESULT__ (W4 __FILL_TEST_WALL__; graded __FILL_TESTOUT_GRADES__).\n    - Live A2: written on the operator's card \"__FILL_CARD_ANSWER__\" at __FILL_CARD_PRESS_Z__ in W4's thread; __FILL_MIGRATION__; audit __FILL_AUDIT__ (W4 __FILL_WRITE_WALL__). Read back live by __FILL_READBACK_1__ and __FILL_READBACK_2__: only postgres, service_role and lab_seat hold EXECUTE on the three.\n    - Not yet: the next engine run collects all 3 panel replies with no 42501.\n    - Revert A2: revert499.sql (ba5da3c1) restores the EXECUTE grantees of the three to their state before the step, on the operator's word."
+  }
+ ],
+ "fill": [
+  "__FILL_BASE__",
+  "__FILL_TEST_RESULT__",
+  "__FILL_TEST_WALL__",
+  "__FILL_TESTOUT_GRADES__",
+  "__FILL_CARD_ANSWER__",
+  "__FILL_CARD_PRESS_Z__",
+  "__FILL_MIGRATION__",
+  "__FILL_AUDIT__",
+  "__FILL_WRITE_WALL__",
+  "__FILL_READBACK_1__",
+  "__FILL_READBACK_2__"
+ ],
+ "note": "DRAFT, its own card, after 503 is written and proven and after the 499 A1 Shown card (its anchor is the Not yet line that card writes). Fill from the Wall after the A2 write and its two readbacks, recount the anchor on the real base (must be 1), simulate, then two reads."
+}

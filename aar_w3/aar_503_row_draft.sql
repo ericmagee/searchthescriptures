@@ -1,4 +1,4 @@
--- ASK 503 snapshot row, SKELETON rev 0 (W3, seat 33, 11-20). For W1 and W2 to grade once it is filled. NOT RUN.
+-- ASK 503 snapshot row, SKELETON rev 1 (W3, seat 33, 11-20; rev 0 87831126 PASS as a form W1 10209, N1 applied: W1 DB-step verdict notes N1). For W1 and W2 to grade once it is filled. NOT RUN.
 -- Pattern: aar_w3/aar_499a2_row_draft.sql (__FILL values and a closing guard) and W2's aar_w2/aar_run40958_rows_draft.sql.
 -- ASK 503 is the correction of ASK 487 (snapshot 8, ask 487 rev 1, "read back", objective "not yet"). 503 is its own ASK, so prior_row is NULL; snapshot 8 is cited in sources and is not changed.
 -- Run only from seat 36 (the coordinator), once, after: the 503 write on W4's card, two non-writer readbacks, the operator's released rerun, and the run checks (a503_w3/run503_checks.md 9b0cd38a, R1 to R7) posted by W4 and graded by two non-builder seats.
@@ -25,7 +25,7 @@ INSERT INTO public.ask_aar_snapshots (ask, rev, title, objective, objective_met,
    {"seat":"W2","verdict":"PASS (plan rev 2)","wall_id":10196,"md5_graded":"1cd84663","verdict_norm":"PASS"},
    {"seat":"W1","verdict":"PASS (build rev 2, engine target)","wall_id":10195,"md5_graded":"54f23f47","verdict_norm":"PASS"},
    {"seat":"W2","verdict":"PASS (build rev 2, engine target, N1)","wall_id":10196,"md5_graded":"54f23f47","verdict_norm":"PASS"},
-   {"seat":"W1","verdict":"PASS (build rev 2, DB step)","wall_id":10195,"md5_graded":"4772c688","verdict_norm":"PASS"},
+   {"seat":"W1","verdict":"PASS (build rev 2, DB step, N1)","wall_id":10195,"md5_graded":"4772c688","verdict_norm":"PASS"},
    {"seat":"W2","verdict":"PASS (build rev 2, DB step, N1)","wall_id":10196,"md5_graded":"4772c688","verdict_norm":"PASS"}]'::jsonb,
  ARRAY['54f23f47','4772c688'],
  '["__FILL_AUDIT_IDS_AS_NUMBERS__"]'::jsonb,

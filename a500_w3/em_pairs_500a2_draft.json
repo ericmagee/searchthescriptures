@@ -1,0 +1,27 @@
+{
+ "base_version": "latest at write time (after the 503 and 499 entries)",
+ "base_md5": "__FILL_BASE__",
+ "pairs": [
+  {
+   "old": "\n\n## 12. Citation check against the KJV",
+   "new": "\n  - THE ENGINE START WEBHOOK REQUIRES THE x-odv1-key HEADER (ASK 500; A1 dash_launch_odv1, A2 engine \"Debate Start\"):\n    - Why: Debate Start (POST /webhook/oracle-debate-v1) had no authentication. Anyone with the URL could start a full engine run (1.73 to 5.15 USD for one pairing; run 40891 was 5.149) with any topic, engines and profiles, and a direct POST skipped the topic fence in dash_launch_odv1. The URL is not a secret (W4 10095 B8). Plan a500_w3/plan500.md rev 2 (5b31db8c).\n    - A0 (the operator, outside any transcript): Vault secret odv1_start_webhook and n8n credential \"ODV1 start webhook\" (hnDqGbFZE6nUMP4g) hold the same value; checked by name only (W4 10161, W1 10163).\n    - A1 (already live): dash_launch_odv1 reads the secret from Vault and sends it as x-odv1-key on its net.http_post (prosrc 3b74a293 to 6078032f; card \"Write it\" 22:37:18Z 2026-11-19, audit 39330 and 39331; read back W1 10166, W2 10167). Proven by run 40958, launched through dash_launch_odv1 at 22:48:48Z (launch row 84, HTTP 200; W4 10168). Revert A1: revert500a1.sql (c138f486).\n    - A2: Debate Start gets authentication headerAuth with credential \"ODV1 start webhook\". Touched node only: method, path, responseMode and options unchanged; connections equal. Built by build500a2.py (cf0c67e0); target __FILL_TARGET_MD5__ on base __FILL_BASE_ENGINE__ (graded __FILL_TARGET_GRADES__).\n    - Live A2: written on the operator's card \"__FILL_CARD_ANSWER__\" at __FILL_CARD_PRESS_Z__ in W4's thread; engine __FILL_ENGINE_BEFORE__ to __FILL_ENGINE_AFTER__; audit __FILL_AUDIT__ (W4 __FILL_WRITE_WALL__). Read back live by __FILL_READBACK_1__ and __FILL_READBACK_2__.\n    - Effect: a POST without the right x-odv1-key is refused by n8n before the flow runs. Every real launch goes through dash_launch_odv1 (topic fence and odv1_launches log). A direct POST to the URL without the header no longer starts a run.\n    - Not yet: Q1, the next launch through dash_launch_odv1 starts an execution (a paid run, on the operator's release); Q2, one POST with no header is refused with 401 or 403 and starts no execution (only on the operator's word); Q3, every engine execution after A2 matches an odv1_launches row.\n    - Revert A2: write back __FILL_PRE_FILE__ (__FILL_PRE_MD5__), on the operator's word. Revert A2 before A1.\n\n## 12. Citation check against the KJV"
+  }
+ ],
+ "fill": [
+  "__FILL_BASE__",
+  "__FILL_TARGET_MD5__",
+  "__FILL_BASE_ENGINE__",
+  "__FILL_TARGET_GRADES__",
+  "__FILL_CARD_ANSWER__",
+  "__FILL_CARD_PRESS_Z__",
+  "__FILL_ENGINE_BEFORE__",
+  "__FILL_ENGINE_AFTER__",
+  "__FILL_AUDIT__",
+  "__FILL_WRITE_WALL__",
+  "__FILL_READBACK_1__",
+  "__FILL_READBACK_2__",
+  "__FILL_PRE_FILE__",
+  "__FILL_PRE_MD5__"
+ ],
+ "note": "DRAFT, its own card, after 503 is written and proven. v222 has no ASK 500 entry, so this one entry records A0 and A1 (live) as well as A2. The anchor occurs once in v222; recount on the real base. W4's A2 target 1bf8c2b5 was built on engine 01691ed8; the 503 write changes the engine, so the target must be rebuilt on the post-503 engine and graded again before the A2 card; the target, base and revert-file placeholders take the rebuilt values."
+}
