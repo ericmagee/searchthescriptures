@@ -1,4 +1,4 @@
-# ASK 504 plan rev 0 (W3, seat 33, 11-20): the deciding step of every break must be layered
+# ASK 504 plan rev 1 (W3, seat 33, 11-20; replaces rev 0 7501f2d0 after W4's build rev 0 findings, build504_rev0_findings.md): the deciding step of every break must be layered
 
 Team: W3 plans, W4 checks and builds. W1 and W2 stay asleep (the operator, 03:45:05Z: "Just you two."). The build rule's second non-builder grade is HELD; W4 tells the operator before any card.
 
@@ -24,11 +24,14 @@ C2. Commitment 13 (Accept Build posture): add "for a break, the deciding step as
 C3. E-COL enforcer: add the DECIDES check beside its layer-presence check, with the same send-back on a miss (Enforcer Build, Judge Enforcer, Alt and R2 Alt Judge Enforcer, and the send-back templates that list misses). The check reads form only: DECIDES present, FROM names lower layers present on the line, MEETS quotes words found in the answer round named. The enforcer does not judge the inference (as today: "You do not judge the debate").
 C4. Both sides (ruling 364; Commitment 4): C1 to C3 apply to CHALLENGER LINK BROKEN lines the same way.
 
-## 5. OPTION FOR THE OPERATOR (a rule ruling; one question)
-After the send-back, a break line still without a DECIDES line:
-- O1 (recommended): the break is void; the line is read as not graded, so the link's grade comes from the other judges' lines and the counts as today. Reason: an unlayered deciding step is the fault he named; counting it keeps the fault.
-- O2: the line grades UNDERDETERMINED.
-W4 builds O1 unless he chooses O2; nothing is written before his card.
+## 5. A MISS AFTER SEND-BACK (rev 1)
+The operator chose O1 (void the break) at about 04:0xZ. W4's build rev 0 (B2b) shows O1 cannot be built on the present apply path: a RETRACTED or VOID collision line is NOT APPLIED (SB_FORM; W3 2351), and KEYSTONE and RESULT do not move. Building O1 as stated needs a new "not graded" form that every grade reader, pkgRCD, the RESULT recompute and the panel count all read. W3 MISTAKE: rev 0 offered O1 without quoting ruling 428 (md_notes_rulings 428): "a live disagreement sends the judge's line back once with the quoted reason, the judge keeps the decision and both are recorded". Code voiding a judge's grade sets that aside.
+Design (team call), in two parts:
+D1 (build now): the DECIDES send-back gives the judge its two lawful cures: write the DECIDES line, or regrade the pair yourself as a graded collision line (STANDS or UNDERDETERMINED, with its layers). Both go through the present apply path. The judge keeps the decision (428).
+D2 (the operator's choice, on a card that quotes 428 and says it revisits his O1): a break still without DECIDES after the one send-back:
+- R1 (recommended): recorded, not voided, for the proving run: the line keeps the judge's grade and is marked DECIDES UNCURED in the record and the AAR. Then he decides from the count.
+- R2: void it as O1 said: the wide change, a new "not graded" form read by every grade reader, pkgRCD, the RESULT recompute and the panel count; it sets aside 428.
+Press-only breaks: a break resting on an unanswered press (sol62 D5, Commitment 5) also needs DECIDES, because the operator's words are "the deciding step in each break". The E-COL layer-count exemption W4 calls ruling 392 stays as it is for the layer count. md_notes_rulings 392 reads "a press must have a premise behind it; a verse pressed without one isn't a witness", which is not that exemption; W4 names the exemption's source before any card, and if it is the operator's ruling, the card quotes it.
 
 ## 6. CHECKS
 - B1 (W4, offline): the changed texts and nodes only; connections equal; prompt size before and after per node.
@@ -43,6 +46,6 @@ W4 builds O1 unless he chooses O2; nothing is written before his card.
 
 ## 8. STEPS
 1. W4 checks this plan against live (locations, copies, sizes).
-2. The operator answers O1 or O2.
-3. W4 builds; B1, B2; W4 tells the operator the second grade is held; his card; write; fetchback.
+2. The operator answers D2 (R1 or R2), on a card quoting 428.
+3. W4 builds D1 (and R2 only if chosen); B1, B2; W4 tells the operator the second grade is held; his card; write; fetchback.
 4. Q1 on his release; W3 manual entry on its own card after.
