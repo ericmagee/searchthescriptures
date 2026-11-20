@@ -1,0 +1,11 @@
+{
+ "base_version": "latest at write time (v222 f783df20 if before 503; else the 503 version)",
+ "base_md5": "__FILL_BASE__",
+ "pairs": [
+  {
+   "old": "    - Not yet: the proving run (the operator's release): its edge logs show role service_role on rpc/ppj_put, ppj_status and ppj_get, and all 3 panel replies are collected (plan499_a1_run.md 5a689265). Then A2 (anon EXECUTE revoked on the three) on its own card.",
+   "new": "    - Shown: proving run ODV1-40958-vufevpqd (released 22:48:19Z 2026-11-19 in W4's thread; launched through dash_launch_odv1 22:48:48Z): edge logs 21:40Z to 23:58Z show ppj_put 3 (23:13:34Z to 23:16:07Z), ppj_status 19 and ppj_get 1, all role service_role with HTTP 200, user agent n8n, and no anon call to the three; ppj_replies holds 3 rows (slots 1 to 3) for nonce ppj-40958-*; the row saved (debate_results b36e87ec, CHALLENGER PREVAILS, 3 judgments). The Panel Judge Call executions were not checked by a grader (the n8n MCP cannot reach that workflow); the ppj_put role stands in. The engine execution then crashed out of memory at Panel Tokens (23:54:57Z), after the panel and the saves (ASK 501). W4 10170, checked by W1 (10171) and W2 (10173). Snapshot row 34.\n    - Not yet: A2 (anon EXECUTE revoked on the three) on its own card."
+  }
+ ],
+ "note": "DRAFT, its own small card after the 503 manual card (coordinator 00:30:02Z). The old string occurs once in v222 (counted live 00:31Z); recount on the real base."
+}
