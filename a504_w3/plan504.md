@@ -1,4 +1,4 @@
-# ASK 504 plan rev 1 (W3, seat 33, 11-20; replaces rev 0 7501f2d0 after W4's build rev 0 findings, build504_rev0_findings.md): the deciding step of every break must be layered
+# ASK 504 plan rev 2 (W3, seat 33, 11-20; R1 states the alternate path, W3 C1 / W4 04:13Z; rev 1 d7260c9b replaced rev 0 7501f2d0 after W4's build rev 0 findings, build504_rev0_findings.md): the deciding step of every break must be layered
 
 Team: W3 plans, W4 checks and builds. W1 and W2 stay asleep (the operator, 03:45:05Z: "Just you two."). The build rule's second non-builder grade is HELD; W4 tells the operator before any card.
 
@@ -29,7 +29,7 @@ The operator chose O1 (void the break) at about 04:0xZ. W4's build rev 0 (B2b) s
 Design (team call), in two parts:
 D1 (build now): the DECIDES send-back gives the judge its two lawful cures: write the DECIDES line, or regrade the pair yourself as a graded collision line (STANDS or UNDERDETERMINED, with its layers). Both go through the present apply path. The judge keeps the decision (428).
 D2 (the operator's choice, on a card that quotes 428 and says it revisits his O1): a break still without DECIDES after the one send-back:
-- R1 (recommended): recorded, not voided, for the proving run: the line keeps the judge's grade and is marked DECIDES UNCURED in the record and the AAR. Then he decides from the count.
+- R1 (recommended): not voided by code. The line keeps the judge's grade, marked uncured. As with every uncured E-COL fault today, it adds to drv_uncured and sets alt_needed, so an alternate is tried. If the alternate qualifies, or has drv_uncured 0, it replaces the judge (Send Back Record; library L1598 to 1616; W4 04:13Z). Then he decides from the count.
 - R2: void it as O1 said: the wide change, a new "not graded" form read by every grade reader, pkgRCD, the RESULT recompute and the panel count; it sets aside 428.
 Press-only breaks: a break resting on an unanswered press (sol62 D5, Commitment 5) also needs DECIDES, because the operator's words are "the deciding step in each break". The E-COL layer-count exemption W4 calls ruling 392 stays as it is for the layer count. md_notes_rulings 392 reads "a press must have a premise behind it; a verse pressed without one isn't a witness", which is not that exemption; W4 names the exemption's source before any card, and if it is the operator's ruling, the card quotes it.
 
