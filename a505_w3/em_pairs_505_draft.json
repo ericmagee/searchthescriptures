@@ -1,0 +1,11 @@
+{
+ "base_version": 222,
+ "base_md5": "f783df20a3821b21e0df9ac8b039769a",
+ "pairs": [
+  {
+   "old": "Both sides: UNDERDETERMINED. The challenger alone: DEFENDER PREVAILS, and a DEFENDER PREVAILS, WEAKENED stays as it is. The defender alone: CHALLENGER PREVAILS. The sides found are returned as `close_forfeit`. Then the citation rule applies as below.",
+   "new": "For a debate created before the ASK 505 write time (`v_505_from`, 2026-11-20 04:44:38Z): both sides: UNDERDETERMINED; the challenger alone: DEFENDER PREVAILS, and a DEFENDER PREVAILS, WEAKENED stays as it is; the defender alone: CHALLENGER PREVAILS. For a debate created at or after it (ASK 505 C1, the operator's card \"Both sides (B)\"): a forfeit only takes a win away from the side that made it, and never hands a win to the other side: the defender forfeits and the outcome is DEFENDER PREVAILS or DEFENDER PREVAILS, WEAKENED: UNDERDETERMINED; the challenger forfeits and the outcome is CHALLENGER PREVAILS: UNDERDETERMINED; any other outcome stays (so both sides forfeiting still gives UNDERDETERMINED for any win). The sides found are returned as `close_forfeit`. STANDING GATE (ASK 505 C0; the operator, 22:29 CST 11-19: \"You can't with a PROP SUPPORTED by two or more judges\", corrected \"can't win\"; card \"Yes, always\"): for a debate created at or after `v_505_from`, after the close forfeit, an outcome that names a side as prevailing (DEFENDER PREVAILS, DEFENDER PREVAILS, WEAKENED, CHALLENGER PREVAILS) becomes UNDERDETERMINED when that side's own standing (CHALLENGE STANDING for the challenger, DEFENSE STANDING for the defender) reads PROP-DEPENDENT or COLLAPSED on two or more counted seats. Both sides; it applies even when the RESULT words agree. Earlier debates keep their outcome; stored rows are not rewritten. Then the citation rule applies as below."
+  }
+ ],
+ "note": "DRAFT. ASK 505 engine manual pair, in the OUTCOME rule (derive_debate_outcome). Old string occurs once in v222 (counted live). Live: derive_debate_outcome 1f79a931 to 2a853df6 on W4's card, audit 39420 (W4 Wall 10235). No op doc line: the op doc holds no outcome rule (0 hits for derive_debate_outcome, close forfeit, pkgCFO in v137), so the rule has one home. Rebase on the latest version at write time (the 503 and 504 entries may come first)."
+}
