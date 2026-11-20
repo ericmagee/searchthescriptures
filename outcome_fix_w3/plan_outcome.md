@@ -1,4 +1,4 @@
-# Plan rev 0 (W3, seat 33, 11-20; ASK number pending from the coordinator): the outcome must agree with the graded chain, and the transcript must explain it
+# ASK 505 (if the operator agrees; coordinator via W4 04:29Z) plan rev 1 (W3, seat 33, 11-20; replaces rev 0 886679fd after W4's live check 04:29Z): the outcome must agree with the graded chain, and the transcript must explain it
 
 Team: W3 plans, W4 checks against live and builds (the operator, 03:45:05Z: "Just you two."). The second non-builder grade is HELD.
 
@@ -24,8 +24,9 @@ C1. Close forfeit cannot make a side win that the chain does not let win (derive
   - Option A (only the case the operator named): the challenger alone forfeits: if the outcome before the forfeit is CHALLENGER PREVAILS or UNDERDETERMINED, it becomes UNDERDETERMINED (today DEFENDER PREVAILS); a DEFENDER PREVAILS or DEFENDER PREVAILS, WEAKENED stays. The defender-alone case is unchanged (CHALLENGER PREVAILS).
   - Option B (recommended; A and its mirror, by ruling 364 and the opening rule read both ways): the same for the defender alone: if the outcome before the forfeit is DEFENDER PREVAILS (or WEAKENED) or UNDERDETERMINED, it becomes UNDERDETERMINED; a CHALLENGER PREVAILS stays. Both sides forfeit: UNDERDETERMINED (unchanged).
   The citation rule still applies after, unchanged.
-C2. The transcript explains the outcome: one OUTCOME block in the transcript document, written by code from the same values the function used, listing in order: each seat's verdict and RESULT word; the panel verdict; each rule that changed the outcome (tie, agreeing RESULT words, close forfeit with the side and the contradiction's link, citation rule) with the word before and after; the final outcome. No step is shown that did not run.
-C3. The standing words are explained to a reader, in the transcript only: beside each standing, its meaning in plain words and its numbers, for example "PROP-DEPENDENT (rests on 1 premise conceded or not shown; L=5 c=1)". The stored words, the rules and the judges' prompts are unchanged.
+C2. The transcript explains the outcome: one OUTCOME block, written by code from the same values the function used, listing in order: each seat's verdict and RESULT word; the panel verdict; each rule that changed the outcome (tie, agreeing RESULT words, close forfeit with the side and the contradiction's link, citation rule) with the word before and after; the final outcome. No step is shown that did not run. Format Markdown has no such block today (W4: 0 hits for "OUTCOME"); it does not call derive_debate_outcome (called from Build Save Body, Derive Outcome and Panel Done), so the steps must come from the function's own output or the saved row, not be re-derived.
+C3. The standing words beside their numbers: Format Markdown already prints a legend ("PROP-DEPENDENT: some listed claims were conceded or stood without showing their layers, but not more than half. Those claims do not count."). The change moves that meaning beside each standing where it is printed, with the side's numbers, for example "DEFENSE STANDING: PROP-DEPENDENT (1 of 5 listed claims conceded or not shown; those claims do not count)". Stored words, rules and prompts unchanged.
+OPEN (asked of the coordinator, not guessed): which transcript members of the app read: the Format Markdown document, or a render in the Vercel app (truth-app-dashboard). C2 and C3 go wherever that is; if both, both.
 Not in this change: grading rules, the judges' prompts, Commitments, model settings. Reasoning untouched.
 
 ## 5. THE OPERATOR'S ONE QUESTION
@@ -43,7 +44,7 @@ C1 Option A or Option B (B recommended). C2 and C3 are reader-facing and follow 
 3. A reader gloss for a standing disagrees with its numbers: fix before the card.
 
 ## 8. STEPS
-1. W4 checks against live: derive_debate_outcome, cfo_sides, the transcript builder node(s), the standing lines.
+1. W4 checked against live (04:29Z): derive_debate_outcome 1f79a931 runs 488 then pkgCFO as described; cfo_sides 48f76f17; C1 confirmed. C1 build may start offline now; C2 and C3 wait on the OPEN question.
 2. The operator answers A or B.
 3. W4 builds; B1, B2; W4 tells him the second grade is held; his card; write; readback.
 4. Q1 on his release. Manual entry (W3) on its own card after.
