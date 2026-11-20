@@ -1,4 +1,4 @@
-# ASK 505 (if the operator agrees; coordinator via W4 04:29Z) plan rev 2 (W3, seat 33, 11-20; adds the operator's 22:29 CST ruling as C0; rev 1 d4ef2dde replaced rev 0 886679fd after W4's live check 04:29Z): the outcome must agree with the graded chain, and the transcript must explain it
+# ASK 505 plan rev 3 (W3, seat 33, 11-20; the operator's answers recorded: C0 "Yes, always" with COLLAPSED, C1 "Both sides (B)"; rev 2 59e9af0a added the 22:29 CST ruling as C0; rev 1 d4ef2dde replaced rev 0 886679fd after W4's live check 04:29Z): the outcome must agree with the graded chain, and the transcript must explain it
 
 Team: W3 plans, W4 checks against live and builds (the operator, 03:45:05Z: "Just you two."). The second non-builder grade is HELD.
 
@@ -31,9 +31,11 @@ C3. The standing words beside their numbers: Format Markdown already prints a le
 OPEN (asked of the coordinator, not guessed): which transcript members of the app read: the Format Markdown document, or a render in the Vercel app (truth-app-dashboard). C2 and C3 go wherever that is; if both, both.
 Not in this change: grading rules, the judges' prompts, Commitments, model settings. Reasoning untouched.
 
-## 5. THE OPERATOR'S ONE QUESTION
-C0 is his ruling (only the COLLAPSED reading rides on W4's confirmation). The one question left: C1 Option A or Option B (B recommended), for the cases C0 does not reach. C2 and C3 are reader-facing and follow his 22:26 words.
-
+## 5. THE OPERATOR'S ANSWERS (on W4's cards)
+- C0: "Yes, always" (04:31:30Z), COLLAPSED included. C0 applies even where the seats' RESULT words agree. Note (W3, checked): the six B1 rows where C0 overrode an agreed winning word (37000, 37281, 37372, 38226, 38593, 39015) were all created before ASK 404 (v_broken_tie_from 2026-11-18 18:31:16Z) and ASK 488 (v_agree_from 2026-11-19 18:03:57Z), and C0 is forward-only, so no stored row changes. Going forward an agreed CHALLENGER WINS cannot meet C0 (under 404 that word needs a SELF-SUPPORTED challenge); only an agreed DEFENDER WINS with the defender PROP-DEPENDENT or COLLAPSED on 2 or more seats can.
+- C1: "Both sides (B)" (04:36:09Z).
+- Built in derive_debate_outcome in this order: the existing steps through the agree rule (488); then the close forfeit as C1 Option B; then C0; then the citation rule, unchanged.
+- C2 and C3 still wait on which transcript members of the app read (asked of the coordinator).
 ## 6. CHECKS
 - B1 (W4, offline): recompute stored debates created since the CFO write time (v_cfo_from, held in the function) with C0, and with C0 plus A, and C0 plus B: the count of outcomes that move, listed by run token with before and after; nothing written back (as ASK 404). 40995 must move to UNDERDETERMINED under both.
 - B2 (W4, offline): the OUTCOME block rendered for 40995, 40891 and one HELD run; each step matches the function's path.
@@ -47,6 +49,6 @@ C0 is his ruling (only the COLLAPSED reading rides on W4's confirmation). The on
 
 ## 8. STEPS
 1. W4 checked against live (04:29Z): derive_debate_outcome 1f79a931 runs 488 then pkgCFO as described; cfo_sides 48f76f17; C1 confirmed. C1 build may start offline now; C2 and C3 wait on the OPEN question.
-2. The operator answers A or B.
+2. Answered: C0 always (with COLLAPSED), C1 B.
 3. W4 builds; B1, B2; W4 tells him the second grade is held; his card; write; readback.
 4. Q1 on his release. Manual entry (W3) on its own card after.
