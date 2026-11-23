@@ -1,6 +1,6 @@
 # ASK 538 PLAN rev 1 (W1, seat 34): an E-COL KEEP after an enforcer DISAGREE that cites an answer cures only by engaging the answer, not by calling the press unanswered
 
-Rev 1 replaces rev 0 (58fed397) under W2's grade at Wall 10665. It changes OBJECTIVE, SCOPE, CRITERIA and DONE, WRONG-IF, RUN EVIDENCE and STEPS. ROLES and INPUTS IN GIT are restated unchanged in substance, with the file now also at /mnt/project-files/ask538/plan538.md.
+Rev 1a (W1, 11-23) states one reading in CHANGE 1, the exclusion of quoted verse text, which W4's replay at 10673 already used; nothing else changes. Rev 1 replaced rev 0 (58fed397) under W2's grade at Wall 10665. It changes OBJECTIVE, SCOPE, CRITERIA and DONE, WRONG-IF, RUN EVIDENCE and STEPS. ROLES and INPUTS IN GIT are restated unchanged in substance, with the file now also at /mnt/project-files/ask538/plan538.md.
 
 Authority: coordinator assignment 10:03 CST 11-23 (W4 finding: E-COL cure test, run 41418 rows 51331 and 51414). This plan authorizes nothing.
 
@@ -27,7 +27,7 @@ SEARCH (W1, 10:05 CST 11-23):
   - Only rows whose cure came by press() can change. 51414 is expected to stay CURED by both() (see OBJECTIVE). W4 measures this with the real code.
 CHILD: R2 Alt Send Back Record is a node of the child workflow MqQHRl7mQQ0z8QdT. The child holds its own Library, byte-equal to the engine's (LIB cf88f476 in both since 531, per W2 10665). The same line changes in both Library copies, and both LIB hashes stay equal. NOT SEARCHED: none beyond the child's own nodes, which W4 reads at build.
 CHANGE (one line, the E-COL KEEP path, in both Library copies):
-1. cited(it): take each quotation of 6 or more words in the enforcer's DISAGREE reason, it.reason (W4 confirms the field on E-COL items). Keep those where 6 words in a row are found in the answering side's own rounds (ANSF).
+1. cited(it): take each quotation of 6 or more words in the enforcer's DISAGREE reason, it.reason (W4 confirms the field on E-COL items). Keep those where 6 words in a row are found in the answering side's own rounds (ANSF). The answering side's own words exclude verse text it quotes: 6 words that stand only inside a quoted verse (a quotation mark-bounded verse row, or text equal to a KJV verse the side cites) are not its own words and do not count. This is the reading W4's replay at 10673 used (rev 1a, W4's question 10:17 CST; it matches WRONG-IF 3, which reads the answering side's answer only).
 2. If cited(it) is empty, nothing changes.
 3. If it is not empty, press() is skipped for this KEEP. The KEEP cures by both() or keep3(), exactly as today. Otherwise it is UNCURED, with this reason: "KEEP that calls the press unanswered after the enforcer quoted the answer on the record; a KEEP quotes the answer and the verse it cannot agree with (ASK 538)".
 NOT IN SCOPE, under the scope rule: a CHANGE TO that keeps the break (line 2686 in the 531 target). It may carry the same gap. W4 counts such rows in the measurement and reports them. They are not changed here.
