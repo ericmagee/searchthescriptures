@@ -1,0 +1,229 @@
+{
+ "res": [
+  {
+   "name": "JEB call count equal",
+   "ok": true,
+   "info": "10 vs 10"
+  },
+  {
+   "name": "rounds516 on item 0 only",
+   "ok": true,
+   "info": "len 149469"
+  },
+  {
+   "name": "placeholder in every body, n and md5 right",
+   "ok": true,
+   "info": "md5 d5d44e52"
+  },
+  {
+   "name": "rounds text = the 516 body text between RULES and POINTS/ITEMS",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "JEB fields other than body/rounds516 equal (row times set aside)",
+   "ok": true,
+   "info": "0 field differences"
+  },
+  {
+   "name": "C1 direct Enforcer Group Batch Call openrouter",
+   "ok": true,
+   "info": "10/10"
+  },
+  {
+   "name": "C1 direct Alt Judge Enforcer Call openrouter",
+   "ok": true,
+   "info": "10/10"
+  },
+  {
+   "name": "C1 direct Judge Enforcer Retry Call openrouter",
+   "ok": true,
+   "info": "10/10"
+  },
+  {
+   "name": "C1 direct Alt Judge Enforcer Retry Call openrouter",
+   "ok": true,
+   "info": "10/10"
+  },
+  {
+   "name": "C1 direct Judge Enforcer Resend Call openrouter",
+   "ok": true,
+   "info": "10/10"
+  },
+  {
+   "name": "C1 direct Alt Judge Enforcer Resend Call openrouter",
+   "ok": true,
+   "info": "10/10"
+  },
+  {
+   "name": "C1 direct Reread Call openrouter",
+   "ok": true,
+   "info": "10/10"
+  },
+  {
+   "name": "C1 direct Alt Reread Call openrouter",
+   "ok": true,
+   "info": "10/10"
+  },
+  {
+   "name": "C1 direct R2 Alt Judge Enforcer Call openrouter",
+   "ok": true,
+   "info": "10/10"
+  },
+  {
+   "name": "C1 direct R2 Alt Judge Enforcer Retry Call openrouter",
+   "ok": true,
+   "info": "10/10"
+  },
+  {
+   "name": "C1 direct R2 Alt Judge Enforcer Resend Call openrouter",
+   "ok": true,
+   "info": "10/10"
+  },
+  {
+   "name": "C1 direct R2 Alt Reread Call openrouter",
+   "ok": true,
+   "info": "10/10"
+  },
+  {
+   "name": "known-bad: rounds missing -> error",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "known-bad: wrong length -> error",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "known-bad: Build not executed -> error",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "no placeholder -> body unchanged (E path)",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "C1 Batch (actual Batch Build, E+J items)",
+   "ok": true,
+   "info": "11/11 (J 10)"
+  },
+  {
+   "name": "Resume strips rounds516, rest equal",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "C1 Retry Judge Enforcer Retry Call openrouter",
+   "ok": true,
+   "info": "20/20"
+  },
+  {
+   "name": "C1 Resend Judge Enforcer Resend Call openrouter",
+   "ok": true,
+   "info": "20/20"
+  },
+  {
+   "name": "C1 Reread Reread Call openrouter",
+   "ok": true,
+   "info": "1/1 ()"
+  },
+  {
+   "name": "C1 Retry Alt Judge Enforcer Retry Call openrouter",
+   "ok": true,
+   "info": "20/20"
+  },
+  {
+   "name": "C1 Resend Alt Judge Enforcer Resend Call openrouter",
+   "ok": true,
+   "info": "20/20"
+  },
+  {
+   "name": "C1 Reread Alt Reread Call openrouter",
+   "ok": true,
+   "info": "1/1 ()"
+  },
+  {
+   "name": "C1 Retry R2 Alt Judge Enforcer Retry Call openrouter",
+   "ok": true,
+   "info": "20/20"
+  },
+  {
+   "name": "C1 Resend R2 Alt Judge Enforcer Resend Call openrouter",
+   "ok": true,
+   "info": "20/20"
+  },
+  {
+   "name": "C1 Reread R2 Alt Reread Call openrouter",
+   "ok": true,
+   "info": "1/1 ()"
+  },
+  {
+   "name": "rounds hold no ITEM split mark",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "WRONG-IF judge path (41117 shape)",
+   "ok": true,
+   "info": "{\"516\":22334418,\"515r7\":8679304,\"516b\":8039097,\"bound\":8828773,\"pass\":true}"
+  },
+  {
+   "name": "WRONG-IF alternate path (41117 shape)",
+   "ok": true,
+   "info": "{\"516\":17335725,\"515r7\":6559879,\"516b\":6241689,\"bound\":6709348,\"pass\":true}"
+  },
+  {
+   "name": "WRONG-IF known-bad: 516 fails the bound",
+   "ok": true,
+   "info": ""
+  }
+ ],
+ "sizes": {
+  "batch516": 2397841,
+  "batch516b": 873471,
+  "resume516b": 1076482,
+  "resume516": 2600852,
+  "retry:Judge Enforcer Build": [
+   4519844,
+   1471104
+  ],
+  "resend:Judge Enforcer Build": [
+   4226711,
+   1177971
+  ],
+  "reread:Judge Enforcer Build": [
+   203322,
+   50885
+  ],
+  "retry:Alt Judge Enforcer Build": [
+   4519844,
+   1471104
+  ],
+  "resend:Alt Judge Enforcer Build": [
+   4226711,
+   1177971
+  ],
+  "reread:Alt Judge Enforcer Build": [
+   203322,
+   50885
+  ],
+  "retry:R2 Alt Judge Enforcer Build": [
+   4519844,
+   1471104
+  ],
+  "resend:R2 Alt Judge Enforcer Build": [
+   4226711,
+   1177971
+  ],
+  "reread:R2 Alt Judge Enforcer Build": [
+   203322,
+   50885
+  ],
+  "jeb516": 2600852,
+  "jeb516b": 1229027,
+  "rounds": 149469
+ }
+}

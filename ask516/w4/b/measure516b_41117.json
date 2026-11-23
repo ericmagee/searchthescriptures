@@ -1,0 +1,110 @@
+{
+ "rounds": 149469,
+ "shape": "41117 Judge Enforcer Build inputs; 2 of 10 calls retried (4 halves), 1 half resent, 1 reread call; the alternate path uses the same Build items",
+ "M": {
+  "516": {
+   "judge": {
+    "build": 2600852,
+    "batch": 2397841,
+    "resume": 2600852,
+    "if_resume": 2600852,
+    "retry": 4520496,
+    "if_retry": 4520496,
+    "resend": 213592,
+    "if_resend": 213592,
+    "reread": 203322,
+    "if_reread": 203322,
+    "total": 20075217,
+    "log": 2259201
+   },
+   "alt": {
+    "build": 2600852,
+    "if_build": 2600852,
+    "retry": 4520496,
+    "if_retry": 4520496,
+    "resend": 213592,
+    "if_resend": 213592,
+    "reread": 203322,
+    "if_reread": 203322,
+    "total": 15076524,
+    "log": 2259201
+   }
+  },
+  "515r7": {
+   "judge": {
+    "build": 1161218,
+    "batch": 958207,
+    "resume": 1161218,
+    "if_resume": 1161218,
+    "retry": 1641228,
+    "if_retry": 1641228,
+    "resend": 67570,
+    "if_resend": 67570,
+    "reread": 57300,
+    "if_reread": 57300,
+    "total": 7974057,
+    "log": 705247
+   },
+   "alt": {
+    "build": 1161218,
+    "if_build": 1161218,
+    "retry": 1641228,
+    "if_retry": 1641228,
+    "resend": 67570,
+    "if_resend": 67570,
+    "reread": 57300,
+    "if_reread": 57300,
+    "total": 5854632,
+    "log": 705247
+   }
+  },
+  "516b": {
+   "judge": {
+    "build": 1229027,
+    "batch": 873471,
+    "resume": 1076482,
+    "if_resume": 1076482,
+    "retry": 1471756,
+    "if_retry": 1471756,
+    "resend": 61155,
+    "if_resend": 61155,
+    "reread": 50885,
+    "if_reread": 50885,
+    "total": 7423054,
+    "log": 616043
+   },
+   "alt": {
+    "build": 1229027,
+    "if_build": 1229027,
+    "retry": 1471756,
+    "if_retry": 1471756,
+    "resend": 61155,
+    "if_resend": 61155,
+    "reread": 50885,
+    "if_reread": 50885,
+    "total": 5625646,
+    "log": 616043
+   }
+  }
+ },
+ "judge_bound": {
+  "516": 22334418,
+  "515r7": 8679304,
+  "516b": 8039097,
+  "bound": 8828773,
+  "pass": true
+ },
+ "alt_bound": {
+  "516": 17335725,
+  "515r7": 6559879,
+  "516b": 6241689,
+  "bound": 6709348,
+  "pass": true
+ },
+ "panel_plus_3_alternates": {
+  "516": 74341593,
+  "515r7": 28358941,
+  "516b": 26764164,
+  "bound": 28956817
+ }
+}

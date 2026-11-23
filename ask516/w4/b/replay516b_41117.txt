@@ -1,0 +1,37 @@
+PASS JEB call count equal 10 vs 10
+PASS rounds516 on item 0 only len 149469
+PASS placeholder in every body, n and md5 right md5 d5d44e52
+PASS rounds text = the 516 body text between RULES and POINTS/ITEMS 
+PASS JEB fields other than body/rounds516 equal (row times set aside) 0 field differences
+PASS C1 direct Enforcer Group Batch Call openrouter 10/10
+PASS C1 direct Alt Judge Enforcer Call openrouter 10/10
+PASS C1 direct Judge Enforcer Retry Call openrouter 10/10
+PASS C1 direct Alt Judge Enforcer Retry Call openrouter 10/10
+PASS C1 direct Judge Enforcer Resend Call openrouter 10/10
+PASS C1 direct Alt Judge Enforcer Resend Call openrouter 10/10
+PASS C1 direct Reread Call openrouter 10/10
+PASS C1 direct Alt Reread Call openrouter 10/10
+PASS C1 direct R2 Alt Judge Enforcer Call openrouter 10/10
+PASS C1 direct R2 Alt Judge Enforcer Retry Call openrouter 10/10
+PASS C1 direct R2 Alt Judge Enforcer Resend Call openrouter 10/10
+PASS C1 direct R2 Alt Reread Call openrouter 10/10
+PASS known-bad: rounds missing -> error 
+PASS known-bad: wrong length -> error 
+PASS known-bad: Build not executed -> error 
+PASS no placeholder -> body unchanged (E path) 
+PASS C1 Batch (actual Batch Build, E+J items) 11/11 (J 10)
+PASS Resume strips rounds516, rest equal 
+PASS C1 Retry Judge Enforcer Retry Call openrouter 20/20
+PASS C1 Resend Judge Enforcer Resend Call openrouter 20/20
+PASS C1 Reread Reread Call openrouter 1/1 ()
+PASS C1 Retry Alt Judge Enforcer Retry Call openrouter 20/20
+PASS C1 Resend Alt Judge Enforcer Resend Call openrouter 20/20
+PASS C1 Reread Alt Reread Call openrouter 1/1 ()
+PASS C1 Retry R2 Alt Judge Enforcer Retry Call openrouter 20/20
+PASS C1 Resend R2 Alt Judge Enforcer Resend Call openrouter 20/20
+PASS C1 Reread R2 Alt Reread Call openrouter 1/1 ()
+PASS rounds hold no ITEM split mark 
+PASS WRONG-IF judge path (41117 shape) {"516":22334418,"515r7":8679304,"516b":8039097,"bound":8828773,"pass":true}
+PASS WRONG-IF alternate path (41117 shape) {"516":17335725,"515r7":6559879,"516b":6241689,"bound":6709348,"pass":true}
+PASS WRONG-IF known-bad: 516 fails the bound 
+{"batch516":2397841,"batch516b":873471,"resume516b":1076482,"resume516":2600852,"retry:Judge Enforcer Build":[4519844,1471104],"resend:Judge Enforcer Build":[4226711,1177971],"reread:Judge Enforcer Build":[203322,50885],"retry:Alt Judge Enforcer Build":[4519844,1471104],"resend:Alt Judge Enforcer Build":[4226711,1177971],"reread:Alt Judge Enforcer Build":[203322,50885],"retry:R2 Alt Judge Enforcer Build":[4519844,1471104],"resend:R2 Alt Judge Enforcer Build":[4226711,1177971],"reread:R2 Alt Judge Enforcer Build":[203322,50885],"jeb516":2600852,"jeb516b":1229027,"rounds":149469}
