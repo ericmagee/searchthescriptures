@@ -1,4 +1,4 @@
-# ASK 518 plan (W3, seat 33), rev 2, 2026-11-23. Replaces rev 1 (de4c1972, kept as plan518_rev1.md) on W1's two points (relay 08:13Z); changed: CRITERIA (cost note), STEPS. A PLAN ONLY; nothing is written.
+# ASK 518 plan (W3, seat 33), rev 3, 2026-11-23. Replaces rev 2 (1731b088, kept as plan518_rev2.md) on W2's C-b (Wall 10402); changed: CRITERIA C1 and C2, WRONG-IF. Rev 2 replaced rev 1 (de4c1972, kept as plan518_rev1.md) on W1's two points (relay 08:13Z). A PLAN ONLY; nothing is written.
 Source: the operator's "Four Remaining Bugs in the Run (4) Debug Log", Bug 2 (13:10 CST 11-20, W4 thread), released by his "yes" at 02:02 CST 11-23 (Wall 10381). Run (4) is 41117. The basis for that is in the ASK 517 plan (Wall 10389).
 
 ## 1. OBJECTIVE
@@ -42,8 +42,9 @@ CHANGE:
   - The outcome rule of ASK 505 (a confirmed closing contradiction takes a win away from the side that made it).
 
 ## 4. CRITERIA and DONE
-- C1: on 41117, both copies of the new Judge Contradiction prompt answer J1 and J2 NOT A CONTRADICTION. The input is 41117's own built body, with the sentence replaced. Each copy is run three times.
-- C2: the known-good contradictions on 41117 stay CONFIRMED under the new Close Enforcer prompt: NEW CHALLENGER LINK 6 (rows 48692 to 48694, a narrowed claim asserted again). Each is run three times.
+- COUNTING (all of C1 and C2): one run = copy 1 (temperature 0) and copy 2 (temperature 0.6) once each, on 41117's own built body with the sentence replaced. Three runs are made. pkgJC2 is read per run, as the engine reads it: a candidate is confirmed in a run only when both copies of that run answer CONFIRMED.
+- C1: J1 and J2 are confirmed by pkgJC2 in none of the 3 runs, and at least 5 of the 6 copy answers for each are NOT A CONTRADICTION.
+- C2: the known-good contradiction on 41117 stays confirmed under the new Close Enforcer prompt: NEW CHALLENGER LINK 6 (rows 48692 to 48694, a narrowed claim asserted again) is confirmed by pkgJC2 in all 3 runs.
 - C3: every E-CLOSECON row CONFIRMED in 41024, 41043, 41090, 41102 and 41117 is replayed with the new prompt. Any that turns NOT A CONTRADICTION is listed with its two sentences. For each, the build post says whether the change is a reference-only fault (expected) or a lost contradiction (a FAIL).
 - C4: the only node parameters that change are the two PROMPT sentences. The library, other nodes and connections are unchanged.
 - C5: one live run on the operator's word. Every CONFIRMED closing contradiction in it has a point that conflicts, not only a reference.
@@ -54,7 +55,7 @@ CHANGE:
 This plan is wrong if the new sentence clears a closing sentence whose point conflicts with the earlier one.
 - Known-bad (must stay CONFIRMED): 41117 NEW LINK 6. It is also wrong if any C3 row turns that is not reference-only.
 - Known-good (must turn): 41117 J1 and J2.
-If C1 still confirms J1 or J2 on two or more of three runs, the prompt change does not carry the rule. Then the plan is revised to a code test (for example, comparing each side's quoted rows), not shipped.
+If pkgJC2 confirms J1 or J2 in any of the three runs, or LINK 6 is not confirmed in every run, the prompt change does not carry the rule. Then the plan is revised to a code test (for example, comparing each side's quoted rows), not shipped.
 
 ## 6. RUN EVIDENCE
 NO PROBE in the ASK 417 registry for this path. W1 adds a case, mark "reference-only close", if the registry takes one. C5 is read from the run's E-CLOSECON rows.
