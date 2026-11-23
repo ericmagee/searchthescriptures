@@ -1,0 +1,38 @@
+ASK 533 measurement output (W1, 2026-11-23, SQL on bhffmkginddovmdcpnty)
+
+(A) Collision lines, all judgments:
+glosses 139 | fail 70 | judgments with a fail 39 | runs with a fail 35
+recent (judgment id >= 1200): fail 38, in 14 of the 17 runs that hold an [L2] gloss on a collision line
+known: 1263 G4905 [to come together] ok
+       1263 G4905 [to come together, including conjugal cohabitation] FAIL part "including conjugal cohabitation"
+       1265 G4905 [to come together, to cohabit conjugally] FAIL part "to cohabit conjugally"
+       1265 G1080 [to procreate, of the father, by extension of the mother] FAIL
+       1265 G3543 [to deem or regard] FAIL
+       1265 H2233 [seed] ok ; 1265 H6635 [host, war] ok
+
+(B) Failing glosses by number (all / recent), examples:
+G1080 27/10  "to procreate", "to beget", "also to regenerate in figurative use"
+G4905 14/10  "cohabit conjugally", "accompany; cohabit"
+G3543 10/5   "deem", "to deem or regard"
+G1982  4/2   "to cast a shade upon; invest with preternatural influence"
+G4690  3/2   "offspring"
+G3933  2/2   "a maiden"
+others 1 each: G4250 "prior; sooner", G4459 "in what way", H2233 "posterity", G1064 "belly",
+  H5959 "a lass", G1096 "to cause to be", G1352 "consequently", G1904 "to supervene",
+  G3739 (a parse error: "the feminine singular relative the defender itself granted in [cr2]")
+
+(C) Coverage proxy (strict whole-gloss count, 145 glosses, 70 fail): 67 of 70 failing glosses (recent: 38 of 41) carry a number the
+debaters cite in the same run. ASK 340 PART B reads renderings only for numbers in the debaters' glosses,
+so this is an upper bound on what the export in plan section 4 can check; W4's replay gives the exact count.
+
+Renderings read (kjv_word_map, distinct kjv_word):
+G4905: accompanied, assembled, came, come, companied, resort, resorted, together, went, with (32 rows)
+G1080: bare, be, bear, begat, begotten, being, born, conceived, delivered, forth, gender, gendereth, had, have, made, there, was, wast
+G3543: suppose, supposed, supposing, think, thought, wont
+G3933: virgin, virgin's, virgins
+G1064: bellies, child, womb
+
+41418 AUDIT v57 (ASK 340, debaters' glosses, record-only), from debate_results.review_notes:
+"49 gloss parts checked ... 1 not found: DR3 ... 'invest with preternatural influence' for G1982 ...; 23 LEXICON WORDING"
+The per-part list is not stored; that CR4's "to cohabit" (G4905) is among the 23 LEXICON WORDING is an
+inference from the code (no G4905 rendering holds "cohabit"; the anchor_gloss does), not a stored row.
