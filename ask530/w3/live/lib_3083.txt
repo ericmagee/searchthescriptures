@@ -1,0 +1,1 @@
+const eahLine=(a,acc)=>{const b=eahFull(a);if(!b)return '';acc.push(b.t.slice(0,3000));const L=b.t.split('\n');return '\n  THE ANSWER IN FULL, FROM ['+b.rk+'] (every line under that pressed verse, its layers included): "'+cut((L.length>1&&/The press\b/i.test(L[0])?L.slice(1):L).join('\n'),900)+'"';};
