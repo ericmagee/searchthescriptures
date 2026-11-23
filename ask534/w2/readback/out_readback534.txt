@@ -1,0 +1,30 @@
+ASK 534 readback; files: {'fetch_engine': '70e8760d', 'fetch_child': '878055e8', 'target_engine': '3e229491', 'target_child': '072f14e8', 'base_engine': '997097a2', 'base_child': 'fc5ec37d'}
+PASS engine: fetch-back equals target on every node (397 nodes)
+PASS engine: connections equal target
+PASS engine: settings equal target
+PASS engine: nodes changed from base ['Shared Library'], expected ['Shared Library']
+PASS engine: connections equal base
+PASS engine: versionId moved 350ef919-8a1c-42cc-9b92-f92b69e98e48 -> 6341b2c4-e971-424e-9b62-722180aa3783
+PASS engine: Library indexes changed [2277], expected [2277]
+PASS engine: MAP keys and p equal base
+PASS engine: MAP n changed 4, expected 4
+PASS engine: header sha 426f70373a88dc2e -> 3a182107f407c262, expected 3a182107f407c262
+PASS engine: Library lines [2277] equal the graded build
+PASS engine: named non-Library nodes equal the graded build
+PASS engine: runcheck: fetchback_engine_534.json OK 3a182107f407c262
+PASS child: fetch-back equals target on every node (156 nodes)
+PASS child: connections equal target
+PASS child: settings equal target
+PASS child: nodes changed from base ['Shared Library'], expected ['Shared Library']
+PASS child: connections equal base
+PASS child: versionId moved dcc562fe-11fe-4fdf-88f8-2128213ed3c9 -> d8503277-e6c0-4f14-9da2-395a1d09b55c
+PASS child: Library indexes changed [2277], expected [2277]
+PASS child: MAP keys and p equal base
+PASS child: MAP n changed 4, expected 4
+PASS child: header sha 426f70373a88dc2e -> 3a182107f407c262, expected 3a182107f407c262
+PASS child: Library lines [2277] equal the graded build
+PASS child: named non-Library nodes equal the graded build
+PASS child: runcheck: fetchback_child_534.json OK 3a182107f407c262
+PASS engine and child Library text equal
+PASS Library Check pair: 534/w4/write/fetchback_child_534.json: engine lib 3a182107f407c262 map 14a17e4555ac040c | child lib 3a182107f407c262 map 14a17e4555ac040c | Library Check PASSES
+READBACK MATCH
