@@ -1,8 +1,20 @@
-# CORPUS PLAN rev 1 (W3): the operator's reading of Matthew 1:18-25, and the opening sequence, into the corpus. For W1 and W2 to review. Nothing is written until the operator presses W3's card. Rev 1 adds the operator's second message (09:10 CST) and replaces rev 0 (md5 efeaa1f0).
+# CORPUS PLAN rev 2 (W3): the operator's reading of Matthew 1:18-25, and the opening sequence, into the corpus. For W1 and W2 to review. Nothing is written until the operator presses W3's card. Rev 2: adds section 1a (fit to the corpus, per the operator 09:13 CST: "these are feedback .. let me know if it doesn't fit the corpus"), and foots "publicly" on Matthew 1:19. It replaces rev 1 (md5 248ee8f3).
 
 ## 1. The operator's text, verbatim
 A. 09:07 CST 11-23: "Matthew already calls Joseph and Mary husband and wife. The pregnancy became known before they "came together," meaning before their ceremonial or household union. Joseph's concern was the public scandal created by their private marital relations becoming visible before that public union. Therefore, being unwilling to make Mary a public example, he considered putting her away privately to shield her. The angel's "fear not to take unto thee Mary thy wife" answers that fear and directs him to proceed with taking her publicly into his household. After doing so, Joseph "knew her not" until the birth. Thus, "came together," "took unto him his wife," and "knew her" describe distinct events in the narrative. Mark 7:8 supplies the distinction between the social tradition producing the scandal and the commandment of God."
 B. 09:10 CST 11-23: "also include: State the social-scandal reading explicitly in the opening chain. ... Joseph and Mary, already called husband and wife, had sexual relations during the espousal; the pregnancy became visible before the ceremonial or household coming together; Joseph considered private separation to protect Mary from public scandal; the angel told him not to fear proceeding with the public taking; and he abstained from further relations after taking her until the birth. Making that sequence explicit near the beginning would reduce the chance that readers, judges, or reviewers import the adultery narrative."
+
+## 1a. Fit to the corpus, part by part
+Every part fits. Three parts are inference ([L4]) or application ([L3]), not words a row states, and the sights label them that way.
+1. Already husband and wife: FITS. Stated by the rows: Matthew 1:16, 1:19 and 1:20.
+2. "came together" means the ceremonial or household union: FITS. Rulings 359 and 500, and the narrative's own taking (Matthew 1:20 bids it; 1:24 does it, with the same verb).
+3. Private marital relations during the espousal: FITS AS [L4], NOT AS A STATED ROW. No row says they had relations before the taking. It is footed on the husband-and-wife rows (Matthew 1:19, 1:20) and on the canon's way of conceiving (Genesis 4:1; 1 Samuel 1:19). It is the same inference the corpus already holds in Sight 32 step (4), "Joseph knew Mary his wife within the espousal" (ruling 394). The sights label it as an inference.
+4. Joseph's concern was public scandal, and he would put her away privately to shield her: FITS. Matthew 1:19 states it: "not willing to make her a publick example" (deigmatizo, "to exhibit"), "privily" (lathra, "privately").
+5. "Fear not" answers that fear and directs a public taking: FITS. "Fear not to take unto thee Mary thy wife" (Matthew 1:20) and "took unto him his wife" (1:24) are stated. "Publicly" is not a word of the text. It is footed as the open course set against "privily" (1:19), and rev 2 adds that footing to both texts.
+6. After the taking, "knew her not" until the birth: FITS. Stated by Matthew 1:24 and 1:25.
+7. Three distinct events: FITS. Three different words carry them: synerchomai (1:18), paralambano (1:20, 1:24) and ginosko (1:25).
+8. Mark 7:8, tradition against the commandment: FITS AS [L3] APPLICATION. Mark 7:8 speaks of washings, not of marriage. Matthew names no tradition behind the scandal. Applying it here is the reader's step, and Sight 266 has carried it since the 11-13 Matthew 1:19 ruling. The block keeps it as the ground of the scorn, footed with "thy wife" (Matthew 1:19, 1:20). The scorn is not called a breach of the law.
+9. Put the sequence early, so that no one brings in the adultery narrative: FITS. It is a direction to the defender, so it goes in Sight 1822's opening paragraph and not in the layers.
 
 ## 2. Where each part goes, and why
 How the defender is served, read this turn:
@@ -10,9 +22,9 @@ How the defender is served, read this turn:
 - Init with Guards serves a GUARD SET or SIGHT LINK row whole. Only other sights are cut to 300 characters.
 - So the whole summary of S-266 and of S-1822 reaches the defender. The judges get neither (ruling 383).
 
-Part 1, the layered reading (A): appended to Sight 266 (kb_sights id 374, "Matthew 1:19 - Joseph Just and Not Willing to Make Her a Publick Example"). That sight already holds Mark 7:8 and "her husband" / "thy wife", and S-1822 already points to it for Joseph's grounds ("His grounds are held in Sight 266"). Block: block266.txt, 3,645 characters, md5 c387aa22.
+Part 1, the layered reading (A): appended to Sight 266 (kb_sights id 374, "Matthew 1:19 - Joseph Just and Not Willing to Make Her a Publick Example"). That sight already holds Mark 7:8 and "her husband" / "thy wife", and S-1822 already points to it for Joseph's grounds ("His grounds are held in Sight 266"). Block: block266.txt, 3,712 characters, md5 5ab071ee.
 
-Part 2, the opening sequence (B): put before the first line of Sight 1822 (kb_sights id 2028). That sight is the only served sight that tells the defender what to say and in what order ("IN DEBATE, SAY: ... in this order"). The new paragraph comes before that head and is told to open round 1. The IN DEBATE items keep their numbers, because the sight refers to "Item (4) of the IN DEBATE head". Paragraph: open1822.txt, 1,613 characters, md5 1bfc3352.
+Part 2, the opening sequence (B): put before the first line of Sight 1822 (kb_sights id 2028). That sight is the only served sight that tells the defender what to say and in what order ("IN DEBATE, SAY: ... in this order"). The new paragraph comes before that head and is told to open round 1. The IN DEBATE items keep their numbers, because the sight refers to "Item (4) of the IN DEBATE head". Paragraph: open1822.txt, 1,672 characters, md5 f840bdf6.
 
 Each notes field gets one dated line (note266.txt, 199 characters, 7c69e74c; note1822.txt, 279 characters, 881283fa).
 
@@ -29,7 +41,7 @@ The opening sequence (B, in S-1822) has six steps, in the operator's order. Each
 2. Matthew 1:19 and 1:20, with Genesis 4:1 and 1 Samuel 1:19.
 3. Matthew 1:18, 1:20 and 1:24.
 4. Matthew 1:19 and Mark 7:8.
-5. Matthew 1:20 and 1:24.
+5. Matthew 1:20 and 1:24, set against Matthew 1:19.
 6. Matthew 1:25 and 1:24.
 Every quoted fragment was checked as an exact substring of kjv_verses this turn (10 of 10).
 
@@ -47,8 +59,8 @@ One DO block with two UPDATEs. Each is guarded on the current md5 of summary and
 If either row has moved, the block raises and nothing is written.
 
 Expected lengths after the write:
-- S-266: summary 1,559 + 3,645 = 5,204; notes 490 + 199 = 689.
-- S-1822: summary 32,358 + 1,613 = 33,971; notes 10,586 + 279 = 10,865.
+- S-266: summary 1,559 + 3,712 = 5,271; notes 490 + 199 = 689.
+- S-1822: summary 32,358 + 1,672 = 34,030; notes 10,586 + 279 = 10,865.
 
 Triggers read on kb_sights:
 - title, status and layer_status do not change, so the title, layer and conclusion-flag triggers do nothing.

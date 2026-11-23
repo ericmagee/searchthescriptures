@@ -23,7 +23,7 @@ L4 (each step rests on more than one row):
 1. "Came together" (Matthew 1:18) is the ceremony and the household living that follows it (rulings 359 and 500). Matthew shows it as the taking into his house, which the angel bids (Matthew 1:20) and Joseph does (Matthew 1:24). It is not the union, whose word is "knew" (Matthew 1:25).
 2. Husband and wife before the ceremony (Matthew 1:16, 1:19, 1:20), she was found with child before they came together (Matthew 1:18). What became visible was the private relation of husband and wife, before the public union.
 3. The publick example Joseph would not make (Matthew 1:19, deigmatizo, "to exhibit") is that exposure. The putting away privily (lathra) shields her from it. The scorn rests on the tradition of men, not on the commandment of God (Mark 7:8): the rows call her his wife (Matthew 1:19, 1:20).
-4. "Fear not to take unto thee Mary thy wife" (Matthew 1:20) answers that fear and bids the public taking, and Joseph takes her (Matthew 1:24).
+4. "Fear not to take unto thee Mary thy wife" (Matthew 1:20) answers that fear and bids the public taking, the open course set against "put her away privily" (Matthew 1:19), and Joseph takes her (Matthew 1:24).
 5. After the taking, he "knew her not till she had brought forth her firstborn son" (Matthew 1:25 read with Matthew 1:24): the withholding runs from the taking to the birth.
 So "came together", "took unto him his wife" and "knew her" are three distinct events in the narrative. Matthew 1:18 dates the finding before the ceremony, not before any union.
 $c$, notes = notes || $c$
@@ -36,7 +36,7 @@ UPDATE kb_sights SET summary = $c$IN ROUND 1, OPEN WITH THE ACCOUNT (operator, 1
 2. They had relations as husband and wife during the espousal. The rows name them husband and wife (Matthew 1:19, 1:20), and the canon's way of conceiving is a husband knowing his wife ("Adam knew Eve his wife; and she conceived", Genesis 4:1; "Elkanah knew Hannah his wife", 1 Samuel 1:19).
 3. The pregnancy became visible before the ceremonial or household coming together: "before they came together, she was found with child" (Matthew 1:18). The coming together is the taking into his house, which the angel bids (Matthew 1:20) and Joseph does (Matthew 1:24) (rulings 359 and 500).
 4. Joseph, "not willing to make her a publick example, was minded to put her away privily" (Matthew 1:19): a private separation, to shield her from public scandal. The scandal rests on the tradition of men, not on the commandment of God (Mark 7:8).
-5. The angel told him not to fear going on with the public taking: "fear not to take unto thee Mary thy wife" (Matthew 1:20); and he "took unto him his wife" (Matthew 1:24).
+5. The angel told him not to fear going on with the public taking, the open course set against the "privily" of Matthew 1:19: "fear not to take unto thee Mary thy wife" (Matthew 1:20); and he "took unto him his wife" (Matthew 1:24).
 6. After the taking, no relations until the birth: "knew her not till she had brought forth her firstborn son" (Matthew 1:25, read with Matthew 1:24).
 The layers for each step are held in Sight 266 (THREE EVENTS, NOT ONE).
 
