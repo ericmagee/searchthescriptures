@@ -11,8 +11,8 @@
 -- W1 10785 ruling 4a, applied the same way here: a "PASS WITH CONDITIONS" grade whose graded file did not go forward as graded
 --   is entered as verdict_norm FAIL, the grader's words kept. That covers 532 plan rev 0 (10600), the 532 build first cut (10790)
 --   and 534 plan rev 0 (10746).
--- ASK 534 is NOT YET BUILD-GRADED: W4 still owes criteria 5 and 6, BUILD534.md and the write and revert scripts (Wall 10789 NEXT).
---   Its build_files, revert and build grades are FILL AT GRADE.
+-- ASK 534 is NOT YET BUILD-GRADED: W4 posted the build at Wall 10794 for W3's grade. Its build files and revert carry W4's md5s;
+--   the build grades are FILL AT GRADE.
 
 -- ===================== ASK 532 A1 =====================
 BEGIN;
@@ -50,16 +50,16 @@ INSERT INTO public.ask_aar_snapshots (ask, rev, title, objective, objective_met,
  $t$"not yet"$t$::jsonb,
  $t${"answer": "not yet", "thread": "W4", "press_time": "not yet", "source": "not yet"}$t$::jsonb, 'W2',
  $t${"md5": "47ca12c7", "path": "ask534/w2/plan534.md", "wall_id": 10782, "note": "rev 2 (CHANGE 3a, width limit, after WRONG-IF 3 met at 10771); rev 1 b7d3a0f5 kept as plan534_rev1.md; rev 0 317ad031. Authority: coordinator assignment 10:44 CST 11-23"}$t$::jsonb,
- $t$["FILL AT GRADE: BUILD534.md, patch534.js (5f551fb5 at 10789), target_engine_534.json (32684105 at 10789), target_child_534.json (8f52f67b at 10789), write534.sh"]$t$::jsonb,
- $t${"md5": "not yet", "path": "ask534/w4/write/revert534.sh", "note": "FILL AT GRADE"}$t$::jsonb,
+ $t$[{"md5": "c850494a", "path": "ask534/w4/BUILD534.md", "wall_id": 10794}, {"md5": "5f551fb5", "path": "ask534/w4/build/patch534.js", "wall_id": 10794}, {"md5": "32684105", "path": "ask534/w4/build/target_engine_534.json", "wall_id": 10794}, {"md5": "8f52f67b", "path": "ask534/w4/build/target_child_534.json", "wall_id": 10794}, {"md5": "615521f3", "path": "ask534/w4/write/write534.sh", "wall_id": 10794, "note": "builds each body at write time from the fresh fetch"}, "FILL AT GRADE: confirm these md5s against W3's build grade"]$t$::jsonb,
+ $t${"md5": "041ca0fd", "path": "ask534/w4/write/revert534.sh", "wall_id": 10794, "note": "FILL AT GRADE: confirm against W3's build grade. Not exercised; on the operator's word only"}$t$::jsonb,
  $t$[{"seat": "W3", "verdict": "PASS WITH CONDITIONS C1 to C3 (plan rev 0)", "wall_id": 10746, "md5_graded": "317ad031", "verdict_norm": "FAIL", "note": "ruling 4a: rev 0 did not go forward as graded; rev 1 answers C1 to C3"}, {"seat": "W3", "verdict": "PASS (plan rev 1)", "wall_id": 10752, "md5_graded": "b7d3a0f5", "verdict_norm": "PASS"}, {"seat": "W3", "verdict": "PASS (plan rev 2)", "wall_id": 10783, "md5_graded": "47ca12c7", "verdict_norm": "PASS"}, "FILL AT GRADE: the build grade(s), with md5_graded = BUILD534.md and each written target"]$t$::jsonb,
  NULL /* FILL AT WRITE: ARRAY['<engine fetch-back md5>','<child fetch-back md5>']; equal to the graded targets only if live is still daf5da98 / 10624dd2 */, $t$["not yet"]$t$::jsonb,
  $t$[{"kind": "n8n workflow", "name": "engine moMxiV4Irg1uRBZN", "before": "daf5da98", "after": "not yet", "nodes": "Shared Library index 2277 (mlsLines2024: the pkgSUX pass after the K-ML and K-SU loop), 4 MAP n, header sha 5aedc2f2ac70ba66 to 24edd0ace4e7a5aa"}, {"kind": "n8n workflow", "name": "child MqQHRl7mQQ0z8QdT", "before": "10624dd2", "after": "not yet", "nodes": "Shared Library, the same line"}]$t$::jsonb,
- $t$[{"file": "ask534/w2/limit534.py", "md5": "61194e9f", "note": "the CHANGE 3a measure"}, {"file": "ask534/w2/out_limit534.txt", "md5": "ec3ec610", "wall_id": 10782, "note": "expected items after the limit, 72 over nine runs"}, {"file": "ask534/w4/replay/out_replay534.json", "md5": "157c0e78", "wall_id": 10789}, {"file": "ask534/w4/replay/out_fallback534.json", "md5": "0cfab702", "wall_id": 10789}, {"file": "ask534/w4/replay/newitems534_rev2.txt", "md5": "931aad21", "wall_id": 10789}, {"file": "ask534/w2/compare534.py", "md5": "67cfd0a3", "wall_id": 10790, "note": "72 of 72, EQUAL"}, "FILL AT GRADE: criteria 5 and 6 test outputs"]$t$::jsonb,
+ $t$[{"file": "ask534/w2/limit534.py", "md5": "61194e9f", "note": "the CHANGE 3a measure"}, {"file": "ask534/w2/out_limit534.txt", "md5": "ec3ec610", "wall_id": 10782, "note": "expected items after the limit, 72 over nine runs"}, {"file": "ask534/w4/replay/out_replay534.json", "md5": "157c0e78", "wall_id": 10789}, {"file": "ask534/w4/replay/out_fallback534.json", "md5": "0cfab702", "wall_id": 10789}, {"file": "ask534/w4/replay/newitems534_rev2.txt", "md5": "931aad21", "wall_id": 10789}, {"file": "ask534/w2/compare534.py", "md5": "67cfd0a3", "wall_id": 10790, "note": "72 of 72, EQUAL"}, {"file": "ask534/w4/replay/out_c5_534.txt", "md5": "9b5ac86b", "wall_id": 10794}, {"file": "ask534/w4/replay/out_c26_534.txt", "md5": "f4f87cb7", "wall_id": 10794}]$t$::jsonb,
  $t$["not yet"]$t$::jsonb,
  $t${"case": "UNEXERCISED: NO PROBE; not yet written", "mark": "a judge whose RESULT or WHICH HOLDS reads Matthew 1:25 apart from Matthew 1:24 while the defender's rounds quote 1:24 gets one K-SU item \"Matthew 1:25 within Matthew 1:24-25\""}$t$::jsonb,
  $t${"op_doc": "not yet", "engine_manual": "not yet"}$t$::jsonb,
- 'graded' /* FILL AT GRADE then AT WRITE: 'planned' until the build grade passes; 'read back' after the write */, $t$[10589, 10590, 10593, 10596, 10691, 10742, 10746, 10751, 10752, 10771, 10782, 10783, 10789, 10790]$t$::jsonb);
+ 'graded' /* FILL AT GRADE then AT WRITE: 'planned' until the build grade passes; 'read back' after the write */, $t$[10589, 10590, 10593, 10596, 10691, 10742, 10746, 10751, 10752, 10771, 10782, 10783, 10789, 10790, 10794]$t$::jsonb);
 INSERT INTO public.ask_aar_builders (snapshot_id, prior_row, builder_seats, sources, written_by)
-SELECT s.id, NULL, ARRAY['W4'], $t$[{"seat": "W4", "what": "built ASK 534 and ran step 2", "wall_id": 10789}, {"seat": "W4", "what": "wrote ASK 534 on its card", "wall_id": "not yet"}]$t$::jsonb, 'session_01H1X3AP5EHdGd7g1pX4oPuw' FROM public.ask_aar_snapshots s WHERE s.ask = 534 AND s.rev = 'A1' AND s.aar_at = now();
+SELECT s.id, NULL, ARRAY['W4'], $t$[{"seat": "W4", "what": "built ASK 534 and ran step 2", "wall_id": 10794}, {"seat": "W4", "what": "wrote ASK 534 on its card", "wall_id": "not yet"}]$t$::jsonb, 'session_01H1X3AP5EHdGd7g1pX4oPuw' FROM public.ask_aar_snapshots s WHERE s.ask = 534 AND s.rev = 'A1' AND s.aar_at = now();
 COMMIT;
