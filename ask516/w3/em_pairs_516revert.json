@@ -1,0 +1,10 @@
+[
+ {
+  "old": "      4. (Replaced by ASK 516: the calls now carry the rounds in full.) pkgREC:",
+  "new": "      4. (Live again since the ASK 516 revert on 2026-11-23.) pkgREC:"
+ },
+ {
+  "old": "    - Not yet: shown by a run.\n    - Revert: write back pre_engine_516.json",
+  "new": "    - REVERTED on 2026-11-23 on the operator's card \"Write it\" at 07:22:37Z in W4's thread: on 516, runs 41128 and 41155 crashed out of memory (41147 also failed on 516, at Record Substitution, a separate fault). The record shows one growth between the completed runs and the crashed ones: the per-call copies of the rounds in the enforcer build nodes and the log body (W4 trace, Wall 10332; not proven, because n8n kept no node data for 41155). Engine and child hold the ASK 515 rev 7 content again (new versions: engine 31702b15, child cd2d84d8, library 6f2ae36f19303a92). Read back by W2, CONFIRMED. The enforcer calls carry the ASK 515 per-link record and the POINTS AT ISSUE entries (item 3 above stays live), not the rounds in full. A lower-memory 516 is drafted (ask516/w3/plan516b.md), not built.\n    - Revert: write back pre_engine_516.json"
+ }
+]
