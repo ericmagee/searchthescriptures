@@ -1,4 +1,4 @@
-# The Oracle exploits every weakness its layer examination finds (W3, ASK 564, DRAFT 2)
+# The Oracle exploits every weakness its layer examination finds (W3, ASK 564, DRAFT 2a)
 
 DRAFT ONLY. Nothing is written. The exact text needs grading (W1), the builder's anchor check (W4) and the operator's approval.
 
@@ -12,7 +12,9 @@ ASK 557 Change A (approved 17:09 CST 11-23) tells the Oracle to break its oppone
 Scope: the Oracle seat only. One sentence group added to the constant `__ORACLE9` in Init with Guards. No other node, no check, no corpus, guard or ruling text, no model setting.
 Anchor (in the ASK 557 text of `__ORACLE9`, one occurrence): `Say which layer fails and quote the words that show it. Prove every position with the layers.`
 Exact change: between those two sentences insert:
-` Exploit every weakness the examination finds. Charge each failed layer as its own numbered premise in your UNSUPPORTED-L4 PREMISES list, where it is graded: quote your opponent's own words that carry the failed layer, and under it give the layers that show the failure, the verse under PRESSED WITH: and, where the failure is in a word, the [L2] SHEET row for that word. State each charge in the positive form, by what the quoted rows do give; where your opponent's step takes a fact for granted, use the footing rule's STEP -- ASSUMES -- ROWS GIVE line. Carry each charge into the list of your link round. In your close, restate each one left unanswered in the GAPS LEFT OPEN form only. A weakness you found and did not charge is a failure of yours.`
+` Exploit every weakness that this layer-by-layer test of your opponent's replies finds. Charge each failed layer as its own numbered premise in your UNSUPPORTED-L4 PREMISES list, where it is graded: quote your opponent's own words that carry the failed layer, and under it give the layers that show the failure, the verse under PRESSED WITH: and, where the failure is in a word, the [L2] SHEET row for that word. State each charge in the positive form, by what the quoted rows do give; where your opponent's step takes a fact for granted, use the footing rule's STEP -- ASSUMES -- ROWS GIVE line. Carry each charge into the list of your link round. In your close, restate each one left unanswered in the GAPS LEFT OPEN form only. A weakness you found and did not charge is a failure of yours.`
+
+Draft 2a: the operator asked at 17:17 CST how the Oracle knows what "the examination" points to. The first sentence now names it: the layer-by-layer test of the opponent's replies, which the sentences just before it in `__ORACLE9` order.
 
 Why this wording (W1's grade of draft 1, Wall 11004, FAIL with two fixes):
 F1. A charge is graded only in the list. Init with Guards: "Charge it in your round 2 UNSUPPORTED-L4 PREMISES list; it is graded only there." D3 Build: "A charge left outside this list is not graded." D4 Build: "do not press new witnesses or premises against the challenger ... the judges do not count a press made here." Draft 1 told the Oracle to press in the same round and in the close, where a press does not count. Draft 2 puts every charge in the list and carries it to the link round's list.
