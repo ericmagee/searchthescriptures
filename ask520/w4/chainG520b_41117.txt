@@ -1,0 +1,88 @@
+== Panel Cure Check: lines only 517 500, only 519 389
+  (outside item lists: only 517 500, only 519 389)
+  517 .0.json.bodies.1 {"payload":{"debate_id":"2e62a85a-7313-445b-8504-edad38bf9893","judge_seat":"chatgpt","judge_api_model":"openai/gpt-6.1-terra","verdict_raw":"{\n  \"verdict_tag\": \"BROKEN\",\n  \"defense_standing\": \"SELF-SUPPORTED\",\n  \"challenge_standing\": \"PROP-DEPENDENT\",\n  \"conceded_l
+  517 .0.json.bodies.2 {"payload":{"debate_id":"2e62a85a-7313-445b-8504-edad38bf9893","judge_seat":"sol","judge_api_model":"openai/gpt-6.1-sol","verdict_raw":"{\n  \"verdict_tag\": \"BROKEN\",\n  \"defense_standing\": \"COLLAPSED\",\n  \"challenge_standing\": \"PROP-DEPENDENT\",\n  \"conceded_links\": 4,\
+  517 .0.json.summary.1.drv.22.link DEFENDER premise 1
+  517 .0.json.summary.1.drv.22.why counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L2 and L3 and the count names no layer the block lacks
+  517 .0.json.summary.1.drv.22.line DEFENDER premise 1: counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L2 and L3 and the count names no layer the block lacks. Name the missing layer in a STATEMENT for this item ("[L1]", "[L2]", "[L3]" or "[L4]", one the block does not exhibit);
+  517 .0.json.summary.1.drv.23.a ASSUMES
+  517 .0.json.summary.1.drv.23.asm 
+  517 .0.json.summary.1.drv.23.link DEFENDER premise 2
+  517 .0.json.summary.1.drv.23.l1 Then Joseph her husband, being a just [man], and not willing to make her a publick example, was minded to put her away privily.
+  517 .0.json.summary.1.drv.23.l1ref Matthew 1:19
+  517 .0.json.summary.1.drv.23.press 
+  517 .0.json.summary.1.drv.23.why counted UNEXHIBITED in CONCEDED LINKS on an ASSUMES ground, but its [CR3] block exhibits L1 and L2 and L3 and the ASSUMES clause does not quote the block's [L1] Matthew 1:19 "Then Joseph her husband, being a just [man], and not willing to make her a publick example, was 
+  517 .0.json.summary.1.drv.23.line DEFENDER premise 2: counted UNEXHIBITED in CONCEDED LINKS on an ASSUMES ground, but its [CR3] block exhibits L1 and L2 and L3 and the ASSUMES clause does not quote the block's [L1] Matthew 1:19 "Then Joseph her husband, being a just [man], and not willing to make her a 
+  517 .0.json.summary.1.drv.24.link DEFENDER premise 3
+  517 .0.json.summary.1.drv.24.kinds.1 L2
+  517 .0.json.summary.1.drv.24.kinds.2 L3
+  517 .0.json.summary.1.drv.24.why counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L2 and L3 and the count names no layer the block lacks
+  517 .0.json.summary.1.drv.24.line DEFENDER premise 3: counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L2 and L3 and the count names no layer the block lacks. Name the missing layer in a STATEMENT for this item ("[L1]", "[L2]", "[L3]" or "[L4]", one the block does not exhibit);
+  517 .0.json.summary.1.drv.25.rule K-UNX
+  517 .0.json.summary.1.drv.25.side DEFENDER
+  517 .0.json.summary.1.drv.25.link DEFENDER premise 4
+  517 .0.json.summary.1.drv.25.kinds.0 L1
+  517 .0.json.summary.1.drv.25.kinds.1 L3
+  517 .0.json.summary.1.drv.25.why counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L3 and the count names no layer the block lacks
+  517 .0.json.summary.1.drv.25.line DEFENDER premise 4: counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L3 and the count names no layer the block lacks. Name the missing layer in a STATEMENT for this item ("[L1]", "[L2]", "[L3]" or "[L4]", one the block does not exhibit); or, if
+  517 .0.json.summary.1.drv.26.rule K-UNX
+  517 .0.json.summary.1.drv.26.side DEFENDER
+  517 .0.json.summary.1.drv.26.link DEFENDER premise 5
+  517 .0.json.summary.1.drv.26.kinds.0 L1
+  517 .0.json.summary.1.drv.26.kinds.1 L2
+  517 .0.json.summary.1.drv.26.kinds.2 L3
+  517 .0.json.summary.1.drv.26.why counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L2 and L3 and the count names no layer the block lacks
+  517 .0.json.summary.1.drv.26.line DEFENDER premise 5: counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L2 and L3 and the count names no layer the block lacks. Name the missing layer in a STATEMENT for this item ("[L1]", "[L2]", "[L3]" or "[L4]", one the block does not exhibit);
+  517 .0.json.summary.1.cure.22.link DEFENDER premise 1
+  517 .0.json.summary.1.cure.22.why TRIAL rule (K-UNX): CORRECTED COUNT 0 takes the premise out of the count
+  517 .0.json.summary.1.cure.23.link DEFENDER premise 2
+  517 .0.json.summary.1.cure.23.why TRIAL rule (K-UNX-A): CORRECTED COUNT 0 takes the premise out of the count
+  517 .0.json.summary.1.cure.24.link DEFENDER premise 3
+  517 .0.json.summary.1.cure.25.rule K-UNX
+  517 .0.json.summary.1.cure.25.side DEFENDER
+  519 .0.json.bodies.1 {"payload":{"debate_id":"2e62a85a-7313-445b-8504-edad38bf9893","judge_seat":"chatgpt","judge_api_model":"openai/gpt-6.1-terra","verdict_raw":"{\n  \"verdict_tag\": \"BROKEN\",\n  \"defense_standing\": \"SELF-SUPPORTED\",\n  \"challenge_standing\": \"PROP-DEPENDENT\",\n  \"conceded_l
+  519 .0.json.bodies.2 {"payload":{"debate_id":"2e62a85a-7313-445b-8504-edad38bf9893","judge_seat":"sol","judge_api_model":"openai/gpt-6.1-sol","verdict_raw":"{\n  \"verdict_tag\": \"BROKEN\",\n  \"defense_standing\": \"COLLAPSED\",\n  \"challenge_standing\": \"PROP-DEPENDENT\",\n  \"conceded_links\": 4,\
+  519 .0.json.summary.1.drv.22.a ASSUMES
+  519 .0.json.summary.1.drv.22.asm 
+  519 .0.json.summary.1.drv.22.link DEFENDER premise 2
+  519 .0.json.summary.1.drv.22.l1 Then Joseph her husband, being a just [man], and not willing to make her a publick example, was minded to put her away privily.
+  519 .0.json.summary.1.drv.22.l1ref Matthew 1:19
+  519 .0.json.summary.1.drv.22.press 
+  519 .0.json.summary.1.drv.22.why counted UNEXHIBITED in CONCEDED LINKS on an ASSUMES ground, but its [CR3] block exhibits L1 and L2 and L3 and the ASSUMES clause does not quote the block's [L1] Matthew 1:19 "Then Joseph her husband, being a just [man], and not willing to make her a publick example, was 
+  519 .0.json.summary.1.drv.22.line DEFENDER premise 2: counted UNEXHIBITED in CONCEDED LINKS on an ASSUMES ground, but its [CR3] block exhibits L1 and L2 and L3 and the ASSUMES clause does not quote the block's [L1] Matthew 1:19 "Then Joseph her husband, being a just [man], and not willing to make her a 
+  519 .0.json.summary.1.drv.23.link DEFENDER premise 3
+  519 .0.json.summary.1.drv.23.why counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L2 and L3 and the count names no layer the block lacks
+  519 .0.json.summary.1.drv.23.line DEFENDER premise 3: counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L2 and L3 and the count names no layer the block lacks. Name the missing layer in a STATEMENT for this item ("[L1]", "[L2]", "[L3]" or "[L4]", one the block does not exhibit);
+  519 .0.json.summary.1.drv.24.link DEFENDER premise 4
+  519 .0.json.summary.1.drv.24.kinds.1 L3
+  519 .0.json.summary.1.drv.24.why counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L3 and the count names no layer the block lacks
+  519 .0.json.summary.1.drv.24.line DEFENDER premise 4: counted UNEXHIBITED in CONCEDED LINKS, but its [CR3] block exhibits L1 and L3 and the count names no layer the block lacks. Name the missing layer in a STATEMENT for this item ("[L1]", "[L2]", "[L3]" or "[L4]", one the block does not exhibit); or, if
+  519 .0.json.summary.1.cure.22.link DEFENDER premise 2
+  519 .0.json.summary.1.cure.22.why TRIAL rule (K-UNX-A): CORRECTED COUNT 0 takes the premise out of the count
+  519 .0.json.summary.1.cure.23.link DEFENDER premise 3
+  519 .0.json.summary.1.cure.23.why TRIAL rule (K-UNX): CORRECTED COUNT 0 takes the premise out of the count
+  519 .0.json.summary.1.cure.24.link DEFENDER premise 4
+  519 .0.json.enforcer_log.19.prompt_sent [[PRD:prompt_sent:32987:bfb4151]]
+  519 .0.json.enforcer_log.20.prompt_sent [[PRD:prompt_sent:32987:bfb4151]]
+  519 .0.json.enforcer_log.21.prompt_sent [[PRD:prompt_sent:32987:bfb4151]]
+  519 .0.json.enforcer_log.22.prompt_sent [[PRD:prompt_sent:32987:bfb4151]]
+  519 .0.json.enforcer_log.23.prompt_sent [[PRD:prompt_sent:32987:bfb4151]]
+  519 .0.json.enforcer_log.24.prompt_sent [[PRD:prompt_sent:32987:bfb4151]]
+  519 .0.json.enforcer_log.25.prompt_sent [[PRD:prompt_sent:32987:bfb4151]]
+  519 .0.json.enforcer_log.26.prompt_sent [[PRD:prompt_sent:32987:bfb4151]]
+  519 .0.json.enforcer_log.27.prompt_sent [[PRD:prompt_sent:32987:bfb4151]]
+  519 .0.json.enforcer_log.28.prompt_sent [[PRD:prompt_sent:32987:bfb4151]]
+  519 .0.json.enforcer_log.29.prompt_sent [[PRD:prompt_sent:32987:bfb4151]]
+  519 .0.json.enforcer_log.30.prompt_sent [[PRD:prompt_sent:32987:bfb4151]]
+  519 .0.json.enforcer_log.31.prompt_sent [[PRD:prompt_sent:32987:bfb4151]]
+  519 .0.json.enforcer_log.32.prompt_sent [[PRD:prompt_sent:32987:bfb4151]]
+  519 .0.json.enforcer_log.33.prompt_sent [[PRD:prompt_sent:32987:bfb4151]]
+  519 .0.json.enforcer_log.34.prompt_sent [[PRD:prompt_sent:32987:bfb4151]]
+  519 .0.json.enforcer_log.35.prompt_sent [[PRD:prompt_sent:32987:bfb4151]]
+  519 .0.json.enforcer_log.36.prompt_sent [[PRD:prompt_sent:32987:bfb4151]]
+== Gate Build: lines only 517 0, only 519 0
+  (outside item lists: only 517 0, only 519 0)
+== Gate Record: lines only 517 0, only 519 0
+  (outside item lists: only 517 0, only 519 0)
+== Late Gate Build: lines only 517 0, only 519 0
+  (outside item lists: only 517 0, only 519 0)
