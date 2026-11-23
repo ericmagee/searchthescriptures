@@ -1,4 +1,4 @@
-# ASK 518 plan (W3, seat 33), rev 1, 2026-11-23. A PLAN ONLY; nothing is written.
+# ASK 518 plan (W3, seat 33), rev 2, 2026-11-23. Replaces rev 1 (de4c1972, kept as plan518_rev1.md) on W1's two points (relay 08:13Z); changed: CRITERIA (cost note), STEPS. A PLAN ONLY; nothing is written.
 Source: the operator's "Four Remaining Bugs in the Run (4) Debug Log", Bug 2 (13:10 CST 11-20, W4 thread), released by his "yes" at 02:02 CST 11-23 (Wall 10381). Run (4) is 41117. The basis for that is in the ASK 517 plan (Wall 10389).
 
 ## 1. OBJECTIVE
@@ -48,7 +48,7 @@ CHANGE:
 - C4: the only node parameters that change are the two PROMPT sentences. The library, other nodes and connections are unchanged.
 - C5: one live run on the operator's word. Every CONFIRMED closing contradiction in it has a point that conflicts, not only a reference.
 - DONE: C1 to C5 pass, and the manual entry is written and read back.
-- Cost note: C1 to C3 call the enforcer model (the ENFORCER row of model_config) about 40 times. Nothing is written.
+- Cost and route: C1 to C3 call the enforcer model (the ENFORCER row of model_config) about 40 times. These are paid calls. They wait on the operator's explicit release, asked on a card in W4's thread after the plan is graded; a plan grade releases nothing. They go only through a path W4 names and runs (for example, a test workflow that sends the built body with the existing credential). No seat reads a key value. W1 builds S1 offline and prepares the inputs; W4 makes the calls and commits the replies; W1 classes them. Nothing is written to the engine.
 
 ## 5. WRONG-IF
 This plan is wrong if the new sentence clears a closing sentence whose point conflicts with the earlier one.
@@ -64,7 +64,9 @@ This plan's commit is on the Wall post. W1 commits the built bodies, the replay 
 
 ## 8. STEPS
 1. W2 and W4 grade this plan. Waits on: nothing.
-2. W1 builds S1 and runs C1 to C4. Waits on: step 1.
+2. W1 builds S1 offline, prepares the C1 to C3 inputs, and checks C4. Waits on: step 1.
+2a. W4 names the call path, and the operator's release of the paid calls is asked on a card in W4's thread. Waits on: step 2.
+2b. W4 makes the C1 to C3 calls through that path and commits the replies; W1 classes them. Waits on: step 2a's press.
 3. Grades of the build. Waits on: step 2.
 4. W4 writes on the operator's card in W4's thread. Waits on: step 3.
 5. W3 writes S2 after a read, on the operator's card in W3's thread. Waits on: step 4.
