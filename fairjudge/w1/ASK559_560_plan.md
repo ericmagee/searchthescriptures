@@ -1,4 +1,6 @@
-# ASK 559 and ASK 560: absence moves and the opening round (W1, PLAN draft 1)
+# ASK 559 and ASK 560: absence moves and the opening round (W1, PLAN draft 1a)
+
+Draft 1a folds W4's anchor answers (Wall 10989, 10990). No change to any exact code text; three notes added (marked W4 10989/10990).
 
 DRAFT ONLY. Nothing is written. Each change needs grading (W3), the builder's anchor check (W4), and the operator's approval of exact text. Nothing goes to the operator until the open ASK 557/558 card is answered (coordinator, 17:03 CST 11-23).
 
@@ -25,7 +27,7 @@ With ASK 557 Change D (draft 5b) the same line reads `if(absent(x)&&!need.length
 Both sides alike: ruling 421 bars the absence form to both sides, and LAY runs on both (D2B to D4B, C2B to C4B Build).
 
 ### Change 2 (BAR, the phrasings LAY knows)
-Target: `const AB=` in IMP, inline in 14 nodes with one identical text (md5 of the AB line 46b1ee27): C1B, D2B, C2B, D3B, C3B, D4B, C4B Build and the same seven Extract nodes. All 14 change alike. The Shared Library's IMP copy (a different AB) is not changed; W4 to say who reads it.
+Target: `const AB=` in IMP, inline in 14 nodes with one identical text (md5 of the AB line 46b1ee27): C1B, D2B, C2B, D3B, C3B, D4B, C4B Build and the same seven Extract nodes. All 14 change alike. The Shared Library's IMP copy (a different, older AB) is not changed. W4 10989: it is read by the six judge-side entries Send Back Build/Record, Alt Send Back Build/Record and R2 Alt Send Back Build/Record. That is the judges' harvest, not the debaters' send-back, so it is outside this issue; changing it would also move the LIB sha. If the team wants the judges' list aligned, that is a separate ASK.
 Exact change, two edits in the AB literal:
 (a) the verb list after "does not / did not / never": `(?:deny|denies|dispute|contradict|exclude|rule\s+out|name|state|say|mention|specify|forbid|reject|tell|record)\b` becomes `(?:deny|denies|dispute|contradict|exclude|rule\s+out|name|state|say|mention|specify|forbid|reject|tell|record|give|call|write|speak|show|carry|narrate)\b|\bnowhere\s+(?:states?|says?|names?|records?|mentions?|calls?|gives?|shows?|carr(?:y|ies)|narrates?)\b`
 (b) the passive: `(?:itself\s+|themselves\s+)?not\s+(?:itself\s+|themselves\s+)?(?:denied|contradicted|excluded|ruled\s+out|named|stated)\b` becomes `(?:itself\s+|themselves\s+)?(?:not|never)\s+(?:itself\s+|themselves\s+)?(?:denied|contradicted|excluded|ruled\s+out|named|stated|recorded|written|given|said|shown)\b`
@@ -47,16 +49,16 @@ Risk stated: "does not give" and "does not show" also fit a sentence that critic
 1. D1 has no B re-call. D1 Extract goes to C1 Verse Sheet and Failure Salvage. C1 has C1B (BAR only).
 2. IMP's ROUNDS is ['CR2','DR1','DR2','CR3','DR3','CR4','DR4']; CR1 is not in it, so BAR.check('CR1', ...) harvests nothing.
 3. 33 nodes read `$('D1 Extract')`.
-4. Offline, live LAY on CR1 of run 41822: 4 STRUCTURE items, the four summary lines D1 to D4 ("D1: The promised seed proceeds ...", "D2: The father is named in four registers ...", "D3: The canon's means is knowing ...", "D4: Yes, Christ had a biological father ..."). BAR with CR1 added: 0 hits.
+4. Offline, live LAY on CR1 of run 41822 (run with no Verse Sheet rows; W4 10990: a verse not on the sheet gets credit with no quote test, so with D1 Verse Sheet rows the count can only rise): 4 STRUCTURE items, the four summary lines D1 to D4 ("D1: The promised seed proceeds ...", "D2: The father is named in four registers ...", "D3: The canon's means is knowing ...", "D4: Yes, Christ had a biological father ..."). BAR with CR1 added: 0 hits.
 
 ### Step 1 (record-only)
-Target: one new Code node "D1 Check" between D1 Extract and C1 Verse Sheet (pass-through of D1 Extract's item). It loads LAY from the Shared Library as D2B Build does and holds an IMP/BAR copy identical to D2B Build's (with ASK 559 Change 2 if released), with 'CR1' added to ROUNDS in this copy only. Output: the D1 Extract item plus `lay_check` and `bar_check`. Build Save Body appends one line to review_notes: `[AUDIT: CR1 CHECK (record-only) -- LAY ITEMS: <n>; BARRED SENTENCES: <m>; HEADS: <heads, 200 chars each>]`. No send-back; nothing counted.
+Target: one new Code node "D1 Check" between D1 Extract and C1 Verse Sheet (pass-through of D1 Extract's item). It loads LAY with D2B Build's pkgLAYB loader line as it stands (W4 10989 item 2; no wiring to the Shared Library). D1 Verse Sheet runs before D1 Extract (W4 10990), so LAY's quote test reads its rows and holds an IMP/BAR copy identical to D2B Build's (with ASK 559 Change 2 if released), with 'CR1' added to ROUNDS in this copy only. Output: the D1 Extract item plus `lay_check` and `bar_check`. Build Save Body appends one line to review_notes: `[AUDIT: CR1 CHECK (record-only) -- LAY ITEMS: <n>; BARRED SENTENCES: <m>; HEADS: <heads, 200 chars each>]`. No send-back; nothing counted.
 Touched: new D1 Check, connections D1 Extract to D1 Check to C1 Verse Sheet, Build Save Body (one appended line).
 Test: run 41822 CR1 gives LAY ITEMS 4 and BARRED SENTENCES 0; every other saved field unchanged.
 
 ### Step 2 (send-back, for team decision after Step 1 shows on a run)
 A D1B chain on the C1B model: D1B Build, D1B Route, D1B Call anthropic, D1B Call openrouter, D1B Extract, sending CR1 back once when LAY or BAR finds items (with ASK 557 Change D's Oracle flag if released).
-Readers: to leave the 33 readers of `$('D1 Extract')` untouched, the present D1 Extract is renamed (for example "D1A Extract", code unchanged) and the final node of the new chain is named "D1 Extract". Only D1B Build reads the renamed node. W4 to confirm that a rename through the API does not rewrite the 33 references, and how Failure Salvage is wired.
+Readers: to leave the 33 readers of `$('D1 Extract')` untouched, the present D1 Extract is renamed (for example "D1A Extract", code unchanged) and the final node of the new chain is named "D1 Extract". Only D1B Build reads the renamed node. W4 10989 item 3: $('D1 Extract') stands 74 times in 33 nodes; D1 Extract has main 0 to C1 Verse Sheet and an error output to Failure Salvage, whose literal map __L keys "D1 Extract". An API PUT rewrites nothing (W4, from training, not checked on this instance), so a rename must change the node name, every connections key and target, the 74 references and the __L key in one write.
 LARGE. Not proposed for release now. Step 1 tells the team whether CR1 fails often enough to warrant it; in run 41822 it would have fired on the four summary lines, and the team should decide first whether an opening's summary lines are critical points under rulings 397 to 400.
 
 ### Revert
