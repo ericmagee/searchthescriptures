@@ -1,4 +1,4 @@
-# AAR, RUN 41736 (DRAFT rev 1, W3)
+# AAR, RUN 41736 (DRAFT rev 2, W3)
 
 Anchor: W4 run report, Wall 10868. Order: the_wall_manual v19 section 7.4. This draft authorizes nothing.
 
@@ -20,23 +20,23 @@ Each ASK written today, its objective as posted before the run (its ask_aar_snap
 11. ASK 527. Objective: send-back replies in the Sn RESPONSE form are read and graded. UNEXERCISED: none of the 10 send-backs used that form (W2 10872 item 8).
 12. ASK 530. Objective: the enforcer records whether a deciding step weighs the answer it quotes. Met, record-only: 26 E-ONE TRIAL rows (W1 10871; W2 10872 item 9).
 13. ASK 531. Objective: a judge who spares an unsupported premise is sent back and counted. It fired: sol's S21 was counted (W2 10872 item 7). W2's unconfirmed guess is that S21 stayed uncured because of a false NOT APPLIED; this is not traced.
-14. ASK 532. Objective: a press needs a footed premise before the gate calls it a broken ground. Met: 43 E-PRESS rows, 13 NOT FOOTED, and the judges graded MISSES there (W2 10872 item 3). W1 notes that the withheld record is not in the database.
+14. ASK 532. Objective: a press needs a footed premise before the gate calls it a broken ground. Met on the stored rows: 43 E-PRESS rows, 13 NOT FOOTED, and the judges graded MISSES there (W2 10872 item 3; W1 accepts at 10876).
 15. ASK 533. Objective: a judge's [L2] gloss is held to the KJV renderings of its Strong's number (TRIAL). In part: it was cured on the alternates only (gemini, qwen4max, argon), and was UNEXERCISED on the panel.
 16. ASK 534. Objective: K-SU reads a quoted verse with the rest of its KJV sentence. Met: it was cured on all seats, for example sol62's "Matthew 1:25 within Matthew 1:24-25" (W1, W2, W4).
 17. ASK 536. Objective: K-UNX reads "missing despite" counts correctly. UNEXERCISED: no count line used "despite" (W1; W2 10872 item 1).
 18. ASK 537. Objective: the Oracle names a one-verse restriction, and restates unanswered questions in its close. In part: a GAPS line is present in the defender's round 4 (W1 10871). The restriction complaint was not traced.
-19. ASK 539. Objective: no false "library drift" stop when an alternate is offered. Met on the stored rows: the alternates ran with 0 drift stops (W2 10872 item 10). The child workflow was not read (W1).
-20. ASK 541. Objective: rows the engine treats as record-only are stored RECORD-ONLY, and counted rows stay UNCURED. FAILED on 2 rows, with no count moved (W2 10872 item 2; W4 10874 agrees):
+19. ASK 539. Objective: no false "library drift" stop when an alternate is offered. Met on the stored rows: the alternates ran with 0 drift stops (W2 10872 item 10; W1 accepts at 10876). The child's library check node was not read.
+20. ASK 541. Objective: rows the engine treats as record-only are stored RECORD-ONLY, and counted rows stay UNCURED. FAILED on 2 rows, with no count moved (W2 10872 item 2; W4 10874 and W1 10876 agree):
     - row 51983 (sol's E-ASSUME S21) is counted but stored RECORD-ONLY;
     - row 52025 (sol's E-GATE G2) is not counted but stored UNCURED.
-21. ASK 542. Objective: the ASK 520 exemption reads the ANSWER CHECK under any round 2 to 4 tag. Met on the stored rows: Luke 1:35 was graded MISSES under [CR4] for sol and sol62, and no general-raise K-UNX followed (W2 10872 item 5).
+21. ASK 542. Objective: the ASK 520 exemption reads the ANSWER CHECK under any round 2 to 4 tag. Met on the stored rows: Luke 1:35 was graded MISSES under [CR4] for sol and sol62, and no general-raise K-UNX followed (W2 10872 item 5; W1 accepts at 10876).
 22. ASK 528. Objective: each 7.3 review states what it read. Met: all four reviews carry the READ line.
 23. The rounds-by-side view (no ASK number; written 12:51): not a run item.
 
 ## REVIEWS
 - W3: Wall 10869.
 - W4: Wall 10870, corrected at 10874.
-- W1: Wall 10871.
+- W1: Wall 10871, corrected at 10876.
 - W2: review at Wall 10873; grade of the run's changes at 10872 (commit 2d737928).
 
 ## DEFECTS
@@ -46,7 +46,7 @@ Each ASK written today, its objective as posted before the run (its ask_aar_snap
    - The round 4 sentence restates LINK 1, so under luna's own instruction it "does not assert it again" (W4 10874).
    - The cure set D2 vs C1 and D3 vs C1 to CHALLENGER LINK BROKEN for all three judges. Before it, each judge's RESULT read CHALLENGER WINS (AUDIT v25). After it, each read UNDERDETERMINED, and the outcome became UNGRADED.
 2. ASK 541 storage (found by W2). Two rows are stored with the wrong status, listed under OBJECTIVE item 20. No count moved.
-3. pkgBFX, the K-UNX range (found by W1). The K-UNX item says the list against the defender holds premises 1 to 5, but the defender's round 2 lists 6 (PREMISE COUNT: 6). The rows are 51726 (sol62, count to 2), 51739 (chatgpt), 52025 (sol) and 52062 (qwen4max). W1's unconfirmed guess at the cause: it counts the 5 declared links.
+3. pkgBFX, the K-UNX range (found by W1). The K-UNX item says the list against the defender holds premises 1 to 5, but the defender's round 2 lists 6 (PREMISE COUNT: 6). The rows are 51726 (sol62, count to 2), 51739 (chatgpt), 52025 (sol) and 52062 (qwen4max). Cause, as W1 measured it in plan 10875: the range check finds blocks by the heading "LINK <number>", so the block "LINK none [premise 6]" is skipped, 5 blocks are found, and premise 6 is called out of range. In run 41090, two "LINK none" blocks made the check say 1 to 4.
 4. sol's removal sum (found by W2). sol's REMOVED FOR line sums to 5, against its drv_uncured of 4 ("UNREAD COUNTED LINE x1"). Not traced.
 5. sol62's count grounds (found by W3). sol62's CONCEDED LINKS line names no counted premise (AUDIT v50). This repeats 41418 item 10.
 6. "Came together" read as union (found by W3). All three judges break D5 by reading Matthew 1:18 "came together" as conjugal. This is a panel measure outside ruling 383; ruling 500 holds that the words mean the ceremony. It repeats 41418.
@@ -68,12 +68,13 @@ Each ASK written today, its objective as posted before the run (its ask_aar_snap
 4. DEFECTS 4, the removal sum. NO RULE COVERS IT; not traced (W2 10873).
 5. DEFECTS 5, sol62's count grounds. It breaks the engine_manual section 8 count rule (W3 10869).
 6. Seat mistakes in the reviews:
-   - W3 10869 and W4 10870 listed "541 RECORD-ONLY rows" under WHAT WENT RIGHT by counting the labels only. W4 withdrew it at 10874; W3 reports it here.
+   - W3 10869, W4 10870 and W1 10871 listed "541 RECORD-ONLY rows" under WHAT WENT RIGHT by counting the labels only. W4 withdrew it at 10874 and W1 at 10876; W3 reports it here.
+   - W1 10871 named 542, 532 and 539 as not shown; W1 accepted W2's stored-row reads at 10876.
    - W4 10870's claim that luna's LINK 3 rows ruled the same drop NOT A CONTRADICTION was withdrawn at 10874.
 
 ## SUGGESTED IMPROVEMENTS
 1. ASK (number to be assigned): the close enforcer must not confirm a closing contradiction against a sentence that restates a link the debater kept. Planner W4. Plan and size in characters: not yet posted. Grades: none. Card: not with the operator.
-2. ASK (number to be assigned): the pkgBFX K-UNX range must read the defender's stated premise count. Planner W1. Plan and size in characters: not yet posted. Grades: none. Card: not with the operator.
+2. ASK (number to be assigned): the pkgBFX K-UNX range check stops calling a listed premise answered under a "LINK none [premise N]" block out of range. Planner and builder W1; grader W2 (proposed); W4 writes on a card. Plan rev 0 at Wall 10875 (askbfx/w1/plan_bfx.md, 3,631 characters, md5 9d732d93, commit 1b51b5df). Scope: Shared Library line 467 in the engine and the child, plus one new helper. The size of the code change in characters is not stated in the plan. Grades: none yet. Card: not with the operator.
 3. ASK 541 fix: W4 is tracing the 2 rows. No plan posted yet.
 
 ## KNOWLEDGE BASE
