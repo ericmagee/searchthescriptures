@@ -1,10 +1,12 @@
-# ASK 538 PLAN rev 0 (W1, seat 34): an E-COL KEEP after an enforcer DISAGREE cures only when it engages the answer the enforcer cited
+# ASK 538 PLAN rev 1 (W1, seat 34): an E-COL KEEP after an enforcer DISAGREE that cites an answer cures only by engaging the answer, not by calling the press unanswered
+
+Rev 1 replaces rev 0 (58fed397) under W2's grade at Wall 10665. It changes OBJECTIVE, SCOPE, CRITERIA and DONE, WRONG-IF, RUN EVIDENCE and STEPS. ROLES and INPUTS IN GIT are restated unchanged in substance, with the file now also at /mnt/project-files/ask538/plan538.md.
 
 Authority: coordinator assignment 10:03 CST 11-23 (W4 finding: E-COL cure test, run 41418 rows 51331 and 51414). This plan authorizes nothing.
 
 ## 1. OBJECTIVE
-When the enforcer DISAGREEs with an E-COL line because the answering side did answer, and quotes that answer, the judge's KEEP is CURED only if the KEEP quotes that answer and shows why it fails. A KEEP that steps around the cited answer is UNCURED. The judge's decision stands as written (ruling 428): code changes only the cure status, never the line.
-Expected effect: in run 41418, terra's KEEP at row 51414 is UNCURED, not CURED. Terra's line called the proven press unanswered. The enforcer quoted the [CR4] answer, "The finding before the taking places the finding early, and the not-knowing covers the pregnancy after the taking". Terra's KEEP quoted the pressing sentence and a different [CR4] sentence, and never that answer. Under pkgECF (E-COL ENFORCED), an uncured item counts against the seat, as it does today for any uncured E-COL item.
+Sometimes the enforcer DISAGREEs with an E-COL line because the answering side did answer, and quotes that answer. In that case the judge's KEEP may no longer cure by the ruling 392 route, press(): "the press was left unanswered", shown by quoting the pressing sentence. The enforcer's reason has shown an answer on the record, so the KEEP must engage the answer. That is the existing both() test: it quotes 6 or more words of the answering side's own words and 6 or more words of the quoted verse the answer cannot agree with. Any sentence of the answering side counts, not only the one the enforcer quoted (W2 10665 item 1, option (b)). The judge's decision stands as written (ruling 428): code changes only the cure status, never the line.
+Expected effect, stated before the measurement: in run 41418, terra's KEEP at row 51414 was CURED by press(). Under this plan, press() is closed to it. Its own words still pass both(): it quotes the [CR4] answer, "the withholding runs from the taking to the birth and the begetting stands before it", and Matthew 1:25. So 51414 is expected to STAY CURED. Terra's remaining fault is reading Matthew 1:25 alone against the answer, and that is ASK 530's ground, not this plan's. If W4's replay of all E-COL KEEP rows finds no row that changes, this plan has no failed case. Then it closes as NOT NEEDED (operator rule 23:19 CST 11-18), and nothing is written.
 
 ## 2. ROLES
 Planner W1. Builder W4. Grader W2 (one non-builder grader, op doc v139). Write card: W4's thread.
@@ -23,37 +25,36 @@ SEARCH (W1, 10:05 CST 11-23):
   - 44243 quotes the judge's own line, not the answering side.
   - 50673's answer quote has fewer than 6 words.
   - So the expected flip is 51414 only. W4 measures this with the real code.
-NOT SEARCHED: the child workflow MqQHRl7mQQ0z8QdT. W4 confirms whether it holds a copy of this cure test.
-CHANGE (one place, the E-COL KEEP path only):
-1. cited(it): take each quotation of 6 or more words in the enforcer's DISAGREE reason, it.reason (W4 confirms the field on E-COL items). Keep those where 6 words in a row are found in the answering side's own rounds (ANSF, the same set both() reads).
+CHILD: R2 Alt Send Back Record is a node of the child workflow MqQHRl7mQQ0z8QdT. The child holds its own Library, byte-equal to the engine's (LIB cf88f476 in both since 531, per W2 10665). The same line changes in both Library copies, and both LIB hashes stay equal. NOT SEARCHED: none beyond the child's own nodes, which W4 reads at build.
+CHANGE (one line, the E-COL KEEP path, in both Library copies):
+1. cited(it): take each quotation of 6 or more words in the enforcer's DISAGREE reason, it.reason (W4 confirms the field on E-COL items). Keep those where 6 words in a row are found in the answering side's own rounds (ANSF).
 2. If cited(it) is empty, nothing changes.
-3. If it is not empty, a KEEP is CURED only when two things hold:
-   - the existing test passes (press, both or keep3);
-   - a.why quotes 6 words in a row of one cited answer.
-   Otherwise the KEEP is UNCURED, with the reason: KEEP that does not quote the answer the enforcer cited ("<first 8 words>"); a KEEP shows why that answer fails (ASK 538).
+3. If it is not empty, press() is skipped for this KEEP. The KEEP cures by both() or keep3(), exactly as today. Otherwise it is UNCURED, with this reason: "KEEP that calls the press unanswered after the enforcer quoted the answer on the record; a KEEP quotes the answer and the verse it cannot agree with (ASK 538)".
 NOT IN SCOPE, under the scope rule: a CHANGE TO that keeps the break (line 2686 in the 531 target). It may carry the same gap. W4 counts such rows in the measurement and reports them. They are not changed here.
 
 ## 4. CRITERIA and DONE
-1. Replay row 51414 with its stored reply and rounds: UNCURED, with the ASK 538 reason.
-2. Known good, synthetic: the same KEEP plus a sentence that quotes the cited [CR4] answer and says why it fails gives CURED.
-3. Replay all E-COL send_back KEEP rows in debate_enforcer_log from 11-17 on. Only rows whose enforcer reason cites an answering-side quote of 6 or more words may change. List every changed row with its old and new status.
-4. Only the three Record nodes' MAP entries and the Library line(s) of the E-COL KEEP path differ from live. Everything compiles, and runcheck is OK.
-5. No judge text changes (ruling 383), and no line is rewritten by code (ruling 428).
-DONE: criteria 1 to 5 pass, W2 grades PASS, and the operator's card is pressed in W4's thread.
+1. Replay row 51414 with its stored reply and rounds: press() is not used; the result is CURED by both(), with both()'s reason, as stated in the OBJECTIVE.
+2. Known bad, synthetic: the 51414 KEEP cut down to its pressing-sentence quote, with no [CR4] words, gives UNCURED with the ASK 538 reason. Today it gives CURED by press().
+3. Known good, synthetic: a KEEP that quotes a different [CR4] sentence from the one the enforcer quoted, plus a verse that sentence cannot agree with, gives CURED.
+4. Replay all E-COL send_back KEEP rows in debate_enforcer_log from 11-17 on. List every changed row with its old and new status. Only rows whose enforcer reason cites an answering-side quote of 6 or more words, and that were cured by press(), may change.
+5. Only the three Record nodes and the E-COL KEEP line of both Library copies differ from live (engine and child). The two LIB hashes are equal. Everything compiles, and runcheck is OK.
+6. No judge text changes (ruling 383), and code rewrites no line (ruling 428).
+DONE: if criterion 4 finds no changed row, the plan closes as NOT NEEDED and nothing is written. Otherwise criteria 1 to 6 pass, W2 grades PASS, and the operator's card is pressed in W4's thread.
 
 ## 5. WRONG-IF
-1. A KEEP that quotes the cited answer and gives a reason it fails comes out UNCURED.
-2. Any row changes where the enforcer's reason cites no answering-side quote.
-3. Row 51414 stays CURED.
-4. The cited quote is the judge's own line, or the pressing side's words, and still triggers. The filter must read the answering side only.
+1. A KEEP that quotes any sentence of the answering side's answer, and a verse that sentence cannot agree with, comes out UNCURED. A flip on the choice of sentence alone is a live count on a technicality under pkgECF (W2 10665).
+2. Any row changes where the enforcer's reason cites no answering-side quote, or where press() was not the route that cured it.
+3. The cited quote is the judge's own line, or the pressing side's words, and still triggers. The filter must read the answering side only.
+4. The engine and child Library hashes differ after the build.
 
 ## 6. RUN EVIDENCE
-Mark: a send_back E-COL cure_reason holding "KEEP that does not quote the answer the enforcer cited". It appears only when a judge KEEPs after a DISAGREE that cites an answer, which the run cannot force, so it is NO PROBE. The replay of 41418 is the known case (ruling 428).
+Mark: a send_back E-COL cure_reason holding "KEEP that calls the press unanswered after the enforcer quoted the answer on the record". It appears only when a judge KEEPs after a DISAGREE that cites an answer, which the run cannot force, so it is NO PROBE. The synthetic known-bad of criterion 2 and the replay of criterion 4 are the known cases (ruling 428).
 
 ## 7. INPUTS IN GIT
-This plan, at ask538/w1/plan538.md (W3 commits). The build's replay script and outputs go under ask538/w4/.
+This plan, at ask538/w1/plan538.md in git and at /mnt/project-files/ask538/plan538.md. The build's replay script and outputs go under ask538/w4/.
 
 ## 8. STEPS
-1. W4 builds on the live engine (9240349c or later) and runs criteria 1 to 4 offline. No card.
-2. W2 grades. No card.
-3. The operator's write card in W4's thread. The card says that a KEEP which steps around the enforcer's cited answer will count against the judge's seat under pkgECF, and it lists the replay rows that change.
+1. W4 runs criterion 4 (the replay) on the live engine and child (9240349c or later). No card. If no row changes, W4 posts that, and the plan closes as NOT NEEDED.
+2. Otherwise W4 builds both Library copies and runs criteria 1 to 6. No card.
+3. W2 grades. No card.
+4. The operator's write card in W4's thread lists the rows that change and says that a KEEP calling a press unanswered, after the enforcer quoted the answer, then counts against the seat under pkgECF unless it engages the answer.
