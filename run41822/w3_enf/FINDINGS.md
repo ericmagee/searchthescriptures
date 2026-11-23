@@ -96,3 +96,11 @@ C4. sol grades KEYSTONE D4 STANDS and the chain BROKEN at D3.
 | Enforcer 7: form misses | Fewer: no CARRIED BY 7 against 6; no quotation 9 against 18; not in record 4 against 2 (B7). |
 | Enforcer 8: gap between calls | Larger. E-PREM raised sol's count on layers the block holds and then reversed itself (B3); E-KEY misread a break of the challenger (B4). |
 | New in run 41822 | Every E-HOLD push to BROKEN was against the defender (B2). Non-KJV words in the Oracle's rounds (A6). |
+
+## E. Corrections (rev 2, after W1's grade at Wall 10940 and W4's Wall 10938)
+
+E1. B2 is wrong as written. "Twelve" counted enforcer reply lines over both passes, some on lines that were no longer open, and the seat labels in `lines.json` are not reliable for the first panel, because one stored call carries items of more than one seat. From the stored rows, seven push a point the judge left open to BROKEN: 52448 (sol62), 52452, 52453, 52455 (chatgpt), 52458 (sol), 52678 (qwen4max), 52800 (argon). Each says the defender's answer fails. Five judges' lines then went to STANDS (52524, 52536, 52537, 52538, 52558); qwen4max changed to DEFENDER LINK BROKEN (52711); argon turned 52800 against the challenger.
+E2. B1 by stored row, D3 against C4: sol62 52435 and 52436, sol 52442 and 52443, chatgpt 52452 RIGHT BROKEN; qwen4max 52672 AGREE BROKEN and 52673 RIGHT STANDS; argon 52799 AGREE UNDERDETERMINED.
+E3. B5 by stored row: the six lines are 52435, 52436, 52444 (sol62), 52442, 52443 (sol) and 52440 (chatgpt). The count of nine for argon is of reply lines; the stored first-pass rows are 52788, 52789, 52792, 52793, 52794, and 52792 and 52793 are misread cure statements (Wall 10938).
+E4. B3 by stored row: sol 52470, 52476, 52479. The same call gave RIGHT COUNTED on premises 2, 4 and 5 to sol62 (52468, 52474, 52477) and on premise 2 to chatgpt (52469).
+E5. A6: "young woman" is corpus wording (Sight 1578), not the Oracle's own.

@@ -1,4 +1,4 @@
-# AAR, RUN 41822 (DRAFT rev 1, W3)
+# AAR, RUN 41822 (DRAFT rev 2, W3)
 
 Anchor: W4 run report, Wall 10931. Order: the_wall_manual section 7.4. This draft authorizes nothing.
 
@@ -17,16 +17,18 @@ Earlier ASKs seen in this run are in W1's table, Wall 10936 section B. One faile
 1. W4, Wall 10932, READ line given. Engine items 1 to 9, Oracle items 10 to 13, judges 14 to 16.
 2. W1, Wall 10936, READ line given. Grade of W4's review: PASS WITH ONE CORRECTION AND ONE OMISSION. Adds the panel history (section A) and the per-change table (section B).
 3. W3, Wall 10937, READ line given. File run41822/w3_enf/FINDINGS.md (b9ca63c2), commit d57163b6.
+4. W4, Wall 10938: the cause of row 52535, and two corrections to W4's own posts.
+5. W1, Wall 10940: grade of rev 1 of this draft, PASS WITH THREE CONDITIONS. Rev 2 answers them: DEFECTS 2, 3 and 4.
 W2 is rested and posted no review.
 
 ## DEFECTS
 Panel
 1. Six judgments were written, and five read BROKEN. sol62, chatgpt and gemini were removed on form; no removal changed a verdict word. argon, the one HELD verdict, was the third judge sent to sol62's chair. The stored 2 to 1 split is the product of the removals (W1 10936 A).
-2. chatgpt was removed on a cure reason, "the line names no answering side", for a line that carries its answering side. Whether that test fits a FORCED line is not shown (W1 10936 A3b).
+2. chatgpt was removed through row 52535, and the cause is shown (W4 10938). The flagged line was not a grade line: it was chatgpt's own answer to an earlier cure, "FORCED: D3 vs C5 applies (Commitment 7).", read by the collision check as a third collision line. The cure test then read that flagged line, and not the judge's reply, for the answering side, so no reply that kept the break could cure it. The same misread hit argon twice (rows 52792, 52793); those came back CURED.
 
 Enforcer
-3. One collision drew three rulings. On D3 against C4 the enforcer answered BROKEN (sol62, sol), STANDS (qwen4max, the FORCED line) and UNDERDETERMINED (argon). On D2 against C2 it told sol BROKEN, then agreed with sol's STANDS (W3 B1).
-4. Twelve lines push an open point to BROKEN. All twelve are against the defender (W3 B2).
+3. One collision drew three rulings. On D3 against C4 the enforcer answered RIGHT BROKEN to sol62 (rows 52435, 52436), sol (52442, 52443) and chatgpt (52452, on a line the judge had left open); AGREE BROKEN to qwen4max on the collision line (52672) and RIGHT STANDS on the FORCED line of the same collision (52673); and AGREE UNDERDETERMINED to argon (52799). On D2 against C2 it told sol BROKEN (52458), then agreed with sol's STANDS (W3 B1; W1 10940 C).
+4. Seven stored rows push a point the judge left open to BROKEN: 52448 (sol62), 52452, 52453, 52455 (chatgpt), 52458 (sol), 52678 (qwen4max), 52800 (argon). In each the enforcer's sentence says the defender's answer fails; no row pushes an open point against the challenger. The judges did not follow: five lines went to STANDS (52524, 52536, 52537, 52538, 52558), qwen4max alone changed to DEFENDER LINK BROKEN (52711), and argon turned row 52800 against the challenger. Correction: rev 1 said twelve. That figure counted enforcer reply lines over both passes, some on lines that were no longer open, and is withdrawn (W1 10940 A).
 5. On sol, the premise check called spared premises 2, 4 and 5 COUNTED as lacking a layer; for premises 2 and 5 the block holds the layers and the enforcer's ground is the inference. On the next pass it ruled premise 5 SPARED. sol's stored count went from 1 to 2 (W3 B3).
 6. The keystone check told argon that D4 cannot stand, naming lines that break the challenger's link (W3 B4).
 7. Matthew 1:18 is ruled FOOTED under premise 3 and NOT FOOTED under premise 4 on the same disputed word. Two counts rest on presses ruled NOT FOOTED. The engine manual does not say what the engine does with that ruling (W3 B6).
@@ -39,7 +41,7 @@ Engine
 Oracle
 11. No defender round meets the "therefore" of Luke 1:35. Both BROKEN seats decide there (W3 A1; W4 item 10; W1 D1).
 12. D3 states an act in the espousal with no row for it. The assumption check rules it INFERRED ACT (W3 A3).
-13. Words that are not KJV words: "young woman" for the virgin of Isaiah 7:14; "sperm" for G4690; "sowing-time" for H2233 (W3 A6; W4 item 11).
+13. Words that are not KJV renderings: "young woman" for the virgin of Isaiah 7:14; "sperm" for G4690; "sowing-time" for H2233 (W3 A6; W4 item 11). "Young woman" is not the Oracle's own word: Sight 1578 holds "the verse at the word level uses the young-woman word". Two judges graded it against the KJV word.
 14. The close says GAPS: NONE with five of 21 pressed verses unanswered in it (W3 A8; W1 on ASK 537).
 15. Two quotations carry no reference (W4 item 13).
 
@@ -57,7 +59,7 @@ Judges
 ## WHAT WENT WRONG
 1. The changes of today did not reach the cause. Two of three were not exercised, and the result repeated.
 2. The Oracle lost on a press it has now left unmet in two runs. Run 41736 held one sentence on the "therefore"; this run holds none.
-3. The enforcer did not hold one ruling on one collision, and its pushes ran against one side.
+3. The enforcer did not hold one ruling on one collision, and its seven pushes on open points all ran against one side.
 4. Three judges were removed on form while their verdicts agreed with the result.
 
 ## COMPARISON, RUN 41736 AGAINST RUN 41822
@@ -82,7 +84,7 @@ Enforcer (W3 10930 against this run)
 6. Assumption check: three premises split; four facts ruled INFERRED ACT.
 7. Form: fewer misses.
 8. Gap between calls: larger (DEFECTS 5 and 6).
-New: DEFECTS 4.
+New: DEFECT 4, seven pushes of an open point, all aimed at the defender, one followed.
 
 Judges
 In the deciding lines read, every verse and gloss the BROKEN seats rest on is quoted in the rounds. The record does not show a deciding line that rests on matter from outside it. It does show judges grading the same answer in opposite ways.
@@ -96,6 +98,6 @@ No entry is proposed until the team has reviewed the findings.
 ## FOR THE OPERATOR
 1. The three changes of today did not change the result. Two were not exercised.
 2. On the judges: five of six judgments read BROKEN, and the two seated BROKEN judges decide on Luke 1:34-35 from text quoted in the rounds. The record does not show training knowledge in those lines. It shows uneven grading of the same answers.
-3. On the enforcer: it did not follow one process. The evidence is DEFECTS 3 to 7.
+3. On the enforcer: it did not follow one process. The evidence is DEFECTS 3 to 7. Its seven pushes on open points all ran against the Oracle, though only one judge followed one of them. One judge, chatgpt, was removed by a fault in the cure test (DEFECT 2).
 4. On the Oracle's opening and closing: the opening does not quote Luke 1:34, and no round answers the "therefore" of Luke 1:35. The close declares no gaps with five presses unanswered.
 5. One item is the operator's and is already waiting on him: how the record answers the "therefore" of Luke 1:35 (the coordinator's list holds it with Luke 1:56 and Deuteronomy 20:7). I have not checked whether the corpus holds a row for it.
