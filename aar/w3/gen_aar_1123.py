@@ -13,14 +13,14 @@ R.append(dict(ask=494,rev='A2',prior=32,title='Public key can no longer call the
  plan={"md5":"b57c4b09","path":"a494_w2/plan494.md","commit":"000477e9","wall_id":9820},
  build=[{"md5":"fc32cec9","path":"a494_w2/step494.sql","commit":"9f2f486a"}],
  revert={"md5":"dfcfdd2f","path":"a494_w2/revert494.sql"},
- grades=[G("W1","PASS with N1 and N2 (plan rev 0 and step)",9765,"fc32cec9"),G("W3","PASS with four notes (plan rev 0 and step)",9766,"fc32cec9"),G("W1","PASS (plan rev 1; step unchanged)",9768,"fc32cec9")],
+ grades=[G("W1","PASS with N1 and N2 (plan rev 0 e888ca4d and step); corrected to FAIL ON FORM at 9772",9765,"e888ca4d","superseded"),G("W3","PASS with four notes (plan rev 0 e888ca4d and step); superseded by the form regrade 9783",9766,"e888ca4d","superseded"),G("W1","PASS (plan rev 1 6bffd9ec); corrected to FAIL ON FORM at 9772",9768,"6bffd9ec","superseded"),G("W1","FAIL ON FORM (correction of 9765 and 9768: the plan lacked required headings)",9772,"6bffd9ec","FAIL ON FORM"),G("W1","PASS on form: plan rev 2 06b6eb2e, step fc32cec9 in commit 9f2f486a",9782,"fc32cec9"),G("W3","PASS on form: plan rev 2 06b6eb2e, step fc32cec9 in commit 9f2f486a",9783,"fc32cec9"),G("W1","grade STANDS on plan494.md b57c4b09",9820,"b57c4b09"),G("W3","grade STANDS on plan494.md b57c4b09",9824,"b57c4b09")],
  md5w=['fc32cec9'], audit=list(range(39218,39228)),
  objects=[{"kind":"grants","name":"EXECUTE on the nine engine write functions","before":"anon on all nine (snapshot 32)","after":"postgres, service_role, lab_seat only (live read 11-23, W4 10356)"}],
  tests=[{"file":"a494_w2/test494_rollback.sql","md5":"b6f77465","wall_id":10059}],
  readbacks=[{"seat":"W3","result":"CONFIRMED","wall_id":10071},{"seat":"W1","result":"CONFIRMED","wall_id":10072}],
  run={"run_token":"ODV1-40995-inaaza3z","debate_results_id":"8033944e","row_saved_at":"02:31:23Z 11-20","rpc":"record_debate_row_tokens","role":"service_role","http_status":200,"at":"02:51:32Z","checks":[10224,10225]},
  manuals={"engine_manual":"v221 (c3c39ed3)","op_doc":"v138 (eadb1c43), card 07:42:38Z 11-23 W3 thread; readback W2 10365"},
- status='proven by run', sources=[9759,9765,9766,9768,9820,10070,10071,10072,10223,10224,10225,10226,10227,10228,10355,10356,10364,10365,"audit 39227"],
+ status='proven by run', sources=[9759,9765,9766,9768,9772,9782,9783,9820,9824,10070,10071,10072,10223,10224,10225,10226,10227,10228,10355,10356,10364,10365,"audit 39227"],
  builders=(['W2','W4'],[{"seat":"W2","what":"built step494.sql fc32cec9","wall_id":9759},{"seat":"W4","what":"wrote 494 A2 on its card","wall_id":10070}])))
 def wf(ask,title,obj,met,reason,src,cardt,planm,planp,patch,te,tc,pe,pc,fe,fc,ver,lib,audit,grades,rb,run,man,status,sources,revert,extra_src=None):
     R.append(dict(ask=ask,rev='A1',prior=None,title=title,objective=obj,met=met,reason=reason,src=src,words='"not yet"',
@@ -162,7 +162,7 @@ def q(s):
 def j(o): 
     if o is None: return 'NULL'
     return q(json.dumps(o,ensure_ascii=False))+'::jsonb'
-out=["-- ASK AAR snapshot rows, DRAFT rev 3 (W3, 2026-11-23; replaces rev 2 1bba2282 (Wall 10371), rev 1 5574aed0 and rev 0 e715efab, on W2 10367 C1, C2, W4 10368 C3 and W2 10370 (N1 withdrawn)), for the coordinator (seat 36) to run once after W2's grade. NOT RUN.",
+out=["-- ASK AAR snapshot rows, DRAFT rev 4 (W3, 2026-11-23; replaces rev 3 d463fe94 (Wall 10373) on W1 10376 C1; earlier revs on W2 10367, W4 10368, W2 10370), for the coordinator (seat 36) to run once after W2's grade. NOT RUN.",
 "-- Rows: 494 A2 (proven by run 40995; prior_row 32), 504, 505, 506, 507, 508, 509, 510, 511, 512, 513, 514, 515 A1, 515 r7, 516. Each field cites Wall ids or audit ids.",
 "-- Not covered: ASKs 517 to 520 (held). The per-field sources are in each row's sources array.",
 "-- Run from seat 36 in one call, then read the closing SELECTs in separate calls.",
