@@ -1,0 +1,10 @@
+[
+ {
+  "old": "    - Live: written on the operator's card \"Write 516b\" at 08:16:08Z 2026-11-23 in W4's thread.",
+  "new": "    - Live: written on the operator's card \"Write 516b\" at 02:16 CST 2026-11-23 in W4's thread."
+ },
+ {
+  "old": "    - Not yet: shown by a run with an alternate seated.\n",
+  "new": "    - Shown by run 41418 (ODV1-41418-isj5xh5m), 02:41 to 03:48 CST 2026-11-23 (W4 Wall 10458):\n      - Status success, with no out-of-memory crash. qwen4max sat as an alternate.\n      - One rounds text in every call: 16 calls carry the line, each with 132,710 characters and md5 3509d6d3 (14 enforcer checks, 9 panel and 5 alternate, and 2 Reread send-backs).\n      - prompt_tokens per call: 50,970 to 58,940. Each is above the DONE 3 bound, whether that bound reads the rounds at 4 or at 3.2 characters per token. A body without the rounds would hold at most about 16,749 tokens.\n      - Enforcer prompt text stored for the run: 1,507,588 characters, against 5,806,792 on 41155 under 516.\n      - Result: CHALLENGER PREVAILS, BROKEN 3-0.\n"
+ }
+]
