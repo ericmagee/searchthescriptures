@@ -1,0 +1,3493 @@
+[
+ {
+  "l2c": false,
+  "ids": [
+   "E:Init with Guards",
+   "E:D1 Build",
+   "E:C1 Build",
+   "E:C1 Extract",
+   "E:D2 Build",
+   "E:D2 Extract",
+   "E:C2 Build",
+   "E:C2 Extract",
+   "E:D3 Build",
+   "E:D3 Extract",
+   "E:C3 Build",
+   "E:C3 Extract",
+   "E:Build Independent Verdict",
+   "E:Panel Build",
+   "E:Format Markdown",
+   "E:Citation Scan",
+   "E:Quote Compare",
+   "E:Quote Report",
+   "E:D4 Build",
+   "E:D4 Extract",
+   "E:C4 Build",
+   "E:Accept Check",
+   "E:Accept Final",
+   "E:L2 Count Plan",
+   "E:Anticheat Build",
+   "E:Anticheat Record",
+   "E:C3G Extract",
+   "E:C1B Extract",
+   "E:D2B Extract",
+   "E:C2B Extract",
+   "E:D3B Extract",
+   "E:C3B Extract",
+   "E:D4B Extract",
+   "E:Reread Build",
+   "E:Alt Reread Build",
+   "E:Assume Check Record",
+   "E:L2 Gloss Plan",
+   "C:R2 Alt Reread Build"
+  ],
+  "n": 38,
+  "vers": 18,
+  "per": 9721,
+  "mx": 17545,
+  "tot": 369387,
+  "save": 346142,
+  "keys": [
+   "__gLab",
+   "blk",
+   "~return 'VERSE SHEET -- '+head+' Read by ",
+   "__e",
+   "~for(const v of V)for(const f of forms)if",
+   "~if(!keys.length)return '';const left=[].",
+   "countCheck",
+   "blockAt",
+   "conds",
+   "sheetPlan",
+   "~if(/[,;:.!?)\\]]$/.test(c)&&run.length)br",
+   "~if(segs.includes(h)||segs.join('')===h)r",
+   "__GL",
+   "~for(const m of t.matchAll(/(?<![:\\d]\\s?)",
+   "~for(const r of cands){if(!/^G/.test(r.st",
+   "wordsUrls",
+   "~if(wd.kind==='hebrew'){const h=hebScript",
+   "~if(wd.kind==='greek'){const g=norm(grk2l",
+   "countsUrl",
+   "tagWords",
+   "cur",
+   "~for(const m of s.matchAll(/\\(\\s*[\"“'‘]?[",
+   "~return {...c,num:n,verses:nv,tokens:nt,s",
+   "~out.push({side,round,at:m.index,n:+m[1],",
+   "it",
+   "~t=t.replace(/gg/g,'ng').replace(/g(?=[kx",
+   "~for(const k of keys){if(offU.has(k))cont",
+   "~return (CL||[]).map(c=>{const n=c.subj||",
+   "~for(const m of t.matchAll(/\\[L2\\]/g)){co",
+   "~for(const p of x.split(/\\s+/)){const q=p",
+   "mk",
+   "~return {tags,tagWords,check,countClaims,",
+   "SHEET",
+   "apocIn",
+   "wordsUrl",
+   "~else if(core.every(w=>w.ok)){status='COU",
+   "ws",
+   "refsIn",
+   "~else if(!vs.length&&t.apoc&&t.apoc.lengt",
+   "~if(!linkHead){const pa=t.lastIndexOf('\\n",
+   "~.replace(/uw/g,'u').replace(/ow/g,'o').r",
+   "~return {w:wd.w,kind:wd.kind,ok:m.ok,num:",
+   "ed1",
+   "~else{status='NOT COUNTED';why='not in th",
+   "~for(let pass=0;pass<2;pass++)wds.forEach",
+   "latin",
+   "~else if(read.length<vs.length){status='U",
+   "~for(const m of s.matchAll(/(?<![\\w-])(?:",
+   "~return (TG||[]).map(t=>{const vs=t.verse",
+   "~for(let k=toks.length-1;k>=0;k--){const ",
+   "~for(const n of [...out])for(const p of P",
+   "~if(!seg.replace(/[*_\\s:.\\-]+/g,'').lengt",
+   "lexUrl",
+   "occ",
+   "rootAt",
+   "after",
+   "order",
+   "~if(sm){for(const x of s.matchAll(new Reg",
+   "norm",
+   "~else if(t.apoc&&t.apoc.length&&!ws.some(",
+   "ks",
+   "~out.push({side,round,at:i,seg:seg.replac",
+   "variants",
+   "~for(const m of s.matchAll(/(?<![\\wÀ-ɏḀ-ỿ",
+   "matchWord",
+   "countClaims",
+   "wordNum",
+   "nv",
+   "~if(L)for(const x of variants(L.translite",
+   "forms",
+   "markRoots",
+   "~if(!subj){const ws=tagWords(pre.slice(-7",
+   "linkHead",
+   "~for(const m of s.matchAll(/[֐-׿\\/]+/g)){",
+   "beta2lat",
+   "strip",
+   "~if(!out.length)for(const m of s.matchAll",
+   "~else if(!ws.length){status='IGNORED';why",
+   "~return a.slice(i+1)===b.slice(i+1)||a.sl",
+   "~if(wd.kind==='strongs')return nums.has(w",
+   "grk2lat",
+   "~if(!ws.length){status='IGNORED';why='nam",
+   "~if(run.length&&(!other||run.some(q=>/[à-",
+   "~if(capped&&b.t>=1000)return {...c,num:n,",
+   "~for(const m of s.matchAll(/\\b([GH])0*(\\d",
+   "num",
+   "~else if(!vs.length){status='NOT COUNTED'"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:C1 Extract",
+   "E:D2 Build",
+   "E:D2 Extract",
+   "E:C2 Build",
+   "E:C2 Extract",
+   "E:D3 Build",
+   "E:D3 Extract",
+   "E:C3 Build",
+   "E:C3 Extract",
+   "E:Format Markdown",
+   "E:Citation Scan",
+   "E:Quote Report",
+   "E:D4 Build",
+   "E:D4 Extract",
+   "E:C4 Build",
+   "E:D2 Lexicon Plan",
+   "E:C2 Lexicon Plan",
+   "E:D3 Lexicon Plan",
+   "E:C3 Lexicon Plan",
+   "E:D4 Lexicon Plan",
+   "E:C4 Lexicon Plan",
+   "E:L2 Lexicon Plan",
+   "E:L2 Count Plan",
+   "E:C3G Extract",
+   "E:C1B Extract",
+   "E:D2B Extract",
+   "E:C2B Extract",
+   "E:D3B Extract",
+   "E:C3B Extract",
+   "E:D4B Extract",
+   "E:L2 Gloss Plan"
+  ],
+  "n": 31,
+  "vers": 7,
+  "per": 4376,
+  "mx": 4900,
+  "tot": 135650,
+  "save": 126100,
+  "keys": [
+   "~return '[L2] SHEET -- read by the system",
+   "tail",
+   "APOC",
+   "GRK",
+   "~for(const k of order)for(const r of (IX.",
+   "ROOTPRE",
+   "isFunc",
+   "lexUrls",
+   "BETA",
+   "sheet",
+   "~'he she they we you i who whom which wha",
+   "~'means meaning mean root used use uses r",
+   "~'participle tense present perfect aorist",
+   "~'masculine neuter relative pronoun prepo",
+   "~'same very more most much many some any ",
+   "PREF",
+   "index",
+   "~'not into upon unto under over before af",
+   "~for(let i=0;i<S.length;i+=250)out.push(S",
+   "LETTER",
+   "byN",
+   "numOf",
+   "~return /^(?:T|CONJ|COND|PREP|PRT|INJ|P|R",
+   "got",
+   "SB",
+   "W_IT"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:D1 Extract",
+   "E:C1 Extract",
+   "E:D2 Extract",
+   "E:C2 Extract",
+   "E:D3 Extract",
+   "E:C3 Extract",
+   "E:Citation Scan",
+   "E:Panel Check",
+   "E:D4 Extract",
+   "E:C4 Extract",
+   "E:C4G Extract",
+   "E:C3G Extract",
+   "E:C1B Extract",
+   "E:D2B Extract",
+   "E:C2B Extract",
+   "E:D3B Extract",
+   "E:C3B Extract",
+   "E:D4B Extract",
+   "E:C4B Extract"
+  ],
+  "n": 19,
+  "vers": 10,
+  "per": 6764,
+  "mx": 7672,
+  "tot": 128520,
+  "save": 117998,
+  "keys": [
+   "__RFX",
+   "~if(fam==='anthropic'){text=((d.content||",
+   "RF",
+   "~if(!e.text||String(e.text).trim()===''){",
+   "~else{const c=(d.choices||[])[0]||{};text",
+   "~else if(fam==='gemini'){const c=(d.candi",
+   "M2",
+   "~spans.sort((a,b)=>a.s-b.s);const mg=[];f",
+   "unm",
+   "~if(RF||RFT)throw new Error('VALIDATION: ",
+   "RFT",
+   "hits",
+   "SEP",
+   "M1",
+   "__WN",
+   "raw",
+   "~if(h.marker==='M1'){s=h.at;while(s<h.end",
+   "fwd",
+   "trim",
+   "back",
+   "~return {text:out,notes:mg.map(x=>({span:",
+   "~const [s2,e2]=trim(s,e);spans.push({s:s2",
+   "endsSep",
+   "readEnv",
+   "mask"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Panel Build",
+   "E:Reserve Build",
+   "E:Accept Build",
+   "E:Accept Check",
+   "E:Accept Return Build",
+   "E:Accept Final",
+   "E:Accept DS Return Build",
+   "E:Enforcer Record"
+  ],
+  "n": 8,
+  "vers": 2,
+  "per": 16454,
+  "mx": 18777,
+  "tot": 131633,
+  "save": 111656,
+  "keys": [
+   "PART2",
+   "ANSWER",
+   "HEDGE",
+   "REFUSE",
+   "FORM",
+   "RULE_C",
+   "HEADS",
+   "PLACED"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Synthesis",
+   "E:Build Independent Verdict",
+   "E:Build Save Body",
+   "E:Panel Build",
+   "E:Format Markdown",
+   "E:Quote Report",
+   "E:D4 Build",
+   "E:D4 Extract",
+   "E:C4 Build",
+   "E:C4 Extract",
+   "E:C4G Extract",
+   "E:C2B Build",
+   "E:D4B Extract",
+   "E:C4B Extract"
+  ],
+  "n": 14,
+  "vers": 5,
+  "per": 5721,
+  "mx": 7696,
+  "tot": 80098,
+  "save": 70302,
+  "keys": [
+   "fresh",
+   "RENUM",
+   "rm",
+   "~['link graded',/\\b[CD]\\d+(?:\\s*(?:,|and|",
+   "~['concession claimed',/\\b(?:(?:the\\s+)?(",
+   "dlinks",
+   "cblocks",
+   "~for(const m of lists)for(const x of m[1]",
+   "~['no reading offered',/\\b(?:challenger|d",
+   "~['does not stand',/\\b(?:does|do|did)\\s+n",
+   "declared",
+   "~if(best&&best.s>=3)out.push(lab+c.n+' (\"",
+   "GRADE",
+   "nd",
+   "mismatch",
+   "~['ground conceded heading',/^#{1,4}\\s*(?",
+   "CB",
+   "~['refused',/\\brefused\\b|\\brefutes?\\b|\\br",
+   "~['inference graded',/\\b(?:each\\s+)?(?:st",
+   "lists",
+   "~if(hd.length)out.push('D'+hd.join(', D')",
+   "~['link argued against',/\\b[CD]\\d+\\s+(?:a",
+   "~for(const c of labels){const a={w:stems(",
+   "stems",
+   "~try{const DL=dlinks(F).map(x=>({k:x.n,te",
+   "~['inference not stated',/\\binferences?\\b",
+   "~return H.map((x,i)=>({j:i+1,n:x.n,head:x",
+   "sc",
+   "MULTI",
+   "~['none of them',/\\bnot\\s+one\\s+of\\b|\\bno",
+   "~H.forEach(h=>{if(out.some(o=>o.n===+h[1]",
+   "best",
+   "renum",
+   "~['link left unanswered',/\\b(?:left|leave",
+   "~['concedes',/\\bconced(?:es|ed)\\b|\\bgrant",
+   "nDecl",
+   "lim",
+   "closeLabels",
+   "vkeys"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Save Body",
+   "E:Format Markdown",
+   "E:Enforcer Build",
+   "E:Judge Enforcer Retry Build",
+   "E:Alt Judge Enforcer Retry Build",
+   "E:Enforcer Retry Build",
+   "C:R2 Alt Judge Enforcer Retry Build"
+  ],
+  "n": 7,
+  "vers": 3,
+  "per": 11422,
+  "mx": 13388,
+  "tot": 79955,
+  "save": 65517,
+  "keys": [
+   "g",
+   "~P.RESULT=s=>{const m=s.match(/^RESULT\\s*",
+   "~P['ANSWER CHECK']=s=>{const m=s.match(ne",
+   "rr",
+   "judgeText",
+   "~P['CORRECTED RESULT']=s=>{const m=s.matc",
+   "~P['CORRECTED STANDING']=s=>{const m=s.ma",
+   "~P.RETRACTED=s=>{const m=s.match(new RegE",
+   "~a=r.match(new RegExp('^\\\\s*'+SEP+'\\\\s*FA",
+   "sep",
+   "to",
+   "~P['LINK STATE']=s=>{const m=s.match(new ",
+   "~P.CLAUSE=s=>{const m=s.match(/^CLAUSE\\s*",
+   "readLines",
+   "~P.PREMISE=s=>{const t=s.replace(/^premis",
+   "~P.KEYSTONE=s=>{const m=s.match(/^KEYSTON",
+   "~P['CORRECTED COUNT']=s=>{const m=s.match",
+   "~P.RULING=s=>{const m=s.match(new RegExp(",
+   "ent",
+   "~P['CHAIN MARK']=s=>{const m=s.match(/^(D",
+   "gi",
+   "~P.STANDING=s=>{const m=s.match(new RegEx",
+   "~f.grade=g[1];f.gradeRead=g[1]==='FAILS'?",
+   "~if(m[2]!==m[2].toUpperCase())return {why",
+   "~P.STATEMENT=s=>{const m=s.match(/^(STATE",
+   "~return {link:m[1],grade:m[2],ground:gi>=",
+   "~m=r.match(new RegExp('^(.+?)\\\\s*'+SEP+'\\",
+   "~P['OUT-OF-ROUND']=s=>{const m=s.match(/^",
+   "~P.CONCEDED=s=>{const m=s.match(/^(CHALLE",
+   "sen",
+   "~P.SHORT=s=>{const m=s.match(/^SHORT\\s*:\\",
+   "~return {kind:'ledger',verse:m[1].trim(),",
+   "fld",
+   "~for(const k of ORDER){const f=P[k](norm)",
+   "~P.FORCED=s=>{const m=s.match(new RegExp(",
+   "~if(r.form==null&&r.tried&&RESTATABLE.inc",
+   "~P.REPLY=s=>{const m=s.match(/^(?:(SENDBA",
+   "~{const lab=[[/^FORCED\\b/i,'FORCED'],[/^D",
+   "rnd",
+   "normLine",
+   "~if(q){v=q.q;const t=q.rest.search(new Re",
+   "~P['NOT PRESSED']=s=>{const m=s.match(/^N",
+   "~if(lab)return {form:null,tried:lab[1],wh",
+   "~P['RULING PART']=s=>{const m=s.match(/^(",
+   "unescapeOnce",
+   "~else{const t=r.search(new RegExp('\\\\s'+S",
+   "~P.COLLISION=s=>{const m=s.match(new RegE",
+   "~f.grade=g[1];r=r.slice(g[0].length);cons",
+   "quoteAt",
+   "~P['CITATION CHECK']=s=>{const m=s.match(",
+   "~module.exports={norm:normLine,readLine,r",
+   "RESTATABLE",
+   "readLine",
+   "~P.HEADING=s=>{const m=s.match(/^#*\\s*([A",
+   "mv",
+   "~return p?{text:m[1],pair:p[1]+' vs '+p[2",
+   "COL_GRADE",
+   "~P.PRESSED=s=>{if(!/^PRESSED\\s*:/i.test(s",
+   "~return {side:m[1].toUpperCase(),round:m[",
+   "~if(close<0)return null;return {q:seg.sli",
+   "__RL",
+   "~f.breaks=f.meansRound.startsWith('CR')?'",
+   "RES_TAG",
+   "STAND",
+   "~return {form:null,why:'no line form',cod",
+   "readStored",
+   "s0"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Citation Scan",
+   "E:Alt Seated",
+   "E:C1B Build",
+   "E:C1B Extract",
+   "E:D2B Build",
+   "E:D2B Extract",
+   "E:C2B Build",
+   "E:C2B Extract",
+   "E:D3B Build",
+   "E:D3B Extract",
+   "E:C3B Build",
+   "E:C3B Extract",
+   "E:D4B Build",
+   "E:D4B Extract",
+   "E:C4B Build",
+   "E:C4B Extract",
+   "E:Close Enforcer Build",
+   "C:R2 Alt Seated"
+  ],
+  "n": 18,
+  "vers": 11,
+  "per": 3893,
+  "mx": 5308,
+  "tot": 70077,
+  "save": 62069,
+  "keys": [
+   "AB",
+   "__RD",
+   "GIVE",
+   "LINE",
+   "md",
+   "~for(const para of t.split(/(\\n)/)){const",
+   "rebutOk",
+   "~if(!W(R[l.rround]).includes(q))return {o",
+   "~if(!inA(pos))continue;const m=unq(s).mat",
+   "AC",
+   "~if(cur){const end=cur.md?((lv&&lv<=cur.m",
+   "~for(const k of ROUNDS){const t=String(R&",
+   "~if(m){const v=IMP.rebutOk({nar:true,rrou",
+   "~if(!cur&&(lv||bold(l)||/^[\\s>*_-]*\\**\\s*",
+   "so",
+   "AG",
+   "~?{code:'b',name:'BARRED MOVE (b), a requ",
+   "loc",
+   "re",
+   "MARK",
+   "NAR",
+   "~if(at){const tail=t.slice(at.i).split('\\",
+   "move",
+   "unq",
+   "~for(const l of L){const a=off;off+=l.len"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:D3 Build",
+   "E:C3 Build",
+   "E:Build Independent Verdict",
+   "E:Panel Build",
+   "E:Citation Scan",
+   "E:Quote Report",
+   "E:D4 Build",
+   "E:C4 Build",
+   "E:L2 Count Plan"
+  ],
+  "n": 9,
+  "vers": 7,
+  "per": 5281,
+  "mx": 7752,
+  "tot": 47530,
+  "save": 38428,
+  "keys": [
+   "CHL",
+   "~Object.assign(BK,{psalm:'Psalms',song:'S",
+   "BOOKS",
+   "citedLabels",
+   "verses",
+   "namedIn",
+   "citedRounds",
+   "premises",
+   "isVerse",
+   "isNamed",
+   "list",
+   "lastHead",
+   "TAIL",
+   "DEF_RE"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:D1 Build",
+   "E:C1 Build",
+   "E:D2 Build",
+   "E:C2 Build",
+   "E:D3 Build",
+   "E:C3 Build",
+   "E:D4 Build",
+   "E:C4 Build"
+  ],
+  "n": 8,
+  "vers": 8,
+  "per": 5005,
+  "mx": 7291,
+  "tot": 40040,
+  "save": 31549,
+  "keys": [
+   "sys",
+   "call",
+   "__RND",
+   "__SHT",
+   "~if(fam==='openrouter'&&/^anthropic\\//.te",
+   "__DIAGPREV",
+   "__cc",
+   "~if(fam==='gemini')return {systemInstruct",
+   "~if(__SHT){for(let k=msgs.length-1;k>=0;k",
+   "~if(fam==='anthropic')return {model:__AID",
+   "~if(fam==='openrouter'&&/^openai\\//.test(",
+   "FAMS",
+   "~if(fam==='openai')return {model,max_comp",
+   "~if(fam==='openrouter')return {model,max_"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Extract Independent Verdict",
+   "E:Panel Payloads",
+   "E:Cure Build",
+   "E:Cure Normalize",
+   "E:Cure Check",
+   "E:Panel Cure Build 1",
+   "E:Panel Cure Normalize 1",
+   "E:Panel Cure Build 2",
+   "E:Panel Cure Normalize 2",
+   "E:Panel Cure Build 3",
+   "E:Panel Cure Normalize 3",
+   "E:Panel Cure Check",
+   "E:Alternate Build",
+   "E:Alternate Payloads",
+   "E:Alternate Cure Build",
+   "E:Alternate Cure Normalize",
+   "E:Alternate Merge Seat",
+   "E:Judge Enforcer Build",
+   "E:Judge Enforcer Record",
+   "E:Send Back Build",
+   "E:Send Back Record",
+   "E:Gate Build",
+   "E:Gate Record",
+   "E:Alt Judge Enforcer Build",
+   "E:Alt Judge Enforcer Record",
+   "E:Alt Send Back Build",
+   "E:Alt Send Back Record",
+   "E:Alt Gate Build",
+   "E:Alt Gate Record",
+   "E:Alternate Merge 1",
+   "E:C1B Extract",
+   "E:D2B Extract",
+   "E:C2B Extract",
+   "E:D3B Extract",
+   "E:C3B Extract",
+   "E:D4B Extract",
+   "E:C4B Extract",
+   "E:Early Alternate Build",
+   "E:Alternate Merge",
+   "E:Late Gate Build",
+   "E:Alt Late Gate Build",
+   "C:R2 Alternate Build",
+   "C:R2 Alternate Merge Seat",
+   "C:R2 Alt Judge Enforcer Build",
+   "C:R2 Alt Judge Enforcer Record",
+   "C:R2 Alt Send Back Build",
+   "C:R2 Alt Send Back Record",
+   "C:R2 Alt Gate Build",
+   "C:R2 Alt Gate Record",
+   "C:R2 Alt Late Gate Build",
+   "C:R2 Alternate Payloads",
+   "C:R2 Alternate Cure Build",
+   "C:R2 Alternate Cure Normalize",
+   "C:R2 Alternate Merge"
+  ],
+  "n": 54,
+  "vers": 47,
+  "per": 631,
+  "mx": 1179,
+  "tot": 34079,
+  "save": 24800,
+  "keys": [
+   "__LT",
+   "~if(__S.length!==__N)throw new Error('pkg",
+   "__S",
+   "~return await new Function('$','$input','"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Init with Guards",
+   "E:C1 Extract",
+   "E:D2 Build",
+   "E:D2 Extract",
+   "E:C2 Build",
+   "E:C2 Extract",
+   "E:D3 Build",
+   "E:D3 Extract",
+   "E:C3 Build",
+   "E:C3 Extract",
+   "E:Build Synthesis",
+   "E:Build Independent Verdict",
+   "E:Build Save Body",
+   "E:Panel Build",
+   "E:Format Markdown",
+   "E:Citation Scan",
+   "E:Quote Report",
+   "E:D4 Build",
+   "E:D4 Extract",
+   "E:C4 Build",
+   "E:C4 Extract",
+   "E:D2 Lexicon Plan",
+   "E:C2 Lexicon Plan",
+   "E:D3 Lexicon Plan",
+   "E:C3 Lexicon Plan",
+   "E:D4 Lexicon Plan",
+   "E:C4 Lexicon Plan",
+   "E:L2 Lexicon Plan",
+   "E:L2 Count Plan",
+   "E:C4G Extract",
+   "E:C3G Extract",
+   "E:C1B Extract",
+   "E:D2B Extract",
+   "E:C2B Extract",
+   "E:D3B Extract",
+   "E:C3B Extract",
+   "E:D4B Extract",
+   "E:C4B Extract",
+   "E:L2 Gloss Plan"
+  ],
+  "n": 39,
+  "vers": 9,
+  "per": 736,
+  "mx": 1527,
+  "tot": 28700,
+  "save": 21323,
+  "keys": [
+   "REFP",
+   "STOP"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Synthesis",
+   "E:Build Independent Verdict",
+   "E:Build Save Body",
+   "E:Panel Build",
+   "E:Format Markdown",
+   "E:C4 Build"
+  ],
+  "n": 6,
+  "vers": 5,
+  "per": 4450,
+  "mx": 5692,
+  "tot": 26702,
+  "save": 20110,
+  "keys": [
+   "__ogrS",
+   "noteD",
+   "noteL",
+   "bold",
+   "noteR",
+   "REPORT",
+   "OWN",
+   "~for(const p0 of t.split(/\\n[ \\t]*\\n/)){l",
+   "said",
+   "~if(report(s)||OWN.test(s))continue;if(!o",
+   "OS",
+   "~['does not carry',/\\b(?:does|do|did)\\s+n",
+   "QW",
+   "VERD",
+   "~for(const s0 of p.split(/\\n|(?<=[.!?])[\"",
+   "stored",
+   "~['no reading offered',/\\b(?:offered|offe",
+   "LISTH",
+   "report",
+   "~['inference graded',/\\b(?:stands?|rests?",
+   "other",
+   "~['breaks',/\\b(?:breaks?|broke|collapses?",
+   "~if(list){add(s,list);continue;}if(PW.tes",
+   "press",
+   "~['grade word',/\\b(?:CONCEDED|BROKEN|UNEX",
+   "~return {refs,fresh,of,note,ofD,noteD,ren"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Independent Verdict",
+   "E:Panel Build"
+  ],
+  "n": 2,
+  "vers": 2,
+  "per": 19519,
+  "mx": 19519,
+  "tot": 39038,
+  "save": 19219,
+  "keys": [
+   "~return ['PRESSED-WITNESS LEDGER -- compu",
+   "GL",
+   "__R396F",
+   "__RPROVEN",
+   "~return head+ncs+NL+bad.map(i=>i.side+' '",
+   "~return 'premise '+p.n+(p.link?' (LINK '+",
+   "__RL2",
+   "~return 'PRE-CHECK -- decides nothing. Fo",
+   "~return '\\n\\n[CONFIRMED CLOSING CONTRADIC",
+   "citedNotNamed",
+   "__CLN",
+   "~return items.map((it,k)=>{const __tq=[];",
+   "ledger",
+   "~['A verse marked NOT NAMED is unanswered",
+   "~return L.map(r=>'\\n\\n[ANTI-CHEAT CHECK -",
+   "SAN",
+   "~if((__wla&&PRSP&&wlaNamed2024(__wla,k+1,",
+   "lxxLine",
+   "~.concat(sideLines(L.defender,'AGAINST TH",
+   "SLC",
+   "~if(/^\\s*[*_#]*\\s*(?:[A-Z]\\.\\s+)?(?:Answe",
+   "~if(__wla&&P&&wlaNamed2024(__wla,n,P,ks))",
+   "~if(n.length)t+='\\n\\n[CLOSE-ROUND NEW-FOO",
+   "__CGS"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Independent Verdict",
+   "E:Panel Build",
+   "E:C4G Extract",
+   "E:C3G Extract",
+   "E:C1B Extract",
+   "E:D2B Extract",
+   "E:C2B Extract",
+   "E:D3B Extract",
+   "E:C3B Extract",
+   "E:D4B Extract",
+   "E:C4B Extract"
+  ],
+  "n": 11,
+  "vers": 10,
+  "per": 2027,
+  "mx": 2994,
+  "tot": 22294,
+  "save": 17650,
+  "keys": [
+   "__why",
+   "~if(m[7])o.push({raw:l.trim(),round:m[1].",
+   "~for(const h of H){if(L.some(l=>l.round==",
+   "__keep",
+   "~for(const l of N(text).split('\\n')){cons",
+   "lines",
+   "__rec",
+   "~if(f)out.push({kind:'CONTRADICTION',id:'",
+   "~if(__in.error)return __keep('the re-call",
+   "__void",
+   "__X1",
+   "~})()[0].json;}catch(x){return __keep('th",
+   "~for(const h of hits){const at=loc(t,h.se",
+   "__L2",
+   "__k2",
+   "__seat",
+   "__c2",
+   "strike",
+   "__n1",
+   "~return {AB,GIVE,blocks,harvest,items,lin",
+   "~if(!__G||!__G.resend)return __keep((__G&"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Init with Guards",
+   "E:C1 Extract",
+   "E:D2 Extract",
+   "E:C2 Extract",
+   "E:D3 Extract",
+   "E:C3 Extract",
+   "E:Citation Scan",
+   "E:Quote Compare",
+   "E:D4 Extract",
+   "E:C3G Extract",
+   "E:C1B Extract",
+   "E:D2B Extract",
+   "E:C2B Extract",
+   "E:D3B Extract",
+   "E:C3B Extract",
+   "E:D4B Extract"
+  ],
+  "n": 16,
+  "vers": 9,
+  "per": 1248,
+  "mx": 1526,
+  "tot": 19969,
+  "save": 16043,
+  "keys": [
+   "req",
+   "~if(seen.has('Psalms 2:7')||seen.has('Act",
+   "~for(const [g,vs] of G){const [b,c]=g.spl",
+   "plan",
+   "__SP",
+   "url",
+   "~return {url:conds.length?BASE+'&limit=10",
+   "~if(ulen+add>URL_MAX){vs.forEach(v=>off.p"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Independent Verdict",
+   "E:Panel Build",
+   "E:Format Markdown",
+   "E:D4 Build",
+   "E:L2 Count Plan"
+  ],
+  "n": 5,
+  "vers": 4,
+  "per": 4765,
+  "mx": 7938,
+  "tot": 23826,
+  "save": 15138,
+  "keys": [
+   "DRV_TL_STOP",
+   "l2bad",
+   "~for(const q of Q){const aft=R.find(r=>r.",
+   "~for(const r of refs(xw)){const label=((r",
+   "~for(const e of E){const c=classify(e,R,p",
+   "~for(const x of rest.matchAll(/\\[L3\\]\\s*(",
+   "~return {cls:'UNPROVEN',why:bad.length?'i",
+   "~for(const x of rest.matchAll(/\\[L2\\]\\s*(",
+   "~{const ks=r.cvs.map(cv=>(r.book||r.ctx||",
+   "~for(const m of s.matchAll(/(?:^|[\\s(,;:\"",
+   "~if(f&&f.cls==='UNPROVEN'){const k=f.fail",
+   "~return {ok:false,why:'PROVEN IN ['+rk+']",
+   "FLOOR",
+   "~if(!actor){const clause=before.split(/[,",
+   "classify",
+   "classify0",
+   "~if(mi>=0){const after=t.slice(mi).replac",
+   "~for(const m of s.matchAll(/([*_])([^*_\\n",
+   "PERSON",
+   "~return {verses:out,over,proven:out.filte",
+   "parse",
+   "~if(/^[A-Z]/.test(c.actor)&&!/^(he|she|th",
+   "pwi",
+   "subjWords",
+   "START",
+   "lbFoot",
+   "LB_TL",
+   "~while((x=MIND.exec(q.text))){const after",
+   "~if(e.round){const c=refCheck(e.keys,e.ro",
+   "pa",
+   "foot",
+   "~if(first===null){first=r.k;met.add('L1')",
+   "~if(L2.length||L3.length)return {cls:'PRO",
+   "TEXT_SUBJECT",
+   "~for(const m of s.matchAll(LB_TL)){const "
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:C4G Build",
+   "E:C3G Build",
+   "E:C1B Build",
+   "E:D2B Build",
+   "E:C2B Build",
+   "E:D3B Build",
+   "E:C3B Build",
+   "E:D4B Build",
+   "E:C4B Build"
+  ],
+  "n": 9,
+  "vers": 8,
+  "per": 1381,
+  "mx": 1841,
+  "tot": 12428,
+  "save": 9237,
+  "keys": [
+   "~+\"If a sentence only denies a requiremen",
+   "~+\"A sentence that still answers from sil",
+   "~+\"Write your whole round again, the same",
+   "~if(!c.applies)return pass('no round text",
+   "~return [{json:{...C,run_token:X.run_toke",
+   "~if(B.fam==='gemini'){body.contents=(body",
+   "~+c.hits.map(h=>h.id+' ['+h.round+'] \"'+h",
+   "~else{body.messages=(body.messages||[]).c",
+   "~+\"\\nReturn the whole round; this is the ",
+   "~if(body.diagnostics)body.diagnostics={pr"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:D4 Build",
+   "E:C4 Build",
+   "E:C4 Extract",
+   "E:C4G Extract",
+   "E:C4B Extract"
+  ],
+  "n": 5,
+  "vers": 3,
+  "per": 2488,
+  "mx": 3024,
+  "tot": 12439,
+  "save": 8665,
+  "keys": [
+   "__ld",
+   "~for(const l of lines.filter(z=>/^\\s*[-*]",
+   "~if(/^(?:\\s*,?\\s*(?:and\\s+|or\\s+)?(?:set\\",
+   "~return [{json:{run_token:TOK,round:'C4',",
+   "~if(!inRound)res.misquoted.push('G'+x.g+'",
+   "sec",
+   "~for(const x of G){const l=lines.find(z=>",
+   "inRound",
+   "~for(const rk of ['CR1','CR2','CR3','CR4'"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Init with Guards",
+   "E:D1 Build",
+   "E:C1 Build",
+   "E:D2 Build",
+   "E:C2 Build",
+   "E:D3 Build",
+   "E:C3 Build",
+   "E:D4 Build",
+   "E:C4 Build"
+  ],
+  "n": 9,
+  "vers": 1,
+  "per": 1244,
+  "mx": 1244,
+  "tot": 11196,
+  "save": 8602,
+  "keys": [
+   "__PROVE9"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:D3 Build",
+   "E:C3 Build",
+   "E:Build Synthesis",
+   "E:Build Independent Verdict",
+   "E:Build Save Body",
+   "E:Panel Build",
+   "E:Format Markdown",
+   "E:D4 Build",
+   "E:D4 Extract",
+   "E:C4 Build",
+   "E:C4 Extract",
+   "E:C4G Extract",
+   "E:D4B Extract",
+   "E:C4B Extract",
+   "E:Close Enforcer Build",
+   "E:Judge Contradiction Build",
+   "E:Judge Contradiction Record"
+  ],
+  "n": 17,
+  "vers": 5,
+  "per": 642,
+  "mx": 925,
+  "tot": 10918,
+  "save": 7443,
+  "keys": [
+   "refs",
+   "~for(const l of L.slice(1)){const num=/^\\",
+   "~if(!l.trim()||/^\\s+\\S/.test(l)||/^\\s*[-*"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Independent Verdict",
+   "E:Panel Build",
+   "E:Reserve Build"
+  ],
+  "n": 3,
+  "vers": 2,
+  "per": 3914,
+  "mx": 3933,
+  "tot": 11743,
+  "save": 7360,
+  "keys": [
+   "__METHOD_TOP",
+   "__MT",
+   "~if(Array.isArray(o.messages)&&typeof o.m",
+   "~else if(Array.isArray(o.contents)&&o.sys",
+   "~+'\\nEach contested grade you write (BROK",
+   "src",
+   "~return '\\n\\nTHE AGREEMENT YOU ACCEPTED, ",
+   "~for(let i=0;i+1<msgs.length;i++){const m"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:D1 Build",
+   "E:C1 Build",
+   "E:D2 Build",
+   "E:C2 Build",
+   "E:D3 Build",
+   "E:C3 Build",
+   "E:Build Save Body",
+   "E:Panel Done",
+   "E:Format Markdown",
+   "E:Panel Check",
+   "E:Failure Salvage",
+   "E:Panel Tokens",
+   "E:D4 Build",
+   "E:C4 Build",
+   "E:Accept Build",
+   "E:Accept Check",
+   "E:Accept Final",
+   "E:Enforcer Build"
+  ],
+  "n": 18,
+  "vers": 18,
+  "per": 602,
+  "mx": 1088,
+  "tot": 10844,
+  "save": 7056,
+  "keys": [
+   "__L"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:C4 Extract",
+   "E:C4G Extract",
+   "E:C4B Extract"
+  ],
+  "n": 3,
+  "vers": 1,
+  "per": 3009,
+  "mx": 3009,
+  "tot": 9027,
+  "save": 5568,
+  "keys": [
+   "contradictions",
+   "__ogrS2",
+   "grants",
+   "new_press",
+   "~for(const m of t.matchAll(RX)){const ls=",
+   "renumbered"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:C1 Extract",
+   "E:D2 Build",
+   "E:D2 Extract",
+   "E:C2 Build",
+   "E:C2 Extract",
+   "E:D3 Build",
+   "E:D3 Extract",
+   "E:C3 Build",
+   "E:C3 Extract",
+   "E:Build Independent Verdict",
+   "E:Build Save Body",
+   "E:Panel Build",
+   "E:Failure Salvage",
+   "E:D4 Build",
+   "E:D4 Extract",
+   "E:C4 Build",
+   "E:C4 Extract",
+   "E:Accept Check",
+   "E:Accept Final",
+   "E:L2 Count Plan",
+   "E:C4G Extract",
+   "E:C3G Extract",
+   "E:C1B Build",
+   "E:C1B Extract",
+   "E:D2B Build",
+   "E:D2B Extract",
+   "E:C2B Build",
+   "E:C2B Extract",
+   "E:D3B Build",
+   "E:D3B Extract",
+   "E:C3B Build",
+   "E:C3B Extract",
+   "E:D4B Build",
+   "E:D4B Extract",
+   "E:C4B Build",
+   "E:C4B Extract",
+   "E:L2 Gloss Plan"
+  ],
+  "n": 37,
+  "vers": 15,
+  "per": 321,
+  "mx": 809,
+  "tot": 11882,
+  "save": 5523,
+  "keys": [
+   "check"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:QR Ask Build",
+   "E:QR Check",
+   "E:QR Final",
+   "E:QR Merge"
+  ],
+  "n": 4,
+  "vers": 2,
+  "per": 1883,
+  "mx": 1924,
+  "tot": 7533,
+  "save": 5009,
+  "keys": [
+   "QR_C8",
+   "QR_BOOKS",
+   "QR_FRAME",
+   "qrText"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Reread Record",
+   "E:Alt Reread Record",
+   "C:R2 Alt Reread Record"
+  ],
+  "n": 3,
+  "vers": 2,
+  "per": 2602,
+  "mx": 2605,
+  "tot": 7807,
+  "save": 4752,
+  "keys": [
+   "~cure_reason:'SECOND READING of the repla",
+   "~flagged_line:String(x.to).slice(0,1500),",
+   "NCR",
+   "~for(const l0 of txt.replace(/\\\\n/g,'\\n')",
+   "~rows.push({run_token:b.run_token||null,s",
+   "~B.forEach((b,i)=>{let txt='',err=null;tr",
+   "~return [{json:{reread:{skipped:false,cal"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Panel Build",
+   "E:Reserve Build",
+   "E:Accept Build",
+   "E:Accept Check",
+   "E:Accept Return Build",
+   "E:Accept Final",
+   "E:Accept DS Return Build",
+   "E:Close Enforcer Build",
+   "E:Judge Contradiction Build",
+   "E:Assume Check Build"
+  ],
+  "n": 10,
+  "vers": 4,
+  "per": 953,
+  "mx": 3442,
+  "tot": 9532,
+  "save": 4590,
+  "keys": [
+   "PROMPT"
+  ]
+ },
+ {
+  "l2c": true,
+  "ids": [
+   "E:C3 Build",
+   "E:C3 Extract",
+   "E:C3G Extract",
+   "E:C3B Extract"
+  ],
+  "n": 4,
+  "vers": 2,
+  "per": 1630,
+  "mx": 1660,
+  "tot": 6518,
+  "save": 4258,
+  "keys": [
+   "~for(const l of x.slice(pw).split('\\n').s",
+   "sections",
+   "~if(!q){r.missing.push(p.id);continue;}co",
+   "~return [{json:{run_token:TOK,round:'C3',",
+   "~if(!m)continue;const means=m[2].replace(",
+   "~for(const p of P){const s=S[p.n];if(s&&s",
+   "harvest",
+   "quotes",
+   "~for(const x of its){const n=+x.match(/^\\"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:D2B Build",
+   "E:D2B Extract",
+   "E:C2B Build",
+   "E:C2B Extract",
+   "E:D3B Build",
+   "E:D3B Extract",
+   "E:C3B Build",
+   "E:C3B Extract",
+   "E:D4B Build",
+   "E:D4B Extract",
+   "E:C4B Build",
+   "E:C4B Extract"
+  ],
+  "n": 12,
+  "vers": 1,
+  "per": 546,
+  "mx": 546,
+  "tot": 6552,
+  "save": 4206,
+  "keys": [
+   "LAY"
+  ]
+ },
+ {
+  "l2c": true,
+  "ids": [
+   "E:D2 Build",
+   "E:C2 Build",
+   "E:D3 Build",
+   "E:C3 Build",
+   "E:D4 Build",
+   "E:C4 Build"
+  ],
+  "n": 6,
+  "vers": 6,
+  "per": 884,
+  "mx": 919,
+  "tot": 5304,
+  "save": 3485,
+  "keys": [
+   "__L2S",
+   "__KEEP",
+   "~{const __X9=[__PROVE9,__L2S].filter(Bool"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:D3 Extract",
+   "E:C3 Extract",
+   "E:Build Independent Verdict",
+   "E:Build Save Body",
+   "E:Panel Build",
+   "E:Reserve Build",
+   "E:Failure Salvage",
+   "E:C3G Extract",
+   "E:C2B Extract",
+   "E:D3B Extract",
+   "E:C3B Extract"
+  ],
+  "n": 11,
+  "vers": 6,
+  "per": 551,
+  "mx": 922,
+  "tot": 6056,
+  "save": 3484,
+  "keys": [
+   "head",
+   "~if(OTHER.test(h)&&!/\\bLINK\\s+ROUND\\b|\\bR",
+   "OTHER",
+   "LRF"
+  ]
+ },
+ {
+  "l2c": true,
+  "ids": [
+   "E:C2B Extract",
+   "E:D3B Extract",
+   "E:C3B Extract"
+  ],
+  "n": 3,
+  "vers": 1,
+  "per": 1824,
+  "mx": 1824,
+  "tot": 5472,
+  "save": 3198,
+  "keys": [
+   "__CC423",
+   "__LC423",
+   "__A423",
+   "j2",
+   "~if(/^[ \\t]*(?:&|\\+|\\/|,|and\\b|to\\b|-|–|—",
+   "RE",
+   "~if(P.toUpperCase()!==side||max==null||+n"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Synthesis",
+   "E:Build Independent Verdict",
+   "E:Build Diagnostic Prompt"
+  ],
+  "n": 3,
+  "vers": 3,
+  "per": 2523,
+  "mx": 4005,
+  "tot": 7569,
+  "save": 3114,
+  "keys": [
+   "__JFAM2",
+   "__out",
+   "~else if(__fam2==='openrouter'&&/^x-ai\\//",
+   "~if(__fam2==='gemini')__nb={systemInstruc",
+   "~if(!__row2||!__row2.api_model)throw new ",
+   "__bf"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Judge Enforcer Retry Build",
+   "E:Alt Judge Enforcer Retry Build",
+   "E:Enforcer Retry Build",
+   "C:R2 Alt Judge Enforcer Retry Build"
+  ],
+  "n": 4,
+  "vers": 3,
+  "per": 1207,
+  "mx": 1554,
+  "tot": 4827,
+  "save": 2673,
+  "keys": [
+   "~{const txt=String((c.message&&c.message.",
+   "__eplOK",
+   "~if(c.finish_reason==='length')return 'fi",
+   "~[its.slice(0,cut),its.slice(cut)].forEac",
+   "__ri12"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:D1 Build",
+   "E:C1 Build",
+   "E:D2 Build",
+   "E:C2 Build",
+   "E:D3 Build",
+   "E:C3 Build",
+   "E:Build Synthesis",
+   "E:Build Independent Verdict",
+   "E:Build Diagnostic Prompt",
+   "E:Panel Build",
+   "E:Reserve Build",
+   "E:D4 Build",
+   "E:C4 Build",
+   "E:Accept Build"
+  ],
+  "n": 14,
+  "vers": 3,
+  "per": 367,
+  "mx": 442,
+  "tot": 5139,
+  "save": 2597,
+  "keys": [
+   "__orc"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Close Enforcer Record",
+   "E:Judge Contradiction Record"
+  ],
+  "n": 2,
+  "vers": 2,
+  "per": 2579,
+  "mx": 2585,
+  "tot": 5157,
+  "save": 2272,
+  "keys": [
+   "~if(row.earlier_round===P+'4'&&row.closin",
+   "~if(__two)rows.forEach(x=>{if(x.status!==",
+   "cec_log",
+   "RP",
+   "~for(const k in G){const g=G[k];const yes",
+   "~if([row.earlier_q,row.closing_q].some(q="
+  ]
+ },
+ {
+  "l2c": true,
+  "ids": [
+   "E:D2 Lexicon Plan",
+   "E:C2 Lexicon Plan",
+   "E:D3 Lexicon Plan",
+   "E:C3 Lexicon Plan",
+   "E:D4 Lexicon Plan",
+   "E:C4 Lexicon Plan",
+   "E:L2 Lexicon Plan"
+  ],
+  "n": 7,
+  "vers": 7,
+  "per": 563,
+  "mx": 619,
+  "tot": 3938,
+  "save": 2269,
+  "keys": [
+   "ow",
+   "~return (U.length?U:['https://bhffmkgindd"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Save Body",
+   "E:Format Markdown",
+   "E:Regrade Load",
+   "E:Enforcer Build",
+   "E:Alt Seated",
+   "E:Judge Enforcer Retry Build",
+   "E:Alt Judge Enforcer Retry Build",
+   "E:Alternate Merge",
+   "E:Provider Removed Stop",
+   "C:R2 Alt Seated",
+   "C:R2 Alt Judge Enforcer Retry Build"
+  ],
+  "n": 11,
+  "vers": 5,
+  "per": 373,
+  "mx": 559,
+  "tot": 4100,
+  "save": 1891,
+  "keys": [
+   "f"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Library Sha (ASK 422a)",
+   "E:Library Check",
+   "C:Library Check (ASK 422a)"
+  ],
+  "n": 3,
+  "vers": 1,
+  "per": 1133,
+  "mx": 1133,
+  "tot": 3399,
+  "save": 1816,
+  "keys": [
+   "~let [a,b,c,d,e,f,g,h]=H;for(let t=0;t<64",
+   "__SHA422",
+   "__LIBSHA422",
+   "~if(c<0x80)u.push(c);else if(c<0x800)u.pu",
+   "~for(let t=16;t<64;t++){const a=W[t-15],b"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Close Enforcer Build",
+   "E:Close Enforcer Record",
+   "E:Judge Contradiction Build",
+   "E:Judge Contradiction Record"
+  ],
+  "n": 4,
+  "vers": 4,
+  "per": 831,
+  "mx": 1059,
+  "tot": 3325,
+  "save": 1666,
+  "keys": [
+   "cecDlinks",
+   "links",
+   "cecCblocks",
+   "cecDeclared"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:D1 Build",
+   "E:D2 Build"
+  ],
+  "n": 2,
+  "vers": 2,
+  "per": 2334,
+  "mx": 2723,
+  "tot": 4668,
+  "save": 1645,
+  "keys": [
+   "DD"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Reread Build",
+   "E:Alt Reread Build",
+   "C:R2 Alt Reread Build"
+  ],
+  "n": 3,
+  "vers": 3,
+  "per": 1013,
+  "mx": 1016,
+  "tot": 3038,
+  "save": 1572,
+  "keys": [
+   "~if(used+sz>CALL_CHARS&&calls[calls.lengt",
+   "~return C.map((c,ci)=>({json:{rr_skip:fal",
+   "~body:{model,max_tokens:Math.max(Number(J",
+   "JB",
+   "~if(!want.length)return skip(RET.length?'"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Panel Build",
+   "E:QR Final",
+   "E:Enforcer Build",
+   "E:Anticheat Build",
+   "E:Close Enforcer Build",
+   "E:Reread Build",
+   "E:Alt Reread Build",
+   "C:R2 Alt Reread Build"
+  ],
+  "n": 8,
+  "vers": 6,
+  "per": 640,
+  "mx": 2625,
+  "tot": 5119,
+  "save": 1294,
+  "keys": [
+   "SYS"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:D4 Build",
+   "E:C4 Build",
+   "E:C4 Extract",
+   "E:C4G Extract",
+   "E:C4B Extract",
+   "E:Reread Record",
+   "E:Alt Reread Record",
+   "C:R2 Alt Reread Record"
+  ],
+  "n": 8,
+  "vers": 2,
+  "per": 339,
+  "mx": 374,
+  "tot": 2712,
+  "save": 1138,
+  "keys": [
+   "RX"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:FUM Merge Panel 1",
+   "E:FUM Merge Panel 2",
+   "E:FUM Merge Panel 3",
+   "E:FUM Merge Alternate",
+   "E:FUM Merge Cure",
+   "C:FUM Merge R2 Alternate"
+  ],
+  "n": 6,
+  "vers": 6,
+  "per": 403,
+  "mx": 412,
+  "tot": 2420,
+  "save": 1108,
+  "keys": [
+   "~return {json:{fum_done:true,fum_asked:p&",
+   "~return $input.all().map((it,i)=>{let p=n"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Close Enforcer Build",
+   "E:Judge Contradiction Build"
+  ],
+  "n": 2,
+  "vers": 2,
+  "per": 1356,
+  "mx": 1405,
+  "tot": 2711,
+  "save": 1006,
+  "keys": [
+   "cecBlock",
+   "__cb"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Panel Judge 2 openrouter",
+   "E:Panel Judge 3 openrouter",
+   "E:Panel Judge 1 openrouter",
+   "E:Regrade Load"
+  ],
+  "n": 4,
+  "vers": 2,
+  "per": 527,
+  "mx": 630,
+  "tot": 2107,
+  "save": 877,
+  "keys": [
+   "pe",
+   "~else if(j.ppj_slot!==K||j.ppj_provider!=",
+   "~else if(!j.response||typeof j.response!="
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:D1 Build",
+   "E:D1 Extract",
+   "E:C1 Build",
+   "E:C1 Extract",
+   "E:D2 Build",
+   "E:D2 Extract",
+   "E:C2 Build",
+   "E:C2 Extract",
+   "E:D3 Build",
+   "E:D3 Extract",
+   "E:C3 Build",
+   "E:C3 Extract",
+   "E:Build Independent Verdict",
+   "E:Panel Build",
+   "E:D4 Build",
+   "E:D4 Extract",
+   "E:C4 Build",
+   "E:C4 Extract",
+   "E:C4G Extract",
+   "E:C3G Extract",
+   "E:C1B Extract",
+   "E:D2B Extract",
+   "E:C2B Extract",
+   "E:D3B Extract",
+   "E:C3B Extract",
+   "E:D4B Extract",
+   "E:C4B Extract"
+  ],
+  "n": 27,
+  "vers": 10,
+  "per": 190,
+  "mx": 235,
+  "tot": 5141,
+  "save": 856,
+  "keys": [
+   "keys",
+   "I"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Close Enforcer Record",
+   "E:Judge Contradiction Record",
+   "E:Assume Check Record"
+  ],
+  "n": 3,
+  "vers": 3,
+  "per": 668,
+  "mx": 699,
+  "tot": 2003,
+  "save": 854,
+  "keys": [
+   "log",
+   "LN"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Panel Judge 2 openrouter",
+   "E:Panel Judge 3 openrouter",
+   "E:Format Markdown",
+   "E:Panel Judge 1 openrouter",
+   "E:L2 Count Plan",
+   "E:Library Sha (ASK 422a)",
+   "E:Library Check",
+   "C:Library Check (ASK 422a)"
+  ],
+  "n": 8,
+  "vers": 6,
+  "per": 345,
+  "mx": 714,
+  "tot": 2758,
+  "save": 844,
+  "keys": [
+   "K"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:C3 Build",
+   "E:C3 Extract",
+   "E:C3G Extract",
+   "E:C1B Extract",
+   "E:D2B Extract",
+   "E:C2B Extract",
+   "E:D3B Extract",
+   "E:C3B Extract",
+   "E:D4B Extract",
+   "E:C4B Extract"
+  ],
+  "n": 10,
+  "vers": 3,
+  "per": 280,
+  "mx": 515,
+  "tot": 2798,
+  "save": 783,
+  "keys": [
+   "has"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Assume Check Build",
+   "E:Assume Check Record"
+  ],
+  "n": 2,
+  "vers": 2,
+  "per": 1041,
+  "mx": 1053,
+  "tot": 2081,
+  "save": 728,
+  "keys": [
+   "VP4_STOP",
+   "~/* ASK 532 (pkgPFT, plan rev 1, W4): the"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Panel Done",
+   "E:Reserve Build",
+   "E:Failure Salvage",
+   "E:D2 Words Plan",
+   "E:C2 Words Plan",
+   "E:D3 Words Plan",
+   "E:C3 Words Plan",
+   "E:D4 Words Plan",
+   "E:C4 Words Plan",
+   "E:L2 Words Plan",
+   "E:Enforcer Call openrouter",
+   "E:Anticheat Call openrouter",
+   "E:Judge Enforcer Call openrouter",
+   "E:C3G Build",
+   "E:Panel Judges Collect",
+   "E:Close Enforcer Call openrouter",
+   "E:Close Enforcer Record",
+   "E:Assume Check Build",
+   "E:Assume Check Call openrouter",
+   "E:Close Group Retry Build",
+   "E:L2 Gloss Pages Plan"
+  ],
+  "n": 21,
+  "vers": 18,
+  "per": 206,
+  "mx": 467,
+  "tot": 4336,
+  "save": 719,
+  "keys": [
+   "P"
+  ]
+ },
+ {
+  "l2c": true,
+  "ids": [
+   "E:D3 Build",
+   "E:C3 Build",
+   "E:D4 Build",
+   "E:C4 Build"
+  ],
+  "n": 4,
+  "vers": 2,
+  "per": 437,
+  "mx": 441,
+  "tot": 1746,
+  "save": 705,
+  "keys": [
+   "__ZH"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Panel Payloads",
+   "E:Alternate Payloads",
+   "E:Judge Enforcer Build",
+   "C:R2 Alt Judge Enforcer Build",
+   "C:R2 Alternate Payloads"
+  ],
+  "n": 5,
+  "vers": 5,
+  "per": 380,
+  "mx": 452,
+  "tot": 1902,
+  "save": 700,
+  "keys": [
+   "~if(false){$(\"Close Enforcer Record\");$(\""
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:C3 Build",
+   "E:C3 Extract",
+   "E:D4 Build",
+   "E:C4 Build",
+   "E:C4 Extract",
+   "E:C4G Extract",
+   "E:C3G Extract",
+   "E:C1B Build",
+   "E:C1B Extract",
+   "E:D2B Build",
+   "E:D2B Extract",
+   "E:C2B Build",
+   "E:C2B Extract",
+   "E:D3B Build",
+   "E:D3B Extract",
+   "E:C3B Build",
+   "E:C3B Extract",
+   "E:D4B Build",
+   "E:D4B Extract",
+   "E:C4B Build",
+   "E:C4B Extract",
+   "E:Close Enforcer Record",
+   "E:Assume Check Record",
+   "E:Library Sha (ASK 422a)",
+   "E:Library Check",
+   "C:Library Check (ASK 422a)"
+  ],
+  "n": 26,
+  "vers": 8,
+  "per": 190,
+  "mx": 350,
+  "tot": 4938,
+  "save": 688,
+  "keys": [
+   "W"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Panel Build",
+   "E:Accept Check",
+   "E:Accept Final"
+  ],
+  "n": 3,
+  "vers": 1,
+  "per": 546,
+  "mx": 546,
+  "tot": 1638,
+  "save": 642,
+  "keys": [
+   "~if(at<0){const alt=L.findIndex(l=>new Re",
+   "~if(!own){for(let i=at+1;i<L.length;i++){",
+   "~if(al<0){const alt=L.findIndex(l=>/\\bI\\s"
+  ]
+ },
+ {
+  "l2c": true,
+  "ids": [
+   "E:C2 Build",
+   "E:D3 Build"
+  ],
+  "n": 2,
+  "vers": 2,
+  "per": 1026,
+  "mx": 1136,
+  "tot": 2052,
+  "save": 616,
+  "keys": [
+   "__PWFORM9"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Init Seats",
+   "E:Build Save Body",
+   "E:Format Markdown",
+   "E:Accept Build",
+   "E:Enforcer Build",
+   "E:Judge Enforcer Retry Build",
+   "E:Alt Judge Enforcer Retry Build",
+   "C:R2 Alt Judge Enforcer Retry Build"
+  ],
+  "n": 8,
+  "vers": 4,
+  "per": 276,
+  "mx": 398,
+  "tot": 2207,
+  "save": 609,
+  "keys": [
+   "ORDER"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Format Markdown",
+   "E:Citation Scan",
+   "E:QR Final",
+   "E:C1B Extract",
+   "E:D2B Extract",
+   "E:C2B Extract",
+   "E:D3B Extract",
+   "E:C3B Extract",
+   "E:D4B Extract"
+  ],
+  "n": 9,
+  "vers": 4,
+  "per": 324,
+  "mx": 1005,
+  "tot": 2920,
+  "save": 565,
+  "keys": [
+   "rounds"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Enforcer Resend Build",
+   "E:Judge Enforcer Resend Build",
+   "E:Alt Judge Enforcer Resend Build",
+   "C:R2 Alt Judge Enforcer Resend Build"
+  ],
+  "n": 4,
+  "vers": 1,
+  "per": 387,
+  "mx": 387,
+  "tot": 1548,
+  "save": 561,
+  "keys": [
+   "~RB.forEach((h,k)=>{const r=RR[k];const c"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Init Seats",
+   "E:Build Independent Verdict",
+   "E:Panel Build",
+   "E:D4 Build",
+   "E:C4 Build",
+   "E:C4 Extract",
+   "E:C4G Extract",
+   "E:C1B Build",
+   "E:C1B Extract",
+   "E:D2B Build",
+   "E:D2B Extract",
+   "E:C2B Build",
+   "E:C2B Extract",
+   "E:D3B Build",
+   "E:D3B Extract",
+   "E:C3B Build",
+   "E:C3B Extract",
+   "E:D4B Build",
+   "E:D4B Extract",
+   "E:C4B Build",
+   "E:C4B Extract",
+   "E:Alternate Merge",
+   "E:Assume Check Build",
+   "E:L2 Gloss Plan"
+  ],
+  "n": 24,
+  "vers": 9,
+  "per": 186,
+  "mx": 345,
+  "tot": 4455,
+  "save": 510,
+  "keys": [
+   "q"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Plain Rule Lines",
+   "E:Quote Report",
+   "E:Reread Build",
+   "E:Alt Reread Build",
+   "C:R2 Alt Reread Build"
+  ],
+  "n": 5,
+  "vers": 3,
+  "per": 347,
+  "mx": 494,
+  "tot": 1737,
+  "save": 493,
+  "keys": [
+   "HEAD"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:QR Check",
+   "E:QR Final"
+  ],
+  "n": 2,
+  "vers": 1,
+  "per": 759,
+  "mx": 759,
+  "tot": 1518,
+  "save": 459,
+  "keys": [
+   "__qe"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Synthesis",
+   "E:Build Independent Verdict",
+   "E:Panel Build",
+   "E:Format Markdown",
+   "E:D4 Build",
+   "E:D4 Extract",
+   "E:C4 Build",
+   "E:D4B Extract"
+  ],
+  "n": 8,
+  "vers": 2,
+  "per": 272,
+  "mx": 535,
+  "tot": 2174,
+  "save": 439,
+  "keys": [
+   "U"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Init with Guards",
+   "E:Build Save Body",
+   "E:Format Markdown",
+   "E:Regrade Load",
+   "E:Enforcer Build",
+   "E:Judge Enforcer Retry Build",
+   "E:Alt Judge Enforcer Retry Build",
+   "C:R2 Alt Judge Enforcer Retry Build"
+  ],
+  "n": 8,
+  "vers": 2,
+  "per": 233,
+  "mx": 255,
+  "tot": 1860,
+  "save": 405,
+  "keys": [
+   "rs"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:D3 Build",
+   "E:C3 Build",
+   "E:Build Independent Verdict",
+   "E:Panel Build",
+   "E:Citation Scan",
+   "E:Quote Report",
+   "E:D4 Build",
+   "E:C4 Build",
+   "E:C1B Build",
+   "E:C1B Extract",
+   "E:D2B Build",
+   "E:D2B Extract",
+   "E:C2B Build",
+   "E:C2B Extract",
+   "E:D3B Build",
+   "E:D3B Extract",
+   "E:C3B Build",
+   "E:C3B Extract",
+   "E:D4B Build",
+   "E:D4B Extract",
+   "E:C4B Build",
+   "E:C4B Extract"
+  ],
+  "n": 22,
+  "vers": 3,
+  "per": 179,
+  "mx": 243,
+  "tot": 3944,
+  "save": 401,
+  "keys": [
+   "key"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Independent Verdict",
+   "E:Panel Build",
+   "E:Accept Build",
+   "E:QR Check",
+   "E:Enforcer Build",
+   "E:Panel Judges Prep",
+   "E:Close Enforcer Build",
+   "E:Judge Contradiction Build",
+   "E:Assume Check Build"
+  ],
+  "n": 9,
+  "vers": 8,
+  "per": 239,
+  "mx": 420,
+  "tot": 2152,
+  "save": 382,
+  "keys": [
+   "body"
+  ]
+ },
+ {
+  "l2c": true,
+  "ids": [
+   "E:D2B Extract",
+   "E:C2B Extract",
+   "E:D3B Extract",
+   "E:D4B Extract"
+  ],
+  "n": 4,
+  "vers": 1,
+  "per": 327,
+  "mx": 327,
+  "tot": 1308,
+  "save": 381,
+  "keys": [
+   "~return [{json:{...__K,raw:__S.raw+__BC,l"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Synthesis",
+   "E:Build Independent Verdict",
+   "E:Build Save Body",
+   "E:Panel Build",
+   "E:Format Markdown",
+   "E:D4 Extract",
+   "E:C4 Extract",
+   "E:Anticheat Record",
+   "E:C4G Extract",
+   "E:D4B Extract",
+   "E:C4B Extract",
+   "E:Library Sha (ASK 422a)",
+   "E:Library Check",
+   "C:Library Check (ASK 422a)"
+  ],
+  "n": 14,
+  "vers": 3,
+  "per": 197,
+  "mx": 296,
+  "tot": 2762,
+  "save": 366,
+  "keys": [
+   "H"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Accept Return Build",
+   "E:Accept Final",
+   "E:Accept DS Return Build",
+   "E:Reread Build",
+   "E:Alt Reread Build",
+   "C:R2 Alt Reread Build"
+  ],
+  "n": 6,
+  "vers": 2,
+  "per": 276,
+  "mx": 422,
+  "tot": 1656,
+  "save": 334,
+  "keys": [
+   "RET"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Save Body",
+   "E:Panel Build",
+   "E:Quote Compare",
+   "E:Anticheat Record",
+   "E:L2 Gloss Plan"
+  ],
+  "n": 5,
+  "vers": 5,
+  "per": 378,
+  "mx": 840,
+  "tot": 1892,
+  "save": 302,
+  "keys": [
+   "parts"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Enforcer Build",
+   "E:Anticheat Build",
+   "E:Close Enforcer Build",
+   "E:Judge Contradiction Build",
+   "E:Assume Check Build",
+   "E:Assume Check Record"
+  ],
+  "n": 6,
+  "vers": 4,
+  "per": 341,
+  "mx": 886,
+  "tot": 2043,
+  "save": 257,
+  "keys": [
+   "ds"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Independent Verdict",
+   "E:Panel Build",
+   "E:D4 Build",
+   "E:QR Merge",
+   "E:Close Enforcer Build",
+   "E:Assume Check Record"
+  ],
+  "n": 6,
+  "vers": 4,
+  "per": 246,
+  "mx": 366,
+  "tot": 1476,
+  "save": 210,
+  "keys": [
+   "Q"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Format Markdown",
+   "E:Panel Tokens"
+  ],
+  "n": 2,
+  "vers": 1,
+  "per": 495,
+  "mx": 495,
+  "tot": 990,
+  "save": 195,
+  "keys": [
+   "__A379"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Independent Verdict",
+   "E:Panel Build",
+   "E:Alternate Merge",
+   "E:L2 Gloss Plan"
+  ],
+  "n": 4,
+  "vers": 3,
+  "per": 297,
+  "mx": 453,
+  "tot": 1186,
+  "save": 133,
+  "keys": [
+   "GR"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "C:R2 Alt Send Back Build",
+   "C:R2 Alt Send Back Record",
+   "C:R2 Alt Gate Record",
+   "C:R2 Alt Late Gate Build"
+  ],
+  "n": 4,
+  "vers": 4,
+  "per": 291,
+  "mx": 443,
+  "tot": 1165,
+  "save": 122,
+  "keys": [
+   "~if(false){$(\"Cited Verses\");$(\"L2 Lexico"
+  ]
+ },
+ {
+  "l2c": true,
+  "ids": [
+   "E:D4 Build",
+   "E:D4 Extract",
+   "E:D4B Extract"
+  ],
+  "n": 3,
+  "vers": 2,
+  "per": 343,
+  "mx": 458,
+  "tot": 1030,
+  "save": 122,
+  "keys": [
+   "~return [{json:{run_token:TOK,round:'D4',"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Format Markdown",
+   "E:Enforcer Build",
+   "E:Anticheat Build"
+  ],
+  "n": 3,
+  "vers": 3,
+  "per": 1671,
+  "mx": 4444,
+  "tot": 5012,
+  "save": 118,
+  "keys": [
+   "RULES"
+  ]
+ },
+ {
+  "l2c": true,
+  "ids": [
+   "E:D4 Extract",
+   "E:D4B Extract"
+  ],
+  "n": 2,
+  "vers": 1,
+  "per": 411,
+  "mx": 411,
+  "tot": 822,
+  "save": 111,
+  "keys": [
+   "new_in_close"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Panel Build",
+   "E:Reserve Build"
+  ],
+  "n": 2,
+  "vers": 2,
+  "per": 407,
+  "mx": 408,
+  "tot": 814,
+  "save": 106,
+  "keys": [
+   "~else if(j.fam==='openrouter'&&/^x-ai\\//."
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Save Body",
+   "E:Citation Scan",
+   "E:L2 Count Plan",
+   "E:Assume Check Record"
+  ],
+  "n": 4,
+  "vers": 4,
+  "per": 296,
+  "mx": 490,
+  "tot": 1185,
+  "save": 95,
+  "keys": [
+   "qs"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Save Body",
+   "E:Format Markdown"
+  ],
+  "n": 2,
+  "vers": 1,
+  "per": 387,
+  "mx": 387,
+  "tot": 774,
+  "save": 87,
+  "keys": [
+   "listCount"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Format Markdown",
+   "E:Judge Enforcer Retry Build",
+   "E:Alt Judge Enforcer Retry Build",
+   "E:Enforcer Retry Build",
+   "C:R2 Alt Judge Enforcer Retry Build"
+  ],
+  "n": 5,
+  "vers": 3,
+  "per": 219,
+  "mx": 264,
+  "tot": 1096,
+  "save": 82,
+  "keys": [
+   "why"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Alt Judge Enforcer Record",
+   "E:Alt Send Back Build"
+  ],
+  "n": 2,
+  "vers": 2,
+  "per": 419,
+  "mx": 458,
+  "tot": 837,
+  "save": 79,
+  "keys": [
+   "~if(false){$(\"Alt Judge Enforcer Build\");"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Independent Verdict",
+   "E:Build Save Body",
+   "E:Panel Build",
+   "E:L2 Count Plan",
+   "E:QR Check",
+   "E:QR Final",
+   "E:Judge Enforcer Retry Build",
+   "E:Alt Judge Enforcer Retry Build",
+   "E:Alternate Merge",
+   "C:R2 Alt Judge Enforcer Retry Build"
+  ],
+  "n": 10,
+  "vers": 6,
+  "per": 180,
+  "mx": 229,
+  "tot": 1800,
+  "save": 71,
+  "keys": [
+   "own"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Save Body",
+   "E:C4 Build",
+   "E:QR Merge"
+  ],
+  "n": 3,
+  "vers": 3,
+  "per": 325,
+  "mx": 457,
+  "tot": 975,
+  "save": 68,
+  "keys": [
+   "block"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Save Body",
+   "E:Failure Salvage"
+  ],
+  "n": 2,
+  "vers": 1,
+  "per": 322,
+  "mx": 322,
+  "tot": 644,
+  "save": 22,
+  "keys": [
+   "audit"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Retrieval Check",
+   "E:Panel Failure Note",
+   "E:Judge Enforcer Retry Build",
+   "E:Alt Judge Enforcer Retry Build",
+   "C:R2 Alt Judge Enforcer Retry Build"
+  ],
+  "n": 5,
+  "vers": 3,
+  "per": 195,
+  "mx": 220,
+  "tot": 977,
+  "save": 7,
+  "keys": [
+   "msg"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Format Markdown",
+   "E:Close Enforcer Build"
+  ],
+  "n": 2,
+  "vers": 2,
+  "per": 378,
+  "mx": 449,
+  "tot": 755,
+  "save": 6,
+  "keys": [
+   "SM"
+  ]
+ },
+ {
+  "l2c": true,
+  "ids": [
+   "E:D4 Build",
+   "E:C4 Build"
+  ],
+  "n": 2,
+  "vers": 2,
+  "per": 341,
+  "mx": 380,
+  "tot": 681,
+  "save": 1,
+  "keys": [
+   "G1CL"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Close Enforcer Build",
+   "E:Judge Contradiction Build",
+   "E:Assume Check Build"
+  ],
+  "n": 3,
+  "vers": 3,
+  "per": 220,
+  "mx": 223,
+  "tot": 659,
+  "save": -14,
+  "keys": [
+   "~}catch(__e){let __rt=null;try{__rt=$('In"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Second Alternate?",
+   "E:Alternate Merge",
+   "E:Close Enforcer Build"
+  ],
+  "n": 3,
+  "vers": 3,
+  "per": 242,
+  "mx": 301,
+  "tot": 725,
+  "save": -26,
+  "keys": [
+   "R1"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Accept Check",
+   "E:Accept Final",
+   "E:Enforcer Record"
+  ],
+  "n": 3,
+  "vers": 2,
+  "per": 208,
+  "mx": 222,
+  "tot": 624,
+  "save": -48,
+  "keys": [
+   "env"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:D3 Build",
+   "E:C3 Build",
+   "E:Build Independent Verdict",
+   "E:Panel Build",
+   "E:Format Markdown",
+   "E:Quote Report",
+   "E:Panel Check",
+   "E:D4 Build",
+   "E:C4 Build"
+  ],
+  "n": 9,
+  "vers": 6,
+  "per": 174,
+  "mx": 273,
+  "tot": 1565,
+  "save": -58,
+  "keys": [
+   "items"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Independent Verdict",
+   "E:Build Save Body",
+   "E:Panel Build"
+  ],
+  "n": 3,
+  "vers": 2,
+  "per": 200,
+  "mx": 225,
+  "tot": 599,
+  "save": -76,
+  "keys": [
+   "first"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:L2 Count Plan",
+   "E:QR Check",
+   "E:QR Final",
+   "E:Assume Check Record"
+  ],
+  "n": 4,
+  "vers": 4,
+  "per": 306,
+  "mx": 704,
+  "tot": 1224,
+  "save": -80,
+  "keys": [
+   "rd"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Close Enforcer Build",
+   "E:Close Enforcer Record",
+   "E:Judge Contradiction Record"
+  ],
+  "n": 3,
+  "vers": 2,
+  "per": 197,
+  "mx": 230,
+  "tot": 592,
+  "save": -88,
+  "keys": [
+   "seen"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:D2B Build",
+   "E:D3B Build",
+   "E:D4B Build"
+  ],
+  "n": 3,
+  "vers": 1,
+  "per": 179,
+  "mx": 179,
+  "tot": 537,
+  "save": -92,
+  "keys": [
+   "~try{__lc=LAY.check(X.raw,undefined,{orac"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Enforcer Build",
+   "E:C4G Build",
+   "E:Close Enforcer Build",
+   "E:L2 Gloss Plan"
+  ],
+  "n": 4,
+  "vers": 4,
+  "per": 200,
+  "mx": 292,
+  "tot": 798,
+  "save": -94,
+  "keys": [
+   "G"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Enforcer Call openrouter",
+   "E:Anticheat Call openrouter",
+   "E:Judge Enforcer Call openrouter",
+   "E:Close Enforcer Call openrouter",
+   "E:Assume Check Call openrouter"
+  ],
+  "n": 5,
+  "vers": 5,
+  "per": 156,
+  "mx": 156,
+  "tot": 780,
+  "save": -126,
+  "keys": [
+   "~return $input.all().map((x,i)=>{const k="
+  ]
+ },
+ {
+  "l2c": true,
+  "ids": [
+   "E:D3 Build",
+   "E:D3 Extract",
+   "E:D3B Extract"
+  ],
+  "n": 3,
+  "vers": 2,
+  "per": 182,
+  "mx": 223,
+  "tot": 545,
+  "save": -128,
+  "keys": [
+   "~return [{json:{run_token:TOK,round:'D3',"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:C1 Build",
+   "E:C1 Extract",
+   "E:C1B Extract"
+  ],
+  "n": 3,
+  "vers": 2,
+  "per": 176,
+  "mx": 211,
+  "tot": 527,
+  "save": -134,
+  "keys": [
+   "~return [{json:{run_token:TOK,round:'C1',"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Synthesis Normalizer",
+   "E:Diagnostic Normalizer",
+   "E:Verdict Normalizer"
+  ],
+  "n": 3,
+  "vers": 1,
+  "per": 154,
+  "mx": 154,
+  "tot": 462,
+  "save": -142,
+  "keys": [
+   "~return [{json:{choices:[{message:{role:'"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Accept Build",
+   "E:Accept Check",
+   "E:Accept Final"
+  ],
+  "n": 3,
+  "vers": 1,
+  "per": 151,
+  "mx": 151,
+  "tot": 453,
+  "save": -148,
+  "keys": [
+   "__SRC"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:C4G Extract",
+   "E:C3G Extract",
+   "E:C3B Extract",
+   "E:C4B Extract"
+  ],
+  "n": 4,
+  "vers": 4,
+  "per": 149,
+  "mx": 149,
+  "tot": 594,
+  "save": -155,
+  "keys": [
+   "__f"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:L2 Count Plan",
+   "E:Judge Enforcer Retry Build",
+   "E:Alt Judge Enforcer Retry Build",
+   "E:L2 Gloss Pages Plan",
+   "C:R2 Alt Judge Enforcer Retry Build"
+  ],
+  "n": 5,
+  "vers": 2,
+  "per": 148,
+  "mx": 152,
+  "tot": 742,
+  "save": -160,
+  "keys": [
+   "tot"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:D3 Build",
+   "E:C3 Build",
+   "E:Build Independent Verdict",
+   "E:Build Save Body",
+   "E:Panel Build",
+   "E:D4 Build",
+   "E:C4 Build",
+   "E:Close Enforcer Record",
+   "E:Judge Contradiction Record"
+  ],
+  "n": 9,
+  "vers": 5,
+  "per": 165,
+  "mx": 293,
+  "tot": 1482,
+  "save": -161,
+  "keys": [
+   "side"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:C3 Extract",
+   "E:C3G Extract",
+   "E:C3B Extract",
+   "E:Assume Check Build",
+   "E:Assume Check Record"
+  ],
+  "n": 5,
+  "vers": 3,
+  "per": 156,
+  "mx": 194,
+  "tot": 780,
+  "save": -164,
+  "keys": [
+   "presses"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:D1 Build",
+   "E:C1 Build",
+   "E:D2 Build",
+   "E:C2 Build",
+   "E:D3 Build",
+   "E:D4 Build"
+  ],
+  "n": 6,
+  "vers": 2,
+  "per": 145,
+  "mx": 146,
+  "tot": 867,
+  "save": -179,
+  "keys": [
+   "__mk"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Independent Verdict",
+   "E:Panel Build",
+   "E:D4 Build",
+   "E:L2 Count Plan",
+   "E:Anticheat Build"
+  ],
+  "n": 5,
+  "vers": 3,
+  "per": 139,
+  "mx": 175,
+  "tot": 693,
+  "save": -232,
+  "keys": [
+   "keysOf"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Independent Verdict",
+   "E:Panel Build",
+   "E:Citation Scan",
+   "E:D4 Build",
+   "E:L2 Count Plan"
+  ],
+  "n": 5,
+  "vers": 3,
+  "per": 120,
+  "mx": 153,
+  "tot": 599,
+  "save": -304,
+  "keys": [
+   "pr"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:C3 Build",
+   "E:C3 Extract",
+   "E:Build Save Body",
+   "E:C3G Extract",
+   "E:C3B Extract",
+   "E:Enforcer Retry Build",
+   "E:Assume Check Build"
+  ],
+  "n": 7,
+  "vers": 3,
+  "per": 130,
+  "mx": 169,
+  "tot": 913,
+  "save": -306,
+  "keys": [
+   "its"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Independent Verdict",
+   "E:Build Save Body",
+   "E:Panel Build",
+   "E:D4 Build",
+   "E:Anticheat Build"
+  ],
+  "n": 5,
+  "vers": 3,
+  "per": 127,
+  "mx": 201,
+  "tot": 637,
+  "save": -314,
+  "keys": [
+   "REF"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:D2B Build",
+   "E:C2B Build",
+   "E:D3B Build",
+   "E:C3B Build",
+   "E:D4B Build",
+   "E:C4B Build",
+   "E:Library Sha (ASK 422a)",
+   "E:Library Check"
+  ],
+  "n": 8,
+  "vers": 8,
+  "per": 129,
+  "mx": 155,
+  "tot": 1035,
+  "save": -320,
+  "keys": [
+   "__lc"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Quote Report",
+   "E:QR Final",
+   "E:Close Enforcer Build",
+   "E:Reread Build",
+   "E:Alt Reread Build",
+   "C:R2 Alt Reread Build"
+  ],
+  "n": 6,
+  "vers": 4,
+  "per": 162,
+  "mx": 395,
+  "tot": 971,
+  "save": -324,
+  "keys": [
+   "C"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Resolve Seats",
+   "E:Panel Build",
+   "E:Alt Seated",
+   "E:Assume Check Record",
+   "C:R2 Alt Seated"
+  ],
+  "n": 5,
+  "vers": 4,
+  "per": 116,
+  "mx": 159,
+  "tot": 582,
+  "save": -327,
+  "keys": [
+   "judges"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Save Body",
+   "E:Regrade Load",
+   "E:Replay Rows",
+   "E:L2 Count Plan",
+   "E:Enforcer Build",
+   "E:Close Enforcer Record",
+   "E:Judge Contradiction Record"
+  ],
+  "n": 7,
+  "vers": 6,
+  "per": 148,
+  "mx": 321,
+  "tot": 1039,
+  "save": -332,
+  "keys": [
+   "rows"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Independent Verdict",
+   "E:Panel Build",
+   "E:Quote Compare",
+   "E:Quote Report",
+   "E:D4 Build"
+  ],
+  "n": 5,
+  "vers": 3,
+  "per": 117,
+  "mx": 196,
+  "tot": 583,
+  "save": -363,
+  "keys": [
+   "words"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Anticheat Build",
+   "E:Anticheat Record",
+   "E:Close Enforcer Build",
+   "E:Close Enforcer Record",
+   "E:Judge Contradiction Build",
+   "E:Judge Contradiction Record",
+   "E:Assume Check Build"
+  ],
+  "n": 7,
+  "vers": 1,
+  "per": 104,
+  "mx": 104,
+  "tot": 728,
+  "save": -426,
+  "keys": [
+   "RGL"
+  ]
+ },
+ {
+  "l2c": true,
+  "ids": [
+   "E:D3 Extract",
+   "E:C3 Extract",
+   "E:C3G Extract",
+   "E:D3B Extract",
+   "E:C3B Extract"
+  ],
+  "n": 5,
+  "vers": 1,
+  "per": 78,
+  "mx": 78,
+  "tot": 390,
+  "save": -438,
+  "keys": [
+   "link_format"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Format Markdown",
+   "E:D4 Build",
+   "E:C4 Build",
+   "E:C4 Extract",
+   "E:Anticheat Record",
+   "E:C4G Extract",
+   "E:C4B Extract"
+  ],
+  "n": 7,
+  "vers": 3,
+  "per": 106,
+  "mx": 137,
+  "tot": 743,
+  "save": -444,
+  "keys": [
+   "N"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Independent Verdict",
+   "E:Build Save Body",
+   "E:Panel Build",
+   "E:Format Markdown",
+   "E:D4 Build",
+   "E:Enforcer Build",
+   "E:Judge Enforcer Retry Build",
+   "E:Alt Judge Enforcer Retry Build",
+   "C:R2 Alt Judge Enforcer Retry Build"
+  ],
+  "n": 9,
+  "vers": 2,
+  "per": 99,
+  "mx": 100,
+  "tot": 891,
+  "save": -559,
+  "keys": [
+   "RND"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Build Synthesis",
+   "E:Build Independent Verdict",
+   "E:Build Save Body",
+   "E:Panel Build",
+   "E:Format Markdown",
+   "E:D4 Extract",
+   "E:D4B Extract"
+  ],
+  "n": 7,
+  "vers": 1,
+  "per": 76,
+  "mx": 76,
+  "tot": 532,
+  "save": -594,
+  "keys": [
+   "ofD"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Citation Scan",
+   "E:Salvage Stop",
+   "E:Anticheat Build",
+   "E:Anticheat Record",
+   "E:Alt Seated",
+   "E:Panel Judges Collect",
+   "E:Close Enforcer Build",
+   "E:Close Enforcer Record",
+   "E:Judge Contradiction Build",
+   "E:Judge Contradiction Record",
+   "E:Assume Check Build",
+   "C:R2 Alt Seated"
+  ],
+  "n": 12,
+  "vers": 6,
+  "per": 111,
+  "mx": 287,
+  "tot": 1331,
+  "save": -756,
+  "keys": [
+   "F"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:C1B Build",
+   "E:C1B Extract",
+   "E:D2B Build",
+   "E:D2B Extract",
+   "E:C2B Build",
+   "E:C2B Extract",
+   "E:D3B Build",
+   "E:D3B Extract",
+   "E:C3B Build",
+   "E:C3B Extract",
+   "E:D4B Build",
+   "E:D4B Extract",
+   "E:C4B Build",
+   "E:C4B Extract",
+   "E:Reread Build",
+   "E:Alt Reread Build",
+   "C:R2 Alt Reread Build"
+  ],
+  "n": 17,
+  "vers": 2,
+  "per": 114,
+  "mx": 252,
+  "tot": 1946,
+  "save": -856,
+  "keys": [
+   "blocks"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:D1 Extract",
+   "E:C1 Extract",
+   "E:D2 Extract",
+   "E:C2 Extract",
+   "E:D3 Extract",
+   "E:C3 Extract",
+   "E:D4 Extract",
+   "E:C4 Extract",
+   "E:Accept Check",
+   "E:C4G Extract",
+   "E:C3G Extract",
+   "E:C1B Extract",
+   "E:D2B Extract",
+   "E:C2B Extract",
+   "E:D3B Extract",
+   "E:C3B Extract",
+   "E:D4B Extract",
+   "E:C4B Extract",
+   "E:Judge Enforcer Retry Build",
+   "E:Alt Judge Enforcer Retry Build",
+   "E:Enforcer Retry Build",
+   "E:Judge Contradiction Record",
+   "E:Reread Record",
+   "E:Alt Reread Record",
+   "C:R2 Alt Reread Record",
+   "C:R2 Alt Judge Enforcer Retry Build"
+  ],
+  "n": 26,
+  "vers": 26,
+  "per": 125,
+  "mx": 277,
+  "tot": 3250,
+  "save": -927,
+  "keys": [
+   "B"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "C:Accept Final",
+   "C:Assume Check Record",
+   "C:Build Save Body",
+   "C:Cited Verses",
+   "C:Close Enforcer Record",
+   "C:Cure Check",
+   "C:Enforcer Record",
+   "C:Fetch Models",
+   "C:Final Output",
+   "C:Gate Record",
+   "C:Init Seats",
+   "C:Judge Contradiction Record",
+   "C:Judge Enforcer Record",
+   "C:L2 Count Plan",
+   "C:L2 Lexicon",
+   "C:L2 Words",
+   "C:Panel Build",
+   "C:Panel Check",
+   "C:Panel Cure Call 1 openrouter",
+   "C:Panel Cure Call 2 openrouter",
+   "C:Panel Cure Call 3 openrouter",
+   "C:Panel Cure Check",
+   "C:Panel Cure Normalize 1",
+   "C:Panel Cure Normalize 2",
+   "C:Panel Cure Normalize 3",
+   "C:Panel Judge 1 openrouter",
+   "C:Panel Judge 2 openrouter",
+   "C:Panel Judge 3 openrouter",
+   "C:Panel Payloads",
+   "C:Panel Reserve openrouter",
+   "C:Quote Report",
+   "C:Regrade Load",
+   "C:Regrade Row",
+   "C:Reread Record",
+   "C:Reserve Build",
+   "C:Resolve Seats",
+   "C:Send Back Record"
+  ],
+  "n": 37,
+  "vers": 37,
+  "per": 97,
+  "mx": 108,
+  "tot": 3575,
+  "save": -2083,
+  "keys": [
+   "~return $('Alternate Pass In').first().js"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:C1 Extract",
+   "E:D2 Build",
+   "E:D2 Extract",
+   "E:C2 Build",
+   "E:C2 Extract",
+   "E:D3 Build",
+   "E:D3 Extract",
+   "E:C3 Build",
+   "E:C3 Extract",
+   "E:D4 Build",
+   "E:D4 Extract",
+   "E:C4 Build",
+   "E:D2 Lexicon Plan",
+   "E:C2 Lexicon Plan",
+   "E:D3 Lexicon Plan",
+   "E:C3 Lexicon Plan",
+   "E:D4 Lexicon Plan",
+   "E:C4 Lexicon Plan",
+   "E:L2 Lexicon Plan",
+   "E:L2 Count Plan",
+   "E:C4G Build",
+   "E:C3G Build",
+   "E:C3G Extract",
+   "E:C1B Build",
+   "E:C1B Extract",
+   "E:D2B Build",
+   "E:D2B Extract",
+   "E:C2B Build",
+   "E:C2B Extract",
+   "E:D3B Build",
+   "E:D3B Extract",
+   "E:C3B Build",
+   "E:C3B Extract",
+   "E:D4B Build",
+   "E:D4B Extract",
+   "E:C4B Build",
+   "E:L2 Gloss Plan"
+  ],
+  "n": 37,
+  "vers": 10,
+  "per": 96,
+  "mx": 111,
+  "tot": 3548,
+  "save": -2113,
+  "keys": [
+   "X"
+  ]
+ },
+ {
+  "l2c": false,
+  "ids": [
+   "E:Init Seats",
+   "E:Resolve Seats",
+   "E:Retrieval Check",
+   "E:Init with Guards",
+   "E:D1 Build",
+   "E:D1 Extract",
+   "E:C1 Build",
+   "E:C1 Extract",
+   "E:D2 Build",
+   "E:D2 Extract",
+   "E:C2 Build",
+   "E:C2 Extract",
+   "E:D3 Build",
+   "E:D3 Extract",
+   "E:C3 Build",
+   "E:C3 Extract",
+   "E:Build Synthesis",
+   "E:Final Output",
+   "E:Extract Diagnostic",
+   "E:Build Save Body",
+   "E:Check Save",
+   "E:Panel Build",
+   "E:Panel Done",
+   "E:Stop: Call Failed",
+   "E:Synthesis Normalizer",
+   "E:Diagnostic Normalizer",
+   "E:Verdict Normalizer",
+   "E:Panel Check",
+   "E:Reserve Build",
+   "E:D4 Build",
+   "E:D4 Extract",
+   "E:C4 Build",
+   "E:C4 Extract",
+   "E:C4G Extract",
+   "E:C3G Extract",
+   "E:C1B Extract",
+   "E:D2B Extract",
+   "E:C2B Extract",
+   "E:D3B Extract",
+   "E:C3B Extract",
+   "E:D4B Extract",
+   "E:C4B Extract"
+  ],
+  "n": 42,
+  "vers": 2,
+  "per": 77,
+  "mx": 116,
+  "tot": 3232,
+  "save": -3184,
+  "keys": [
+   "TOK"
+  ]
+ }
+]
