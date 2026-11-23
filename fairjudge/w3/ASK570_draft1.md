@@ -28,7 +28,7 @@ Turning it live would stop pushes that enforce ruling 372 (33 of 61) and the ass
 Restore both Shared Libraries from the pre-write export; compare md5 per node; Library Check passes in both.
 
 ## 5. Test
-1. Offline, the changed expression against the live one (script t570.js), with EPS_STATUS 'TRIAL': a second-kind note gives a reason that begins "ENFORCER HELD (pkgEPS, not sent; W3 2842: the push counts the premise on this judge s ANSWER CHECK on ..."; a first-kind note and a third-kind note give text identical to the live code. With 'LIVE' both codes are identical. Already run: all four as stated.
+1. Offline, the changed expression against the live one (script t570.js), with EPS_STATUS 'TRIAL': a second-kind note gives a reason that begins "ENFORCER HELD (pkgEPS, not sent; W3 2842: the push counts the premise on this judge's ANSWER CHECK on ..."; a first-kind note and a third-kind note give text identical to the live code. With 'LIVE' both codes are identical. Already run: all four as stated.
 2. By SQL on the 100 stored trial notes: the pattern matches 39 and does not match 61. Already run: 39, 61, 0 other.
 3. For W4's harness, on the stored enforcer replies of run 41822: row 52813's push is stored HELD and is not in the send-back; rows 52468, 52469, 52470, 52477, 52479 are stored and sent exactly as today. I have not run the send-back path; I read only that the other packages (pkgEAW, pkgEAX, pkgECW) use the same "ENFORCER HELD" prefix to keep a row out of the send-back.
 4. Library Check passes in engine and child; every other node keeps its md5.
