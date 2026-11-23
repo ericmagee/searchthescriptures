@@ -1,0 +1,1 @@
+  out.ren={};for(const n of Object.keys(REN)){const R0=REN[n];out.ren[n]=R0&&R0.W?{w:[...R0.W].sort((a,b)=>((R0.CT||{})[b]||0)-((R0.CT||{})[a]||0)||(a<b?-1:a>b?1:0)),ph:[...R0.PH],...(LT[n]?{lt:LT[n]}:{}),...(LG[n]?{lg:LG[n]}:{})}:{why:String(R0&&R0.why||'not read')};} /* ASK 533: the renderings read, for K-GLS (Library kl2gLines) */

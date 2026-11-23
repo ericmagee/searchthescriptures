@@ -1,0 +1,91 @@
+PASS 1. live has no kl2gLines; the target has it
+PASS 2a. 1263 D5 vs C2: "including conjugal cohabitation" raised; "to come together" not raised
+PASS 2b. 1265 D5 vs C2: "to cohabit conjugally" raised; "to come together" not raised
+PASS 2c. 1265 H2233 "seed" and H6635 "host, war" raise nothing
+     1265 D4 vs C2 (G1080 + G1537): the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'of the father' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'by extension of the mother' for G1080 is not a KJV rendering of G1080; the 1611 KJV renders G1080: begat, born, begotten, had, have, bare, be, bear, being, conceived, delivered, forth, gender, gendereth, made, there, was, wast
+PASS 2d. G1537 "out of" raises nothing (G1080 part listed above)
+PASS 2e. REN given (cure path): no AUDIT mark
+PASS 3a. read path: item and AUDIT v66 mark from $('L2 Count Plan').e340.ren
+     [AUDIT v66: [L2] GLOSS NOT A KJV RENDERING (K-GLS; TRIAL, list only) -- 1 [L2] glosses read on collision lines; 2 parts checked; 1 items raised (D5 vs C2); 0 NOT READ (no KJV renderings read for the number this run)]
+PASS 3b. no L2 Count Plan: no item, mark says NOT READ and export not found
+     [AUDIT v66: [L2] GLOSS NOT A KJV RENDERING (K-GLS; TRIAL, list only) -- 1 [L2] glosses read on collision lines; 0 parts checked; 0 items raised; 1 NOT READ (no KJV renderings read for the number this run); the renderings export was not found]
+PASS 4a. RESTATED "(G4905, to come together)": CURED -- restated: every [L2] gloss part of the line is a KJV rendering of its number, or no such gloss is left
+PASS 4b. RESTATED "(G4905, to cohabit conjugally)": UNCURED -- the restated line still carries an [L2] gloss that is not a KJV rendering of its number (the [L2] gloss 'to cohabit conj
+PASS 4c. RETRACTED with reason and one CORRECTED RESULT: CURED
+PASS 4d. RESPONSE only: UNCURED -- no RESTATED or RETRACTED line for D5 vs C2
+PASS 4e. no reply line: UNCURED, silent
+PASS 4f. enfSilent: K-GLS silence does not count on the target (live would count it)
+PASS 4g. cureOwn strips "K-GLS " as it strips any K-rule label
+PASS 4h. cureLabel: K-GLS D5 vs C2
+5. replay: 148 judge lines, 154 glosses, 227 parts checked, 68 items raised, 7 glosses NOT READ (number not glossed by the debaters in that run)
+     924 ae4b93f6 line 20 D1 vs C1: the [L2] gloss 'to cohabit conjugally' for G4905 is not a KJV rendering of G4905
+     926 ae4b93f6 line 12 D3 vs C1: the [L2] gloss 'cohabit conjugally' for G4905 is not a KJV rendering of G4905
+     986 bf27a59e line 15 D3 vs C1: the [L2] gloss 'to beget' for G1080 is not a KJV rendering of G1080
+     996 7d006e39 line 34 D2 vs C6: the [L2] gloss 'to beget' for G1080 is not a KJV rendering of G1080
+     996 7d006e39 line 37 D5 vs C4: the [L2] gloss 'to deem' for G3543 is not a KJV rendering of G3543
+     1025 1484d48e line 20 D3 vs C1: the [L2] gloss 'to beget' for G1080 is not a KJV rendering of G1080
+     1027 f2bd9ad3 line 12 D2 vs C2: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080
+     1027 f2bd9ad3 line 14 D3 vs C1: the [L2] gloss 'to supervene' for G1904 is not a KJV rendering of G1904
+     1027 f2bd9ad3 line 18 D6 vs C1: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080
+     1031 0f6d1b0f line 13 D2 vs C4: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'of the father' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'by extension of the mother' for G1080 is not a KJV rendering of G1080
+     1033 6641b8c2 line 16 D1 vs C1: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080
+     1033 6641b8c2 line 32 D5 vs C5: the [L2] gloss 'to deem' for G3543 is not a KJV rendering of G3543
+     1033 6641b8c2 line 39 D6 vs C6: the [L2] gloss 'to beget' for G1080 is not a KJV rendering of G1080
+     1036 e889d28f line 12 D1 vs C1: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'properly of the father' for G1080 is not a KJV rendering of G1080
+     1039 3767070d line 12 D1 vs C1: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080
+     1039 3767070d line 19 D6 vs C1: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080
+     1044 8f825b9e line 20 D2 vs C5: the [L2] gloss 'to cast a shade upon' for G1982 is not a KJV rendering of G1982; the [L2] gloss 'invest with preternatural influence' for G1982 is not a KJV rendering of G1982
+     1044 8f825b9e line 25 D6 vs C6: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'properly of the father' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'by extension of the mother' for G1080 is not a KJV rendering of G1080
+     1062 f351b871 line 18 D1 vs C1: the [L2] gloss 'to beget' for G1080 is not a KJV rendering of G1080
+     1062 f351b871 line 20 D2 vs C2: the [L2] gloss 'to invest with preternatural influence' for G1982 is not a KJV rendering of G1982
+     1062 f351b871 line 22 D3 vs C3: the [L2] gloss 'cohabit' for G4905 is not a KJV rendering of G4905
+     1062 f351b871 line 24 D4 vs C6: the [L2] gloss 'to do by law (usage' for G3543 is not a KJV rendering of G3543
+     1070 7dd46385 line 10 D1 vs C3: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'properly of the father' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'but by extension of the mother' for G1080 is not a KJV rendering of G1080
+     1073 38d675ba line 12 D2 vs C2: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'by extension of the mother' for G1080 is not a KJV rendering of G1080
+     1076 6176b3d6 line 17 D2 vs C4: the [L2] gloss 'including the male sperm' for G4690 is not a KJV rendering of G4690; the [L2] gloss 'by implication' for G4690 is not a KJV rendering of G4690; the [L2] gloss 'offspring' for G4690 is not a KJV rendering of G4690
+     1103 aa2a8a85 line 12 D1 vs C6: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'properly of the father' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'but by extension of the mother' for G1080 is not a KJV rendering of G1080
+     1104 8c2102e1 line 21 D3 vs C3: the [L2] gloss 'to associate with' for G4905 is not a KJV rendering of G4905; the [L2] gloss 'cohabit conjugally' for G4905 is not a KJV rendering of G4905
+     1143 f835bc24 line 15 D1 vs C5: the [L2] gloss 'to beget' for G1080 is not a KJV rendering of G1080
+     1143 f835bc24 line 20 D6 vs C1: the [L2] gloss 'to reckon by usage' for G3543 is not a KJV rendering of G3543
+     1149 d5240a4e line 24 D6 vs C6: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'properly of the father' for G1080 is not a KJV rendering of G1080
+     1164 818adeda line 45 D4 vs C1: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080
+     1164 818adeda line 47 D5 vs C6: the [L2] gloss 'to do by law (usage' for G3543 is not a KJV rendering of G3543
+     1181 1a9a0d29 line 30 D1 vs C1: the [L2] gloss 'to expose publicly' for G3856 is not a KJV rendering of G3856
+     1199 e4e17eea line 17 D6 vs C6: the [L2] gloss 'posterity' for H2233 is not a KJV rendering of H2233
+     1205 47f2153a line 13 D3 vs C1: the [L2] gloss 'cohabit conjugally' for G4905 is not a KJV rendering of G4905
+     1213 5855ffd9 line 23 D2 vs C3: the [L2] gloss 'to cast a shade upon' for G1982 is not a KJV rendering of G1982; the [L2] gloss 'figuratively' for G1982 is not a KJV rendering of G1982; the [L2] gloss 'to invest with preternatural influence' for G1982 is not a KJV rendering of G1982
+     1221 eebfa022 line 22 D2 vs C2: the [L2] gloss 'offspring' for G4690 is not a KJV rendering of G4690
+     1221 eebfa022 line 24 D3 vs C2: the [L2] gloss 'to cast a shadow upon' for G1982 is not a KJV rendering of G1982; the [L2] gloss 'envelop' for G1982 is not a KJV rendering of G1982
+     1221 eebfa022 line 26 D5 vs C2: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'beget' for G1080 is not a KJV rendering of G1080
+     1228 aa9fc36a line 16 D1 vs C1: the [L2] gloss 'a lass' for H5959 is not a KJV rendering of H5959
+     1228 aa9fc36a line 18 D2 vs C2: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'properly of the father' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'but by extension of the mother' for G1080 is not a KJV rendering of G1080
+     1228 aa9fc36a line 22 D4 vs C1: the [L2] gloss 'to cause to be' for G1096 is not a KJV rendering of G1096
+     1231 62a8c96f line 12 D3 vs C3: the [L2] gloss 'to do by law usage' for G3543 is not a KJV rendering of G3543; the [L2] gloss 'to deem or regard' for G3543 is not a KJV rendering of G3543
+     1231 62a8c96f line 13 D4 vs C2: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'to beget' for G1080 is not a KJV rendering of G1080
+     1235 c4114d98 line 25 D5 vs C1: the [L2] gloss 'to convene' for G4905 is not a KJV rendering of G4905; the [L2] gloss 'associate with' for G4905 is not a KJV rendering of G4905; the [L2] gloss 'or specially cohabit conjugally' for G4905 is not a KJV rendering of G4905
+     1237 8c220173 line 14 D1 vs C1: the [L2] gloss 'offspring' for G4690 is not a KJV rendering of G4690
+     1237 8c220173 line 15 D2 vs C3: the [L2] gloss 'deem' for G3543 is not a KJV rendering of G3543
+     1237 8c220173 line 16 D3 vs C5: the [L2] gloss 'cohabit conjugally' for G4905 is not a KJV rendering of G4905
+     1237 8c220173 line 18 D4 vs C4: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'beget' for G1080 is not a KJV rendering of G1080
+     1237 8c220173 line 21 D2 vs C2: the [L2] gloss 'deem' for G3543 is not a KJV rendering of G3543
+     1239 b36e87ec line 27 D2 vs C2: the [L2] gloss 'the feminine singular relative the defender itself granted in [cr2]' for G3739 is not a KJV rendering of G3739
+     1239 b36e87ec line 32 D4 vs C4: the [L2] gloss 'consequently' for G1352 is not a KJV rendering of G1352
+     1239 b36e87ec line 34 D5 vs C6: the [L2] gloss 'a maiden' for G3933 is not a KJV rendering of G3933
+     1243 8033944e line 14 D3 vs C3: the [L2] gloss 'to do by law' for G3543 is not a KJV rendering of G3543; the [L2] gloss 'accustom' for G3543 is not a KJV rendering of G3543; the [L2] gloss 'deem' for G3543 is not a KJV rendering of G3543; the [L2] gloss 'regard' for G3543 is not a KJV rendering of G3543
+     1243 8033944e line 15 D4 vs C4: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'beget' for G1080 is not a KJV rendering of G1080
+     1243 8033944e line 17 D5 vs C5: the [L2] gloss 'prior' for G4250 is not a KJV rendering of G4250; the [L2] gloss 'sooner' for G4250 is not a KJV rendering of G4250
+     1244 8033944e line 26 D4 vs C4: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'properly of the father' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'but by extension of the mother' for G1080 is not a KJV rendering of G1080
+     1244 8033944e line 28 D5 vs C5: the [L2] gloss 'to convene' for G4905 is not a KJV rendering of G4905; the [L2] gloss 'associate with' for G4905 is not a KJV rendering of G4905; the [L2] gloss 'or specially cohabit conjugally' for G4905 is not a KJV rendering of G4905
+     1245 c70883f8 line 37 D5 vs C1: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'properly of the father but by extension of the mother' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'figuratively' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'to regenerate' for G1080 is not a KJV rendering of G1080
+     1248 45f53596 line 36 D4 vs C3: the [L2] gloss 'also to regenerate in figurative use' for G1080 is not a KJV rendering of G1080
+     1253 97ae3ffd line 32 D4 vs C4: the [L2] gloss 'in what way' for G4459 is not a KJV rendering of G4459
+     1253 97ae3ffd line 34 D5 vs C1: the [L2] gloss 'to convene' for G4905 is not a KJV rendering of G4905; the [L2] gloss 'associate with' for G4905 is not a KJV rendering of G4905; the [L2] gloss 'or (specially' for G4905 is not a KJV rendering of G4905
+     1262 b038fcf4 line 28 D2 vs C5: the [L2] gloss 'to deem or regard' for G3543 is not a KJV rendering of G3543
+     1262 b038fcf4 line 33 D4 vs C4: the [L2] gloss 'to cohabit conjugally' for G4905 is not a KJV rendering of G4905
+     1263 f333ef24 line 37 D5 vs C2: the [L2] gloss 'including conjugal cohabitation' for G4905 is not a KJV rendering of G4905
+     1265 f333ef24 line 32 D3 vs C5: the [L2] gloss 'to deem or regard' for G3543 is not a KJV rendering of G3543
+     1265 f333ef24 line 34 D4 vs C2: the [L2] gloss 'to procreate' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'of the father' for G1080 is not a KJV rendering of G1080; the [L2] gloss 'by extension of the mother' for G1080 is not a KJV rendering of G1080
+     1265 f333ef24 line 36 D5 vs C2: the [L2] gloss 'to cohabit conjugally' for G4905 is not a KJV rendering of G4905
+PASS 6. kl2Lines (K-L2) output equal OLD and NEW on all 148 lines (148)
+PASS 5a. every stored gloss is read (154 of 154)
+ALL PASS
