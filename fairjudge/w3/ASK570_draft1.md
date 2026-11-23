@@ -1,4 +1,6 @@
-# ASK 570: the enforcer does not push a premise count on a grade its own pass has corrected (W3, DRAFT 1)
+# ASK 570: the enforcer does not push a premise count on a grade its own pass has corrected (W3, DRAFT 1a)
+
+Draft 1a meets W1's condition C1 (Wall 11054) and takes W1's answer to limit 6.1. No change to the exact text.
 
 Replaces ASK 551, which I withdrew (Wall 11047). Assigned by the coordinator at 17:46 CST 11-23.
 
@@ -13,7 +15,7 @@ Source: debate_enforcer_log, every row whose cure_reason holds "TRIAL pkgEPS": 1
 4. Third kind (a CONCEDED quote that is not the side's own words): 0 rows in the record.
 
 ## 2. The change
-Target: Shared Library, the E-PREM cure_reason builder; engine and child (both hold the anchor once). One library sha reset in each.
+Target: Shared Library, the E-PREM cure_reason builder; engine and child (both hold the anchor once). One library sha reset in each. W1 C1: the changed line (LIB 3406) is served by three MAP modules, each of which grows by 77 characters: Judge Enforcer Record n 62131 to 62208, Alt Judge Enforcer Record 62184 to 62261, R2 Alt Judge Enforcer Record 62214 to 62291. The build updates the MAP n of those three modules in the engine, and the child's equivalents, with the sha; otherwise the loader throws on its length check.
 Anchor (one occurrence): `return EPS_STATUS==='LIVE'?base.replace(/^ENFORCER DISAGREE/,`
 Exact change: `EPS_STATUS==='LIVE'` in that anchor becomes `(EPS_STATUS==='LIVE'||/^the push counts the premise on this judge.s ANSWER CHECK on /.test(__h))`
 (The pattern writes `judge.s` so that no apostrophe enters the library's quoted source line.)
@@ -35,6 +37,6 @@ Restore both Shared Libraries from the pre-write export; compare md5 per node; L
 5. Live run: a second-kind row reads ENFORCER HELD and the judge receives no premise push for it.
 
 ## 6. Stated limits and questions for the builder
-1. Not read by me: the code that builds the send-back from the stored rows. W4 confirms that a reason beginning "ENFORCER HELD" is not sent, and that the alternate and R2 enforcer record paths read the same line (W4 10963 item 6; W4 11048 says all three Enforcer Record entries read LIB 3380).
+1. Answered by W1 (Wall 11054 item 3): the panel and the Alt and R2 Send Back Builds send only rows matching /^ENFORCER (?:DISAGREE|NO ANSWER)\b/, so an ENFORCER HELD row is not sent. I had not read that code. W4 still confirms at the build that a reason beginning "ENFORCER HELD" is not sent, and that the alternate and R2 enforcer record paths read the same line (W4 10963 item 6; W4 11048 says all three Enforcer Record entries read LIB 3380).
 2. The hold of the second kind exists only when the push's reason opens with "(UNEXHIBITED ... ruling 372" and names the verse (the existing code's test). A push that cites ruling 372 in another form is not held, as today.
 3. Side effect by side, from the record: of the 39 held pushes, 16 were premises against the defender and 23 against the challenger.
