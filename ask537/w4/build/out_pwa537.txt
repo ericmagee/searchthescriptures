@@ -1,0 +1,4 @@
+41418: verse keys named in [DR1]/[DR2]: 49; unanswered with [CR4] empty: 9; unanswered with stored [CR4]: 4 ["Matthew 1:23","Deuteronomy 22:24","Luke 3:38","Isaiah 7:13"]
+41418: GAP lines for the 27 verses of the Oracle's own [CR3] list appended to [CR4]: unanswered now 4; flipped to answered: []
+SYNTHETIC: Luke 1:34 pressed in [DR2], not named later: answered false; after a [CR4] GAP line whose quoted words name Luke 1:34: answered true
+SYNTHETIC: same, GAP line without the reference in its quote: answered false
