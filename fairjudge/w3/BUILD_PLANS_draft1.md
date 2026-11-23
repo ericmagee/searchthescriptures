@@ -12,8 +12,8 @@ Common to every plan:
 
 ## P1. A judge's cure statement is not a collision line
 Target: Shared Library, the E-COL collision-group builder. Anchor: `for(const j of __ecfJ)for(const l0 of j.t.split('\n')){const l=l0.replace(/^[\s*\-•]+/,'');` followed by `if(!__ecfColl(l))continue;` (near 756016). E-ONE rows are built from the E-COL rows (anchor `__e1.push({...base,rule:'E-ONE'`), so one filter serves both.
-Step 0 (trace, W4, no write): show which text put "FORCED: D3 vs C5 applies (Commitment 7).; JUDGE STATEMENT: ...]" at the start of a line of j.t. GUESS, not checked: the cure audit mark `'; STATEMENT: '+cureSafe(cureCut(x.statement))+'; JUDGE STATEMENT: '` (near 377595) carried a statement with a line break in it, and cureSafe does not remove line breaks, so the tail of the mark became a line of its own.
-Change: in the builder loop, skip a line that is part of an audit mark: add, before `if(!__ecfColl(l))continue;`, `if(/^\[AUDIT\b/.test(l)||/;\s*JUDGE STATEMENT:\s/.test(l))continue;`. If step 0 confirms the guess, also make cureSafe replace line breaks with a space, in the same write.
+Step 0 (trace), answered from the record: argon's stored verdict text (run41822/judgments.json) holds the K-CMTL audit mark ending "...; STATEMENT: (Commitment 3, Commitment 7, Commitment 8, Commitment 13)" and then, on the next line, "FORCED: D4 vs C6 applies (Commitment 3, Commitment 7, Commitment 8, Commitment 13).; JUDGE STATEMENT: FORCED: D4 vs C6 applies (...).]". The judge's statement held a line break. The mark is built by `'; STATEMENT: '+cureSafe(cureCut(x.statement))+'; JUDGE STATEMENT: '` (near 377595), and cureSafe does not remove line breaks, so the tail of the mark became a line of its own that begins with FORCED. chatgpt's text is not in judgments.json (the seat was removed); its flagged line has the same shape. W4 confirms on the live code.
+Change: (1) cureSafe replaces line breaks with a space, so a mark stays on one line. (2) In the builder loop, skip a line that is part of an audit mark: add, before `if(!__ecfColl(l))continue;`, `if(/^\[AUDIT\b/.test(l)||/;\s*JUDGE STATEMENT:\s/.test(l))continue;`. Both in one write; (2) guards against any other mark that breaks a line.
 Revert: (b).
 Test: feed the builder chatgpt's and argon's stored verdict text of run 41822. Expect no group for "FORCED: D3 vs C5 applies (Commitment 7)." (rows 52441, 52511, 52535) and none for argon's two statements (rows 52792, 52793, 52819, 52820). Control: the real lines behind rows 52439 and 52440 still form their groups.
 
@@ -58,8 +58,8 @@ Targets: Shared Library, the E-KEY item builder. Anchors: `const link=m[1];const
 Change: (1) derive the word in code: BROKEN when one of the judge's own lines on that link grades DEFENDER LINK BROKEN, or is a FORCED line whose ANSWER is a defender round ([CRn]); STANDS otherwise. A CHALLENGER LINK BROKEN line never counts (W1's condition). (2) When the judge's keystone word equals the derived word, store a code row in the pkgEKR form ("NOT ASKED (code): the keystone word follows from the judge's own lines") and ask the enforcer nothing. (3) Only on a mismatch build the E-KEY item, and hand the enforcer only the lines that counted in (1).
 Not changed: the RULE E-KEY text, pkgEKR, pkgEKD.
 Revert: (b).
-Test: argon's verdict text of run 41822. Its lines on D4 are a CHALLENGER LINK BROKEN line and a FORCED line; expect derived STANDS, equal to the judge's word, so no E-KEY item and no row like 52801. Controls: a judge with a DEFENDER LINK BROKEN line on the keystone link and the word STANDS still gets an E-KEY item; the pkgEKR path still fires on a confirmed closing contradiction.
-Open for the grader: whether the FORCED line behind row 52801 is answered by [CRn] or [DRn]; the test result depends on it and I have not read that line's ANSWER tag.
+Test: argon's verdict text of run 41822. Expect derived STANDS, equal to the judge's word, so no E-KEY item and no row like 52801. Controls: a judge with a DEFENDER LINK BROKEN line on the keystone link and the word STANDS still gets an E-KEY item; the pkgEKR path still fires on a confirmed closing contradiction.
+Found at the read: one of the "FORCED: D4" lines the enforcer was handed in row 52801 is the stray statement line of P1 ("FORCED: D4 vs C6 applies (Commitment 3, ...).; JUDGE STATEMENT: ...]"). It carries no ANSWER tag, so under change (1) it does not count. P1 and P10 meet at this line: the builder for KG reads the same lines (linesOf), so the audit-mark filter of P1 is applied there as well.
 
 ## P14 step 1. The close is checked against the press list (record-only)
 Target: D4 Extract (the defender's close), and D4B Extract if the readback shows it on the live path. Record-only: one audit line; nothing is sent to the Oracle.
@@ -84,5 +84,4 @@ P1 and P2 touch the same branch family and can go in one write with separate tes
 ## Not read, stated plainly
 1. The line reader that precedes the E-COL builder for alternates (`__ecfJ`): I read the panel builder's anchor only.
 2. Where a removed seat's verdict text is last carried (P4).
-3. The ANSWER tag of the FORCED line behind row 52801 (P10).
-4. The pkgEPS trial's record over earlier runs (P8).
+3. The pkgEPS trial's record over earlier runs (P8).
