@@ -13,7 +13,7 @@ R.append(dict(ask=494,rev='A2',prior=32,title='Public key can no longer call the
  plan={"md5":"b57c4b09","path":"a494_w2/plan494.md","commit":"000477e9","wall_id":9820},
  build=[{"md5":"fc32cec9","path":"a494_w2/step494.sql","commit":"9f2f486a"}],
  revert={"md5":"dfcfdd2f","path":"a494_w2/revert494.sql"},
- grades=[G("W1","PASS with N1 and N2 (plan rev 0 e888ca4d and step); corrected to FAIL ON FORM at 9772",9765,"e888ca4d","superseded"),G("W3","PASS with four notes (plan rev 0 e888ca4d and step); superseded by the form regrade 9783",9766,"e888ca4d","superseded"),G("W1","PASS (plan rev 1 6bffd9ec); corrected to FAIL ON FORM at 9772",9768,"6bffd9ec","superseded"),G("W1","FAIL ON FORM (correction of 9765 and 9768: the plan lacked required headings)",9772,"6bffd9ec","FAIL ON FORM"),G("W1","PASS on form: plan rev 2 06b6eb2e, step fc32cec9 in commit 9f2f486a",9782,"fc32cec9"),G("W3","PASS on form: plan rev 2 06b6eb2e, step fc32cec9 in commit 9f2f486a",9783,"fc32cec9"),G("W1","grade STANDS on plan494.md b57c4b09",9820,"b57c4b09"),G("W3","grade STANDS on plan494.md b57c4b09",9824,"b57c4b09")],
+ grades=[{**G("W1","PASS with N1 and N2 (plan rev 0 e888ca4d and step); corrected to FAIL ON FORM at 9772",9765,"e888ca4d"),"superseded_by":9772},{**G("W3","PASS with four notes (plan rev 0 e888ca4d and step); superseded by the form regrade 9783",9766,"e888ca4d"),"superseded_by":9783},{**G("W1","PASS (plan rev 1 6bffd9ec); corrected to FAIL ON FORM at 9772",9768,"6bffd9ec"),"superseded_by":9772},G("W1","FAIL ON FORM (correction of 9765 and 9768: the plan lacked required headings)",9772,"6bffd9ec","FAIL ON FORM"),G("W1","PASS on form: plan rev 2 06b6eb2e, step fc32cec9 in commit 9f2f486a",9782,"fc32cec9"),G("W3","PASS on form: plan rev 2 06b6eb2e, step fc32cec9 in commit 9f2f486a",9783,"fc32cec9"),G("W1","grade STANDS on plan494.md b57c4b09",9820,"b57c4b09"),G("W3","grade STANDS on plan494.md b57c4b09",9824,"b57c4b09")],
  md5w=['fc32cec9'], audit=list(range(39218,39228)),
  objects=[{"kind":"grants","name":"EXECUTE on the nine engine write functions","before":"anon on all nine (snapshot 32)","after":"postgres, service_role, lab_seat only (live read 11-23, W4 10356)"}],
  tests=[{"file":"a494_w2/test494_rollback.sql","md5":"b6f77465","wall_id":10059}],
@@ -162,7 +162,7 @@ def q(s):
 def j(o): 
     if o is None: return 'NULL'
     return q(json.dumps(o,ensure_ascii=False))+'::jsonb'
-out=["-- ASK AAR snapshot rows, DRAFT rev 4 (W3, 2026-11-23; replaces rev 3 d463fe94 (Wall 10373) on W1 10376 C1; earlier revs on W2 10367, W4 10368, W2 10370), for the coordinator (seat 36) to run once after W2's grade. NOT RUN.",
+out=["-- ASK AAR snapshot rows, DRAFT rev 5 (W3, 2026-11-23; replaces rev 4 db97670b (Wall 10377), which the live insert trigger refused: the three superseded 494 A2 grades now carry verdict_norm PASS, the verdict given, with superseded_by naming the correcting post; rev 4 replaced rev 3 d463fe94 (Wall 10373) on W1 10376 C1; earlier revs on W2 10367, W4 10368, W2 10370), for the coordinator (seat 36) to run once after W2's grade. NOT RUN.",
 "-- Rows: 494 A2 (proven by run 40995; prior_row 32), 504, 505, 506, 507, 508, 509, 510, 511, 512, 513, 514, 515 A1, 515 r7, 516. Each field cites Wall ids or audit ids.",
 "-- Not covered: ASKs 517 to 520 (held). The per-field sources are in each row's sources array.",
 "-- Run from seat 36 in one call, then read the closing SELECTs in separate calls.",
