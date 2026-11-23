@@ -1,0 +1,13 @@
+rounds md5 3509d6d3 | AC text md5 d99ea2c3 | round lengths CR1 9885, DR1 10970, CR2 15148, DR2 21228, CR3 17622, DR3 21362, CR4 24862, DR4 11410
+OLD condition: [...PR,...unxPresses(side==='CHALLENGER'?R.CR2:R.DR2)].filter(p=>p.n===j).some(p=>unxAcFail(text,p.ref,rk))
+NEW condition: [...PR,...unxPresses(side==='CHALLENGER'?R.CR2:R.DR2)].filter(p=>p.n===j).some(p=>unxAcFail(text,p.ref,rk)||unxAcFail(text,p.ref,rk.slice(0,2)+'[2-4]'))
+premise 1: presses Matthew 1:18, Matthew 1:20, Matthew 1:24, Matthew 1:19, Matthew 1:25 | OLD exempt false | NEW exempt true
+premise 2: presses Luke 1:35, Luke 1:34, Luke 1:31, Acts 1:8, Matthew 17:5 | OLD exempt false | NEW exempt true
+premise 3: presses Matthew 1:20, Matthew 1:18, Luke 1:35, Matthew 1:16, Isaiah 7:14, 1 Chronicles 28:6, Romans 1:4 | OLD exempt false | NEW exempt true
+U1 Luke 1:34 [CR4] MISSES: OLD false NEW true
+U2 Matthew 1:16 [CR2] MISSES: OLD false NEW true
+U3 [CR4] MISSES and [CR4] MEETS: OLD false NEW false
+U4 [CR3] MISSES and [CR4] MEETS (the 12 groups): OLD true NEW true
+U5 [CR40] MISSES: OLD false NEW false
+U6 [CR1] MISSES: OLD false NEW false
+U7 [DR4] MISSES on a DEFENDER premise: OLD false NEW false
