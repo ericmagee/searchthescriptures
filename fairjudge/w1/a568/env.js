@@ -1,0 +1,10 @@
+const fs=require('fs');const B='/mnt/project-files/ask557/w4/build/';const J=f=>JSON.parse(fs.readFileSync(B+f,'utf8'));
+const W=JSON.parse(fs.readFileSync('/mnt/project-files/ask557/w4/write/fetchback_engine_557.json','utf8'));const N=(W.data||W).nodes;
+const T=N.find(z=>z.name==='Shared Library').parameters.jsCode;
+const L=JSON.parse(T.slice(T.indexOf('\n/*LIB*/')+8,T.lastIndexOf('\n/*MAP*/')));const MAP=JSON.parse(T.slice(T.lastIndexOf('\n/*MAP*/')+8,T.lastIndexOf('\n/*END*/')));
+const mod=nm=>{const M=MAP[nm];return M.p.map(e=>typeof e==='number'?L[e]:typeof e[0]==='string'?e[0]:L.slice(e[0],e[1]+1).join('\n')).join('\n');};
+const REFP=new Function(mod('REFP')+'\nreturn REFP;')();
+const code=n=>N.find(z=>z.name===n).parameters.jsCode;
+const l2cSrc=(n,cap)=>{const c=code(n);const i=c.indexOf('const L2C=(()=>{');const j=c.indexOf('return {tags,',i);const k=c.indexOf('})();',j)+5;let s=c.slice(i,k);if(cap)s=s.replace('const CAPC=26000;','const CAPC='+cap+';');return s;};
+const mkL2C=(src)=>new Function('REFP',src+'\nreturn L2C;')(REFP);
+module.exports={J,REFP,code,l2cSrc,mkL2C,N,MAP};
