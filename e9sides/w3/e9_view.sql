@@ -1,4 +1,4 @@
--- E9 proposal (W3). Read-only: a view and column comments. No column is renamed, no row changes, no engine node changes.
+-- E9 rev 1 (W3). Read-only: a view and column comments. No column is renamed, no row changes, no engine node changes. Rev 1 drops the comments on defender_r4 and challenger_r4: those names already match their sides, and each already holds a comment (judge_fix3 B4) that rev 0 would have overwritten.
 CREATE VIEW public.debate_rounds_by_side WITH (security_invoker = true) AS
 SELECT id, run_token, created_at, defender_profile, challenger_profile,
   CASE WHEN defender_profile='oracle' THEN 'DEFENDER' WHEN challenger_profile='oracle' THEN 'CHALLENGER' ELSE 'NONE' END AS oracle_side,
@@ -16,8 +16,6 @@ FROM public.debate_results;
 COMMENT ON COLUMN public.debate_results.claude_r1 IS 'DEFENDER round 1. Not Claude and not the Oracle unless defender_profile=oracle. Read through debate_rounds_by_side.';
 COMMENT ON COLUMN public.debate_results.claude_r2 IS 'DEFENDER round 2. Not Claude and not the Oracle unless defender_profile=oracle. Read through debate_rounds_by_side.';
 COMMENT ON COLUMN public.debate_results.engine_r3 IS 'DEFENDER round 3 (despite the name). Read through debate_rounds_by_side.';
-COMMENT ON COLUMN public.debate_results.defender_r4 IS 'DEFENDER round 4. Read through debate_rounds_by_side.';
 COMMENT ON COLUMN public.debate_results.engine_r1 IS 'CHALLENGER round 1 (despite the name). Read through debate_rounds_by_side.';
 COMMENT ON COLUMN public.debate_results.engine_r2 IS 'CHALLENGER round 2 (despite the name). Read through debate_rounds_by_side.';
 COMMENT ON COLUMN public.debate_results.challenger_r3 IS 'CHALLENGER round 3. Read through debate_rounds_by_side.';
-COMMENT ON COLUMN public.debate_results.challenger_r4 IS 'CHALLENGER round 4. Read through debate_rounds_by_side.';
