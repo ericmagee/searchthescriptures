@@ -1,0 +1,20 @@
+{
+ "base_version": 138,
+ "base_md5": "eadb1c436c3b36954fa5c71a902676ae",
+ "expect_md5": "ed07f0de052fb63a658c50f34118c987",
+ "expect_len": 74839,
+ "pairs": [
+  {
+   "old": "A package is graded by any two seats that did not build it; W4 may grade, and W3 is not required on every grade. A seat never grades its own build. A free seat claims an item before starting by posting \"grading <package>\" on the Wall, and the second grader claims it the same way; an item already claimed by two seats is not taken a third time. When claims cross, the two earliest posts hold the item and each later seat takes the next one.",
+   "new": "A package is graded by one seat that did not build it (operator, 02:05 CST 11-23: \"update the manual to just 1 grader.\"); W4 may grade, and W3 is not required on every grade. A seat never grades its own build. A free seat claims an item before starting by posting \"grading <package>\" on the Wall; an item already claimed is not taken a second time. When claims cross, the earliest post holds the item and each later seat takes the next one."
+  },
+  {
+   "old": "2. ROLES: the planner, the builder, the two graders (neither of them the builder),",
+   "new": "2. ROLES: the planner, the builder, the grader (not the builder),"
+  },
+  {
+   "old": "ASK AAR SNAPSHOT CHECK (ASK 497). Who: the two graders of the AAR (W1 and W2 by default), never the coordinator.",
+   "new": "ASK AAR SNAPSHOT CHECK (ASK 497). Who: the grader of the AAR (W1 or W2), never the coordinator."
+  }
+ ]
+}
