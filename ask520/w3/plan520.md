@@ -1,4 +1,4 @@
-# ASK 520 plan (W3, seat 33), rev 1, 2026-11-23. A PLAN ONLY; nothing is written.
+# ASK 520 plan (W3, seat 33), rev 2, 2026-11-23. Replaces rev 1 (48eef61f, kept as plan520_rev1.md) on W2's C-e (Wall 10430); changed: OBJECTIVE (expected 41117 values), HITS (the unxAcFail copy), CRITERIA C2a, WRONG-IF limit, STEPS (build order). A PLAN ONLY; nothing is written.
 Source: the operator's "Four Remaining Bugs in the Run (4) Debug Log", Bug 4, "K-UNX vs. Commitment 5 Friction on Sol 6.1" (13:10 CST 11-20, W4 thread), released by his "yes" at 02:02 CST 11-23 (Wall 10381). Run (4) is 41117; the basis is in the ASK 517 plan.
 His words: "Sol 6.1 counted Defender Premises 4 and 5 as UNEXHIBITED under Commitment 5 (unanswered/unfitted pressed witnesses), and K-UNX flagged both as UNCURED ... because Sol 6.1's STATEMENT didn't name a missing initial layer (L1/L2/L3)." And: "Terra 6.1 yielded to K-UNX and changed Premises 1-5 to SUPPORTED (c=0), whereas Sol 6.1 and Sol 6.2 stood their ground on Commitment 5 (c=4). Clarifying in the K-UNX prompt that an UNEXHIBITED count grounded on an unanswered/unfitted PRESSED WITH witness (Commitment 5) does not require naming a missing L1-L3 layer will align Terra 6.1 with Sol 6.1 and Sol 6.2."
 He prefaced the message "Feedback (only use if useful)", so the design is the team's.
@@ -11,6 +11,21 @@ Expected effect on 41117:
 - Sol 6.1's items on DEFENDER premises 4 and 5 are not raised. Its own ANSWER CHECK grades Matthew 1:20 [CR3] and Luke 1:35 [CR3] MISSES.
 - Terra 6.1's items on premises whose presses its ANSWER CHECK grades MISSES are not raised: Matthew 1:25, Genesis 4:1, Matthew 1:19 and Luke 1:35 [CR3]. Terra's count then stays as Terra wrote it, as Sol's did.
 - Any Terra item on a premise with no press graded MISSES or FAILS is still raised. The build lists which ones.
+EXPECTED 41117 VALUES (W2 C-e), on 517's library (see STEPS for the build order). These come from reading the code, not from a run. An offline replay cannot ask Terra again, so it reuses Terra's logged cure replies.
+- Terra's first count is DEFENDER 5 (premises 1 to 5). Its K-UNX items, mapped to the presses Sol 6.1 names for the same premises:
+  - premise 1 (Matthew 1:25, Genesis 4:1, both MISSES) and premise 5 (Luke 1:35 MISSES): not raised under S1;
+  - premise 2: raised on the K-UNX-A ASSUMES path, which S1 does not touch;
+  - premises 3 and 4: still raised. Terra grades no press of premise 3 MISSES, and it has no [CR3] ANSWER CHECK for Matthew 1:20.
+  The build confirms this mapping from the [CR3] PRESSED WITH list.
+- Count: pkgRCT (rctOut) takes out only premises whose K-UNX item was cured by a CORRECTED COUNT. That leaves premises 1 and 5, so the expected DEFENDER count is 2.
+- Standing: with L=6 and c=2, 2c is not more than L, so under 517 the standing is PROP-DEPENDENT -- L=6 c=2.
+- If pkgD38 instead keeps Terra's CORRECTED COUNT 0 as the cure value, the count is 0 and the standing is SELF-SUPPORTED as in 517's C1. The build states which line decides, and shows it.
+- COLLAPSED (c of 4 or more) is not expected. It would need premise 3 or 4 to keep its count, and both stay raised and cured.
+- RESULT and outcome: unchanged, UNDERDETERMINED.
+  - rd386 gives CHALLENGER WINS only on a SELF-SUPPORTED challenge, and Terra's challenge stays PROP-DEPENDENT -- L=6 c=1.
+  - The defender is already PROP-DEPENDENT or COLLAPSED on Sol 6.1 and Sol 6.2. The 505 gate on the defender is therefore already met, and a weaker Terra standing adds nothing to it.
+  - Any other value fails C2a unless the build shows the line that gives it.
+- 517's C1 example: 517 C1 replays the live 41117 data, in which Terra's cures were asked and its count was cut to 0. It tests stand() given that count, so it still holds. 520 changes the count that reaches stand(), not stand() itself. After both are built, Terra on 41117 reads by its count (expected c=2), and that is 520's C2a value, not 517's.
 
 CAUSE (debate_enforcer_log and debate_judgments, 41117):
 - Sol 6.1, rows 48778 and 48779 (UNCURED):
@@ -39,7 +54,7 @@ HITS:
   - K-UNX-A, through unxaCheck, which already applies unxAcFail (L460);
   - the "saying the block lacks" path (L474 to L478);
   - the general path (L479 to L482).
-- L453: unxAcFail.
+- L453: unxAcFail (W2 counts it as L452). An identical copy sits at L3461 (W2: L3460). S1 calls the one in scope at L479; neither copy changes.
 - L1220 to L1230: the K-UNX cure checks. Unchanged.
 - Commitment 5 text, in Panel Build, Reserve Build, the Accept nodes and Enforcer Build: "A proven press ... left unanswered by the later rounds of the side that holds the link, makes that premise UNEXHIBITED." Unchanged.
 - C3 Build and C3G Build tell the debater: "an answer that names the verse but does not meet the MEANS is graded MISSES, and the premise is counted against you" (ruling 412). Unchanged.
@@ -72,7 +87,7 @@ CHANGE:
 This plan is wrong if C2 drops an item on a premise where that judge grades no press of it MISSES or FAILS. Any such case fails it.
 - Known-bad: 41117 Sol 6.1 premises 4 and 5 must drop.
 - Known-good: Sol 6.1 premise 2 (row 48777) must stay raised.
-Limit: unxAcFail reads the grade, not whether the press was proven. Commitment 5 counts only a proven press. A judge that grades an unproven press MISSES would no longer be asked by K-UNX. The same limit already holds on K-UNX-A path B (pkgU72 rev 2). The K-G10 rule and the judges' own UNPROVEN grades still read proof.
+Limit: unxAcFail reads the grade, not whether the press was proven. Commitment 5 counts only a proven press. A judge that grades an unproven press MISSES would no longer be asked by K-UNX. The same limit already holds on K-UNX-A path B (pkgU72 rev 2). K-P (L2165), the ruling 398 guard, and the judges' own UNPROVEN grades still read proof (W2 10430).
 
 ## 6. RUN EVIDENCE
 NO PROBE in the ASK 417 registry (no registry table was found, W4 10395). C5 is read from the run's K-UNX cure rows and ANSWER CHECK lines.
@@ -82,8 +97,8 @@ This plan's commit is on the Wall post. W4 commits the replay script, its inputs
 
 ## 8. STEPS
 1. One non-builder seat grades this plan. Waits on: nothing.
-2. W4 builds S1 and runs C1 to C4. Waits on: step 1, and W4's queue (519, 521).
+2. W4 builds S1 on 517's built library and runs C1 to C4. Waits on: step 1, 517's build, and W4's queue (519).
 3. Grade of the build. Waits on: step 2.
-4. W4 writes on the operator's card in W4's thread. If the build lands after 517, it builds on 517's library. Waits on: step 3.
+4. W4 writes on the operator's card in W4's thread. BUILD ORDER: 517 is written first, and 520 is built and replayed on 517's written library. 520 changes only L479, which 517 does not touch, so neither plan's lines move. 517 needs no change. Waits on: step 3, and 517 written.
 5. W3 writes S2 after a read, on the operator's card in W3's thread. Waits on: step 4.
 6. A run on the operator's word (C5). Waits on: step 4.
