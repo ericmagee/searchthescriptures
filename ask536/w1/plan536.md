@@ -1,5 +1,6 @@
-# ASK 536 plan (W1, seat 34), rev 1, 2026-11-23. A PLAN ONLY; nothing is written.
-Rev 1 replaces rev 0 (2759e5c1) on W2's FAIL at Wall 10707 items 3 to 5: the expected effect now states the count change the false items drew in 41418; the known-bad set gains 1263 defender premise 3; criteria 4(a) and 4(b) name rows 51161 to 51164, 51202 and 51203.
+# ASK 536 plan (W1, seat 34), rev 2, 2026-11-23. A PLAN ONLY; nothing is written.
+Rev 2 replaces rev 1 (65dd7cba) on W4's hold at Wall 10715: sol's rows 51202 and 51203 are raised at Library 478 and 479 through unxNamed, not through unxLack at 473 to 476. Sol's counts name no layer, or say no layer is missing. So they are not this misreading, and rev 2 takes them out of the known-bad set, criteria 4(a) and 4(b), ruling 428 and the card. MY MISTAKE: rev 1 named them without checking which raise produced them.
+Rev 1 replaced rev 0 (2759e5c1) on W2's FAIL at Wall 10707 items 3 to 5.
 Source: proposal W1 10596 item 4 (coordinator point 3, run 41418), reviewed by W2 at 10684 ("CONFIRMED, with one correction"). Rulings: 383 (only the Oracle is bound by guards; this touches no judge text), 428 (a rule is record-only until it passes a known case), the 11-19 18:28 CST scope rule.
 
 ## 1. OBJECTIVE
@@ -8,8 +9,7 @@ The engine reads a judge's UNEXHIBITED count correctly when the count says a lay
 Expected effect, stated before the build: in run 41418, sol 6.2 (judgment 1263) defender premises 1, 2 and 3 and challenger premise 3 read "(L4) fit missing despite (L1) and (L3)" or "(L1)–(L3)". unxLack names [4], not [1,3], and those K-UNX items (v49) are not raised.
 WHAT THE FALSE ITEMS DID IN 41418 (W2 10707 item 3): K-UNX is a TRIAL rule that "removes no seat", but the judges answered the false items by lowering their own counts:
 - sol 6.2, rows 51161 and 51162 (defender premises 1 and 2): "CORRECTED COUNT 2 takes the premise out of the count". This is the 3-to-2 count with no premise named (AUDIT v50; Worker_E 10683 item 5a).
-- sol, rows 51202 and 51203 (defender premises 2 and 3): "CORRECTED COUNT 1 takes the premise out of the count".
-So the false item changed two judges' defender counts. With the fix, the item is not raised, so the judge is not prompted to change its count. The judge's decision still stands as written (ruling 428); the engine only stops asking a false question. This corrects an engine reading, not a rule.
+So the false item changed sol 6.2's defender count. (Sol's rows 51202 and 51203, where sol lowered its count to 1, come from the raise at 478 and 479 and are NOT in this ASK; see section 3, NOT IN SCOPE (c).) With the fix, the item is not raised, so the judge is not prompted to change its count. The judge's decision still stands as written (ruling 428); the engine only stops asking a false question. This corrects an engine reading, not a rule.
 
 ## 2. ROLES
 Planner W1. Builder W4. Grader W2 (one non-builder grader, op doc v141). Write card: W4's thread.
@@ -26,6 +26,7 @@ IN SCOPE: Library line 428 and 429 (the pre and post tests in unxLack), in both 
 NOT IN SCOPE (scope rule):
 - (a) A negation that sits before an intervening "[Ln]" tag (for example "lacks [L2] and [L4]" names only [2] today). This is a separate gap with no failed run behind it.
 - (b) The K-UNX rule text and its count consequence.
+- (c) The raise at Library 478 and 479 (unxNamed, "the count names no layer the block lacks"), which drew sol's rows 51202 and 51203 in 41418. Sol counted an answer failure as UNEXHIBITED and the item read sol's words correctly. Whether the ASK 520 exemption should have spared it is a separate item.
 
 ## 4. CRITERIA and DONE
 CHANGE (line 428 and 429 of unxLack):
@@ -49,11 +50,11 @@ TESTS (ask536/w1/sim536.cjs, run by W1 on frags536.json; OLD is line 427 to 430 
 - W1's run (rev 1): 17 rows, 11 changed. Each change is listed above, and each moves to the layer the text calls missing.
 DONE:
 4. W4's replay on the live engine and child (04450043 and 334f0518, or later):
-   - (a) All 166 stored K-UNX rows are re-run through line 473 to 476 with the stored judgment text, OLD against NEW. Each row that would not be raised is listed. Every listed row must be one where the count names the missing layer as L4, or names, through "despite", a layer the block exhibits. KNOWN BAD, by name: 51161, 51162, 51163 and 51164 (sol 6.2, judgment 1263), and 51202 and 51203 (sol, removed seat; no judgment row, so W4 replays them from sol's stored count text). Each must not be raised under NEW.
-   - (b) The stored cure STATEMENTs of those rows are re-run through 1223 to 1227. Each change of cure status is listed. For 51161 to 51164, 51202 and 51203, the before status (all six CURED today; 51161, 51162, 51202 and 51203 by "CORRECTED COUNT ... takes the premise out of the count") and the after status (no item raised) are reported by name.
+   - (a) All 166 stored K-UNX rows are re-run through line 473 to 476 with the stored judgment text, OLD against NEW. Each row that would not be raised is listed. Every listed row must be one where the count names the missing layer as L4, or names, through "despite", a layer the block exhibits. KNOWN BAD, by name: 51161, 51162, 51163 and 51164 (sol 6.2, judgment 1263). Each must not be raised under NEW. 51202 and 51203 are reported unchanged (raised at 478 and 479 under OLD and NEW).
+   - (b) The stored cure STATEMENTs of those rows are re-run through 1223 to 1227. Each change of cure status is listed. For 51161 to 51164, the before status (all four CURED today; 51161 and 51162 by "CORRECTED COUNT ... takes the premise out of the count") and the after status (no item raised) are reported by name.
    - (c) The E-PREM paths at 2934 and 3399 and the check at 1390 are re-run on the stored rows of 41418, 41155, 41117, 41102 and 41090. Each change is listed.
 5. Both Library copies hold the same text. Library Check passes on both, and the ASK 539 map check is unchanged.
-6. RULING 428: the change corrects a reading of the judge's own words. It adds no item and no count. Its effect at 473 is to stop raising a false TRIAL item. In 41418 that item drew count corrections from two judges (51161, 51162, 51202 and 51203), so the change can leave a judge's own count higher than it was in such a run, because the judge is no longer asked to lower it. That is the judge's count as first written, not a count the engine sets. The card states this. If 4(b) or 4(c) shows any other count change, the plan returns to W1 before any card.
+6. RULING 428: the change corrects a reading of the judge's own words. It adds no item and no count. Its effect at 473 is to stop raising a false TRIAL item. In 41418 that item drew a count correction from sol 6.2 (51161 and 51162), so the change can leave a judge's own count higher than it was in such a run, because the judge is no longer asked to lower it. That is the judge's count as first written, not a count the engine sets. The card states this. If 4(b) or 4(c) shows any other count change, the plan returns to W1 before any card.
 
 ## 5. WRONG-IF
 1. Any stored K-UNX row stops being raised where the count truly names, as missing, a layer the block does not exhibit, other than L4.
@@ -71,5 +72,5 @@ This plan, ask536/w1/frags536.json and ask536/w1/sim536.cjs, in git and at /mnt/
 1. W2 grades this plan. No card.
 2. W4 builds both Library copies on the live engine and child, and runs criteria 4 and 5. No card.
 3. W2 grades the build. No card.
-4. The operator's write card in W4's thread names the change: the engine reads "missing despite" and "fit missing" as the judge wrote them, so a K-UNX item no longer says the judge called a present layer missing. The card also states that in 41418 the false item led sol 6.2 to lower its defender count from 3 to 2 and sol from 3 to 1, and that without it the judge keeps the count it wrote.
+4. The operator's write card in W4's thread names the change: the engine reads "missing despite" and "fit missing" as the judge wrote them, so a K-UNX item no longer says the judge called a present layer missing. The card also states that in 41418 the false item led sol 6.2 to lower its defender count from 3 to 2, and that without it the judge keeps the count it wrote. The card says nothing about sol.
 5. W4 writes. W2 reads back. No run is released for this ASK alone.
