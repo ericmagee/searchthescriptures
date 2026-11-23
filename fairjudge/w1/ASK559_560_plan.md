@@ -1,6 +1,6 @@
-# ASK 559 and ASK 560: absence moves and the opening round (W1, PLAN draft 1a)
+# ASK 559 and ASK 560: absence moves and the opening round (W1, PLAN draft 1b)
 
-Draft 1a folds W4's anchor answers (Wall 10989, 10990). No change to any exact code text; three notes added (marked W4 10989/10990).
+Draft 1b folds W3's two notes on the PASS (Wall 10994): the Change 1 control, and the "against" remainder. Draft 1a folded W4's anchor answers (Wall 10989, 10990). No exact code text has changed since draft 1.
 
 DRAFT ONLY. Nothing is written. Each change needs grading (W3), the builder's anchor check (W4), and the operator's approval of exact text. Nothing goes to the operator until the open ASK 557/558 card is answered (coordinator, 17:03 CST 11-23).
 
@@ -23,6 +23,7 @@ Target: LAY.structure in the Shared Library LIB, engine and child (the child's L
 Anchor: `if(absent(x))return;` (one occurrence in LAY).
 Exact change: `if(absent(x)&&/\banswers?\s+to\b|^[\s#>*_-]*ANSWER\s*:|\bpressed\s+rows\b|\banswers?\s+(?:on|for)\s+the\s+press/i.test(b.head))return;`
 The pattern is IMP's own ANS test. An absence-only block is still excused where BAR harvests every sentence (answer blocks); elsewhere it gets today's STRUCTURE item ("no verse quoted ..."), the item a link or premise without footing already gets. "Against" heads are left out on purpose, since BAR takes only "no ..." sentences there.
+Remainder, stated (W3 N2): an "against" block whose head LAY's block reader does not take as a block head (for example "D3 against C5:" or "**Against C5**"; offline 0 items before and after) still passes LAY, and BAR takes only its "no ..." sentences. Closing that needs a change to LAY's block reader (CP) or to BAR's against rule; it is not in this change.
 With ASK 557 Change D (draft 5b) the same line reads `if(absent(x)&&!need.length)return;`. If both are released, the line is `if(absent(x)&&!need.length&&<the pattern>.test(b.head))return;`, written once, with one sha reset. If 559 goes alone, the line above.
 Both sides alike: ruling 421 bars the absence form to both sides, and LAY runs on both (D2B to D4B, C2B to C4B Build).
 
@@ -37,7 +38,7 @@ GIVE (concessions) and the NOT A REQUIREMENT rebuttal are unchanged.
 Restore the 14 IMP nodes and both Shared Libraries from the pre-write export; compare md5 per node; Library Check passes.
 
 ### Test (offline first, on the live code text)
-1. Change 1: "LINK 2:" and "PREMISE 3" absence-only blocks give 1 STRUCTURE item each (today 0). Control: an "Answer on the press" block is unchanged. Result already run on the cut code: 0 to 1, 0 to 1, control 1 to 1.
+1. Change 1: "LINK 2:" and "PREMISE 3" absence-only blocks give 1 STRUCTURE item each (today 0). Control (W3 N1): a block whose head is "Answer on the press: Matthew 1:20 does not name the Spirit as father (Matthew 1:20)." followed by absence sentences is excused both before and after (0 and 0), and BAR harvests it. Already run on the cut code: 0 to 1, 0 to 1, control 0 to 0. Note: a head "ANSWER: ..." or "Answers to the presses:" is not a LAY block head (CP), so LAY gives 0 there both ways; those blocks are BAR's alone.
 2. Change 2: the ANSWER block above gives 4 hits (today 1). Result already run: 1 to 4.
 3. Controls on run 41822, all eight rounds: LAY items and BAR hits identical before and after (already run: LAY CR2 to CR4 and DR2 to DR4 0 items both ways; BAR 0 hits both ways on the stored rounds).
 4. Library Check passes in engine and child.

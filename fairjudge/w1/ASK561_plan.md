@@ -1,4 +1,6 @@
-# ASK 561: DR1 is not checked by LAY (W1, PLAN draft 1)
+# ASK 561: DR1 is not checked by LAY (W1, PLAN draft 1a)
+
+Draft 1a folds W3's note on the PASS (Wall 10995) and W4's C1B Extract anchors (Wall 10992); no code text changed.
 
 DRAFT ONLY. Nothing is written. Grading by W3, anchor check by W4, then the operator's approval of exact text. Nothing goes to the operator until the open ASK 557/558 card is answered.
 Basis: rulings 397 to 400 (PROVEN STRUCTURE, binding on both sides); W1 Wall 10988 (found at the ASK 559/560 read); coordinator 17:07 CST 11-23.
@@ -27,13 +29,13 @@ Still one send-back: the resend counts all points in one note, as in C2B.
 (b) `__keep` gains `layers:{first:(__G&&__G.lay_check)||null}` as in C2B Extract.
 (c) After a re-call: `const __L2=(()=>{try{return LAY.check(__S.raw);}catch(e){return null;}})();const __BC=LAY_BARE&&__L2&&__L2.items&&__L2.items.length?LAY.bare(__L2.items):'';`, and the returned item takes `raw:__S.raw+__BC`, `labelled:...__SL.raw+__BC...`, and `layers:{first:(__G&&__G.lay_check)||null,after:__L2,bare_written:!!__BC}` in `bar`, as in C2B Extract.
 The keep rule (`const __k2=...`) is the same text in C1B and C2B Extract and is not changed.
-W4 to quote C1B Extract's own anchors at the anchor check (its final `return [{json:{...__K,raw:__S.raw,...` line and its `const __keep=` line).
+C1B Extract's anchors are quoted by W4 at Wall 10992 (its `const __keep=` line and its final return line, one each). It has no LAY loader and no LAY_BARE today, so (a) to (c) are all needed.
 
 ## Revert
 Restore C1B Build and C1B Extract from the pre-write export; compare md5 per node. The Shared Library is read, not changed, so no sha header changes.
 
 ## Test
-1. Offline on run 41822 DR1 with the new C1B Build: lay_check 4 STRUCTURE items, resend true, why "4 layer point(s)", note opens with LAY's note. Control: a DR1 with no layer points and no barred sentence passes with resend false, as today.
+1. Offline on run 41822 DR1 with the new C1B Build: lay_check at least 4 STRUCTURE items (the offline count ran with no Verse Sheet rows; a verse not on the sheet gets credit with no quote test, W4 10990), resend true, why "<n> layer point(s)", note opens with LAY's note. Control: a DR1 with no layer points and no barred sentence passes with resend false, as today.
 2. Offline C1B Extract with resend false: the kept item carries `bar.layers.first` equal to the C1B Build lay_check; everything else identical to today.
 3. Every other node: pre-write md5 unchanged.
 4. Live run: DR1's lay_check is stored, and any send-back carries the layer note.
