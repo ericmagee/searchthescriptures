@@ -22,7 +22,8 @@ CREATE VIEW public.enforcer_pushes_by_side AS
 SELECT run_token, seat, item, against, first_id, stored_rows,
        count(*) OVER (PARTITION BY run_token, against) AS pushes_against_side
 FROM (
-  SELECT run_token, seat, item, against, min(id) AS first_id, count(*) AS stored_rows
+  SELECT DISTINCT ON (run_token, seat, item) run_token, seat, item, against, id AS first_id,
+         count(*) OVER (PARTITION BY run_token, seat, item) AS stored_rows
   FROM (
     SELECT l.run_token, l.id, l.seat, l.item,
       CASE
@@ -37,14 +38,16 @@ FROM (
       AND l.cure_reason LIKE '%right: BROKEN%'
       AND l.cure_reason LIKE '%judge wrote UNDERDETERMINED%'
   ) r
-  GROUP BY run_token, seat, item, against
+  ORDER BY run_token, seat, item, id
 ) s;
 
 -- Results of the SELECT bodies (17:50 CST 11-23):
 -- 554, run ODV1-41822-nnfywk74: 11 collisions; split = true on D1 vs C6, D2 vs C2, D3 vs C3, D3 vs C4, D3 vs C5, D4 vs C6.
 --      All runs: 2,736 rows.
 -- 555, run ODV1-41822-nnfywk74: 7 rows; 6 DEFENDER, 1 UNSTATED (chatgpt, D3 vs C4), 0 CHALLENGER. First ids 52448, 52452, 52453, 52455, 52458, 52678, 52800.
---      Run 41736: 2 rows, both DEFENDER. All runs: DEFENDER 55 (34 runs), CHALLENGER 46 (21 runs), UNSTATED 58 (29 runs), BOTH NAMED 2.
+--      Run 41736: 2 rows, both DEFENDER. All runs: 160 pushes; DEFENDER 55 (34 runs), CHALLENGER 46 (21 runs), UNSTATED 58 (29 runs), BOTH NAMED 1.
+-- Rev 2 (W1 condition C1, Wall 11045): each push is classed by its FIRST stored row (DISTINCT ON), so a push whose two
+-- stored passes read differently is counted once (run 38051, luna, D3 vs C3 was counted twice in rev 1: 161 and BOTH NAMED 2).
 -- Difference from the plan (BUILD_PLANS_draft2.md): the plan did not say that a push is stored on two passes;
 -- without the GROUP BY run 41822 gives 13 rows, not the 7 the plan's test expects. The GROUP BY gives the 7.
 -- Limit: "against" is read from the wording of the enforcer's reason; 58 of 161 pushes name no side.
