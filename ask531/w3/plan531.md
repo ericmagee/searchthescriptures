@@ -1,4 +1,4 @@
-# ASK 531 plan, rev 1 (W3). Replaces rev 0 (md5 947ad221), which W2 failed at Wall 10591: it sent the item to a judge that had already counted the same fact. A judge who spares a premise the assumption check finds unsupported is sent back, and counted if uncured. Plan only: nothing is built or written until the grade passes and the operator presses W4's write card. Times are CST.
+# ASK 531 plan, rev 1b (W3). Rev 1b adds change 5 (the gate's K-UNX checks accept the cure this plan asks for; W4 10624, W1 note, W3 10627) and criterion 6. It replaces rev 1a (md5 de0e843c), which W2 passed at 10594/10599. Rev 1 replaced rev 0 (md5 947ad221), which W2 failed at Wall 10591: it sent the item to a judge that had already counted the same fact. A judge who spares a premise the assumption check finds unsupported is sent back, and counted if uncured. Plan only: nothing is built or written until the grade passes and the operator presses W4's write card. Times are CST.
 
 ## 1. OBJECTIVE
 The operator chose "Yes, count it (ASK 531)" at 08:51 CST 11-23 on the card "Count a judge who lets an unsupported premise stand?": "If both readers find a premise's fact unsupported by any verse and the judge spares it, it is sent back. Left uncured, it counts against that judge's seat, like Mary's line in 41418."
@@ -40,7 +40,11 @@ Base: the live engine 0e05fc55 (with 524/525) and its child, plus whatever of 52
    - CURED on KEEP when the reason quotes verse words (at least 4 words in a row) found in that side's quoted verses, the same test the STATED reply passes in Assume Check Record (x.found).
    - Otherwise UNCURED. Uncured, not silent, not err, and not skipped by __oaSkip: the item goes in a new list ACXM and is counted in drv_uncured with an AUDIT line, as ECF is ("[AUDIT: ASSUMPTION UNCURED (pkgACX, ASK 531) -- SEAT: ...; ITEMS: ...; counted in drv_uncured.]"). A silent item counts by the silence rule, as today.
    - An applied CHANGE goes through the same apply path as an E-PREM change of the CONCEDED LINKS line. W4 shows that the count and standing then follow (ASK 526 if live).
-4. LABEL: the line near the Library's label text ("an uncured item counts against the seat only under an enforced package its CURE note names") stays true: pkgACX is named on every counted row.
+5. GATE K-UNX (Shared Library, both copies; found by W4 at build, Wall 10624). Without this, the gate flags the very cure that change 3 accepts.
+   a. RANGE check (line 467 on 0e05fc55, pkgBFX): a CHALLENGER premise j of 91 and up is not flagged when acx.facts holds a round 2 charge with n = j, side CHALLENGER and both_not_stated. Any other j beyond 1 to mx is flagged as today.
+   b. pkgBKC (bkcKeep2024, line 462): besides a fact with the same premise number, it also accepts a both_not_stated acx fact of the same side that the same-fact test of change 1 ties to premise j's ASSUMES clause. Everything else in the pkgBKC test is unchanged. W1's option 2, which sends the cure line 472 names, is not used: line 471 says "a failure of fit is not a missing layer", and an unstated fact behind an exhibited block is a failure of fit.
+   c. Both branches stay TRIAL: "it removes no seat; not counted in audit_flags" (line 473). This change moves no count.
+6. LABEL: the line near the Library's label text ("an uncured item counts against the seat only under an enforced package its CURE note names") stays true: pkgACX is named on every counted row.
 
 Not changed:
 - What the enforcer and the code read (524/525), and pkgBNS (ruling 372 kept).
@@ -64,6 +68,10 @@ The criteria:
 3. Synthetic cures, one each: a CHANGE that counts premise 91 (CURED); a CHANGE that counts Terra's premise 3 rewritten with "ASSUMES: Mary is in David's line" (CURED, same fact); a CHANGE that counts both 91 and that premise 3 (UNCURED, counted twice); a CHANGE that counts it but also regrades another premise (UNCURED, pkgPS); a KEEP that quotes 4 verse words found in the side's quoted verses (CURED); a KEEP that quotes none (UNCURED, counted).
 4. psGrades reads "premise 91 UNEXHIBITED" and "premises 5 and 91 UNEXHIBITED", and still reads every one-digit form as today.
 5. Only the named nodes and blocks differ. Both Library copies compile.
+6. Gate K-UNX, synthetic:
+   - RANGE, known good: "premise 91 UNEXHIBITED" with acx fact 91 is not flagged. Known bad: premise 92 with no acx fact 92 is flagged as today. A premise 7 against a list of 1 to 6 with no acx fact is flagged as today.
+   - pkgBKC, known good: premise 3 counted on "ASSUMES: Mary is in David's line" with acx fact 91 "Mary is of David's line" is not flagged. Known bad: premise 3 on an ASSUMES that shares fewer than 2 content words with any acx fact is flagged as today.
+   - 41418 as stored: report each K-UNX row before and after, including any on sol 6.2's premise 3 count.
 
 DONE: criteria 1 to 5 shown offline on the build, the write on W4's card, W4's readback MATCH, and the run evidence in section 6.
 
