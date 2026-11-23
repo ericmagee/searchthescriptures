@@ -1,6 +1,6 @@
 # ASK 524 with 525 (stacked): the assumption check reads the side's whole case, on both sides
 
-Rev 0. Planner W1 (seat 34). Proposal: Wall 10519. Findings: Wall 10517. Rulings kept: 383, 372 (pkgBNS option 1, COUNT) and 364 (a rule applied to one side is considered for the other).
+Rev 1 (replaces rev 0, md5 0214e2ca; takes W3's FAIL ON FORM, Wall 10534: the D3 Build sentence quoted as Oracle-facing text with its failed-run evidence, in SCOPE; a synthetic case for the C2 duplicate guard, in C2). Planner W1 (seat 34). Proposal: Wall 10519. Findings: Wall 10517. Rulings kept: 383, 372 (pkgBNS option 1, COUNT) and 364 (a rule applied to one side is considered for the other).
 
 ## 1. OBJECTIVE
 
@@ -43,6 +43,14 @@ SEARCH: I read the 519 fetch-backs on disk (engine 290db075, child 47e23e82), no
   - bkcKeep2024 (pkgBKC).
   - Library lines 1242 and 1247 (E-ASM and K-UNX-A), both "f.both_not_stated && f.side===x.side && +f.n===+x.premise".
 - D3 Build: the CHALLENGER'S UNSUPPORTED-L4 PREMISES paragraph. The anchor sentence occurs once.
+
+ORACLE-FACING TEXT (D3 Build, the defender's round 3 prompt), added verbatim after the sentence that ends "...without, alone, every or no other." and before "After the quote, write PRESSED WITH:" (+406 characters, 47,192 to 47,598):
+
+> If your round 2 charged the challenger with an assumption (an UNSUPPORTED-L4 PREMISES list or CHARGE THE ASSUMPTION), carry each such charge into this list as its own numbered premise: the challenger's own words that assert the fact, quoted verbatim, and the STEP/ASSUMES/ROWS GIVE line. If no words of the challenger assert the fact, do not list the charge. A charge left outside this list is not graded.
+
+FAILED-RUN EVIDENCE for this text (the operator's rule of 11-18 23:21 CST: no Oracle-facing text addition without a failed run): run 41418. The defender's round 2 list charged "ASSUMES: Mary is of David's line" (claude_r2); its round 3 list (engine_r3, the list the judges number and count) carried no ASSUMES line; so E-ASSUME checked no challenger fact (rows 51134 to 51139 all DEFENDER), and two judges spared that premise (W2 10513 item 3). The same pattern, a round 2 charge not carried into round 3, stands in 41117, 41102 and 41043 (cmp524_*.json). REVERSES ONE CHOICE OF ASK 374: the ASK 374 entry of the engine manual (v233, "THE DEFENDER MAY CHARGE AN ASSUMPTION") says "C2's carry sentence (\"If your earlier rounds charged an assumption ...\") is not copied." This sentence is that carry sentence, adapted for the defender, so it reverses that one choice; the rest of ASK 374 stands. The operator ruled on ASK 374 (both sides charge assumptions); whether this carry sentence is added is the operator's call, and W4's write card names this sentence on its own line. What it brings: only through this sentence does a defender's round 2 charge reach a numbered challenger premise that the judges count; items 91 and up stay record-only (section 6).
+
+In the stored code the line stands as the JS string with the apostrophe escaped (challenger\'s); the compiled text is as quoted.
 - Child workflow: no node holds "Assume Check". NOT SEARCHED: none.
 
 ## 4. CRITERIA and DONE
@@ -73,7 +81,16 @@ MEASURED, added items:
 | 41090 | 0 | no round 2 list with ASSUMES |
 | 41043 | 3 | 91 to 93 |
 
-None matched a round 3 item. This criterion can fail: a run whose round 2 list repeats a round 3 premise must not add a duplicate.
+None matched a round 3 item.
+
+SYNTHETIC CASE for the duplicate guard (synth524.js 96417c46, output synth524_41418.txt e8f41852), on 41418's stored rounds with the defender's round 3 list given an item 7 that quotes the same challenger words as its round 2 first STEP:
+
+- A, item 7 WITH an ASSUMES line: "Mary is of David's line" appears once, as premise 7 (link 7, not record-only); no 91 is added for it.
+- B, item 7 WITHOUT an ASSUMES line: the round 2 item takes number 7 (link 7, not record-only), not 91.
+- With no item 7: it is 91, record-only, as in C2 above.
+- The check can fail: with the guard line removed (MUT=1), it prints FAIL.
+
+Result: PASS. Note: in case A the ASSUMES text read from round 3 ends in " --"; that is the base round 3 parser (vp4List), unchanged by this ASK.
 
 **C3. The E-ASSUME prompt shows, once per side, every verse that side quoted in rounds 1 to 3, read together.** One entry is kept per distinct quotation, and a quotation inside a longer one of the same verse is dropped. MEASURED for 41418: the defender's list holds John 6:42 and Luke 2:48 (prompt524_41418.txt).
 
@@ -129,7 +146,7 @@ ask524/w1/, for W3 to commit:
 - patch524.py (env SRC and OUT)
 - target_engine_524_on519.json
 - replay524.js, eqlive524.js, fo524.js, cmp524.js, rec524.js
-- cmp524_{41418,41117,41102,41090,41043}.json, rec524_41418.txt, prompt524_41418.txt
+- cmp524_{41418,41117,41102,41090,41043}.json, rec524_41418.txt, prompt524_41418.txt, synth524.js, synth524_41418.txt
 - fo_*.json, the round texts as stored
 
 ## 8. STEPS
