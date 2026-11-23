@@ -1,0 +1,15 @@
+"CHALLENGER CONCEDED LINKS: 1 -- Premise 91: UNEXHIBITED. Premises 1-6 are spared."
+  narrow {"1":"SPARED","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"SPARED"}
+  wide   {"1":"SPARED","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"SPARED","91":"COUNTED"}
+"CHALLENGER CONCEDED LINKS: 2 -- Premises 5 and 91: UNEXHIBITED. Premises 1, 2, 3, 4 and 6 are spared."
+  narrow {"1":"SPARED","2":"SPARED","3":"SPARED","4":"SPARED","5":"COUNTED","6":"SPARED"}
+  wide   {"1":"SPARED","2":"SPARED","3":"SPARED","4":"SPARED","5":"COUNTED","6":"SPARED","91":"COUNTED"}
+"CHALLENGER CONCEDED LINKS: 1 -- Premise 5: UNEXHIBITED. Premises 1, 2, 3, 4 and 6 are spared."
+  narrow {"1":"SPARED","2":"SPARED","3":"SPARED","4":"SPARED","5":"COUNTED","6":"SPARED"}
+  wide   {"1":"SPARED","2":"SPARED","3":"SPARED","4":"SPARED","5":"COUNTED","6":"SPARED"}
+"CONCEDED LINKS: 2 -- Premises 2 and 4: UNEXHIBITED. Premises 1, 3 and 5 are spared."
+  narrow {"1":"SPARED","2":"COUNTED","3":"SPARED","4":"COUNTED","5":"SPARED"}
+  wide   {"1":"SPARED","2":"COUNTED","3":"SPARED","4":"COUNTED","5":"SPARED"}
+"CHALLENGER CONCEDED LINKS: 1 -- Premise 3: UNEXHIBITED; premise 12 is spared."
+  narrow {"3":"COUNTED"}
+  wide   {"3":"COUNTED"}

@@ -1,0 +1,17 @@
+== Assume Check Build | keys that differ: NONE | drv base [no bodies] target [no bodies] | alt_needed undefined -> undefined
+== Assume Check Record | keys that differ: acx, acx_log | drv base [sol62:15 chatgpt:16 sol:17] target [sol62:15 chatgpt:16 sol:17] | alt_needed undefined -> undefined
+== Send Back Build | keys that differ: items | drv base [no bodies] target [no bodies] | alt_needed undefined -> undefined
+== Send Back Record | keys that differ: bodies, sendback, sb_rows, sb_items | drv base [sol62:1 chatgpt:0 sol:0] target [sol62:1 chatgpt:1 sol:1] | alt_needed true -> true
+  ROW COUNT 30 32
+  sendback: {"skipped":false,"calls":3,"not_sent":2,"tally":{"KEEP":6,"CHANGE":21,"NO ANSWER":3},"errors":[],"silent_counted":[{"seat":"chatgpt","items":["S11"]},{"seat":"sol","items":["S8"]}],"ecol_counted":[],"und_counted":[],"abs_counted":[],"pab_counted":[],"mnp_counted":[],"imp_counted":[],"acx_counted":[],"ksc_counted":[],"b7_counted":[],"dlu_counted":[{"seat":"sol62","items":["S1 (E-ANS ANSWER CHECK Matthew 1:18 [CR4]: the KEYSTONE or RESULT quotes Matthew 1:18)"]}],"vp3_trial":{"status":"TRIAL","checked":4,"agree":0,"would_remove":{}}}
+  BODY chatgpt drv 0 -> 1 | verdict_raw prefix equal: true | added: 
+[AUDIT v40: SEND-BACK SILENCE -- SEAT: chatgpt; ITEMS: S11; no written answer to this send-back item; counted in drv_uncured (silence rule, WALL-2024 2274). REVIEW THIS ROW.]
+  BODY sol drv 0 -> 1 | verdict_raw prefix equal: true | added: 
+[AUDIT v40: SEND-BACK SILENCE -- SEAT: sol; ITEMS: S8; no written answer to this send-back item; counted in drv_uncured (silence rule, WALL-2024 2274). REVIEW THIS ROW.]
+== Reread Build | keys that differ: NONE | drv base [no bodies] target [no bodies] | alt_needed undefined -> undefined
+== Reread Record | keys that differ: NONE | drv base [no bodies] target [no bodies] | alt_needed undefined -> undefined
+== Gate Build | keys that differ: body | drv base [no bodies] target [no bodies] | alt_needed undefined -> undefined
+== Gate Record | keys that differ: bodies, sendback, sb_items | drv base [sol62:1 chatgpt:1 sol:1] target [sol62:1 chatgpt:2 sol:2] | alt_needed true -> true
+  sendback: {"skipped":false,"calls":3,"not_sent":2,"tally":{"KEEP":6,"CHANGE":21,"NO ANSWER":3},"errors":[],"silent_counted":[{"seat":"chatgpt","items":["S11"]},{"seat":"sol","items":["S8"]}],"ecol_counted":[],"und_counted":[],"abs_counted":[],"pab_counted":[],"mnp_counted":[],"imp_counted":[],"acx_counted":[],"ksc_counted":[],"b7_counted":[],"dlu_counted":[{"seat":"sol62","items":["S1 (E-ANS ANSWER CHECK Matthew 1:18 [CR4]: the KEYSTONE or RESULT quotes Matthew 1:18)"]}],"vp3_trial":{"status":"TRIAL","checked":4,"agree":0,"would_remove":{}}}
+  BODY chatgpt drv 1 -> 2 | verdict_raw prefix equal: false | added: IAL) -- SEAT: chatgpt; LINE: KEYSTONE D5: (d) names no collision line to read its [L3] against; record-only, not counted in drv_uncured; it removes no seat and moves no grade]
+  BODY sol drv 1 -> 2 | verdict_raw prefix equal: false | added: ATE NEW ITEM -- SEAT: sol; NOT APPLIED (E-APPLY G2): the flagged line is not in the judge text; raised after the gate answers; RECORD-ONLY, not counted. REVIEW THIS ROW.]

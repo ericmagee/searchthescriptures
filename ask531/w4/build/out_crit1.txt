@@ -1,0 +1,13 @@
+== Assume Check Record | keys that differ: NONE | drv base [sol62:15 chatgpt:16 sol:17] target [sol62:15 chatgpt:16 sol:17] | alt_needed undefined -> undefined
+== Send Back Build | keys that differ: items | drv base [no bodies] target [no bodies] | alt_needed undefined -> undefined
+== Send Back Record | keys that differ: sendback | drv base [sol62:1 chatgpt:0 sol:0] target [sol62:1 chatgpt:0 sol:0] | alt_needed true -> true
+  sendback: {"skipped":false,"calls":3,"not_sent":2,"tally":{"KEEP":6,"CHANGE":21,"NO ANSWER":1},"errors":[],"silent_counted":[],"ecol_counted":[],"und_counted":[],"abs_counted":[],"pab_counted":[],"mnp_counted":[],"imp_counted":[],"acx_counted":[],"ksc_counted":[],"b7_counted":[],"dlu_counted":[{"s
+== Reread Build | keys that differ: NONE | drv base [no bodies] target [no bodies] | alt_needed undefined -> undefined
+== Reread Record | keys that differ: NONE | drv base [no bodies] target [no bodies] | alt_needed undefined -> undefined
+== Gate Build | keys that differ: NONE | drv base [no bodies] target [no bodies] | alt_needed undefined -> undefined
+== Gate Record | keys that differ: sendback | drv base [sol62:1 chatgpt:0 sol:0] target [sol62:1 chatgpt:0 sol:0] | alt_needed true -> true
+  sendback: {"skipped":false,"calls":3,"not_sent":2,"tally":{"KEEP":6,"CHANGE":21,"NO ANSWER":1},"errors":[],"silent_counted":[],"ecol_counted":[],"und_counted":[],"abs_counted":[],"pab_counted":[],"mnp_counted":[],"imp_counted":[],"acx_counted":[],"ksc_counted":[],"b7_counted":[],"dlu_counted":[{"s
+Assume Check Record EQUAL apart from empty acx fields
+Send Back Build EQUAL apart from empty acx fields
+Send Back Record EQUAL apart from empty acx fields
+Gate Record EQUAL apart from empty acx fields
