@@ -2,7 +2,7 @@
 # ASK 516b REVERT to 515 rev 7: only on the operator's card press in W4's thread. Asserts the live version equals the base before each PUT.
 set -e; cd /mnt/project-files/ask516/w4/b/
 H="https://truthapp.app.n8n.cloud/api/v1/workflows"
-for pair in "moMxiV4Irg1uRBZN:ENGINE_VERSION_AFTER_WRITE:revert_engine_516b.json:fetchback_engine_revert516b.json" "MqQHRl7mQQ0z8QdT:CHILD_VERSION_AFTER_WRITE:revert_child_516b.json:fetchback_child_revert516b.json"; do
+for pair in "moMxiV4Irg1uRBZN:0427ec91-dadb-41d2-b99c-ce3063e2ed67:revert_engine_516b.json:fetchback_engine_revert516b.json" "MqQHRl7mQQ0z8QdT:47df6892-d52c-4a11-8ae5-95d7e79ab806:revert_child_516b.json:fetchback_child_revert516b.json"; do
  IFS=: read W V T F <<<"$pair"
  cur=$(curl -s -H "X-N8N-API-KEY: $N8N_API_KEY" "$H/$W" | python3 -c 'import json,sys;print(json.load(sys.stdin)["versionId"])')
  [ "$cur" = "$V" ] || { echo "MOVED $W $cur"; exit 1; }
