@@ -1,0 +1,127 @@
+{
+ "run": "/tmp/claude-0/-home-claude/25c53118-408e-5b9f-a314-6593b8f02ba2/scratchpad/c2/41117.json",
+ "users_changed": [
+  "Extract Independent Verdict",
+  "Panel Payloads",
+  "Cure Build",
+  "Cure Normalize",
+  "Cure Check",
+  "Panel Cure Build 1",
+  "Panel Cure Normalize 1",
+  "Panel Cure Build 2",
+  "Panel Cure Normalize 2",
+  "Panel Cure Build 3",
+  "Panel Cure Normalize 3",
+  "Panel Cure Check",
+  "Alternate Build",
+  "Alternate Payloads",
+  "Alternate Cure Build",
+  "Alternate Cure Normalize",
+  "Alternate Merge Seat",
+  "Gate Build",
+  "Gate Record",
+  "Alt Gate Build",
+  "Alt Gate Record",
+  "Alternate Merge 1",
+  "Late Gate Build",
+  "Alt Late Gate Build"
+ ],
+ "nodes": {
+  "Extract Independent Verdict": "not executed",
+  "Panel Payloads": {
+   "harness_diffs": 70,
+   "changes": []
+  },
+  "Cure Build": "not executed",
+  "Cure Normalize": "not executed",
+  "Cure Check": "not executed",
+  "Panel Cure Build 1": {
+   "harness_diffs": 1,
+   "changes": [
+    ".0.json.cure.body.messages.5.content#0 : \"COUNT AND STANDING (same rule). Your own numbers must agree with your own COLLISION POINTS lines. WITNESS (md_notes_rulings 392, 398): in every item below a witness is a verse a listed premise carries under PRESSED WITH: (the list that closes [DR2] against the defender, the list that closes [CR3] a  =>  \"COUNT AND STANDING (same rule). Your own numbers must agree with your own COLLISION POINTS lines. WITNESS (md_notes_rulings 392, 398): in every item below a witness is a verse a listed premise carries under PRESSED WITH: (the list that closes [DR2] against the defender, the list that closes [CR3] a"
+   ]
+  },
+  "Panel Cure Normalize 1": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Panel Cure Build 2": {
+   "harness_diffs": 1,
+   "changes": [
+    ".0.json.cure.body.messages.5.content#0 : \"COUNT AND STANDING (same rule). Your own numbers must agree with your own COLLISION POINTS lines. WITNESS (md_notes_rulings 392, 398): in every item below a witness is a verse a listed premise carries under PRESSED WITH: (the list that closes [DR2] against the defender, the list that closes [CR3] a  =>  \"COUNT AND STANDING (same rule). Your own numbers must agree with your own COLLISION POINTS lines. WITNESS (md_notes_rulings 392, 398): in every item below a witness is a verse a listed premise carries under PRESSED WITH: (the list that closes [DR2] against the defender, the list that closes [CR3] a"
+   ]
+  },
+  "Panel Cure Normalize 2 run0": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Panel Cure Normalize 2 run1": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Panel Cure Build 3": {
+   "harness_diffs": 1,
+   "changes": [
+    ".0.json.cure.body.messages.5.content#0 : \"COUNT AND STANDING (same rule). Your own numbers must agree with your own COLLISION POINTS lines. WITNESS (md_notes_rulings 392, 398): in every item below a witness is a verse a listed premise carries under PRESSED WITH: (the list that closes [DR2] against the defender, the list that closes [CR3] a  =>  \"COUNT AND STANDING (same rule). Your own numbers must agree with your own COLLISION POINTS lines. WITNESS (md_notes_rulings 392, 398): in every item below a witness is a verse a listed premise carries under PRESSED WITH: (the list that closes [DR2] against the defender, the list that closes [CR3] a"
+   ]
+  },
+  "Panel Cure Normalize 3 run0": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Panel Cure Normalize 3 run1": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Panel Cure Check": {
+   "harness_diffs": 604,
+   "changes": [
+    ".0.json.bodies.1(json).payload.verdict_raw#2 : \"  \\\"defense_standing\\\": \\\"PROP-DEPENDENT\\\",\"  =>  \"  \\\"defense_standing\\\": \\\"SELF-SUPPORTED\\\",\"",
+    ".0.json.bodies.1(json).payload.verdict_raw#8 : \"  \\\"reasoning\\\": \\\"BROKEN. [L1] Matthew 1:25 and [L3] Matthew 1:18 put the defender's proposed knowing before the finding in tension with the stated timing. [L1] Matthew 1:20 and [L3] Matthew 1:18 give the Holy Ghost as the origin of what was conceived; the defender's covenant-origin answer does no  =>  \"  \\\"reasoning\\\": \\\"BROKEN. [L1] Matthew 1:25 and [L3] Matthew 1:18 put the defender's proposed knowing before the finding in tension with the stated timing. [L1] Matthew 1:20 and [L3] Matthew 1:18 give the Holy Ghost as the origin of what was conceived; the defender's covenant-origin answer does no",
+    ".0.json.bodies.1(json).payload.verdict_raw#72 : \"[AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: chatgpt; TRIGGER: CLOSE-CONTRADICTION D3 vs C1 (UNDERDETERMINED to CHALLENGER LINK BROKEN), CLOSE-CONTRADICTION D4 vs C1 (CHALLENGER break not set: the line already carries the DEFENDER break), CORRECTED COUNT DEFENDER 0; ORIGINAL: BROKEN, DEFENSE PROP-DEP  =>  \"[AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: chatgpt; TRIGGER: CLOSE-CONTRADICTION D3 vs C1 (UNDERDETERMINED to CHALLENGER LINK BROKEN), CLOSE-CONTRADICTION D4 vs C1 (CHALLENGER break not set: the line already carries the DEFENDER break), CORRECTED COUNT DEFENDER 0; ORIGINAL: BROKEN, DEFENSE PROP-DEP",
+    ".0.json.bodies.1(json).payload.defense_standing : \"PROP-DEPENDENT\"  =>  \"SELF-SUPPORTED\"",
+    ".0.json.summary.1.recomputed.fields.defense_standing : \"PROP-DEPENDENT\"  =>  \"SELF-SUPPORTED\""
+   ]
+  },
+  "Alternate Build": "not executed",
+  "Alternate Payloads": "not executed",
+  "Alternate Cure Build": "not executed",
+  "Alternate Cure Normalize": "not executed",
+  "Alternate Merge Seat": {
+   "harness_diffs": 1,
+   "changes": [
+    ".0.json.bodies.1(json).payload.verdict_raw#2 : \"  \\\"defense_standing\\\": \\\"PROP-DEPENDENT\\\",\"  =>  \"  \\\"defense_standing\\\": \\\"SELF-SUPPORTED\\\",\"",
+    ".0.json.bodies.1(json).payload.verdict_raw#8 : \"  \\\"reasoning\\\": \\\"BROKEN. [L1] Matthew 1:25 and [L3] Matthew 1:18 put the defender's proposed knowing before the finding in tension with the stated timing. [L1] Matthew 1:20 and [L3] Matthew 1:18 give the Holy Ghost as the origin of what was conceived; the defender's covenant-origin answer does no  =>  \"  \\\"reasoning\\\": \\\"BROKEN. [L1] Matthew 1:25 and [L3] Matthew 1:18 put the defender's proposed knowing before the finding in tension with the stated timing. [L1] Matthew 1:20 and [L3] Matthew 1:18 give the Holy Ghost as the origin of what was conceived; the defender's covenant-origin answer does no",
+    ".0.json.bodies.1(json).payload.verdict_raw#90 : \"[AUDIT v37: SEND-BACK APPLIED (E-APPLY; WALL-2024 2236, 2237) -- SEAT: chatgpt; APPLIED: S1, S7, S8, S14, S15, S16, S17, S19, S20, G6, G7, G8, G9, G10, S18; ORIGINAL: BROKEN, DEFENSE PROP-DEPENDENT 0, CHALLENGE PROP-DEPENDENT 1, RESULT UNDERDETERMINED; DERIVED: BROKEN (BROKEN-1), DEFENSE PROP-DEPEN  =>  \"[AUDIT v37: SEND-BACK APPLIED (E-APPLY; WALL-2024 2236, 2237) -- SEAT: chatgpt; APPLIED: S1, S7, S8, S14, S15, S16, S17, S19, S20, G6, G7, G8, G9, G10, S18; ORIGINAL: BROKEN, DEFENSE PROP-DEPENDENT 0, CHALLENGE PROP-DEPENDENT 1, RESULT UNDERDETERMINED; DERIVED: BROKEN (BROKEN-1), DEFENSE SELF-SUPPO",
+    ".0.json.bodies.1(json).payload.defense_standing : \"PROP-DEPENDENT\"  =>  \"SELF-SUPPORTED\"",
+    ".0.json.summary.1.sb_applied.fields.defense_standing : \"PROP-DEPENDENT\"  =>  \"SELF-SUPPORTED\"",
+    ".0.json.bodies.1(json).payload.verdict_raw#111 : undefined  =>  \"[AUDIT v27: SUPERSEDED LINE -- SEAT: chatgpt; LABEL: DEFENSE STANDING; ORIGINAL: DEFENSE STANDING: PROP-DEPENDENT -- L=6 c=0 -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D3 vs C1 (UNDERDETERMINED to CHALLENGER LINK BROKEN); CLOSE-CONTRADICTION D4 vs C1 (CHALLENGER break no"
+   ]
+  },
+  "Gate Build": {
+   "harness_diffs": 2,
+   "changes": []
+  },
+  "Gate Record": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Alt Gate Build": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Alt Gate Record": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Alternate Merge 1": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Late Gate Build": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Alt Late Gate Build": "not executed"
+ }
+}

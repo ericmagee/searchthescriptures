@@ -1,0 +1,119 @@
+{
+ "run": "/tmp/claude-0/-home-claude/25c53118-408e-5b9f-a314-6593b8f02ba2/scratchpad/c2/41090.json",
+ "users_changed": [
+  "Extract Independent Verdict",
+  "Panel Payloads",
+  "Cure Build",
+  "Cure Normalize",
+  "Cure Check",
+  "Panel Cure Build 1",
+  "Panel Cure Normalize 1",
+  "Panel Cure Build 2",
+  "Panel Cure Normalize 2",
+  "Panel Cure Build 3",
+  "Panel Cure Normalize 3",
+  "Panel Cure Check",
+  "Alternate Build",
+  "Alternate Payloads",
+  "Alternate Cure Build",
+  "Alternate Cure Normalize",
+  "Alternate Merge Seat",
+  "Gate Build",
+  "Gate Record",
+  "Alt Gate Build",
+  "Alt Gate Record",
+  "Alternate Merge 1",
+  "Late Gate Build",
+  "Alt Late Gate Build"
+ ],
+ "nodes": {
+  "Extract Independent Verdict": "not executed",
+  "Panel Payloads": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Cure Build": "not executed",
+  "Cure Normalize": "not executed",
+  "Cure Check": "not executed",
+  "Panel Cure Build 1": {
+   "harness_diffs": 1,
+   "changes": [
+    ".0.json.cure.body.messages.5.content#0 : \"COUNT AND STANDING (same rule). Your own numbers must agree with your own COLLISION POINTS lines. WITNESS (md_notes_rulings 392, 398): in every item below a witness is a verse a listed premise carries under PRESSED WITH: (the list that closes [DR2] against the defender, the list that closes [CR3] a  =>  \"COUNT AND STANDING (same rule). Your own numbers must agree with your own COLLISION POINTS lines. WITNESS (md_notes_rulings 392, 398): in every item below a witness is a verse a listed premise carries under PRESSED WITH: (the list that closes [DR2] against the defender, the list that closes [CR3] a"
+   ]
+  },
+  "Panel Cure Normalize 1": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Panel Cure Build 2": {
+   "harness_diffs": 1,
+   "changes": [
+    ".0.json.cure.body.messages.5.content#0 : \"COUNT AND STANDING (same rule). Your own numbers must agree with your own COLLISION POINTS lines. WITNESS (md_notes_rulings 392, 398): in every item below a witness is a verse a listed premise carries under PRESSED WITH: (the list that closes [DR2] against the defender, the list that closes [CR3] a  =>  \"COUNT AND STANDING (same rule). Your own numbers must agree with your own COLLISION POINTS lines. WITNESS (md_notes_rulings 392, 398): in every item below a witness is a verse a listed premise carries under PRESSED WITH: (the list that closes [DR2] against the defender, the list that closes [CR3] a"
+   ]
+  },
+  "Panel Cure Normalize 2": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Panel Cure Build 3": {
+   "harness_diffs": 1,
+   "changes": [
+    ".0.json.cure.body.messages.5.content#0 : \"COUNT AND STANDING (same rule). Your own numbers must agree with your own COLLISION POINTS lines. WITNESS (md_notes_rulings 392, 398): in every item below a witness is a verse a listed premise carries under PRESSED WITH: (the list that closes [DR2] against the defender, the list that closes [CR3] a  =>  \"COUNT AND STANDING (same rule). Your own numbers must agree with your own COLLISION POINTS lines. WITNESS (md_notes_rulings 392, 398): in every item below a witness is a verse a listed premise carries under PRESSED WITH: (the list that closes [DR2] against the defender, the list that closes [CR3] a"
+   ]
+  },
+  "Panel Cure Normalize 3": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Panel Cure Check": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Alternate Build": {
+   "error": "node Accept Final not executed"
+  },
+  "Alternate Payloads": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Alternate Cure Build": {
+   "harness_diffs": 1,
+   "changes": [
+    ".0.json.cure.body.messages.5.content#0 : \"COUNT AND STANDING (same rule). Your own numbers must agree with your own COLLISION POINTS lines. WITNESS (md_notes_rulings 392, 398): in every item below a witness is a verse a listed premise carries under PRESSED WITH: (the list that closes [DR2] against the defender, the list that closes [CR3] a  =>  \"COUNT AND STANDING (same rule). Your own numbers must agree with your own COLLISION POINTS lines. WITNESS (md_notes_rulings 392, 398): in every item below a witness is a verse a listed premise carries under PRESSED WITH: (the list that closes [DR2] against the defender, the list that closes [CR3] a"
+   ]
+  },
+  "Alternate Cure Normalize": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Alternate Merge Seat": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Gate Build": {
+   "harness_diffs": 2,
+   "changes": []
+  },
+  "Gate Record": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Alt Gate Build": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Alt Gate Record": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Alternate Merge 1": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Late Gate Build": {
+   "harness_diffs": 1,
+   "changes": []
+  },
+  "Alt Late Gate Build": "not executed"
+ }
+}
