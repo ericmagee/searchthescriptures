@@ -1,5 +1,6 @@
-# ASK 533 plan (W1, seat 34), rev 1, 2026-11-23. A PLAN ONLY; nothing is written.
+# ASK 533 plan (W1, seat 34), rev 1a, 2026-11-23. A PLAN ONLY; nothing is written.
 Rev 1 replaces rev 0 (69d82656) on W2's FAIL at Wall 10755: (1) W2 rules the item exempt from the silence count, so it is added to line 518 enfSilent; (2) ren does not reach l2Data(), because Quote Report builds l2_data as {ow, lex, read} only, so the read path is named and checked; (3) line 934 cureOwn strips a label only of the form K-<letters><digits>, so "K-L2G " (rev 0's label) is not stripped; the label is now K-GLS, which that pattern strips. MY MISTAKES: I did not trace how ren reaches the Library, and I did not read cureOwn.
+Rev 1a (W3 build grade C1 at Wall 10778; ruled at Wall 10779): (1) Library index 1311 joins the scope. __mlsT also counts a K-GLS item whose link equals the retracted link, and K-GLS joins the silent set in its second clause. A RETRACTED that answers only K-GLS items is recorded, not applied, as pkgMLS does for K-ML, K-SU and K-RUD. A RETRACTED on a link that any other rule also names is applied as today. The K-GLS cure reads a recorded retraction as CURED. Test cases: (a) only a K-GLS item names the link, so the retraction is recorded and the counts are unchanged; (b) K-GLS and K-L2 items name the same link, so the retraction is applied as today. (2) WRONG-IF 1 reads "content word" for "part".
 Source: proposal W1 Wall 10589 item 1 and addendum 10596 item 2(a); review W2 10593 item 2 (record-only, name the branch that keeps the item out of the K-L2 void) and W3 10590; W3 10719 (the Oracle's own CR4 wrote "[L2] synerchomai to come together, to cohabit"). Coordinator order: "Proceed with 533, then 542." Rulings: 383 (only the Oracle is bound by guards; nothing here enters a judge prompt), 428 (record-only until it passes a known case), 497 (no single verse doctrine), the 1611 KJV is its own authority, the 11-19 18:28 CST scope rule.
 
 ## 1. OBJECTIVE
@@ -74,9 +75,10 @@ DONE:
 9. RULING 428: K-GLS adds a question to the judge and no count. It cannot void a ground, and its silence does not count. The card states this.
 
 ## 5. WRONG-IF
-1. An item is raised on a part that holds a KJV rendering of its number, in any form forms() gives.
+1. An item is raised on a content word that is a KJV rendering of its number, in any form forms() gives.
 2. Either known bad line raises no K-GLS item.
 3. Any K-L2 reader, or the AUDIT v28 void mark, fires on a K-GLS item.
+7. A RETRACTED that answers only K-GLS items moves any count, or a RETRACTED on a link also named by another rule is not applied.
 4. A count, cure status or drv_uncured value changes on any stored judgment, other than by a K-GLS row of its own.
 5. The two Library copies differ after the build, or ren is absent at the call site in the engine or the child.
 6. cureOwn does not strip "K-GLS ", or the synthetic cure cases give any other status.
