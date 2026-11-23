@@ -1,0 +1,45 @@
+903 gemini UNCHANGED (byte-equal)
+905 chatgpt UNCHANGED (byte-equal)
+907 glm UNCHANGED (byte-equal)
+935 grok UNCHANGED (byte-equal)
+962 grok DERIVED | DEFENDER [2,4,5,6] -> [2,6] | rest equal apart from arrays and DERIVED lines: true
+971 grok DERIVED | DEFENDER [6] -> [5,6] | rest equal apart from arrays and DERIVED lines: true
+974 grok DERIVED | DEFENDER [] -> [2,4,5,6] | CHALLENGER [1,3,4,6] -> [] | rest equal apart from arrays and DERIVED lines: true
+976 chatgpt DERIVED | DEFENDER [6] -> [] | rest equal apart from arrays and DERIVED lines: true
+990 gemini DERIVED | DEFENDER [] -> [2] | rest equal apart from arrays and DERIVED lines: true
+992 grok DERIVED | DEFENDER [] -> [2,3,4,5,6] | CHALLENGER [3] -> [2,3,4,5] | rest equal apart from arrays and DERIVED lines: true
+996 gemini UNCHANGED (byte-equal)
+997 chatgpt DERIVED | CHALLENGER [3,4] -> [3] | rest equal apart from arrays and DERIVED lines: true
+999 gemini DERIVED | CHALLENGER [2] -> [] | rest equal apart from arrays and DERIVED lines: true
+1002 gemini DERIVED | DEFENDER [] -> [6] | rest equal apart from arrays and DERIVED lines: true
+1003 chatgpt DERIVED | DEFENDER [4,6] -> [6] | rest equal apart from arrays and DERIVED lines: true
+1004 sol DERIVED | DEFENDER [4] -> [] | rest equal apart from arrays and DERIVED lines: true
+1017 gemini DERIVED | CHALLENGER [1] -> [] | rest equal apart from arrays and DERIVED lines: true
+1023 gemini DERIVED | CHALLENGER [] -> [1,5] | rest equal apart from arrays and DERIVED lines: true
+1024 chatgpt DERIVED | DEFENDER [1] -> [] | rest equal apart from arrays and DERIVED lines: true
+1026 gemini DERIVED | CHALLENGER [1] -> [] | rest equal apart from arrays and DERIVED lines: true
+1031 grok DERIVED | DEFENDER [] -> [6] | rest equal apart from arrays and DERIVED lines: true
+1032 gemini DERIVED | CHALLENGER [3] -> [] | rest equal apart from arrays and DERIVED lines: true
+1038 gemini UNCHANGED (byte-equal)
+1176 chatgpt UNCHANGED (byte-equal)
+1196 luna UNCHANGED (byte-equal)
+1202 luna UNCHANGED (byte-equal)
+1222 chatgpt DERIVED | CHALLENGER [] -> [1,2] | rest equal apart from arrays and DERIVED lines: true
+1225 chatgpt DERIVED | CHALLENGER [2,5] -> [5] | rest equal apart from arrays and DERIVED lines: true
+1228 sonnet UNCHANGED (byte-equal)
+1230 sol62 UNCHANGED (byte-equal)
+1239 qwen4max UNCHANGED (byte-equal)
+1241 sol UNCHANGED (byte-equal)
+1252 chatgpt UNCHANGED (byte-equal)
+1254 sol62 UNCHANGED (byte-equal)
+1262 qwen4max UNCHANGED (byte-equal)
+1263 sol62 UNCHANGED (byte-equal)
+1265 qwen4max DERIVED | DEFENDER [1,2,5,6] -> [2,5,6] | rest equal apart from arrays and DERIVED lines: true
+37 rows: derived 20, unchanged 17
+41418 Alternate Merge: bodies 3, error none
+  sol62 byte-equal
+  chatgpt byte-equal
+  qwen4max CHANGED: arrays [1, 2, 5, 6] [] -> [2,5,6] []; other payload fields changed: none; rest of verdict_raw equal: true
+    ADDED:   "counted_premises_defender": [2,5,6],
+    ADDED: [AUDIT v50: COUNTED PREMISES DERIVED (pkgCPD) -- SEAT: qwen4max; SIDE: DEFENDER; COUNT: FINAL PASS to 3; WAS: [1,2,5,6]; NOW: [2,5,6]; FROM: CONCEDED LINKS: 3 -- Premise 2 (LINK 4): UNEXHIBITED (STEP: the therefore of Luke 1:35 reaches back to the throne of Luke 1:32 -- ASSUMES: Mary's question concerned the throne -- ROWS GIVE: "thou shalt conceive in thy womb, and bring forth ; record-only, it removes no seat ; END]
+41418 other output keys changed: none
