@@ -17,7 +17,7 @@ Plan: ask542/w1/plan542.md rev 0 (4bb44786), PASS by W2 at Wall 10763. Grader of
 ## CHECKS
 1. Only Shared Library differs in each workflow. Node set, connections and settings are equal. Only LIB index 479 differs, and the line count is unchanged (3,566).
 2. runcheck: both targets OK, 1ab5d9d38feb7aa4 (out_runcheck542.txt).
-3. ASK 539 pair check: engine and child lib 1ab5d9d38feb7aa4, map 11813a151ba0e052, Library Check PASSES (out_pair542.txt). The map sha is unchanged from live.
+3. ASK 539 pair check: engine and child lib 1ab5d9d38feb7aa4, map 11813a151ba0e052, Library Check PASSES (out_pair542.txt). The map sha changes from live 8c1bc26d588f1fe1, because MAP n is hashed. CORRECTED 11:3x CST: rev 0 of this file said the map sha was unchanged from live, which was wrong (Wall 10778 item 5).
 4. With ASK 536: patch536 then patch542 gives the same Library as patch542 then patch536 (byte-equal). Either write order works.
 5. Unit and known-bad test (kb542.js, out_kb542.txt). It uses the real UNX_MW, unxPresses and unxAcFail and the condition cut verbatim from index 479, on live and target.
    - Inputs: the 41418 rounds (rounds516_41418.txt, md5 3509d6d3, the run's own rounds) and sol's ANSWER CHECK lines for defender premises 1 to 3. These lines are cut verbatim from debate_enforcer_log 51422 full_reply, 'reasoning' field; ac542_51422.txt, md5 d99ea2c3, 7,014 characters.
