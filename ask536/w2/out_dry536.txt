@@ -1,0 +1,26 @@
+ASK 536 readback; files: {'fetch_engine': '4d2f03b3', 'fetch_child': '237375a7', 'target_engine': '4d2f03b3', 'target_child': '237375a7', 'base_engine': '3a001d95', 'base_child': 'cf85b641'}
+PASS engine: fetch-back equals target on every node (397 nodes)
+PASS engine: connections equal target
+PASS engine: settings equal target
+PASS engine: nodes changed from base ['Shared Library'], expected ['Shared Library']
+PASS engine: connections equal base
+FAIL engine: versionId moved daf5da98-6d08-4586-a205-de176a1d6cc8 -> daf5da98-6d08-4586-a205-de176a1d6cc8
+PASS engine: Library indexes changed [428, 429], expected [428, 429]
+PASS engine: MAP keys and p equal base
+PASS engine: MAP n changed 31, expected 31
+PASS engine: header sha 5aedc2f2ac70ba66 -> c75101694c687e31, expected c75101694c687e31
+PASS engine: runcheck: target_engine_536.json OK c75101694c687e31
+PASS child: fetch-back equals target on every node (156 nodes)
+PASS child: connections equal target
+PASS child: settings equal target
+PASS child: nodes changed from base ['Shared Library'], expected ['Shared Library']
+PASS child: connections equal base
+FAIL child: versionId moved 10624dd2-8c1d-448e-a60b-dcc0cb6c2a5e -> 10624dd2-8c1d-448e-a60b-dcc0cb6c2a5e
+PASS child: Library indexes changed [428, 429], expected [428, 429]
+PASS child: MAP keys and p equal base
+PASS child: MAP n changed 31, expected 31
+PASS child: header sha 5aedc2f2ac70ba66 -> c75101694c687e31, expected c75101694c687e31
+PASS child: runcheck: target_child_536.json OK c75101694c687e31
+PASS engine and child Library text equal
+PASS Library Check pair: ask536/w4/build/target_child_536.json: engine lib c75101694c687e31 map 1d0243f77980f6c2 | child lib c75101694c687e31 map 1d0243f77980f6c2 | Library Check PASSES
+READBACK MISMATCH (2 fail)

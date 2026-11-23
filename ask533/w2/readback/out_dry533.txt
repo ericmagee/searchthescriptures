@@ -1,0 +1,27 @@
+ASK 533 readback; files: {'fetch_engine': '8eb0881e', 'fetch_child': '621c3303', 'target_engine': '8eb0881e', 'target_child': '621c3303', 'base_engine': '3a001d95', 'base_child': 'cf85b641'}
+PASS engine: fetch-back equals target on every node (397 nodes)
+PASS engine: connections equal target
+PASS engine: settings equal target
+PASS engine: nodes changed from base ['L2 Count Plan', 'Shared Library'], expected ['L2 Count Plan', 'Shared Library']
+PASS engine: connections equal base
+FAIL engine: versionId moved daf5da98-6d08-4586-a205-de176a1d6cc8 -> daf5da98-6d08-4586-a205-de176a1d6cc8
+PASS engine: Library indexes changed [483, 489, 514, 517, 849, 1052, 1212, 1311, 2177, 3314], expected [483, 489, 514, 517, 849, 1052, 1212, 1311, 2177, 3314]
+PASS engine: MAP keys and p equal base
+PASS engine: MAP n changed 33, expected 33
+PASS engine: header sha 5aedc2f2ac70ba66 -> 9a4d55c66bf65d7f, expected 9a4d55c66bf65d7f
+PASS engine: runcheck: target_engine_533.json OK 9a4d55c66bf65d7f
+PASS child: fetch-back equals target on every node (156 nodes)
+PASS child: connections equal target
+PASS child: settings equal target
+PASS child: nodes changed from base ['Shared Library'], expected ['Shared Library']
+PASS child: connections equal base
+FAIL child: versionId moved 10624dd2-8c1d-448e-a60b-dcc0cb6c2a5e -> 10624dd2-8c1d-448e-a60b-dcc0cb6c2a5e
+PASS child: Library indexes changed [483, 489, 514, 517, 849, 1052, 1212, 1311, 2177, 3314], expected [483, 489, 514, 517, 849, 1052, 1212, 1311, 2177, 3314]
+PASS child: MAP keys and p equal base
+PASS child: MAP n changed 33, expected 33
+PASS child: header sha 5aedc2f2ac70ba66 -> 9a4d55c66bf65d7f, expected 9a4d55c66bf65d7f
+PASS child: runcheck: target_child_533.json OK 9a4d55c66bf65d7f
+PASS engine and child Library text equal
+PASS Library Check pair: ask533/w2/build/target_child_533.json: engine lib 9a4d55c66bf65d7f map 3dce26b788552d8f | child lib 9a4d55c66bf65d7f map 3dce26b788552d8f | Library Check PASSES
+PASS test533 on the engine fetch-back: ALL PASS
+READBACK MISMATCH (2 fail)

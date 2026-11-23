@@ -1,4 +1,4 @@
--- ASK AAR snapshot rows: ASK 536 A1 and ASK 533 A1. DRAFT rev 0 (W2, seat 32, 2026-11-23), in the form of aar_rows_539_530_draft.sql (rows 93 and on).
+-- ASK AAR snapshot rows: ASK 536 A1 and ASK 533 A1. DRAFT rev 1 (W1 PASS 10785, 4a applied) (W2, seat 32, 2026-11-23), in the form of aar_rows_539_530_draft.sql (rows 93 and on).
 -- Coordinator assignment 17:29Z. Prepared BEFORE either ASK is written. Fields with no source yet read "not yet".
 -- NOT RUN. Before the coordinator runs it, at each write:
 --   1. Fill every field marked FILL AT WRITE: the card press (words, time, audit id); md5_written (the fetch-back md5s);
@@ -8,9 +8,8 @@
 --   3. Run each row only after its own ASK is written and read back. The two rows are independent.
 -- After the run: ask_aar_snapshots_check() and ask_aar_grades_check() on the new rows (op doc s29 steps 3 and 4).
 -- verdict_norm values: PASS, FAIL or FAIL ON FORM only.
--- POINT FOR THE GRADER: W3's 10778 grade of 533 build rev 1 was "PASS WITH ONE CONDITION" (C1). It is entered as verdict_norm PASS,
---   with the condition in the verdict text and the targets it named. Those targets (2b220881, 9165c26c) were superseded by rev 1a.
---   If the grader rules it FAIL instead, change that one element.
+-- W1 10785 ruling 4a: W3's 10778 grade of 533 build rev 1 ("PASS WITH ONE CONDITION", C1) is entered as verdict_norm FAIL, W3's words kept;
+--   that build (a5db3f1b; targets 2b220881, 9165c26c) did not go forward as graded.
 
 -- ===================== ASK 536 A1 =====================
 BEGIN;
@@ -50,7 +49,7 @@ INSERT INTO public.ask_aar_snapshots (ask, rev, title, objective, objective_met,
  $t${"md5": "2cac4f82", "path": "ask533/w1/plan533.md", "commit": "4ad3167b", "wall_id": 10779, "note": "rev 1a: index 1311 joins the scope (W3 10778 C1, W1 ruling option (i)); rev 1 5127e00a passed at 10763"}$t$::jsonb,
  $t$[{"md5": "e7fc1d09", "path": "ask533/w2/build/BUILD533.md", "commit": "19b22a8d", "wall_id": 10780}, {"md5": "237c1e3e", "path": "ask533/w2/build/patch533.js"}, {"md5": "550f71af", "path": "ask533/w2/build/kgls_fn.js"}, {"md5": "0ec5dea1", "path": "ask533/w2/build/cure_branch.js"}, {"md5": "a9378179", "path": "ask533/w2/build/e340_ren.js"}, {"md5": "8eb0881e", "path": "ask533/w2/build/target_engine_533.json"}, {"md5": "621c3303", "path": "ask533/w2/build/target_child_533.json"}, {"md5": "not yet", "path": "ask533/w4/write/write533.sh", "note": "W4 writes; script not yet made"}]$t$::jsonb,
  $t${"md5": "not yet", "path": "not yet", "note": "W4's revert script, not yet made"}$t$::jsonb,
- $t$[{"seat": "W2", "verdict": "FAIL (plan rev 0)", "wall_id": 10755, "md5_graded": "69d82656", "verdict_norm": "FAIL"}, {"seat": "W2", "verdict": "PASS (plan rev 1)", "wall_id": 10763, "md5_graded": "5127e00a", "verdict_norm": "PASS"}, {"seat": "W3", "verdict": "PASS WITH ONE CONDITION C1 (build rev 1; index 1311; targets 2b220881 and 9165c26c superseded by rev 1a)", "wall_id": 10778, "md5_graded": "a5db3f1b", "verdict_norm": "PASS"}, {"seat": "W3", "verdict": "PASS (build rev 1a, against plan rev 1a)", "wall_id": 10781, "md5_graded": "e7fc1d09", "verdict_norm": "PASS"}, {"seat": "W3", "verdict": "PASS (build rev 1a; engine target)", "wall_id": 10781, "md5_graded": "8eb0881e", "verdict_norm": "PASS"}, {"seat": "W3", "verdict": "PASS (build rev 1a; child target)", "wall_id": 10781, "md5_graded": "621c3303", "verdict_norm": "PASS"}]$t$::jsonb,
+ $t$[{"seat": "W2", "verdict": "FAIL (plan rev 0)", "wall_id": 10755, "md5_graded": "69d82656", "verdict_norm": "FAIL"}, {"seat": "W2", "verdict": "PASS (plan rev 1)", "wall_id": 10763, "md5_graded": "5127e00a", "verdict_norm": "PASS"}, {"seat": "W3", "verdict": "PASS WITH ONE CONDITION C1 (build rev 1; index 1311; targets 2b220881 and 9165c26c superseded by rev 1a)", "wall_id": 10778, "md5_graded": "a5db3f1b", "verdict_norm": "FAIL"}, {"seat": "W3", "verdict": "PASS (build rev 1a, against plan rev 1a)", "wall_id": 10781, "md5_graded": "e7fc1d09", "verdict_norm": "PASS"}, {"seat": "W3", "verdict": "PASS (build rev 1a; engine target)", "wall_id": 10781, "md5_graded": "8eb0881e", "verdict_norm": "PASS"}, {"seat": "W3", "verdict": "PASS (build rev 1a; child target)", "wall_id": 10781, "md5_graded": "621c3303", "verdict_norm": "PASS"}]$t$::jsonb,
  NULL /* FILL AT WRITE: ARRAY['<engine fetch-back md5>','<child fetch-back md5>'] (graded targets 8eb0881e / 621c3303, if live is unchanged at the write) */, $t$["not yet"]$t$::jsonb,
  $t$[{"kind": "n8n workflow", "name": "engine moMxiV4Irg1uRBZN", "before": "daf5da98", "after": "not yet", "nodes": "Shared Library: indexes 483, 489, 514, 517, 849, 1052, 1212, 1311, 2177, 3314; 33 MAP n; header sha 5aedc2f2ac70ba66 to 9a4d55c66bf65d7f. L2 Count Plan: e340 exports ren (+337 characters)"}, {"kind": "n8n workflow", "name": "child MqQHRl7mQQ0z8QdT", "before": "10624dd2", "after": "not yet", "nodes": "Shared Library, the same ten indexes"}]$t$::jsonb,
  $t$[{"file": "ask533/w2/build/test533.js", "md5": "3529b153", "wall_id": 10780}, {"file": "ask533/w2/build/out_test533.txt", "md5": "c3859558", "wall_id": 10781, "note": "reproduced byte-equal by W3"}, {"file": "W4 pinned replay (plan criteria 7c, 7d, 7e, 8)", "md5": "not yet"}]$t$::jsonb,
