@@ -4,7 +4,7 @@ Findings only. No proposals. Source: debate_enforcer_log, run token ODV1-41736-q
 
 ## 1. What was read
 
-- 18 enforcer calls: close enforcer 4 replies (2 per side), assumption and press check 1, judge enforcer 15 (E-ANS 6, E-COL and E-HOLD and E-KEY 6, E-PREM and E-SYN 3), and 2 K-W/K-S3 calls (not checked line by line).
+- Calls read: the close enforcer (4 replies, 2 per side), the assumption and press check (1 call), and the judge enforcer (15 calls: E-ANS 6, E-COL with E-HOLD and E-KEY 6, E-PREM with E-SYN 3). Two K-W/K-S3 calls were not checked line by line.
 - Judge enforcer: 238 reply lines in form, 6 lines out of form, 16 ENGAGE lines.
 - Coverage: every LINE id due got one reply line; no duplicate.
 
