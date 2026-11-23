@@ -1,0 +1,90 @@
+
+SAVE 128772 TOT 134943 NODES 22 : C1 Extract, C1B Extract, C2 Build, C2 Extract, C2B Extract, C3 Build, C3 Extract, C3B Extract, C3G Extract, C4 Build, Citation Scan, D2 Build, D2 Extract, D2B Extract, D3 Build, D3 Extract, D3B Extract, D4 Build, D4 Extract, D4B Extract, L2 Count Plan, L2 Gloss Plan
+  KEYS __gLab(1v) ~if(/[,;:.!?)\]]$/.test(c)&&(1v) __GL(1v) tagWords(1v) ~for(const m of s.matchAll(/(1v) ~for(const m of t.matchAll(/(1v) ~for(const p of x.split(/\s+(1v) apocIn(1v) refsIn(1v) ~if(!linkHead){const pa=t.la(1v) ~for(let pass=0;pass<2;pass+(1v) latin(1v) ~for(const m of s.matchAll(/(1v) ~for(let k=toks.length-1;k>=(1v) ~if(!seg.replace(/[*_\s:.\-](1v) occ(1v) rootAt(1v) ~if(sm){for(const x of s.mat(1v) ~out.push({side,round,at:i,s(1v) ~for(const m of s.matchAll(/(1v) markRoots(1v) linkHe
+
+SAVE 110694 TOT 129143 NODES 7 : Accept Build, Accept Check, Accept DS Return Build, Accept Final, Accept Return Build, Panel Build, Reserve Build
+  KEYS PART2(1v) ANSWER(1v) HEDGE(1v) REFUSE(1v) RULE_C(1v)
+
+SAVE 102604 TOT 109156 NODES 17 : C1 Extract, C1B Extract, C2 Extract, C2B Extract, C3 Extract, C3B Extract, C3G Extract, C4 Extract, C4B Extract, C4G Extract, D1 Extract, D2 Extract, D2B Extract, D3 Extract, D3B Extract, D4 Extract, D4B Extract
+  KEYS __RFX(8v) ~if(fam==='anthropic'){text=(8v) ~if(!e.text||String(e.text).(8v) ~else{const c=(d.choices||[](1v) ~else if(fam==='gemini'){con(1v) M2(1v) ~spans.sort((a,b)=>a.s-b.s);(1v) unm(1v) ~if(RF||RFT)throw new Error((8v) RFT(1v) hits(1v) SEP(1v) M1(1v) __WN(1v) ~if(h.marker==='M1'){s=h.at;(1v) fwd(1v) trim(1v) back(1v) ~return {text:out,notes:mg.m(1v) ~const [s2,e2]=trim(s,e);spa(1v) endsSep(1v) readEnv(1v) mask(1v)
+
+SAVE 84440 TOT 89194 NODES 21 : C1 Extract, C1B Extract, C2 Build, C2 Extract, C2B Extract, C3 Build, C3 Extract, C3B Extract, C3G Extract, C4 Build, D2 Build, D2 Extract, D2B Extract, D3 Build, D3 Extract, D3B Extract, D4 Build, D4 Extract, D4B Extract, L2 Count Plan, L2 Gloss Plan
+  KEYS __e(1v) ~for(const v of V)for(const (1v) ~if(segs.includes(h)||segs.j(1v) ~for(const r of cands){if(!/(1v) ~if(wd.kind==='hebrew'){cons(1v) ~if(wd.kind==='greek'){const(1v) countsUrl(1v) ~else if(core.every(w=>w.ok)(1v) ~else if(!vs.length&&t.apoc&(1v) ~return {w:wd.w,kind:wd.kind(1v) ed1(1v) ~else{status='NOT COUNTED';w(1v) ~else if(read.length<vs.leng(1v) ~return (TG||[]).map(t=>{con(1v) ~for(const n of [...out])for(1v) ~else if(t.apoc&&t.apoc.leng(1v) variants(1v) matchWord(1v) ~if(L)for(cons
+
+SAVE 59745 TOT 71694 NODES 6 : C:R2 Alt Judge Enforcer Retry Build, Alt Judge Enforcer Retry Build, Build Save Body, Enforcer Build, Format Markdown, Judge Enforcer Retry Build
+  KEYS ~P.RESULT=s=>{const m=s.matc(1v) ~P['ANSWER CHECK']=s=>{const(1v) rr(1v) judgeText(1v) ~P['CORRECTED RESULT']=s=>{c(1v) ~P['CORRECTED STANDING']=s=>(1v) ~P.RETRACTED=s=>{const m=s.m(1v) ~a=r.match(new RegExp('^\\s*(1v) sep(1v) to(1v) ~P['LINK STATE']=s=>{const m(1v) ~P.CLAUSE=s=>{const m=s.matc(1v) readLines(1v) ~P.PREMISE=s=>{const t=s.rep(1v) ~P.KEYSTONE=s=>{const m=s.ma(1v) ~P['CORRECTED COUNT']=s=>{co(1v) ~P.RULING=s=>{const m=s.matc(1v) ent(1v) ~P['CHAIN MARK']=s=>{const m(1v) gi(1v) ~P.STA
+
+SAVE 59711 TOT 61770 NODES 30 : C1 Extract, C1B Extract, C2 Build, C2 Extract, C2 Lexicon Plan, C2B Extract, C3 Build, C3 Extract, C3 Lexicon Plan, C3B Extract, C3G Extract, C4 Build, C4 Lexicon Plan, Citation Scan, D2 Build, D2 Extract, D2 Lexicon Plan, D2B Extract, D3 Build, D3 Extract, D3 Lexicon Plan, D3B Extract, D4 Build, D4 Extract, D4 Lexicon Plan, D4B Extract, L2 Count Plan, L2 Gloss Plan, L2 Lexicon Plan, Quote Report
+  KEYS APOC(1v) GRK(1v) ROOTPRE(1v) BETA(1v) ~'he she they we you i who w(1v) ~'means meaning mean root us(1v) ~'participle tense present p(1v) ~'masculine neuter relative (1v) ~'same very more most much m(1v) PREF(1v) ~'not into upon unto under o(1v) LETTER(1v) W_IT(1v)
+
+SAVE 59207 TOT 61624 NODES 26 : C1 Extract, C1B Extract, C2 Build, C2 Extract, C2 Lexicon Plan, C2B Extract, C3 Build, C3 Extract, C3 Lexicon Plan, C3B Extract, C3G Extract, C4 Build, C4 Lexicon Plan, D2 Build, D2 Extract, D2 Lexicon Plan, D2B Extract, D3 Build, D3 Extract, D3 Lexicon Plan, D3B Extract, D4 Build, D4 Extract, D4 Lexicon Plan, D4B Extract, L2 Lexicon Plan
+  KEYS ~return '[L2] SHEET -- read (1v) tail(1v) ~for(const k of order)for(co(2v) isFunc(1v) lexUrls(2v) sheet(2v) ~for(let i=0;i<S.length;i+=2(1v) ~return /^(?:T|CONJ|COND|PRE(1v) got(1v)
+
+SAVE 54289 TOT 58856 NODES 14 : C1B Build, C1B Extract, C2B Build, C2B Extract, C3B Build, C3B Extract, C4B Build, C4B Extract, D2B Build, D2B Extract, D3B Build, D3B Extract, D4B Build, D4B Extract
+  KEYS __RD(7v) GIVE(1v) LINE(1v) md(1v) ~for(const para of t.split(/(1v) rebutOk(1v) ~if(!W(R[l.rround]).includes(1v) ~if(!inA(pos))continue;const(1v) AC(1v) ~if(cur){const end=cur.md?(((1v) ~for(const k of ROUNDS){cons(1v) ~if(m){const v=IMP.rebutOk({(1v) ~if(!cur&&(lv||bold(l)||/^[\(1v) so(1v) AG(1v) ~?{code:'b',name:'BARRED MOV(1v) loc(1v) MARK(1v) NAR(1v) ~if(at){const tail=t.slice(a(1v) move(1v) unq(1v) ~for(const l of L){const a=o(1v)
+
+SAVE 35061 TOT 38655 NODES 12 : Build Independent Verdict, Build Save Body, Build Synthesis, C4 Build, C4 Extract, C4B Extract, C4G Extract, D4 Build, D4 Extract, D4B Extract, Format Markdown, Panel Build
+  KEYS RENUM(1v) ~['link graded',/\b[CD]\d+(?(2v) ~['concession claimed',/\b(?(2v) cblocks(1v) ~['no reading offered',/\b(?(1v) ~['does not stand',/\b(?:doe(1v) declared(1v) GRADE(1v) ~['ground conceded heading',(1v) ~['refused',/\brefused\b|\br(2v) ~['inference graded',/\b(?:e(1v) ~['link argued against',/\b[(1v) ~['inference not stated',/\b(1v) ~return H.map((x,i)=>({j:i+1(1v) MULTI(1v) ~['none of them',/\bnot\s+on(1v) ~['link left unanswered',/\b(1v) ~['concedes',/\bconced(?:es|(1v)
+
+SAVE 31545 TOT 35050 NODES 10 : Build Independent Verdict, Build Save Body, Build Synthesis, C4 Extract, C4B Extract, C4G Extract, D4 Extract, D4B Extract, Format Markdown, Panel Build
+  KEYS fresh(1v) dlinks(1v) ~for(const m of lists)for(co(1v) ~if(best&&best.s>=3)out.push(1v) nd(1v) mismatch(1v) CB(1v) lists(1v) ~if(hd.length)out.push('D'+h(1v) ~for(const c of labels){cons(1v) stems(1v) ~try{const DL=dlinks(F).map((1v) sc(1v) ~H.forEach(h=>{if(out.some(o(1v) renum(1v) nDecl(1v) lim(1v) closeLabels(1v) vkeys(1v)
+
+SAVE 25722 TOT 30898 NODES 6 : Build Independent Verdict, C3 Build, C4 Build, D3 Build, D4 Build, Panel Build
+  KEYS CHL(1v) verses(1v) namedIn(2v) premises(2v) isVerse(1v) isNamed(2v)
+
+SAVE 23256 TOT 24480 NODES 20 : C1 Extract, C1B Extract, C2 Build, C2 Extract, C2B Extract, C3 Build, C3 Extract, C3B Extract, C3G Extract, C4 Build, Citation Scan, D2 Build, D2 Extract, D2B Extract, D3 Build, D3 Extract, D3B Extract, D4 Build, D4 Extract, D4B Extract
+  KEYS ~for(const m of t.matchAll(/(1v) wordsUrls(1v) cur(1v) ~out.push({side,round,at:m.i(1v) countClaims(1v) ~if(!subj){const ws=tagWords(1v) num(1v)
+
+SAVE 19968 TOT 22890 NODES 8 : C1 Build, C2 Build, C3 Build, C4 Build, D1 Build, D2 Build, D3 Build, D4 Build
+  KEYS call(1v) __RND(8v) __SHT(8v) ~if(fam==='openrouter'&&/^an(2v) __DIAGPREV(1v) __cc(1v) ~if(fam==='gemini')return {s(1v) ~if(__SHT){for(let k=msgs.le(1v) ~if(fam==='anthropic')return(2v) ~if(fam==='openrouter'&&/^op(1v) FAMS(1v)
+
+SAVE 19494 TOT 20520 NODES 20 : C1 Extract, C1B Extract, C2 Build, C2 Extract, C2B Extract, C3 Build, C3 Extract, C3B Extract, C3G Extract, C4 Build, D2 Build, D2 Extract, D2B Extract, D3 Build, D3 Extract, D3B Extract, D4 Build, D4 Extract, D4B Extract, Quote Report
+  KEYS countCheck(1v) ~return {...c,num:n,verses:n(1v) ~return (CL||[]).map(c=>{con(1v) wordNum(1v) nv(1v) ~if(capped&&b.t>=1000)return(1v)
+
+SAVE 18760 TOT 19698 NODES 21 : C1 Build, C1 Extract, C1B Extract, C2 Build, C2 Extract, C2B Extract, C3 Build, C3 Extract, C3B Extract, C3G Extract, C4 Build, D1 Build, D2 Build, D2 Extract, D2B Extract, D3 Build, D3 Extract, D3B Extract, D4 Build, D4 Extract, D4B Extract
+  KEYS ~return 'VERSE SHEET -- '+he(1v) ~if(!keys.length)return '';c(1v) ~for(const k of keys){if(off(1v)
+
+SAVE 17121 TOT 34242 NODES 2 : Build Independent Verdict, Panel Build
+  KEYS ~return ['PRESSED-WITNESS LE(1v) GL(1v) __R396F(1v) __RPROVEN(1v) ~return head+ncs+NL+bad.map((1v) ~return 'premise '+p.n+(p.li(1v) __RL2(1v) ~return 'PRE-CHECK -- decide(1v) ~return '\n\n[CONFIRMED CLOS(1v) citedNotNamed(1v) __CLN(1v) ~return items.map((it,k)=>{c(1v) ledger(1v) ~['A verse marked NOT NAMED (1v) ~return L.map(r=>'\n\n[ANTI-(1v) SAN(1v) v(1v)
+
+SAVE 16380 TOT 16986 NODES 31 : Build Independent Verdict, Build Save Body, Build Synthesis, C1 Extract, C1B Extract, C2 Build, C2 Extract, C2B Extract, C3 Build, C3 Extract, C3B Extract, C3G Extract, C4 Build, C4 Extract, C4B Extract, C4G Extract, Citation Scan, D2 Build, D2 Extract, D2B Extract, D3 Build, D3 Extract, D3B Extract, D4 Build, D4 Extract, D4B Extract, Format Markdown, Init with Guards, L2 Count Plan, Panel Build, 
+  KEYS REFP(2v)
+
+SAVE 16048 TOT 16747 NODES 47 : C:R2 Alt Gate Build, C:R2 Alt Gate Record, C:R2 Alt Judge Enforcer Build, C:R2 Alt Judge Enforcer Record, C:R2 Alt Late Gate Build, C:R2 Alt Send Back Build, C:R2 Alt Send Back Record, C:R2 Alternate Build, C:R2 Alternate Cure Build, C:R2 Alternate Cure Normalize, C:R2 Alternate Merge, C:R2 Alternate Merge Seat, C:R2 Alternate Payloads, Alt Gate Build, Alt Gate Record, Alt Judge Enforcer Build, Al
+  KEYS __LT(46v)
+
+SAVE 15921 TOT 16911 NODES 18 : C1 Extract, C1B Extract, C2 Extract, C2B Extract, C3 Extract, C3B Extract, C3G Extract, C4 Extract, C4B Extract, C4G Extract, Citation Scan, D1 Extract, D2 Extract, D2B Extract, D3 Extract, D3B Extract, D4 Extract, D4B Extract
+  KEYS RF(2v)
+
+SAVE 15084 TOT 15922 NODES 19 : C1 Extract, C1B Extract, C2 Build, C2 Extract, C2B Extract, C3 Build, C3 Extract, C3B Extract, C3G Extract, C4 Build, D2 Build, D2 Extract, D2B Extract, D3 Build, D3 Extract, D3B Extract, D4 Build, D4 Extract, D4B Extract
+  KEYS sheetPlan(1v) ~return {tags,tagWords,check(1v) wordsUrl(1v) lexUrl(1v)
+
+SAVE 14412 TOT 15526 NODES 14 : C1 Extract, C1B Extract, C2 Extract, C2B Extract, C3 Extract, C3B Extract, C3G Extract, D2 Extract, D2B Extract, D3 Extract, D3B Extract, D4 Extract, D4B Extract, Init with Guards
+  KEYS req(1v) ~if(seen.has('Psalms 2:7')||(1v) ~for(const [g,vs] of G){cons(1v) plan(2v) ~return {url:conds.length?BA(1v) ~if(ulen+add>URL_MAX){vs.for(1v)
+
+SAVE 13843 TOT 15782 NODES 27 : C:R2 Alt Reread Build, Alt Reread Build, Build Independent Verdict, C1 Extract, C1B Extract, C2 Build, C2 Extract, C2B Extract, C3 Build, C3 Extract, C3B Extract, C3G Extract, C4 Build, Citation Scan, D2 Build, D2 Extract, D2B Extract, D3 Build, D3 Extract, D3B Extract, D4 Build, D4 Extract, D4B Extract, L2 Count Plan, L2 Gloss Plan, Panel Build, Reread Build
+  KEYS blk(5v)
+
+SAVE 12516 TOT 15645 NODES 5 : Build Independent Verdict, Build Save Body, Build Synthesis, Format Markdown, Panel Build
+  KEYS __ogrS(1v) bold(1v) REPORT(1v) ~for(const p0 of t.split(/\n(1v) said(1v) ~if(report(s)||OWN.test(s))c(1v) OS(1v) ~['does not carry',/\b(?:doe(1v) QW(1v) VERD(1v) ~for(const s0 of p.split(/\n(1v) ~['no reading offered',/\b(?(1v) LISTH(1v) report(1v)
+
+SAVE 11685 TOT 15984 NODES 6 : C1 Build, C2 Build, C3 Build, C4 Build, D3 Build, D4 Build
+  KEYS sys(6v)
+
+SAVE 11531 TOT 13465 NODES 7 : C1B Extract, C2B Extract, C3B Extract, C4B Extract, D2B Extract, D3B Extract, D4B Extract
+  KEYS __why(3v) ~if(m[7])o.push({raw:l.trim((1v) ~for(const h of H){if(L.some(1v) ~for(const l of N(text).spli(1v) __rec(7v) ~if(f)out.push({kind:'CONTRA(1v) __void(7v) ~for(const h of hits){const (1v) __k2(1v) __seat(1v) __c2(7v)
+
+SAVE 11073 TOT 11882 NODES 37 : Accept Check, Accept Final, Build Independent Verdict, Build Save Body, C1 Extract, C1B Build, C1B Extract, C2 Build, C2 Extract, C2B Build, C2B Extract, C3 Build, C3 Extract, C3B Build, C3B Extract, C3G Extract, C4 Build, C4 Extract, C4B Build, C4B Extract, C4G Extract, D2 Build, D2 Extract, D2B Build, D2B Extract, D3 Build, D3 Extract, D3B Build, D3B Extract, D4 Build, D4 Extract, D4B Build, D4B
+  KEYS check(15v)
+
+SAVE 10704 TOT 11684 NODES 38 : Build Independent Verdict, Build Save Body, Build Synthesis, C1 Extract, C1B Extract, C2 Build, C2 Extract, C2 Lexicon Plan, C2B Extract, C3 Build, C3 Extract, C3 Lexicon Plan, C3B Extract, C3G Extract, C4 Build, C4 Extract, C4 Lexicon Plan, C4B Extract, C4G Extract, Citation Scan, D2 Build, D2 Extract, D2 Lexicon Plan, D2B Extract, D3 Build, D3 Extract, D3 Lexicon Plan, D3B Extract, D4 Build, D4 
+  KEYS STOP(6v)
+
+SAVE 9952 TOT 11196 NODES 9 : C1 Build, C2 Build, C3 Build, C4 Build, D1 Build, D2 Build, D3 Build, D4 Build, Init with Guards
+  KEYS __PROVE9(1v)
+
+SAVE 9756 TOT 10844 NODES 18 : Accept Build, Accept Check, Accept Final, Build Save Body, C1 Build, C2 Build, C3 Build, C4 Build, D1 Build, D2 Build, D3 Build, D4 Build, Enforcer Build, Failure Salvage, Format Markdown, Panel Check, Panel Done, Panel Tokens
+  KEYS __L(18v)
+
+SAVE 8476 TOT 9081 NODES 17 : C:R2 Alt Seated, Alt Seated, C1B Build, C1B Extract, C2B Build, C2B Extract, C3B Build, C3B Extract, C4B Build, C4B Extract, Close Enforcer Build, D2B Build, D2B Extract, D3B Build, D3B Extract, D4B Build, D4B Extract
+  KEYS AB(4v)
