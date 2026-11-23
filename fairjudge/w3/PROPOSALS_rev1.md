@@ -1,4 +1,6 @@
-# Fair judging ground: proposals for team review (rev 1, W3)
+# Fair judging ground: proposals for team review (rev 2, W3)
+
+Rev 2 folds W1's review, Wall 10947. W4's review is still owed. The file keeps its name.
 
 Under the operator's rulings 502 to 504. Evidence: run 41822 (Wall 10932, 10936, 10937, 10938; run41822/w3_enf/FINDINGS.md) and run 41736 (Wall 10927 to 10930). These are proposals, not builds. None changes corpus text. None is offered to the operator until W1 and W4 have reviewed it. Author W3, session_01H1X3ANsGiMnhnbkfphocmo.
 
@@ -17,6 +19,7 @@ Proposal: run the answering-side test on the CHANGE TO text.
 P3. A gate change the engine refuses does not remove the seat. MEDIUM.
 Evidence: sol62 answered gate items G1 and G2 with a change that raised its count from 1 to 4. pkgPS refused the change. Rows 52585 and 52586 stayed UNCURED and the seat was removed. Its verdict word was BROKEN before and after (Wall 10936 A3a).
 Proposal: when the engine refuses a gate change, the judge's line before the change stands and the row is stored RECORD-ONLY, as ASK 546 does for rows 52587 and 52588.
+Condition (W1 10947): the send-back items the refused change was meant to answer (S9, S10 on sol62) are still open; store them RECORD-ONLY with the refusal reason, so the record shows the defect was not cured.
 Open point for W4: whether G1 and G2 can be told apart from a judge who gives no answer at all.
 
 P4. The run row and the run report carry every written verdict. SMALL, record-only.
@@ -27,10 +30,10 @@ No proposal on gemini's removal (K-G7, rows 52593 and 52594). The seat supplied 
 
 ## B. The enforcer and its process
 
-P5. One collision, one enforcer ruling per run. Step 1 SMALL and record-only; step 2 LARGE.
+P5. One collision, one enforcer ruling per run. Step 1 SMALL and record-only. Step 2 is WITHDRAWN for now.
 Evidence: on D3 against C4 the enforcer answered BROKEN, STANDS and UNDERDETERMINED across seats; on D2 against C2 it told sol BROKEN and then agreed with STANDS (FINDINGS B1; the same in run 41736, Wall 10930 item 2).
 Step 1: an audit line that lists, for each collision, the RIGHT word the enforcer gave on each seat, and marks a collision with more than one word.
-Step 2, only if step 1 shows it again in the next run: the enforcer's first ruling on a collision is carried into its later calls in that run, and a different ruling must quote the judge's words that make the case different.
+Step 2 (withdrawn, W1 10947): carrying the first ruling into later seats would let one wrong ruling bind every seat, and the judges' lines differ by seat. Step 1 first shows what drives the splits.
 
 P6. A push to BROKEN is tested on both sides. MEDIUM (E-HOLD rule text). Step 1 SMALL and record-only.
 Evidence: seven stored rows push a point the judge left open to BROKEN (52448, 52452, 52453, 52455, 52458, 52678, 52800). All seven say the defender's answer fails; none pushes against the challenger. One judge followed (qwen4max, 52711); five lines went to STANDS; argon turned 52800 against the challenger (FINDINGS E1; Wall 10940 A).
@@ -43,7 +46,7 @@ Proposal: when the enforcer's only ground is an unweighed row, the send-back ask
 
 P8. "Lacks a layer" means the tag is absent. SMALL.
 Evidence: on sol (rows 52470, 52479) the premise check called premises 2 and 5 COUNTED, "lacks [L1]", while the blocks hold [L1]; the ground was that the rows do not give the assumed fact. On the next pass it ruled premise 5 SPARED, "a meaning dispute, not a missing layer". sol's count went from 1 to 2 (FINDINGS B3).
-Proposal: the engine checks the block for the tag named. If the tag is present, a COUNTED line of the kind "lacks [Ln]" is refused and recorded.
+Proposal: the engine checks the block of the premise named, not the whole round, for the tag named. If the tag is present, a COUNTED line of the kind "lacks [Ln]" is refused and recorded.
 
 P9. The enforcer sees its own earlier ruling on an item. MEDIUM.
 Evidence: P8's reversal, and sol's D2 against C2 (FINDINGS B1, B3).
@@ -52,11 +55,13 @@ Proposal: on a second pass the item carries the enforcer's first-pass line. A di
 P10. The keystone check is done by the engine. SMALL.
 Evidence: E-KEY told argon that D4 cannot stand and named lines that break the challenger's link (FINDINGS B4).
 Proposal: the engine derives the keystone word from the judge's own lines against the last declared defender link, and sends back only a mismatch.
+Condition (W1 10947): the derivation reads only DEFENDER LINK BROKEN and FORCED lines on that link. A CHALLENGER LINK BROKEN line never counts against it (row 52801 is the case to exclude).
 
-P11. The press check's result reaches the judge and the premise check. MEDIUM. Needs W4's reading of the engine first.
+P11. The press check's result reaches the judge and the premise check. HELD. Step 0 and an audit come first.
 Evidence: sol counted premise 5 on Deuteronomy 22:24 and qwen4max counted premise 4 on Matthew 1:18; rows 52266 and 52260 rule those presses NOT FOOTED. The E-ANS and E-PREM prompts hold no press-check result, and the engine manual holds the words "NOT FOOTED" 0 times. Matthew 1:18 is ruled FOOTED in row 52258 and NOT FOOTED in row 52260 on the same word, "conjugal" (FINDINGS B6).
 Step 0: W4 states what the engine does with NOT FOOTED today.
-Proposal: a press ruled NOT FOOTED is labelled UNPROVEN in the ledger the judges see. The E-ANS rule already says an UNPROVEN press carries no answering burden. This cuts both ways: six of the Oracle's eleven presses were ruled NOT FOOTED.
+Step 1 (W1 10947): an audit line on E-PRESS in the style of P5 step 1, listing presses on one verse that drew both FOOTED and NOT FOOTED. The ruling is not stable enough to hand to the judges yet.
+Held proposal: a press ruled NOT FOOTED is labelled UNPROVEN in the ledger the judges see. The E-ANS rule already says an UNPROVEN press carries no answering burden. This cuts both ways: six of the Oracle's eleven presses were ruled NOT FOOTED.
 
 ## C. The Oracle's opening and closing
 
@@ -70,7 +75,7 @@ Proposal: the opening quotes, with its served row, each verse the served sights 
 
 P14. The close is checked against the press list before it is sent. SMALL (engine check) or MEDIUM (re-call).
 Evidence: CR4 says "GAPS: NONE" with 5 of 21 pressed verses unanswered in it, in two runs (FINDINGS A8; Wall 10927 item 8; ASK 537 text present and not met, Wall 10936 B).
-Proposal: the engine lists the pressed verses that have no ANSWER line in the close. Step 1 records the list. Step 2 sends the list back to the Oracle once, as pkgBAR sends back barred sentences.
+Proposal: the engine lists the pressed verses that have no ANSWER line in the close. Step 1 records the list. Step 2 sends the list back to the Oracle once, as pkgBAR sends back barred sentences. Step 2 is Oracle-facing and needs the operator's approval, like P13 (W1 10947).
 
 P15. D3's act and its row. RULING. No change is proposed.
 Evidence: D3 states that Joseph knew Mary within the espousal, on Genesis 4:1 and Matthew 1:25. The assumption check rules it INFERRED ACT; qwen4max reads Matthew 1:25 with the "present state" answer against it (FINDINGS A2, A3). Sight 266 states the reading. Whether a row carries it is a corpus matter, and the operator has said the corpus is right.
@@ -79,7 +84,10 @@ Proposal: bring it with P12 only if the operator asks; otherwise it stays a find
 P16. Words outside the KJV renderings. SMALL for the gloss check; RULING for "young woman".
 Evidence: CR3 serves sperma (G4690) as "seed, including the male sperm"; the operator's statement of 11-23 is seed, seeds, issue, never "sperm". CR3 writes "young woman" at Isaiah 7:14; two judges graded it against the KJV word "virgin" (FINDINGS A6).
 Correction to my FINDINGS A6: "young woman" is not the Oracle's own word. Sight 1578 holds "the verse at the word level uses the young-woman word". It comes from the corpus.
-Proposal: (a) the K-GLS gloss check (ASK 533) also reads the defender's own [L2] lines, record-only. (b) The "young woman" wording goes to the operator as a question, since it is corpus text.
+Proposal: (a) the K-GLS gloss check (ASK 533) also reads the defender's own [L2] lines, record-only. (b) The "young woman" wording goes to the operator as a question, since it is corpus text. (c) Question for W4 (W1 10947): where the served gloss "seed, including the male sperm" for G4690 comes from, the lexicon table or the Oracle's own text. If it is served, it is corpus text and goes to the operator with (b).
 
 ## Order suggested
-First: P1, P2, P4, P8, P10 (small, and each rests on a row). Second: the record-only steps of P5, P6 and P14. Third: P3, P7, P9, P11 after W4's reading. To the operator through the coordinator: P12, with P16(b).
+First: P1, P2, P4, P8, P10 (small, and each rests on a row). Second: the record-only steps of P5, P6, P11 and P14. Third: P3, P7, P9 after W4's reading. Held: P5 step 2 and P11's proposal. To the operator through the coordinator: P12, with P16(b); P13 and P14 step 2 need his approval.
+
+## Review state
+W1 (Wall 10947): AGREE on P1, P2, P4, P6, P7, P8, P9, P12, P13, P15, P16; AGREE WITH ONE CONDITION on P3 and P10; P5 step 1 AGREE and step 2 DISAGREE; P11 step 0 AGREE and the rest WAIT; P14 step 1 AGREE. W4: owed.
