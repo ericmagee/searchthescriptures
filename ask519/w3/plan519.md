@@ -1,4 +1,4 @@
-# ASK 519 plan (W3, seat 33), rev 1, 2026-11-23. A PLAN ONLY; nothing is written.
+# ASK 519 plan (W3, seat 33), rev 2, 2026-11-23. Replaces rev 1 (63abeb6b, kept as plan519_rev1.md) on W2's C-d (Wall 10420); changed: CRITERIA C2a added, SCOPE readers listed, WRONG-IF. A PLAN ONLY; nothing is written.
 Source: the operator's "Four Remaining Bugs in the Run (4) Debug Log", Bug 3 (13:10 CST 11-20, W4 thread), released by his "yes" at 02:02 CST 11-23 (Wall 10381). Run (4) is 41117 (basis in the ASK 517 plan).
 His words: "every single one triggered by Sonnet saying \"I grant...\" on uncontested facts ... Every judge had to burn 16-18 cure blocks writing NOT HELD / TOUCHES NO LINK. Scoping the K-W / K-S3 detector to only fire when a grant/withdrawal targets a declared link ID (D1-D4 / C1-C6) or Premise number will drop your violation count from 63 down to ~11." He prefaced the message "Feedback (only use if useful)", so the design is the team's.
 
@@ -38,6 +38,12 @@ HITS:
 - L2217 to L2237, wpLines2024: a withdrawn premise asserted again. Withdrawal-class only. Unchanged.
 - L710, orcLines, and L792, the K-S3 push: one K-S3 item per line of the judge's OUT-OF-ROUND CONCESSIONS section that does not end COUNTED.
 - L3235 and L3236: the enforcer RULES for K-W and K-S3. Unchanged.
+- Readers of the items S1 and S2 drop (W2 C-d), all unchanged in code:
+  - L2215: an uncured K-W item removes the seat.
+  - L1270 (pkgFUK): a K-S3 item answered COUNTED writes the count.
+  - L1972: the per-side K-S3 set (pkgFUK rev 2 C1).
+  - L1957: the K-S3 send-back filter.
+  - L3208 and L3401: the alternate K-W and K-S3 rows, and their tally.
 - Engine manual v231: the K-W and K-S3 rows. They gain one sentence each.
 - Child: the same library. The two other workflows: no hit.
 
@@ -50,15 +56,16 @@ CHANGE:
 ## 4. CRITERIA and DONE
 - C1: the library stays at 3560 lines, with engine and child equal. Only L2212 to L2213 (the kwLines421 match loop) and L792 change.
 - C2: the built detectors run on the stored judge texts and rounds of the five runs. The K-W and K-S3 items they raise are listed against today's. Every dropped item is grant-class and names no id. None of them had a real reply, judged by the logged replies, as in the table.
+- C2a (W2 C-d): on the same five runs, the build replays each reader listed in SCOPE with the dropped items removed, and shows that no seat removal, no count, no standing and no outcome changes. It states what the L1972 set and the L1957 filter do when a side is left with no K-S3 item, and that L3401's tally changes only by the dropped items.
 - C3, known-good: on 41117, the 6 withdrawal-class K-W items, among them "[DR3] LINK 6: I drop the clause 'and it names no man as sowing it'" (replied STANDS WITHOUT IT), and the 6 named grant items are still raised.
 - C4: one live run on the operator's word. No K-W or K-S3 item is raised on a grant-class sentence that names no id, and the count is reported next to 41117's 51.
 - DONE: C1 to C4 pass, and the manual entry is written and read back.
 
 ## 5. WRONG-IF
-This plan is wrong if C2 drops any item whose logged reply was CONCEDED, COUNTED, STANDS WITHOUT IT or REASSERTED. Any such case fails it.
+This plan is wrong if C2 drops any item whose logged reply was CONCEDED, COUNTED, STANDS WITHOUT IT or REASSERTED. Any such case fails it. It is also wrong if C2a shows any seat removal, count, standing or outcome that changes.
 - Known-bad: 41117 "[DR3] LINK 6: I drop the clause ..." must stay raised.
 - Known-good: 41117 "[DR3] LINK 5: I grant the order." must drop.
-Limit: a grant that gives up footing without naming an id would no longer be asked. None did in the five runs (the table's last column), but that is not proof it never happens. The judge's own CONCEDED LINKS count and the K-G rules still read concessions.
+Limit: a grant that gives up footing without naming an id would no longer be asked. None did in the five runs (the table's last column), but that is not proof it never happens. This includes a grant inside a link's own block that gives that link up without naming it (W2 10420 item 4); in the sample every such item was answered NOT HELD or TOUCHES NO LINK. The judge's own CONCEDED LINKS count and the K-G rules still read concessions.
 
 ## 6. RUN EVIDENCE
 NO PROBE in the ASK 417 registry (no registry table was found, W4 10395). C4 is read from the run's K-W and K-S3 cure rows.
