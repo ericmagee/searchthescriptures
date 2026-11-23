@@ -1,4 +1,4 @@
-# The Oracle exploits every weakness its layer examination finds (W3, ASK 564, DRAFT 2a)
+# The Oracle exploits every weakness its layer examination finds (W3, ASK 564, DRAFT 2b)
 
 DRAFT ONLY. Nothing is written. The exact text needs grading (W1), the builder's anchor check (W4) and the operator's approval.
 
@@ -12,7 +12,9 @@ ASK 557 Change A (approved 17:09 CST 11-23) tells the Oracle to break its oppone
 Scope: the Oracle seat only. One sentence group added to the constant `__ORACLE9` in Init with Guards. No other node, no check, no corpus, guard or ruling text, no model setting.
 Anchor (in the ASK 557 text of `__ORACLE9`, one occurrence): `Say which layer fails and quote the words that show it. Prove every position with the layers.`
 Exact change: between those two sentences insert:
-` Exploit every weakness that this layer-by-layer test of your opponent's replies finds. Charge each failed layer as its own numbered premise in your UNSUPPORTED-L4 PREMISES list, where it is graded: quote your opponent's own words that carry the failed layer, and under it give the layers that show the failure, the verse under PRESSED WITH: and, where the failure is in a word, the [L2] SHEET row for that word. State each charge in the positive form, by what the quoted rows do give; where your opponent's step takes a fact for granted, use the footing rule's STEP -- ASSUMES -- ROWS GIVE line. Carry each charge into the list of your link round. In your close, restate each one left unanswered in the GAPS LEFT OPEN form only. A weakness you found and did not charge is a failure of yours.`
+` Exploit every weakness that this layer-by-layer test of your opponent's replies finds. Charge each point of your opponent that has a failed layer as its own numbered premise in your UNSUPPORTED-L4 PREMISES list, where it is graded: quote your opponent's own words that carry the point, name each failed layer of it, and under it give the layers that show the failure, the verse under PRESSED WITH: and, where the failure is in a word, the [L2] SHEET row for that word. The list keeps its limit of 6 premises: when more than six points fail, list the six that bear most on your opponent's case. State each charge in the positive form, by what the quoted rows do give; where your opponent's step takes a fact for granted, use the footing rule's STEP -- ASSUMES -- ROWS GIVE line. Carry each charge into the list of your link round. In your close, restate each one left unanswered in the GAPS LEFT OPEN form only. A weakness you found and left out of the list while the list had room is a failure of yours.`
+
+Draft 2b meets W1's condition on draft 2a (Wall grade after 11013): the lists are capped (D3 Build, live: "a numbered list (max 6)"), so the text now charges one premise per failed point, naming each failed layer under it, and says the limit of 6 governs and which six to keep. The closing sentence no longer calls an unlisted weakness a failure when the list is full. The stale anchor-check question on the GAPS text is removed.
 
 Draft 2a: the operator asked at 17:17 CST how the Oracle knows what "the examination" points to. The first sentence now names it: the layer-by-layer test of the opponent's replies, which the sentences just before it in `__ORACLE9` order.
 
@@ -21,7 +23,7 @@ F1. A charge is graded only in the list. Init with Guards: "Charge it in your ro
 F2. The close lists unanswered presses only in the ASK 537 form ("GAP: premise <n> [<the round that listed it>] -- <the verse you pressed ...> -- UNANSWERED ... no quotation and no other words"). Draft 2 names that form and adds no other listing.
 Ruling 421: the charge is stated by what the quoted rows do give, and an assumed fact takes the footing rule's STEP -- ASSUMES -- ROWS GIVE line, which "carries none of the words no, not, none, never, only, without, alone, every or no other" (D3 Build).
 
-To confirm at the anchor check (W4): that the anchor stands once after the ASK 557 write; that the close instruction's GAPS text (ASK 537, the Oracle's own presses left unanswered) does not contradict "list each one still unanswered"; that the added length (about 790 characters in the system prompt) raises no limit.
+To confirm at the anchor check (W4): that the anchor stands once in the written `__ORACLE9` (engine 215e327a); that the added length (about 990 characters in the system prompt) raises no limit.
 For the grader (W1): regrade against F1, F2 and the ruling 421 point.
 
 ## 3. Revert
