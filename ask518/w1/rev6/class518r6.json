@@ -1,0 +1,1560 @@
+{
+ "replies": [
+  {
+   "base": "a_41117_Close_Enforcer_Build_2_OLD",
+   "body": "a",
+   "arm": "OLD",
+   "copy": 1,
+   "k": 1,
+   "exec": "41442",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "X1",
+     "id": "X1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR3 LINK 6: NARROWED TO: the row gives the body as prepared by God. I drop the clause ",
+     "closing": "DR4 I restore nothing I narrowed or dropped.",
+     "why": "The close says the dropped clause is not restored; it does not assert that the row names no man as sowing the body."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "a_41117_Close_Enforcer_Build_2_OLD",
+   "body": "a",
+   "arm": "OLD",
+   "copy": 1,
+   "k": 2,
+   "exec": "41443",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "X1",
+     "id": "X1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR3 LINK 6: NARROWED TO: the row gives the body as prepared by God. I drop the clause ",
+     "closing": "DR4 I restore nothing I narrowed or dropped.",
+     "why": "The close says the dropped clause is not restored, so both statements can be true."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "a_41117_Close_Enforcer_Build_2_OLD",
+   "body": "a",
+   "arm": "OLD",
+   "copy": 1,
+   "k": 3,
+   "exec": "41444",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "X1",
+     "id": "X1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR3 LINK 6: NARROWED TO: the row gives the body as prepared by God. I drop the clause ",
+     "closing": "DR4 I restore nothing I narrowed or dropped.",
+     "why": "The closing sentence says the dropped clause is not restored, so it does not assert it again."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "a_41117_Close_Enforcer_Build_2_NEW",
+   "body": "a",
+   "arm": "NEW",
+   "copy": 1,
+   "k": 1,
+   "exec": "41446",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "X1",
+     "id": "X1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR3 LINK 6: NARROWED TO: the row gives the body as prepared by God. I drop the clause ",
+     "closing": "DR4 I restore nothing I narrowed or dropped.",
+     "why": "The close says the dropped and narrowed claim remains dropped; it does not assert it again."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "a_41117_Close_Enforcer_Build_2_NEW",
+   "body": "a",
+   "arm": "NEW",
+   "copy": 1,
+   "k": 2,
+   "exec": "41447",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "X1",
+     "id": "X1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR3 LINK 6: NARROWED TO: the row gives the body as prepared by God.",
+     "closing": "DR4 I restore nothing I narrowed or dropped.",
+     "why": "The closing sentence says the debater does not restore what it narrowed or dropped; it does not assert the dropped clause again."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "a_41117_Close_Enforcer_Build_2_NEW",
+   "body": "a",
+   "arm": "NEW",
+   "copy": 1,
+   "k": 3,
+   "exec": "41448",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "X1",
+     "id": "X1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR3 LINK 6: NARROWED TO: the row gives the body as prepared by God.",
+     "closing": "DR4 I restore nothing I narrowed or dropped.",
+     "why": "The close says the narrowed or dropped claim is not restored; it does not assert the dropped clause again."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "a_41117_Close_Enforcer_Build_3_OLD",
+   "body": "a",
+   "arm": "OLD",
+   "copy": 2,
+   "k": 1,
+   "exec": "41449",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "X1",
+     "id": "X1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR3 LINK 6: NARROWED TO: the row gives the body as prepared by God. I drop the clause ",
+     "closing": "DR4 I restore nothing I narrowed or dropped.",
+     "why": "The close says it does not restore the dropped clause, and its LINK 6 restatement keeps only the claim that the body was prepared by God."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "a_41117_Close_Enforcer_Build_3_OLD",
+   "body": "a",
+   "arm": "OLD",
+   "copy": 2,
+   "k": 2,
+   "exec": "41450",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "X1",
+     "id": "X1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR3 LINK 6: NARROWED TO: the row gives the body as prepared by God.",
+     "closing": "DR4 I restore nothing I narrowed or dropped.",
+     "why": "The closing sentence says the dropped claim is not restored, and C6 keeps only the prepared-body limb without reasserting that the row names no man as sowing it."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "a_41117_Close_Enforcer_Build_3_OLD",
+   "body": "a",
+   "arm": "OLD",
+   "copy": 2,
+   "k": 3,
+   "exec": "41451",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "X1",
+     "id": "X1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR3 I drop the clause 'and it names no man as sowing it'.",
+     "closing": "DR4 I restore nothing I narrowed or dropped.",
+     "why": "The closing sentence affirms that the dropped clause remains dropped."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "a_41117_Close_Enforcer_Build_3_NEW",
+   "body": "a",
+   "arm": "NEW",
+   "copy": 2,
+   "k": 1,
+   "exec": "41452",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "X1",
+     "id": "X1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR3 LINK 6: NARROWED TO: the row gives the body as prepared by God. I drop the clause ",
+     "closing": "DR4 I restore nothing I narrowed or dropped.",
+     "why": "The closing sentence acknowledges the narrowing and says it does not restore what was dropped."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "a_41117_Close_Enforcer_Build_3_NEW",
+   "body": "a",
+   "arm": "NEW",
+   "copy": 2,
+   "k": 2,
+   "exec": "41453",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "X1",
+     "id": "X1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR3 LINK 6: NARROWED TO: the row gives the body as prepared by God.",
+     "closing": "DR4 I restore nothing I narrowed or dropped.",
+     "why": "The closing sentence says the narrowing remains in place; it does not assert the dropped clause again."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "a_41117_Close_Enforcer_Build_3_NEW",
+   "body": "a",
+   "arm": "NEW",
+   "copy": 2,
+   "k": 3,
+   "exec": "41455",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "X1",
+     "id": "X1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR3 LINK 6: NARROWED TO: the row gives the body as prepared by God.",
+     "closing": "DR4 I restore nothing I narrowed or dropped.",
+     "why": "The closing sentence affirms that the narrowing remains in place; it does not assert the dropped claim again."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "b_41117_Judge_Contradiction_Build_0_OLD",
+   "body": "b",
+   "arm": "OLD",
+   "copy": 1,
+   "k": 1,
+   "exec": "41457",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "J1",
+     "id": "J1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "CONFIRMED",
+     "earlier": "DR2 The two rows differ in what they hand to the husband.",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: ",
+     "why": "The close assigns Luke 1:13’s naming to Joseph, whereas the earlier statement distinguishes what the two rows give their respective husbands."
+    },
+    {
+     "key": "J2",
+     "id": "J2",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "CONFIRMED",
+     "earlier": "DR2 To Zacharias the angel gives 'bear thee a son.' To Joseph he gives 'thou shalt call his name.'",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: 'thou shalt call his name JESUS'.",
+     "why": "The close assigns Luke 1:13’s naming to Joseph, whereas the earlier statement distinguishes what the two rows give their respective husbands."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "b_41117_Judge_Contradiction_Build_0_OLD",
+   "body": "b",
+   "arm": "OLD",
+   "copy": 1,
+   "k": 2,
+   "exec": "41458",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "J1",
+     "id": "J1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "CONFIRMED",
+     "earlier": "DR2 The two rows differ in what they hand to the husband.",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: ",
+     "why": "The earlier statement distinguishes what the rows give Zacharias and Joseph, while the close says both rows give Joseph the naming."
+    },
+    {
+     "key": "J2",
+     "id": "J2",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "CONFIRMED",
+     "earlier": "DR2 To Zacharias the angel gives 'bear thee a son.' To Joseph he gives 'thou shalt call his name.'",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: ",
+     "why": "The earlier statement assigns the Luke 1:13 instruction to Zacharias and contrasts it with Joseph's naming, while the close says both rows give Joseph the naming."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "b_41117_Judge_Contradiction_Build_0_OLD",
+   "body": "b",
+   "arm": "OLD",
+   "copy": 1,
+   "k": 3,
+   "exec": "41460",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "J1",
+     "id": "J1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR2 The two rows differ in what they hand to the husband.",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: ",
+     "why": "Both can be true: the rows differ in what they give the husband, and the closing identifies Joseph’s part as naming."
+    },
+    {
+     "key": "J2",
+     "id": "J2",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR2 To Zacharias the angel gives 'bear thee a son.' To Joseph he gives 'thou shalt call his name.'",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: ",
+     "why": "Both can be true: the closing repeats that Joseph is given the naming."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "b_41117_Judge_Contradiction_Build_0_NEW",
+   "body": "b",
+   "arm": "NEW",
+   "copy": 1,
+   "k": 1,
+   "exec": "41462",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "J1",
+     "id": "J1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR2 The two rows differ in what they hand to the husband.",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: ",
+     "why": "Removing the added Luke 1:13 reference leaves Matthew 1:21 giving Joseph the naming, consistent with the earlier distinction between what the two rows give."
+    },
+    {
+     "key": "J2",
+     "id": "J2",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR2 To Zacharias the angel gives 'bear thee a son.' To Joseph he gives 'thou shalt call his name.'",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: ",
+     "why": "Removing the added Luke 1:13 reference leaves Matthew 1:21 giving Joseph the naming, consistent with the earlier statement."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "b_41117_Judge_Contradiction_Build_0_NEW",
+   "body": "b",
+   "arm": "NEW",
+   "copy": 1,
+   "k": 2,
+   "exec": "41464",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "J1",
+     "id": "J1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR2 The two rows differ in what they hand to the husband.",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: ",
+     "why": "The quotation stands in Matthew 1:21 but not Luke 1:13, so removing the added Luke reference leaves a claim compatible with the earlier distinction."
+    },
+    {
+     "key": "J2",
+     "id": "J2",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR2 To Zacharias the angel gives 'bear thee a son.' To Joseph he gives 'thou shalt call his name.'",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: ",
+     "why": "The quotation stands in Matthew 1:21 but not Luke 1:13, so removing the added Luke reference leaves the same claim that Matthew gives Joseph the naming."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "b_41117_Judge_Contradiction_Build_0_NEW",
+   "body": "b",
+   "arm": "NEW",
+   "copy": 1,
+   "k": 3,
+   "exec": "41465",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "J1",
+     "id": "J1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR2 The two rows differ in what they hand to the husband.",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: 'thou shalt call his name JESUS'.",
+     "why": "Removing the added reference leaves the claim that Joseph receives the naming, consistent with the earlier distinction; the quotation appears in Matthew 1:21 but not Luke 1:13."
+    },
+    {
+     "key": "J2",
+     "id": "J2",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR2 To Zacharias the angel gives 'bear thee a son.' To Joseph he gives 'thou shalt call his name.'",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: 'thou shalt call his name JESUS'.",
+     "why": "Removing the added reference leaves the claim that Joseph receives the naming, consistent with the earlier distinction; the quotation appears in Matthew 1:21 but not Luke 1:13."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "b_41117_Judge_Contradiction_Build_1_OLD",
+   "body": "b",
+   "arm": "OLD",
+   "copy": 2,
+   "k": 1,
+   "exec": "41466",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "J1",
+     "id": "J1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "CONFIRMED",
+     "earlier": "DR2 To Zacharias the angel gives 'bear thee a son.' To Joseph he gives 'thou shalt call his name.'",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: ",
+     "why": "The earlier round assigns Luke 1:13’s instruction to Zacharias, while the close says that row gives Joseph the naming."
+    },
+    {
+     "key": "J2",
+     "id": "J2",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "CONFIRMED",
+     "earlier": "DR2 To Zacharias the angel gives 'bear thee a son.' To Joseph he gives 'thou shalt call his name.'",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: ",
+     "why": "The earlier round assigns Luke 1:13’s instruction to Zacharias, while the close says that row gives Joseph the naming."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "b_41117_Judge_Contradiction_Build_1_OLD",
+   "body": "b",
+   "arm": "OLD",
+   "copy": 2,
+   "k": 2,
+   "exec": "41467",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "J1",
+     "id": "J1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "CONFIRMED",
+     "earlier": "DR2 The two rows differ in what they hand to the husband.",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: ",
+     "why": "The closing sentence says Luke 1:13 gives Joseph the naming, while the earlier sentence distinguishes what is given to Joseph; the closing block identifies Luke 1:13 as the row addressed to Zacharias."
+    },
+    {
+     "key": "J2",
+     "id": "J2",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "CONFIRMED",
+     "earlier": "DR2 To Zacharias the angel gives 'bear thee a son.' To Joseph he gives 'thou shalt call his name.'",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: ",
+     "why": "The earlier sentence assigns Luke 1:13’s instruction to Zacharias, but the closing sentence assigns it to Joseph."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "b_41117_Judge_Contradiction_Build_1_OLD",
+   "body": "b",
+   "arm": "OLD",
+   "copy": 2,
+   "k": 3,
+   "exec": "41468",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "J1",
+     "id": "J1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR2 The two rows differ in what they hand to the husband.",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: 'thou shalt call his name JESUS'.",
+     "why": "The earlier sentence distinguishes what the two rows give the husband, and the closing repeats that Joseph is given the naming; both can be true."
+    },
+    {
+     "key": "J2",
+     "id": "J2",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR2 To Zacharias the angel gives 'bear thee a son.' To Joseph he gives 'thou shalt call his name.'",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: 'thou shalt call his name JESUS'.",
+     "why": "The closing restates Joseph’s naming role from the earlier contrast, so both statements can be true."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "b_41117_Judge_Contradiction_Build_1_NEW",
+   "body": "b",
+   "arm": "NEW",
+   "copy": 2,
+   "k": 1,
+   "exec": "41470",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "J1",
+     "id": "J1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR2 The two rows differ in what they hand to the husband.",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: ",
+     "why": "The added Luke reference does not contain the whole quotation, and with that reference removed the closing agrees that Matthew gives Joseph the naming."
+    },
+    {
+     "key": "J2",
+     "id": "J2",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR2 To Zacharias the angel gives 'bear thee a son.' To Joseph he gives 'thou shalt call his name.'",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: ",
+     "why": "The added Luke reference does not contain the whole quotation, and with that reference removed the closing agrees that Matthew gives Joseph the naming."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "b_41117_Judge_Contradiction_Build_1_NEW",
+   "body": "b",
+   "arm": "NEW",
+   "copy": 2,
+   "k": 2,
+   "exec": "41471",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "J1",
+     "id": "J1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR2 The two rows differ in what they hand to the husband.",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: ",
+     "why": "The quoted words stand in Matthew 1:21 but not Luke 1:13, so removing the added Luke reference leaves a claim consistent with the earlier distinction."
+    },
+    {
+     "key": "J2",
+     "id": "J2",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR2 To Zacharias the angel gives 'bear thee a son.' To Joseph he gives 'thou shalt call his name.'",
+     "closing": "DR4 Matthew 1:21 and Luke 1:13 give Joseph the naming: ",
+     "why": "The quoted words stand in Matthew 1:21 but not Luke 1:13, so removing the added Luke reference leaves a claim consistent with the earlier distinction."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "b_41117_Judge_Contradiction_Build_1_NEW",
+   "body": "b",
+   "arm": "NEW",
+   "copy": 2,
+   "k": 3,
+   "exec": "41472",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "J1",
+     "id": "J1",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR2 The two rows differ in what they hand to the husband.",
+     "closing": "round 4 Matthew 1:21 and Luke 1:13 give Joseph the naming: 'thou shalt call his name JESUS'.",
+     "why": "The added Luke 1:13 reference does not hold the whole quotation, and without that reference the sentence agrees that Joseph is given the naming."
+    },
+    {
+     "key": "J2",
+     "id": "J2",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "1",
+     "answer": "NOT A CONTRADICTION",
+     "earlier": "DR2 To Zacharias the angel gives 'bear thee a son.' To Joseph he gives 'thou shalt call his name.'",
+     "closing": "round 4 Matthew 1:21 and Luke 1:13 give Joseph the naming: 'thou shalt call his name JESUS'.",
+     "why": "The added Luke 1:13 reference does not hold the whole quotation, and without that reference the sentence agrees that Joseph is given the naming."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "c_41102_Close_Enforcer_Build_2_OLD",
+   "body": "c",
+   "arm": "OLD",
+   "copy": 1,
+   "k": 1,
+   "exec": "41473",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": true,
+   "rows": [],
+   "unparsed": 0
+  },
+  {
+   "base": "c_41102_Close_Enforcer_Build_2_OLD",
+   "body": "c",
+   "arm": "OLD",
+   "copy": 1,
+   "k": 2,
+   "exec": "41474",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": true,
+   "rows": [],
+   "unparsed": 0
+  },
+  {
+   "base": "c_41102_Close_Enforcer_Build_2_OLD",
+   "body": "c",
+   "arm": "OLD",
+   "copy": 1,
+   "k": 3,
+   "exec": "41475",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": true,
+   "rows": [],
+   "unparsed": 0
+  },
+  {
+   "base": "c_41102_Close_Enforcer_Build_2_NEW",
+   "body": "c",
+   "arm": "NEW",
+   "copy": 1,
+   "k": 1,
+   "exec": "41476",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "CHALLENGER LINK 4",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "4",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 I grant it for Cain.",
+     "closing": "DR4 Genesis 4:1 shows knowing as the canon's stated way of conceiving, and here that knowing is dated after the birth.",
+     "why": "The close uses Genesis 4:1 as a general footing for its claim about this child, extending the earlier grant, which was limited to Cain."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "c_41102_Close_Enforcer_Build_2_NEW",
+   "body": "c",
+   "arm": "NEW",
+   "copy": 1,
+   "k": 2,
+   "exec": "41477",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": true,
+   "rows": [],
+   "unparsed": 0
+  },
+  {
+   "base": "c_41102_Close_Enforcer_Build_2_NEW",
+   "body": "c",
+   "arm": "NEW",
+   "copy": 1,
+   "k": 3,
+   "exec": "41478",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "CHALLENGER LINK 4",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "4",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 I grant it for Cain.",
+     "closing": "DR4 Genesis 4:1 shows knowing as the canon's stated way of conceiving, and here that knowing is dated after the birth.",
+     "why": "The earlier grant limits the knowing-as-means claim to Cain, while the closing restores it as a general rule and uses it to support the claim about this conception."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "c_41102_Close_Enforcer_Build_3_OLD",
+   "body": "c",
+   "arm": "OLD",
+   "copy": 2,
+   "k": 1,
+   "exec": "41479",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": true,
+   "rows": [],
+   "unparsed": 0
+  },
+  {
+   "base": "c_41102_Close_Enforcer_Build_3_OLD",
+   "body": "c",
+   "arm": "OLD",
+   "copy": 2,
+   "k": 2,
+   "exec": "41480",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": true,
+   "rows": [],
+   "unparsed": 0
+  },
+  {
+   "base": "c_41102_Close_Enforcer_Build_3_OLD",
+   "body": "c",
+   "arm": "OLD",
+   "copy": 2,
+   "k": 3,
+   "exec": "41481",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": true,
+   "rows": [],
+   "unparsed": 0
+  },
+  {
+   "base": "c_41102_Close_Enforcer_Build_3_NEW",
+   "body": "c",
+   "arm": "NEW",
+   "copy": 2,
+   "k": 1,
+   "exec": "41482",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": true,
+   "rows": [],
+   "unparsed": 0
+  },
+  {
+   "base": "c_41102_Close_Enforcer_Build_3_NEW",
+   "body": "c",
+   "arm": "NEW",
+   "copy": 2,
+   "k": 2,
+   "exec": "41483",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": true,
+   "rows": [],
+   "unparsed": 0
+  },
+  {
+   "base": "c_41102_Close_Enforcer_Build_3_NEW",
+   "body": "c",
+   "arm": "NEW",
+   "copy": 2,
+   "k": 3,
+   "exec": "41484",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "CHALLENGER LINK 6",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "CONFIRMED",
+     "earlier": "DR2 On Luke 3:31 as a ground for Mary's descent: I do not rest on it, since it is my own [L4] reading. I rest on Luke 1:32, where ",
+     "closing": "DR4 Romans 1:3 and Acts 2:30 give David as the root of that flesh.",
+     "why": "The closing sentence uses Acts 2:30 to ground Davidic descent through Mary's flesh, restoring the descent claim the earlier round said it did not rest on Luke 3:31 to establish."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "d_41024_Close_Enforcer_Build_2_OLD",
+   "body": "d",
+   "arm": "OLD",
+   "copy": 1,
+   "k": 1,
+   "exec": "41485",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "CHALLENGER LINK 5",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "5",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 The limb I keep. Matthew 1:16 states Mary as the one ",
+     "closing": "DR4 These rows show how others named him and do not show who begat him.",
+     "why": "The close again asserts that the rows do not show who begat Jesus, restoring the claim it dropped."
+    },
+    {
+     "key": "CHALLENGER LINK 5",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "5",
+     "answer": "CONFIRMED",
+     "earlier": "DR4 C5 and C6 stand only as narrowed in round 3, and I restore nothing from them.",
+     "closing": "DR4 These rows show how others named him and do not show who begat him.",
+     "why": "The closing first says it restores nothing from C5’s narrowing, then restores the dropped claim that the rows do not show who begat Jesus."
+    },
+    {
+     "key": "CHALLENGER LINK 6",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 The limb I keep. The descent from David is stated as David's loins and body (Acts 2:30, Psalms 132:11), and the flesh of the child is stated as born of Mary's womb (Luke 1:31, Luke 1:35). I drop the wording ",
+     "closing": "DR4 So Romans 1:3 is met by the seed of David received through the woman, and no row requires Joseph's body for it.",
+     "why": "The close again asserts that the rows do not require Joseph’s body, restoring the dropped claim about the step to Joseph’s body."
+    },
+    {
+     "key": "CHALLENGER LINK 6",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "CONFIRMED",
+     "earlier": "DR4 C5 and C6 stand only as narrowed in round 3, and I restore nothing from them.",
+     "closing": "DR4 So Romans 1:3 is met by the seed of David received through the woman, and no row requires Joseph's body for it.",
+     "why": "The closing first says it restores nothing from C6’s narrowing, then restores the dropped claim that no row requires Joseph’s body."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "d_41024_Close_Enforcer_Build_2_OLD",
+   "body": "d",
+   "arm": "OLD",
+   "copy": 1,
+   "k": 2,
+   "exec": "41486",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "CHALLENGER LINK 6",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 The limb I keep. The descent from David is stated as David's loins and body (Acts 2:30, Psalms 132:11), and the flesh of the child is stated as born of Mary's womb (Luke 1:31, Luke 1:35). I drop the wording ",
+     "closing": "round 4 So Romans 1:3 is met by the seed of David received through the woman, and no row requires Joseph's body for it.",
+     "why": "The close reasserts in other words the claim that the step to Joseph's body is the defender's addition, which was dropped."
+    },
+    {
+     "key": "CHALLENGER LINK 6",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "CONFIRMED",
+     "earlier": "round 4 C5 and C6 stand only as narrowed in round 3, and I restore nothing from them.",
+     "closing": "round 4 So Romans 1:3 is met by the seed of David received through the woman, and no row requires Joseph's body for it.",
+     "why": "The closing sentence restores the claim dropped from C6, so the close both says it restores nothing and restores that claim."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "d_41024_Close_Enforcer_Build_2_OLD",
+   "body": "d",
+   "arm": "OLD",
+   "copy": 1,
+   "k": 3,
+   "exec": "41487",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "CHALLENGER LINK 5",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "5",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 The limb I keep. Matthew 1:16 states Mary as the one ",
+     "closing": "round 4 The pattern of Matthew 1:2 carries on through ",
+     "why": "The closing sentence uses the change in the genealogy’s pattern to reassert the claim about Joseph’s begetting that was dropped."
+    },
+    {
+     "key": "CHALLENGER LINK 5",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "5",
+     "answer": "CONFIRMED",
+     "earlier": "round 4 C5 and C6 stand only as narrowed in round 3, and I restore nothing from them.",
+     "closing": "round 4 The pattern of Matthew 1:2 carries on through ",
+     "why": "The closing sentence restores the dropped claim about Joseph’s begetting, contrary to the statement that nothing was restored from C5."
+    },
+    {
+     "key": "CHALLENGER LINK 6",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 The limb I keep. The descent from David is stated as David's loins and body (Acts 2:30, Psalms 132:11), and the flesh of the child is stated as born of Mary's womb (Luke 1:31, Luke 1:35). I drop the wording ",
+     "closing": "round 4 So Romans 1:3 is met by the seed of David received through the woman, and no row requires Joseph's body for it.",
+     "why": "The closing sentence again rests the claim on the ground that Joseph’s body is not required, which was dropped."
+    },
+    {
+     "key": "CHALLENGER LINK 6",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "CONFIRMED",
+     "earlier": "round 4 C5 and C6 stand only as narrowed in round 3, and I restore nothing from them.",
+     "closing": "round 4 So Romans 1:3 is met by the seed of David received through the woman, and no row requires Joseph's body for it.",
+     "why": "The closing sentence restores the dropped claim about Joseph’s body, contrary to the statement that nothing was restored from C6."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "d_41024_Close_Enforcer_Build_2_NEW",
+   "body": "d",
+   "arm": "NEW",
+   "copy": 1,
+   "k": 1,
+   "exec": "41488",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "CHALLENGER LINK 5",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "5",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 The limb I keep. Matthew 1:16 states Mary as the one ",
+     "closing": "round 4 These rows show how others named him and do not show who begat him.",
+     "why": "The closing again asserts that the rows do not identify Joseph's begetting, which the earlier round dropped."
+    },
+    {
+     "key": "CHALLENGER LINK 6",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 The limb I keep. The descent from David is stated as David's loins and body (Acts 2:30, Psalms 132:11), and the flesh of the child is stated as born of Mary's womb (Luke 1:31, Luke 1:35). I drop the wording ",
+     "closing": "round 4 So Romans 1:3 is met by the seed of David received through the woman, and no row requires Joseph's body for it.",
+     "why": "The closing restores the dropped claim that the rows do not require Joseph's body."
+    },
+    {
+     "key": "CHALLENGER LINK 5",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "5",
+     "answer": "CONFIRMED",
+     "earlier": "round 4 C5 and C6 stand only as narrowed in round 3, and I restore nothing from them.",
+     "closing": "round 4 These rows show how others named him and do not show who begat him.",
+     "why": "The promise to restore nothing from C5 conflicts with restating the claim dropped from C5."
+    },
+    {
+     "key": "CHALLENGER LINK 6",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "CONFIRMED",
+     "earlier": "round 4 C5 and C6 stand only as narrowed in round 3, and I restore nothing from them.",
+     "closing": "round 4 So Romans 1:3 is met by the seed of David received through the woman, and no row requires Joseph's body for it.",
+     "why": "The promise to restore nothing from C6 conflicts with restoring the dropped claim about Joseph's body."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "d_41024_Close_Enforcer_Build_2_NEW",
+   "body": "d",
+   "arm": "NEW",
+   "copy": 1,
+   "k": 2,
+   "exec": "41489",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "CHALLENGER LINK 6",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 I drop the wording 'the step to Joseph's body is the defender's addition'.",
+     "closing": "round 4 So Romans 1:3 is met by the seed of David received through the woman, and no row requires Joseph's body for it.",
+     "why": "The closing sentence restores the claim that the rows do not support a step to Joseph's body, which the debater dropped."
+    },
+    {
+     "key": "CHALLENGER LINK 6",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "CONFIRMED",
+     "earlier": "round 4 C5 and C6 stand only as narrowed in round 3, and I restore nothing from them.",
+     "closing": "round 4 So Romans 1:3 is met by the seed of David received through the woman, and no row requires Joseph's body for it.",
+     "why": "The closing sentence restores the dropped claim about Joseph's body after saying nothing would be restored from C6."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "d_41024_Close_Enforcer_Build_2_NEW",
+   "body": "d",
+   "arm": "NEW",
+   "copy": 1,
+   "k": 3,
+   "exec": "41490",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "CHALLENGER LINK 6",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 The limb I keep. The descent from David is stated as David's loins and body (Acts 2:30, Psalms 132:11), and the flesh of the child is stated as born of Mary's womb (Luke 1:31, Luke 1:35). I drop the wording ",
+     "closing": "round 4 So Romans 1:3 is met by the seed of David received through the woman, and no row requires Joseph's body for it.",
+     "why": "The closing sentence again asserts the dropped point that Joseph's body is not required for the Davidic descent."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "d_41024_Close_Enforcer_Build_3_OLD",
+   "body": "d",
+   "arm": "OLD",
+   "copy": 2,
+   "k": 1,
+   "exec": "41491",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "CHALLENGER LINK 5",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "5",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 I drop the wording ",
+     "closing": "DR4 The pattern of Matthew 1:2 carries on through ",
+     "why": "Saying the final clause breaks the “begat” pattern restores the dropped claim that Joseph's begetting is not named."
+    },
+    {
+     "key": "CHALLENGER LINK 5",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "5",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 I drop the wording ",
+     "closing": "DR4 These rows show how others named him and do not show who begat him.",
+     "why": "The closing again asserts that the rows do not show Joseph as the begetter."
+    },
+    {
+     "key": "CHALLENGER LINK 6",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 I drop the wording ",
+     "closing": "DR4 So Romans 1:3 is met by the seed of David received through the woman, and no row requires Joseph's body for it.",
+     "why": "Saying no row requires Joseph's body restores the dropped claim that the step to Joseph's body is an addition."
+    },
+    {
+     "key": "CHALLENGER LINK 5",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "5",
+     "answer": "CONFIRMED",
+     "earlier": "DR4 C5 and C6 stand only as narrowed in round 3, and I restore nothing from them.",
+     "closing": "DR4 The pattern of Matthew 1:2 carries on through ",
+     "why": "The latter sentence restores the dropped claim about Joseph's begetting."
+    },
+    {
+     "key": "CHALLENGER LINK 5",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "5",
+     "answer": "CONFIRMED",
+     "earlier": "DR4 C5 and C6 stand only as narrowed in round 3, and I restore nothing from them.",
+     "closing": "DR4 These rows show how others named him and do not show who begat him.",
+     "why": "The latter sentence restores the dropped claim that the rows do not show Joseph's begetting."
+    },
+    {
+     "key": "CHALLENGER LINK 6",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "CONFIRMED",
+     "earlier": "DR4 C5 and C6 stand only as narrowed in round 3, and I restore nothing from them.",
+     "closing": "DR4 So Romans 1:3 is met by the seed of David received through the woman, and no row requires Joseph's body for it.",
+     "why": "The latter sentence restores the dropped claim that the step to Joseph's body is an addition."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "d_41024_Close_Enforcer_Build_3_OLD",
+   "body": "d",
+   "arm": "OLD",
+   "copy": 2,
+   "k": 2,
+   "exec": "41492",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "CHALLENGER LINK 6",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 I drop the wording ",
+     "closing": "DR4 So Romans 1:3 is met by the seed of David received through the woman, and no row requires Joseph's body for it.",
+     "why": "The closing sentence reinstates the dropped claim that the argument does not require the step to Joseph's body."
+    },
+    {
+     "key": "CHALLENGER LINK 6",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "CONFIRMED",
+     "earlier": "DR4 C5 and C6 stand only as narrowed in round 3, and I restore nothing from them.",
+     "closing": "DR4 So Romans 1:3 is met by the seed of David received through the woman, and no row requires Joseph's body for it.",
+     "why": "The closing sentence restores the dropped claim about Joseph's body despite saying nothing from the narrowed links is restored."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "d_41024_Close_Enforcer_Build_3_OLD",
+   "body": "d",
+   "arm": "OLD",
+   "copy": 2,
+   "k": 3,
+   "exec": "41493",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "CHALLENGER LINK 5",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "5",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 I drop the wording ",
+     "closing": "DR4 The pattern of Matthew 1:2 carries on through ",
+     "why": "The closing restores the Matthew 1:16 change-of-pattern ground for the claim that Joseph's begetting is not named, which was dropped."
+    },
+    {
+     "key": "CHALLENGER LINK 5",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "5",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 I drop the wording ",
+     "closing": "DR4 The named father's line gives the reckoning and the name, and the last clause gives the birth.",
+     "why": "This again limits Joseph's role in the genealogy to reckoning and naming, restoring the dropped claim about his begetting."
+    },
+    {
+     "key": "CHALLENGER LINK 6",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 I drop the wording ",
+     "closing": "DR4 So Romans 1:3 is met by the seed of David received through the woman, and no row requires Joseph's body for it.",
+     "why": "Saying no row requires Joseph's body restores the claim that the step to Joseph's body is an addition."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "d_41024_Close_Enforcer_Build_3_NEW",
+   "body": "d",
+   "arm": "NEW",
+   "copy": 2,
+   "k": 1,
+   "exec": "41494",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "CHALLENGER LINK 5",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "5",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 I drop the wording ",
+     "closing": "round 4 The pattern of Matthew 1:2 carries on through ",
+     "why": "The closing restores the genealogy contrast as ground for the claim that Joseph’s begetting is not named, which the earlier round dropped."
+    },
+    {
+     "key": "CHALLENGER LINK 6",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 I drop the wording ",
+     "closing": "round 4 So Romans 1:3 is met by the seed of David received through the woman, and no row requires Joseph's body for it.",
+     "why": "The closing again asserts that Joseph’s body is not required, restoring the claim the earlier round dropped."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "d_41024_Close_Enforcer_Build_3_NEW",
+   "body": "d",
+   "arm": "NEW",
+   "copy": 2,
+   "k": 2,
+   "exec": "41495",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "CHALLENGER LINK 5",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "5",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 The limb I keep. Matthew 1:16 states Mary as the one ",
+     "closing": "DR4 These rows show how others named him and do not show who begat him.",
+     "why": "The closing again asserts that the rows do not show Joseph’s begetting, a claim it dropped."
+    },
+    {
+     "key": "CHALLENGER LINK 6",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 The limb I keep. The descent from David is stated as David's loins and body (Acts 2:30, Psalms 132:11), and the flesh of the child is stated as born of Mary's womb (Luke 1:31, Luke 1:35). I drop the wording ",
+     "closing": "DR4 So Romans 1:3 is met by the seed of David received through the woman, and no row requires Joseph's body for it.",
+     "why": "The closing again asserts that the Davidic descent does not require a step through Joseph’s body, the ground it dropped."
+    }
+   ],
+   "unparsed": 0
+  },
+  {
+   "base": "d_41024_Close_Enforcer_Build_3_NEW",
+   "body": "d",
+   "arm": "NEW",
+   "copy": 2,
+   "k": 3,
+   "exec": "41496",
+   "body_md5_ok": true,
+   "finish": "stop",
+   "none": false,
+   "rows": [
+    {
+     "key": "CHALLENGER LINK 6",
+     "id": "NEW",
+     "side": "CHALLENGER",
+     "kind": "LINK",
+     "n": "6",
+     "answer": "CONFIRMED",
+     "earlier": "DR3 The limb I keep. The descent from David is stated as David's loins and body (Acts 2:30, Psalms 132:11), and the flesh of the child is stated as born of Mary's womb (Luke 1:31, Luke 1:35). I drop the wording ",
+     "closing": "round 4 So Romans 1:3 is met by the seed of David received through the woman, and no row requires Joseph's body for it.",
+     "why": "The close again rests the claim on the absence of a requirement for Joseph's body, restoring the ground the earlier narrowing dropped."
+    }
+   ],
+   "unparsed": 0
+  }
+ ],
+ "items": {
+  "a": {
+   "CHALLENGER LINK 6": {
+    "OLD": [],
+    "NEW": [],
+    "single": {
+     "OLD": 0,
+     "NEW": 0
+    }
+   }
+  },
+  "b": {
+   "J1": {
+    "OLD": [
+     1,
+     2
+    ],
+    "NEW": [],
+    "single": {
+     "OLD": 0,
+     "NEW": 0
+    }
+   },
+   "J2": {
+    "OLD": [
+     1,
+     2
+    ],
+    "NEW": [],
+    "single": {
+     "OLD": 0,
+     "NEW": 0
+    }
+   }
+  },
+  "c": {
+   "CHALLENGER LINK 1": {
+    "OLD": [],
+    "NEW": [],
+    "single": {
+     "OLD": 0,
+     "NEW": 0
+    }
+   },
+   "CHALLENGER LINK 2": {
+    "OLD": [],
+    "NEW": [],
+    "single": {
+     "OLD": 0,
+     "NEW": 0
+    }
+   },
+   "CHALLENGER LINK 4": {
+    "OLD": [],
+    "NEW": [],
+    "single": {
+     "OLD": 0,
+     "NEW": 2
+    }
+   },
+   "CHALLENGER LINK 6": {
+    "OLD": [],
+    "NEW": [],
+    "single": {
+     "OLD": 0,
+     "NEW": 1
+    }
+   }
+  },
+  "d": {
+   "CHALLENGER LINK 6": {
+    "OLD": [
+     1,
+     2,
+     3
+    ],
+    "NEW": [
+     1,
+     2,
+     3
+    ],
+    "single": {
+     "OLD": 0,
+     "NEW": 0
+    }
+   },
+   "CHALLENGER LINK 5": {
+    "OLD": [
+     1,
+     3
+    ],
+    "NEW": [
+     1
+    ],
+    "single": {
+     "OLD": 0,
+     "NEW": 1
+    }
+   }
+  }
+ }
+}
