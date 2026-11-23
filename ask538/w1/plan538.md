@@ -24,7 +24,7 @@ SEARCH (W1, 10:05 CST 11-23):
 - debate_enforcer_log since 11-17: 64 E-COL send_back rows whose cure_reason begins "SEND-BACK KEEP". A rough regex finds 4 whose enforcer reason quotes text after a [CR]/[DR] label: 44243, 44244, 50673 and 51414.
   - 44243 quotes the judge's own line, not the answering side.
   - 50673's answer quote has fewer than 6 words.
-  - So the expected flip is 51414 only. W4 measures this with the real code.
+  - Only rows whose cure came by press() can change. 51414 is expected to stay CURED by both() (see OBJECTIVE). W4 measures this with the real code.
 CHILD: R2 Alt Send Back Record is a node of the child workflow MqQHRl7mQQ0z8QdT. The child holds its own Library, byte-equal to the engine's (LIB cf88f476 in both since 531, per W2 10665). The same line changes in both Library copies, and both LIB hashes stay equal. NOT SEARCHED: none beyond the child's own nodes, which W4 reads at build.
 CHANGE (one line, the E-COL KEEP path, in both Library copies):
 1. cited(it): take each quotation of 6 or more words in the enforcer's DISAGREE reason, it.reason (W4 confirms the field on E-COL items). Keep those where 6 words in a row are found in the answering side's own rounds (ANSF).
