@@ -1,4 +1,6 @@
-# ASK 563: the Oracle layers audit line, restated for Build Save Body (W3, DRAFT 1)
+# ASK 563: the Oracle layers audit line, restated for Build Save Body (W3, DRAFT 1a)
+
+Draft 1a meets W1's condition C1 (Wall 11004): the new constant is named __OLA, because Build Save Body already declares `const __A=__R.concat(__J).concat(__CU);`. My statement in draft 1 that __A does not occur there was wrong. No other change.
 
 DRAFT ONLY. Nothing is written. The exact text needs grading (W1), the builder's anchor check (W4) and the operator's approval.
 
@@ -15,10 +17,10 @@ My mistake: draft 5b named D4 Extract for Change C without my reading where revi
 Target: Build Save Body, engine only. One line added. No other node. D4 Extract is not touched.
 Anchor: `const RN=FF.length?FF.join(' '):null;` (one occurrence).
 Exact change: insert this line, as its own line, directly before the anchor:
-`try{if(S.defender&&S.defender.profile==='oracle'&&d.cr4){const __A=String(d.cr4).split(/^(?=[\s>*_#-]*ANSWER\s*:)/im).filter(x=>/^[\s>*_#-]*ANSWER\s*:/i.test(x));FF.push('[AUDIT: ORACLE LAYERS (record-only) -- CLOSE ANSWERS: '+__A.length+'; WITH [L2]: '+__A.filter(x=>x.indexOf('[L2]')>=0).length+'; WITH [L4]: '+__A.filter(x=>x.indexOf('[L4]')>=0).length+']');}}catch(e){}`
+`try{if(S.defender&&S.defender.profile==='oracle'&&d.cr4){const __OLA=String(d.cr4).split(/^(?=[\s>*_#-]*ANSWER\s*:)/im).filter(x=>/^[\s>*_#-]*ANSWER\s*:/i.test(x));FF.push('[AUDIT: ORACLE LAYERS (record-only) -- CLOSE ANSWERS: '+__OLA.length+'; WITH [L2]: '+__OLA.filter(x=>x.indexOf('[L2]')>=0).length+'; WITH [L4]: '+__OLA.filter(x=>x.indexOf('[L4]')>=0).length+']');}}catch(e){}`
 What it does: when the defender is the Oracle and a close is stored, it cuts the stored close at each line that begins "ANSWER:", counts those blocks, and counts how many hold the tag [L2] and how many hold [L4]. It appends one line to review_notes. Nothing is sent back, nothing is counted in any result, and no prompt changes.
 Stated limit: a block runs from its "ANSWER:" line to the next one, so the last block also holds whatever follows the last answer in the round.
-`__A` does not occur in Build Save Body today (W4 to confirm at the anchor check).
+`__OLA` does not occur in Build Save Body today (checked in the fetch-back; W4 to confirm on the live node).
 
 ## 3. Revert
 Restore Build Save Body from the pre-write export; compare md5 of the node.
