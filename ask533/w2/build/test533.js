@@ -28,12 +28,19 @@ const it=b2.items;const RS='RESPONSE: K-GLS D5 vs C2 | The gloss is restated in 
 const cv=t=>NEW.cureVerdicts(it,{ok:true,text:t},{},RND).find(x=>x.rule==='K-GLS');
 const c1=cv(RS+'\nRESTATED: D5 vs C2 (Matthew 1:18): STANDS | [L2] synerchomai (G4905, to come together) reads the act');ok(c1.status==='CURED','4a. RESTATED "(G4905, to come together)": CURED -- '+c1.why);
 const c2=cv(RS+'\nRESTATED: D5 vs C2 (Matthew 1:18): STANDS | [L2] synerchomai (G4905, to cohabit conjugally) reads the act');ok(c2.status==='UNCURED'&&/still carries/.test(c2.why),'4b. RESTATED "(G4905, to cohabit conjugally)": UNCURED -- '+c2.why.slice(0,120));
-const c3=cv('RESPONSE: K-GLS D5 vs C2 | The line is withdrawn.\nRETRACTED: D5 vs C2 -- UNDERDETERMINED -- [CR2] reads "before they came together" and the gloss is not a KJV rendering of G4905\nCORRECTED RESULT: PARTIAL-2 -- D5 vs C2 is withdrawn, the rest stands');ok(c3.status==='CURED'&&c3.why==='retracted','4c. RETRACTED with reason and one CORRECTED RESULT: CURED');
+const c3=cv('RESPONSE: K-GLS D5 vs C2 | The line is withdrawn.\nRETRACTED: D5 vs C2 -- UNDERDETERMINED -- [CR2] reads "before they came together" and the gloss is not a KJV rendering of G4905\nCORRECTED RESULT: PARTIAL-2 -- D5 vs C2 is withdrawn, the rest stands');ok(c3.status==='CURED'&&/recorded only, not applied/.test(c3.why),'4c. RETRACTED with reason and one CORRECTED RESULT: CURED, recorded only (rev 1a) -- '+c3.why);
 const c4=cv(RS);ok(c4.status==='UNCURED'&&/no RESTATED or RETRACTED/.test(c4.why),'4d. RESPONSE only: UNCURED -- '+c4.why);
 const c5=cv('');ok(c5.status==='UNCURED'&&c5.silent===true,'4e. no reply line: UNCURED, silent');
 ok(NEW.enfSilent(c5)===false&&OLD.enfSilent({...c5})===true,'4f. enfSilent: K-GLS silence does not count on the target (live would count it)');
 ok(NEW.cureOwn('RESTATED: K-GLS D5 vs C2 (x): STANDS',{rule:'K-GLS',link:'D5 vs C2',side:'BOTH'})===OLD.cureOwn('RESTATED: D5 vs C2 (x): STANDS',{rule:'K-GLS',link:'D5 vs C2',side:'BOTH'}),'4g. cureOwn strips "K-GLS " as it strips any K-rule label');
 ok(NEW.cureLabel(it[0])==='K-GLS D5 vs C2'||/D5 vs C2/.test(NEW.cureLabel(it[0])),'4h. cureLabel: '+NEW.cureLabel(it[0]));
+// 4i/4j (plan rev 1a, W1 10779): a retraction answering only K-GLS items is recorded, not applied; with a K-L2 item on the same link it is applied
+{const TX=['KEYSTONE: D5 -- STANDS','D5 vs C2 (Matthew 1:18): DEFENDER LINK BROKEN -- [L2] synerchomai (G4905, to come together, to cohabit conjugally) reads the act [CR2]','RESULT: BROKEN-1 -- D5 broken','DEFENSE STANDING: COLLAPSED'].join('\n');
+ const RP='RESPONSE: K-GLS D5 vs C2 | The line is withdrawn.\nRETRACTED: D5 vs C2 -- UNDERDETERMINED -- [CR2] reads "before they came together" and the gloss is not a KJV rendering of G4905\nCORRECTED RESULT: PARTIAL-2 -- D5 vs C2 is withdrawn, the rest stands';
+ const run2=(P,items)=>{const v=P.cureVerdicts(items,{ok:true,text:RP},{},RND);return {v,r:P.cureRecompute('sol62',TX,{cr2:RND.CR2},items,v,{ok:true,text:RP})};};
+ const g=NEW.kl2gLines(TX).items,l2={rule:'K-L2',side:'DEFENDER',link:'D5 vs C2',line:'x'};
+ const a=run2(NEW,g);ok(a.r===null&&a.v[0].status==='CURED'&&/recorded only, not applied/.test(a.v[0].why),'4i. K-GLS only: RETRACTED recorded, not applied (cureRecompute returns null: no count moves); cure CURED -- '+a.v[0].why);
+ const b=run2(NEW,g.concat([l2]));ok(b.r&&JSON.stringify(b.r.retracted)==='["D5 vs C2"]'&&b.v[0].why==='retracted','4j. K-GLS + K-L2 on one link: RETRACTED applied (retracted '+JSON.stringify(b.r&&b.r.retracted)+'); K-GLS cure "'+b.v[0].why+'"');}
 // 5. full replay over every stored gloss line
 let raised=0,gl=0,pc=0,nr=0;const byRun={};const rows=[];
 for(const L of lines.values()){const x=pkg.cache||null;const r=NEW.kl2gLines(line(L),sub(L.d8));const m=pkg(TGT,'Cure Check',{'L2 Count Plan':{e340:{ren:sub(L.d8)}}}).kl2gLines(line(L)).marks[0]||'';const q=m.match(/-- (\d+) \[L2\] glosses read on collision lines; (\d+) parts checked; (\d+) items raised.*?; (\d+) NOT READ/);gl+=+q[1];pc+=+q[2];nr+=+q[4];

@@ -11,12 +11,14 @@ PASS 3b. no L2 Count Plan: no item, mark says NOT READ and export not found
      [AUDIT v66: [L2] GLOSS NOT A KJV RENDERING (K-GLS; TRIAL, list only) -- 1 [L2] glosses read on collision lines; 0 parts checked; 0 items raised; 1 NOT READ (no KJV renderings read for the number this run); the renderings export was not found]
 PASS 4a. RESTATED "(G4905, to come together)": CURED -- restated: every [L2] gloss part of the line is a KJV rendering of its number, or no such gloss is left
 PASS 4b. RESTATED "(G4905, to cohabit conjugally)": UNCURED -- the restated line still carries an [L2] gloss that is not a KJV rendering of its number (the [L2] gloss 'to cohabit conj
-PASS 4c. RETRACTED with reason and one CORRECTED RESULT: CURED
+PASS 4c. RETRACTED with reason and one CORRECTED RESULT: CURED, recorded only (rev 1a) -- TRIAL rule (K-GLS, list only): the reply withdraws its line on D5 vs C2; recorded only, not applied (Library 1311)
 PASS 4d. RESPONSE only: UNCURED -- no RESTATED or RETRACTED line for D5 vs C2
 PASS 4e. no reply line: UNCURED, silent
 PASS 4f. enfSilent: K-GLS silence does not count on the target (live would count it)
 PASS 4g. cureOwn strips "K-GLS " as it strips any K-rule label
 PASS 4h. cureLabel: K-GLS D5 vs C2
+PASS 4i. K-GLS only: RETRACTED recorded, not applied (cureRecompute returns null: no count moves); cure CURED -- TRIAL rule (K-GLS, list only): the reply withdraws its line on D5 vs C2; recorded only, not applied (Library 1311)
+PASS 4j. K-GLS + K-L2 on one link: RETRACTED applied (retracted ["D5 vs C2"]); K-GLS cure "retracted"
 5. replay: 148 judge lines, 154 glosses, 227 parts checked, 68 items raised, 7 glosses NOT READ (number not glossed by the debaters in that run)
      924 ae4b93f6 line 20 D1 vs C1: the [L2] gloss 'to cohabit conjugally' for G4905 is not a KJV rendering of G4905
      926 ae4b93f6 line 12 D3 vs C1: the [L2] gloss 'cohabit conjugally' for G4905 is not a KJV rendering of G4905
