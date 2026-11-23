@@ -1,4 +1,4 @@
--- ASK AAR snapshot rows: ASK 539 A1 and ASK 530 A1. DRAFT rev 0 (W2, seat 32, 2026-11-23), in the form of row 93 (ASK 537 A1).
+-- ASK AAR snapshot rows: ASK 539 A1 and ASK 530 A1. DRAFT rev 1 (W1 10766 C1 applied: manuals field) (W2, seat 32, 2026-11-23), in the form of row 93 (ASK 537 A1).
 -- For W1 to grade, then for the coordinator (seat 36) to run once. NOT RUN.
 -- After the run: ask_aar_snapshots_check() and ask_aar_grades_check() on both new rows (op doc s29 steps 3 and 4).
 -- verdict_norm values: PASS, FAIL or FAIL ON FORM only.
@@ -23,7 +23,7 @@ INSERT INTO public.ask_aar_snapshots (ask, rev, title, objective, objective_met,
  $t$[{"file": "ask539/w4/build/test539.js", "md5": "d907b9a0", "wall_id": 10711}, {"file": "ask539/w4/build/out_test539.txt", "md5": "0033edda", "wall_id": 10722, "note": "reproduced by W2"}]$t$::jsonb,
  $t$[{"seat": "W2", "result": "MATCH: fetch-back equals target, 397 nodes; revert copy equals the 537 live; runcheck OK cf88f4765f035f23; pair PASSES", "wall_id": 10729}]$t$::jsonb,
  $t${"case": "UNEXERCISED: live, no released run has seated an alternate yet", "mark": "the child's lib422 same:true, with no \"pkgLIB1: library drift\", on a run that seats an alternate"}$t$::jsonb,
- $t${"op_doc": "not needed", "engine_manual": "not checked by W2; W1 to confirm"}$t$::jsonb,
+ $t${"op_doc": "not needed", "engine_manual": "not needed"}$t$::jsonb,
  'read back', $t$[10687, 10689, 10693, 10711, 10722, 10726, 10729, 10760, "audit 40043"]$t$::jsonb);
 INSERT INTO public.ask_aar_builders (snapshot_id, prior_row, builder_seats, sources, written_by)
 SELECT s.id, NULL, ARRAY['W4'], $t$[{"seat": "W4", "what": "built ASK 539", "wall_id": 10711}, {"seat": "W4", "what": "wrote ASK 539 on its card", "wall_id": 10726}]$t$::jsonb, 'session_01H1X3ANeXjt6pnw4fs6Wxr4' FROM public.ask_aar_snapshots s WHERE s.ask = 539 AND s.rev = 'A1' AND s.aar_at = now();
@@ -43,7 +43,7 @@ INSERT INTO public.ask_aar_snapshots (ask, rev, title, objective, objective_met,
  $t$[{"file": "ask530/w4/build/test530.js", "md5": "138e135b", "wall_id": 10695}, {"file": "ask530/w4/build/out_test530.txt", "md5": "78d44130", "wall_id": 10714, "note": "reproduced by W2"}, {"file": "ask530/w4/build/mapcheck530.js", "md5": "7c3ff152", "wall_id": 10695}, {"file": "ask530/w4/build/out_rec530.txt", "md5": "088108ca", "wall_id": 10714}, {"file": "ask530/w4/build/out_jeb530.txt", "md5": "57e4bf39", "wall_id": 10714}]$t$::jsonb,
  $t$[{"seat": "W2", "result": "MATCH: engine fetch-back equals target 748cc966, child fetch-back equals target 3d3ee056 (156 nodes); revert copies equal the lives they replaced; runcheck OK 5aedc2f2ac70ba66 on both; pair PASSES", "wall_id": 10729}]$t$::jsonb,
  $t${"case": "UNEXERCISED: live, no released run yet; the paid 530 replay is a separate card", "mark": "debate_enforcer_log rows with rule E-ONE and cure_reason beginning \"TRIAL (record-only, ASK 530): ENGAGE\"; replay counts treat K6.1 and K6.2 as one line and count E-ONE rows against E-COL items (W2 10714 items 5b and 5c)"}$t$::jsonb,
- $t${"op_doc": "not needed", "engine_manual": "not checked by W2; W1 to confirm"}$t$::jsonb,
+ $t${"op_doc": "not needed", "engine_manual": "not yet written"}$t$::jsonb,
  'read back', $t$[10633, 10634, 10636, 10662, 10663, 10666, 10669, 10672, 10675, 10676, 10677, 10678, 10679, 10695, 10714, 10726, 10729, "audit 40044"]$t$::jsonb);
 INSERT INTO public.ask_aar_builders (snapshot_id, prior_row, builder_seats, sources, written_by)
 SELECT s.id, NULL, ARRAY['W4'], $t$[{"seat": "W4", "what": "built ASK 530", "wall_id": 10695}, {"seat": "W4", "what": "wrote ASK 530 on its card", "wall_id": 10726}]$t$::jsonb, 'session_01H1X3ANeXjt6pnw4fs6Wxr4' FROM public.ask_aar_snapshots s WHERE s.ask = 530 AND s.rev = 'A1' AND s.aar_at = now();
