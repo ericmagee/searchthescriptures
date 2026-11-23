@@ -2,7 +2,7 @@
 -- For W1 to grade, then for the coordinator (seat 36) to run once. NOT RUN.
 -- After the run: ask_aar_snapshots_check() and ask_aar_grades_check() on both new rows (op doc s29 steps 3 and 4).
 -- verdict_norm values: PASS, FAIL or FAIL ON FORM only.
--- One fact for W1 to check: write539.sh was graded at 2f4a3829 (W4 10711, W2 10722). The file on disk now reads 1c0bd88b,
+-- Closed by W4 10760 (only the last line changed). Was: one fact for W1 to check: write539.sh was graded at 2f4a3829 (W4 10711, W2 10722). The file on disk now reads 1c0bd88b,
 --   modified 16:42Z, after the write at 10:41 CST. Its last step now passes "$PWD/..." absolute paths, which matches W4's
 --   stated script defect (10726 item 1). The row records both md5s.
 BEGIN;
@@ -11,11 +11,11 @@ INSERT INTO public.ask_aar_snapshots (ask, rev, title, objective, objective_met,
 (539, 'A1', $t$Stop the false "library drift" in the child's Library Check$t$,
  $t$The next run that seats an alternate must not stop with "pkgLIB1: library drift" when the engine's and the child's Libraries agree. Expected effect: the engine's map sha leaves out its two engine-only MAP keys, "REFP" and "Alternate Merge CPD", and so equals the child's map sha again. (ask539/w3/plan539.md rev 1)$t$,
  'in part', $t$Written 10:41 CST 11-23 on the operator's card "Write 539 and 530" (W4 10726; audit 40043): engine 04450043 to ae0f90de, node Library Sha (ASK 422a) only; the child not written. Read back by W2 at Wall 10729 (MATCH): fetch-back a3afd35a equals target 24805786; Library Check pair PASSES, map 93f6ae03d05181d8 on both. Not yet shown by a run that seats an alternate.$t$,
- '10687, 10689, 10693, 10711, 10722, 10726, 10729', 'session_01H1X3ANeXjt6pnw4fs6Wxr4', NULL,
+ '10687, 10689, 10693, 10711, 10722, 10726, 10729, 10760', 'session_01H1X3ANeXjt6pnw4fs6Wxr4', NULL,
  $t$"\"Write 539 and 530\" (10:41 CST, W4's thread)"$t$::jsonb,
  $t${"answer": "Write 539 and 530", "thread": "W4", "press_time": "10:41 CST", "source": "Wall 10726; audit 40043"}$t$::jsonb, 'W3',
  $t${"md5": "e7da64ea", "path": "ask539/w3/plan539.md", "commit": "6f59eb35", "wall_id": 10689, "note": "rev 1; repair of the ASK 526 live defect (W4 10687)"}$t$::jsonb,
- $t$[{"md5": "14b19bee", "path": "ask539/w4/BUILD539.md", "wall_id": 10711}, {"md5": "e86a89d8", "path": "ask539/w4/build/patch539.js"}, {"md5": "24805786", "path": "ask539/w4/build/target_engine_539.json"}, {"md5": "748cc966", "path": "ask539/w4/build/target_engine_530_539.json"}, {"md5": "2f4a3829", "path": "ask539/w4/write/write539.sh", "note": "as graded (10711, 10722); on disk now 1c0bd88b, modified 16:42Z after the write: last step uses absolute paths (W4 10726 item 1)"}]$t$::jsonb,
+ $t$[{"md5": "14b19bee", "path": "ask539/w4/BUILD539.md", "wall_id": 10711}, {"md5": "e86a89d8", "path": "ask539/w4/build/patch539.js"}, {"md5": "24805786", "path": "ask539/w4/build/target_engine_539.json"}, {"md5": "748cc966", "path": "ask539/w4/build/target_engine_530_539.json"}, {"md5": "2f4a3829", "path": "ask539/w4/write/write539.sh", "note": "as graded (10711, 10722); on disk now 1c0bd88b, modified 16:42Z after the write: last step uses absolute paths (W4 10726 item 1); W4 10760: restoring the graded last line gives 2f4a3829 exactly, so that is the only change"}]$t$::jsonb,
  $t${"md5": "0ebff7aa", "path": "ask539/w4/write/revert539.sh", "copy": "revert_engine.json a0ad999a (equals the 537 live engine a078ac78)", "note": "not exercised; run after revert530.sh, on the operator's word only"}$t$::jsonb,
  $t$[{"seat": "W2", "verdict": "PASS (plan rev 1)", "wall_id": 10693, "md5_graded": "e7da64ea", "verdict_norm": "PASS"}, {"seat": "W2", "verdict": "PASS (build)", "wall_id": 10722, "md5_graded": "14b19bee", "verdict_norm": "PASS"}, {"seat": "W2", "verdict": "PASS (build; target named in the grade)", "wall_id": 10722, "md5_graded": "24805786", "verdict_norm": "PASS"}]$t$::jsonb,
  ARRAY['24805786'], $t$[40043]$t$::jsonb,
@@ -24,7 +24,7 @@ INSERT INTO public.ask_aar_snapshots (ask, rev, title, objective, objective_met,
  $t$[{"seat": "W2", "result": "MATCH: fetch-back equals target, 397 nodes; revert copy equals the 537 live; runcheck OK cf88f4765f035f23; pair PASSES", "wall_id": 10729}]$t$::jsonb,
  $t${"case": "UNEXERCISED: live, no released run has seated an alternate yet", "mark": "the child's lib422 same:true, with no \"pkgLIB1: library drift\", on a run that seats an alternate"}$t$::jsonb,
  $t${"op_doc": "not needed", "engine_manual": "not checked by W2; W1 to confirm"}$t$::jsonb,
- 'read back', $t$[10687, 10689, 10693, 10711, 10722, 10726, 10729, "audit 40043"]$t$::jsonb);
+ 'read back', $t$[10687, 10689, 10693, 10711, 10722, 10726, 10729, 10760, "audit 40043"]$t$::jsonb);
 INSERT INTO public.ask_aar_builders (snapshot_id, prior_row, builder_seats, sources, written_by)
 SELECT s.id, NULL, ARRAY['W4'], $t$[{"seat": "W4", "what": "built ASK 539", "wall_id": 10711}, {"seat": "W4", "what": "wrote ASK 539 on its card", "wall_id": 10726}]$t$::jsonb, 'session_01H1X3ANeXjt6pnw4fs6Wxr4' FROM public.ask_aar_snapshots s WHERE s.ask = 539 AND s.rev = 'A1' AND s.aar_at = now();
 INSERT INTO public.ask_aar_snapshots (ask, rev, title, objective, objective_met, objective_met_reason, objective_source, written_by, prior_row, operator_words, card, owner_seat, plan, build_files, revert, grades, md5_written, audit_ids, objects, tests, readbacks, run_evidence, manuals, status, sources) VALUES
