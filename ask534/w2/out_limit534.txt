@@ -1,0 +1,115 @@
+CAP 1 | 41043: 1 -> 1 (genealogy 0 -> 0) | 41090: 21 -> 21 (genealogy 3 -> 3) | 41102: 7 -> 7 (genealogy 0 -> 0) | 41117: 2 -> 2 (genealogy 0 -> 0) | 41418: 18 -> 18 (genealogy 0 -> 0) | 41155: 29 -> 6 (genealogy 20 -> 0) | 39015: 15 -> 5 (genealogy 7 -> 0) | 39266: 8 -> 2 (genealogy 3 -> 0) | 40891: 10 -> 7 (genealogy 3 -> 0)
+CAP 2 | 41043: 1 -> 1 (genealogy 0 -> 0) | 41090: 21 -> 21 (genealogy 3 -> 3) | 41102: 7 -> 7 (genealogy 0 -> 0) | 41117: 2 -> 2 (genealogy 0 -> 0) | 41418: 18 -> 18 (genealogy 0 -> 0) | 41155: 29 -> 9 (genealogy 20 -> 0) | 39015: 15 -> 5 (genealogy 7 -> 0) | 39266: 8 -> 2 (genealogy 3 -> 0) | 40891: 10 -> 7 (genealogy 3 -> 0)
+CAP 3 | 41043: 1 -> 1 (genealogy 0 -> 0) | 41090: 21 -> 21 (genealogy 3 -> 3) | 41102: 7 -> 7 (genealogy 0 -> 0) | 41117: 2 -> 2 (genealogy 0 -> 0) | 41418: 18 -> 18 (genealogy 0 -> 0) | 41155: 29 -> 14 (genealogy 20 -> 5) | 39015: 15 -> 15 (genealogy 7 -> 7) | 39266: 8 -> 8 (genealogy 3 -> 3) | 40891: 10 -> 10 (genealogy 3 -> 3)
+ITEMS at CAP 2 (kept/dropped):
+KEEP 41043 sol WHICH HOLDS | Matthew 1:25 in Matthew 1:24-25 | adds 1 
+KEEP 41090 sol62 WHICH HOLDS | Romans 1:3 in Romans 1:3-4 | adds 1 
+KEEP 41090 sol62 KEYSTONE | Matthew 1:25 in Matthew 1:24-25 | adds 1 
+KEEP 41090 sol62 ANSWER CHECK Matthew 1:2 | Matthew 1:2 in Matthew 1:2-3 | adds 1 | GEN
+KEEP 41090 sol62 ANSWER CHECK Matthew 1:23 | Matthew 1:23 in Matthew 1:22-23 | adds 1 
+KEEP 41090 sol62 ANSWER CHECK Luke 2:4 | Luke 2:4 in Luke 2:4-5 | adds 1 
+KEEP 41090 chatgpt ANSWER CHECK Matthew 1:24 | Matthew 1:24 in Matthew 1:24-25 | adds 1 
+KEEP 41090 chatgpt ANSWER CHECK Matthew 1:2 | Matthew 1:2 in Matthew 1:2-3 | adds 1 | GEN
+KEEP 41090 chatgpt ANSWER CHECK Jeremiah 18:8 | Jeremiah 18:8 in Jeremiah 18:7-8 | adds 1 
+KEEP 41090 chatgpt ANSWER CHECK Matthew 1:23 | Matthew 1:23 in Matthew 1:22-23 | adds 1 
+KEEP 41090 chatgpt ANSWER CHECK Romans 1:3 | Romans 1:3 in Romans 1:3-4 | adds 1 
+KEEP 41090 chatgpt ANSWER CHECK Luke 2:4 | Luke 2:4 in Luke 2:4-5 | adds 1 
+KEEP 41090 sol RESULT | Matthew 1:25 in Matthew 1:24-25 | adds 1 
+KEEP 41090 sol ANSWER CHECK Matthew 1:23 | Matthew 1:23 in Matthew 1:22-23 | adds 1 
+KEEP 41090 sol ANSWER CHECK Romans 1:3 | Romans 1:3 in Romans 1:3-4 | adds 1 
+KEEP 41090 sol ANSWER CHECK Ezra 2:61 | Ezra 2:61 in Ezra 2:61-62 | adds 1 
+KEEP 41090 sol ANSWER CHECK Luke 2:4 | Luke 2:4 in Luke 2:4-5 | adds 1 
+KEEP 41090 gemini (judgment 1253) WHICH HOLDS | Matthew 1:25 in Matthew 1:24-25 | adds 1 
+KEEP 41090 gemini (judgment 1253) ANSWER CHECK Matthew 1:23 | Matthew 1:23 in Matthew 1:22-23 | adds 1 
+KEEP 41090 gemini (judgment 1253) ANSWER CHECK Romans 1:3 | Romans 1:3 in Romans 1:3-4 | adds 1 
+KEEP 41090 gemini (judgment 1253) ANSWER CHECK Matthew 1:2 | Matthew 1:2 in Matthew 1:2-3 | adds 1 | GEN
+KEEP 41090 gemini (judgment 1253) ANSWER CHECK Ezra 2:61 | Ezra 2:61 in Ezra 2:61-62 | adds 1 
+KEEP 41102 sol62 WHICH HOLDS | Romans 1:3 in Romans 1:3-4 | adds 1 
+KEEP 41102 sol62 KEYSTONE | Matthew 1:25 in Matthew 1:24-25 | adds 1 
+KEEP 41102 chatgpt ANSWER CHECK Romans 1:3 | Romans 1:3 in Romans 1:3-4 | adds 1 
+KEEP 41102 sol WHICH HOLDS | Romans 1:3 in Romans 1:3-4 | adds 1 
+KEEP 41102 sol ANSWER CHECK Jeremiah 18:8 | Jeremiah 18:8 in Jeremiah 18:7-8 | adds 1 
+KEEP 41102 alternate reply WHICH HOLDS | Matthew 1:25 in Matthew 1:24-25 | adds 1 
+KEEP 41102 alternate reply ANSWER CHECK Romans 1:3 | Romans 1:3 in Romans 1:3-4 | adds 1 
+KEEP 41117 chatgpt D3 vs C6 | Matthew 1:25 in Matthew 1:24-25 | adds 1 
+KEEP 41117 sol WHICH HOLDS | Matthew 1:25 in Matthew 1:24-25 | adds 1 
+KEEP 41418 sol62 WHICH HOLDS | Romans 1:3 in Romans 1:3-4 | adds 1 
+KEEP 41418 sol62 RESULT | Matthew 1:25 in Matthew 1:24-25 | adds 1 
+KEEP 41418 sol62 ANSWER CHECK Luke 2:4 | Luke 2:4 in Luke 2:4-5 | adds 1 
+KEEP 41418 sol62 ANSWER CHECK Numbers 1:2 | Numbers 1:2 in Numbers 1:2-3 | adds 1 
+KEEP 41418 sol62 ANSWER CHECK Jeremiah 18:8 | Jeremiah 18:8 in Jeremiah 18:7-8 | adds 1 
+KEEP 41418 chatgpt WHICH HOLDS | Matthew 1:25 in Matthew 1:24-25 | adds 1 
+KEEP 41418 chatgpt ANSWER CHECK Romans 1:3 | Romans 1:3 in Romans 1:3-4 | adds 1 
+KEEP 41418 chatgpt ANSWER CHECK Numbers 1:3 | Numbers 1:3 in Numbers 1:2-3 | adds 1 
+KEEP 41418 chatgpt ANSWER CHECK Luke 2:4 | Luke 2:4 in Luke 2:4-5 | adds 1 
+KEEP 41418 chatgpt ANSWER CHECK Jeremiah 18:7 | Jeremiah 18:7 in Jeremiah 18:7-8 | adds 1 
+KEEP 41418 sol RESULT | Matthew 1:25 in Matthew 1:24-25 | adds 1 
+KEEP 41418 sol ANSWER CHECK Romans 1:4 | Romans 1:4 in Romans 1:3-4 | adds 1 
+KEEP 41418 sol ANSWER CHECK Luke 2:4 | Luke 2:4 in Luke 2:4-5 | adds 1 
+KEEP 41418 sol ANSWER CHECK Numbers 1:2 | Numbers 1:2 in Numbers 1:2-3 | adds 1 
+KEEP 41418 sol ANSWER CHECK Jeremiah 18:8 | Jeremiah 18:8 in Jeremiah 18:7-8 | adds 1 
+KEEP 41418 qwen4max (judgment 1265; child 41440) WHICH HOLDS | Matthew 1:25 in Matthew 1:24-25 | adds 1 
+KEEP 41418 qwen4max (judgment 1265; child 41440) D1 vs C4 | Jeremiah 18:8 in Jeremiah 18:7-8 | adds 1 
+KEEP 41418 qwen4max (judgment 1265; child 41440) D4 vs C2 | Romans 1:4 in Romans 1:3-4 | adds 1 
+KEEP 41155 1260 WHICH HOLDS | Matthew 1:23-25 in Matthew 1:22-25 | adds 1 
+KEEP 41155 1260 WHICH HOLDS | Matthew 1:23 in Matthew 1:22-23 | adds 1 
+DROP 41155 1260 RESULT | Luke 3:31 in Luke 3:28-34 | adds 6 | GEN
+DROP 41155 1260 RESULT | Matthew 1:6 in Matthew 1:3-9 | adds 6 | GEN
+DROP 41155 1260 D2 vs C6 | Matthew 1:12 in Matthew 1:9-15 | adds 6 | GEN
+DROP 41155 1260 D2 vs C6 | Matthew 1:16 in Matthew 1:13-16 | adds 3 | GEN
+KEEP 41155 1260 ANSWER CHECK Matthew 1:25 | Matthew 1:25 in Matthew 1:24-25 | adds 1 
+DROP 41155 1260 ANSWER CHECK Luke 3:23 | Luke 3:23 in Luke 3:23-26 | adds 3 | GEN
+KEEP 41155 1260 ANSWER CHECK Numbers 1:2 | Numbers 1:2 in Numbers 1:1-3 | adds 2 
+DROP 41155 1260 ANSWER CHECK Matthew 1:3 | Matthew 1:3 in Matthew 1:2-6 | adds 4 | GEN
+DROP 41155 1260 ANSWER CHECK Matthew 1:5 | Matthew 1:5 in Matthew 1:2-8 | adds 6 | GEN
+KEEP 41155 1261 D4 vs C4 | Matthew 1:25 in Matthew 1:24-25 | adds 1 
+DROP 41155 1261 ANSWER CHECK Matthew 1:16 | Matthew 1:16 in Matthew 1:13-16 | adds 3 | GEN
+DROP 41155 1261 ANSWER CHECK Luke 3:23 | Luke 3:23 in Luke 3:23-26 | adds 3 | GEN
+DROP 41155 1261 ANSWER CHECK Matthew 1:12 | Matthew 1:12 in Matthew 1:9-15 | adds 6 | GEN
+DROP 41155 1261 ANSWER CHECK Luke 3:31 | Luke 3:31 in Luke 3:28-34 | adds 6 | GEN
+DROP 41155 1261 ANSWER CHECK Matthew 1:6 | Matthew 1:6 in Matthew 1:3-9 | adds 6 | GEN
+DROP 41155 1261 ANSWER CHECK Matthew 1:3 | Matthew 1:3 in Matthew 1:2-6 | adds 4 | GEN
+DROP 41155 1261 ANSWER CHECK Matthew 1:5 | Matthew 1:5 in Matthew 1:2-8 | adds 6 | GEN
+KEEP 41155 1261 ANSWER CHECK Numbers 1:2 | Numbers 1:2 in Numbers 1:1-3 | adds 2 
+KEEP 41155 1262 WHICH HOLDS | Matthew 1:25 in Matthew 1:24-25 | adds 1 
+DROP 41155 1262 ANSWER CHECK Matthew 1:16 | Matthew 1:16 in Matthew 1:13-16 | adds 3 | GEN
+KEEP 41155 1262 ANSWER CHECK Numbers 1:2 | Numbers 1:2 in Numbers 1:1-3 | adds 2 
+DROP 41155 1262 ANSWER CHECK Matthew 1:12 | Matthew 1:12 in Matthew 1:9-15 | adds 6 | GEN
+DROP 41155 1262 ANSWER CHECK Luke 3:31 | Luke 3:31 in Luke 3:28-34 | adds 6 | GEN
+DROP 41155 1262 ANSWER CHECK Matthew 1:6 | Matthew 1:6 in Matthew 1:3-9 | adds 6 | GEN
+DROP 41155 1262 ANSWER CHECK Matthew 1:3 | Matthew 1:3 in Matthew 1:2-6 | adds 4 | GEN
+KEEP 41155 1262 ANSWER CHECK Matthew 1:23 | Matthew 1:23 in Matthew 1:22-23 | adds 1 
+DROP 41155 1262 ANSWER CHECK Matthew 1:5 | Matthew 1:5 in Matthew 1:2-8 | adds 6 | GEN
+KEEP 39015 1227 RESULT | Matthew 1:25 in Matthew 1:24-25 | adds 1 
+DROP 39015 1227 D1 vs C1 | Romans 1:3 in Romans 1:3-6 | adds 3 
+DROP 39015 1227 ANSWER CHECK Luke 3:23 | Luke 3:23 in Luke 3:23-26 | adds 3 | GEN
+DROP 39015 1227 ANSWER CHECK Matthew 1:16 | Matthew 1:16 in Matthew 1:13-16 | adds 3 | GEN
+KEEP 39015 1227 ANSWER CHECK Matthew 1:23 | Matthew 1:23 in Matthew 1:22-23 | adds 1 
+DROP 39015 1228 RESULT | Matthew 1:16 in Matthew 1:13-16 | adds 3 | GEN
+KEEP 39015 1228 D1 vs C1 | Matthew 1:23 in Matthew 1:22-23 | adds 1 
+DROP 39015 1228 D2 vs C2 | Matthew 1:2 in Matthew 1:2-5 | adds 3 | GEN
+DROP 39015 1228 D4 vs C1 | Romans 1:3 in Romans 1:3-6 | adds 3 
+KEEP 39015 1228 ANSWER CHECK Matthew 1:24 | Matthew 1:24 in Matthew 1:24-25 | adds 1 
+DROP 39015 1228 ANSWER CHECK Luke 3:23 | Luke 3:23 in Luke 3:23-26 | adds 3 | GEN
+DROP 39015 1229 KEYSTONE | Romans 1:3 in Romans 1:3-6 | adds 3 
+DROP 39015 1229 ANSWER CHECK Luke 3:23 | Luke 3:23 in Luke 3:23-26 | adds 3 | GEN
+DROP 39015 1229 ANSWER CHECK Matthew 1:16 | Matthew 1:16 in Matthew 1:13-16 | adds 3 | GEN
+KEEP 39015 1229 ANSWER CHECK Matthew 1:23 | Matthew 1:23 in Matthew 1:22-23 | adds 1 
+KEEP 39266 1230 KEYSTONE | Matthew 1:23 in Matthew 1:22-23 | adds 1 
+DROP 39266 1230 D1 vs C4 | Romans 1:3 in Romans 1:3-6 | adds 3 
+DROP 39266 1230 ANSWER CHECK Luke 3:23 | Luke 3:23 in Luke 3:23-26 | adds 3 | GEN
+DROP 39266 1231 ANSWER CHECK Luke 3:23 | Luke 3:23 in Luke 3:23-26 | adds 3 | GEN
+DROP 39266 1231 ANSWER CHECK Romans 1:3 | Romans 1:3 in Romans 1:3-6 | adds 3 
+DROP 39266 1232 ANSWER CHECK Luke 3:23 | Luke 3:23 in Luke 3:23-26 | adds 3 | GEN
+DROP 39266 1232 ANSWER CHECK Romans 1:3 | Romans 1:3 in Romans 1:3-6 | adds 3 
+KEEP 39266 1232 ANSWER CHECK Matthew 1:23 | Matthew 1:23 in Matthew 1:22-23 | adds 1 
+DROP 40891 1236 ANSWER CHECK Luke 3:23 | Luke 3:23 in Luke 3:23-26 | adds 3 | GEN
+KEEP 40891 1236 ANSWER CHECK Matthew 1:24 | Matthew 1:24 in Matthew 1:24-25 | adds 1 
+KEEP 40891 1236 ANSWER CHECK Matthew 1:23 | Matthew 1:23 in Matthew 1:22-23 | adds 1 
+KEEP 40891 1236 ANSWER CHECK Luke 1:32 | Luke 1:32 in Luke 1:32-33 | adds 1 
+DROP 40891 1237 ANSWER CHECK Luke 3:23 | Luke 3:23 in Luke 3:23-26 | adds 3 | GEN
+KEEP 40891 1237 ANSWER CHECK Matthew 1:23 | Matthew 1:23 in Matthew 1:22-23 | adds 1 
+DROP 40891 1238 ANSWER CHECK Luke 3:23 | Luke 3:23 in Luke 3:23-26 | adds 3 | GEN
+KEEP 40891 1238 ANSWER CHECK Matthew 1:24 | Matthew 1:24 in Matthew 1:24-25 | adds 1 
+KEEP 40891 1238 ANSWER CHECK Matthew 1:23 | Matthew 1:23 in Matthew 1:22-23 | adds 1 
+KEEP 40891 1238 ANSWER CHECK Luke 1:32 | Luke 1:32 in Luke 1:32-33 | adds 1 

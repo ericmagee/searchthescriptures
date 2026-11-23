@@ -1,7 +1,9 @@
-# ASK 534 PLAN rev 1 (W2, seat 32): K-SU reads a verse a deciding line quotes together with the rest of its KJV sentence, when the rounds read them together
+# ASK 534 PLAN rev 2 (W2, seat 32): K-SU reads a verse a deciding line quotes together with the rest of its KJV sentence, when the rounds read them together
 
 Authority: coordinator assignment 10:44 CST 11-23 (W2's thread). Proposal: W1 Wall 10589 item 2 and addendum 10596 item 2(b); reviews W3 10590 items 4 to 6 and W2 10593 item 3; noise W1 10691. This plan authorizes nothing.
-Rev 1 replaces rev 0 (317ad031, commit ae0daa7a) under W3's grade at Wall 10746 (ask534/w3/grade534_plan_rev0.md, commit 4ae56003), conditions C1 to C3. It changes SCOPE (known-bad lines and CHANGE 5) and CRITERIA 1, 3 and 5, and WRONG-IF 1. Nothing else changes.
+Rev 1 replaced rev 0 (317ad031, commit ae0daa7a) under W3's grade at Wall 10746 (ask534/w3/grade534_plan_rev0.md, commit 4ae56003), conditions C1 to C3. It changed SCOPE (known-bad lines and CHANGE 5), CRITERIA 1, 3 and 5, and WRONG-IF 1. W3 passed rev 1 at Wall 10752.
+
+Rev 2 replaces rev 1 (b7d3a0f5, commit 4b0eb70f; kept as plan534_rev1.md). The reason is that W4's step 2 replay met WRONG-IF 3 (Wall 10771): on run 41155, 20 of 29 new items fell on genealogy verses. Rev 2 adds CHANGE 3a, a width limit, and section 3b with the measurement behind it. It also updates CRITERION 4 and WRONG-IF 3, and adds WRONG-IF 4. Nothing else changes.
 
 ## 1. OBJECTIVE
 A judge's deciding line (KEYSTONE, RESULT, WHICH HOLDS, ANSWER CHECK, or a collision line graded LINK BROKEN) sometimes reads one verse apart from the KJV sentence it belongs to, while the rounds read the two together. In run 41418 every judge read Matthew 1:25 ("And knew her not till she had brought forth her firstborn son") apart from Matthew 1:24, which ends "and took unto him his wife:" and runs into 1:25 as one sentence. The defender's rounds quote 1:24. No check asked the judges about it: K-SU, the sentence check, fired once in 41418, on Numbers 1:3. The fix lets K-SU read every verse a deciding line quotes, not only the collision line's GROUND [L1] verse. It also lets K-SU fire when ANY round of either side names another verse of the same sentence, not only the round the line's answer tag names. The item then gives the judge the whole sentence and asks it to grade on it, as K-SU does today. This keeps to the single verse ban: a verse is read with its sentence.
@@ -35,6 +37,10 @@ CHANGE (Library line 2278 only, in both Library copies; the existing K-SU path s
 1. Lines read. Besides today's lines, read every line that opens with KEYSTONE, RESULT, WHICH HOLDS or ANSWER CHECK, and every collision line graded LINK BROKEN (with or without an answer tag).
 2. Verses read. On those lines, read every verse the line names by reference (MLS_REF), at any layer, and the ANSWER CHECK subject verse. Each verse goes through mlsUnit as today. A verse that is its own sentence (mlsUnit gives a=v1 and z=v2) raises nothing.
 3. Trigger. Fire when the line does not name another verse of the sentence (mlsNames on the line) and the joined rounds R, of either side, do name one (mlsNames on the joined round text). The answer tag is not required on these lines. Side-neutral (ruling 364).
+3a. Width limit (rev 2). On the new path only, raise nothing when the sentence holds more than two verses besides the verses the line names. In code terms: (U.z - U.a + 1) - (v2 - v1 + 1) > 2. Today's path keeps no limit.
+   - Why: a ';'- or ','-chained list, such as the genealogies (Matthew 1:2-16, Luke 3:23-38), forms a 'sentence' of up to 7 verses under mlsUnit. The rounds cite such lists as a list, not as one sentence read together.
+   - Every 41418 sentence, and every non-list sentence in the replay, adds at most two verses: Matthew 1:24-25, 1:22-23 and 1:22-25 (for 1:23-25), Numbers 1:1-3 and 1:2-3, Jeremiah 18:7-8, Romans 1:3-4, Luke 2:4-5, Luke 1:32-33 and Ezra 2:61-62.
+   - Accepted cost: a long real sentence (more than two added verses) is not read on the new path. Romans 1:3-6 on the older kjv rows is one; it already falls to 1:3-4 on the newer rows.
 4. One item per judgment and sentence. Skip the new item when a K-SU item for the same sentence (U.ref) is already in this judgment's items, including one from today's path.
 5. The item. Rule K-SU, side JUDGE, TRIAL and list only, as today. Fields, as today's item: ref U.ref; around rk; oref and otext built exactly as today's path builds them (the other verses of the sentence and U.ref; the other verses' text, margin notes stripped). mlsCure (line 702) reads oref and otext to grade a reply CURED (W3 10746 C2).
    - rk is the line's answer tag when that round names another verse of the sentence; otherwise the first round, in the order of R's keys, that names one.
@@ -45,13 +51,31 @@ CHANGE (Library line 2278 only, in both Library copies; the existing K-SU path s
 6. Nothing else changes: K-ML, how items are grouped into a judge's send-back, every count, and every other check.
 NOT IN SCOPE, under the scope rule: deciding lines that quote a verse by its words only, with no reference; STANDING lines; the enforcer's ASK 530 E-COL item, which runs on the enforcer path. W3 10590 item 5 asked how a K-SU item and another item on the same line combine. K-SU counts nothing, so there is no double count. The grouping is not changed; the builder reports, in the replay, which send-back the new items ride.
 
+## 3b. MEASUREMENT FOR REV 2 (W2, on W4's replay outputs)
+Inputs: ask534/w4/replay/out_replay534.json (157c0e78) and out_fallback534.json (9e15e1e1). Each new item's verse and sentence was read from these files, and the limit in 3a was applied to it. The script is ask534/w2/limit534.py, and its output is out_limit534.txt.
+- Per run, new items before the limit and after it, with the genealogy items among them (genealogy = Matthew 1:2-16 or Luke 3:23-38):
+  - 41043: 1 before, 1 after, 0 genealogy.
+  - 41090: 21 before, 21 after. 3 genealogy items remain, on Matthew 1:2 within 1:2-3.
+  - 41102: 7 before, 7 after, 0 genealogy.
+  - 41117: 2 before, 2 after, 0 genealogy.
+  - 41418: 18 before, 18 after, 0 genealogy. All three known-bad items stand.
+  - 41155 (fallback): 29 before, 9 after. Genealogy drops from 20 to 0.
+  - 39015 (fallback): 15 before, 5 after. Genealogy drops from 7 to 0.
+  - 39266 (fallback): 8 before, 2 after. Genealogy drops from 3 to 0.
+  - 40891 (fallback): 10 before, 7 after. Genealogy drops from 3 to 0.
+- Other limits tried:
+  - A limit of one added verse cuts 41155 to 6. It drops Numbers 1:2 within 1:1-3, a real sentence.
+  - A limit of three added verses leaves 5 of 14 genealogy items in 41155, and every genealogy item in 39015, 39266 and 40891.
+  - Two filters on the rounds were also tried: a range in one round that covers the verse and another verse of the sentence, and both verses named in one round sentence (SQL, read now). Neither removes the Matthew 1 genealogy items in 41155 (1:3, 1:5, 1:6, 1:12, 1:16 all pass both), because the rounds of 41155 name those verses together with others of the list. I did not read why each one passes. So neither is used.
+- A note on the fallback input. It reads kjv_verses for whole chapters, but the live node reads only the run's Cited Verses (kkjvRows). So the fallback's sentences can be wider than the live ones. 41090's Matthew 1:2-3 is narrow for that reason. The limit holds on either.
+
 ## 4. CRITERIA and DONE
 Population: debate_judgments of runs ODV1-41418, 41155, 41117, 41102 and 41090 (3 judgments each, 15 in all), with their debate_results rounds and kjv_verses. Offline, no model call.
 1. Known bad, 41418: each of judgments 1263, 1264 and 1265 raises exactly one new K-SU item whose sentence is Matthew 1:24-25. The item is raised; no grade is promised.
    Replay input (W3 10746 C3): the text the node saw, which is each judge's first reply as Panel Payloads and Extract Independent Verdict received it in the 41418 execution (W4 reads it from n8n). If the execution no longer holds it, the input is verdict_raw with each SUPERSEDED LINE ORIGINAL put back in place of the line that replaced it, and with the audit rows and the lines the cure added removed. The builder names which input was used, with its md5. The expected item holds on either: 1263 by its original KEYSTONE or RESULT, 1264 by its original KEYSTONE or its D5 vs C2 line, 1265 by its original D2 vs C6 line.
 2. Known good, synthetic: a KEYSTONE line on 1264's text that quotes "Matthew 1:24-25" whole raises nothing. So does one that names Matthew 1:24 and Matthew 1:25 separately. A line quoting Matthew 1:18 (one sentence, ending ".") raises nothing.
 3. Known good, unchanged path: the 10 stored K-SU rows replay unchanged (same items, same text), each on its run's first-reply input as in criterion 1. 41418's Numbers 1:3 item is still raised once.
-4. Noise: the builder lists every new item on the 15 judgments (judgment, label, verse, sentence). "Found nothing" is not a legitimate result for 41418. STOP: if any run gives more than 30 new items, the plan returns to W2 with the list before any build is graded.
+4. Noise: the builder lists every new item on the 15 judgments (judgment, label, verse, sentence). "Found nothing" is not a legitimate result for 41418. STOP: if any run gives more than 30 new items, the plan returns to W2 with the list before any build is graded. Rev 2: W4 reruns step 2 with CHANGE 3a, on the same inputs (the same md5s), and the counts must equal section 3b's "after" counts. Any difference is reported item by item.
 5. Readers: a new item passes through enfSilent, krulSuSrc, mlsCure, cureLabel, __mlsT and the cure prompt list, run on the 41418 items, without error. The cure prompt shows the item's text. Also:
    a. krulSuSrc returns the whole sentence text of Matthew 1:24-25 for each new 41418 item (W3 10746 C1).
    b. mlsCure, known good: a reply whose label line (for example "ANSWER CHECK: Matthew 1:25 ..." or "KEYSTONE: ...") also names Matthew 1:24, or quotes 6 running words of it, reads CURED. Known bad: the same line without Matthew 1:24 reads UNCURED (W3 10746 C2).
@@ -61,7 +85,8 @@ DONE: criteria 1 to 6 pass, the build is graded PASS by a non-builder, and the o
 ## 5. WRONG-IF
 1. On 41418, the new rule does not raise Matthew 1:25 within 1:24-25 on the first-reply lines named in SCOPE (rev 1), or on any ANSWER CHECK line on Matthew 1:25 that the criterion 1 input holds. Then the trigger is aimed wrong. I ran the check before posting. On each of the six lines (the three ANSWER CHECK lines and the three KEYSTONE lines), the line names neither "Matthew 1:24" nor its words "took unto him his wife", and the 41418 rounds name "Matthew 1:24". So the trigger fires on all six. Over all of 41418's deciding lines, noise534.sql raises the 1:25/1:24 pair on 22 lines before dedupe.
 2. The new rule raises an item on a line that already names the other verse of the sentence (known good, criterion 2). The SQL test excludes such lines by reference.
-3. Most new items fall on verses the rounds name only in a list, such as a genealogy (Matthew 1:2-16), and not as a sentence they read together. My SQL shows genealogy pairs in 41090 and 41155 (Matthew 1:2/3, 1:5/6, 1:12/11, 1:16/15). If the builder's real-code replay shows such pairs as most of any run's items, the limit needs a further test, and the plan returns to W2.
+3. Most new items fall on verses the rounds name only in a list, such as a genealogy (Matthew 1:2-16), and not as a sentence they read together. My SQL shows genealogy pairs in 41090 and 41155 (Matthew 1:2/3, 1:5/6, 1:12/11, 1:16/15). If the builder's real-code replay shows such pairs as most of any run's items, the limit needs a further test, and the plan returns to W2. (Rev 2: this was met at Wall 10771, on 41155, 20 of 29. CHANGE 3a is the further test. The rerun must show genealogy items as a minority of every run's new items.)
+4. (Rev 2) The width limit removes any of the three 41418 known-bad items (Matthew 1:25 within Matthew 1:24-25 on 1263, 1264 and 1265), or any item whose sentence adds two verses or fewer.
 
 ## 6. RUN EVIDENCE
 Case: a judge's KEYSTONE, RESULT, WHICH HOLDS, ANSWER CHECK or LINK BROKEN line quotes a verse of a multi-verse KJV sentence, the line does not name the rest, and a round does. Mark: "[AUDIT v35: VERSE READ APART FROM ITS SENTENCE (K-SU; TRIAL, list only) -- KEYSTONE" (or RESULT, WHICH HOLDS, ANSWER CHECK) in the judgment's review notes, and a debate_enforcer_log row with rule K-SU on that label. Judges' wording cannot be forced. The noise count says such a line occurs in every one of the last five runs.
