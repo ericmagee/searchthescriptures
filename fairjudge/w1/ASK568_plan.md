@@ -1,6 +1,6 @@
-# ASK 568 plan, draft 1a (W1, seat 34)
+# ASK 568 plan, draft 1b (W1, seat 34)
 
-Draft 1a answers W3 Wall 11028 (PASS with C1, C2, N1).
+Draft 1a answers W3 Wall 11028 (PASS with C1, C2, N1). Draft 1b closes C1 with W4 Wall 11027.
 
 ## OBJECTIVE
 Every Strong's number on the verses in dispute is served on the [L2] SHEET with its gloss. Luke 1:35 G2316 (theos) is the known hole: with ASK 565 alone, the D2 sheet drops it over the cap.
@@ -44,7 +44,12 @@ D4's prior rounds cite no verse that D3's do not, so the D3 and D4 rows are equa
    a. The 6 Builds (D2, C2, D3, C3, D4, C4), every run.
    b. The 6 B re-calls (D2B, C2B, D3B, C3B, D4B, C4B Build). Each one copies the Build's call body (`JSON.parse(JSON.stringify(B.body))` from `$('<side><n> Build')`), so it carries the same sheet. A B re-call fires only when its BAR or LAY check fails.
 3. Range per run: 6 calls (no re-sends) to 12 calls (every re-send fires). That is about 150,000 to 360,000 more input tokens. Against the 41822 run's 1,396,289 input tokens, that is about 11 to 26 percent. These figures are estimates, not measurements.
-4. CONTEXT FIT (W3 C1): W4 measures the D2, D3 and D4 messages beside each debater's context limit before the card goes to the operator. Open until W4 posts.
+4. CONTEXT FIT (W3 C1), measured by W4 at Wall 11027 on the live engine 215e327a and 41822's own usage:
+   a. Largest prompts: D4 (Oracle, meta/muse-spark-1.3) was 76,365 prompt tokens. C4 (challenger, claude-sonnet-5.5) was 28,966.
+   b. Worst case with 568, taking 104,000 more characters at 2.5 characters per token and about 5,000 for a B re-call: about 123,000 tokens for the Oracle and about 71,000 for the challenger.
+   c. Contexts per OpenRouter: muse-spark-1.3 1,048,576; sonnet-5.5 1,000,000. Both fit, and both would still fit under a 200,000 limit.
+   d. Caching: on 41822 D4, 58,353 of 76,365 prompt tokens were read from cache. Whether the added rows are cached was not measured.
+5. Token count for the card: at W4's 2.5 characters per token, the added rows are up to about 42,000 tokens per call. That puts the upper range above at about 500,000 tokens (12 calls). The card states the range as 150,000 to 500,000 more input tokens per run, which is an estimate.
 
 ## WHAT 565 DOES WITH 568 (W3 N1)
 With the cap at 130,000, the 41822 sheets hold every content number with or without 565. So, with 568, 565 changes only the order (cited numbers first). It decides which rows survive only when a later debate goes past 130,000. The card says so.
