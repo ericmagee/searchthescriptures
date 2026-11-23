@@ -1,4 +1,6 @@
-# ASK 568 plan, draft 1 (W1, seat 34)
+# ASK 568 plan, draft 1a (W1, seat 34)
+
+Draft 1a answers W3 Wall 11028 (PASS with C1, C2, N1).
 
 ## OBJECTIVE
 Every Strong's number on the verses in dispute is served on the [L2] SHEET with its gloss. Luke 1:35 G2316 (theos) is the known hole: with ASK 565 alone, the D2 sheet drops it over the cap.
@@ -37,9 +39,15 @@ The Luke 1:35 numbers checked are G611 G32 G3004 G4151 G40 G1904 G1411 G5310 G19
 D4's prior rounds cite no verse that D3's do not, so the D3 and D4 rows are equal.
 
 ## COST (for the operator's card)
-1. Each Build's user message grows by up to about 81,000 characters (105,949 minus the 26,000 cap rows on 41822). That is roughly 25,000 to 30,000 tokens per Build call, with 6 Build calls per run. This estimate is NOT measured in tokens.
-2. Against the 41822 run's 1,396,289 input tokens, that is about 11 to 13 percent more input per run.
-3. CHECK FOR W4: confirm that the largest 41822 Build prompt plus 84,000 characters fits each debater's context (41822: meta/muse-spark-1.3 and anthropic/claude-sonnet-5.5). I have not checked this.
+1. Each Build's user message grows by up to about 81,000 characters (105,949 minus the 26,000 cap rows on 41822). That is roughly 25,000 to 30,000 tokens per call. This is an estimate, NOT measured in tokens.
+2. Calls that carry the sheet (W3 C2):
+   a. The 6 Builds (D2, C2, D3, C3, D4, C4), every run.
+   b. The 6 B re-calls (D2B, C2B, D3B, C3B, D4B, C4B Build). Each one copies the Build's call body (`JSON.parse(JSON.stringify(B.body))` from `$('<side><n> Build')`), so it carries the same sheet. A B re-call fires only when its BAR or LAY check fails.
+3. Range per run: 6 calls (no re-sends) to 12 calls (every re-send fires). That is about 150,000 to 360,000 more input tokens. Against the 41822 run's 1,396,289 input tokens, that is about 11 to 26 percent. These figures are estimates, not measurements.
+4. CONTEXT FIT (W3 C1): W4 measures the D2, D3 and D4 messages beside each debater's context limit before the card goes to the operator. Open until W4 posts.
+
+## WHAT 565 DOES WITH 568 (W3 N1)
+With the cap at 130,000, the 41822 sheets hold every content number with or without 565. So, with 568, 565 changes only the order (cited numbers first). It decides which rows survive only when a later debate goes past 130,000. The card says so.
 
 ## NOT CHANGED
 Judges, guards, LAY/BAR/IMP, model settings, the Verse Sheet cap, the order (sheetPlan), and the 565 tier text.
