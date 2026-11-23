@@ -59,6 +59,7 @@ DONE: criteria 1 to 6 met on the synthetic build; the write's fetch-back matches
 
 ## 7. RUN EVIDENCE
 - 41418 (failed run for item 2): the Oracle's CR3 has 6 PRESSED WITH lines against the challenger's premises; its close CR4 (24,857 characters) has 40 ANSWER: lines and 0 lines restating any of the 6 ("unanswered": 0 hits). W2 checked this at 10650.
+- 41418, the judges on the same gap (W1 10651, not rechecked by W3): sol 6.2 (judgment 1263) counted challenger premise 3 as unanswered; the other two judges counted none. A restated gap in the Oracle's close puts the gap in front of every judge.
 - 41418 and item 1: no failure. The Oracle did it unprompted at CR2: "The question is answered by the chain, not by one verse stripped from it. I re-seat every pressed verse in its chain." The one-verse reading in that run was terra's, a judge's (Matthew 1:25 read apart from Matthew 1:24). Under the operator's rule of 23:19 CST 11-18, item 1 rests on his own order, not on a failed run; the card says so.
 - Marks in the next run: "GAP:" or "GAPS: NONE" lines in the Oracle's close; "RESTRICTION:" lines where an opponent restricts. Item 1 is NO PROBE: a restriction cannot be forced.
 
