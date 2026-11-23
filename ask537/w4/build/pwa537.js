@@ -21,3 +21,6 @@ const K='Luke 1:34';const S={CR1:'Matthew 1:18 "Now the birth" opening.',DR1:'',
 const before=api.pwAnswered(K,'DEFENDER',S);const S2={...S,CR4:'GAP: premise 2 "the question of Luke 1:34 is about the throne" -- Acts 1:8 -- UNANSWERED.'};const after=api.pwAnswered(K,'DEFENDER',S2);
 console.log('SYNTHETIC: '+K+' pressed in [DR2], not named later: answered '+before+'; after a [CR4] GAP line whose quoted words name '+K+': answered '+after);
 const S3={...S,CR4:'GAP: premise 2 "the question is about the throne" -- Acts 1:8 -- UNANSWERED.'};console.log('SYNTHETIC: same, GAP line without the reference in its quote: answered '+api.pwAnswered(K,'DEFENDER',S3));
+// rev 2 (W2 10655): the no-quote form naming a verse still unanswered against the defender in 41418.
+for(const k of unSt){const RX={...R0,CR4:R0.CR4+'\n\nGAP: premise 1 [CR3] -- '+k+' -- UNANSWERED.\n'};console.log('41418 W2 form: GAP line naming '+k+' (unanswered against the defender) in [CR4]: answered '+api.pwAnswered(k,'DEFENDER',RX));}
+{const RX={...R0,CR4:R0.CR4+'\n\nGAP: premise 1 [CR3] -- Luke 1:35 -- UNANSWERED.\n'};console.log('41418 W2 form, Oracle\'s own verse Luke 1:35: still unanswered '+[...pressedD].filter(k=>!api.pwAnswered(k,'DEFENDER',RX)).length+' (stored 4)');}
