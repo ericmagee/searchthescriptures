@@ -68,6 +68,16 @@ Changes since the earlier version of this file are marked "new" or "rerun".
 7. **Criterion 4.** psGrades: 91 is read only in wide mode, and the one-digit forms match the live Library (out_psg531.txt).
 8. **Criterion 5.** body531.py on the live fetch gives both targets byte for byte. All MAP entries compile (engine 49, child 47), and runcheck is OK.
 
+**Apply path, plan 3.3 last bullet** (W2 10632; synth531d.js, output out_synth531d.txt). This is the E-APPLY output: sbApply2024's result inside gateItems2024 at Gate Build, for chatgpt, with the Library instrumented in memory only.
+
+| case | S11 | applied CHALLENGER CONCEDED LINKS line | challenger_conceded_links | challenge_standing | result |
+|---|---|---|---|---|---|
+| A, count 91 | APPLIED | "CHALLENGER CONCEDED LINKS: 1 -- Premise 91: UNEXHIBITED ..." | 1 | PROP-DEPENDENT | UNDERDETERMINED (was CHALLENGER WINS) |
+| B, count premise 3, same fact | APPLIED | "CHALLENGER CONCEDED LINKS: 1 -- Premise 3: UNEXHIBITED ... ASSUMES: Mary is in David's line ..." | 1 | PROP-DEPENDENT | UNDERDETERMINED (was CHALLENGER WINS) |
+| C, count both | NOT APPLIED: the same fact is counted twice | the line stays at 0 | 0 | SELF-SUPPORTED | CHALLENGER WINS |
+
+The payload after Gate Record still reads 0 in A and B, because the replay serves the stored gate replies, which were written before any 531 change. At Gate Build, A and B each raise RESULT DIFFERS (E-APPLY): "the judge wrote RESULT: CHALLENGER WINS; the result derived from its corrected lines is UNDERDETERMINED". C raises no such item.
+
 ## D. Criterion 6 and the K-UNX rows
 
 **Gate path** (out_crit6_531.txt; synthetic CHANGE lines for Terra S11, 41418 under 524):
