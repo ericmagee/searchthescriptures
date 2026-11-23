@@ -54,5 +54,5 @@ out_first542.txt and out_kb542_first.txt differ only on 41418 sol62 (Panel Judge
 
 ## 6. NOTES
 
-- On first replies, 536 already removes sol62's three items, which were the known-bad case. 542 still exempts them on the stored text (kb542, rows 51202 and 51203).
+- CORRECTED (W1 Wall 10842): sol62's three [474-478] items, which 536 removes, are 536's known bad, not 542's. 542's known bad is sol (rows 51202 and 51203), and it still reproduces on first replies (out_first542.txt and out_kb542_first.txt) as well as on the stored text (kb542).
 - Any write before 542 moves the base again, and the re-cut must then be run again.
