@@ -1,4 +1,4 @@
-# CORPUS PLAN rev 3a (W3; W2 10612: the paralambano gloss replaced by its KJV renderings): the operator's reading of Matthew 1:18-25, and the opening sequence, into the corpus. For W1 and W2 to review. Nothing is written until the operator presses W3's card. Rev 2: adds section 1a (fit to the corpus, per the operator 09:13 CST: "these are feedback .. let me know if it doesn't fit the corpus"), and foots "publicly" on Matthew 1:19. It replaces rev 1 (md5 248ee8f3). Rev 3 takes in W1 10609 (1: the "cohabit (conjugally)" gloss is dropped for the KJV renderings of G4905; 2: step 1 and the conclusion state the household union, the taking and the knowing in the operator's 09:07 words, with the three words that name them; 3: Genesis 4:1 and 1 Samuel 1:19 are added to L1 and step 2; 4: [L4] labels on open1822 steps 2 and 5) and W2 10610 (Mark 7:8 labelled [L3] application in both texts).
+# CORPUS PLAN rev 3b (W3; W2 10612: the paralambano gloss; W1 10615: open1822 step 3 keeps the coming together and the taking distinct): the operator's reading of Matthew 1:18-25, and the opening sequence, into the corpus. For W1 and W2 to review. Nothing is written until the operator presses W3's card. Rev 2: adds section 1a (fit to the corpus, per the operator 09:13 CST: "these are feedback .. let me know if it doesn't fit the corpus"), and foots "publicly" on Matthew 1:19. It replaces rev 1 (md5 248ee8f3). Rev 3 takes in W1 10609 (1: the "cohabit (conjugally)" gloss is dropped for the KJV renderings of G4905; 2: step 1 and the conclusion state the household union, the taking and the knowing in the operator's 09:07 words, with the three words that name them; 3: Genesis 4:1 and 1 Samuel 1:19 are added to L1 and step 2; 4: [L4] labels on open1822 steps 2 and 5) and W2 10610 (Mark 7:8 labelled [L3] application in both texts).
 
 ## 1. The operator's text, verbatim
 A. 09:07 CST 11-23: "Matthew already calls Joseph and Mary husband and wife. The pregnancy became known before they "came together," meaning before their ceremonial or household union. Joseph's concern was the public scandal created by their private marital relations becoming visible before that public union. Therefore, being unwilling to make Mary a public example, he considered putting her away privately to shield her. The angel's "fear not to take unto thee Mary thy wife" answers that fear and directs him to proceed with taking her publicly into his household. After doing so, Joseph "knew her not" until the birth. Thus, "came together," "took unto him his wife," and "knew her" describe distinct events in the narrative. Mark 7:8 supplies the distinction between the social tradition producing the scandal and the commandment of God."
@@ -24,7 +24,7 @@ How the defender is served, read this turn:
 
 Part 1, the layered reading (A): appended to Sight 266 (kb_sights id 374, "Matthew 1:19 - Joseph Just and Not Willing to Make Her a Publick Example"). That sight already holds Mark 7:8 and "her husband" / "thy wife", and S-1822 already points to it for Joseph's grounds ("His grounds are held in Sight 266"). Block: block266.txt, 4,890 characters, md5 b6a9fff2.
 
-Part 2, the opening sequence (B): put before the first line of Sight 1822 (kb_sights id 2028). That sight is the only served sight that tells the defender what to say and in what order ("IN DEBATE, SAY: ... in this order"). The new paragraph comes before that head and is told to open round 1. The IN DEBATE items keep their numbers, because the sight refers to "Item (4) of the IN DEBATE head". Paragraph: open1822.txt, 1,743 characters, md5 7e960d4c.
+Part 2, the opening sequence (B): put before the first line of Sight 1822 (kb_sights id 2028). That sight is the only served sight that tells the defender what to say and in what order ("IN DEBATE, SAY: ... in this order"). The new paragraph comes before that head and is told to open round 1. The IN DEBATE items keep their numbers, because the sight refers to "Item (4) of the IN DEBATE head". Paragraph: open1822.txt, 1,808 characters, md5 80dd25ec.
 
 Each notes field gets one dated line (note266.txt, 199 characters, 7c69e74c; note1822.txt, 279 characters, 881283fa).
 
@@ -60,7 +60,7 @@ If either row has moved, the block raises and nothing is written.
 
 Expected lengths after the write:
 - S-266: summary 1,559 + 4,890 = 6,449; notes 490 + 199 = 689.
-- S-1822: summary 32,358 + 1,743 = 34,101; notes 10,586 + 279 = 10,865.
+- S-1822: summary 32,358 + 1,808 = 34,166; notes 10,586 + 279 = 10,865.
 
 Triggers read on kb_sights:
 - title, status and layer_status do not change, so the title, layer and conclusion-flag triggers do nothing.
