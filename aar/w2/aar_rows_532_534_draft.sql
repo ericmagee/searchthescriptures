@@ -12,7 +12,7 @@
 --   is entered as verdict_norm FAIL, the grader's words kept. That covers 532 plan rev 0 (10600), the 532 build first cut (10790)
 --   and 534 plan rev 0 (10746).
 -- ASK 534 is NOT YET BUILD-GRADED: W4 posted the build at Wall 10794 for W3's grade. Its build files and revert carry W4's md5s;
---   the build grades are FILL AT GRADE.
+--   W3 passed it at Wall 10798 (rev 2).
 
 -- rev 2a: W1 10801 nit, the 534 revert note cites 10798.
 -- rev 2: W3's 534 build PASS (10798) entered in grades; status 'graded'.
@@ -49,7 +49,7 @@ SET LOCAL truth.session_id = 'session_01H1X3AP5EHdGd7g1pX4oPuw';
 INSERT INTO public.ask_aar_snapshots (ask, rev, title, objective, objective_met, objective_met_reason, objective_source, written_by, prior_row, operator_words, card, owner_seat, plan, build_files, revert, grades, md5_written, audit_ids, objects, tests, readbacks, run_evidence, manuals, status, sources) VALUES
 (534, 'A1', $t$K-SU reads a verse a deciding line quotes together with the rest of its KJV sentence (pkgSUX)$t$,
  $t$A judge's deciding line (KEYSTONE, RESULT, WHICH HOLDS, ANSWER CHECK, or a collision line graded LINK BROKEN) sometimes reads one verse apart from the KJV sentence it belongs to while the rounds read them together; in run 41418 every judge read Matthew 1:25 apart from Matthew 1:24. K-SU now reads every verse a deciding line names and fires when any round of either side names another verse of the same sentence; CHANGE 3a limits the width (a sentence more than two verses wider than the rounds' span is skipped). K-SU stays TRIAL and list only (ruling 428). Expected: in 41418 each of the three judgments gets one K-SU item for "Matthew 1:25 within Matthew 1:24-25". (ask534/w2/plan534.md rev 2)$t$,
- 'not yet', $t$not yet. FILL AT WRITE: written <time> CST on the operator's card (W4's thread; audit <id>): engine daf5da98 to <version>, child 10624dd2 to <version>, Shared Library index 2277 only, Library 24edd0ace4e7a5aa if written on daf5da98. Read back by <seat> at Wall <id>. Offline: W4's step 2 rerun (10789) gives 72 items over nine runs, every count equal to plan section 3b, item by item equal to out_limit534.txt (W2 check 10790); the three 41418 known-bad items stand. Build grade FILL AT GRADE. Not yet shown by a run.$t$,
+ 'not yet', $t$not yet. FILL AT WRITE: written <time> CST on the operator's card (W4's thread; audit <id>): engine daf5da98 to <version>, child 10624dd2 to <version>, Shared Library index 2277 only, Library 24edd0ace4e7a5aa if written on daf5da98. Read back by <seat> at Wall <id>. Offline: W4's step 2 rerun (10789) gives 72 items over nine runs, every count equal to plan section 3b, item by item equal to out_limit534.txt (W2 check 10790); the three 41418 known-bad items stand. Build grade: W3 PASS at Wall 10798. Not yet shown by a run.$t$,
  '10589, 10590, 10593, 10596, 10691, 10742, 10746, 10751, 10752, 10782, 10783', 'session_01H1X3AP5EHdGd7g1pX4oPuw', NULL,
  $t$"not yet"$t$::jsonb,
  $t${"answer": "not yet", "thread": "W4", "press_time": "not yet", "source": "not yet"}$t$::jsonb, 'W2',
