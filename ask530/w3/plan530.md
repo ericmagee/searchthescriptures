@@ -1,6 +1,6 @@
-# ASK 530 PLAN rev 2 (W3, seat 33): the enforcer reads whether a deciding step weighs the answer it quotes, under RULE ONE VERSE
+# ASK 530 PLAN rev 3 (W3, seat 33): the enforcer reads whether a deciding step weighs the answer it quotes, under RULE ONE VERSE
 
-Authority: ASK 530 (operator yes; re-aimed at Wall 10633 to deciding steps that do not engage the MEETS-quoted answer). Route confirmed: an enforcer reading as a record-only TRIAL (W2 10634, W1 10636). Folded in at the coordinator's word (16:00 Z, 11-23): the enforcer's application of RULE ONE VERSE, with run 41418 as the evidence (W1's finding); the operator approved the team's findings at 09:59 CST. Rev 2 answers W2's FAIL at Wall 10663: the child workflow is in scope. Base moved: engine 9240349c and child 334f0518 (both written 16:01 Z, 11-23); lines 3058 and 3193 are unchanged, and the two Library copies are equal. This plan authorizes nothing.
+Authority: ASK 530 (operator yes; re-aimed at Wall 10633 to deciding steps that do not engage the MEETS-quoted answer). Route confirmed: an enforcer reading as a record-only TRIAL (W2 10634, W1 10636). Folded in at the coordinator's word (16:00 Z, 11-23): the enforcer's application of RULE ONE VERSE, with run 41418 as the evidence (W1's finding); the operator approved the team's findings at 09:59 CST. Rev 2 answered W2's FAIL at Wall 10663 by putting the child in scope. Rev 3 rests THE ANSWER'S ROWS on a free dry run of the block finder against W1's set (Wall 10666); see section 7. Base moved: engine 9240349c and child 334f0518 (both written 16:01 Z, 11-23); lines 3058 and 3193 are unchanged, and the two Library copies are equal. This plan authorizes nothing.
 
 ## 1. OBJECTIVE
 A collision line whose deciding step reads one verse or passage alone, and leaves unweighed the rows that the answer it quotes laid on the same point, is found by the enforcer and recorded. Today RULE ONE VERSE (Library line 3193) says such a line "is not right", but the E-COL item does not give the enforcer the answer's rows, so the rule cannot reach them ("Rows the item does not give you, you do not supply").
@@ -36,12 +36,16 @@ IN SCOPE (nodes): Shared Library line 3058 (the E-COL item text), in the engine 
 FOUND, NOT IN SCOPE: E-KEY (row 51355) follows the collision grades and needs no change of its own; the enforced E-COL AGREE/DISAGREE is unchanged (ruling 428); the judges' prompts are unchanged (ruling 383).
 
 ## 4. CHANGES
-1. THE ANSWER'S ROWS (line 3058): for an E-COL item whose line has "MEETS: [<round>]" (or "ANSWER [<round>]"), add the answering side's block for the line's link in that round: from the link's head ("D5:" or "LINK 5") to the next link head, its [L1] and [L3] lines only, cut to 1,500 characters. It is headed "THE ANSWER'S ROWS, FROM [<round>] (the rows the answering side laid for <link> in the round THE LINE quotes; for the TRIAL question only)". If no block is found, the block is left out, and the TRIAL row says NO BLOCK.
+1. THE ANSWER'S ROWS (line 3058), rev 3. Two parts, joined in this order and cut to 4,000 characters:
+   a. THE QUOTED ANSWER: the block of the round named by MEETS (or ANSWER) that holds the quoted words. It runs from the last head line at or before the quote to the next head line. A head line is a line starting with "**", "#", "D<n>:", "LINK <n>", "ANSWER:" or "<n>. ".
+   b. THE SIDE'S OTHER ROWS FOR THE LINK in that round: the "D<n>:" or "LINK <n>" head block for the line's link, and every "ANSWER: <ref> -- D<n> --" line.
+   Its heading reads "THE ANSWER'S ROWS, FROM [<round>] (the quoted answer, then the answering side's other rows for <link> in that round; for the TRIAL question only)". If neither part is found, the block is left out and the TRIAL row says NO BLOCK.
+   Why both parts (dry run, section 7): on 41418, terra's quoted answer is "ANSWER: Matthew 1:25 -- D5 --", and its own rows are Matthew 1:19, 1:20 and 1:25, without Matthew 1:24. Matthew 1:24 is in the same side's "ANSWER: Matthew 1:18 -- D5 --" for the same link. RULE ONE VERSE counts "the rows on the same point that either side laid in the record". Part a alone would give terra's line ENGAGE: YES on Matthew 1:25, so the known bad case would fail. Some rounds have no link heads (for example c70883f8's [CR2], answered by pressed verse), so part b alone would leave some lines with nothing.
 2. THE TRIAL QUESTION, added to the E-COL item when the block is present:
    "TRIAL QUESTION (ASK 530, record-only; it does not change your AGREE or DISAGREE): under RULE ONE VERSE, read THE LINE's DECIDES step, or its WHY IT FAILS when it has no DECIDES, against THE ANSWER'S ROWS. Write one line. ENGAGE: YES -- \"<a row of THE ANSWER'S ROWS that the step weighs, quoted>\" when the step weighs a row the answer laid on its point. ENGAGE: NO -- <the verse or passage the step reads alone> -- \"<one row of THE ANSWER'S ROWS on the same point that the step leaves unweighed, quoted verbatim>\" when it does not."
 3. CODE CHECK of the reply (condition 1 of W2 10634): the quoted row must occur verbatim in THE ANSWER'S ROWS, and for ENGAGE: NO the verse named must be in THE LINE's GROUND or FROM. A failed check is recorded as NO READ, never as YES or NO.
 4. RECORD: one enforcer_log row per E-COL item and seat, rule E-ONE, kind enforcer_check, cure_reason "TRIAL (record-only, ASK 530): ENGAGE YES|NO|NO READ|NO BLOCK -- <reply>". No send-back, no count, no audit flag.
-Prompt size: the block is at most 1,500 characters per item; the question text is 530 characters per item. On 41418 W4 states the total enforcer prompt before and after (condition 3 of 10634).
+Prompt size: the block is at most 4,000 characters per item; the question text is 530 characters per item. On 41418 W4 states the total enforcer prompt before and after (condition 3 of 10634).
 
 ## 5. CRITERIA and DONE
 1. Only line 3058 and the named reply parser and writer change, in the engine and the child alike. Every other node and every other Library line is byte-equal to live. After the write, the engine's and the child's Libraries are equal to each other (same hash), as they are now, and the child's Library Check (ASK 422a) passes. It checks the MAP hash too, so any new MAP key goes into both copies (W2 10672).
@@ -63,6 +67,12 @@ DONE: criteria 1 to 6 on the build; the measurement in section 7 meets its stop 
 - 41418 rows 51332, 51333 and 51355, as quoted in section 3. The enforcer applied RULE ONE VERSE without the answer's rows.
 - Measurement: an enforcer replay on 41418's stored judgments (the D5 lines, W1's known-good lines and every other E-COL item) is a paid call. It needs the operator's release on a card (W1 10636). No replay runs before that.
 - Marks in the next live run: E-ONE rows in debate_enforcer_log with TRIAL cure_reason; the item text carries THE ANSWER'S ROWS.
+
+- DRY RUN OF THE BLOCK FINDER (SQL over the stored rounds, no model call, 11-23 10:15 CST), on W1's 12 known-good lines and the 4 known-bad lines from dec530.json:
+  a. Part a alone (the quoted answer's block): it is found for all 16. For the known bad, terra #107 and #108 get Matthew 1:19, 1:20 and 1:25, without Matthew 1:24. Qwen #118 gets Matthew 1:18, 1:24 and 1:25, and qwen #119 gets the same block as terra.
+  b. Part b (the link's rows): for 41418 D5 it gives 9 lines and 3,083 characters, with Matthew 1:24 in 3 lines. #4 (c70883f8 [CR2]) gets none, because that round has no link heads, so part a carries it. #13 gets only the head (164 characters), and part a carries Matthew 1:24.
+  c. Sizes: the part b blocks run from 164 to 6,416 characters, hence the 4,000-character cut with part a first.
+  d. W1's #20 and #53 are WHICH HOLDS lines, not collision lines, so no E-COL item carries them. The known-good set needs 2 collision lines in their place. W1 picks them before any measurement.
 
 ## 8. INPUTS IN GIT
 - ask530/w3/live/lib_3058.txt (cb6cc6a2), lib_3083.txt (f47fed05), lib_3193.txt (f9e90f87): the Library lines as read from 48513907, byte-equal in engine 9240349c and child 334f0518.
