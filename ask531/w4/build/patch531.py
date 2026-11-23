@@ -6,6 +6,9 @@
 #   The child's Assume Check Record is a pass-through of the engine's (Alternate Pass In), so it needs no change.
 # CHANGE 2 Send Back Build (and Alt, R2 Alt): E-ASSUME items from acx.facts for each seat (alternates by their own CONCEDED LINKS line), with the rule text.
 # CHANGE 3 Send Back Record (and Alt, R2 Alt): cure reading acx531Cure; uncured -> ACXM, counted in drv_uncured with AUDIT v65; sb_items carry acx.
+# CHANGE 5 (plan rev 1b fe10fbed) gate K-UNX: (a) the RANGE check (pkgBFX) passes a challenger premise 91+ that is an acx round 2 charge (acx531R2Charge);
+#   (b) pkgBKC also takes a both_not_stated fact of the same side under another number that the same-fact test ties to the ASSUMES clause; its word test still applies.
+#   ACX_FN goes into every node that holds bkcKeep2024.
 # CHANGE 4 apply path (sbApply2024, in the gate and merge nodes): an E-ASSUME change is refused (pkgPS) when it regrades other premises, moves side, or counts
 #   the same fact twice. psGrades(l,wide) reads 91 and up when wide is set; with no second argument it reads as today.
 import json,sys,hashlib,re
@@ -34,6 +37,7 @@ ACX_FN=("function acx531Norm(s){/* ASK 531 (pkgACX, W4): lower case, a possessiv
  "  if(f.r2){const r=acx531R2(raw,f.side,f.n,f.fact);if(r.grade!=='SPARED')continue;}else{const r=L?L.r:null;const g=r?((f.n in r.g)?r.g[f.n]:(!Object.keys(r.g).length&&r.n===0?'SPARED':null)):null;if(g!=='SPARED')continue;}\n"
  "  out.push({side:f.side,n:f.n,k:f.k||1,fact:f.fact,r2:!!f.r2,line:L?L.line:''});}return out;}\n"
  "function acx531Acx(){try{const a=$('Assume Check Record');if(!a||!a.isExecuted)return null;return (a.first().json||{}).acx||null;}catch(e){return null;}}\n"
+ "function acx531R2Charge(side,j){/* ASK 531 change 5a (pkgACX): a challenger premise 91 and up that is a round 2 charge both readers find NOT STATED */if(side!=='CHALLENGER'||!(+j>=91))return false;const a=acx531Acx();return !!(a&&Array.isArray(a.facts)&&a.facts.some(f=>f&&f.r2&&f.both_not_stated&&f.side===side&&+f.n===+j));}\n"
  "function acx531Cure(it,a){/* ASK 531 (pkgACX) cure reading */const x=it.acx||{};const sd=String(x.side||'').toLowerCase();const R=(c,w)=>({status:c?'CURED':'UNCURED',why:w+' (pkgACX, ASK 531)'});\n"
  " if(!a||a.ans==='NO ANSWER')return R(false,'no answer to the send-back');\n"
  " if(a.ans==='KEEP'){const ac=acx531Acx();const vq=ac&&ac.vq&&Array.isArray(ac.vq[x.side])?ac.vq[x.side]:[];const V=' '+vq.map(acx531Norm).join(' | ')+' ';\n"
@@ -62,6 +66,8 @@ CNT_LOOP=(" for(const [seat,its] of Object.entries(ACXM)){const i=bodies.findInd
  "  p.drv_uncured=(p.drv_uncured||0)+its.length;anySil=true;acx_counted.push({seat,items:its});\n"
  "  p.verdict_raw=p.verdict_raw+'\\n[AUDIT v65: ASSUMPTION UNCURED (pkgACX, ASK 531) -- SEAT: '+seat+'; ITEMS: '+its.join('; ')+'; counted in drv_uncured. REVIEW THIS ROW.]';bodies[i]=JSON.stringify(bb);}}")
 REP=[ # (old, new) on Library lines; each old occurs once in the Library
+ ("let F=[];try{const a=$('Assume Check Record');if(a&&a.isExecuted)F=(((a.first().json||{}).acx||{}).facts||[]).filter(f=>f&&f.both_not_stated&&f.side===side&&+f.n===+j);}catch(e){F=[];}if(!F.length)return ua; const cl=(all||[]).map(z=>[...String(z.seg||'').matchAll(/\\bASSUMES\\b\\s*:?\\s*([^]*?)(?=\\s+(?:--|—|–)\\s+|\\bROWS\\s+GIVE\\b|$)/gi)].map(m=>m[1]).join(' ')).join(' ');if(!cl.trim())return ua;","let F=[],FA=[];try{const a=$('Assume Check Record');if(a&&a.isExecuted){FA=(((a.first().json||{}).acx||{}).facts||[]).filter(f=>f&&f.both_not_stated&&f.side===side);F=FA.filter(f=>+f.n===+j);}}catch(e){F=[];FA=[];}if(!F.length&&!FA.length)return ua; const cl=(all||[]).map(z=>[...String(z.seg||'').matchAll(/\\bASSUMES\\b\\s*:?\\s*([^]*?)(?=\\s+(?:--|—|–)\\s+|\\bROWS\\s+GIVE\\b|$)/gi)].map(m=>m[1]).join(' ')).join(' ');if(!cl.trim())return ua; if(typeof acx531Same==='function')F=F.concat(FA.filter(f=>+f.n!==+j&&acx531Same(f.fact,cl))); /* ASK 531 change 5b (pkgACX): a fact under another number that the same-fact test ties to this ASSUMES clause; the word test below still applies */if(!F.length)return ua;"),
+ ("if(mx&&j>mx){const id=side+' premise '+j;","if(mx&&j>mx){if(typeof acx531R2Charge==='function'&&acx531R2Charge(side,j))continue; /* ASK 531 change 5a (pkgACX): a round 2 charge numbered 91 and up is in the list */const id=side+' premise '+j;"),
  ("function psGrades(l){const g={};","function psGrades(l,wide){const g={};"),
  ("for(const n of (c.match(/\\b\\d\\b/g)||[]).map(Number))if(n>0&&!(n in g))g[n]=G;}","for(const n of (c.match(wide?/\\b(?:\\d|9\\d)\\b/g:/\\b\\d\\b/g)||[]).map(Number))if(n>0&&!(n in g))g[n]=G;}"),
  ("const __psg=x.rule==='E-GATE'&&x.psrc?","if(x.rule==='E-ASSUME'&&x.acx&&typeof acx531Apply==='function'){const __ar=acx531Apply(x,to,map.has(o)?map.get(o).to:o);if(__ar){items.push({sid:x.sid,kind:'NOT APPLIED',why:__ar,to,lines:[o]});continue;}} /* ASK 531 (pkgACX) */const __psg=x.rule==='E-GATE'&&x.psrc?"),
@@ -97,6 +103,7 @@ def has(p,i): return any((isinstance(e,int) and e==i) or (isinstance(e,list) and
 def build_lib(t):
     a,b,c,e,L,M=libparts(t);changed=[]
     iApply=one(L,"const __psg=x.rule==='E-GATE'&&x.psrc?")
+    iBkc=one(L,'function bkcKeep2024(')
     for o,n in REP: i=one(L,o);L[i]=L[i].replace(o,n);changed.append(i)
     i=one(L,IMPM2);L[i]=L[i].replace(IMPM2,IMPM2+ACXM_ST);changed.append(i)
     i=one(L,IMPR_END);assert L[i].rstrip().endswith(';'),L[i][-80:];L[i]=L[i]+'\n'+ACX_R;changed.append(i)
@@ -104,7 +111,7 @@ def build_lib(t):
     # the functions go first in every node that holds the apply path, the send-back build or the send-back record
     for k in M:
         p=M[k]['p']
-        if has(p,iApply) or k in ('Send Back Build','Alt Send Back Build','R2 Alt Send Back Build') or k in [s for s,_ in SB]: p.insert(0,nF)
+        if has(p,iApply) or has(p,iBkc) or k in ('Send Back Build','Alt Send Back Build','R2 Alt Send Back Build') or k in [s for s,_ in SB]: p.insert(0,nF)
     # send-back build: the E-ASSUME block last, just before the items are grouped by seat (const MAX=60), so every earlier item keeps its number
     iMax=one(L,"const MAX=60;const bySeat=new Map();");assert iMax==2923 and L[2922].rstrip().endswith(';'),L[2922][-40:]
     for k,alt in (('Send Back Build',False),('Alt Send Back Build',True),('R2 Alt Send Back Build',True)):

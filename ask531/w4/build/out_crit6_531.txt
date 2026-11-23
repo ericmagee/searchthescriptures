@@ -1,0 +1,12 @@
+| n 4
+PASS R1 RANGE known good: premise 91 counted, acx round 2 fact 91 exists 
+RULE K-UNX K re-read CHALLENGER premise 92: counted UNEXHIBITED in CHALLENGER CONCEDED LINKS as premise 92, but the list  
+| n 5
+PASS R2 RANGE known bad: premise 92 counted, no acx fact 92 
+RULE K-UNX K re-read CHALLENGER premise 7: counted UNEXHIBITED in CHALLENGER CONCEDED LINKS as premise 7, but the list ag 
+| n 5
+PASS R3 RANGE known bad: premise 7 against a list of 1 to 6 
+| n 4
+PASS K1 pkgBKC known good: premise 3 on ASSUMES Mary is in David's line 
+| n 4
+PASS K2 pkgBKC known bad: premise 3 on an ASSUMES sharing under 2 content words with any acx fact 

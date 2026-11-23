@@ -1,0 +1,8 @@
+PASS K1 known good | same-fact test true | word test true (shared mary,david,line) | K-UNX exempt
+PASS K2 known bad (under 2 shared content words) | same-fact test false | word test false (shared ) | K-UNX flagged
+PASS K3 sol62 41418 premise 3 text | same-fact test true | word test true (shared david,line) | K-UNX exempt
+PASS K4 names only (same-fact passes on Mary+David, word test needs a word not a name) | same-fact test true | word test false (shared mary,david) | K-UNX flagged
+PASS RANGE acx531R2Charge CHALLENGER 91 -> true (true = not flagged by RANGE)
+PASS RANGE acx531R2Charge CHALLENGER 92 -> false (true = not flagged by RANGE)
+PASS RANGE acx531R2Charge CHALLENGER 7 -> false (true = not flagged by RANGE)
+PASS RANGE acx531R2Charge DEFENDER 91 -> false

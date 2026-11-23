@@ -11,7 +11,7 @@ for pair in "moMxiV4Irg1uRBZN:$EV:engine" "MqQHRl7mQQ0z8QdT:$CV:child"; do
  [ "$cur" = "$V" ] || { echo "MOVED before any PUT: $W $cur"; exit 1; }
  python3 -c 'import json,sys;d=json.load(open(sys.argv[1]));json.dump({k:d[k] for k in ["name","nodes","connections","settings"]},open(sys.argv[2],"w"),ensure_ascii=False)' "prewrite_$K.json" "revert_$K.json"
 done
-[ "$(md5sum ../build/patch531.py | cut -c1-8)" = "d90e4cb7" ] || { echo "patch531.py is not the graded d90e4cb7; stop before any PUT"; exit 1; }
+[ "$(md5sum ../build/patch531.py | cut -c1-8)" = "d73ad624" ] || { echo "patch531.py is not the graded d73ad624; stop before any PUT"; exit 1; }
 [ "$(md5sum body531.py | cut -c1-8)" = "bcca8552" ] || { echo "body531.py is not bcca8552; stop before any PUT"; exit 1; }
 python3 body531.py prewrite_engine.json prewrite_child.json put_engine.json put_child.json
 for pair in "moMxiV4Irg1uRBZN:engine" "MqQHRl7mQQ0z8QdT:child"; do
