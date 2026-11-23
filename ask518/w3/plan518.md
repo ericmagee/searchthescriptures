@@ -1,8 +1,8 @@
-# ASK 518 plan (W3, seat 33), rev 5, 2026-11-23. Replaces rev 4 (01fc9e6a, kept as plan518_rev4.md) on W1's answer (Wall 10448): the 41102 body is the CHALLENGER one; a stable control (41024 CHALLENGER) is added; the known items' log confirmation is stated. Rev 4 replaced rev 3 (e1198a58, kept as plan518_rev3.md) after the test calls (W2 readback, Wall 10443): C1 passed; C2 failed (41117 NEW CHALLENGER LINK 6 was confirmed in 0 of 3 runs); C3 lost 41102 NEW LINK 1 and LINK 2; no baseline calls were made, so the cause is not known. Changed: S1 (narrowed), CRITERIA (C0 baseline added; C2 and C3 read against it), cost, STEPS. Rev 3 replaced rev 2 on W2's C-b (Wall 10402); rev 2 replaced rev 1 on W1's two points. A PLAN ONLY; nothing is written.
+# ASK 518 plan (W3, seat 33), rev 6, 2026-11-23. Replaces rev 5 (aa33ede2, kept as plan518_rev5.md) on W2's C-h and C-i (Wall 10451): S1 names the text the quoted words are checked against and requires the whole quotation; OBJECTIVE narrowed to S1; step 2a and the release card fixed. Rev 5 replaced rev 4 (01fc9e6a) on W1's answer (Wall 10448). Rev 4 replaced rev 3 (e1198a58) after the test calls (W2 readback, Wall 10443). A PLAN ONLY; nothing is written.
 Source: the operator's "Four Remaining Bugs in the Run (4) Debug Log", Bug 2 (13:10 CST 11-20, W4 thread), released by his "yes" at 02:02 CST 11-23 (Wall 10381). Run (4) is 41117. The basis for that is in the ASK 517 plan (Wall 10389).
 
 ## 1. OBJECTIVE
-A closing sentence whose only fault is a wrong or grouped verse reference is not confirmed as a closing contradiction. The test is general: if the sentence's point, read with that reference set aside, agrees with the earlier sentence, it is not a contradiction. A closing sentence whose point conflicts with an earlier one is confirmed as today.
+A closing sentence that differs from an earlier sentence only by an added reference is not confirmed as a closing contradiction. "Added reference" means one thing only: the sentence quotes words, the whole quotation stands in one verse it cites, as the rounds quote that verse, and another verse cited with it does not hold the whole quotation (S1). If the sentence, read with that added reference removed, agrees with the earlier sentence, it is not a contradiction. Any other fault of reference, and any closing sentence whose words or point conflict with an earlier one, is confirmed as today.
 The operator, on 41117: the close "compressed two naming verses into one sentence ... carelessly grouping Luke 1:13 ... That is a citation-grouping slip ... not a substantive contradiction".
 The operator also ruled at 11:37 CST 11-20: "none of our fixes are for single case instances ... that the equivalent to hard coding." So the rule names no verse, topic or debate.
 Expected effect: on 41117, J1 and J2 (CHALLENGER LINK 1) are answered NOT A CONTRADICTION by both checks. LINK 1 is then not broken by the engine, and the "confirmed closing contradiction" reason for 41117's outcome falls away on that link.
@@ -34,9 +34,10 @@ HITS:
 - Child workflow, SX4ZWtgHNs96uBOo and c7366RPLb8vdMQg6: no hit.
 
 CHANGE:
-- S1 (rev 4, narrowed). In both PROMPTs, that sentence ends instead: "...; differs only in wording; or differs only by an added reference: the closing sentence quotes words, those words stand in one verse it cites, and another verse cited with it does not hold them. Read such a sentence with the added reference removed; if it then agrees with the earlier sentence, it is not a contradiction. A sentence whose own words or point cannot be true with the earlier sentence is still a contradiction, whatever its references."
-  - Why narrowed: rev 3's wording ("a verse whose words ... do not give that point") asks the enforcer to weigh what a verse gives. That may clear a contradiction by meaning, not by reference. Rev 4 clears only a sentence whose QUOTED WORDS are found in one cited verse and not in another cited beside it. On 41117 J1 and J2, "thou shalt call his name JESUS" stands in Matthew 1:21 and not in Luke 1:13. The rule names no verse, topic or debate.
-  - Rev 3's wording is kept in plan518_rev3.md. Its test replies are the record of rev 3, not of rev 4.
+- S1 (rev 6). In both PROMPTs, that sentence ends instead: "...; differs only in wording; or differs only by an added reference: the closing sentence quotes words, the whole quotation stands, word for word, in one verse it cites as the rounds of this debate quote that verse, and another verse cited with it, as the rounds quote it, does not hold the whole quotation. Read such a sentence with that added reference removed; if it then agrees with the earlier sentence, it is not a contradiction. A sentence whose own words or point cannot be true with the earlier sentence is still a contradiction, whatever its references. Check the quotation only against the verse text the rounds quote, never against your own reading or memory of a verse."
+  - The text checked against (W2 C-h): the verse as the rounds of this debate quote it. The enforcer's prompt already carries the rounds in full (516b). The check uses no outside text.
+  - Whole quotation (W2 C-h): a part of the quotation found in both verses does not count. On 41117 J1 and J2, the quotation is "thou shalt call his name JESUS". Luke 1:13 also has "thou shalt call his name", but the whole quotation, with JESUS, stands in Matthew 1:21 only.
+  - Rev 3's wording is kept in plan518_rev3.md. Its test replies are the record of rev 3, not of this rev.
 - S2. Engine manual: the E-CLOSECON entry gains the same case. This is W3's entry, with its own read and card.
 - Not changed:
   - The two-confirmation rule (pkgJC2).
@@ -59,13 +60,13 @@ CHANGE:
 - C4: the only node parameters that change are the two PROMPT sentences. The library, other nodes and connections are unchanged.
 - C5: one live run on the operator's word. Every CONFIRMED closing contradiction in it has a point that conflicts, not only a reference.
 - DONE: C1 to C5 pass, and the manual entry is written and read back.
-- Cost and route: C0 is 4 bodies x 2 copies x 3 runs = 24 calls. C1 and C2 under the new sentence are the same 4 bodies again, another 24 calls. That is 48 paid calls to the enforcer model (the ENFORCER row of model_config, openai/gpt-6-luna in rev 3's calls). They wait on a NEW release by the operator, asked on a card in W4's thread after this rev is graded. The card says that rev 3's 30 calls were made and failed C2, and that this rev adds a baseline. The calls go only through W4's probe path, as in rev 3. No seat reads a key value. W1 builds the bodies offline; W4 makes the calls and commits the replies; W1 classes them; one non-builder seat reads them back. Nothing is written to the engine.
+- Cost and route: C0 is 4 bodies x 2 copies x 3 runs = 24 calls. C1 and C2 under the new sentence are the same 4 bodies again, another 24 calls. That is 48 paid calls to the enforcer model (the ENFORCER row of model_config, openai/gpt-6-luna in rev 3's calls). They wait on a NEW release by the operator, asked on a card in W4's thread after this rev is graded. The card says three things: rev 3's 30 calls were made and failed C2; the C2 item, 41117 NEW CHALLENGER LINK 6, was confirmed by only 1 of 2 copies in the original run, so it was never a fully confirmed contradiction (W2 10449); and this rev adds a baseline and a stable control. The calls go only through W4's probe path, as in rev 3. No seat reads a key value. W1 builds the bodies offline; W4 makes the calls and commits the replies; W1 classes them; one non-builder seat reads them back. Nothing is written to the engine.
 
 ## 5. WRONG-IF
 This plan is wrong if the new sentence clears a closing sentence whose words or point conflict with the earlier one.
 - Known-bad (must stay CONFIRMED wherever the baseline confirms it 3 of 3): 41024 NEW LINK 6 (the control); 41117 NEW CHALLENGER LINK 6; 41102 NEW LINK 1 and LINK 2.
 - Known-good (must turn): 41117 J1 and J2.
-If C2 fails under rev 4, a prompt sentence does not carry the rule. The plan is then revised to a code test, not shipped. The test would check the closing sentence's quoted words against the rounds' own rows for each verse it cites, and drop only the cited verse that does not hold them. That code test is not built under this rev.
+If C2 fails under this rev, a prompt sentence does not carry the rule. The plan is then revised to a code test, not shipped. The test would check the closing sentence's quoted words against the rounds' own rows for each verse it cites, and drop only the cited verse that does not hold them. That code test is not built under this rev.
 If C0 shows that the known items are not stable at baseline (fewer than 3 of 3), the build post says so. The operator is then asked whether 518 continues, because two-copy confirmation cannot test the change on those items.
 
 ## 6. RUN EVIDENCE
@@ -77,7 +78,7 @@ This plan's commit is on the Wall post. W1 commits the built bodies, the replay 
 ## 8. STEPS
 1. One non-builder seat grades this rev. Waits on: nothing.
 2. W1 builds S1 offline on the 517 engine (the write order is 517 first: W2 10441 limit c), prepares the C0 to C2 inputs, and checks C4. Waits on: step 1.
-2a. W1 builds the bodies (4 old, 4 new, each for both copies). W4 posts the release card for 48 calls in W4's thread. Waits on: step 1 (grade of rev 4).
+2a. W1 builds the bodies (4 old, 4 new, each for both copies). W4 posts the release card for 48 calls in W4's thread. Waits on: step 1 (grade of this rev).
 2b. W4 makes the calls through the rev 3 probe path and commits the replies. W1 classes them, and one non-builder seat reads them back. Waits on: the operator's press on 2a.
 3. Grades of the build. Waits on: step 2.
 4. W4 writes on the operator's card in W4's thread. Waits on: step 3.
