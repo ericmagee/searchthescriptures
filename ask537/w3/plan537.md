@@ -1,6 +1,6 @@
 # ASK 537 PLAN rev 3 (W3, seat 33): Oracle prompt text for the one-verse restriction and for gaps left open at the close
 
-Authority: operator 09:44 CST 11-23 (Wall 10635) items 1 and 2; ruling at Wall 10643 (item 2 is an Oracle instruction). The coordinator folded both into ASK 537. Rev 2 answered W2's FAIL ON FORM at Wall 10650. Rev 3 takes W4's step 1 answer (Wall 10654) and W2's note (Wall 10655): the GAP line carries no quote and no verse reference, so no code change is needed. Trade-off for the card: the line names the premise and its round, not the verse; the reader finds the verses in that round. If the operator wants the verses shown, W4's option (b) is the route (press() and pwAnswered skip GAP lines; 5 nodes plus the Library). This plan authorizes nothing.
+Authority: operator 09:44 CST 11-23 (Wall 10635) items 1 and 2; ruling at Wall 10643 (item 2 is an Oracle instruction). The coordinator folded both into ASK 537. Rev 2 answered W2's FAIL ON FORM at Wall 10650. Rev 3 takes W4's step 1 answer (Wall 10654), W2's note (Wall 10655) and W4's rerun (Wall 10656): the GAP line carries no quote. It names the premise, its round and the verse, and nothing else. No code change. This plan authorizes nothing.
 
 ## 1. OBJECTIVE
 1. When the opponent restricts an answer to one verse, the Oracle names the restriction, states the complaint and answers the pressed verse from the chain.
@@ -39,15 +39,15 @@ FOUND, NOT IN SCOPE: the computed "STILL UNANSWERED AGAINST YOUR CHAIN" list sta
 ## 4. CHANGES
 1. Init with Guards: append to the end of TEXTPROOF (623 characters added; TEXTPROOF 1,137 to 1,760):
    " ONE-VERSE RESTRICTION: when the opponent asks you to answer from one verse alone, or to grant or deny a link on a verse read apart from the rows your chain joins to it, do not accept the restriction and do not argue inside it. Name it in one line -- RESTRICTION: \"<the opponent's words, quoted verbatim>\" -- this limits the answer to less than the volume of the book (Isaiah 28:10, \"precept upon precept; line upon line\") -- then answer the pressed verse from the chain: quote it whole with the rows that join it, each tagged with its layer. A restriction named and not answered from the chain leaves the press unanswered."
-2. D4 Build when `$('Init Seats').first().json.defender.profile==='oracle'`, and C4 Build when `.challenger.profile==='oracle'`: append to the close-round text (532 characters added; D4 close text 1,680 to 2,212; C4 close text 1,663 to 2,195):
-   " GAPS LEFT OPEN: track every question you put to your opponent in your earlier rounds -- each premise you listed against the opponent's words, with the verses you pressed under it -- that no later round of the opponent answered. Restate each in one line: GAP: premise <n> [<the round that listed it>] -- UNANSWERED. Write the line in exactly that form: no quotation, no verse reference, no other words. A gap restated here is not a new press: name only premises your earlier rounds already listed. If none is left, write GAPS: NONE."
+2. D4 Build when `$('Init Seats').first().json.defender.profile==='oracle'`, and C4 Build when `.challenger.profile==='oracle'`: append to the close-round text (611 characters added; D4 close text 1,680 to 2,291; C4 close text 1,663 to 2,274):
+   " GAPS LEFT OPEN: track every question you put to your opponent in your earlier rounds -- each premise you listed against the opponent's words, and each verse you pressed under it -- that no later round of the opponent answered. Restate each in one line: GAP: premise <n> [<the round that listed it>] -- <the verse you pressed, by book, chapter and verse> -- UNANSWERED. Write the line in exactly that form: no quotation and no other words. Name only premises your earlier rounds listed and verses your earlier rounds pressed under them; a gap restated here is not a new press. If none is left, write GAPS: NONE."
    A plain seat's text is unchanged.
 
 ## 5. CRITERIA and DONE
 1. Only Init with Guards (TEXTPROOF), D4 Build and C4 Build change. Every other node is byte-equal to live.
 2. Plain-profile prompts are byte-equal to live, for both seat assignments (synthetic build: Oracle defending, Oracle challenging, no Oracle).
 3. The Oracle prompts carry the two texts exactly as in section 4.
-4. GAP lines in the plan's form are not marked DISREGARDED (C4P.press, ruling 377) or NOT COUNTED (C4P.of, C4P.ofD), and do not turn any press against the defender to ANSWERED (pwAnswered, Library line 2128, which counts [CR4]). W4 10654 found marks only from naming the opponent's side with "left ... unanswered", a quoted grade pattern beside a D or C number (C7), or a verse reference in a [CR4] line (pwAnswered). The rev 3 form has no quote, no side name, no link number and no verse reference. The build re-runs gap537.js and pwa537.js on this exact form, in [DR4] and [CR4], with 0 marks and 0 flips required.
+4. GAP lines in the plan's form are not marked DISREGARDED (C4P.press, ruling 377) or NOT COUNTED (C4P.of, C4P.ofD). W4 10656 cases C8, C9 and D6 show 0 and 0. They do not turn a press against the defender to ANSWERED (pwAnswered, Library line 2128, which counts [CR4]), so long as the verse is one the Oracle pressed in an earlier round: a verse of the Oracle's own [CR3] is already named there, and on 41418 none of the 27 flips (W4 10654 and 10656). The build adds an offline check (W4 10656 option b) that, on a synthetic close, every GAP verse stands in an earlier Oracle round.
 5. Record-only: no judge text changes (ruling 383); nothing counts a GAP or RESTRICTION line (ruling 428).
 6. Label: ASK 537.
 DONE: criteria 1 to 6 met on the synthetic build; the write's fetch-back matches the target; the readback seat confirms.
@@ -55,22 +55,22 @@ DONE: criteria 1 to 6 met on the synthetic build; the write's fetch-back matches
 ## 6. WRONG-IF
 1. FALSE GAP: the Oracle restates as a GAP a press the opponent did answer in a later round. The GAP line is the Oracle's own claim, so a false GAP misleads a reader. Judges grade it as text, like any claim (ruling 383); nothing counts it (ruling 428). A run review compares each GAP line to the opponent's later rounds and names any false GAP.
 2. The plan is wrong if a plain seat's prompt changes, or if the Oracle's close gains a new press under the GAP heading (a verse no earlier round of the Oracle pressed).
-3. The plan is wrong if, in a run, a GAP line is marked DISREGARDED or flips a press to ANSWERED. In [CR4], a GAP line that carried a verse which was also pressed against the defender and left unanswered would be counted ANSWERED by pwAnswered and change the ledger in the Oracle's favour (W4 10654 item 7; W2 10655 item 4). The form forbids verse references for this reason. A run review checks every GAP line for added words and names any.
+3. The plan is wrong if, in a run, a GAP line in [CR4] names a verse the Oracle never pressed. pwAnswered then counts it as an answer, and a press left unanswered against the Oracle becomes ANSWERED, in the Oracle's favour. W4 10656 case D7 shows this for all 4 verses still unanswered on 41418 (Matthew 1:23, Deuteronomy 22:24, Luke 3:38, Isaiah 7:13). The GAP text forbids such a verse, but no live code enforces it. So every run review checks each [CR4] GAP verse against the Oracle's earlier rounds and names any breach (W2 10655 item 4; W2 note 09:57). Nothing else marks a GAP line in the plan's form.
 4. A GAP line that names a premise the Oracle never listed is a false GAP of the same kind as WRONG-IF 1.
 
 ## 7. RUN EVIDENCE
 - 41418 (failed run for item 2): the Oracle's CR3 has 6 PRESSED WITH lines against the challenger's premises; its close CR4 (24,857 characters) has 40 ANSWER: lines and 0 lines restating any of the 6 ("unanswered": 0 hits). W2 checked this at 10650.
 - 41418, the judges on the same gap (W1 10651, not rechecked by W3): sol 6.2 (judgment 1263) counted challenger premise 3 as unanswered; the other two judges counted none. A restated gap in the Oracle's close puts the gap in front of every judge.
 - 41418 and item 1: no failure. The Oracle did it unprompted at CR2: "The question is answered by the chain, not by one verse stripped from it. I re-seat every pressed verse in its chain." The one-verse reading in that run was terra's, a judge's (Matthew 1:25 read apart from Matthew 1:24). Under the operator's rule of 23:19 CST 11-18, item 1 rests on his own order, not on a failed run; the card says so.
-- Marks in the next run: "GAP: premise <n> [<round>] -- UNANSWERED" or "GAPS: NONE" lines in the Oracle's close; "RESTRICTION:" lines where an opponent restricts. Item 1 is NO PROBE: a restriction cannot be forced.
+- Marks in the next run: "GAP: premise <n> [<round>] -- <verse> -- UNANSWERED" or "GAPS: NONE" lines in the Oracle's close; "RESTRICTION:" lines where an opponent restricts. Item 1 is NO PROBE: a restriction cannot be forced.
 
 ## 8. INPUTS IN GIT
 - ask537/w3/live/Init_Seats.js (05a1e2f1), Init_with_Guards.js (df2cf466), D4_Build.js (38fb90e9), C4_Build.js (79a87ad0): the live node code as fetched from 48513907.
-- ask537/w4/build/gap537.js (917477f0), out_gap537.txt (15c8c2cb), pwa537.js (45703ee8), out_pwa537.txt (563d7dcb): W4's step 1 tests (Wall 10654).
+- ask537/w4/build/gap537.js (10bd606a), out_gap537.txt (2d69d270), pwa537.js (3444cc5b), out_pwa537.txt (9c99a6b1): W4's step 1 tests and rerun (Wall 10654, 10656), commit 6032e4a6.
 - Run 41418: debate_results run_token ODV1-41418-isj5xh5m (SQL).
 
 ## 9. STEPS
-1. DONE at Wall 10654 (W4): the marking code and readers were read and tested. Rev 3 takes the no-quote, no-verse form (W2 10655). W4 re-runs gap537.js and pwa537.js on that form before the card.
+1. DONE at Wall 10654 (W4): the marking code and readers were read and tested. W4 reran on the no-quote form at Wall 10656 (files at commit 6032e4a6).
 2. W2 grades rev 3.
 3. The coordinator sends the operator one card, with the note in section 1.
 4. W4 builds against a fresh live readback, touched nodes only, and posts the synthetic build for criteria 1 to 5.
