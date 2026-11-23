@@ -1,4 +1,4 @@
-# ASK 518 plan (W3, seat 33), rev 4, 2026-11-23. Replaces rev 3 (e1198a58, kept as plan518_rev3.md) after the test calls (W2 readback, Wall 10443): C1 passed; C2 failed (41117 NEW CHALLENGER LINK 6 was confirmed in 0 of 3 runs); C3 lost 41102 NEW LINK 1 and LINK 2; no baseline calls were made, so the cause is not known. Changed: S1 (narrowed), CRITERIA (C0 baseline added; C2 and C3 read against it), cost, STEPS. Rev 3 replaced rev 2 on W2's C-b (Wall 10402); rev 2 replaced rev 1 on W1's two points. A PLAN ONLY; nothing is written.
+# ASK 518 plan (W3, seat 33), rev 5, 2026-11-23. Replaces rev 4 (01fc9e6a, kept as plan518_rev4.md) on W1's answer (Wall 10448): the 41102 body is the CHALLENGER one; a stable control (41024 CHALLENGER) is added; the known items' log confirmation is stated. Rev 4 replaced rev 3 (e1198a58, kept as plan518_rev3.md) after the test calls (W2 readback, Wall 10443): C1 passed; C2 failed (41117 NEW CHALLENGER LINK 6 was confirmed in 0 of 3 runs); C3 lost 41102 NEW LINK 1 and LINK 2; no baseline calls were made, so the cause is not known. Changed: S1 (narrowed), CRITERIA (C0 baseline added; C2 and C3 read against it), cost, STEPS. Rev 3 replaced rev 2 on W2's C-b (Wall 10402); rev 2 replaced rev 1 on W1's two points. A PLAN ONLY; nothing is written.
 Source: the operator's "Four Remaining Bugs in the Run (4) Debug Log", Bug 2 (13:10 CST 11-20, W4 thread), released by his "yes" at 02:02 CST 11-23 (Wall 10381). Run (4) is 41117. The basis for that is in the ASK 517 plan (Wall 10389).
 
 ## 1. OBJECTIVE
@@ -48,19 +48,22 @@ CHANGE:
 - C0, BASELINE (new): the same bodies with the OLD sentence (live text), 3 runs each, on:
   (a) 41117 Close Enforcer CHALLENGER;
   (b) 41117 Judge Contradiction, the body that holds J1 and J2;
-  (c) 41102 Close Enforcer, the body that raised NEW LINK 1 and LINK 2 (rows 48277, 48279).
+  (c) 41102 Close Enforcer CHALLENGER, the body that raised NEW LINK 1 and LINK 2 (rows 48277, 48279);
+  (d) CONTROL: 41024 Close Enforcer CHALLENGER. Its NEW LINK 6 was confirmed by both copies in the log (2 of 2) and again in rev 3's calls (W1 10448).
+  Each body is built twice (copy 1 and copy 2), so an arm is 4 bodies x 2 copies x 3 runs = 24 calls.
+  Known in the logs (W1 10448): except J1, J2 and 41024 LINK 6, every original known item was confirmed by only 1 of the 2 copies. The 3-of-3 bar in C0 is therefore likely to fail for 41117 LINK 6 and 41102 LINK 1 and LINK 2. If it does, those items show the enforcer's own variance, and the change is judged on J1 and J2 (C1) and on the control (C2).
   C0 shows how often each known item is confirmed with no change at all. A known item that is not confirmed 3 of 3 at baseline cannot be a test of the change, and the build post says so.
 - C1: under the new sentence, J1 and J2 are confirmed by pkgJC2 in none of the 3 runs. Under C0(b), the baseline confirms them in at least 2 of 3. Otherwise the change has nothing to cure, and C1 is void.
-- C2: every item that C0(a) and C0(c) confirm in 3 of 3 is also confirmed in 3 of 3 under the new sentence. This covers NEW CHALLENGER LINK 6 on 41117, and NEW LINK 1 and LINK 2 on 41102, if the baseline confirms them.
+- C2: every item that C0 confirms in 3 of 3 is also confirmed in 3 of 3 under the new sentence. That always includes the control, 41024 NEW LINK 6, and 41117 LINK 6 and 41102 LINK 1 and LINK 2 where the baseline confirms them 3 of 3. 41102 LINK 1 and LINK 2 cite no verse (W1 10448), so S1 cannot apply to them: any loss on them under the new sentence fails C2 whatever the baseline shows at 2 of 3 or more.
 - C3: the rev 3 C3 replies on 41024, 41043 and 41090 showed no loss against the logged rows, so they are not repeated. Any item lost in C2 is listed with its two sentences, and W1 classes each as reference-only (expected) or a lost contradiction (a FAIL).
 - C4: the only node parameters that change are the two PROMPT sentences. The library, other nodes and connections are unchanged.
 - C5: one live run on the operator's word. Every CONFIRMED closing contradiction in it has a point that conflicts, not only a reference.
 - DONE: C1 to C5 pass, and the manual entry is written and read back.
-- Cost and route: C0 is 3 bodies x 3 runs x 2 copies = 18 calls. C1 and C2 under the new sentence are the same 3 bodies again, another 18 calls. That is 36 paid calls to the enforcer model (the ENFORCER row of model_config, openai/gpt-6-luna in rev 3's calls). They wait on a NEW release by the operator, asked on a card in W4's thread after this rev is graded. The card says that rev 3's 30 calls were made and failed C2, and that this rev adds a baseline. The calls go only through W4's probe path, as in rev 3. No seat reads a key value. W1 builds the bodies offline; W4 makes the calls and commits the replies; W1 classes them; one non-builder seat reads them back. Nothing is written to the engine.
+- Cost and route: C0 is 4 bodies x 2 copies x 3 runs = 24 calls. C1 and C2 under the new sentence are the same 4 bodies again, another 24 calls. That is 48 paid calls to the enforcer model (the ENFORCER row of model_config, openai/gpt-6-luna in rev 3's calls). They wait on a NEW release by the operator, asked on a card in W4's thread after this rev is graded. The card says that rev 3's 30 calls were made and failed C2, and that this rev adds a baseline. The calls go only through W4's probe path, as in rev 3. No seat reads a key value. W1 builds the bodies offline; W4 makes the calls and commits the replies; W1 classes them; one non-builder seat reads them back. Nothing is written to the engine.
 
 ## 5. WRONG-IF
 This plan is wrong if the new sentence clears a closing sentence whose words or point conflict with the earlier one.
-- Known-bad (must stay CONFIRMED wherever the baseline confirms it 3 of 3): 41117 NEW CHALLENGER LINK 6; 41102 NEW LINK 1 and LINK 2.
+- Known-bad (must stay CONFIRMED wherever the baseline confirms it 3 of 3): 41024 NEW LINK 6 (the control); 41117 NEW CHALLENGER LINK 6; 41102 NEW LINK 1 and LINK 2.
 - Known-good (must turn): 41117 J1 and J2.
 If C2 fails under rev 4, a prompt sentence does not carry the rule. The plan is then revised to a code test, not shipped. The test would check the closing sentence's quoted words against the rounds' own rows for each verse it cites, and drop only the cited verse that does not hold them. That code test is not built under this rev.
 If C0 shows that the known items are not stable at baseline (fewer than 3 of 3), the build post says so. The operator is then asked whether 518 continues, because two-copy confirmation cannot test the change on those items.
@@ -74,7 +77,7 @@ This plan's commit is on the Wall post. W1 commits the built bodies, the replay 
 ## 8. STEPS
 1. One non-builder seat grades this rev. Waits on: nothing.
 2. W1 builds S1 offline on the 517 engine (the write order is 517 first: W2 10441 limit c), prepares the C0 to C2 inputs, and checks C4. Waits on: step 1.
-2a. W1 builds the six bodies (3 old, 3 new). W4 posts the release card for 36 calls in W4's thread. Waits on: step 1 (grade of rev 4).
+2a. W1 builds the bodies (4 old, 4 new, each for both copies). W4 posts the release card for 48 calls in W4's thread. Waits on: step 1 (grade of rev 4).
 2b. W4 makes the calls through the rev 3 probe path and commits the replies. W1 classes them, and one non-builder seat reads them back. Waits on: the operator's press on 2a.
 3. Grades of the build. Waits on: step 2.
 4. W4 writes on the operator's card in W4's thread. Waits on: step 3.
