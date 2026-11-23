@@ -1,0 +1,14 @@
+[
+ {
+  "old": "The quote tests of K-S3, K-W and K-CON read the full flagged sentence from its round |",
+  "new": "The quote tests of K-S3, K-W and K-CON read the full flagged sentence from its round. Not raised on a grant-class sentence (\"I grant\", \"I concede\", \"I admit\", \"I accept that\", \"I agree that\") that names no link, premise or press (D<n>, C<n>, LINK <n>, premise <n>, P<n>.<m>) (ASK 519) |"
+ },
+ {
+  "old": "| K-S3 | a close-round concession the count does not mark COUNTED (ruling 412) |",
+  "new": "| K-S3 | a close-round concession the count does not mark COUNTED (ruling 412); not raised on a grant-class line with no withdrawal verb that names no link, premise or press (ASK 519) |"
+ },
+ {
+  "old": "\n\n## 12. Citation check against the KJV",
+  "new": "\n  - K-W AND K-S3 ASK ONLY ABOUT FOOTING (ASK 519; plan ask519/w3/plan519.md rev 2; Shared Library kwLines421 and the K-S3 push; engine and Alternate Pass child):\n    - Why: on 41117, 51 K-W and K-S3 cure items were raised, most on grants of uncontested facts (\"I grant the order.\"). Every such item was answered NOT HELD or TOUCHES NO LINK. The operator suggested scoping the detector to grants that name a link.\n    - What it does: a withdrawal-class sentence (withdraw, drop, retract, give up, do not or no longer claim or rest) is raised as before. A grant-class sentence is raised only when it names D<n>, C<n>, LINK <n>, premise <n> or P<n>.<m>. The RULES text, the cure forms and wpLines2024 are unchanged.\n    - Shown offline (W4 10474; W2 10476): over the five runs, no dropped item had a real reply, and no seat removal, count, standing or outcome changes.\n    - Live: written on the operator's card {{519_CARD}} at {{519_WRITE_CST}}. Engine {{519_ENGINE}}; child {{519_CHILD}}; audit {{519_AUDIT}}. Read back by {{519_RB}}.\n    - Limit: a grant that gives up a link without naming it is no longer asked. The judge's own CONCEDED LINKS count still reads it.\n    - Not yet: shown by a run (C4).\n    - Revert: {{519_REVERT}}, on the operator's word.\n\n## 12. Citation check against the KJV"
+ }
+]

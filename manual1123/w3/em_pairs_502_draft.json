@@ -1,0 +1,6 @@
+[
+ {
+  "old": "\n\n## 12. Citation check against the KJV",
+  "new": "\n  - EARLY ALTERNATE CALLS OFF THE PUBLIC KEY (ASK 502 A1; plan ask502/w3/plan502.md option O1; node Record Early Alternate in SX4ZWtgHNs96uBOo and node Get Early Alternate in the engine):\n    - Why: rpc/record_early_alternate and rpc/get_early_alternate are SECURITY DEFINER, and anyone with the public (anon) key could call them. The engine uses a stored early_alternate reply as an alternate judge's reply, so a planted row could stand.\n    - What it does: both nodes move from the \"Supabase Anon Key\" header credential to the predefined \"Supabase account\" credential, as 494 A1 and 499 A1 did. The URL, body and every other node are unchanged.\n    - Shown offline (W4 10480; W1 10481): only those two nodes change, and the patch applies on the stacked engine.\n    - Live: written on the operator's card {{502_CARD}} at {{502_WRITE_CST}}. SX4Z f47f5955 to {{502_SX4Z}}; engine {{502_ENGINE}}; audit {{502_AUDIT}}. Read back by {{502_RB}}.\n    - Not yet: shown by a run in which an early alternate fires (Q1 to Q3). A2, the revoke, is built only after that.\n    - Revert: write/revert502.sh (b814ac97), on the operator's word.\n\n## 12. Citation check against the KJV"
+ }
+]

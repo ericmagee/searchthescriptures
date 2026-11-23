@@ -1,0 +1,10 @@
+[
+ {
+  "old": "    - Close Enforcer Record reads every Build item and every reply by position",
+  "new": "    - Not a contradiction by an added reference (ASK 518): both PROMPTs (Close Enforcer Build and Judge Contradiction Build) say a closing sentence is not a contradiction when it differs only by an added reference: it quotes words, the whole quotation stands word for word in one verse it cites as the rounds quote that verse, and another verse cited with it does not hold the whole quotation. Read with that reference removed, if it agrees with the earlier sentence, it is not a contradiction. The check uses only the verse text the rounds quote.\n    - Close Enforcer Record reads every Build item and every reply by position"
+ },
+ {
+  "old": "\n\n## 12. Citation check against the KJV",
+  "new": "\n  - A CITATION SLIP IS NOT A CLOSING CONTRADICTION (ASK 518; plan ask518/w3/plan518.md rev 6; Close Enforcer Build and Judge Contradiction Build, the PROMPT sentence only):\n    - Why: on 41117, the defender's close \"Matthew 1:21 and Luke 1:13 give Joseph the naming: 'thou shalt call his name JESUS'\" was confirmed as a contradiction of its earlier rows, though its point agreed with them. The operator: \"That is a citation-grouping slip ... not a substantive contradiction\".\n    - What it does: adds the added-reference case to the NOT-a-contradiction list in both PROMPTs. The two-confirmation rule (pkgJC2) and the ASK 505 outcome rule are unchanged.\n    - Shown by paid test calls (48, on the operator's card 02:56 CST 11-23; W1 10465; W2 10466): J1 and J2 were confirmed in 2 of 3 runs under the old sentence and 0 of 3 under the new one. The control, 41024 LINK 6, was confirmed 3 of 3 under both. 41117 LINK 6 and 41102 LINK 1, 2 and 4 were confirmed 0 of 3 even under the old sentence.\n    - Live: written on the operator's card {{518_CARD}} at {{518_WRITE_CST}}. Engine {{518_ENGINE}}; audit {{518_AUDIT}}. Read back by {{518_RB}}.\n    - Not yet: shown by a run (C5).\n    - Revert: {{518_REVERT}}, on the operator's word.\n\n## 12. Citation check against the KJV"
+ }
+]

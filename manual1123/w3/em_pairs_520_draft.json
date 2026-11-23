@@ -1,0 +1,10 @@
+[
+ {
+  "old": "cured by a CORRECTED COUNT below the count and cleared by a CHANGE TO that renumbers |",
+  "new": "cured by a CORRECTED COUNT below the count and cleared by a CHANGE TO that renumbers. Not raised on a premise when the judge's own ANSWER CHECK grades a press of it, listed in the pressing side's round 2 or round 3, MISSES or FAILS (Commitment 5, ruling 372; ASK 520) |"
+ },
+ {
+  "old": "\n\n## 12. Citation check against the KJV",
+  "new": "\n  - K-UNX NOT RAISED ON A PRESS THE JUDGE GRADES MISSES (ASK 520; plan ask520/w3/plan520.md rev 3; Shared Library line 479; engine and Alternate Pass child):\n    - Why: on 41117, Sol 6.1 counted DEFENDER premises 4 and 5 on Commitment 5, and its own ANSWER CHECK graded those presses MISSES. K-UNX still asked it to name a missing layer, and marked its correct reply UNCURED. Terra accepted the same items and cut its count to 0.\n    - What it does: on the general K-UNX path, no item is raised when unxAcFail finds the judge's ANSWER CHECK grading a press of that premise MISSES or FAILS, with no MEETS. The presses are read from the pressing side's round 2 and round 3. This is the rule the K-UNX-A path already applies (pkgU72 rev 2, ruling 372).\n    - Shown offline (W4 10477 and 10479; W2 10483): on 41117, Terra 1 and 5 and Sol 4 and 5 drop; Terra 2, 3 and 4 and Sol 2 stay. The gates show no changed line. A replay reuses the logged cure replies, so Terra's count is shown only by a run.\n    - Live: written on the operator's card {{520_CARD}} at {{520_WRITE_CST}}. Engine {{520_ENGINE}}; child {{520_CHILD}}; audit {{520_AUDIT}}. Read back by {{520_RB}}.\n    - Limit: unxAcFail reads the grade, not the proof of the press. K-P (ruling 398) and the judges' UNPROVEN grades still read proof.\n    - Not yet: shown by a run (C5).\n    - Revert: {{520_REVERT}}, on the operator's word.\n\n## 12. Citation check against the KJV"
+ }
+]

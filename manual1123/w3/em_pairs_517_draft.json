@@ -1,0 +1,18 @@
+[
+ {
+  "old": "| K-G3 | a side SELF-SUPPORTED while any of its links is BROKEN | CORRECTED STANDING (not SELF-SUPPORTED); or RETRACTED for each BROKEN link |",
+  "new": "| K-G3 | RETIRED by ASK 517 (2026-11-23). A standing follows the count only (STANDINGS, above). The operator on run 41117: \"by rulebook definition, L=6, c=0 is SELF-SUPPORTED, never PROP-DEPENDENT.\" Not raised; its cure sentence is removed. | none |"
+ },
+ {
+  "old": "recomputed, as for K-G1 and K-G3, when every item",
+  "new": "recomputed, as for K-G1, when every item"
+ },
+ {
+  "old": "BROKEN gives CHALLENGER WINS when CHALLENGE STANDING is SELF-SUPPORTED, and UNDERDETERMINED when it is PROP-DEPENDENT or COLLAPSED;",
+  "new": "BROKEN gives CHALLENGER WINS when CHALLENGE STANDING is SELF-SUPPORTED and no collision on that seat is graded CHALLENGER LINK BROKEN (ASK 517), and UNDERDETERMINED otherwise;"
+ },
+ {
+  "old": "\n\n## 12. Citation check against the KJV",
+  "new": "\n  - THE STANDING FOLLOWS THE COUNT ONLY (ASK 517; plan ask517/w3/plan517.md rev 5; Shared Library lines 790, 810, 811, 1177, 1286, 1346 and 1488; database function derive_debate_outcome; engine and Alternate Pass child):\n    - Why: the engine set a standing from the count AND from any LINK BROKEN line of that side. The STANDINGS definition has no second term. On 41117, Terra's count was 0, and its standing still read PROP-DEPENDENT. The operator: \"by rulebook definition, L=6, c=0 is SELF-SUPPORTED, never PROP-DEPENDENT.\"\n    - What it does:\n      1. stand() in the after-cure and gate recomputes (lines 1346 and 1488), and the cure check of a CORRECTED STANDING (line 1177), read the count only. n = 0 gives SELF-SUPPORTED, unless a collision is UNREAD. n of 1 or more is as before. FORFEIT is kept.\n      2. K-G3 is retired (lines 790, 810 and 811).\n      3. The win tests read the broken lines directly, so no side wins with its own link broken (the operator, 22:26 CST 11-19: \"We can't have broken links 🔗 and still win\"):\n         - rd386 (line 1286) gives CHALLENGER WINS on BROKEN only when the challenge is SELF-SUPPORTED and no collision on that seat is graded CHALLENGER LINK BROKEN.\n         - The ASK 505 STANDING GATE in derive_debate_outcome also counts a counted seat whose last ENGINE RESULT tag lists the prevailing side's LINK BROKEN, for debates from v_517_from.\n      4. brk still decides the clause and the RESULT, as before.\n    - Shown offline (W1 10435 and 10473; W2 10441 and 10475): on 41024, 41043, 41090, 41102 and 41117, no outcome changes. On 41117, Terra reads SELF-SUPPORTED -- L=6 c=0, and its RESULT stays UNDERDETERMINED.\n    - Live: written on the operator's card {{517_CARD}} at {{517_WRITE_CST}}. Engine {{517_ENGINE}}; child {{517_CHILD}}; derive_debate_outcome 2a853df6 to {{517_FN}}; audit {{517_AUDIT}}. Read back by {{517_RB}}.\n    - Not yet: shown by a run (C5).\n    - Revert: {{517_REVERT}}, on the operator's word.\n\n## 12. Citation check against the KJV"
+ }
+]
