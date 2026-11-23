@@ -1,4 +1,4 @@
-# ASK 516 lower-memory plan (W3, seat 33), rev 5, 2026-11-23. Replaces rev 4 (ee8901d5, kept as plan516b_rev4.md), on W2's PASS-with-conditions at Wall 10344. Rev 4 replaced rev 3 on W2's FAIL at 10341. Rev 3 replaced rev 2 on W4's FAIL at 10335. A PLAN ONLY; nothing is written.
+# ASK 516 lower-memory plan (W3, seat 33), rev 6, 2026-11-23. Replaces rev 5 (88cc418b, kept as plan516b_rev5.md), on W4's FAIL at Wall 10354 (the three Reread calls were not named as senders). Changed headings: SCOPE, CRITERIA and DONE, STEPS. Rev 5 replaced rev 4 (ee8901d5, kept as plan516b_rev4.md), on W2's PASS-with-conditions at Wall 10344. Rev 4 replaced rev 3 on W2's FAIL at 10341. Rev 3 replaced rev 2 on W4's FAIL at 10335. A PLAN ONLY; nothing is written.
 
 ## 1. OBJECTIVE
 A run on 516 completes without the out-of-memory crash, with an alternate seated as in 41155, and every judge enforcer call still has THE ROUNDS IN FULL before the model.
@@ -21,7 +21,9 @@ SEARCH (W3, 11-23, on W4's 516 fetch-backs, fetchback_engine_516.json with 397 n
 - HTTP senders (jsonBody {{ $json.body }}; L1 fills the rounds at send time from the build the body came from):
   - engine: Enforcer Group Batch Call openrouter, Alt Judge Enforcer Call openrouter, Judge Enforcer Retry Call openrouter, Alt Judge Enforcer Retry Call openrouter, Judge Enforcer Resend Call openrouter, Alt Judge Enforcer Resend Call openrouter;
   - child: R2 Alt Judge Enforcer Call openrouter, R2 Alt Judge Enforcer Retry Call openrouter, R2 Alt Judge Enforcer Resend Call openrouter.
-- Readers of the build output (placeholder only; they must not need the rounds text):
+  - Reread senders (added in rev 6, W4 10354): Reread Call openrouter and Alt Reread Call openrouter (engine), R2 Alt Reread Call openrouter (child). Each Reread Build takes RULES from Judge Enforcer Build's messages[1] (the slice up to the first "\n\nITEM"). Under 516 that slice held THE ROUNDS IN FULL, so the reread message carried them, and it must still carry them. Under L1 the slice holds the placeholder. Each Reread Build stamps on its body the bt of the Build it sliced, plus that Build's rounds_len and rounds_md5. Its call fills the rounds the same way as the other senders. The rereads keep the rounds; this is no design change from 516.
+  - Sender count: 12 (9 above, plus the 3 Reread calls).
+- Readers of the build output (placeholder only; they must not need the rounds text). The three Reread Builds pass the placeholder on to their calls, which fill it:
   - engine: Reread Build, Alt Reread Build, Judge Enforcer Resume, Judge Enforcer Record, Alt Judge Enforcer Record, Send Back Build, Alt Send Back Build, Reread Record, Alt Reread Record, Judge Enforcer Call openrouter (a Code node that maps replies), Enforcer Call openrouter (Code);
   - child: R2 Alt Reread Build, R2 Alt Judge Enforcer Record, R2 Alt Send Back Build, R2 Alt Reread Record.
 - Pass-through IF nodes, found by W3 in the fetch-back connections (W2 counted 9; this list has 13, and W4 confirms at build). json.rounds516 on item 0 rides through them, so all are counted in C2 and the WRONG-IF:
@@ -42,12 +44,12 @@ CHANGE.
 - Nothing else changes.
 
 ## 4. CRITERIA and DONE
-- C1: for every call in replays of 41155 and 41117, the serialized HTTP request body (the JSON string the sender sends) equals the live 516 request body, byte for byte.
+- C1: for every call in replays of 41155 and 41117, through all 12 senders (the Reread calls included), the serialized HTTP request body (the JSON string the sender sends) equals the live 516 request body, byte for byte.
 - C2: the rounds are stored once per Build node run. Batch, Retry, Resend, Reread, Resume, Record and Send Back outputs hold only the placeholder. The held total passes the WRONG-IF on both replays, with the IF "Needed?" nodes counted.
 - C3: prompt_sent carries the marker and no rounds copy.
 - C4: a live run on the operator's word, with at least one alternate seated (as in 41155), completes without an out-of-memory error. It reports its enforcer prompt total next to 41155's 5.8M. "Found nothing" is not a pass. A run that seats no alternate, or does not reach the enforcer, does not test C4.
 - DONE: C1 to C4 pass.
-- DONE 3 evidence: for every judge enforcer call in the C4 run, (i) the stamped rounds_md5 equals the md5 of that run's rounds; and (ii) usage.prompt_tokens is at least the 515 rev 7 prompt estimate for that call plus the rounds' token estimate. The threshold "rounds characters divided by 4, less 10 percent" is a GUESS: 41117 holds no usage figures to measure it on (W4, 10324). W4 measures the ratio at build with a tokenizer count of 41117's rounds. If the ratio is off by more than 10 percent, the threshold is set from that count, and the grade names it. Reading (ii) shows the rounds were actually sent, not only meant to be.
+- DONE 3 evidence: for every judge enforcer call in the C4 run, the Reread calls included, (i) the stamped rounds_md5 equals the md5 of that run's rounds; and (ii) usage.prompt_tokens is at least the 515 rev 7 prompt estimate for that call plus the rounds' token estimate. The threshold "rounds characters divided by 4, less 10 percent" is a GUESS: 41117 holds no usage figures to measure it on (W4, 10324). W4 measures the ratio at build with a tokenizer count of 41117's rounds. If the ratio is off by more than 10 percent, the threshold is set from that count, and the grade names it. Reading (ii) shows the rounds were actually sent, not only meant to be.
 
 ## 5. WRONG-IF
 Restated for rev 5: the IF nodes are now counted, and both cases are re-measured at build (step 4) with them. The measure is as W4 graded it at 10335, with the IF nodes added. It is wrong if the held characters do not come down: on the 41155 shape, the total held by the Build, Batch, Retry, Resend, Reread and IF "Needed?" nodes plus the log body must be no more than what 515 rev 7 holds on the same shape, plus one rounds copy per Build node run.
@@ -63,7 +65,7 @@ The plan files (plan516b.md rev 3, with revs 1 and 2) are committed on claude/un
 
 ## 8. STEPS
 1. Done: W4's trace (10332).
-2. Plan grade, rev 3. Waits on: W4 (and W2).
+2. Plan grade, rev 6. Waits on: W4 (and W2).
 3. The operator names the build. Waits on: the operator's word via the coordinator.
 4. W4 builds, replays C1, C2 and C3, re-measures the WRONG-IF on both cases with the IF nodes counted, and measures the token ratio. Waits on: step 3.
 5. Two grades. Waits on: W3 and W2.
