@@ -1,0 +1,13 @@
+PASS C3 engine and child library arrays equal (the MAP differs by node set: engine 49, child 47 entries, as live: 49/47)
+PASS C4 engine: same nodes and connections; only Shared Library changes -- Shared Library
+PASS C4 engine: library lines differing from live = index 466 (line 467) and new 3566 -- [466,3566]
+PASS C4 engine: 15 MAP entries change -- Alt Gate Build, Alt Gate Record, Alternate Merge Seat, Alternate Payloads, Extract Independent Verdict, Gate Build, Gate Record, Panel Payloads, R2 Alt Gate Build, R2 Alt Gate Record, R2 Alternate Merge Seat, R2 Alternate Payloads, Late Gate Build, Alt Late Gate Build, R2 Alt Late Gate Build
+PASS C3 engine: every MAP entry (49) rebuilds to its n
+PASS C3 engine: every MAP entry compiles
+PASS C3 engine: each of the 15 rebuilt stubs defines bfx544Block and the range test calls it
+PASS C4 child: same nodes and connections; only Shared Library changes -- Shared Library
+PASS C4 child: library lines differing from live = index 466 (line 467) and new 3566 -- [466,3566]
+PASS C4 child: 15 MAP entries change -- Alt Gate Build, Alt Gate Record, Alternate Merge Seat, Alternate Payloads, Extract Independent Verdict, Gate Build, Gate Record, Panel Payloads, R2 Alt Gate Build, R2 Alt Gate Record, R2 Alternate Merge Seat, R2 Alternate Payloads, Late Gate Build, Alt Late Gate Build, R2 Alt Late Gate Build
+PASS C3 child: every MAP entry (47) rebuilds to its n
+PASS C3 child: every MAP entry compiles
+PASS C3 child: each of the 15 rebuilt stubs defines bfx544Block and the range test calls it

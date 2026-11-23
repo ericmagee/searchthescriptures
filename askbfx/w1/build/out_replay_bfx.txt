@@ -1,0 +1,8 @@
+C1 41090 DEFENDER premise 5 (1251 sol62; 1252 chatgpt; rows 47895, 47903, 47915): live RANGE premises 1 to 4 | target no item
+C1 41090 DEFENDER premise 6 (1251 sol62; rows 47896, 47916): live RANGE premises 1 to 4 | target no item
+C1 41736 DEFENDER premise 6 (1266 sol62; 1267 chatgpt; rows 51726, 51739, 52062): live RANGE premises 1 to 5 | target no item
+PASS C1: 0 RANGE items remain on the stored population
+C2 plant 41736 DEFENDER premise 7: live RANGE premises 1 to 5 | target RANGE premises 1 to 6
+PASS C2: target raises "premises 1 to 6"
+target blocks 41090: 1:LINK 5 [premise 1]: SUPPORTED -- exhibit | 2:LINK 5 [premise 2]: SUPPORTED -- exhibit | 3:LINK 4: SUPPORTED -- exhibit its layer f | 4:LINK 2: SUPPORTED -- exhibit its layer f | 5:LINK none [premise 5]: SUPPORTED -- exhi | 6:LINK none [premise 6]: NARROWED TO: the  | 7:- | 8:-
+target blocks 41736: 1:LINK 5: SUPPORTED -- union within the es | 2:LINK 4 [premise 2]: SUPPORTED -- of the  | 3:LINK 4 [premise 3]: SUPPORTED -- the the | 4:LINK 3 [premise 4]: SUPPORTED -- town, d | 5:LINK 2 [premise 5]: SUPPORTED -- seed ou | 6:LINK none [premise 6]: SUPPORTED -- that | 7:- | 8:-
