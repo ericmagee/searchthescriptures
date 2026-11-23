@@ -1,0 +1,26 @@
+ASK 542 measurement output (W1, 2026-11-23, SQL on bhffmkginddovmdcpnty)
+
+(A) ANSWER CHECK lines over every judgment (348 judgments with one, 117 runs):
+lines 18,328. Round tag after the reference: round 1: 10, round 2: 786, round 3: 15,191, round 4: 2,341.
+(judgment, side, reference) groups: 16,598.
+OLD exempting (a MISSES/FAILS and no MEETS among round-3 tags): 1,037.
+NEW exempting (OLD, or a MISSES/FAILS and no MEETS among round 2 to 4 tags): 1,411.
+Gained: 374 groups, in 85 judgments of 49 runs. Lost: 0 (by the OR).
+Without the OR (rounds 2 to 4 alone), 12 groups would be lost: the judge grades the round-3 answer
+MISSES and a round-2 or round-4 answer MEETS (judgments 943, 955, 997, 1006 twice, 1048, 1093, 1236,
+1240, 1249, 1260, 1261). The OR keeps each of them as today.
+These are reference groups, not items: the exemption acts only on a premise counted UNEXHIBITED that
+reaches the general raise, and only for presses of that premise.
+
+(B) Stored rows of the general raise (Library 480 to 482: "the count names no layer the block lacks",
+not "saying the block lacks"): 87 rows in 36 runs, 11-07 to 11-23; 79 of them cured by a CORRECTED COUNT
+(the judge lowered its own count).
+
+(C) Known bad, 41418, sol (gpt 6.1), from its later full reply (enforcer row 51422; the text the raise
+read is not stored):
+defender premise 2 presses graded: Luke 1:35 [CR4] MISSES, Luke 1:34 [CR4] MISSES, Luke 1:31 [CR4] FAILS,
+  Acts 1:8 [CR4] MISSES, Matthew 17:5 [CR4] MISSES. No [CR3] tag.
+defender premise 3: Matthew 1:20 [CR4] MISSES (but [CR4] MEETS under premise 1), Matthew 1:18 [CR4] MISSES
+  (also MISSES under premise 1), Luke 1:35 [CR4] MISSES, Matthew 1:16 [CR2] MISSES, Isaiah 7:14 [CR2] MISSES,
+  1 Chronicles 28:6 [CR4] MEETS, Romans 1:4 [CR4] MEETS.
+Rows 51202 (premise 2) and 51203 (premise 3), both CURED by "CORRECTED COUNT 1 takes the premise out of the count".
