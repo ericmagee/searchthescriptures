@@ -1,0 +1,17 @@
+{
+ "inputs": {
+  "judgments": 548,
+  "judgments_md5": "021c55e3",
+  "results_md5": "11cfab61"
+ },
+ "per": [],
+ "errors": [],
+ "totals": {
+  "old": 178,
+  "neu": 178,
+  "gen_old": 125,
+  "gen_new": 125,
+  "noRounds": 0,
+  "ran": 548
+ }
+}

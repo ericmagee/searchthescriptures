@@ -1,0 +1,23 @@
+41043 sol62 (Panel Judge 1, reply md5 e437ada3) | OLD: none | NEW: same
+41043 chatgpt (Panel Judge 2, reply md5 506dc1c4) | OLD: none | NEW: same
+41043 sol (Panel Judge 3, reply md5 3a10395a) | OLD: none | NEW: same
+41090 sol62 (Panel Judge 1, reply md5 58100970) | OLD: DEFENDER premise 5 [RANGE]; DEFENDER premise 6 [RANGE] | NEW: same
+  check: NEW = OLD minus 1 general-raise item(s) and their marks: true
+41090 chatgpt (Panel Judge 2, reply md5 8ec92231) | OLD: DEFENDER premise 3 [479-481 general]; DEFENDER premise 5 [RANGE] | NEW: DEFENDER premise 5 [RANGE] | DIFFERS
+  check: NEW = OLD minus 2 general-raise item(s) and their marks: true
+41090 sol (Panel Judge 3, reply md5 bd7a95a9) | OLD: DEFENDER premise 1 [479-481 general]; DEFENDER premise 3 [479-481 general]; DEFENDER premise 5 [RANGE]; DEFENDER premise 6 [RANGE] | NEW: DEFENDER premise 5 [RANGE]; DEFENDER premise 6 [RANGE] | DIFFERS
+41090 alt0 (Alternate Call 0): no reply or body stored
+41102 sol62 (Panel Judge 1, reply md5 6a90c2d9) | OLD: DEFENDER premise 2 [460 ASSUMES]; CHALLENGER premise 1 [460 ASSUMES] | NEW: same
+  check: NEW = OLD minus 1 general-raise item(s) and their marks: true
+41102 chatgpt (Panel Judge 2, reply md5 445fc5e7) | OLD: DEFENDER premise 6 [479-481 general]; CHALLENGER premise 1 [460 ASSUMES] | NEW: CHALLENGER premise 1 [460 ASSUMES] | DIFFERS
+41102 sol (Panel Judge 3, reply md5 b8893490) | OLD: none | NEW: same
+41102 alt0 (Alternate Call 0): no reply or body stored
+41117 sol62 (Panel Judge 1, reply md5 9de99662) | OLD: none | NEW: same
+  check: NEW = OLD minus 1 general-raise item(s) and their marks: true
+41117 chatgpt (Panel Judge 2, reply md5 c2e85160) | OLD: DEFENDER premise 2 [460 ASSUMES]; DEFENDER premise 3 [479-481 general]; DEFENDER premise 4 [479-481 general] | NEW: DEFENDER premise 2 [460 ASSUMES]; DEFENDER premise 3 [479-481 general] | DIFFERS
+41117 sol (Panel Judge 3, reply md5 c925db05) | OLD: DEFENDER premise 2 [474-478] | NEW: same
+41418 sol62 (Panel Judge 1, reply md5 d5c8db2e) | OLD: CHALLENGER premise 3 [460 ASSUMES] | NEW: same
+41418 chatgpt (Panel Judge 2, reply md5 777abd86) | OLD: none | NEW: same
+  check: NEW = OLD minus 2 general-raise item(s) and their marks: true
+41418 sol (Panel Judge 3, reply md5 25da92e9) | OLD: DEFENDER premise 2 [479-481 general]; DEFENDER premise 3 [479-481 general] | NEW: none | DIFFERS
+judge replies run: 15 | differing OLD/NEW: 5

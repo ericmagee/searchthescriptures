@@ -1,0 +1,35 @@
+41090 chatgpt DEFENDER premise 3: presses 3
+  press Luke 1:34 | OLD exempt false | NEW exempt false | ANSWER CHECK lines: [CR4] MEETS
+  press Luke 1:35 | OLD exempt false | NEW exempt true | ANSWER CHECK lines: [CR4] FAILS; [DR3] MEETS
+  press Luke 1:37 | OLD exempt false | NEW exempt false | ANSWER CHECK lines: [CR2] MEETS
+41090 sol DEFENDER premise 1: presses 4
+  press Matthew 1:18 | OLD exempt false | NEW exempt false | ANSWER CHECK lines: [CR4] MEETS
+  press Matthew 1:20 | OLD exempt false | NEW exempt false | ANSWER CHECK lines: [CR4] MISSES; [CR4] MEETS; [DR3] MEETS
+  press Luke 2:5 | OLD exempt false | NEW exempt false | ANSWER CHECK lines: [CR2] MEETS
+  press Matthew 1:25 | OLD exempt false | NEW exempt true | ANSWER CHECK lines: [CR4] MISSES
+41090 sol DEFENDER premise 3: presses 3
+  press Luke 1:34 | OLD exempt false | NEW exempt true | ANSWER CHECK lines: [CR4] MISSES
+  press Luke 1:35 | OLD exempt false | NEW exempt true | ANSWER CHECK lines: [CR4] MISSES; [DR3] MEETS
+  press Luke 1:37 | OLD exempt false | NEW exempt false | ANSWER CHECK lines: [CR4] MEETS
+41102 chatgpt DEFENDER premise 6: presses 3
+  press Matthew 1:18 | OLD exempt false | NEW exempt false | ANSWER CHECK lines: [CR2] MEETS; [CR4] MEETS
+  press Luke 1:34 | OLD exempt false | NEW exempt false | ANSWER CHECK lines: [CR4] MEETS; [DR3] MEETS
+  press Isaiah 7:14 | OLD exempt false | NEW exempt true | ANSWER CHECK lines: [CR4] MISSES; [DR3] MEETS
+41117 chatgpt DEFENDER premise 4: presses 3
+  press Matthew 1:20 | OLD exempt false | NEW exempt true | ANSWER CHECK lines: [CR2] MISSES; [CR2] MISSES; [DR3] MEETS; [DR3] UNPROVEN
+  press Hebrews 10:5 | OLD exempt false | NEW exempt false | ANSWER CHECK lines: [CR4] MEETS; [DR3] MEETS
+  press Genesis 3:15 | OLD exempt false | NEW exempt false | ANSWER CHECK lines: [CR2] MEETS
+41418 sol DEFENDER premise 2: presses 5
+  press Luke 1:35 | OLD exempt false | NEW exempt true | ANSWER CHECK lines: [CR4; defender premise 2] MISSES; [CR4; defender premise 3] MISSES; [DR3; challenger premise 1] MEETS
+  press Luke 1:34 | OLD exempt false | NEW exempt true | ANSWER CHECK lines: [CR4; defender premise 2] MISSES; [CR4; defender premise 4] MISSES
+  press Luke 1:31 | OLD exempt false | NEW exempt true | ANSWER CHECK lines: [CR4; defender premise 2] FAILS
+  press Acts 1:8 | OLD exempt false | NEW exempt true | ANSWER CHECK lines: [CR4; defender premise 2] MISSES; [DR3; challenger premise 1] MEETS
+  press Matthew 17:5 | OLD exempt false | NEW exempt true | ANSWER CHECK lines: [CR4; defender premise 2] MISSES; [DR3; challenger premise 1] MEETS
+41418 sol DEFENDER premise 3: presses 7
+  press Matthew 1:20 | OLD exempt false | NEW exempt false | ANSWER CHECK lines: [CR4; defender premise 1] MEETS; [CR4; defender premise 3] MISSES; [DR3; challenger premise 2] MEETS; [DR3; challenger premise 3] MISSES
+  press Matthew 1:18 | OLD exempt false | NEW exempt true | ANSWER CHECK lines: [CR4; defender premise 1] MISSES; [CR4; defender premise 3] MISSES
+  press Luke 1:35 | OLD exempt false | NEW exempt true | ANSWER CHECK lines: [CR4; defender premise 2] MISSES; [CR4; defender premise 3] MISSES; [DR3; challenger premise 1] MEETS
+  press Matthew 1:16 | OLD exempt false | NEW exempt true | ANSWER CHECK lines: [CR2; CR4; defender premise 3] MISSES; [CR4; defender premise 5] MISSES; [DR3; challenger premise 3] MEETS
+  press Isaiah 7:14 | OLD exempt false | NEW exempt false | ANSWER CHECK lines: [CR2; defender premise 3] MISSES; [CR2; CR4; defender premise 5] MEETS
+  press 1 Chronicles 28:6 | OLD exempt false | NEW exempt false | ANSWER CHECK lines: [CR4; defender premise 3] MEETS; [DR3; challenger premise 2] MEETS
+  press Romans 1:4 | OLD exempt false | NEW exempt false | ANSWER CHECK lines: [CR4; defender premise 3] MEETS; [DR3; challenger premise 2] MEETS

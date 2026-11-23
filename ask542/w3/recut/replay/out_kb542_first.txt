@@ -1,0 +1,12 @@
+judge 1 sol62 | first reply md5 d5c8db2e chars 44470 | rounds from prompt: CR1 9883, DR1 10968, CR2 15146, DR2 21226, CR3 17620, DR3 21360, CR4 24860, DR4 6717
+  OLD K-UNX: CHALLENGER premise 3 [460 ASSUMES]
+  NEW K-UNX: CHALLENGER premise 3 [460 ASSUMES]
+  marks equal: true | OLD marks 1, NEW marks 1
+judge 2 chatgpt | first reply md5 777abd86 chars 30364 | rounds from prompt: CR1 9883, DR1 10968, CR2 15146, DR2 21226, CR3 17620, DR3 21360, CR4 24860, DR4 6717
+  OLD K-UNX: none
+  NEW K-UNX: none
+  marks equal: true | OLD marks 0, NEW marks 0
+judge 3 sol | first reply md5 25da92e9 chars 55337 | rounds from prompt: CR1 9883, DR1 10968, CR2 15146, DR2 21226, CR3 17620, DR3 21360, CR4 24860, DR4 6717
+  OLD K-UNX: DEFENDER premise 2 [479-481 general]; DEFENDER premise 3 [479-481 general]
+  NEW K-UNX: none
+  marks equal: false | OLD marks 2, NEW marks 0
