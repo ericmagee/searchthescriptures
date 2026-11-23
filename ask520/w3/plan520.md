@@ -1,4 +1,4 @@
-# ASK 520 plan (W3, seat 33), rev 2, 2026-11-23. Replaces rev 1 (48eef61f, kept as plan520_rev1.md) on W2's C-e (Wall 10430); changed: OBJECTIVE (expected 41117 values), HITS (the unxAcFail copy), CRITERIA C2a, WRONG-IF limit, STEPS (build order). A PLAN ONLY; nothing is written.
+# ASK 520 plan (W3, seat 33), rev 3, 2026-11-23. Replaces rev 2 (107725bf, kept as plan520_rev2.md) on W4's build finding (Wall 10477): S1 reads the presses of round 2 and round 3 (W4's variant B), and C2a and C5 say how Terra's count is shown. Rev 2 replaced rev 1 (48eef61f) on W2's C-e (Wall 10430). A PLAN ONLY; nothing is written.
 Source: the operator's "Four Remaining Bugs in the Run (4) Debug Log", Bug 4, "K-UNX vs. Commitment 5 Friction on Sol 6.1" (13:10 CST 11-20, W4 thread), released by his "yes" at 02:02 CST 11-23 (Wall 10381). Run (4) is 41117; the basis is in the ASK 517 plan.
 His words: "Sol 6.1 counted Defender Premises 4 and 5 as UNEXHIBITED under Commitment 5 (unanswered/unfitted pressed witnesses), and K-UNX flagged both as UNCURED ... because Sol 6.1's STATEMENT didn't name a missing initial layer (L1/L2/L3)." And: "Terra 6.1 yielded to K-UNX and changed Premises 1-5 to SUPPORTED (c=0), whereas Sol 6.1 and Sol 6.2 stood their ground on Commitment 5 (c=4). Clarifying in the K-UNX prompt that an UNEXHIBITED count grounded on an unanswered/unfitted PRESSED WITH witness (Commitment 5) does not require naming a missing L1-L3 layer will align Terra 6.1 with Sol 6.1 and Sol 6.2."
 He prefaced the message "Feedback (only use if useful)", so the design is the team's.
@@ -67,6 +67,7 @@ HITS:
 
 CHANGE:
 - S1. L479, the general path: before the item is pushed, add one more skip. If any press p of premise j (PR.filter(p=>p.n===j)) has unxAcFail(text,p.ref,rk) true, continue. The press need not be named in the count. Under ruling 372, one unanswered proven press makes the premise UNEXHIBITED, so the count is right on that press alone.
+  - Rev 3 (W4 10477): the presses are read from round 2 and round 3 of the pressing side: [...PR, ...unxPresses(side==='CHALLENGER'?R.CR2:R.DR2)]. As rev 2 wrote it, PR read R.DR3 alone for DEFENDER premises, and on 41117 R.DR3 has no UNSUPPORTED [L4] PREMISES list, so S1 dropped nothing there. The intent was always "the presses of premise j", wherever the side's list states them. The round tag that unxAcFail reads (rk) is unchanged.
 - S2. Engine manual: the K-UNX row gains this sentence: "Not raised on a premise whose press the judge's own ANSWER CHECK grades MISSES or FAILS (Commitment 5, ruling 372; ASK 520)."
 - Not changed:
   - the other K-UNX paths;
@@ -78,9 +79,10 @@ CHANGE:
 - C1: the library stays at 3560 lines, with engine and child equal. Only L479 changes. A diff is shown.
 - C2: on the five runs, the built detector runs on each judge's stored pre-cure text and rounds. Its K-UNX items are listed against today's. For every dropped item, the build shows the press of that premise and the judge's ANSWER CHECK line that grades it MISSES or FAILS.
 - C2a (readers): the build replays L1271, pkgRCT (rctOut), pkgD38 and Derive Outcome with the dropped items removed. It lists every count, standing, RESULT and outcome that changes. Each change must follow from the judge's own count standing, unasked. Expected on 41117: Terra's DEFENDER count is no longer cut to 0 by its K-UNX cures.
+  - Rev 3: an offline replay reuses each judge's logged cure replies, and it cannot ask a judge again. Terra's one logged CORRECTED COUNT DEFENDER 0 still answers its kept items, so the replay shows Terra at c=0 (W4 10477). C2a therefore stands on three things: (i) the item list (C2); (ii) a replay of the readers with the logged replies, showing no outcome change and no change other than the dropped items; and (iii) C5 for Terra's count. The expected c=2 is not required offline. Under 517's library, the replay's standing reads by its count (SELF-SUPPORTED at c=0).
 - C3, known-bad: on 41117, Sol 6.1's DEFENDER premises 4 and 5 are not raised.
 - C4, known-good: an item on a premise with no press graded MISSES or FAILS by that judge is still raised. Take Sol 6.1's premise 2 (row 48777, the "saying the block lacks" path, which is untouched) and any general-path item that C2 keeps. Each is shown.
-- C5: one live run, on the operator's word. No K-UNX item is raised on a premise whose press that judge's ANSWER CHECK grades MISSES or FAILS.
+- C5: one live run, on the operator's word. No K-UNX item is raised on a premise whose press that judge's ANSWER CHECK grades MISSES or FAILS. On a run where a judge counts premises on presses it grades MISSES, the report gives that judge's count, standing and RESULT after cure, as the live evidence for C2a (iii).
 - DONE: C1 to C5 pass, and the manual entry is written and read back.
 
 ## 5. WRONG-IF
@@ -97,7 +99,7 @@ This plan's commit is on the Wall post. W4 commits the replay script, its inputs
 
 ## 8. STEPS
 1. One non-builder seat grades this plan. Waits on: nothing.
-2. W4 builds S1 on 517's built library and runs C1 to C4. Waits on: step 1, 517's build, and W4's queue (519).
+2. W4 builds S1 (rev 3, variant B, patch520b.py 4179932f) and runs C1 to C4. The write target is rebased on 517's written library. Waits on: step 1, 517's build, and W4's queue (519).
 3. Grade of the build. Waits on: step 2.
 4. W4 writes on the operator's card in W4's thread. BUILD ORDER: 517 is written first, and 520 is built and replayed on 517's written library. 520 changes only L479, which 517 does not touch, so neither plan's lines move. 517 needs no change. Waits on: step 3, and 517 written.
 5. W3 writes S2 after a read, on the operator's card in W3's thread. Waits on: step 4.
