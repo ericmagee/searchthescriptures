@@ -44,7 +44,7 @@ FOUND, NOT IN SCOPE: E-KEY (row 51355) follows the collision grades and needs no
 Prompt size: the block is at most 1,500 characters per item; the question text is 530 characters per item. On 41418 W4 states the total enforcer prompt before and after (condition 3 of 10634).
 
 ## 5. CRITERIA and DONE
-1. Only line 3058 and the named reply parser and writer change, in the engine and the child alike. Every other node and every other Library line is byte-equal to live. After the write, the engine's and the child's Libraries are equal to each other (same hash), as they are now, and the child's Library Check (ASK 422a) passes.
+1. Only line 3058 and the named reply parser and writer change, in the engine and the child alike. Every other node and every other Library line is byte-equal to live. After the write, the engine's and the child's Libraries are equal to each other (same hash), as they are now, and the child's Library Check (ASK 422a) passes. It checks the MAP hash too, so any new MAP key goes into both copies (W2 10672).
 2. The enforced E-COL, E-KEY and E-HOLD outcomes on the 41418 replay are equal to stored (no grade, send-back or count changes).
 3. Each E-COL item with a MEETS or ANSWER round carries THE ANSWER'S ROWS and the TRIAL QUESTION, in both workflows. On 41418, the D5 vs C2 items carry Matthew 1:24, and so does the synthetic item for qwen 4 max's D5 (judgment 1265, child).
 4. Each reply is parsed and code-checked as in change 3; each item writes exactly one E-ONE row.
@@ -55,7 +55,7 @@ DONE: criteria 1 to 6 on the build; the measurement in section 7 meets its stop 
 ## 6. WRONG-IF
 1. KNOWN BAD: the TRIAL must give ENGAGE: NO on terra's D5 vs C2 line (rows 51332, 51333), naming Matthew 1:18 or Matthew 1:25 as read alone and quoting Matthew 1:24 from the block, and on qwen 4 max's D5 line in judgment 1265. The plan is wrong if either reads ENGAGE: YES.
 2. KNOWN GOOD (condition 5 of W1 10636): W1 picks at least 10 lines from dec530.json, each with a one-line reason why its deciding step weighs the answer's rows, and posts them before any measurement. The plan is wrong if more than 1 of them reads ENGAGE: NO.
-3. STOP NUMBER (condition 2 of W2 10634), set now: if criterion 1 or 2 above fails, the team stops. W3 makes one revision of the question text; if the next measurement also fails, ASK 530 closes as NOT SEPARABLE and is reported to the operator. There is no further tuning.
+3. STOP NUMBER (condition 2 of W2 10634), set now: if WRONG-IF 1 or 2 above fails, the team stops. W3 makes one revision of the question text; if the next measurement also fails, ASK 530 closes as NOT SEPARABLE and is reported to the operator. There is no further tuning.
 4. A NO READ rate above 20% of items on 41418 means the code check or the block finder is wrong; this is fixed before any count card.
 5. The plan is wrong if THE ANSWER'S ROWS changes any enforced grade (criterion 2).
 
@@ -70,7 +70,7 @@ DONE: criteria 1 to 6 on the build; the measurement in section 7 meets its stop 
 - debate_enforcer_log 51332, 51333, 51355 and debate_results 41418: SQL.
 
 ## 9. STEPS
-1. W2 grades rev 1. W1 posts the known-good set (section 6.2).
+1. W2 graded rev 2 PASS (Wall 10672). W1 posts the known-good set (section 6.2).
 2. W4 builds against a fresh live readback of the engine and the child: touched lines only, the same change in both, a synthetic E-COL item for 41418 D5 vs C2 printed in full, a stubbed reply run through the code check (one YES, one NO with a verbatim row, one NO with a row not in the block, which must give NO READ), and criterion 2 by an offline replay of the enforced paths with the stored replies.
 3. W2 grades the build.
 4. The coordinator sends the operator one card: the write, and separately the paid replay release.
