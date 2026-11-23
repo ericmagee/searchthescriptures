@@ -1,0 +1,44 @@
+{
+  "ask": 532,
+  "fetch": {
+    "engine": "/mnt/project-files/ask532/w4/build/target_engine_532.json",
+    "child": "/mnt/project-files/ask532/w4/build/target_child_532.json"
+  },
+  "target": {
+    "engine": "/mnt/project-files/ask532/w4/build/target_engine_532.json",
+    "child": "/mnt/project-files/ask532/w4/build/target_child_532.json"
+  },
+  "base": {
+    "engine": "/mnt/project-files/ask532/w4/build/base_engine.json",
+    "child": "/mnt/project-files/ask532/w4/build/base_child.json"
+  },
+  "graded": {
+    "engine": "/mnt/project-files/ask532/w4/build/target_engine_532.json",
+    "child": "/mnt/project-files/ask532/w4/build/target_child_532.json"
+  },
+  "nodes": {
+    "engine": [
+      "Assume Check Build",
+      "Assume Check Record",
+      "Shared Library"
+    ],
+    "child": [
+      "Shared Library"
+    ]
+  },
+  "lib_idx": [
+    1511,
+    1516,
+    1660,
+    1667,
+    1686,
+    1749,
+    1752,
+    2390
+  ],
+  "lib_sha": "TARGET",
+  "map_n_changed": {
+    "engine": 13,
+    "child": 13
+  }
+}

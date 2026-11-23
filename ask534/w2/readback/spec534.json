@@ -1,0 +1,7 @@
+{"ask":534,
+ "fetch":{"engine":"/mnt/project-files/ask534/w4/write/fetchback_engine_534.json","child":"/mnt/project-files/ask534/w4/write/fetchback_child_534.json"},
+ "target":{"engine":"/mnt/project-files/ask534/w4/write/full_engine.json","child":"/mnt/project-files/ask534/w4/write/full_child.json"},
+ "base":{"engine":"/mnt/project-files/ask534/w4/write/prewrite_engine.json","child":"/mnt/project-files/ask534/w4/write/prewrite_child.json"},
+ "graded":{"engine":"/mnt/project-files/ask534/w4/build/target_engine_534.json","child":"/mnt/project-files/ask534/w4/build/target_child_534.json"},
+ "nodes":{"engine":["Shared Library"],"child":["Shared Library"]},
+ "lib_idx":[2277],"lib_sha":"TARGET","map_n_changed":{"engine":4,"child":4}}
