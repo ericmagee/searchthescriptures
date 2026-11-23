@@ -1,4 +1,4 @@
-# AAR, RUN 41736 (DRAFT rev 3, W3)
+# AAR, RUN 41736 (DRAFT rev 4, W3)
 
 Anchor: W4 run report, Wall 10868. Order: the_wall_manual v19 section 7.4. This draft authorizes nothing.
 
@@ -45,7 +45,9 @@ Each ASK written today, its objective as posted before the run (its ask_aar_snap
    - In round 3 the challenger dropped the limb "the clause names no human father" under LINK 3: NARROWED TO. The same round's LINK 1 (SUPPORTED) already ends "no human father stands in the begetter's place".
    - The round 4 sentence restates LINK 1, so under luna's own instruction it "does not assert it again" (W4 10874).
    - The cure set D2 vs C1 and D3 vs C1 to CHALLENGER LINK BROKEN for all three judges. Before it, each judge's RESULT read CHALLENGER WINS (AUDIT v25). After it, each read UNDERDETERMINED, and the outcome became UNGRADED.
-2. ASK 541 storage (found by W2). Two rows are stored with the wrong status, listed under OBJECTIVE item 20. No count moved.
+2. ASK 541 storage (found by W2; traced by W4 at 10878). Two rows are stored with the wrong status, listed under OBJECTIVE item 20. No count moved, because the engine does not read the table back. The judge fault ledger, however, reads the stored status. Neither row has a ledger row now. Two causes:
+   - The engine labels E-ASSUME cures "CURE (record-only until promoted)", which is 541's marker M2, although ASK 531 made E-ASSUME counted. This affects row 51983 only.
+   - Uncounted gate rows end in " (RECORD-ONLY)", which is not one of 541's markers. This affects row 52025 and 98 older E-GATE rows in 36 runs.
 3. pkgBFX, the K-UNX range (found by W1). The K-UNX item says the list against the defender holds premises 1 to 5, but the defender's round 2 lists 6 (PREMISE COUNT: 6). The rows are 51726 (sol62, count to 2), 51739 (chatgpt), 52025 (sol) and 52062 (qwen4max). Cause, as W1 measured it in plan 10875: the range check finds blocks by the heading "LINK <number>", so the block "LINK none [premise 6]" is skipped, 5 blocks are found, and premise 6 is called out of range. In run 41090, two "LINK none" blocks made the check say 1 to 4.
 4. sol's removal sum (found by W2). sol's REMOVED FOR line sums to 5, against its drv_uncured of 4 ("UNREAD COUNTED LINE x1"). Not traced.
 5. sol62's count grounds (found by W3). sol62's CONCEDED LINKS line names no counted premise (AUDIT v50). This repeats 41418 item 10.
@@ -75,7 +77,7 @@ Each ASK written today, its objective as posted before the run (its ask_aar_snap
 ## SUGGESTED IMPROVEMENTS
 1. ASK (number to be assigned), pkgCKL: the close ENFORCER no longer charges a closing sentence that restates what the same round kept under its own link because a different link was narrowed or dropped. The confirm becomes NOT CONFIRMED (kept link), recorded and not applied. Expected effect in 41736: D2 vs C1 and D3 vs C1 are not cured to BROKEN, and each RESULT stays as its judge wrote it (CHALLENGER WINS). A true same-link confirm (41024 row 47150) still applies. Planner and builder W4; grader W1; W4 writes on a card. Plan rev 0 at Wall 10877 (askPENDING_ckl/w4/plan_ckl.md, 4,380 characters, md5 c4338944). Scope: one engine node (Close Enforcer Record), code only. No prompt, model, setting, Library or child change. Its 0.75 word-share threshold is set by the package, and is a guess outside the measured cases. Grades: none yet. Card: not with the operator.
 2. ASK (number to be assigned): the pkgBFX K-UNX range check stops calling a listed premise answered under a "LINK none [premise N]" block out of range. Planner and builder W1; grader W2; W4 writes on a card. Plan rev 0 at Wall 10875 (askbfx/w1/plan_bfx.md, 3,631 characters, md5 9d732d93, commit 1b51b5df). Scope: Shared Library line 467 in the engine and the child, plus one new helper. The size of the code change in characters is not stated in the plan. Grades: none yet. Card: not with the operator.
-3. ASK 541 fix: W4 is tracing the 2 rows. No plan posted yet.
+3. ASK 541 fix, option A (database only): correct the stored status for both causes. Planner and builder W4. Plan, size in characters, and grades: not yet posted. Card: not with the operator.
 
 ## KNOWLEDGE BASE
 NONE: all four reviews answered NO.
