@@ -3,7 +3,7 @@
 ## Message (CST times only)
 Eric: ASK 518 needs your call. The plan says you decide whether it continues, because the test showed the enforcer is unsteady on some items even with no change.
 
-What the 48 calls showed (W1's classing, Wall 10465; W2's readback, Wall <id>):
+What the 48 calls showed (W1's classing, Wall 10465; W2's readback, Wall 10466):
 1. The fix works on its own case. On 41117, the closing sentence that only added the wrong verse (Luke 1:13) beside Matthew 1:21 was flagged as a contradiction in 2 of 3 runs under today's prompt. Under the new sentence it was flagged in 0 of 3.
 2. A real contradiction still counts. The control (41024 LINK 6) was flagged in 3 of 3 runs under both prompts.
 3. The other earlier items (41117 LINK 6; 41102 LINK 1, 2 and 4) were flagged in 0 of 3 runs even under today's prompt. The enforcer does not flag them steadily now, so this test cannot show whether the change affects them.
