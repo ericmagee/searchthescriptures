@@ -1,4 +1,4 @@
--- ASK AAR snapshot rows, DRAFT rev 2 (W3, 2026-11-23; replaces rev 1 5574aed0 (Wall 10369) and rev 0 e715efab, on W2 10367 C1, C2 and W4 10368 C3), for the coordinator (seat 36) to run once after W2's grade. NOT RUN.
+-- ASK AAR snapshot rows, DRAFT rev 3 (W3, 2026-11-23; replaces rev 2 1bba2282 (Wall 10371), rev 1 5574aed0 and rev 0 e715efab, on W2 10367 C1, C2, W4 10368 C3 and W2 10370 (N1 withdrawn)), for the coordinator (seat 36) to run once after W2's grade. NOT RUN.
 -- Rows: 494 A2 (proven by run 40995; prior_row 32), 504, 505, 506, 507, 508, 509, 510, 511, 512, 513, 514, 515 A1, 515 r7, 516. Each field cites Wall ids or audit ids.
 -- Not covered: ASKs 517 to 520 (held). The per-field sources are in each row's sources array.
 -- Run from seat 36 in one call, then read the closing SELECTs in separate calls.
@@ -160,10 +160,10 @@ INSERT INTO public.ask_aar_snapshots (ask, rev, title, objective, objective_met,
 (516, 'A1', $t$Every enforcer call is given the rounds in full$t$,
  $t$Every judge enforcer call carries THE ROUNDS IN FULL, all eight rounds tagged and as stored, the same bytes in every call and before anything that varies, so the enforcer can weigh rows on any point either side laid (approved by the operator's "Work on 516", 13:13 CST 11-20). (ask516/w3/plan516.md rev 3)$t$,
  'no', $t$Written 19:23:42Z 11-20 (audit 39526, 39527), graded PASS by W3 only (10314; second grade held), read back by W3 (10316). The first runs on it, 41128 and 41155, crashed out of memory; 41147, the retry of 41128, failed at Record Substitution on recovered placeholders (W4 10324, 10353). Reverted to 515 rev 7 on the operator's card 07:22:37Z 11-23 (audit 39555, 39556; W4 10326), read back by W2 (10327). A lower-memory plan (plan516b.md rev 6, a4dc21f6) has PASS from W4 (10360) and W2 (10362), not built.$t$,
- '10314, 10315, 10316, 10324, 10326, 10327, 10353, 10360, 10362, 10367, 10368', 'session_01H1X3ANeXjt6pnw4fs6Wxr4', NULL,
+ '10314, 10315, 10316, 10324, 10326, 10327, 10353, 10360, 10362, 10367, 10368, 10370', 'session_01H1X3ANeXjt6pnw4fs6Wxr4', NULL,
  '"not yet"'::jsonb, $t${"answer": "Write it", "thread": "W4", "press_time": "19:23:42Z", "source": "audit 39526 and 39527"}$t$::jsonb, 'W3',
  $t${"md5": "1203417d", "path": "ask516/w3/plan516.md"}$t$::jsonb,
- $t$[{"md5": "2a3a8de7", "path": "ask516/w4/patch516.js"}, {"md5": "3c4d415e", "path": "target engine"}, {"md5": "7567713f", "path": "target child"}, {"note": "10313 and 10314 named 38644970 and 673f336d, which are the first eight characters of the sha256 of target_engine_516.json and target_child_516.json; their md5s are 3c4d415e and 7567713f (W4 10368 C3). The targets equal the fetch-backs in node parameters and connections (W2 10367 N1)."}]$t$::jsonb,
+ $t$[{"md5": "2a3a8de7", "path": "ask516/w4/patch516.js"}, {"md5": "3c4d415e", "path": "target engine"}, {"md5": "7567713f", "path": "target child"}, {"note": "10313 and 10314 named 38644970 and 673f336d, which are the first eight characters of the sha256 of target_engine_516.json and target_child_516.json; their md5s are 3c4d415e and 7567713f (W4 10368 C3)."}]$t$::jsonb,
  $t${"what": "write back the pre files on the operator's word", "files": [{"md5": "d5519cb2", "path": "ask516/w4/pre_engine_516.json"}, {"md5": "15424037", "path": "ask516/w4/pre_child_516.json"}]}$t$::jsonb,
  $t$[{"seat": "W3", "verdict": "PASS (build; second grade held)", "wall_id": 10314, "md5_graded": "3c4d415e", "verdict_norm": "PASS"}, {"seat": "W3", "verdict": "PASS (build; second grade held)", "wall_id": 10314, "md5_graded": "7567713f", "verdict_norm": "PASS"}]$t$::jsonb,
  ARRAY['3c4d415e','7567713f'], $t$[39526, 39527]$t$::jsonb,

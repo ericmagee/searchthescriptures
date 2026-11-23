@@ -98,13 +98,13 @@ R[-1]['rev']='r7'
 wf(516,'Every enforcer call is given the rounds in full',
  "Every judge enforcer call carries THE ROUNDS IN FULL, all eight rounds tagged and as stored, the same bytes in every call and before anything that varies, so the enforcer can weigh rows on any point either side laid (approved by the operator's \"Work on 516\", 13:13 CST 11-20). (ask516/w3/plan516.md rev 3)",
  'no',"Written 19:23:42Z 11-20 (audit 39526, 39527), graded PASS by W3 only (10314; second grade held), read back by W3 (10316). The first runs on it, 41128 and 41155, crashed out of memory; 41147, the retry of 41128, failed at Record Substitution on recovered placeholders (W4 10324, 10353). Reverted to 515 rev 7 on the operator's card 07:22:37Z 11-23 (audit 39555, 39556; W4 10326), read back by W2 (10327). A lower-memory plan (plan516b.md rev 6, a4dc21f6) has PASS from W4 (10360) and W2 (10362), not built.",
- '10314, 10315, 10316, 10324, 10326, 10327, 10353, 10360, 10362, 10367, 10368','19:23:42Z',"1203417d","ask516/w3/plan516.md",("ask516/w4/patch516.js","2a3a8de7"),"3c4d415e","7567713f","d5519cb2","15424037","0f4def0e","410813c9",
+ '10314, 10315, 10316, 10324, 10326, 10327, 10353, 10360, 10362, 10367, 10368, 10370','19:23:42Z',"1203417d","ask516/w3/plan516.md",("ask516/w4/patch516.js","2a3a8de7"),"3c4d415e","7567713f","d5519cb2","15424037","0f4def0e","410813c9",
  ("1b20b067","38d1020c","c9db9777","48ea0c0d"),("6f2ae36f19303a92","1bcba53c4b456acf"),[39526,39527],
  [G("W3","PASS (build; second grade held)",10314,"3c4d415e"),G("W3","PASS (build; second grade held)",10314,"7567713f")],
  [{"seat":"W3","result":"CONFIRMED","wall_id":10316},{"seat":"W2","result":"revert CONFIRMED (engine 31702b15, child cd2d84d8)","wall_id":10327}],
  {"runs":{"41128":"out of memory","41155":"out of memory","41147":"retry of 41128; failed at Record Substitution (W4 10353)"},"report":10324,"trace":10332,"reverted":"07:22:37Z 11-23, audit 39555 and 39556"},
  {"engine_manual":"v230 (4a5e85ce); revert entry v231 (47be13a3)","op_doc":"not yet"},'reverted',[10310,10311,10312,10313,10314,10315,10316,10318,10322,10324,10326,10327,10332,10353,10354,10358,10360,10362,"audit 39526","audit 39527","audit 39555","audit 39556"],("ask516/w4/pre_engine_516.json","ask516/w4/pre_child_516.json"))
-R[-1]['build'].append({"note":"10313 and 10314 named 38644970 and 673f336d, which are the first eight characters of the sha256 of target_engine_516.json and target_child_516.json; their md5s are 3c4d415e and 7567713f (W4 10368 C3). The targets equal the fetch-backs in node parameters and connections (W2 10367 N1)."})
+R[-1]['build'].append({"note":"10313 and 10314 named 38644970 and 673f336d, which are the first eight characters of the sha256 of target_engine_516.json and target_child_516.json; their md5s are 3c4d415e and 7567713f (W4 10368 C3)."})
 # DB ASKs
 R.append(dict(ask=505,rev='A1',prior=None,title='Closing forfeit takes a win only from the side that made it; standing gate',
  objective="C1: a closing contradiction only takes a win away from the side that made it, both sides (card \"Both sides (B)\"). C0: a side PROP-DEPENDENT or COLLAPSED on two or more counted judges cannot prevail (operator 22:29 CST 11-19, card \"Yes, always\"). Forward only, from v_505_from. (outcome_fix/w3/plan_outcome.md rev 3)",
@@ -162,7 +162,7 @@ def q(s):
 def j(o): 
     if o is None: return 'NULL'
     return q(json.dumps(o,ensure_ascii=False))+'::jsonb'
-out=["-- ASK AAR snapshot rows, DRAFT rev 2 (W3, 2026-11-23; replaces rev 1 5574aed0 (Wall 10369) and rev 0 e715efab, on W2 10367 C1, C2 and W4 10368 C3), for the coordinator (seat 36) to run once after W2's grade. NOT RUN.",
+out=["-- ASK AAR snapshot rows, DRAFT rev 3 (W3, 2026-11-23; replaces rev 2 1bba2282 (Wall 10371), rev 1 5574aed0 and rev 0 e715efab, on W2 10367 C1, C2, W4 10368 C3 and W2 10370 (N1 withdrawn)), for the coordinator (seat 36) to run once after W2's grade. NOT RUN.",
 "-- Rows: 494 A2 (proven by run 40995; prior_row 32), 504, 505, 506, 507, 508, 509, 510, 511, 512, 513, 514, 515 A1, 515 r7, 516. Each field cites Wall ids or audit ids.",
 "-- Not covered: ASKs 517 to 520 (held). The per-field sources are in each row's sources array.",
 "-- Run from seat 36 in one call, then read the closing SELECTs in separate calls.",
