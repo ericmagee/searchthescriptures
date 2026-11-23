@@ -42,8 +42,8 @@ UPDATE kb_sights SET summary = $c$IN ROUND 1, OPEN WITH THE ACCOUNT (operator, 1
 6. After the taking, no relations until the birth: "knew her not till she had brought forth her firstborn son" (Matthew 1:25, read with Matthew 1:24).
 The layers for each step are held in Sight 266 (THREE EVENTS, NOT ONE).
 
-$c$ || summary, notes = notes || $c$
-ADDED 2026-11-23 (operator, 09:10 CST 11-23, "State the social-scandal reading explicitly in the opening chain", on the operator's write card): the paragraph "IN ROUND 1, OPEN WITH THE ACCOUNT" was put before the IN DEBATE head of the summary. Nothing else in this row changed.
+$c$ || replace(summary, $c$"Before they came together" is synerchomai (G4905): "to convene, depart in company with, associate with, or (specially), cohabit (conjugally)".$c$, $c$"Before they came together" is synerchomai (G4905). The KJV renders it "accompany, assemble (with), come (together), come (company, go) with, resort"; its sense at Matthew 1:18 is set by the narrative (Matthew 1:20, 1:24) and by rulings 359 and 500.$c$), notes = notes || $c$
+ADDED 2026-11-23 (operator, 09:10 CST 11-23, "State the social-scandal reading explicitly in the opening chain", on the operator's write card): the paragraph "IN ROUND 1, OPEN WITH THE ACCOUNT" was put before the IN DEBATE head of the summary, and the synerchomai line's "cohabit (conjugally)" gloss was replaced by the KJV renderings of G4905. Nothing else in this row changed.
 $c$, updated_at = now()
  WHERE id=2028 AND sight_number=1822 AND md5(summary)='ed7a8a8b686c60bb61eeaf41f6330529' AND md5(notes)='705463260e1e81ba4c064a8065ec8901';
 GET DIAGNOSTICS c = ROW_COUNT;
