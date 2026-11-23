@@ -1,0 +1,30 @@
+ASK 532 readback; files: {'fetch_engine': '997097a2', 'fetch_child': 'fc5ec37d', 'target_engine': '092d86b0', 'target_child': '6feb7279', 'base_engine': 'f14d09e0', 'base_child': 'da10c276'}
+PASS engine: fetch-back equals target on every node (397 nodes)
+PASS engine: connections equal target
+PASS engine: settings equal target
+PASS engine: nodes changed from base ['Assume Check Build', 'Assume Check Record', 'Shared Library'], expected ['Assume Check Build', 'Assume Check Record', 'Shared Library']
+PASS engine: connections equal base
+PASS engine: versionId moved e5bad791-6541-4976-bfe9-b28084a4c7fb -> 350ef919-8a1c-42cc-9b92-f92b69e98e48
+PASS engine: Library indexes changed [1511, 1516, 1660, 1667, 1686, 1749, 1752, 2390], expected [1511, 1516, 1660, 1667, 1686, 1749, 1752, 2390]
+PASS engine: MAP keys and p equal base
+PASS engine: MAP n changed 13, expected 13
+PASS engine: header sha c75101694c687e31 -> 426f70373a88dc2e, expected 426f70373a88dc2e
+PASS engine: Library lines [1511, 1516, 1660, 1667, 1686, 1749, 1752, 2390] equal the graded build
+PASS engine: named non-Library nodes equal the graded build
+PASS engine: runcheck: fetchback_engine_532.json OK 426f70373a88dc2e
+PASS child: fetch-back equals target on every node (156 nodes)
+PASS child: connections equal target
+PASS child: settings equal target
+PASS child: nodes changed from base ['Shared Library'], expected ['Shared Library']
+PASS child: connections equal base
+PASS child: versionId moved 580125e4-9e66-4fd7-8434-599ee9d6e79c -> dcc562fe-11fe-4fdf-88f8-2128213ed3c9
+PASS child: Library indexes changed [1511, 1516, 1660, 1667, 1686, 1749, 1752, 2390], expected [1511, 1516, 1660, 1667, 1686, 1749, 1752, 2390]
+PASS child: MAP keys and p equal base
+PASS child: MAP n changed 13, expected 13
+PASS child: header sha c75101694c687e31 -> 426f70373a88dc2e, expected 426f70373a88dc2e
+PASS child: Library lines [1511, 1516, 1660, 1667, 1686, 1749, 1752, 2390] equal the graded build
+PASS child: named non-Library nodes equal the graded build
+PASS child: runcheck: fetchback_child_532.json OK 426f70373a88dc2e
+PASS engine and child Library text equal
+PASS Library Check pair: 532/w4/write/fetchback_child_532.json: engine lib 426f70373a88dc2e map 1154e11a54c10fe1 | child lib 426f70373a88dc2e map 1154e11a54c10fe1 | Library Check PASSES
+READBACK MATCH
