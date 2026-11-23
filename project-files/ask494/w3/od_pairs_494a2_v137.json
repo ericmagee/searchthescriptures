@@ -1,0 +1,6 @@
+[
+ {
+  "old": "or by postgres through MCP. Two instruments",
+  "new": "or by postgres through MCP. Since ASK 494 A2 (written 20:51:10Z 2026-11-19), an anon, authenticated or PUBLIC call to any of the nine engine write functions (`record_debate_row`, `record_debate_row_tokens`, `record_debate_judgment`, `derive_debate_outcome`, `odv1_record_panel_substitution`, `odv1_record_panel_alternates`, `record_enforcer_log`, `record_replay_judgments`, `odv1_mark_grading_failed`) also returns `42501`; postgres, service_role and `lab_seat` keep EXECUTE, and the engine calls them with the service_role credential (shown by run 40995). Two instruments"
+ }
+]
