@@ -1,7 +1,52 @@
-{"ask":533,
- "fetch":{"engine":"/mnt/project-files/ask533/w4/write/fetchback_engine_533.json","child":"/mnt/project-files/ask533/w4/write/fetchback_child_533.json"},
- "target":{"engine":"/mnt/project-files/ask533/w2/build/target_engine_533.json","child":"/mnt/project-files/ask533/w2/build/target_child_533.json"},
- "base":{"engine":"/mnt/project-files/ask533/w4/write/prewrite_engine.json","child":"/mnt/project-files/ask533/w4/write/prewrite_child.json"},
- "nodes":{"engine":["L2 Count Plan","Shared Library"],"child":["Shared Library"]},
- "lib_idx":[483,489,514,517,849,1052,1212,1311,2177,3314],"lib_sha":"9a4d55c66bf65d7f","map_n_changed":{"engine":33,"child":33},
- "extra":[{"name":"test533 on the engine fetch-back","cmd":"cd /mnt/project-files/ask533/w2/build && node test533.js /mnt/project-files/ask533/w4/write/prewrite_engine.json /mnt/project-files/ask533/w4/write/fetchback_engine_533.json | tail -1","expect":"ALL PASS"}]}
+{
+ "ask": 533,
+ "fetch": {
+  "engine": "/mnt/project-files/ask533/w4/write/fetchback_engine_533.json",
+  "child": "/mnt/project-files/ask533/w4/write/fetchback_child_533.json"
+ },
+ "target": {
+  "engine": "/mnt/project-files/ask533/w4/write/full_engine.json",
+  "child": "/mnt/project-files/ask533/w4/write/full_child.json"
+ },
+ "base": {
+  "engine": "/mnt/project-files/ask533/w4/write/prewrite_engine.json",
+  "child": "/mnt/project-files/ask533/w4/write/prewrite_child.json"
+ },
+ "nodes": {
+  "engine": [
+   "L2 Count Plan",
+   "Shared Library"
+  ],
+  "child": [
+   "Shared Library"
+  ]
+ },
+ "lib_idx": [
+  483,
+  489,
+  514,
+  517,
+  849,
+  1052,
+  1212,
+  1311,
+  2177,
+  3314
+ ],
+ "lib_sha": "TARGET",
+ "map_n_changed": {
+  "engine": 33,
+  "child": 33
+ },
+ "extra": [
+  {
+   "name": "test533 on the engine fetch-back",
+   "cmd": "cd /mnt/project-files/ask533/w2/build && node test533.js /mnt/project-files/ask533/w4/write/prewrite_engine.json /mnt/project-files/ask533/w4/write/fetchback_engine_533.json | tail -1",
+   "expect": "ALL PASS"
+  }
+ ],
+ "graded": {
+  "engine": "/mnt/project-files/ask533/w2/build/target_engine_533.json",
+  "child": "/mnt/project-files/ask533/w2/build/target_child_533.json"
+ }
+}

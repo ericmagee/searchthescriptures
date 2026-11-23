@@ -9,6 +9,8 @@ PASS engine: Library indexes changed [483, 489, 514, 517, 849, 1052, 1212, 1311,
 PASS engine: MAP keys and p equal base
 PASS engine: MAP n changed 33, expected 33
 PASS engine: header sha 5aedc2f2ac70ba66 -> 9a4d55c66bf65d7f, expected 9a4d55c66bf65d7f
+PASS engine: Library lines [483, 489, 514, 517, 849, 1052, 1212, 1311, 2177, 3314] equal the graded build
+PASS engine: named non-Library nodes equal the graded build
 PASS engine: runcheck: target_engine_533.json OK 9a4d55c66bf65d7f
 PASS child: fetch-back equals target on every node (156 nodes)
 PASS child: connections equal target
@@ -20,6 +22,8 @@ PASS child: Library indexes changed [483, 489, 514, 517, 849, 1052, 1212, 1311, 
 PASS child: MAP keys and p equal base
 PASS child: MAP n changed 33, expected 33
 PASS child: header sha 5aedc2f2ac70ba66 -> 9a4d55c66bf65d7f, expected 9a4d55c66bf65d7f
+PASS child: Library lines [483, 489, 514, 517, 849, 1052, 1212, 1311, 2177, 3314] equal the graded build
+PASS child: named non-Library nodes equal the graded build
 PASS child: runcheck: target_child_533.json OK 9a4d55c66bf65d7f
 PASS engine and child Library text equal
 PASS Library Check pair: ask533/w2/build/target_child_533.json: engine lib 9a4d55c66bf65d7f map 3dce26b788552d8f | child lib 9a4d55c66bf65d7f map 3dce26b788552d8f | Library Check PASSES

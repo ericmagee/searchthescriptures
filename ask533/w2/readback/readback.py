@@ -2,6 +2,8 @@
 # Post-write readback (W2). Reads fetch-back files on disk only; no n8n call.
 # Usage: python3 readback.py <spec.json>
 # spec: {ask, fetch:{engine,child}, target:{engine,child}, base:{engine,child}, nodes:{engine:[...],child:[...]}, lib_idx:[...], lib_sha, map_n_changed:{engine:n,child:n}}
+# rev 2 (532/534): lib_sha may be "TARGET" (taken from the target, for bodies built at write time on a moved base);
+#   "graded":{engine,child} paths: every Library line in lib_idx, and every named non-Library node, must equal the graded build's.
 # Lines printed: PASS/FAIL per check; last line READBACK MATCH or READBACK MISMATCH.
 import json,sys,hashlib,subprocess
 sys.path.insert(0,'/mnt/project-files/ask516/w4/b')
@@ -36,7 +38,13 @@ for k in ('engine','child'):
   chk(idx==sorted(S['lib_idx']),f'{k}: Library indexes changed {idx}, expected {sorted(S["lib_idx"])}')
   chk(set(Mf)==set(Mb) and all(Mf[x]['p']==Mb[x]['p'] for x in Mf),f'{k}: MAP keys and p equal base')
   nn=sum(1 for x in Mf if Mf[x]['n']!=Mb[x]['n']);chk(nn==S['map_n_changed'][k],f'{k}: MAP n changed {nn}, expected {S["map_n_changed"][k]}')
-  chk(hf==S['lib_sha'],f'{k}: header sha {hb} -> {hf}, expected {S["lib_sha"]}')
+  Lt,Mt,ht=lib(T);xs=ht if S['lib_sha']=='TARGET' else S['lib_sha']
+  chk(hf==xs,f'{k}: header sha {hb} -> {hf}, expected {xs}')
+  if S.get('graded'):
+    G=J(S['graded'][k]);Lg,_,_=lib(G);bad=[i for i in S['lib_idx'] if Lf[i]!=Lg[i]]
+    chk(not bad,f'{k}: Library lines {S["lib_idx"]} equal the graded build'+(f'; differ {bad}' if bad else ''))
+    ng=nodes(G);bn=[n for n in S['nodes'][k] if n!='Shared Library' and nf.get(n)!=ng.get(n)]
+    chk(not bn,f'{k}: named non-Library nodes equal the graded build'+(f'; differ {bn}' if bn else ''))
   r=subprocess.run(['node','/mnt/project-files/ask519/w4/libcheck/runcheck.js',S['fetch'][k]],capture_output=True,text=True)
   chk(r.returncode==0 and ' OK ' in r.stdout+' ',f'{k}: runcheck: {(r.stdout+r.stderr).strip()[:160]}')
 LE,_,_=lib(J(S['fetch']['engine']));LC,_,_=lib(J(S['fetch']['child']));chk(LE==LC,'engine and child Library text equal')

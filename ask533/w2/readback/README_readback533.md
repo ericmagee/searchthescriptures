@@ -31,3 +31,5 @@ The last line is READBACK MATCH or READBACK MISMATCH.
 
 **Dry run (out_dry533.txt):** the fetch is taken as the targets, and the base as the live fetch at ask533/w4/live.
 - Every check passes, test533 included, except "versionId moved", which fails as it must.
+
+**Rev 2 (after W4 Wall 10809):** write533.sh (8cf2f842) builds each body at write time from the fresh fetch with patch533.js (237c1e3e). So the spec now compares the fetch-back with write533.sh's own full_{engine,child}.json, and uses readback.py rev 2 (01fb7c72) with lib_sha "TARGET" and "graded" set to the W3-passed targets (8eb0881e, 621c3303): the ten Library lines and L2 Count Plan must equal the graded build. No manual rebuild of the 533 targets is needed if 536 is written first. Dry run (out_dry533.txt 912c02cf): every check passes except "versionId moved", which must fail in a dry run.
