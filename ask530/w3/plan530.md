@@ -72,7 +72,7 @@ DONE: criteria 1 to 6 on the build; the measurement in section 7 meets its stop 
   a. Part a alone (the quoted answer's block): it is found for all 16. For the known bad, terra #107 and #108 get Matthew 1:19, 1:20 and 1:25, without Matthew 1:24. Qwen #118 gets Matthew 1:18, 1:24 and 1:25, and qwen #119 gets the same block as terra.
   b. Part b (the link's rows): for 41418 D5 it gives 9 lines and 3,083 characters, with Matthew 1:24 in 3 lines. #4 (c70883f8 [CR2]) gets none, because that round has no link heads, so part a carries it. #13 gets only the head (164 characters), and part a carries Matthew 1:24.
   c. Sizes: the part b blocks run from 164 to 6,416 characters, hence the 4,000-character cut with part a first.
-  d. W1's #20 and #53 are WHICH HOLDS lines, not collision lines, so no E-COL item carries them. The known-good set needs 2 collision lines in their place. W1 picks them before any measurement.
+  d. W1's #20 and #53 are WHICH HOLDS lines, not collision lines, so no E-COL item carries them. W1 replaced them at Wall 10676 with #23 (j1250 sol D4 vs C3) and #55 (j1256 sol FORCED D3 vs C1), and checked at 10677 that all 12 are collision lines. The final known-good set is #4, 13, 23, 24, 30, 42, 54, 55, 56, 58, 91 and 110.
 
 ## 8. INPUTS IN GIT
 - ask530/w3/live/lib_3058.txt (cb6cc6a2), lib_3083.txt (f47fed05), lib_3193.txt (f9e90f87): the Library lines as read from 48513907, byte-equal in engine 9240349c and child 334f0518.
