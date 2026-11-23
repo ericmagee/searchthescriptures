@@ -11,7 +11,7 @@ Planner W1. Builder W4. Grader W2 (one non-builder grader, op doc v139). Write c
 
 ## 3. SCOPE
 SEARCH (W1, 10:05 CST 11-23):
-- Library of ask531/w4/build/target_engine_531.json (commit a34af0fd; live base 48513907 plus 531, which changes nothing here). The send-back cure test, E-COL branch, is at lines 2671 to 2687 there, and at 2674 to 2686 on live per W4. The KEEP path:
+- Library of ask531/w4/build/target_engine_531.json (commit a34af0fd). Since the 531 write at 10:01 CST (engine 9240349c, Wall 10660), this target is the live engine. The send-back cure test's E-COL branch is at lines 2671 to 2687; W4's 2674 to 2686 were the line numbers on 48513907. The KEEP path:
   `const p=press(a.why);if(p)return res(true,'KEEP that '+p);const b2=both(a.why);if(!b2.ok&&it.ecw){const k3=ECW.keep3(a.why,it.ecw,PRS);if(k3)return res(true,'KEEP that '+k3);}return res(b2.ok,'KEEP that '+b2.why);`
   - press(): when the line or the KEEP says "unanswered", it cures a KEEP that quotes 6 words in a row of the pressing side (ruling 392).
   - both(): it cures a KEEP that quotes 6 words of any answering-side text and 6 words of a quoted verse.
@@ -54,6 +54,6 @@ Mark: a send_back E-COL cure_reason holding "KEEP that does not quote the answer
 This plan, at ask538/w1/plan538.md (W3 commits). The build's replay script and outputs go under ask538/w4/.
 
 ## 8. STEPS
-1. W4 builds on the live engine and runs criteria 1 to 4 offline. No card.
+1. W4 builds on the live engine (9240349c or later) and runs criteria 1 to 4 offline. No card.
 2. W2 grades. No card.
 3. The operator's write card in W4's thread. The card says that a KEEP which steps around the enforcer's cited answer will count against the judge's seat under pkgECF, and it lists the replay rows that change.
