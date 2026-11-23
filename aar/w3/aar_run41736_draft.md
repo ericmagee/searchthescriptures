@@ -1,4 +1,4 @@
-# AAR, RUN 41736 (DRAFT rev 2, W3)
+# AAR, RUN 41736 (DRAFT rev 3, W3)
 
 Anchor: W4 run report, Wall 10868. Order: the_wall_manual v19 section 7.4. This draft authorizes nothing.
 
@@ -73,13 +73,13 @@ Each ASK written today, its objective as posted before the run (its ask_aar_snap
    - W4 10870's claim that luna's LINK 3 rows ruled the same drop NOT A CONTRADICTION was withdrawn at 10874.
 
 ## SUGGESTED IMPROVEMENTS
-1. ASK (number to be assigned): the close enforcer must not confirm a closing contradiction against a sentence that restates a link the debater kept. Planner W4. Plan and size in characters: not yet posted. Grades: none. Card: not with the operator.
-2. ASK (number to be assigned): the pkgBFX K-UNX range check stops calling a listed premise answered under a "LINK none [premise N]" block out of range. Planner and builder W1; grader W2 (proposed); W4 writes on a card. Plan rev 0 at Wall 10875 (askbfx/w1/plan_bfx.md, 3,631 characters, md5 9d732d93, commit 1b51b5df). Scope: Shared Library line 467 in the engine and the child, plus one new helper. The size of the code change in characters is not stated in the plan. Grades: none yet. Card: not with the operator.
+1. ASK (number to be assigned), pkgCKL: the close ENFORCER no longer charges a closing sentence that restates what the same round kept under its own link because a different link was narrowed or dropped. The confirm becomes NOT CONFIRMED (kept link), recorded and not applied. Expected effect in 41736: D2 vs C1 and D3 vs C1 are not cured to BROKEN, and each RESULT stays as its judge wrote it (CHALLENGER WINS). A true same-link confirm (41024 row 47150) still applies. Planner and builder W4; grader W1; W4 writes on a card. Plan rev 0 at Wall 10877 (askPENDING_ckl/w4/plan_ckl.md, 4,380 characters, md5 c4338944). Scope: one engine node (Close Enforcer Record), code only. No prompt, model, setting, Library or child change. Its 0.75 word-share threshold is set by the package, and is a guess outside the measured cases. Grades: none yet. Card: not with the operator.
+2. ASK (number to be assigned): the pkgBFX K-UNX range check stops calling a listed premise answered under a "LINK none [premise N]" block out of range. Planner and builder W1; grader W2; W4 writes on a card. Plan rev 0 at Wall 10875 (askbfx/w1/plan_bfx.md, 3,631 characters, md5 9d732d93, commit 1b51b5df). Scope: Shared Library line 467 in the engine and the child, plus one new helper. The size of the code change in characters is not stated in the plan. Grades: none yet. Card: not with the operator.
 3. ASK 541 fix: W4 is tracing the 2 rows. No plan posted yet.
 
 ## KNOWLEDGE BASE
 NONE: all four reviews answered NO.
 
 ## FOR THE OPERATOR
-1. ASK numbers and plans for SUGGESTED IMPROVEMENTS items 1 and 2, when posted.
+1. ASK numbers for SUGGESTED IMPROVEMENTS items 1 (pkgCKL, the close enforcer) and 2 (pkgBFX, the K-UNX range). Both plans are posted and are being graded; their build and write cards come after.
 2. Engine manual v235 card (entries for ASKs 518 to 542): held until this AAR is sent.
