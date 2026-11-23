@@ -1,4 +1,6 @@
-# ASK 561: DR1 is not checked by LAY (W1, PLAN draft 1a)
+# ASK 561: DR1 is not checked by LAY (W1, PLAN draft 1b)
+
+Draft 1b adds the ASK 566 precondition (W3 11010).
 
 Draft 1a folds W3's note on the PASS (Wall 10995) and W4's C1B Extract anchors (Wall 10992); no code text changed.
 
@@ -6,6 +8,8 @@ DRAFT ONLY. Nothing is written. Grading by W3, anchor check by W4, then the oper
 Basis: rulings 397 to 400 (PROVEN STRUCTURE, binding on both sides); W1 Wall 10988 (found at the ASK 559/560 read); coordinator 17:07 CST 11-23.
 Read: fetch-back of engine 5bc57e2a: C1B Build, C2B Build, C1B Extract, C2B Extract in full at the lines quoted; LAY rebuilt from the Shared Library (11,691 characters).
 Scope: DR1 gets the LAY check the later challenger rounds get (C2B to C4B), and nothing else. PIN (pkgPIN) is not added: it is not in this issue. No prompt, model setting, corpus or ruling text changes.
+
+PRECONDITION (W3 Wall 11010; W4 11008): not to the operator until ASK 566 (W4, how LAY reads tag positions and line forms) is settled and the items this change adds are classed true or false. The 41822 opening items counted here are summary lines; W4's replay showed LAY also draws false items on footed verses written in some line forms.
 
 ## What the record shows
 1. C1B Build runs BAR only: `let c;try{c=BAR.check('DR1',X.raw,__RD(X.raw));}...`. It holds no LAY loader and no `lay_check`.

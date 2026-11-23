@@ -1,6 +1,6 @@
-# ASK 559 and ASK 560: absence moves and the opening round (W1, PLAN draft 1b)
+# ASK 559 and ASK 560: absence moves and the opening round (W1, PLAN draft 1c)
 
-Draft 1b folds W3's two notes on the PASS (Wall 10994): the Change 1 control, and the "against" remainder. Draft 1a folded W4's anchor answers (Wall 10989, 10990). No exact code text has changed since draft 1.
+Draft 1c adds the ASK 566 precondition to ASK 560 Step 1 (W3 11010). Draft 1b folded W3's two notes on the PASS (Wall 10994): the Change 1 control, and the "against" remainder. Draft 1a folded W4's anchor answers (Wall 10989, 10990). No exact code text has changed since draft 1.
 
 DRAFT ONLY. Nothing is written. Each change needs grading (W3), the builder's anchor check (W4), and the operator's approval of exact text. Nothing goes to the operator until the open ASK 557/558 card is answered (coordinator, 17:03 CST 11-23).
 
@@ -53,6 +53,9 @@ Risk stated: "does not give" and "does not show" also fit a sentence that critic
 4. Offline, live LAY on CR1 of run 41822 (run with no Verse Sheet rows; W4 10990: a verse not on the sheet gets credit with no quote test, so with D1 Verse Sheet rows the count can only rise): 4 STRUCTURE items, the four summary lines D1 to D4 ("D1: The promised seed proceeds ...", "D2: The father is named in four registers ...", "D3: The canon's means is knowing ...", "D4: Yes, Christ had a biological father ..."). BAR with CR1 added: 0 hits.
 
 ### Step 1 (record-only)
+
+PRECONDITION (W3 Wall 11010; W4 11008): not to the operator until ASK 566 (W4, how LAY reads tag positions and line forms) is settled and the items this change adds are classed true or false. The 41822 opening items counted here are summary lines; W4's replay showed LAY also draws false items on footed verses written in some line forms.
+
 Target: one new Code node "D1 Check" between D1 Extract and C1 Verse Sheet (pass-through of D1 Extract's item). It loads LAY with D2B Build's pkgLAYB loader line as it stands (W4 10989 item 2; no wiring to the Shared Library). D1 Verse Sheet runs before D1 Extract (W4 10990), so LAY's quote test reads its rows and holds an IMP/BAR copy identical to D2B Build's (with ASK 559 Change 2 if released), with 'CR1' added to ROUNDS in this copy only. Output: the D1 Extract item plus `lay_check` and `bar_check`. Build Save Body appends one line to review_notes: `[AUDIT: CR1 CHECK (record-only) -- LAY ITEMS: <n>; BARRED SENTENCES: <m>; HEADS: <heads, 200 chars each>]`. No send-back; nothing counted.
 Touched: new D1 Check, connections D1 Extract to D1 Check to C1 Verse Sheet, Build Save Body (one appended line).
 Test: run 41822 CR1 gives LAY ITEMS 4 and BARRED SENTENCES 0; every other saved field unchanged.
