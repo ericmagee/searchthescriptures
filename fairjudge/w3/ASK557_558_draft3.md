@@ -46,7 +46,7 @@ Targets, all 27 nodes that hold a copy of `L2C` in the fetch-back of engine 5bc5
 (a) Six nodes that request the sheet's lexicon rows, `L2C.lexUrls(ow,{sheet:true})`: D2, D3, D4, C2, C3 and C4 Lexicon Plan. Library copy changed; caller changed.
 (b) Six nodes that build the served sheet, `L2C.sheet(ow,lx,P)`: D2, D3, D4, C2, C3 and C4 Build. Library copy changed; caller changed.
 (c) L2 Lexicon Plan, `L2C.lexUrls(ow,{sheet:false})`: the first filter is inactive there (`!sheet` is true), so it already requests every number. Library copy changed; caller not changed.
-(d) Fourteen Extract nodes (C1, D2, C2, D3, C3, D4, C3G, C1B, D2B, C2B, D3B, C3B, D4B Extract, and D4 Extract counted once) and the Shared Library: each holds the copy and calls neither `lexUrls` nor `sheet`; `isFunc` is used nowhere but at the two filter sites. Library copy changed; no caller to change.
+(d) Thirteen Extract nodes (C1, D2, C2, D3, C3, D4, C3G, C1B, D2B, C2B, D3B, C3B and D4B Extract) and the Shared Library, fourteen nodes: each holds the copy and calls neither `lexUrls` nor `sheet`; `isFunc` is used nowhere but at the two filter sites. Library copy changed; no caller to change.
 The copy is changed alike in all 27 so that no copy can disagree with the served sheet and the Library Check (ASK 422a) compares like with like. With no keep set passed, the changed copy behaves exactly as today, so (c) and (d) do not change behaviour. The sheet is "served alike to both sides", so both sides' nodes change alike.
 Both places must change (W4, Wall 10974): the Lexicon Plan never requests the number, and the Build sheet skips it.
 Anchors: in `lexUrls`, `const S=Object.keys(byN).filter(n=>!sheet||!byN[n].every(isFunc));`; in `sheet`, `if(byN[n].every(isFunc)){fw++;continue;}`.
