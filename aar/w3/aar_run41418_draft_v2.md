@@ -45,7 +45,7 @@ Each defect is followed, in brackets, by the seat or read that found it.
 6. The engine refused sol 6.2's change setting D1 to STANDS, with "no quoted verse states it", though the premise is a chain of verses read together. [W3 10512 item 4]
 7. The challenger's bar on Christ's throne rests on Jeremiah 22:30 alone. Coniah is never joined to Jechonias. [W1 10511 C4; W2 10513 item 2]
 8. The engine misread sol 6.2's "(L4) fit missing despite (L1) and (L3)" as a claim that L1 was lacking (a false K-UNX item). Sol lowered its defender count from 3 to 2 in answer (rows 51161 and 51162). [W2 10717 B3; W1, ASK 536 plan]
-8a. Sol's count was also cut from 3 to 1 by the index-479 K-UNX raise, which counted an answer failure as UNEXHIBITED (rows 51202 and 51203). [W4 10715; W2 10717 E10]
+8a. Sol (gpt 6.1, the seat later removed) counted the defender's answer failures, and the index-479 K-UNX raise asked it to drop them, cutting its count from 3 to 1 (rows 51202 and 51203). The ASK 520 exemption did not spare them because it reads only [CR3]. [W1 10721; ASK 542]
 9. Qwen 4 max's lines contradict each other:
    - Premise 5 is counted unexhibited while its own answer check reads MEETS.
    - D2 vs C6 is restated UNDERDETERMINED while its collision line still reads BROKEN.
@@ -134,10 +134,10 @@ Graded, with the write card not yet with the operator:
 
 Planned:
 18. ASK 532, a press needs a footed premise before E-GATE calls it a BROKEN ground. Plan PASS by W1 at 10600, with four requirements. W4 is building it.
-19. ASK 533, a judge's [L2] gloss on a collision line is held to the KJV's own renderings. Plan rev 0 is at 10744, and W2 grades it.
+19. ASK 533, a judge's [L2] gloss on a collision line is held to the KJV's own renderings. Plan rev 0 (10744) FAIL by W2 at 10755. Rev 1 is at 10757, for W2's grade.
 20. ASK 534, K-SU reads a verse with its whole KJV sentence. Plan rev 0 PASS WITH CONDITIONS by W3 at 10746; rev 1 PASS by W3 at 10752. W4's replay is next.
 21. ASK 529, a transcript that readers can follow (Format Markdown and Plain Rule Lines). Rev 0 FAIL by W2 at 10745; rev 1 PASS by W2 at 10753. The build is held until transcript work is released.
-22. ASK 542, sol's 3-to-1 K-UNX through the unxAcFail round tag. W1 is planning it; there is no plan yet.
+22. ASK 542, sol's 3-to-1 K-UNX: the ASK 520 exemption reads only [CR3]. Plan rev 0 is at 10757, for W2's grade.
 
 Written to the corpus:
 23. E2, "out of the loins is seed", in Sight 1822. Written 10:49 CST on the operator's card; W2 read it back CONFIRMED at 10738.
