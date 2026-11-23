@@ -1,4 +1,4 @@
-# ASK 523 plan, rev 0 (W3). An uncured enforcer DISAGREE on a judge's deciding line counts against the seat. Plan only: nothing is built or written until the grade passes and the operator presses W4's write card. Times are CST.
+# ASK 523 plan, rev 1 (W3). Replaces rev 0 (md5 7d2f1e63), which W2 failed at Wall 10561 on one definition: the verse match did not say how lists and ranges are read. An uncured enforcer DISAGREE on a judge's deciding line counts against the seat. Plan only: nothing is built or written until the grade passes and the operator presses W4's write card. Times are CST.
 
 ## 1. OBJECTIVE
 The operator chose "Yes, count it" on ASK 523: an enforcer DISAGREE on a judge's deciding line counts against that judge's seat when the judge does not cure it.
@@ -23,7 +23,13 @@ Two changes, each in the engine and the same in the Alternate Pass child.
 
 1. E-ANS ON A DECIDING LINE (Shared Library send-back block, internal lines 2768 to 2815 on the 519 fetch-back; built into Send Back Record, Alt Send Back Record and R2 Alt Send Back Record).
    - Today an E-ANS item gets its cure reading from enf428Cure, and line 2810 sets only cure_status; it is never counted.
-   - New: an E-ANS item counts when all hold: its cure reading is UNCURED; not silent, not err, not grt2 (the gates the other counts use, line 2791); __oaSkip does not skip it; and the item's verse (the ANSWER CHECK reference before " -- [") appears in the seat's KEYSTONE line or RESULT line of the body's verdict_raw at that point. The verse match is the whole reference: "Matthew 1:1" does not match "Matthew 1:18".
+   - New: an E-ANS item counts when all hold: its cure reading is UNCURED; not silent, not err, not grt2 (the gates the other counts use, line 2791); __oaSkip does not skip it; and the item's verse appears in the seat's KEYSTONE line or RESULT line of the body's verdict_raw at that point.
+   - THE ITEM'S VERSE is read from flagged_line (the item's line), the reference after "ANSWER CHECK:" and before " -- [".
+   - THE MATCH (rule, with a reference script: ask523/w3/dlu_match.js):
+     a. Every reference in the KEYSTONE and RESULT lines is read as book, chapter and verse. A same-chapter list is expanded ("Matthew 1:18,25" gives Matthew 1:18 and Matthew 1:25), and so is a range, with a hyphen or an en dash ("Luke 1:34–35" gives Luke 1:34 and Luke 1:35).
+     b. The item's verse matches when the same book, chapter and verse is in that expanded set. A number is never matched as a prefix: "Matthew 1:1" does not match "Matthew 1:18", and "Matthew 1:2" does not match "Matthew 1:18,25".
+     c. A number after a comma or dash that is followed by a colon starts a new reference ("Matthew 1:18, 2:1" is two references), not a list item.
+     W4 uses this rule; if the Library already has a reference expander (for example in PRS), W4 may use it and shows it passes the synthetic cases in criterion 6.
    - It goes in a new list, counted into drv_uncured with an AUDIT line, as ECF is at lines 2817 to 2819: "[AUDIT: DECIDING LINE UNCURED (pkgDLU, ASK 523) -- SEAT: ...; ITEMS: ...; counted in drv_uncured.]"
    - The row's cure_reason adds: "DECIDING LINE (pkgDLU, ASK 523): the KEYSTONE or RESULT quotes <verse>; counted in drv_uncured".
 2. E-REREAD ON A RESULT OR KEYSTONE LINE (the second reading of a replaced line, pkgVP1).
@@ -47,18 +53,20 @@ SEARCH (read from the 519 fetch-backs on disk, ask519/w4/write/; no n8n call):
 
 ## 4. CRITERIA and DONE
 Populations, counted by SQL this turn:
-- A. E-ANS send_back rows with cure_status UNCURED, a written answer (not silent) and no reply_error: 65 rows in 26 debates. Of these, 3 have their verse in the seat's stored KEYSTONE or RESULT line: 45173 (39266 sol62, Matthew 1:20, RESULT), 47402 (41024 sol62, Luke 1:34, KEYSTONE and RESULT) and 51401 (41418 sol62, Matthew 1:18, KEYSTONE and RESULT). 46 do not; 16 have no stored judgment for that seat (the seat was removed or replaced).
+- A. E-ANS send_back rows with cure_status UNCURED, a written answer (not silent) and no reply_error: 65 rows in 26 debates. Of these, under the rule in section 3 (lists and ranges expanded), 3 have their verse in the seat's stored KEYSTONE or RESULT line: 45173 (39266 sol62, Matthew 1:20, RESULT), 47402 (41024 sol62, Luke 1:34, KEYSTONE and RESULT) and 51401 (41418 sol62, Matthew 1:18, KEYSTONE and RESULT). 46 do not; 16 have no stored judgment for that seat (the seat was removed or replaced).
 - B. E-REREAD rows: 808, of which 129 are UNCURED. 8 of the 129 are E-RES or E-KEY: 29885, 29886, 31680, 43290, 44059, 44877, 50933 and 51643.
+Only one KEYSTONE or RESULT line in population A carries a list or range: sol62's KEYSTONE on 51401, "Matthew 1:18,25", whose row already matches on Matthew 1:18. So the count is 3 under the rule, as without it (re-measured by SQL this turn; W2 read 3 at 10561).
 Note: the stored KEYSTONE and RESULT are the final ones. The build reads the body at send-back time, so W4 reports the offline count from the stored bodies at that point, and any difference from the 3 above.
 
 The criteria:
-1. Row 51401 counts 1 for sol62 in 41418, with the AUDIT line and the row text. Row 51643 counts 1 for qwen4max. Report each seat's new drv_uncured and what the removal tests then do, whatever it is.
+1. Row 51401 counts 1 for sol62 in 41418, with the AUDIT line and the row text. Row 51643 counts 1 for qwen4max. Report each seat's new drv_uncured and what the removal tests then do, whatever it is. If both seats leave, name the panel that remains (W2 10561 item 7).
 2. Of population A, only the rows on a deciding line count. The 46 others with a stored judgment, and the 16 without, are unchanged in cure status, row text and count. "Found nothing changed" is the legitimate result for them.
 3. Of population B, only the 8 count. The other 121 UNCURED rows and all 679 others are unchanged.
 4. No item is counted twice: an item counted here is not also counted by the E-GATE or another list (W4 shows it on 41418 and 41024).
+6. The verse match passes three synthetic cases, and the rest in dlu_match.js: a list hit (Matthew 1:25 against "Matthew 1:18,25"), a range hit (Luke 1:35 against "Luke 1:34–35"), and a near-miss that must not match (Matthew 1:1 against "Matthew 1:18"). My run of the reference script: ALL 9 OK (dlu_match.out).
 5. Only the named blocks and nodes differ. Both Library copies compile; the Reread Record nodes compile.
 
-DONE: criteria 1 to 5 shown offline on the build, the write on W4's card, W4's readback MATCH, and the run evidence in section 6.
+DONE: criteria 1 to 6 shown offline on the build, the write on W4's card, W4's readback MATCH, and the run evidence in section 6.
 
 ## 5. WRONG-IF
 The plan is wrong if the deciding test does not separate: if the KEYSTONE and RESULT lines quote so many verses that most uncured E-ANS items match, the change counts nearly every DISAGREE and overturns ruling 428 wholesale rather than for deciding lines.
@@ -75,13 +83,13 @@ The plan is also wrong if the count enters drv_uncured after the seat-removal te
 - NO PROBE: the DISAGREE is the enforcer's reading of the judge's own line, which a run cannot force. Over the stored runs it happened on 3 of 65 uncured E-ANS rows and 8 of 129 uncured second readings. Until such a run, it is UNEXERCISED.
 
 ## 7. INPUTS IN GIT
-- This plan, at ask523/w3/plan523.md on claude/untitled-9jle0o (commit given in the Wall post).
+- This plan, at ask523/w3/plan523.md, with the reference script ask523/w3/dlu_match.js and its output dlu_match.out on claude/untitled-9jle0o (commit given in the Wall post).
 - The base is the 519 fetch-backs, ask519/w4/write/ (committed by W4).
 - W4 commits the build, the offline test scripts and their outputs under ask523/w4/.
 
 ## 8. STEPS
 1. W2 grades this plan. No card.
-2. W4 builds on the live engine and child at build time (after any write of 526 or 527 that lands first), and runs criteria 1 to 5 offline. W2 grades the build. No card.
+2. W4 builds on the live engine and child at build time (the base is now 520; line numbers here are on 519 and W4 restates any that moved), stacked on 526 and 527 if they are live (ASK 445), with the 527 replay of 41418 unchanged (W2 10561 items 5 and 6), and runs criteria 1 to 6 offline. W2 grades the build. No card.
 3. W4 writes both workflows in one write. This waits on the operator's card in W4's thread. The revert is the pre-write fetch.
 4. W4 reads back. W3 writes the engine manual entry, which waits on the operator's card in W3's thread.
 5. The run evidence is read at the next released run.

@@ -1,0 +1,10 @@
+OK   list hit: Matthew 1:25 -> true
+OK   range hit (en dash): Luke 1:35 -> true
+OK   range hit (hyphen): Luke 1:35 -> true
+OK   near-miss 1:1 vs 1:18: Matthew 1:1 -> false
+OK   near-miss list 1:18,25 vs 1:2: Matthew 1:2 -> false
+OK   other chapter not in list: Matthew 2:25 -> false
+OK   other book: John 1:18 -> false
+OK   numbered book: 1 Corinthians 15:45 -> true
+OK   row 51401: Matthew 1:18 -> true
+ALL 9 OK
