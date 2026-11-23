@@ -73,7 +73,7 @@ The criteria:
    - pkgBKC, known good: premise 3 counted on "ASSUMES: Mary is in David's line" with acx fact 91 "Mary is of David's line" is not flagged. Known bad: premise 3 on an ASSUMES that shares fewer than 2 content words with any acx fact is flagged as today.
    - 41418 as stored: report each K-UNX row before and after, including any on sol 6.2's premise 3 count.
 
-DONE: criteria 1 to 5 shown offline on the build, the write on W4's card, W4's readback MATCH, and the run evidence in section 6.
+DONE: criteria 1 to 6 shown offline on the build, the write on W4's card, W4's readback MATCH, and the run evidence in section 6.
 
 ## 5. WRONG-IF
 The plan is wrong if the code's name test does not flag a real unsupported fact: if "Mary is of David's line" reads POSSIBLY STATED (both names found in the side's quoted verse words), no item is made and nothing counts.
@@ -95,7 +95,7 @@ The plan is also wrong if the same-fact test misses a counted premise that carri
 
 ## 8. STEPS
 1. W2 grades this plan. No card.
-2. W4 builds on the live engine and child at build time, stacked on whatever of 526, 527 and 523 is live, and runs criteria 1 to 5 offline. W2 grades the build. No card.
+2. W4 builds on the live engine and child at build time, stacked on whatever of 526, 527 and 523 is live, and runs criteria 1 to 6 offline. W2 grades the build. No card.
 3. W4 writes in one write. This waits on the operator's card in W4's thread. The revert is the pre-write fetch.
 4. W4 reads back. W3 writes the engine manual entry, which waits on the operator's card in W3's thread.
 5. The run evidence is read at the next released run.
