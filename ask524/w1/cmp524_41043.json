@@ -1,0 +1,32 @@
+{
+ "old_n": 7,
+ "new_n": 10,
+ "old_kept_same": true,
+ "added": [
+  {
+   "side": "CHALLENGER",
+   "n": 91,
+   "link": null,
+   "r2": true,
+   "assumes": "Mary alone is the bodily source and Mary is of David"
+  },
+  {
+   "side": "CHALLENGER",
+   "n": 92,
+   "link": null,
+   "r2": true,
+   "assumes": "till reaches back before the taking"
+  },
+  {
+   "side": "CHALLENGER",
+   "n": 93,
+   "link": null,
+   "r2": true,
+   "assumes": "Jeremiah 22:30 is cited against Christ and Luke genealogy escapes it"
+  }
+ ],
+ "prompt_old": 20658,
+ "prompt_new": 33279,
+ "case_def": 44,
+ "case_ch": 48
+}

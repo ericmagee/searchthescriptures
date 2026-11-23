@@ -1,0 +1,25 @@
+{
+ "old_n": 5,
+ "new_n": 7,
+ "old_kept_same": true,
+ "added": [
+  {
+   "side": "CHALLENGER",
+   "n": 91,
+   "link": null,
+   "r2": true,
+   "assumes": "Mary is of David's line"
+  },
+  {
+   "side": "CHALLENGER",
+   "n": 92,
+   "link": null,
+   "r2": true,
+   "assumes": "come upon and overshadow act as begetting at this row"
+  }
+ ],
+ "prompt_old": 10201,
+ "prompt_new": 24452,
+ "case_def": 48,
+ "case_ch": 56
+}

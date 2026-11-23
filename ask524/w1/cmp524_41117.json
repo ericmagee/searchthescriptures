@@ -1,0 +1,25 @@
+{
+ "old_n": 6,
+ "new_n": 8,
+ "old_kept_same": true,
+ "added": [
+  {
+   "side": "CHALLENGER",
+   "n": 91,
+   "link": null,
+   "r2": true,
+   "assumes": "Mary of the house of David"
+  },
+  {
+   "side": "CHALLENGER",
+   "n": 92,
+   "link": null,
+   "r2": true,
+   "assumes": "house register exhibits seed out of a man's body"
+  }
+ ],
+ "prompt_old": 15617,
+ "prompt_new": 35327,
+ "case_def": 73,
+ "case_ch": 48
+}

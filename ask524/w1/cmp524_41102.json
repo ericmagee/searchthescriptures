@@ -1,0 +1,25 @@
+{
+ "old_n": 7,
+ "new_n": 9,
+ "old_kept_same": true,
+ "added": [
+  {
+   "side": "CHALLENGER",
+   "n": 91,
+   "link": null,
+   "r2": true,
+   "assumes": "Mary's descent from David in Luke's line"
+  },
+  {
+   "side": "CHALLENGER",
+   "n": 92,
+   "link": null,
+   "r2": true,
+   "assumes": "Joseph's line as the bar upon the throne for this child"
+  }
+ ],
+ "prompt_old": 12853,
+ "prompt_new": 19769,
+ "case_def": 12,
+ "case_ch": 46
+}
