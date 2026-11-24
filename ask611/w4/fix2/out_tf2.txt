@@ -1,0 +1,19 @@
+PASS engine: only the Shared Library changes; connections equal
+PASS engine: LIB unchanged (3852 lines)
+PASS engine: MAP entries changed: Late Gate Build, Send Back Build
+PASS engine Send Back Build: text is the old text with the one snippet replaced by the live LIB 620 form; n 203969 to 204817
+PASS engine Late Gate Build: text is the old text with the one snippet replaced by the live LIB 620 form; n 323079 to 323927
+PASS engine: no MAP entry holds the old snippet any more
+PASS child: only the Shared Library changes; connections equal
+PASS child: LIB unchanged (3852 lines)
+PASS child: MAP entries changed: Late Gate Build, Send Back Build
+PASS child Send Back Build: text is the old text with the one snippet replaced by the live LIB 620 form; n 203969 to 204817
+PASS child Late Gate Build: text is the old text with the one snippet replaced by the live LIB 620 form; n 323079 to 323927
+PASS child: no MAP entry holds the old snippet any more
+PASS Send Back Build: with bodyless QR judges the fixed text gives each judge the same request as before ASK 611 (the QR body), byte-equal
+PASS Send Back Build: control: the live text with bodyless QR judges gives no body (the 42373 defect reproduced)
+PASS Send Back Build: QR not run: the Panel Build judges, as today
+PASS Late Gate Build: with bodyless QR judges the fixed text gives each judge the same request as before ASK 611 (the QR body), byte-equal
+PASS Late Gate Build: control: the live text with bodyless QR judges gives no body (the 42373 defect reproduced)
+PASS Late Gate Build: QR not run: the Panel Build judges, as today
+ALL PASS (18 checks)
