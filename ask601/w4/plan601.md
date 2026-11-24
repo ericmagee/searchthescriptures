@@ -1,5 +1,5 @@
 # ASK 601 PLAN rev 1 (W4): a judge never runs the same model as a debater
-Rev 1 answers W1 Wall 11609 (F1 to F3, the standard note, and N1).
+Rev 1 answers W1 Wall 11609 (F1 to F3, the standard note, and N1). PASS WITH N1, N2 (Wall 11612); both notes closed here.
 
 ## OBJECTIVE
 A judge whose model is the same as either debater's model never sits: not on the panel, not as the reserve, and not as an alternate. This holds even when both debaters are Anthropic.
@@ -33,7 +33,7 @@ In scope (touched code only):
 Out of scope: reasoning and prompt text, model settings, the child, the dashboard files.
 
 Model match:
-- Two models are the same when their names match after five steps: trim; lower-case; drop a leading "anthropic/"; turn "." into "-".
+- Two models are the same when their names match after four steps: trim; lower-case; drop a leading "anthropic/"; turn "." into "-".
 - Dropping "anthropic/" and turning "." into "-" is what Resolve Seats' __AID already does. Trim and lower-case are NEW here (N1), added so case or spaces in model_config cannot hide a match.
 
 Why four homes (standard):
@@ -67,6 +67,7 @@ This plan is wrong if any of these holds:
 - the page and the engine disagree on any pair.
 
 ## RUN EVIDENCE (ASK 417)
+- I found no ASK 417 registry entry for seat selection (searched the plans in git and the DB table names). This plan's check below is its run evidence.
 - Live: the next run where a debater runs Sonnet 5.5 and both debaters are Anthropic shows sonnet in the dropped list in review_notes, with the reason.
 - Runs with other pairings show the same line-up as before.
 - Two clean live runs count as a pass.
