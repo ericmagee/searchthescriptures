@@ -1,0 +1,249 @@
+[
+ {
+  "id": 3,
+  "dry": false,
+  "record": {
+   "qa": [
+    {
+     "n": 1,
+     "form": "AGREE",
+     "side": "defender",
+     "error": null,
+     "judge": "sol62",
+     "quote": "Matthew uses three words for three steps. The first is the coming together (synerchomai). The second is the taking (paralamban\u014d), which Joseph does at Matthew 1:24 by the angel's word.",
+     "round": "CR4",
+     "route": "anthropic",
+     "answer": "**How the two passages agree**\n\nBoth passages describe the same three words in Matthew 1:18-25:\n\n- synerchomai, \"came together\" (1:18)\n- paralamban\u014d, \"took unto him\" (1:24)\n- gin\u014dsk\u014d, \"knew\" (1:25)\n\n**What CR3 says.** CR3 explains what synerchomai refers to. At 1:18, Matthew dates the finding \"before they came together\" but does not describe that coming together there. What follows tells it: the angel bids \"take unto thee\" (1:20), and Joseph \"took unto him his wife\" (1:24). So the coming together named ahead at 1:18 is carried out in the taking at 1:24. This matches the gloss I cited for paralamban\u014d, \"receive near, i.e. associate with oneself\", which overlaps the gloss for synerchomai, \"associate with\".\n\n**What CR4 says.** CR4 counts Matthew's words in the order he tells them. The coming together is named first (1:18). The taking is narrated second (1:24). The knowing comes third (1:25).\n\n**Where they meet.** On this reading, the \"first\" and \"second\" steps of CR4 are one event in two places: named ahead as synerchomai and narrated as paralamban\u014d. CR3 makes the same identification. Both passages then do the same work in my chain. They place the finding with child before the household union, and they place the knowing, under \"knew her not till\", after the taking.\n\n**A plain acknowledgement.** CR4's phrase \"three words for three steps\", like CR2's \"three acts\", reads most naturally as three separate events. Read that strictly, it sits uneasily with CR3. The two passages agree only if \"steps\" is taken as the order of Matthew's telling, not as three separate events. I cannot change either passage here, and the judge may weigh that tension.",
+     "finish": "end_turn",
+     "question": "How do these two passages agree?",
+     "new_verses": [],
+     "earlier_quote": "The coming together (synerchomai, 1:18) is told in what follows as the taking.",
+     "earlier_round": "CR3"
+    },
+    {
+     "n": 2,
+     "form": "FIT",
+     "side": "challenger",
+     "error": null,
+     "judge": "sol62",
+     "quote": "Mary's descent from David is carried by Luke 3:23-31, not by this row.",
+     "round": "DR3",
+     "route": "anthropic",
+     "answer": "**What the passage says.** \"This row\" is Luke 1:36, \"thy cousin Elisabeth.\" That verse names a blood relative of Mary but says nothing about David. So I pointed instead to Luke 3:23-31 as the place where Mary's descent from David is carried.\n\n**How it fits Luke 3:23.** Luke 3:23 reads: \"being (as was supposed) the son of Joseph, which was [the son] of Heli.\" Three features matter to my passage.\n\n1. \"As was supposed\" marks the sonship to Joseph as reckoned, not stated as a begetting.\n2. \"[The son]\" is bracketed in the KJV, so the text does not say \"begat\" at that step. Matthew 1:16 does say \"begat\" for Jacob and Joseph.\n3. The list then runs on to \"[the son] of Nathan, which was [the son] of David\" (Luke 3:31). That is a second line to David, apart from Matthew's line through Jechonias.\n\nI read Heli's line as standing at Mary's end. Luke 3:23 does not name Mary, so that placement is my reading of the bracketed words and the \"supposed,\" not something the verse states outright. Luke 1:5, \"his wife [was] of the daughters of Aaron,\" shows that this Gospel gives a woman's descent in its own words. So 3:23 fits my claim in this way. It lets Joseph be husband and head of the house, which I grant from Luke 2:4, while the seed to David is carried by the second line of 3:31.",
+     "finish": "end_turn",
+     "question": "How does this passage fit Luke 3:23?",
+     "new_verses": [],
+     "earlier_quote": null,
+     "earlier_round": null
+    },
+    {
+     "n": 3,
+     "form": "MEANING",
+     "side": "defender",
+     "error": null,
+     "judge": "spark",
+     "quote": "So Joseph knew Mary his wife within the espousal. Matthew 1:18 dates the finding before the household union, and the \"till\" of Matthew 1:25 bounds the withholding from the taking to the birth.",
+     "round": "CR3",
+     "route": "anthropic",
+     "answer": "**\"Knew\" in that passage means the marital union of husband and wife, the act by which a wife conceives.**\n\n**The word.** In the footing for that link I glossed it as gin\u014dsk\u014d (G1097): \"to 'know' (absolutely) in a great variety of applications.\" In Matthew 1:25, \"knew her not,\" it is the word Matthew uses for that union.\n\n**The sense, from the verses the passage leans on.** In the same footing I set the word beside two rows:\n- Genesis 4:1: \"And Adam knew Eve his wife; and she conceived\". Knowing and conceiving stand in one row.\n- 1 Samuel 1:19: \"and Elkanah knew Hannah his wife; and the LORD remembered her.\"\n\nSo \"knew\" in my sentence carries the sense of those rows: the husband's union with his wife, from which conception follows.\n\n**How it sits in the sentence.** In that passage I separated three acts by their three words:\n1. \"came together\" (synerchomai, Matthew 1:18), which I read as the household coming together;\n2. \"took unto him\" (paralamban\u014d, 1:24), the receiving into his house;\n3. \"knew\" (gin\u014dsk\u014d, 1:25), the union itself.\n\nSo \"Joseph knew Mary his wife within the espousal\" means that, on my reading, this union took place during the espousal. That is before the taking of 1:24. The \"knew her not till\" of 1:25 then names a withholding of that same union, running from the taking to the birth.\n\n**Scope.** This is the meaning I gave the word in that passage, within the case I made. It is not a further argument for that case.",
+     "finish": "end_turn",
+     "question": "What does \"knew\" in this passage mean?",
+     "new_verses": [],
+     "earlier_quote": null,
+     "earlier_round": null
+    },
+    {
+     "n": 4,
+     "form": "FIT",
+     "side": "challenger",
+     "error": null,
+     "judge": "spark",
+     "quote": "Loins name the source across generations. Levi was \"in Abraham\" and \"in the loins of his father\" many steps down. So David's loins reach the child through the line Luke 3:31 gives, without the husband being the begetter. It fits the link.",
+     "round": "DR3",
+     "route": "anthropic",
+     "answer": "The passage answers the press on Acts 2:30, \"of the fruit of his loins, according to the flesh.\" There \"loins\" (osphys, \"procreative power\") names the source of the flesh, and I said that source need not be the nearest father.\n\nFor this I pointed to Hebrews 7:9-10. Levi \"payed tithes in Abraham\" and \"was yet in the loins of his father.\" Levi was in Abraham's loins though several generations stood between them. In the same way, David's loins can reach Christ's flesh across the intervening generations.\n\nLuke 3:31 supplies those generations: \"[the son] of Nathan, which was [the son] of David.\" This is the second line I named. It runs to David by Nathan, not by Jechonias. It stands in a chain that begins at Luke 3:23, where Joseph is \"as was supposed\" the son and then \"[the son] of Heli,\" with \"the son\" in the KJV's italics.\n\nSo the fit is this. The loins of Acts 2:30 are David's. They reach the child down the line of Luke 3:31, as Abraham's loins reached Levi. The husband is not the begetter in that line. He is the one by whom the house comes through taking and naming, which I granted at Luke 2:4.",
+     "finish": "end_turn",
+     "question": "How does this passage fit Luke 3:31?",
+     "new_verses": [],
+     "earlier_quote": null,
+     "earlier_round": null
+    },
+    {
+     "n": 5,
+     "form": "MEANING",
+     "side": "defender",
+     "error": null,
+     "judge": "sol",
+     "quote": "A present state set beside a future conceiving places the knowing after the angel's word and inside the espousal (Luke 2:5).",
+     "round": "CR3",
+     "route": "anthropic",
+     "answer": "**What the phrase means**\n\n\"Places the knowing after the angel's word\" is a statement about timing within the passage's own two rows.\n\n- **\"The knowing\"** is gin\u014dsk\u014d (G1097), the word I use throughout for the union of husband and wife. It is the word of \"Adam knew Eve his wife; and she conceived\" (Genesis 4:1), and the press's own verb at Luke 1:34.\n- **\"A present state\"** is Mary's \"I know not a man\" (Luke 1:34). The verb is present tense, so it describes her condition at the moment the angel was speaking. It says nothing beyond that moment.\n- **\"A future conceiving\"** is the angel's \"thou shalt conceive in thy womb\" (Luke 1:31). The conceiving still lay ahead when he spoke.\n\n**How the step works**\n\nSet side by side, the two rows say two things. When the angel spoke, no knowing had yet taken place. The conception was still to come. In my chain a wife conceives by her husband knowing her (link D2). So the knowing that leads to that future conception must fall later than the angel's word, not before it. That is all \"after the angel's word\" means: Mary's present-tense denial marks the starting point, and the knowing falls after it.\n\n**The last clause**\n\nThe clause \"inside the espousal (Luke 2:5)\" fixes the far end of the span. Luke 2:5 calls her \"Mary his espoused wife, being great with child.\" The pregnancy is already present while she is still called espoused. So the knowing falls in the span between the angel's word and Luke 2:5, which is within the espousal.",
+     "finish": "end_turn",
+     "question": "What does \"places the knowing after the angel's word\" in this passage mean?",
+     "new_verses": [],
+     "earlier_quote": null,
+     "earlier_round": null
+    },
+    {
+     "n": 6,
+     "form": "MEANING",
+     "side": "challenger",
+     "error": null,
+     "judge": "sol",
+     "quote": "Matthew 1:16 gives Joseph's father as Jacob by \"begat\". Luke 3:23 gives \"Heli\", and the words \"the son\" are the KJV's own italics there. Luke 3:23 itself marks the sonship of Joseph as \"supposed\". So Luke's list is a second line, which reaches David by Nathan (3:31).",
+     "round": "DR3",
+     "route": "anthropic",
+     "answer": "\"A second line\" means a second genealogy, separate from Matthew's list, not a repeat of it.\n\n**The two lists.** Matthew 1:16 gives Joseph's father as Jacob, and every step before it is \"begat\" (Matthew 1:12, 1:15). Luke 3:23 gives \"Heli\". The two names differ, so the lists differ. Matthew's list runs through Jechonias (Matthew 1:12). Luke's list reaches David \"by Nathan\" (Luke 3:31).\n\n**The italics.** The KJV prints \"the son\" in italics at Luke 3:23, which means those words are supplied by the translators. I used this to say that Luke's list does not state the same begetting step by step that Matthew's does. Luke 3:23 also marks Joseph's sonship as \"supposed\".\n\n**What I used it for.** I did not treat Luke's list as Joseph's line of begetting. In that passage, Matthew's list is the house of Joseph. Luke's list is the second line, the one I read as carrying David's seed to the child at the woman's side. That is why I set it beside Matthew 1:16 (\"of whom was born\"), Genesis 3:15 (\"her seed\") and Luke 1:5, where a woman's descent is also given. My phrase \"It fits the link\" in that passage says only that this reading agrees with the premise (Link 1) that the seed comes through the woman, with Joseph as husband and head of the house.",
+     "finish": "end_turn",
+     "question": "What does \"a second line\" in this passage mean?",
+     "new_verses": [],
+     "earlier_quote": null,
+     "earlier_round": null
+    }
+   ],
+   "skips": [
+    "follow-up: QR Follow Final: no follow-up was asked or none passed the checks"
+   ],
+   "checks": [
+    {
+     "form": "AGREE",
+     "side": "defender",
+     "term": null,
+     "judge": "sol62",
+     "quote": "Matthew uses three words for three steps. The first is the coming together (synerchomai). The second is the taking (paralamban\u014d), which Joseph does at Matthew 1:24 by the angel's word.",
+     "round": "CR4",
+     "verse": null,
+     "faults": [],
+     "status": "PASSED",
+     "question": "How do these two passages agree?",
+     "redirect": null,
+     "first_faults": [],
+     "earlier_quote": "The coming together (synerchomai, 1:18) is told in what follows as the taking.",
+     "earlier_round": "CR3"
+    },
+    {
+     "form": "FIT",
+     "side": "challenger",
+     "term": null,
+     "judge": "sol62",
+     "quote": "Mary's descent from David is carried by Luke 3:23-31, not by this row.",
+     "round": "DR3",
+     "verse": "Luke 3:23-31",
+     "faults": [],
+     "status": "PASSED",
+     "question": "How does this passage fit Luke 3:23?",
+     "redirect": null,
+     "first_faults": [],
+     "earlier_quote": null,
+     "earlier_round": null
+    },
+    {
+     "form": "MEANING",
+     "side": "defender",
+     "term": "knew",
+     "judge": "spark",
+     "quote": "So Joseph knew Mary his wife within the espousal. Matthew 1:18 dates the finding before the household union, and the \"till\" of Matthew 1:25 bounds the withholding from the taking to the birth.",
+     "round": "CR3",
+     "verse": null,
+     "faults": [],
+     "status": "PASSED",
+     "question": "What does \"knew\" in this passage mean?",
+     "redirect": null,
+     "first_faults": [],
+     "earlier_quote": null,
+     "earlier_round": null
+    },
+    {
+     "form": "FIT",
+     "side": "challenger",
+     "term": null,
+     "judge": "spark",
+     "quote": "Loins name the source across generations. Levi was \"in Abraham\" and \"in the loins of his father\" many steps down. So David's loins reach the child through the line Luke 3:31 gives, without the husband being the begetter. It fits the link.",
+     "round": "DR3",
+     "verse": "Luke 3:31",
+     "faults": [],
+     "status": "PASSED",
+     "question": "How does this passage fit Luke 3:31?",
+     "redirect": null,
+     "first_faults": [],
+     "earlier_quote": null,
+     "earlier_round": null
+    },
+    {
+     "form": "MEANING",
+     "side": "defender",
+     "term": "places the knowing after the angel's word",
+     "judge": "sol",
+     "quote": "A present state set beside a future conceiving places the knowing after the angel's word and inside the espousal (Luke 2:5).",
+     "round": "CR3",
+     "verse": null,
+     "faults": [],
+     "status": "PASSED",
+     "question": "What does \"places the knowing after the angel's word\" in this passage mean?",
+     "redirect": null,
+     "first_faults": [],
+     "earlier_quote": null,
+     "earlier_round": null
+    },
+    {
+     "form": "MEANING",
+     "side": "challenger",
+     "term": "a second line",
+     "judge": "sol",
+     "quote": "Matthew 1:16 gives Joseph's father as Jacob by \"begat\". Luke 3:23 gives \"Heli\", and the words \"the son\" are the KJV's own italics there. Luke 3:23 itself marks the sonship of Joseph as \"supposed\". So Luke's list is a second line, which reaches David by Nathan (3:31).",
+     "round": "DR3",
+     "verse": null,
+     "faults": [],
+     "status": "PASSED",
+     "question": "What does \"a second line\" in this passage mean?",
+     "redirect": null,
+     "first_faults": [],
+     "earlier_quote": null,
+     "earlier_round": null
+    },
+    {
+     "pass": "follow",
+     "side": "defender",
+     "judge": "sol62",
+     "status": "NONE"
+    },
+    {
+     "pass": "follow",
+     "side": "challenger",
+     "judge": "sol62",
+     "status": "NONE"
+    },
+    {
+     "pass": "follow",
+     "side": "defender",
+     "judge": "spark",
+     "status": "NONE"
+    },
+    {
+     "pass": "follow",
+     "side": "challenger",
+     "judge": "spark",
+     "status": "NONE"
+    },
+    {
+     "pass": "follow",
+     "side": "defender",
+     "judge": "sol",
+     "status": "NONE"
+    },
+    {
+     "pass": "follow",
+     "side": "challenger",
+     "judge": "sol",
+     "status": "NONE"
+    }
+   ],
+   "follow": true,
+   "status": "RAN"
+  },
+  "status": "RAN",
+  "regrade": false,
+  "run_token": "ODV1-42373-tg0w4edj",
+  "created_at": "2026-11-24T23:21:56.382625+00:00"
+ }
+]

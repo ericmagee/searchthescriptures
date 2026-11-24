@@ -1,0 +1,3741 @@
+{
+ "sb_err": [
+  {
+   "seat": "chatgpt",
+   "err": "NOT SENT: TRIAL rule (recorded only, not sent; it removes no seat): LAYERS (pkgLAY, Commitment 13, TRIAL, ASK 397): a LINK STATE STANDS line that quotes no 6 words in a row of the answer that fit (Commitment 13)",
+   "n": 1,
+   "a": "2026-11-24T23:38:02.69+00:00",
+   "b": "2026-11-24T23:38:02.69+00:00"
+  },
+  {
+   "seat": "chatgpt",
+   "err": "NOT SENT: TRIAL rule (recorded only, not sent; it removes no seat): WHOLE POSITIONS (ASK 507, Commitment 17, TRIAL): WHICH HOLDS: CHALLENGER with the verdict HELD (the challenger's position holds only when the verdict is BROKEN)",
+   "n": 1,
+   "a": "2026-11-24T23:38:02.69+00:00",
+   "b": "2026-11-24T23:38:02.69+00:00"
+  },
+  {
+   "seat": "sol",
+   "err": "NOT SENT: no panel request for this seat",
+   "n": 28,
+   "a": "2026-11-24T23:32:10.596+00:00",
+   "b": "2026-11-24T23:32:10.596+00:00"
+  },
+  {
+   "seat": "sol",
+   "err": "NOT SENT: TRIAL rule (recorded only, not sent; it removes no seat): POINTS AT ISSUE (ASK 506, Commitment 13, TRIAL): no POINTS AT ISSUE section before the grades",
+   "n": 1,
+   "a": "2026-11-24T23:32:10.596+00:00",
+   "b": "2026-11-24T23:32:10.596+00:00"
+  },
+  {
+   "seat": "sol62",
+   "err": "NOT SENT: no panel request for this seat",
+   "n": 14,
+   "a": "2026-11-24T23:32:10.596+00:00",
+   "b": "2026-11-24T23:32:10.596+00:00"
+  },
+  {
+   "seat": "sol62",
+   "err": "NOT SENT: TRIAL rule (recorded only, not sent; it removes no seat): POINTS AT ISSUE (ASK 506, Commitment 13, TRIAL): no POINTS AT ISSUE section before the grades",
+   "n": 1,
+   "a": "2026-11-24T23:32:10.596+00:00",
+   "b": "2026-11-24T23:32:10.596+00:00"
+  },
+  {
+   "seat": "spark",
+   "err": "NOT SENT: no panel request for this seat",
+   "n": 11,
+   "a": "2026-11-24T23:32:10.596+00:00",
+   "b": "2026-11-24T23:32:10.596+00:00"
+  },
+  {
+   "seat": "spark",
+   "err": "NOT SENT: TRIAL rule (recorded only, not sent; it removes no seat): LAYERS (pkgLAY, Commitment 13, TRIAL, ASK 397): a LINK STATE STANDS line that quotes no 6 words in a row of the answer that fit (Commitment 13)",
+   "n": 2,
+   "a": "2026-11-24T23:32:10.596+00:00",
+   "b": "2026-11-24T23:32:10.596+00:00"
+  },
+  {
+   "seat": "spark",
+   "err": "NOT SENT: TRIAL rule (recorded only, not sent; it removes no seat): POINTS AT ISSUE (ASK 506, Commitment 13, TRIAL): no POINTS AT ISSUE section before the grades",
+   "n": 1,
+   "a": "2026-11-24T23:32:10.596+00:00",
+   "b": "2026-11-24T23:32:10.596+00:00"
+  }
+ ],
+ "sb": [
+  {
+   "id": 53588,
+   "seat": "sol62",
+   "kind": "cure",
+   "rule": "K-G4",
+   "item": "D6 vs C6",
+   "cure_status": "CURED",
+   "cr": "forced link: a FORCED line for D6 vs C6 (ruling 411); K-F reads its quotations",
+   "fl": 1126,
+   "fr": 13576,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53589,
+   "seat": "sol62",
+   "kind": "cure",
+   "rule": "K-SU",
+   "item": "SENTENCE WHICH HOLDS",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): TRIAL rule (K-SU, list only): the reply grades WHICH HOLDS on the whole sentence Matthew 1:15-16; recorded only",
+   "fl": 363,
+   "fr": 92,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53590,
+   "seat": "sol62",
+   "kind": "cure",
+   "rule": "K-SU",
+   "item": "SENTENCE KEYSTONE",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): TRIAL rule (K-SU, list only): the reply grades KEYSTONE on the whole sentence Matthew 1:24-25; recorded only",
+   "fl": 395,
+   "fr": 92,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53591,
+   "seat": "sol62",
+   "kind": "cure",
+   "rule": "K-SU",
+   "item": "SENTENCE D1 vs C2",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): TRIAL rule (K-SU, list only): the reply grades D1 vs C2 on the whole sentence Matthew 1:11-12; recorded only",
+   "fl": 386,
+   "fr": 92,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53592,
+   "seat": "sol62",
+   "kind": "cure",
+   "rule": "K-CMT",
+   "item": "contested grades without a commitment",
+   "cure_status": "CURED",
+   "cr": "the response names the commitment, or NOT A GRADE",
+   "fl": 921,
+   "fr": 92,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53593,
+   "seat": "sol62",
+   "kind": "cure",
+   "rule": "K-CMTL",
+   "item": "line 1",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): the response names the commitment, or NOT A GRADE",
+   "fl": 802,
+   "fr": 92,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53594,
+   "seat": "sol62",
+   "kind": "cure",
+   "rule": "K-CMTL",
+   "item": "line 2",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): the response names the commitment, or NOT A GRADE",
+   "fl": 626,
+   "fr": 92,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53595,
+   "seat": "sol62",
+   "kind": "cure",
+   "rule": "K-CMTL",
+   "item": "line 3",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): the response names the commitment, or NOT A GRADE",
+   "fl": 626,
+   "fr": 92,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53596,
+   "seat": "sol62",
+   "kind": "cure",
+   "rule": "K-CMTL",
+   "item": "line 4",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): the response names the commitment, or NOT A GRADE",
+   "fl": 626,
+   "fr": 92,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53597,
+   "seat": "sol62",
+   "kind": "cure",
+   "rule": "K-CMTL",
+   "item": "line 5",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): the response names the commitment, or NOT A GRADE",
+   "fl": 626,
+   "fr": 92,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53598,
+   "seat": "sol62",
+   "kind": "cure",
+   "rule": "K-UNX",
+   "item": "CHALLENGER premise 5",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): TRIAL rule (K-UNX-A): CORRECTED COUNT 1 takes the premise out of the count",
+   "fl": 1277,
+   "fr": 92,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53599,
+   "seat": "spark",
+   "kind": "cure",
+   "rule": "K-B",
+   "item": "D1 vs C1",
+   "cure_status": "UNCURED",
+   "cr": "statement does not keep the grade CHALLENGER LINK BROKEN (it reads UNDERDETERMINED)",
+   "fl": 341,
+   "fr": 5299,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53600,
+   "seat": "spark",
+   "kind": "cure",
+   "rule": "K-G4",
+   "item": "D1 vs C1",
+   "cure_status": "UNCURED",
+   "cr": "no PRESSED line, no RETRACTED line, and no statement that names a pressing round and quotes it, for D1 vs C1",
+   "fl": 341,
+   "fr": 91,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53601,
+   "seat": "spark",
+   "kind": "cure",
+   "rule": "K-G4",
+   "item": "D6 vs C6",
+   "cure_status": "CURED",
+   "cr": "forced link: a FORCED line for D6 vs C6 (ruling 411); K-F reads its quotations",
+   "fl": 516,
+   "fr": 91,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53602,
+   "seat": "spark",
+   "kind": "cure",
+   "rule": "K-C",
+   "item": "RESULT",
+   "cure_status": "CURED",
+   "cr": null,
+   "fl": 204,
+   "fr": 91,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53603,
+   "seat": "spark",
+   "kind": "cure",
+   "rule": "K-SU",
+   "item": "SENTENCE WHICH HOLDS",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): TRIAL rule (K-SU, list only): the reply grades WHICH HOLDS on the whole sentence Matthew 1:24-25; recorded only",
+   "fl": 398,
+   "fr": 91,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53604,
+   "seat": "spark",
+   "kind": "cure",
+   "rule": "K-SU",
+   "item": "SENTENCE D1 vs C1",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): TRIAL rule (K-SU, list only): the reply grades D1 vs C1 on the whole sentence Matthew 1:15-16; recorded only",
+   "fl": 360,
+   "fr": 91,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53605,
+   "seat": "spark",
+   "kind": "cure",
+   "rule": "K-CMT",
+   "item": "contested grades without a commitment",
+   "cure_status": "CURED",
+   "cr": "the response names the commitment, or NOT A GRADE",
+   "fl": 893,
+   "fr": 91,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53606,
+   "seat": "spark",
+   "kind": "cure",
+   "rule": "K-CMTL",
+   "item": "line 1",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): the response names the commitment, or NOT A GRADE",
+   "fl": 534,
+   "fr": 91,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53607,
+   "seat": "spark",
+   "kind": "cure",
+   "rule": "K-CMTL",
+   "item": "line 2",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): the response names the commitment, or NOT A GRADE",
+   "fl": 432,
+   "fr": 91,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53608,
+   "seat": "spark",
+   "kind": "cure",
+   "rule": "K-CMTL",
+   "item": "line 3",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): the response names the commitment, or NOT A GRADE",
+   "fl": 567,
+   "fr": 91,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53609,
+   "seat": "spark",
+   "kind": "cure",
+   "rule": "K-CMTL",
+   "item": "line 4",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): the response names the commitment, or NOT A GRADE",
+   "fl": 626,
+   "fr": 91,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53610,
+   "seat": "spark",
+   "kind": "cure",
+   "rule": "K-CMTL",
+   "item": "line 5",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): the response names the commitment, or NOT A GRADE",
+   "fl": 626,
+   "fr": 91,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53611,
+   "seat": "spark",
+   "kind": "cure",
+   "rule": "K-CMTL",
+   "item": "line 6",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): the response names the commitment, or NOT A GRADE",
+   "fl": 626,
+   "fr": 91,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53612,
+   "seat": "spark",
+   "kind": "cure",
+   "rule": "K-RUL",
+   "item": "D1 vs C1",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): a valid ruling card for D1 vs C1",
+   "fl": 113,
+   "fr": 91,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53613,
+   "seat": "spark",
+   "kind": "cure",
+   "rule": "K-RUL",
+   "item": "D6 vs C6",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): a valid ruling card for D6 vs C6",
+   "fl": 113,
+   "fr": 91,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53614,
+   "seat": "sol",
+   "kind": "cure",
+   "rule": "K-S3",
+   "item": "S3 CHALLENGER DR4: #2",
+   "cure_status": "CURED",
+   "cr": "answered NOT HELD with its reason, quoting the flagged sentence (6 words in a row, or all of it if shorter): the sentence is not a countable concession (pkgKS3)",
+   "fl": 176,
+   "fr": 21341,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53615,
+   "seat": "sol",
+   "kind": "cure",
+   "rule": "K-SU",
+   "item": "SENTENCE D1 vs C2",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): TRIAL rule (K-SU, list only): the reply withdraws its line on D1 vs C2; recorded only",
+   "fl": 386,
+   "fr": 103,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53616,
+   "seat": "sol",
+   "kind": "cure",
+   "rule": "K-SU",
+   "item": "SENTENCE ANSWER CHECK Matthew 1:25",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): TRIAL rule (K-SU, list only): the reply withdraws its line on ANSWER CHECK; recorded only",
+   "fl": 412,
+   "fr": 103,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53617,
+   "seat": "sol",
+   "kind": "cure",
+   "rule": "K-SU",
+   "item": "SENTENCE ANSWER CHECK Matthew 1:16",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): TRIAL rule (K-SU, list only): the reply withdraws its line on ANSWER CHECK; recorded only",
+   "fl": 377,
+   "fr": 103,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53618,
+   "seat": "sol",
+   "kind": "cure",
+   "rule": "K-SU",
+   "item": "SENTENCE ANSWER CHECK Luke 2:4",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): TRIAL rule (K-SU, list only): the reply withdraws its line on ANSWER CHECK; recorded only",
+   "fl": 444,
+   "fr": 103,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53619,
+   "seat": "sol",
+   "kind": "cure",
+   "rule": "K-CMT",
+   "item": "contested grades without a commitment",
+   "cure_status": "CURED",
+   "cr": "the response names the commitment, or NOT A GRADE",
+   "fl": 429,
+   "fr": 103,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53620,
+   "seat": "sol",
+   "kind": "cure",
+   "rule": "K-CMTL",
+   "item": "line 1",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): the response names the commitment, or NOT A GRADE",
+   "fl": 730,
+   "fr": 103,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53621,
+   "seat": "sol",
+   "kind": "cure",
+   "rule": "K-CMTL",
+   "item": "line 2",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): the response names the commitment, or NOT A GRADE",
+   "fl": 626,
+   "fr": 103,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53622,
+   "seat": "sol",
+   "kind": "cure",
+   "rule": "K-RUL",
+   "item": "D6 vs C6",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): a valid ruling card for D6 vs C6",
+   "fl": 113,
+   "fr": 103,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53623,
+   "seat": "sol",
+   "kind": "cure",
+   "rule": "K-UNX",
+   "item": "CHALLENGER premise 1",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): TRIAL rule (K-UNX, ASK 330, ruling 460): the STATEMENT is in the assumed-fact form: STEP found in the side's own rounds; ROWS GIVE quotes found in the cited verses; ASSUMES names a given fact; the count s",
+   "fl": 1201,
+   "fr": 103,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53624,
+   "seat": "sol",
+   "kind": "cure",
+   "rule": "K-UNX",
+   "item": "CHALLENGER premise 5",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): TRIAL rule (K-UNX-A): CORRECTED COUNT 1 takes the premise out of the count",
+   "fl": 1277,
+   "fr": 103,
+   "t": "17:30:11"
+  },
+  {
+   "id": 53891,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "K-S3",
+   "item": "S3 CHALLENGER DR4: #2",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53892,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Luke 1:35 [CR3]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53893,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Matthew 1:18 [CR3]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53894,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Matthew 1:18 [CR3]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53895,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Mark 7:8 [CR3]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53896,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Luke 3:23 [CR3]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53897,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Psalms 132:11 [DR3]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53898,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Acts 2:30 [DR3]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53899,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Hebrews 7:5 [DR3]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53900,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-VOID",
+   "item": "premise listed against the defender 3",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53901,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-COL",
+   "item": "COLLISION D2 vs C6",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53902,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-COL",
+   "item": "COLLISION D2 vs C6",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53903,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-HOLD",
+   "item": "COLLISION D1 vs C1",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53904,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-HOLD",
+   "item": "COLLISION D4 vs C3",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53905,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-PREM",
+   "item": "premise listed against the defender 6",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53906,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-RES",
+   "item": "RESULT REASON",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53907,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-COL",
+   "item": "COLLISION D1 vs C2",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53908,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-COL",
+   "item": "COLLISION D6 vs C6",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53909,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-COL",
+   "item": "COLLISION D6 vs C6",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53910,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-COL",
+   "item": "COLLISION D1 vs C2",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53911,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Luke 1:32 [DR3]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53912,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Luke 1:37 [CR3]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53913,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK 1 Corinthians 15:39 [CR3]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53914,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Luke 2:49 [CR3]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53915,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-HOLD",
+   "item": "COLLISION D3 vs C4 (UNDERDETERMINED; pkgUNA)",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53916,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-LAY",
+   "item": "LAYERS KEYSTONE D6",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53917,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-LAY",
+   "item": "LAYERS UND-SIDES D3 vs C6",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53918,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-LAY",
+   "item": "LAYERS UND-SIDES D5 vs C5",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53919,
+   "seat": "sol62",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Luke 1:35 [CR3]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53920,
+   "seat": "sol62",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Luke 1:34 [CR3]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53921,
+   "seat": "sol62",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Matthew 1:20 [CR4]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53922,
+   "seat": "sol62",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Matthew 1:19 [CR4]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53923,
+   "seat": "sol62",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK 1 Corinthians 15:38 [DR3]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53924,
+   "seat": "sol62",
+   "kind": "send_back",
+   "rule": "E-COL",
+   "item": "COLLISION D2 vs C6",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53925,
+   "seat": "sol62",
+   "kind": "send_back",
+   "rule": "E-PREM",
+   "item": "premise listed against the defender 3",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53926,
+   "seat": "sol62",
+   "kind": "send_back",
+   "rule": "E-RES",
+   "item": "RESULT REASON",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53927,
+   "seat": "sol62",
+   "kind": "send_back",
+   "rule": "E-COL",
+   "item": "COLLISION D2 vs C6",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53928,
+   "seat": "sol62",
+   "kind": "send_back",
+   "rule": "E-COL",
+   "item": "COLLISION D3 vs C4",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53929,
+   "seat": "sol62",
+   "kind": "send_back",
+   "rule": "E-COL",
+   "item": "COLLISION D6 vs C6",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53930,
+   "seat": "sol62",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Luke 2:49 [CR3]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53931,
+   "seat": "sol62",
+   "kind": "send_back",
+   "rule": "E-HOLD",
+   "item": "COLLISION D5 vs C5 (UNDERDETERMINED; pkgUNA)",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53932,
+   "seat": "sol62",
+   "kind": "send_back",
+   "rule": "E-LAY",
+   "item": "LAYERS UND-SIDES D1 vs C1",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53933,
+   "seat": "spark",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Mark 7:8 [CR3]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53934,
+   "seat": "spark",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Jeremiah 22:30 [CR3]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53935,
+   "seat": "spark",
+   "kind": "send_back",
+   "rule": "E-COL",
+   "item": "COLLISION D1 vs C1",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53936,
+   "seat": "spark",
+   "kind": "send_back",
+   "rule": "E-PREM",
+   "item": "premise listed against the defender 1",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53937,
+   "seat": "spark",
+   "kind": "send_back",
+   "rule": "E-PREM",
+   "item": "premise listed against the defender 3",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53938,
+   "seat": "spark",
+   "kind": "send_back",
+   "rule": "E-RES",
+   "item": "VERDICT LINES",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53939,
+   "seat": "spark",
+   "kind": "send_back",
+   "rule": "E-COL",
+   "item": "COLLISION D6 vs C6",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53940,
+   "seat": "spark",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Luke 2:49 [CR3]",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53941,
+   "seat": "spark",
+   "kind": "send_back",
+   "rule": "E-LAY",
+   "item": "LAYERS RESULT RESULT",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53942,
+   "seat": "spark",
+   "kind": "send_back",
+   "rule": "E-LAY",
+   "item": "LAYERS KEYSTONE D6",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53943,
+   "seat": "spark",
+   "kind": "send_back",
+   "rule": "E-LAY",
+   "item": "LAYERS UND-SIDES D2 vs C2",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: no panel request for this seat (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53944,
+   "seat": "spark",
+   "kind": "send_back",
+   "rule": "E-LAY",
+   "item": "LAYERS STANDS-FIT D4 (LINK STATE)",
+   "cure_status": null,
+   "cr": "TRIAL rule (recorded only, not sent; it removes no seat): LAYERS (pkgLAY, Commitment 13, TRIAL, ASK 397): a LINK STATE STANDS line that quotes no 6 words in a row of the answer that fit (Commitment 13)",
+   "fl": 186,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53945,
+   "seat": "spark",
+   "kind": "send_back",
+   "rule": "E-LAY",
+   "item": "LAYERS STANDS-FIT D5 (LINK STATE)",
+   "cure_status": null,
+   "cr": "TRIAL rule (recorded only, not sent; it removes no seat): LAYERS (pkgLAY, Commitment 13, TRIAL, ASK 397): a LINK STATE STANDS line that quotes no 6 words in a row of the answer that fit (Commitment 13)",
+   "fl": 207,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53946,
+   "seat": "sol62",
+   "kind": "send_back",
+   "rule": "E-PTS",
+   "item": "POINTS AT ISSUE",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: TRIAL rule (recorded only, not sent; it removes no seat): POINTS AT ISSUE (ASK 506, Commitment 13, TRIAL): no POINTS AT ISSUE section before the grades (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53947,
+   "seat": "spark",
+   "kind": "send_back",
+   "rule": "E-PTS",
+   "item": "POINTS AT ISSUE",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: TRIAL rule (recorded only, not sent; it removes no seat): POINTS AT ISSUE (ASK 506, Commitment 13, TRIAL): no POINTS AT ISSUE section before the grades (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53948,
+   "seat": "sol",
+   "kind": "send_back",
+   "rule": "E-PTS",
+   "item": "POINTS AT ISSUE",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: TRIAL rule (recorded only, not sent; it removes no seat): POINTS AT ISSUE (ASK 506, Commitment 13, TRIAL): no POINTS AT ISSUE section before the grades (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:32:10"
+  },
+  {
+   "id": 53949,
+   "seat": "chatgpt",
+   "kind": "alternate_reply",
+   "rule": null,
+   "item": "replaces spark",
+   "cure_status": null,
+   "cr": null,
+   "fl": null,
+   "fr": 32229,
+   "t": "17:35:34"
+  },
+  {
+   "id": 53950,
+   "seat": "chatgpt",
+   "kind": "cure",
+   "rule": "K-G4",
+   "item": "D1 vs C2",
+   "cure_status": "CURED",
+   "cr": "retracted",
+   "fl": 792,
+   "fr": 10185,
+   "t": "17:35:34"
+  },
+  {
+   "id": 53951,
+   "seat": "chatgpt",
+   "kind": "cure",
+   "rule": "K-G10",
+   "item": "CHALLENGER premise 5",
+   "cure_status": "UNCURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): corrected count 2 still counts premises 5, 6 on a verse no listed premise carries under PRESSED WITH (the count is at most 1)",
+   "fl": 244,
+   "fr": 94,
+   "t": "17:35:34"
+  },
+  {
+   "id": 53952,
+   "seat": "chatgpt",
+   "kind": "cure",
+   "rule": "K-G10",
+   "item": "CHALLENGER premise 6",
+   "cure_status": "UNCURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): corrected count 2 still counts premises 5, 6 on a verse no listed premise carries under PRESSED WITH (the count is at most 1)",
+   "fl": 210,
+   "fr": 94,
+   "t": "17:35:34"
+  },
+  {
+   "id": 53953,
+   "seat": "chatgpt",
+   "kind": "cure",
+   "rule": "K-SU",
+   "item": "SENTENCE WHICH HOLDS",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): TRIAL rule (K-SU, list only): the reply withdraws its line on WHICH HOLDS; recorded only",
+   "fl": 389,
+   "fr": 94,
+   "t": "17:35:34"
+  },
+  {
+   "id": 53954,
+   "seat": "chatgpt",
+   "kind": "cure",
+   "rule": "K-SU",
+   "item": "SENTENCE ANSWER CHECK Matthew 1:25",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): TRIAL rule (K-SU, list only): the reply withdraws its line on ANSWER CHECK; recorded only",
+   "fl": 412,
+   "fr": 94,
+   "t": "17:35:34"
+  },
+  {
+   "id": 53955,
+   "seat": "chatgpt",
+   "kind": "cure",
+   "rule": "K-SU",
+   "item": "SENTENCE ANSWER CHECK Matthew 1:16",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): TRIAL rule (K-SU, list only): the reply withdraws its line on ANSWER CHECK; recorded only",
+   "fl": 377,
+   "fr": 94,
+   "t": "17:35:34"
+  },
+  {
+   "id": 53956,
+   "seat": "chatgpt",
+   "kind": "cure",
+   "rule": "K-SU",
+   "item": "SENTENCE ANSWER CHECK Luke 2:4",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): TRIAL rule (K-SU, list only): the reply withdraws its line on ANSWER CHECK; recorded only",
+   "fl": 444,
+   "fr": 94,
+   "t": "17:35:34"
+  },
+  {
+   "id": 53957,
+   "seat": "chatgpt",
+   "kind": "cure",
+   "rule": "K-CMT",
+   "item": "contested grades without a commitment",
+   "cure_status": "CURED",
+   "cr": "the response names the commitment, or NOT A GRADE",
+   "fl": 264,
+   "fr": 94,
+   "t": "17:35:34"
+  },
+  {
+   "id": 53958,
+   "seat": "chatgpt",
+   "kind": "cure",
+   "rule": "K-CMTL",
+   "item": "line 1",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): the response names the commitment, or NOT A GRADE",
+   "fl": 537,
+   "fr": 94,
+   "t": "17:35:34"
+  },
+  {
+   "id": 53959,
+   "seat": "chatgpt",
+   "kind": "cure",
+   "rule": "K-UNX",
+   "item": "CHALLENGER premise 1",
+   "cure_status": "CURED",
+   "cr": "TRIAL rule (recorded and answered; it removes no seat): TRIAL rule (K-UNX-A): CORRECTED COUNT 2 takes the premise out of the count",
+   "fl": 1223,
+   "fr": 94,
+   "t": "17:35:34"
+  },
+  {
+   "id": 54037,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-LAY",
+   "item": "LAYERS STANDS-FIT D6 (LINK STATE)",
+   "cure_status": null,
+   "cr": "TRIAL rule (recorded only, not sent; it removes no seat): LAYERS (pkgLAY, Commitment 13, TRIAL, ASK 397): a LINK STATE STANDS line that quotes no 6 words in a row of the answer that fit (Commitment 13)",
+   "fl": 257,
+   "fr": null,
+   "t": "17:38:02"
+  },
+  {
+   "id": 54038,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-WHL",
+   "item": "WHICH HOLDS AGREEMENT",
+   "cure_status": null,
+   "cr": "SEND-BACK NOT SENT: TRIAL rule (recorded only, not sent; it removes no seat): WHOLE POSITIONS (ASK 507, Commitment 17, TRIAL): WHICH HOLDS: CHALLENGER with the verdict HELD (the challenger's position holds only when the verdict is BROKEN) (ruling 428)",
+   "fl": null,
+   "fr": null,
+   "t": "17:38:02"
+  },
+  {
+   "id": 54039,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Matthew 1:19 [CR4]",
+   "cure_status": "CURED",
+   "cr": "SEND-BACK CHANGE TO: ANSWER CHECK: Matthew 1:19 -- [CR3] -- MEANS: \"justice is stated, and the putting away follows from it, while unwillingness explains the doing it privily\" -- ANSWER: \"Its two grounds, \u2018just\u2019 and \u2018not willing to make her a publick example\u2019,",
+   "fl": 323,
+   "fr": 7022,
+   "t": "17:38:02"
+  },
+  {
+   "id": 54040,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Luke 1:35 [CR3]",
+   "cure_status": "CURED",
+   "cr": "SEND-BACK KEEP -- [CR3] answers that \"The origin-marker and the holiness are both said of the child\", while Luke 1:35 says \"therefore also that holy thing which shall be born of thee shall be called the Son of God\". | ENFORCER: (right: MISSES): The answer says",
+   "fl": 309,
+   "fr": null,
+   "t": "17:38:02"
+  },
+  {
+   "id": 54041,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Luke 3:23 [CR3]",
+   "cure_status": "CURED",
+   "cr": "SEND-BACK KEEP -- [CR3] acknowledges \"The gloss carries \u2018suppose\u2019\" and offers its reading as \"The reckoning by usage is the reckoning by the father's house\". | ENFORCER: (right: MISSES): The answer says it \u201crests on its first sense, \u2018to do by law (usage)\u2019,\u201d bu",
+   "fl": 197,
+   "fr": null,
+   "t": "17:38:02"
+  },
+  {
+   "id": 54042,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-ANS",
+   "item": "ANSWER CHECK Luke 1:32 [DR3]",
+   "cure_status": "CURED",
+   "cr": "SEND-BACK CHANGE TO: ANSWER CHECK: Luke 1:32 -- [DR3] -- MEANS: \"the title and the father David's throne are given before the question\" -- ANSWER: \"The title was given in verse 32 before the question\" -- MISSES (Commitment 5) -- The answer addresses the title ",
+   "fl": 233,
+   "fr": null,
+   "t": "17:38:02"
+  },
+  {
+   "id": 54043,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-HOLD",
+   "item": "COLLISION D1 vs C1",
+   "cure_status": "CURED",
+   "cr": "SEND-BACK CHANGE TO: D1 vs C1 (Matthew 1:16): UNDERDETERMINED -- [CR3] answers the bearing press -- POINT: P1 -- GROUND: [L1] Matthew 1:16 \"Joseph the husband of Mary, of whom was born Jesus\" | [L3] Romans 1:3 \"made of the seed of David according to the flesh\"",
+   "fl": 339,
+   "fr": null,
+   "t": "17:38:02"
+  },
+  {
+   "id": 54044,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-HOLD",
+   "item": "COLLISION D1 vs C2",
+   "cure_status": "CURED",
+   "cr": "SEND-BACK CHANGE TO: D1 vs C2 (Jeremiah 22:30): STANDS -- POINT: P2 -- GROUND: [L1] Jeremiah 22:30 \"no man of his seed shall prosper, sitting upon the throne of David, and ruling any more in Judah\" | [L3] Haggai 2:23 \"will make thee as a signet: for I have cho",
+   "fl": 513,
+   "fr": null,
+   "t": "17:38:02"
+  },
+  {
+   "id": 54045,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-HOLD",
+   "item": "COLLISION D2 vs C6",
+   "cure_status": "CURED",
+   "cr": "SEND-BACK CHANGE TO: D2 vs C6 (Luke 1:35): STANDS -- POINT: P3 -- GROUND: [L1] Luke 1:35 \"The Holy Ghost shall come upon thee, and the power of the Highest shall overshadow thee\" | [L3] Ruth 4:13 \"when he went in unto her, the LORD gave her conception\"; [CR3] ",
+   "fl": 415,
+   "fr": null,
+   "t": "17:38:02"
+  },
+  {
+   "id": 54046,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-HOLD",
+   "item": "COLLISION D5 vs C5",
+   "cure_status": "CURED",
+   "cr": "SEND-BACK CHANGE TO: D5 vs C5 (Luke 2:48): UNDERDETERMINED -- [CR3] answers the fatherhood presses -- POINT: P7 -- GROUND: [L1] Luke 2:48 \"thy father and I have sought thee sorrowing\" | [L3] Luke 2:49 \"wist ye not that I must be about my Father's business?\" | ",
+   "fl": 347,
+   "fr": null,
+   "t": "17:38:02"
+  },
+  {
+   "id": 54047,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-HOLD",
+   "item": "COLLISION D6",
+   "cure_status": null,
+   "cr": "SEND-BACK CHANGE TO: D6: STANDS -- GROUND: [L1] Romans 1:3 \"made of the seed of David according to the flesh\" | [L3] Matthew 1:25 \"And knew her not till she had brought forth her firstborn son\"; no listed premise separately presses D6, and the earlier statemen",
+   "fl": 257,
+   "fr": null,
+   "t": "17:38:02"
+  },
+  {
+   "id": 54048,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-HOLD",
+   "item": "COLLISION D3 vs C4 (UNDERDETERMINED; pkgUNA)",
+   "cure_status": "CURED",
+   "cr": "SEND-BACK CHANGE TO: D3 vs C4 (Matthew 1:19): UNDERDETERMINED -- [CR3] answers Joseph's purpose -- POINT: P4 -- GROUND: [L1] Matthew 1:19 \"not willing to make her a publick example, was minded to put her away privily\" | [L3] Matthew 1:20 \"for that which is con",
+   "fl": 350,
+   "fr": null,
+   "t": "17:38:02"
+  },
+  {
+   "id": 54049,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-LAY",
+   "item": "LAYERS KEYSTONE D6",
+   "cure_status": "UNCURED",
+   "cr": "SEND-BACK CHANGE TO: KEYSTONE: D6 -- STANDS -- D6: STANDS decides the conclusion link; [L1] Romans 1:3 \"made of the seed of David according to the flesh\" | [L3] Matthew 1:25 \"And knew her not till she had brought forth her firstborn son\". -- [CR1] declares the",
+   "fl": 188,
+   "fr": null,
+   "t": "17:38:02"
+  },
+  {
+   "id": 54050,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-LAY",
+   "item": "LAYERS UND-SIDES D3 vs C6",
+   "cure_status": "CURED",
+   "cr": "SEND-BACK CHANGE TO: D3 vs C6 (Matthew 1:18): UNDERDETERMINED -- [CR3] answers the coming-together press -- POINT: P5 -- GROUND: [L1] Matthew 1:18 \"before they came together, she was found with child of the Holy Ghost\" | [L3] 1 Corinthians 7:5 \"and come togeth",
+   "fl": 398,
+   "fr": null,
+   "t": "17:38:02"
+  },
+  {
+   "id": 54051,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-LAY",
+   "item": "LAYERS UND-SIDES D4 vs C3",
+   "cure_status": "UNCURED",
+   "cr": "SEND-BACK CHANGE TO: D4 vs C3 (Leviticus 19:19): UNDERDETERMINED -- [CR3] answers the statute and forming presses -- POINT: P6 -- GROUND: [L1] Leviticus 19:19 \"Thou shalt not let thy cattle gender with a diverse kind\" | [L3] John 3:6 \"That which is born of the",
+   "fl": 384,
+   "fr": null,
+   "t": "17:38:02"
+  },
+  {
+   "id": 54052,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-REREAD",
+   "item": "S1 E-ANS ANSWER CHECK Matthew 1:19 [CR4]",
+   "cure_status": "RECORD-ONLY",
+   "cr": "SECOND READING of the replaced line (pkgVP1; RECORD-ONLY: nothing is sent back, nothing is counted, no seat is removed): ENFORCER DISAGREE (right: MEETS): [CR3] says \u201cIts two grounds, \u2018just\u2019 and \u2018not willing to make her a publick example\u2019, are joined by \u2018and\u2019 ",
+   "fl": 334,
+   "fr": 2359,
+   "t": "17:38:41"
+  },
+  {
+   "id": 54053,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-REREAD",
+   "item": "S4 E-ANS ANSWER CHECK Luke 1:32 [DR3]",
+   "cure_status": "CURED",
+   "cr": "SECOND READING of the replaced line (pkgVP1; RECORD-ONLY: nothing is sent back, nothing is counted, no seat is removed): ENFORCER AGREE (right: MISSES): The answer says \u201cThe title was given in verse 32 before the question\u201d but does not address the pressed mean",
+   "fl": 272,
+   "fr": null,
+   "t": "17:38:41"
+  },
+  {
+   "id": 54054,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-REREAD",
+   "item": "S5 E-HOLD COLLISION D1 vs C1",
+   "cure_status": "CURED",
+   "cr": "SECOND READING of the replaced line (pkgVP1; RECORD-ONLY: nothing is sent back, nothing is counted, no seat is removed): ENFORCER AGREE (right: UNDERDETERMINED): [CR3] says \u201cThe passive tells the mother\u2019s bearing\u201d and [DR3] says \u201cthe child as born \u2018of whom\u2019, t",
+   "fl": 599,
+   "fr": null,
+   "t": "17:38:41"
+  },
+  {
+   "id": 54055,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-REREAD",
+   "item": "S6 E-HOLD COLLISION D1 vs C2",
+   "cure_status": "RECORD-ONLY",
+   "cr": "SECOND READING of the replaced line (pkgVP1; RECORD-ONLY: nothing is sent back, nothing is counted, no seat is removed): ENFORCER DISAGREE (right: BROKEN): The defender\u2019s answer \u201cThe LORD\u2019s rule for his own pronounced sentences is repentance on turning\u201d was gr",
+   "fl": 401,
+   "fr": null,
+   "t": "17:38:41"
+  },
+  {
+   "id": 54056,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-REREAD",
+   "item": "S7 E-HOLD COLLISION D2 vs C6",
+   "cure_status": "CURED",
+   "cr": "SECOND READING of the replaced line (pkgVP1; RECORD-ONLY: nothing is sent back, nothing is counted, no seat is removed): ENFORCER AGREE (right: STANDS): [CR3] answers that \u201cThe \u2018how\u2019 is answered with God\u2019s power upon her\u201d and that this is \u201cthe LORD\u2019s part, whi",
+   "fl": 379,
+   "fr": null,
+   "t": "17:38:41"
+  },
+  {
+   "id": 54057,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-REREAD",
+   "item": "S8 E-HOLD COLLISION D5 vs C5",
+   "cure_status": "CURED",
+   "cr": "SECOND READING of the replaced line (pkgVP1; RECORD-ONLY: nothing is sent back, nothing is counted, no seat is removed): ENFORCER AGREE (right: UNDERDETERMINED): Luke 2:48 says \u201cthy father and I,\u201d Luke 2:49 says \u201cmy Father\u2019s business,\u201d and Luke 3:23 qualifies ",
+   "fl": 652,
+   "fr": null,
+   "t": "17:38:41"
+  },
+  {
+   "id": 54058,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-REREAD",
+   "item": "S9 E-HOLD COLLISION D6",
+   "cure_status": "CURED",
+   "cr": "SECOND READING of the replaced line (pkgVP1; RECORD-ONLY: nothing is sent back, nothing is counted, no seat is removed): ENFORCER AGREE (right: STANDS): The line has no answer check graded MISSES or FAILS on a press against D6: the defender\u2019s answers on Romans",
+   "fl": 273,
+   "fr": null,
+   "t": "17:38:41"
+  },
+  {
+   "id": 54059,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-GATE",
+   "item": "G1 CONTRADICTION (E-GATE D38)",
+   "cure_status": "CURED",
+   "cr": "GATE CHANGE TO: RULING -- D1 vs C2 -- STANDS -- [CR3] answers, \"The signet plucked from Coniah is set by the LORD on his grandson.\" | ENGINE: your RULING card grades D1 vs C2 DEFENDER LINK BROKEN, but your collision line for D1 vs C2 now grades it STANDS. Chan",
+   "fl": 444,
+   "fr": 405,
+   "t": "17:38:50"
+  },
+  {
+   "id": 54060,
+   "seat": "chatgpt",
+   "kind": "send_back",
+   "rule": "E-APPLY",
+   "item": "APPLIED S1, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, G1",
+   "cure_status": null,
+   "cr": "verdict HELD to HELD; derived RESULT DEFENDER WINS (WALL-2024 2236, 2237; item C)",
+   "fl": null,
+   "fr": null,
+   "t": "17:38:52"
+  }
+ ],
+ "idr": {
+  "min": 53375,
+  "max": 54060,
+  "n": 686
+ },
+ "longfl": 1,
+ "gate": [
+  {
+   "id": 54059,
+   "seat": "chatgpt",
+   "item": "G1 CONTRADICTION (E-GATE D38)",
+   "cs": "CURED",
+   "cr": "GATE CHANGE TO: RULING -- D1 vs C2 -- STANDS -- [CR3] answers, \"The signet plucked from Coniah is set by the LORD on his grandson.\" | ENGINE: your RULING card grades D1 vs C2 DEFENDER LINK BROKEN, but your collision line for D1 vs C2 now grades it STANDS. Change one of the two lines so they agree. | the gate change was applied and the item is no longer raised",
+   "reply": "{\n  \"verdict_tag\": \"HELD\",\n  \"defense_standing\": \"PROP-DEPENDENT\",\n  \"challenge_standing\": \"PROP-DEPENDENT\",\n  \"conceded_links\": 1,\n  \"challenger_conceded_links\": 3,\n  \"counted_premises_defender\": [6],\n  \"counted_premises_challenger\": [1, 5, 6],\n  \"reasoning\": \"GATE: G1 || CHANGE TO: RULING -- D1 vs C2 -- STANDS || [CR3] answers, \\\"The signet plucked from Coniah is set by the LORD on his grandson.\\\"\"\n}"
+  }
+ ],
+ "chk": [
+  {
+   "seat": "assumption check",
+   "rule": "E-ASSUME",
+   "rl": "ASSUME-CHECK: DEFENDER PREMISE 1 -- FACT 1 \"a knowing betwee",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-ASSUME",
+   "rl": "ASSUME-CHECK: DEFENDER PREMISE 2 -- FACT 1 \"a husband's know",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-ASSUME",
+   "rl": "ASSUME-CHECK: DEFENDER PREMISE 6 -- FACT 1 \"the child's fles",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 1 -- 1 Corinthians 7:5 -- NOT ",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 1 -- Luke 1:27 -- FOOTED -- Lu",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 1 -- Luke 1:34 -- FOOTED -- Lu",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 1 -- Matthew 1:18 -- FOOTED --",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 1 -- Matthew 1:25 -- NOT FOOTE",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 2 -- Luke 1:34 -- NOT FOOTED -",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 2 -- Luke 1:35 -- FOOTED -- Lu",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 2 -- Luke 1:37 -- NOT FOOTED -",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 2 -- Matthew 1:20 -- FOOTED --",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 3 -- Luke 1:35 -- FOOTED -- Lu",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 3 -- Mark 7:8 -- NOT FOOTED --",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 3 -- Matthew 1:19 -- NOT FOOTE",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 3 -- Matthew 1:20 -- FOOTED --",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 4 -- 1 Corinthians 15:39 -- NO",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 4 -- Genesis 2:22 -- NOT FOOTE",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 4 -- Genesis 2:7 -- NOT FOOTED",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 4 -- Leviticus 19:19 -- NOT FO",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 4 -- Luke 1:35 -- NOT FOOTED -",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 5 -- John 6:42 -- FOOTED -- Jo",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 5 -- Luke 2:49 -- FOOTED -- Lu",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 5 -- Luke 3:23 -- FOOTED -- Lu",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 5 -- Matthew 13:55 -- NOT FOOT",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 6 -- Galatians 4:4 -- NOT FOOT",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 6 -- Hebrews 7:10 -- FOOTED --",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 6 -- Jeremiah 22:30 -- NOT FOO",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 6 -- Luke 1:32 -- FOOTED -- Lu",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 6 -- Luke 1:42 -- FOOTED -- Lu",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 6 -- Matthew 1:16 -- FOOTED --",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 6 -- Psalms 132:11 -- NOT FOOT",
+   "n": 1
+  },
+  {
+   "seat": "assumption check",
+   "rule": "E-PRESS",
+   "rl": "PRESS-CHECK: DEFENDER PREMISE 6 -- Romans 1:3 -- NOT FOOTED ",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"after the tradition of men ... and not after Chris",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"before they came together, she was found with chil",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"being (as was supposed) the son of Joseph\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"being a just [man], and not willing to make her a ",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"blessed [is] the fruit of thy womb\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"born of the flesh is flesh\" and \"born of the Spiri",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"by the house of their fathers\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"come together again, that Satan tempt you not for ",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"fear not to take unto thee Mary thy wife\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"for that which is conceived in her is of the Holy ",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"he was of the house and lineage of David\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"How shall this be\" and Luke 1:35 \"the power of the",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"I know not a man\" and Luke 1:31 \"thou shalt concei",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"I must be about my Father's business\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"If that nation ... turn from their evil, I will re",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"Is not this the carpenter's son?\"",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"Joseph the husband of Mary, of whom was born Jesus",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"Joseph, of the house of David\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"knew her not till she had brought forth her firstb",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"made of a woman\" and Romans 1:3 \"made of the seed ",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"made of the seed of David according to the flesh\".",
+   "n": 2
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"not willing to make her a publick example\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"of the fruit of his loins, according to the flesh\"",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"Of the fruit of thy body\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"one [kind of] flesh of men\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"shall be called the Son of the Highest\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"sworn [in] truth unto David\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"that holy thing which shall be born of thee\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"that which is conceived in her is of the Holy Ghos",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"The Holy Ghost shall come upon thee\"; the answer a",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"the LORD God formed man [of] the dust of the groun",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"the Lord God shall give unto him the throne of his",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"the rib, which the LORD God had taken from man, ma",
+   "n": 2
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"the son of Shealtiel ... will make thee as a signe",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"the sons of Jeconiah\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"the washing of pots and cups: and many other such ",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"their father's house, and their seed\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"there came a cloud, and overshadowed them\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"therefore also that holy thing which shall be born",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"thy cattle\" and \"thy field\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"thy cousin Elisabeth\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"thy two sons ... which were born unto thee\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"To a virgin espoused to a man whose name was Josep",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"to every seed his own body\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"took unto him his wife\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"were the signet upon my right hand, yet would I pl",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"ye shall receive power\" and \"ye shall be witnesses",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- Hebrews 2:14 \"he also himself likewise took part of",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- John 6:41 \"The Jews then murmured at him\".",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- Luke 1:13 \"thy wife Elisabeth shall bear thee a son",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- Luke 1:36 \"who was called barren\" and Luke 1:37 \"wi",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MEETS -- Mark 7:8 \"laying aside the commandment of God, ye h",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MISSES -- its fit requires the contested placement of that l",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MISSES -- the answer requires the turning and change of this",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MISSES -- the asserted placement of the woman's line at Luke",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-ANS",
+   "rl": "MISSES -- the operative absence is not established for the w",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-B7",
+   "rl": "ANSWER CHECK: Luke 1:27 -- [DR3] -- MEANS: \"the house of Dav",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-HOLD",
+   "rl": "D1 vs C1 (Matthew 1:16): UNDERDETERMINED -- [CR3] answers th",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-HOLD",
+   "rl": "D1 vs C2 (Jeremiah 22:30): UNDERDETERMINED -- [CR3] answers ",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-HOLD",
+   "rl": "D2 vs C6 (Luke 1:35): UNDERDETERMINED -- [CR3] answers the c",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-HOLD",
+   "rl": "D3 vs C4 (Matthew 1:19): UNDERDETERMINED -- [CR4] answers Jo",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-HOLD",
+   "rl": "D3 vs C6 (Matthew 1:18): UNDERDETERMINED -- [CR3] answers th",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-HOLD",
+   "rl": "D4 vs C3 (Leviticus 19:19): UNDERDETERMINED -- [CR3] answers",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-HOLD",
+   "rl": "D5 vs C5 (Luke 2:48): UNDERDETERMINED -- [CR3] answers the a",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-HOLD",
+   "rl": "D6: STANDS -- GROUND: [L1] Romans 1:3 \"made of the seed of D",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-KEY",
+   "rl": "KEYSTONE: D6 -- STANDS -- The conclusion that Joseph was the",
+   "n": 1
+  },
+  {
+   "seat": "chatgpt",
+   "rule": "E-PREM",
+   "rl": "CONCEDED LINKS: 1 -- Premise 6: UNEXHIBITED (pressed witness",
+   "n": 6
+  },
+  {
+   "seat": "judge contradiction enforcer",
+   "rule": "E-CLOSECON",
+   "rl": "CLOSE-CONTRADICTION: J1 -- DEFENDER -- LINK 3 -- CONFIRMED -",
+   "n": 2
+  },
+  {
+   "seat": "judge contradiction enforcer",
+   "rule": "E-CLOSECON",
+   "rl": "CLOSE-CONTRADICTION: J2 -- DEFENDER -- LINK 3 -- CONFIRMED -",
+   "n": 2
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"a man whose name was Joseph, of the house of David",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"after the tradition of men\" and \"not after Christ\"",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"And knew her not till she had brought forth her fi",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"and many other such like things ye do\" supports a ",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"and took unto him his wife\"; this unproven press i",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"because he was of the house and lineage of David\".",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"before they came together, she was found with chil",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"being (as was supposed) the son of Joseph\" fits a ",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"born of the Spirit is spirit\" is read with John 3:",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"by the house of their fathers\"; the answer exhibit",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"come together again\" is accepted as that couple's ",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"fear not to take unto thee Mary thy wife\".",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"For with God nothing shall be impossible\" is compa",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"God giveth it a body as it hath pleased him, and t",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"he also himself likewise took part of the same\"; t",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"I know not a man\" with \"thou shalt conceive\" agree",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"If that nation, against whom I have pronounced, tu",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"Is not this the carpenter's son? is not his mother",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"made of a woman\" agrees with the stated maternal s",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"made of the seed of David according to the flesh\".",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"not willing to make her a publick example\" and \"pu",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"not willing to make her a publick example\" fits sh",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"one kind of flesh of men\" is accepted; the added i",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"shall be filled with the Holy Ghost\" and \"that whi",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"she was found with child of the Holy Ghost\"; this ",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"she was found with child\"; this unproven press ind",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"that holy thing which shall be born of thee\"; the ",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"that which is conceived in her is of the Holy Ghos",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"that ye may keep your own tradition\" supports the ",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"the LORD God formed man of the dust of the ground\"",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"the Lord God shall give unto him the throne of his",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"The LORD hath sworn in truth unto David\" identifie",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"the rib, which the LORD God had taken from man, ma",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"the sons of Jeconiah\" agrees with Jeremiah 22:30's",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"their father's house, and their seed\" accepts both",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"Then Joseph being raised from sleep did as the ang",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"there came a cloud, and overshadowed them\" is acce",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"thou shalt conceive\"; the ledger marks this press ",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"Thou shalt not sow thy vineyard with divers seeds\"",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"thy cousin Elisabeth\" and Luke 1:13 identify the p",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"thy cousin Elisabeth\" establishes that kinship, wi",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"thy father and I\"; this unproven press independent",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"thy two sons\" and \"as Reuben and Simeon, they shal",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"To a virgin espoused to a man whose name was Josep",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"will make thee as a signet\" is accepted, and Hagga",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"yet would I pluck thee thence\" is read with Jeremi",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- Acts 1:8 \"ye shall be witnesses\" and Luke 1:35 \"sha",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- Genesis 2:23 \"flesh of my flesh\" supplies the posit",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- Hebrews 2:14 \"flesh and blood\" and Hebrews 2:17 \"a ",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- Luke 2:48 \"thy father and I\" and Luke 2:49 \"my Fath",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- Mark 7:8 \"laying aside the commandment of God\" supp",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- Ruth 4:13 \"when he went in unto her, the LORD gave ",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- The answer accepts the murmuring context and exhibi",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- The answer accepts the Spirit origin and distinguis",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- The answer accepts the statute's stated objects and",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- The answer accepts the title's earlier announcement",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- The begetting is accepted; this unproven press inde",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- The first Greek word means become and the second me",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- The Greek word means womb; \"the fruit of thy womb\" ",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- The Hebrew word means dust and the Greek word means",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- The quoted Greek word means who or which; \"of whom ",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- The quoted Hebrew word means nakedness; \"because he",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- The stated context is accepted; this unproven press",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MEETS -- The title and the genealogy are acknowledged; this ",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MISSES -- \"come out of the loins of Abraham\" supplies remote",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MISSES -- \"of the fruit of his loins, according to the flesh",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MISSES -- \"seeing I know not a man\" is answered by the comin",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MISSES -- \"The Holy Ghost shall come upon thee\" answers \"see",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MISSES -- Repetition of the title does not fit the pressed c",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MISSES -- The answer accepts whose body is sworn of, but its",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ANS",
+   "rl": "MISSES -- The house argument has its own analogy, but the an",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-COL",
+   "rl": "D1 vs C2 (Jeremiah 22:30): DEFENDER LINK BROKEN (Commitments",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-COL",
+   "rl": "D2 vs C6 (Luke 1:34-35): DEFENDER LINK BROKEN (Commitments 3",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-COL",
+   "rl": "D6 vs C6 (Luke 1:34-35; Matthew 1:20): DEFENDER LINK BROKEN ",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-COL",
+   "rl": "FORCED: D1 vs C2 -- MEANS [DR2]: \"the seed of Coniah is barr",
+   "n": 2
+  },
+  {
+   "seat": "sol",
+   "rule": "E-COL",
+   "rl": "FORCED: D2 vs C6 -- MEANS [DR2]: \"the stated means of this c",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-COL",
+   "rl": "FORCED: D6 vs C6 -- MEANS [DR2]: \"the stated means of this c",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-HOLD",
+   "rl": "D1 vs C1 (Matthew 1:16; Acts 2:30): UNDERDETERMINED -- Both ",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-HOLD",
+   "rl": "D3 vs C4 (Matthew 1:19-20): UNDERDETERMINED -- The motive in",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-HOLD",
+   "rl": "D3 vs C6 (Matthew 1:18,25): UNDERDETERMINED -- The temporal ",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-HOLD",
+   "rl": "D4 vs C3 (Leviticus 19:19; Luke 1:35): UNDERDETERMINED -- Th",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-HOLD",
+   "rl": "D5 vs C5 (Luke 2:48-49; Luke 3:23): UNDERDETERMINED -- Fathe",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-KEY",
+   "rl": "KEYSTONE: D6 -- BROKEN -- The conclusion that Joseph begat t",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ONE",
+   "rl": "D1 vs C2 (Jeremiah 22:30): DEFENDER LINK BROKEN (Commitments",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ONE",
+   "rl": "D2 vs C6 (Luke 1:34-35): DEFENDER LINK BROKEN (Commitments 3",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ONE",
+   "rl": "D6 vs C6 (Luke 1:34-35; Matthew 1:20): DEFENDER LINK BROKEN ",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ONE",
+   "rl": "FORCED: D1 vs C2 -- MEANS [DR2]: \"the seed of Coniah is barr",
+   "n": 2
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ONE",
+   "rl": "FORCED: D2 vs C6 -- MEANS [DR2]: \"the stated means of this c",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-ONE",
+   "rl": "FORCED: D6 vs C6 -- MEANS [DR2]: \"the stated means of this c",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-PREM",
+   "rl": "CONCEDED LINKS: 2 -- Premise 2: UNEXHIBITED (pressed Luke 1:",
+   "n": 6
+  },
+  {
+   "seat": "sol",
+   "rule": "E-RES",
+   "rl": "RESULT: UNDERDETERMINED -- P2, P3 and P8 break the defender'",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "E-VOID",
+   "rl": "Premises 1, 4 and 5 are spared; premise 3 is VOID (Commitmen",
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "K-KJV",
+   "rl": null,
+   "n": 1
+  },
+  {
+   "seat": "sol",
+   "rule": "K-S3",
+   "rl": "NOT HELD: \"By the law of Numbers 1:18, that gives Joseph's h",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"a man whose name was Joseph, of the house of David",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"after the tradition of men\" and \"not after Christ\"",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"after their families, by the house of their father",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"And the sons of Jeconiah\" with Jeremiah 22:30 \"for",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"and will make thee as a signet\" with Haggai 2:21 \"",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"because he was of the house and lineage of David\" ",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"blessed [is] the fruit of thy womb\" and Psalms 132",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"did as the angel of the Lord had bidden him, and t",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"except [it be] with consent for a time\" and \"and c",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"fear not to take unto thee Mary thy wife: for that",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"God giveth it a body as it hath pleased him, and t",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"he shall be filled with the Holy Ghost, even from ",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"If that nation, against whom I have pronounced, tu",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"Is not this the carpenter's son? is not his mother",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"Joseph the husband of Mary, of whom was born Jesus",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"made like unto [his] brethren, that he might be a ",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"made of the seed of David according to the flesh\" ",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"my Father's business\" and Luke 2:48 \"thy father an",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"not willing to make her a publick example, was min",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"one [kind of] flesh of men\" with Romans 1:3 \"of th",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"shall be called the Son of the Highest\" with Luke ",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"teaching [for] doctrines the commandments of men\" ",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"that holy thing which shall be born of thee\" and 1",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"that which is born of the Spirit is spirit\" in the",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"the LORD God formed man [of] the dust of the groun",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"the Lord God shall give unto him the throne of his",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"The LORD hath sworn [in] truth unto David\" and \"Of",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"the rib, which the LORD God had taken from man, ma",
+   "n": 2
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"their father's house, and their seed, whether they",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"there came a cloud, and overshadowed them\" with Lu",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"thy cousin Elisabeth\" with Luke 1:5 \"of the daught",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"To a virgin espoused to a man whose name was Josep",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"unto David\" and \"Of the fruit of thy body\" with Ac",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"when he went in unto her, the LORD gave her concep",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"which were born unto thee\" and \"as Reuben and Sime",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"ye shall be witnesses unto me\" as against Luke 1:3",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"yet would I pluck thee thence\" with Jeremiah 22:30",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- John 6:41 \"The Jews then murmured at him\"; John 6:4",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MEETS -- Matthew 1:24 \"took unto him his wife\" and \"And knew",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MISSES -- \"being a just [man], and not willing to make her a",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MISSES -- \"for that which is conceived in her is of the Holy",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MISSES -- \"How shall this be, seeing I know not a man?\" with",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MISSES -- \"our Lord sprang out of Juda\" with Isaiah 11:1 \"a ",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MISSES -- \"she was found with child of the Holy Ghost\"; Matt",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MISSES -- \"sitting upon the throne of David\"; Haggai 2:21 gi",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MISSES -- \"that which is conceived in her is of the Holy Gho",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MISSES -- \"the power of the Highest shall overshadow thee: t",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MISSES -- \"Thou shalt not let thy cattle gender with a diver",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": "MISSES -- Luke 1:34 \"seeing I know not a man\" receives \"The ",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ANS",
+   "rl": null,
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-COL",
+   "rl": "D1 vs C2 (Jeremiah 22:30): DEFENDER LINK BROKEN (Commitment ",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-COL",
+   "rl": "D2 vs C6 (Luke 1:35): DEFENDER LINK BROKEN (Commitment 7) --",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-COL",
+   "rl": "D3 vs C4 (Matthew 1:18\u201320): DEFENDER LINK BROKEN (Commitment",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-COL",
+   "rl": "D4 vs C3 (Leviticus 19:19): DEFENDER LINK BROKEN (Commitment",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-COL",
+   "rl": "D6 vs C6 (Luke 1:34\u201335): DEFENDER LINK BROKEN (Commitment 7)",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-COL",
+   "rl": "FORCED: D1 vs C2 -- MEANS [DR2]: \"the seed of Coniah is barr",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-COL",
+   "rl": "FORCED: D2 vs C6 -- MEANS [DR2]: \"the stated means of this c",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-COL",
+   "rl": "FORCED: D3 vs C4 -- MEANS [DR2]: \"the angel's 'for' gives as",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-COL",
+   "rl": "FORCED: D4 vs C3 -- MEANS [DR2]: \"the statute is spoken to I",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-COL",
+   "rl": "FORCED: D6 vs C6 -- MEANS [DR2]: \"the stated means of this c",
+   "n": 2
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-HOLD",
+   "rl": "D1 vs C1 (Matthew 1:16): UNDERDETERMINED -- the maternal bir",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-HOLD",
+   "rl": "D5 vs C5 (Luke 2:48\u201349): UNDERDETERMINED -- the named househ",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-KEY",
+   "rl": "KEYSTONE: D6 -- BROKEN -- D6 vs C6: [L1] Luke 1:34 \"How shal",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ONE",
+   "rl": "D1 vs C2 (Jeremiah 22:30): DEFENDER LINK BROKEN (Commitment ",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ONE",
+   "rl": "D2 vs C6 (Luke 1:35): DEFENDER LINK BROKEN (Commitment 7) --",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ONE",
+   "rl": "D3 vs C4 (Matthew 1:18\u201320): DEFENDER LINK BROKEN (Commitment",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ONE",
+   "rl": "D4 vs C3 (Leviticus 19:19): DEFENDER LINK BROKEN (Commitment",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ONE",
+   "rl": "D6 vs C6 (Luke 1:34\u201335): DEFENDER LINK BROKEN (Commitment 7)",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ONE",
+   "rl": "FORCED: D1 vs C2 -- MEANS [DR2]: \"the seed of Coniah is barr",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ONE",
+   "rl": "FORCED: D2 vs C6 -- MEANS [DR2]: \"the stated means of this c",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ONE",
+   "rl": "FORCED: D3 vs C4 -- MEANS [DR2]: \"the angel's 'for' gives as",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ONE",
+   "rl": "FORCED: D4 vs C3 -- MEANS [DR2]: \"the statute is spoken to I",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-ONE",
+   "rl": "FORCED: D6 vs C6 -- MEANS [DR2]: \"the stated means of this c",
+   "n": 2
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-PREM",
+   "rl": "CONCEDED LINKS: 5 -- Counted premises 1, 2, 3, 4, 6; spared ",
+   "n": 6
+  },
+  {
+   "seat": "sol62",
+   "rule": "E-RES",
+   "rl": "RESULT: UNDERDETERMINED -- D2 vs C6 and D6 vs C6 break the c",
+   "n": 1
+  },
+  {
+   "seat": "sol62",
+   "rule": "K-KJV",
+   "rl": null,
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"cites 15:38\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"cites Acts 16:13\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"cites Job 14:1\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"cites Luke 1:13\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"cites Romans 1:3\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"distinguishes acts\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"engages gennao\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"engages tense\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"exhibits kilayim\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"fits household\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"grants conjugal sense, distinguishes again\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"joins names\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"places conceiving between rows\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes 1 Chronicles 28:6\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes 2 Samuel 7:12\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Acts 2:30\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes are mine\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes As I live\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Colossians 2:8\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Deuteronomy 24:1\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes dikaios and paradeigmatizo\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes dio\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes dynamis\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes for clause\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Galatians 4:4\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes gar\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Genesis 2:23\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Haggai 2:21\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Haggai 2:23\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Haggai\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Hebrews 10:5\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Hebrews 2:14\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Hebrews 7:5\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Hebrews 7:9-10\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes I know not man\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Isaiah 11:1\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes John 1:45\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes kaleo\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Luke 1:35 Leviticus 19:19\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Luke 1:5\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Luke 2:5\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Luke 3:23\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Luke 3:31\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Mark 7:8\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Matthew 1:20-21\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Matthew 1:20\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Numbers 1:18\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes order\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes osphys\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes paradeigmatizo\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes paralambano\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes Romans 1:3 Galatians 4:4\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes sperma\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes taken out\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes therefore birth\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"quotes verse 30\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ANS",
+   "rl": "MEETS -- \"shows power rows\"",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-COL",
+   "rl": "D1 vs C1 (Matthew 1:16): CHALLENGER LINK BROKEN -- no, grade",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-COL",
+   "rl": "D3 vs C1 (Matthew 1:18): DEFENDER LINK BROKEN -- cannot take",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-COL",
+   "rl": "D6 vs C6 (Matthew 1:20): DEFENDER LINK BROKEN -- conclusion ",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-COL",
+   "rl": "FORCED: D3 vs C1 -- MEANS [DR2]: \"the finding is dated befor",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-COL",
+   "rl": "FORCED: D6 vs C6 -- MEANS [DR2]: \"the finding is dated befor",
+   "n": 2
+  },
+  {
+   "seat": "spark",
+   "rule": "E-HOLD",
+   "rl": "D2 vs C2 (Luke 1:35): UNDERDETERMINED -- GROUND: [L1] Luke 1",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-HOLD",
+   "rl": "D4: STANDS -- GROUND: [L1] Leviticus 19:19 \"Ye shall keep my",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-HOLD",
+   "rl": "D5: STANDS -- GROUND: [L1] Luke 2:48 \"behold, thy father and",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-KEY",
+   "rl": "KEYSTONE: D6 -- BROKEN -- name the LAST declared link, D6 co",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ONE",
+   "rl": "D1 vs C1 (Matthew 1:16): CHALLENGER LINK BROKEN -- no, grade",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ONE",
+   "rl": "D3 vs C1 (Matthew 1:18): DEFENDER LINK BROKEN -- cannot take",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ONE",
+   "rl": "D6 vs C6 (Matthew 1:20): DEFENDER LINK BROKEN -- conclusion ",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ONE",
+   "rl": "FORCED: D3 vs C1 -- MEANS [DR2]: \"the finding is dated befor",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-ONE",
+   "rl": "FORCED: D6 vs C6 -- MEANS [DR2]: \"the finding is dated befor",
+   "n": 2
+  },
+  {
+   "seat": "spark",
+   "rule": "E-PREM",
+   "rl": "CONCEDED LINKS: 1 -- Premise 1: UNEXHIBITED (pressed witness",
+   "n": 6
+  },
+  {
+   "seat": "spark",
+   "rule": "E-RES",
+   "rl": "CLAUSE: BROKEN-1 -- n=6 w=0 k=1",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "E-RES",
+   "rl": "RESULT: CHALLENGER WINS -- One sentence a reader understands",
+   "n": 1
+  },
+  {
+   "seat": "spark",
+   "rule": "K-KJV",
+   "rl": null,
+   "n": 1
+  },
+  {
+   "seat": "synthesis",
+   "rule": "E-SYN",
+   "rl": "- **Christ is David\u2019s seed according to the flesh.** The cha",
+   "n": 1
+  },
+  {
+   "seat": "synthesis",
+   "rule": "E-SYN",
+   "rl": "- **Joseph is Mary\u2019s husband.** The challenger expressly gra",
+   "n": 1
+  }
+ ]
+}

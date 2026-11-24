@@ -1,0 +1,25 @@
+{
+ "reader": "pkgCLR",
+ "defender": {
+  "stated": null,
+  "stored": null,
+  "granted": 0,
+  "unnamed": null,
+  "unexhibited": 0,
+  "broken_items": [],
+  "granted_items": [],
+  "unexhibited_items": [],
+  "broken_at_collision": 0
+ },
+ "challenger": {
+  "stated": null,
+  "stored": null,
+  "granted": 0,
+  "unnamed": null,
+  "unexhibited": 0,
+  "broken_items": [],
+  "granted_items": [],
+  "unexhibited_items": [],
+  "broken_at_collision": 0
+ }
+}
