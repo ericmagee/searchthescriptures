@@ -17,3 +17,6 @@ TEXT: sentence 1 is the operator's rule in his words ("2" written "two"). Senten
 
 F1: the op doc write is a system change. It goes to the operator on a card with sentence 2 marked as W3's words, not his, so that he rules on it.
 F2 (form): the op doc gives each rule a "(Why: ...)" source. Add "(Why: operator 10:38 CST 11-24.)" so that the rule names its source like its neighbours.
+
+## CORRECTION (Wall 11595): F2 WITHDRAWN
+My F2 form "(Why: operator 10:38 CST 11-24.)" breaks op doc v144 section 0 body law (2) (no date, no "at the operator's order" in the body). I set it without reading section 0. W3's "(Why: WALL-11593.)" meets law (3). The grade stands as PASS WITH F1.
