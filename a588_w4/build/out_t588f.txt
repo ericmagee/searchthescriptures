@@ -1,0 +1,37 @@
+PASS T9.0 first pass: six questions
+PASS T9.1 the follow-up pass stands between QR Answer C Done and QR Merge
+PASS T9.2 each Done node is fed by the anthropic, the openrouter and the skip branch
+PASS T9.3 the switch: on with the round on a fresh run; off by qr_follow:false; off when the round is off
+PASS T9.4 qr_follow must be true or false
+PASS T9.5 only Init Seats and QR Merge change among the 588 nodes (Init Seats, QR Merge)
+PASS T9.6 with the follow-up pass off, QR Merge gives exactly the 588 output
+PASS T9.7 each judge reads the six questions and answers, then the follow-up ask, under its own seat name
+PASS T9.8 the ask says a follow-up does not count as the judge's one question
+PASS T9.9 switch off: a skip item with a 16-token body crosses QR Follow Ask
+PASS T9.10 a valid AGAIN item passes; the program writes: Your answer to Q1 did not answer: "[L1] Matthew 1:18: “Now". Please explain that part.
+PASS T9.11 NONE is recorded and asks nothing
+PASS T9.12 the debater reads its own question, its answer and the follow-up
+PASS T9.13 known-bad a Q<n> that does not exist is dropped (Q99 does not exist)
+PASS T9.13 known-bad a fragment that is not in Q<n> is dropped (the open words are not found word for word in Q1 or its quoted passage)
+PASS T9.13 known-bad a Q<n> put to the other debater is dropped (Q1 was put to the defender, not the challenger)
+PASS T9.13 known-bad two follow-ups to one debater is dropped (more than one follow-up for one debater; at most one is allowed)
+PASS T9.13 known-bad open words under 8 characters is dropped (the open words are missing or under 8 characters)
+PASS T9.14 two follow-ups pass (one to each debater)
+PASS T9.15 the follow-ups go by each debater's own route
+PASS T9.16 QR Merge: the six questions stay Q1 to Q6; the follow-ups are Q7 and Q8 (F4: the follow-up does not use the judge's one question)
+PASS T9.17 the block shows each follow-up with the question it follows
+PASS T9.18 one block, before the transcript; the transcript unchanged
+PASS T9.19 the round readers read the same eight rounds
+PASS T9.20 a follow-up is not a contradiction candidate
+PASS T9.21 no follow-up passed: the first pass stands as in 588, and the skip is recorded
+PASS T9.22 the follow-up pass did not run: the first pass stands, the fault recorded
+PASS T9.23 a first-pass skip: no follow-up, a 16-token body crosses QR Follow Ask
+PASS T9.24 QR Follow Final passes the skip on
+PASS T9.25 the D stage routes the skip to its Done node
+PASS T9.26 QR Follow Ask is a copy of QR Ask
+PASS T9.26 QR Follow D openrouter is a copy of QR Answer
+PASS T9.26 QR Follow C openrouter is a copy of QR Answer C openrouter
+PASS T9.26 QR Follow D anthropic is a copy of QR Answer D anthropic
+PASS T9.26 QR Follow C anthropic is a copy of QR Answer C anthropic
+PASS T9.27 the follow-up checks go into the record that Build Save Body stores
+RESULT: ALL PASS (36 pass)
