@@ -1,6 +1,8 @@
-# ASK 574: the three B-Extract layer blocks are stored once in the Shared Library (W3, PLAN DRAFT 1a)
+# ASK 574: the three B-Extract layer blocks are stored once in the Shared Library (W3, PLAN DRAFT 1b)
 
-Draft 1a takes the coordinator's direction of 18:13 CST 11-23 (the team method): an existing library line is reused wherever it exists, and only lines the library lacks are appended. Changed from draft 1 (md5 d57bfa74): section 4 item 1, section 7 figures, section 8 item 4 (new), criterion C8 (new). Order fixed by the coordinator: after 571 and 559.
+Draft 1b meets W1's FAIL of draft 1a (Wall 11080, defects D1 and D2): the appended lines and the three MAP entries go into the child's library too, in the same write, and __MAPEXTRA422 and the Library Sha node are not touched. Changed from draft 1a (md5 3bb02abc): section 3 scope line, section 4 items 1 and 2, criteria C2, C3, C7, section 7 (figures now measured on W4's 571 target, with the child counted), section 12. RESULT OF THE NEW MEASUREMENT: after ASK 571 the net stored saving is 4,055 characters. By this plan's own WRONG-IF, the size ground is gone; see section 7 item 4 for my recommendation (HOLD).
+
+Draft 1a took the coordinator's direction of 18:13 CST 11-23 (the team method): an existing library line is reused wherever it exists, and only lines the library lacks are appended. Changed from draft 1 (md5 d57bfa74): section 4 item 1, section 7 figures, section 8 item 4 (new), criterion C8 (new). Order fixed by the coordinator: after 571 and 559.
 
 DRAFT ONLY. Nothing is written. The plan needs grading (W1), the builder's check (W4) and the operator's approval. Assigned by the coordinator at 18:07 CST 11-23, from W1's survey (ASK 572, Wall 11064, group 2).
 
@@ -12,9 +14,9 @@ Expected effect: less stored code, and one place to edit a line the three nodes 
 Planner: W3. Builder and writer: W4 (alone writes n8n; W4's own write card). Grader: W1. Nothing is written by this plan.
 
 ## 3. SCOPE, with the SEARCH that set it
-Scope in one line: the `__O423` statement of C2B Extract, D3B Extract and C3B Extract, and the Shared Library of the engine (new lines appended at the end; three new MAP entries; the sha header; the engine's __MAPEXTRA422 list for the three engine-only keys).
+Scope in one line: the `__O423` statement of C2B Extract, D3B Extract and C3B Extract, and the Shared Library of the engine AND of the child (the same new lines appended at the end of both; the same three new MAP entries in both; the sha header of both). No other child node changes. __MAPEXTRA422 and the Library Sha node are not touched (W1 D1: that list exempts a key from the MAP sha only; the LIB sha covers every line, so an engine-only line makes the child Library Check throw pkgLIB1).
 SEARCH (live engine after ASK 563, version d8292f62, W4's fetch-back ask563/w4/write/fetchback_engine_563.json; child de9efc4e, fetch-back ask566/w4/write/fetchback_child_566.json):
-1. "O423" in every node of the engine: 3 nodes, the three named. In the child: 0 nodes. The child is not touched.
+1. "O423" in every node of the engine: 3 nodes, the three named. In the child: 0 nodes. The child changes in its Shared Library only.
 2. Each node holds exactly one top-level `__O423` statement and one use, in its last line: `return __A423(__O423,{side:...,stop:...});`. The four statements before it (__LB423, __CC423, __LC423, __A423) and the return line are not touched.
 3. The three texts, MEASURED: C2B Extract 47,031 characters (md5 e4ba58a5); D3B Extract 48,288 (e663cf6e); C3B Extract 51,147 (00253b54). Total 146,466. Lines: 288, 299, 319; 272 lines (41,343 characters) stand in all three; 332 different lines in all (61,024 characters).
 4. Free names of each text (acorn and eslint-scope): `$` and `$input` only, besides built-ins. No await, this, arguments or yield outside strings (rough scan; the builder confirms with the parser).
@@ -23,8 +25,8 @@ SEARCH (live engine after ASK 563, version d8292f62, W4's fetch-back ask563/w4/w
 Not searched: no workflow other than the engine and the child holds debate nodes that I know of; the builder repeats search 1 on a fresh fetch.
 
 ## 4. The change
-1. Shared Library (engine): a line of the three texts that already stands in the library is served from where it stands (177 of the 332 different lines today, 25,058 characters, between library lines 69 and 2863). Only the lines the library lacks are appended, after the last existing line. No existing line is moved or changed (gate entries address existing lines by index).
-2. Three MAP entries, "O423 C2B Extract", "O423 D3B Extract", "O423 C3B Extract", each `{n: <length>, p: [...]}` over the reused and the appended lines (50, 71 and 83 p entries today). The three keys are added to the engine's __MAPEXTRA422 (the ASK 539 lesson). The library sha header is reset.
+1. Shared Library (engine and child, the same text in both): a line of the three texts that already stands in the library is served from where it stands (177 of the 332 different lines today, 25,058 characters, between library lines 69 and 2863). Only the lines the library lacks are appended, after the last existing line. No existing line is moved or changed (gate entries address existing lines by index).
+2. Three MAP entries, "O423 C2B Extract", "O423 D3B Extract", "O423 C3B Extract", each `{n: <length>, p: [...]}` over the reused and the appended lines (50, 71 and 83 p entries today). The same three entries are added to the child's MAP (the child has no node that asks for them; they stand there so the two libraries stay identical, the method of ASK 571, 573 and 575). The library sha header is reset in both.
 3. In each of the three nodes the `__O423` statement is replaced by one loader line in the pkgREFP shape. It throws if the entry is missing or the rebuilt length differs from n, and it passes `$` and `$input`:
 `const __O423=(T=>{...const M=...["O423 <node>"];if(!M)throw new Error('pkgO423: the Shared Library holds no O423 <node> entry');const S=...;if(S.length!==M.n)throw new Error('pkgO423: rebuilt O423 <node> is '+S.length+', expected '+M.n);return new Function('$','$input',S+'\nreturn __O423;')($,$input);})($('Shared Library').params.jsCode);`
 The full line is in t574.js (function `stub`).
@@ -37,20 +39,21 @@ The full line is in t574.js (function `stub`).
 
 ## 6. CRITERIA and DONE (each can pass or fail; "found nothing" is not a result here)
 C1. For each of the three nodes, the text rebuilt from the packed library equals the node's pre-write `__O423` statement byte for byte, and its length equals n.
-C2. In each node every character outside the `__O423` statement is unchanged; every other node of the engine keeps its md5; the child is unchanged.
-C3. The first existing library lines (count read at the build) are unchanged, in place; the new lines are only appended.
+C2. In each node every character outside the `__O423` statement is unchanged; every other node of the engine keeps its md5 (the Library Sha node included); in the child only the Shared Library changes, and its LIB text equals the engine's.
+C3. The first existing library lines (count read at the build) are unchanged, in place, in both libraries; the new lines are only appended.
 C4. The free names of each served text are `$` and `$input` only (parser, not the rough scan).
 C5. Negative controls: with one served line changed, the loader throws on the length check; with the MAP key removed, the loader throws on the missing entry; with `$input` not passed, the output test of C6 fails.
 C6. Output test, the method of ASK 571: each node is run offline on the stored inputs of run 41822 with a real `$` and `$input`, once with the pre-write code and once with the loader and the packed library; the two outputs are equal as JSON, for all three nodes. Population: the three node executions of run 41822 (and of run 41736 if its inputs are held).
 C8. The build post lists every reused library line number and every other MAP entry that serves any of them (today: 40 entries), so a later ASK that edits one of those lines can see that it also edits these three texts.
-C7. Library Check passes in the engine with the three keys in __MAPEXTRA422; the run-start check prints GO.
+C7. The engine's Library Sha output fed to the child's Library Check gives same: true; Library Check passes in the engine; the run-start check prints GO.
 DONE: written by W4 on its own card, read back by a seat other than W4, C1 to C7 shown on the written engine's fetch-back, and one live run in which the three nodes execute with no pkgO423 error and store their rounds.
 
 ## 7. WRONG-IF
 This plan aims at the wrong thing if, after ASK 571 is written, the net stored saving is too small to be worth a new throw path in three round-keeping nodes. Measurement, taken now as far as it can be:
-1. On the live engine today (before 571), prototype t574.js: the three nodes go from 155,221 to 10,585 characters; the Shared Library grows by 38,505; net stored saving 106,131. ALL PASS (22 checks). (Draft 1, own lines only: library +63,914, net 80,722.)
-2. With the L2C statement taken out of each text (the state after 571, estimated by cutting the statement; 571's loader line is not yet written): the three texts are 23,386, 24,643 and 27,502 (75,531); 153 of their different lines are not in the library (33,088 characters); the saving is about 42,419 before JSON escaping and the three loader lines. Estimate, not a measurement of the final state. Side fact for ASK 571: 143 of the 145 lines of the L2C statement already stand in the library.
+1. On the live engine and child today (before 571), prototype t574b.js: the three nodes go from 155,221 to 10,585 characters; each Shared Library grows by 38,505; net stored saving 67,626 with the child counted (106,131 for the engine alone, the figure of draft 1a). ALL PASS (25 checks), t574b_live.out.
+2. MEASURED on W4's ASK 571 target (ask571/w4/build/target_engine_571.json and target_child_571.json): the three texts are 24,112, 25,369 and 28,228; the three nodes go from 86,464 to 10,585; each Shared Library grows by 35,912; net stored saving 4,055 with the child counted (39,967 for the engine alone). ALL PASS (25 checks), t574b_after571.out. This replaces the estimate of draft 1a (about 42,419), which did not count the child.
 3. Known-good case run: the three live texts rebuild equal. Known-bad case run: a changed line fails the length check (C5, first control).
+4. MY RECOMMENDATION: HOLD ASK 574; do not card it. A saving of 4,055 characters does not pay for a new throw path in three round-keeping nodes. What remains is one place to edit a line the three nodes share. The saving returns to 39,967 only if the child stops carrying its own library copy (ASK 577, option C, Wall 11081); 574 should be weighed again if that is decided.
 The team and the operator should weigh figure 2, not the survey's 95,319. For scale: the engine's code nodes other than the library hold 2,291,899 characters (W4, Wall 11056 item 6).
 
 ## 8. What it costs and what it risks (stated, not argued)
@@ -64,10 +67,10 @@ The team and the operator should weigh figure 2, not the survey's 95,319. For sc
 A live run with the Oracle defending: C2B Extract, D3B Extract and C3B Extract execute and the stored rounds are present; no "pkgO423" text in debate_errors. Registry case: to be named by W4 at the build (ASK 417 registry).
 
 ## 10. INPUTS IN GIT
-fairjudge/w3/a574/: ASK574_plan.md (this file), t574.js (prototype: pack, loader, rebuild, controls), t574.out (its output on the live engine). Commit named in the Wall post.
+fairjudge/w3/a574/: ASK574_plan.md (this file), t574.js and t574.out (draft 1a prototype), t574b.js (draft 1b: the same with the child library), t574b_live.out, t574b_after571.out. Commit named in the Wall post.
 
 ## 11. STEPS
 1. W1 grades this plan. 2. ASK 571 and ASK 559 are written first (their own cards). 3. W4 builds 574 on that engine with a fresh fetch, runs C1 to C7, posts the build. 4. A non-builder grades the build. 5. The operator's approval card carries the plain-words text of section 4 and the two saving figures. 6. W4 writes on its own card (cannot be undone except by the revert). 7. Readback; engine manual entry (mine, on the operator's card).
 
 ## 12. Revert
-Restore the three nodes and the engine's Shared Library from the pre-write export; compare md5 per node; Library Check passes.
+Restore the three nodes and both Shared Libraries from the pre-write exports; compare md5 per node; Library Check passes in both.

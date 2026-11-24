@@ -1,0 +1,29 @@
+PASS C2B Extract: one top-level __O423 statement
+PASS C2B Extract: free names are $ and $input only ($,$input)
+PASS C2B Extract: no await, this, arguments or yield outside strings (rough scan)
+PASS D3B Extract: one top-level __O423 statement
+PASS D3B Extract: free names are $ and $input only ($,$input)
+PASS D3B Extract: no await, this, arguments or yield outside strings (rough scan)
+PASS C3B Extract: one top-level __O423 statement
+PASS C3B Extract: free names are $ and $input only ($,$input)
+PASS C3B Extract: no await, this, arguments or yield outside strings (rough scan)
+PASS no existing library line moved or changed (3567 lines kept; 155 appended)
+PASS C2B Extract: served text equals the live block byte for byte (47031, md5 e4ba58a5)
+PASS C2B Extract: node with the loader parses (49931 to 3510)
+PASS C2B Extract: every character outside the __O423 statement is unchanged
+PASS C2B Extract: negative control, a changed line fails the length check
+PASS D3B Extract: served text equals the live block byte for byte (48288, md5 e663cf6e)
+PASS D3B Extract: node with the loader parses (51243 to 3565)
+PASS D3B Extract: every character outside the __O423 statement is unchanged
+PASS D3B Extract: negative control, a changed line fails the length check
+PASS C3B Extract: served text equals the live block byte for byte (51147, md5 00253b54)
+PASS C3B Extract: node with the loader parses (54047 to 3510)
+PASS C3B Extract: every character outside the __O423 statement is unchanged
+PASS C3B Extract: negative control, a changed line fails the length check
+PASS child LIB equals engine LIB before the change (3567 lines)
+PASS the three keys are new in both MAPs
+PASS the child holds no O423 text in any node
+MEASURED: three engine nodes 155221 to 10585 characters; engine Shared Library grows by 38505; child Shared Library grows by 38505; net stored saving, engine and child together 67626 (engine alone 106131).
+REUSED existing library lines: 177 (25058 characters), from line 69 to 2863; MAP p entries: 50, 71, 83
+existing MAP entries that serve any reused line: 40 (Alternate Payloads 145; Panel Payloads 145; R2 Alternate Payloads 145; Alternate Merge Seat 144; Extract Independent Verdict 144; R2 Alternate Merge Seat 144)
+ALL PASS
