@@ -66,8 +66,8 @@ BEGIN
   SELECT count(*), max(length(content)) INTO n, mx FROM engine_manual_parts;
   IF n <> 31 OR mx > 40000 THEN RAISE EXCEPTION 'cut583 C2 FAILED: % parts, largest %', n, mx; END IF;
   -- the pointer row and the log row of the cut
-  INSERT INTO engine_manual (id, version, content, summary)
-    VALUES ((SELECT max(id) + 1 FROM engine_manual), v + 1, """+q(POINTER)+""", 'ASK 583: the engine manual is held in parts (engine_manual_parts) from this version; this row is a pointer. No text of the manual changed at the cut.');
+  INSERT INTO engine_manual (version, content, summary)
+    VALUES (v + 1, """+q(POINTER)+""", 'ASK 583: the engine manual is held in parts (engine_manual_parts) from this version; this row is a pointer. No text of the manual changed at the cut.');
   SELECT string_agg(part || ' | order ' || order_index || ' | ' || title || ' | ' || length(content) || ' | ' || md5(content), E'\\n' ORDER BY order_index) INTO lg FROM engine_manual_parts;
   INSERT INTO engine_manual_log (version, entry_date, title, content, char_len, part)
     VALUES (v + 1, (now() at time zone 'America/Chicago')::date, 'ASK 583: the engine manual cut into 31 parts',
@@ -76,7 +76,7 @@ BEGIN
 END $cut$;
 """
 apply_args="'00.1', 242, '%s', %s::jsonb, %s, %s, 'ASK 583: section 0 names the parts and their read and write calls', 'Section 0: the manual is held in parts; read calls engine_manual_toc, engine_manual_part, engine_manual_full; revise with engine_manual_part_apply; divide a grown part with engine_manual_part_split. No other section changed.', %s, %s"
-LOG="Writer W3 (seat 33). Part 00.1 (section 0), base version 242 md5 "+md5_001+". Six pairs (manual1123/w3/a583/cut/section0_pairs.json): bullet 1 replaced; three phrases of the To revise bullet; one bullet added after it. Wording approved text: section0_new_text.md 09babd38 (W1 PASS Wall 11224). Result md5 "+new_md5+", "+str(new_len)+" characters; the whole manual then has md5 "+full_md5+", "+str(len(full_new))+" characters."
+LOG="Writer W3 (seat 33). Part 00.1 (section 0), base version 242 md5 "+md5_001+". Six pairs (manual1123/w3/a583/cut/section0_pairs.json): bullet 1 replaced; four phrases of the To revise bullet; one bullet added after it. Wording: section0_new_text.md 5b96de34 (W1 PASS Wall 11233). Result md5 "+new_md5+", "+str(new_len)+" characters; the whole manual then has md5 "+full_md5+", "+str(len(full_new))+" characters."
 cut+="DO $s0$\nDECLARE r jsonb;\nBEGIN\n  r := engine_manual_part_apply("+apply_args%(md5_001,q(json.dumps(pairs,ensure_ascii=False)),"'"+new_md5+"'",new_len,q(LOG),'true')+");\n  IF (r->>'success') IS DISTINCT FROM 'true' OR (r->>'written') IS DISTINCT FROM 'true' OR (r->>'version')::int <> 243 THEN\n    RAISE EXCEPTION 'cut583 section 0 write FAILED, the whole cut is rolled back: %', r::text; END IF;\n  IF (SELECT md5(f.content) FROM engine_manual_full() f) <> '"+full_md5+"' THEN\n    RAISE EXCEPTION 'cut583 C1b FAILED: the whole manual is not "+full_md5+"'; END IF;\nEND $s0$;\nSELECT version, md5(content) AS md5, length(content) AS length FROM engine_manual_full();\n"
 open('cut583.sql','w',encoding='utf-8').write(cut)
 mig=open('/mnt/project-files/ask583/w4/build/migration583.sql',encoding='utf-8').read()
