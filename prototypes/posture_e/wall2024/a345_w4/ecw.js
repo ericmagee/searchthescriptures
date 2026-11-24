@@ -1,10 +1,10 @@
 const ECW=(()=>{ /* pkgECW (ASK 345, Wall 7221/7223/7225; passes W2 7224, W1 7229): a STANDS push on meaning shows the row words that carry it; one gate for any rule (E-COL now; ASK 346 calls it for E-HOLD) */
- const LIVE=true;const HOLD=false; /* E-HOLD pushes toward UNDERDETERMINED: ASK 346 turns this on */
+ const LIVE=true;
  const N=s=>String(s==null?'':s).toLowerCase().replace(/\\+"/g,'"').replace(/[‘’ʼ`]/g,"'").replace(/[“”]/g,'"').replace(/\[(?:l[1-4]|[cd]r[1-4])\]/g,' ').replace(/[\[\]]/g,'').replace(/'/g,'').replace(/[^a-z0-9Ͱ-Ͽἀ-῿֐-׿]+/g,' ').replace(/\s+/g,' ').trim();
  const NM=s=>String(s==null?'':s).replace(/\[[^\]]*:[^\]]*\]/g,' ').replace(/\([^)]*:\s*(?:Gr\.|Heb\.|or,|that is)[^)]*\)/g,' ');
  const has=(t,q)=>{const a=' '+N(t)+' ',b=N(q);return !!b&&a.includes(' '+b+' ');};
  const run6=(s,txts,not)=>{const w=N(s).split(' ').filter(Boolean);for(let i=0;i+6<=w.length;i++){const r=w.slice(i,i+6).join(' ');if(not&&(' '+not+' ').includes(' '+r+' '))continue;if(txts.some(t=>(' '+N(t)+' ').includes(' '+r+' ')))return r;}return null;};
- const EX=/\b(?:rests? on|rest(?:ing|s)? upon|by|from) (?:an |the )?absence\b|\bno verse (?:states|says|names)|\bstating verse|\bnamed in an answer\b|\banswered by name\b|\bwitness ledger\b|\bthe ledger\b|\bfooting rule\b|\bno footing\b|\bborrowed (?:footing|from)\b|\bcontested links\b|\bno (?:answer(?:'s|ing)?|challenger|defender)(?: answer| answering)?(?:'s)? (?:own )?(?:words )?(?:are |is )?quoted|\bquotes no (?:answer|answering)|\bno quoted answer/i; /* grounds that are not a reading of the answer: absence, the witness ledger, the footing rule, a line that quotes no answer words */
+ const EX=/\babsence\b|\bno verse (?:states|says|names)|\bstating verse|\bnamed in an answer\b|\banswered by name\b|\bwitness ledger\b|\bledger\b|\bfooting\b|\bno (?:answer(?:'s|ing)?|challenger|defender)(?: answer| answering)?(?:'s)? (?:own )?(?:words )?(?:are |is )?quoted|\bquotes no (?:answer|answering)|\bno quoted answer/i;
  const BK='((?:[1-3] )?[A-Z][a-z]+(?: of [A-Z][a-z]+)?)';
  const REF=new RegExp(BK+'\\s+(\\d{1,3}):(\\d{1,3})(?:\\s*[-–]\\s*(\\d{1,3}))?');
  /* the CARRIED BY field: only the last one on the enforcer's own reply line, outside its quotations (a judge FORCED line it quotes may hold the K-FC field of the same name) */
@@ -23,7 +23,7 @@ const ECW=(()=>{ /* pkgECW (ASK 345, Wall 7221/7223/7225; passes W2 7224, W1 722
  function quotesIn(why,c){const w=String(why||'').replace(/\\+"/g,'"');const cut=c&&c.raw?w.lastIndexOf(c.raw.slice(0,20)):-1;const body=(cut>0?w.slice(0,cut):w);const out=[];for(const m of body.matchAll(/"([^"\n]{8,})"|“([^”\n]{8,})”/g))out.push(m[1]||m[2]);return out;}
  function inOrder(q,t){const ps=String(q).split(/\.\.\.|…/).map(N).filter(x=>x.split(' ').length>=2);if(!ps.length)return true;const T=' '+N(t)+' ';let at=0;for(const p of ps){const k=T.indexOf(' '+p+' ',at);if(k<0)return false;at=k+p.length+1;}return true;}
  /* gate: {applies:false} | {send:true,note,cb} | {send:false,why} */
- function gate(x,v,ctx){if(!v||v.v!=='DISAGREE')return {applies:false};const want=x.rule==='E-COL'?'STANDS':(HOLD&&x.rule==='E-HOLD')?'UNDERDETERMINED':null;if(!want||v.right!==want)return {applies:false};
+ function gate(x,v,ctx){if(!v||v.v!=='DISAGREE')return {applies:false};const want=x.rule==='E-COL'?'STANDS':x.rule==='E-HOLD'?'UNDERDETERMINED':null;if(!want||v.right!==want)return {applies:false};
   const why=String(v.why||'');if(EX.test(why))return {applies:false,exempt:true};
   const R=ctx&&ctx.R;const sd=side(x.flagged_line,x.item);if(!R||!sd.s)return {applies:true,send:true,note:'NOT CHECKED: '+(!R?'no rounds were read':'the line names no answering side')};
   const keys=Object.keys(R).filter(k=>k[0]===sd.s&&/^[CD]R[1-4]$/.test(k));const ans=(sd.round&&R[sd.round]?[sd.round]:keys).map(k=>String(R[k]||''));
@@ -55,8 +55,8 @@ const ECW=(()=>{ /* pkgECW (ASK 345, Wall 7221/7223/7225; passes W2 7224, W1 722
  function show(e){if(!e)return '';return '\nTHE ROW THE ENFORCER SAYS CARRIES THE READING (pkgECW): '+e.ref+(e.kind==='L2'?' ([L2] '+e.word+', '+e.num+')':'')+(e.text?' "'+String(e.text).slice(0,600)+'"':'')+'. A third KEEP also cures this item: quote at least 6 words in a row of that row'+(e.text?' as given here':'')+', and at least 6 words in a row of the meaning pressed as the pressing side wrote it, and say that the row does not carry the rival reading. The code checks only the two quotations; the meaning is yours to decide (ruling 428).';}
  /* the Send Back Record nodes: the third KEEP, checked against the exact row text the judge was shown */
  function keep3(why,e,PRS){if(!e)return null;const rowT=String(e.text||'');if(!rowT){const b=run6(why,PRS||[]);const rf=new RegExp(String(e.ref).replace(/[.*+?^${}()|[\]\\]/g,'\\$&').replace(/\s+/g,'\\s+'));return b&&rf.test(String(why||''))?'names the row the enforcer named ('+e.ref+', its words not read this run) and quotes the meaning pressed ("'+b+'") (pkgECW third KEEP)':null;}const a=run6(why,[rowT]);if(!a)return null;const b=run6(why,PRS||[],N(rowT));if(!b)return null;return 'quotes the row the enforcer named ('+e.ref+': "'+a+'") and the meaning pressed ("'+b+'") (pkgECW third KEEP)';}
- function label(rule){if(rule==='E-COL')return 'E-COL ENFORCED, pkgECF: a DISAGREE is sent back and an uncured item counts against the seat';
-  if(rule==='E-B7')return 'E-B7 ENFORCED, pkgEB7: a DISAGREE is sent back and an uncured item counts against the seat';
+ function label(rule,v,x){if(rule==='E-COL')return 'E-COL ENFORCED, pkgECF: a DISAGREE is sent back and an uncured item counts against the seat';
+  if(rule==='E-HOLD'&&v&&v.right==='BROKEN'&&/UNDERDETERMINED/.test(String(x&&x.flagged_line||'')))return 'E-HOLD ON UNDERDETERMINED ENFORCED, pkgUND: a DISAGREE is sent back and an uncured item counts against the seat';
   if(rule==='E-SYN'||rule==='K-W')return 'RECORD-ONLY: not sent back';
-  return 'SENT BACK: a DISAGREE is sent back; an uncured item counts against the seat only under an enforced package its CURE note names, such as pkgUND, pkgUNA or pkgABS; a silent item always counts';}
+  return 'SENT BACK, CURE RECORD-ONLY: a DISAGREE is sent back; only a silent item counts against the seat';}
  return {LIVE,N,field,gate,apply,item,show,keep3,label,cites,verseText};})();

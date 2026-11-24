@@ -11,12 +11,9 @@ OK   A10 words not in the verse: HELD -- its CARRIED BY words "of whom as concer
 OK   A11 reference the answering round does not cite: HELD -- its CARRIED BY reference Matthew 1:25 is not cited in the answering rounds
 OK   A12 stitched quote + valid CARRIED BY: HELD -- the words it quotes, "the record's own book of that status is Romans 9:5 the fathers", are not found in that order in any round, in the line or in a verse
 OK   A13 absence ground (exempt): NOT IN SCOPE -- 
-OK   A13b a rival reading that names footing in passing (in scope): HELD -- the push names no CARRIED BY row
-OK   A13c the witness ledger ground (exempt): NOT IN SCOPE -- 
 OK   A14 quotes-no-answer-words ground (exempt): NOT IN SCOPE -- 
 OK   A15 CARRIED BY only inside a quoted FORCED line: HELD -- the push names no CARRIED BY row
 OK   A16 [L2] with original_words not read this run: SENT -- CARRIED BY [L2] paralambano G3880 at Matthew 1:24; NOT CHECKED against original_words: the verse was not read this run
-L labels: E-COL: E-COL ENFORCED, pkgECF: a DISAGREE is sent back and an uncured item counts against the seat || E-B7: E-B7 ENFORCED, pkgEB7: a DISAGREE is sent back and an uncured item counts against the seat || E-HOLD: SENT BACK: a DISAGREE is sent back; an uncured item counts against the seat only under an enforced package its CURE note names, such as pkgUND, pkgUNA or pkgABS; a silent item always counts || E-SYN: RECORD-ONLY: not sent back
 B1 apply: {"checked":2,"held":1,"sent":1,"exempt":0,"skipped":false}
 B1 row 1: ENFORCER HELD (pkgECW, recorded, not sent back: the push names no CARRIED BY row) (right: STANDS): The answer reads "according to the flesh" as line/status, saying "the record's own flesh-'of' is Romans 9:5 ... the fathe
 B1 row 2:  Romans 9:5 "of whom as concerning the flesh Christ" [pkgECW code check: CARRIED BY Romans 9:5 "of whom as concerning the flesh Christ": the words stand in the verse and the answering round cites it] (judge wrote LINK BROKEN; E-COL ENFORCED, pkgECF: a DISAGREE is sent back and an uncured item counts against the seat, ruling 428)
@@ -31,4 +28,3 @@ OK   C4 regression: pkgECF2 KEEP (answer 6 + verse 6): CURED -- KEEP that quotes
 OK   C5 regression: CHANGE TO UNDERDETERMINED: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED
 C6 same third KEEP with no row shown (live today): UNCURED -- KEEP that quotes the answering side ("of whom as concerning the flesh") but no 6 words in a row of the quoted verse it cannot agree with
 FAILS: 0
-OK   D1 E-HOLD push toward UNDERDETERMINED is not gated in ASK 345 (ASK 346 turns it on)

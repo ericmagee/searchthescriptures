@@ -5,11 +5,10 @@ Standard (rulings 397 to 400; Isaiah 28:10; ruling 507 and the 569 sentence): a 
 TRUE = the layers are in fact missing as written. FALSE = the layers are there, and LAY does not read the form, or the block is empty.
 
 TRUE (26):
-- No layer tag on any witness line (13): #1 29519 D4; #8 32373 D6; #11 to #16 32725 D1 to D6 (six); #22 33389 CR2 D4; #31, #32, #34 36791 D3, D4, D6.
-- By reference without the allowed form, naming no tagged verse (3): #20 and #23 33389 CR2 D2, D5 ("Answered in C4", "Answered in C1, C2 and C3"); #8 also says "answered above".
+- No layer tag on any witness line (12): #1 29519 D4; #8 32373 D6; #11 to #16 32725 D1 to D6 (six); #22 33389 CR2 D4; #31, #32, #34 36791 D3, D4, D6.
+- By reference without the allowed form, naming no tagged verse (2): #20 and #23 33389 CR2 D2, D5 ("Answered in C4", "Answered in C1, C2 and C3"); #8 also says "answered above".
 - One verse only on [L1]/[L3]; the rest on [L2] or [L4] or untagged (6): #9 32595 CR2 C2; #19 and #21 33389 CR2 D1, D3; #25 33389 DR1 D2; #29 and #30 36791 D1, D2 (in #29 LAY's reason says no verse, but the block truly has one quoted [L1] verse only).
-- No [L1] verse, only [L2]/[L3] (5): #5 32306 D3; #27 and #28 36530 D3, D4; #33 36791 D5 ([L2] only); #35 37113 CR2; #36 37203 D4.
-  (#33 is counted once, under no [L1].)
+- No [L1] verse, only [L2]/[L3] (6): #5 32306 D3; #27 and #28 36530 D3, D4; #33 36791 D5 ([L2] only); #35 37113 CR2; #36 37203 D4.
 
 FALSE (10):
 (a) Tag forms LAY does not read, layers present (9):

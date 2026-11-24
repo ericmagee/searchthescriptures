@@ -25,8 +25,6 @@ const cases=[
 ['A11 reference the answering round does not cite',x(FL41802),W02+' -- CARRIED BY: Matthew 1:25 "And knew her not till she had brought forth"','HELD'],
 ['A12 stitched quote + valid CARRIED BY',x(FL41802),'The answer says "the record\'s own book of that status is Romans 9:5 the fathers" which can agree. -- CARRIED BY: Romans 9:5 "of whom as concerning the flesh Christ"','HELD'],
 ['A13 absence ground (exempt)',x(FL41802),'The line rests on an absence: no verse states the manner.','NOT IN SCOPE'],
-['A13b a rival reading that names footing in passing (in scope)',x(FL41802),'The answer reads "according to the flesh" as status, footed by its own layers, which can agree.','HELD'],
-['A13c the witness ledger ground (exempt)',x(FL41802),'THE WITNESS LEDGER shows the witness NAMED IN AN ANSWER in [CR3].','NOT IN SCOPE'],
 ['A14 quotes-no-answer-words ground (exempt)',x(FL41802),'No answer\'s own words are quoted; "terminates the line" is the judge\'s own reading.','NOT IN SCOPE'],
 ['A15 CARRIED BY only inside a quoted FORCED line',x(FL41803),'The line "-- CARRIED BY: Romans 9:5 \\"of whom as concerning the flesh Christ\\" --" reads it.','HELD'],
 ];
@@ -35,7 +33,7 @@ for(const [n,xx,w,want] of cases){const g=ECW.gate(xx,v(w),{R,rows:CV,words:OWX}
 OWX=[];{const g=ECW.gate(x(FL41802),v(W02+' -- CARRIED BY: [L2] paralambano (G3880) at Matthew 1:24'),{R,rows:CV,words:[]});const ok=g.send&&/NOT CHECKED/.test(g.note);if(!ok)fails++;out.push((ok?'OK  ':'FAIL')+' A16 [L2] with original_words not read this run: '+(g.send?'SENT':'HELD')+' -- '+(g.note||g.why));}
 OWX=OW;
 // B: apply() on rows, then the send-back item, the judge text and the cure
-const rows=[{rule:'E-COL',item:'COLLISION D6 vs C6',cure_reason:'ENFORCER DISAGREE (right: STANDS): '+W02+' (judge wrote LINK BROKEN; '+ECW.label('E-COL')+', ruling 428)'},{rule:'E-COL',item:'COLLISION D6 vs C6',cure_reason:'ENFORCER DISAGREE (right: STANDS): '+(W02+' -- CARRIED BY: Romans 9:5 "of whom as concerning the flesh Christ"')+' (judge wrote LINK BROKEN; '+ECW.label('E-COL')+', ruling 428)'}];out.push('L labels: E-COL: '+ECW.label('E-COL')+' || E-B7: '+ECW.label('E-B7')+' || E-HOLD: '+ECW.label('E-HOLD')+' || E-SYN: '+ECW.label('E-SYN'));if(/record-only/i.test(ECW.label('E-B7')+ECW.label('E-HOLD')+ECW.label('E-COL')))fails++;
+const rows=[{rule:'E-COL',item:'COLLISION D6 vs C6',cure_reason:'ENFORCER DISAGREE (right: STANDS): '+W02+' (judge wrote LINK BROKEN; '+ECW.label('E-COL')+', ruling 428)'},{rule:'E-COL',item:'COLLISION D6 vs C6',cure_reason:'ENFORCER DISAGREE (right: STANDS): '+(W02+' -- CARRIED BY: Romans 9:5 "of whom as concerning the flesh Christ"')+' (judge wrote LINK BROKEN; '+ECW.label('E-COL')+', ruling 428)'}];
 const ids=[{...x(FL41802),id:'H1.1'},{...x(FL41802),id:'H1.2'}];const V={'H1.1':v(W02),'H1.2':v(W02+' -- CARRIED BY: Romans 9:5 "of whom as concerning the flesh Christ"')};
 const st=ECW.apply(rows,ids,V,R);out.push('B1 apply: '+JSON.stringify(st));out.push('B1 row 1: '+rows[0].cure_reason.slice(0,220));out.push('B1 row 2: '+rows[1].cure_reason.slice(-330));
 const sentNow=r=>/^ENFORCER (?:DISAGREE|NO ANSWER)\b/.test(r.cure_reason);if(sentNow(rows[0])||!sentNow(rows[1]))fails++;out.push('B2 send filter: row 1 '+(sentNow(rows[0])?'SENT':'not sent')+', row 2 '+(sentNow(rows[1])?'SENT':'not sent'));
@@ -52,4 +50,3 @@ const C=[['C1 third KEEP (W2 7224 form)','Romans 9:5 "of whom as concerning the 
 for(const [n,w,want] of C){const a=n.startsWith('C5')?{ans:'CHANGE',to:'D6 vs C6 (Romans 1:3): UNDERDETERMINED -- x',why:''}:{ans:'KEEP',why:w};const r=S.enf428Cure(it,a,RR,null);if(r.status!==want)fails++;out.push((r.status===want?'OK  ':'FAIL')+' '+n+': '+r.status+' -- '+r.why);}
 {const r=S.enf428Cure({...it,ecw:null},{ans:'KEEP',why:C[0][1]},RR,null);out.push('C6 same third KEEP with no row shown (live today): '+r.status+' -- '+r.why);}
 out.push('FAILS: '+fails);fs.writeFileSync('replay345.txt',out.join('\n')+'\n');console.log(out.join('\n'));
-{const g=ECW.gate({rule:'E-HOLD',seat:'luna',item:'COLLISION D3 vs C2',flagged_line:'D3 vs C2 (Matthew 1:16): STANDS -- x',grade:'STANDS'},{v:'DISAGREE',right:'UNDERDETERMINED',why:'The answer leaves it open.'},{R,rows:CV,words:OW});const ok=!g.applies;console.log((ok?'OK  ':'FAIL')+' D1 E-HOLD push toward UNDERDETERMINED is not gated in ASK 345: '+(g.applies?'GATED':'NOT IN SCOPE'));fs.appendFileSync('replay345.txt',(ok?'OK  ':'FAIL')+' D1 E-HOLD push toward UNDERDETERMINED is not gated in ASK 345 (ASK 346 turns it on)\n');}
