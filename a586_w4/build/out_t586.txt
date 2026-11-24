@@ -1,0 +1,37 @@
+== A. The whole judge line reaches the layer check (qwen4max 1274, gemini 1272; md5 equal to the record)
+   gemini_1272 1685 chars | whole line: deciding step written (ASK 504) | first 1,500 (the live store): no deciding step: a break ends with -- DECIDES [L4]: "<the inference>" -- FROM: <its lower layers on the line> -- MEETS: [<round>] "<the answer's own layer>" -- WHY IT FAILS: <the lower layer the answer cannot agree with> (ASK 504)
+PASS gemini_1272: the whole line has its deciding step
+PASS gemini_1272: known-bad, the 1,500 cut reads "no deciding step" (the 42071 fault)
+   qwen4max_1274 1721 chars | whole line: deciding step written (ASK 504) | first 1,500 (the live store): no deciding step: a break ends with -- DECIDES [L4]: "<the inference>" -- FROM: <its lower layers on the line> -- MEETS: [<round>] "<the answer's own layer>" -- WHY IT FAILS: <the lower layer the answer cannot agree with> (ASK 504)
+PASS qwen4max_1274: the whole line has its deciding step
+PASS qwen4max_1274: known-bad, the 1,500 cut reads "no deciding step" (the 42071 fault)
+PASS flagged_line caps in LIB: live 20, target 0
+PASS A3 guard present in target LIB 2880
+PASS A3: a line ending in the cut mark " [...]" is NOT READ; the whole qwen4max line is read
+== B. Spark S3 KEEP (enforcer log 53175), the exact KEEP over the record lines that hold its words
+   S3 live: quotes no 6 words in a row of the answering side's own words
+   S3 target: quotes the answer ("joseph knew mary his wife within") and the verse ("knew mary his wife within the")
+PASS known-bad: live refuses the S3 KEEP (the 42071 fault: the challenger quoted the defender's sentence in [DR2])
+PASS target accepts the S3 KEEP
+PASS control S1 KEEP: live and target agree (quotes the answer ("cohabitation is the couples common life") and the verse ("before they came together she was"))
+   verse-only KEEP live: quotes no 6 words in a row of the answering side's own words
+   verse-only KEEP target: quotes no 6 words in a row of the answering side's own words
+PASS known-bad: a KEEP quoting only verse words the answer holds in quotation marks fails in live and target
+== C1. Argon keystone D5 (no collision line of D5): pkgLAY label check
+PASS known-bad: live demands a "D5 vs C<m>" label the keystone cannot carry (argon has no D5 collision line: D2 vs C5, D2 vs C6, D3 vs C1, D3 vs C2, D3 vs C4, D4 vs C3)
+PASS target: D5 has no collision line, so no label is demanded
+PASS control: when the judge does write a D5 collision line, the target still demands its label
+== C2. Second reading of argon (enforcer log 53360)
+PASS 53360: the judge changed to the first reading's own grade (STANDS): not counted, RECORD-ONLY
+PASS control: a changed line that does not carry the first reading's grade is still counted
+PASS E-RES: same rule on the RESULT word
+== D. Recompute standing (spark 1273, qwen4max 1274: CHALLENGE PROP-DEPENDENT 0, C1 counted as one CHALLENGER LINK BROKEN)
+PASS known-bad: live recomputes CHALLENGE SELF-SUPPORTED (as written in 1273 and 1274)
+PASS target keeps CHALLENGE PROP-DEPENDENT
+PASS control: with no counted break live and target agree
+PASS D2: the recompute line prints its standing inputs
+== E. Removal reason tally (Alternate Merge Seat)
+PASS known-bad: live tallies a send-back item line as an UNREAD COUNTED LINE
+PASS target does not
+PASS control: an unknown AUDIT line that is counted is still tallied
+RESULT: ALL PASS
