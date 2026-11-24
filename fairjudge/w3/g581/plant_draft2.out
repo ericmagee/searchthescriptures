@@ -1,0 +1,13 @@
+A same verse twice | before 1 one verse only on its layer lines; no further verse is read with it on an [L1] or [L3] line | after 1 one verse only on its layer lines; no further verse is read with it on an [L1] or [L3] line
+B bare c:v wrong book, row absent | before 1 one verse only on its layer lines; no further verse is read with it on an [L1] or [L3] line | after 1 one verse only on its layer lines; no further verse is read with it on an [L1] or [L3] line
+B2 same, tagged line names Luke only in passing | before 1 one verse only on its layer lines; no further verse is read with it on an [L1] or [L3] line | after 1 one verse only on its layer lines; no further verse is read with it on an [L1] or [L3] line
+D time read as verse | before 1 one verse only on its layer lines; no further verse is read with it on an [L1] or [L3] line | after 1 one verse only on its layer lines; no further verse is read with it on an [L1] or [L3] line
+D2 time, rows=[] | before 1 one verse only on its layer lines; no further verse is read with it on an [L1] or [L3] line | after 1 one verse only on its layer lines; no further verse is read with it on an [L1] or [L3] line
+D0 control: full bogus ref, row absent | before 0  | after 0 
+E prose about a missing tag | before 1 one verse only on its layer lines; no further verse is read with it on an [L1] or [L3] line | after 0 
+E2 negated before paren | before 0  | after 0 
+F ratio 3:1 | before 1 one verse only on its layer lines; no further verse is read with it on an [L1] or [L3] line | after 1 one verse only on its layer lines; no further verse is read with it on an [L1] or [L3] line
+G noref wording | before 1 no verse quoted with its reference on an [L1] or [L3] line | after 1 no verse quoted with its reference on an [L1] or [L3] line; 1 tagged verse(s) quoted with no reference on the line (state the reference)
+H combined L1-L4 | before 1 no verse quoted with its reference on an [L1] or [L3] line | after 0 
+P7 with the Genesis 24:16 row absent: before 1 after 1
+P7 wrong words, row present: after 1 | row absent: after 1
