@@ -1,0 +1,64 @@
+C3a: 90 present pairings, order v2: live with today's rows vs target with the neon row: byte-equal 90 of 90
+C3b: 90 present pairings, order v2 vs v3 (hydrogen, neon appended): identical 22 | alternates only 68 | judges, reserve or enforcer change 0
+live, hydrogen vs claude: INIT: ORACLE_DEBATE_V1 Init refused: defender engine "hydrogen" is not one of [claude, chatgpt, gemini, grok, 
+live, neon vs claude: INIT: ORACLE_DEBATE_V1 Init refused: defender engine "neon" is not one of [claude, chatgpt, gemini, grok, mimo
+C2: pairings 132 | three judges 128 | stop with reason 4 | no reserve and no alternate 12
+  STOP chatgpt vs glm: RESOLVE: ORACLE_DEBATE_V1 Resolve refused: ENFORCER: luna is of family openai, which debates in this debate, and the backup enforcer seat "glm" is of family zhipu, which may not enforce here (ASK 608). 
+  STOP glm vs chatgpt: RESOLVE: ORACLE_DEBATE_V1 Resolve refused: ENFORCER: luna is of family openai, which debates in this debate, and the backup enforcer seat "glm" is of family zhipu, which may not enforce here (ASK 608). 
+  STOP glm vs sol62: RESOLVE: ORACLE_DEBATE_V1 Resolve refused: ENFORCER: luna is of family openai, which debates in this debate, and the backup enforcer seat "glm" is of family zhipu, which may not enforce here (ASK 608). 
+  STOP sol62 vs glm: RESOLVE: ORACLE_DEBATE_V1 Resolve refused: ENFORCER: luna is of family openai, which debates in this debate, and the backup enforcer seat "glm" is of family zhipu, which may not enforce here (ASK 608). 
+  no reserve and no alternate: chatgpt vs gemini; chatgpt vs hydrogen; chatgpt vs neon; gemini vs chatgpt; gemini vs sol62; sol62 vs gemini; sol62 vs hydrogen; sol62 vs neon; hydrogen vs chatgpt; hydrogen vs sol62; neon vs chatgpt; neon vs sol62
+NEW PAIRINGS (42):
+  claude vs hydrogen: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max; enforcer luna
+  claude vs neon: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max; enforcer luna
+  chatgpt vs hydrogen: judges spark,qwen4max,sonnet; reserve none; alternates none; enforcer glm
+  chatgpt vs neon: judges spark,qwen4max,sonnet; reserve none; alternates none; enforcer glm
+  gemini vs hydrogen: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max,sonnet; enforcer luna
+  gemini vs neon: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max,sonnet; enforcer luna
+  grok vs hydrogen: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max,sonnet; enforcer luna
+  grok vs neon: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max,sonnet; enforcer luna
+  mimo vs hydrogen: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max,sonnet; enforcer luna
+  mimo vs neon: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max,sonnet; enforcer luna
+  opus vs hydrogen: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max; enforcer luna
+  opus vs neon: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max; enforcer luna
+  glm vs hydrogen: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max,sonnet; enforcer luna
+  glm vs neon: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max,sonnet; enforcer luna
+  qwen4max vs hydrogen: judges sol62,spark,sol; reserve none; alternates chatgpt,sonnet; enforcer luna
+  qwen4max vs neon: judges sol62,spark,sol; reserve none; alternates chatgpt,sonnet; enforcer luna
+  spark vs hydrogen: judges sol62,sol,chatgpt; reserve qwen4max; alternates qwen4max,sonnet; enforcer luna
+  spark vs neon: judges sol62,sol,chatgpt; reserve qwen4max; alternates qwen4max,sonnet; enforcer luna
+  sol62 vs hydrogen: judges spark,qwen4max,sonnet; reserve none; alternates none; enforcer glm
+  sol62 vs neon: judges spark,qwen4max,sonnet; reserve none; alternates none; enforcer glm
+  hydrogen vs claude: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max; enforcer luna
+  hydrogen vs chatgpt: judges spark,qwen4max,sonnet; reserve none; alternates none; enforcer glm
+  hydrogen vs gemini: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max,sonnet; enforcer luna
+  hydrogen vs grok: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max,sonnet; enforcer luna
+  hydrogen vs mimo: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max,sonnet; enforcer luna
+  hydrogen vs opus: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max; enforcer luna
+  hydrogen vs glm: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max,sonnet; enforcer luna
+  hydrogen vs qwen4max: judges sol62,spark,sol; reserve none; alternates chatgpt,sonnet; enforcer luna
+  hydrogen vs spark: judges sol62,sol,chatgpt; reserve qwen4max; alternates qwen4max,sonnet; enforcer luna
+  hydrogen vs sol62: judges spark,qwen4max,sonnet; reserve none; alternates none; enforcer glm
+  hydrogen vs neon: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max,sonnet; enforcer luna
+  neon vs claude: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max; enforcer luna
+  neon vs chatgpt: judges spark,qwen4max,sonnet; reserve none; alternates none; enforcer glm
+  neon vs gemini: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max,sonnet; enforcer luna
+  neon vs grok: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max,sonnet; enforcer luna
+  neon vs mimo: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max,sonnet; enforcer luna
+  neon vs opus: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max; enforcer luna
+  neon vs glm: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max,sonnet; enforcer luna
+  neon vs qwen4max: judges sol62,spark,sol; reserve none; alternates chatgpt,sonnet; enforcer luna
+  neon vs spark: judges sol62,sol,chatgpt; reserve qwen4max; alternates qwen4max,sonnet; enforcer luna
+  neon vs sol62: judges spark,qwen4max,sonnet; reserve none; alternates none; enforcer glm
+  neon vs hydrogen: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max,sonnet; enforcer luna
+C4: hydrogen vs neon: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max,sonnet; enforcer luna || neon vs hydrogen: judges sol62,spark,sol; reserve none; alternates chatgpt,qwen4max,sonnet; enforcer luna
+C5 (8):
+  chatgpt vs hydrogen: judges spark,qwen4max,sonnet; reserve none; alternates none; enforcer glm
+  chatgpt vs neon: judges spark,qwen4max,sonnet; reserve none; alternates none; enforcer glm
+  sol62 vs hydrogen: judges spark,qwen4max,sonnet; reserve none; alternates none; enforcer glm
+  sol62 vs neon: judges spark,qwen4max,sonnet; reserve none; alternates none; enforcer glm
+  hydrogen vs chatgpt: judges spark,qwen4max,sonnet; reserve none; alternates none; enforcer glm
+  hydrogen vs sol62: judges spark,qwen4max,sonnet; reserve none; alternates none; enforcer glm
+  neon vs chatgpt: judges spark,qwen4max,sonnet; reserve none; alternates none; enforcer glm
+  neon vs sol62: judges spark,qwen4max,sonnet; reserve none; alternates none; enforcer glm
+ALL PASS

@@ -1,0 +1,6 @@
+C6: equal 128 | differ 0 | engine stops 4
+  STOP chatgpt|glm (engine stops; DB spark,qwen4max,gemini/none/argon,sonnet,hydrogen,neon)
+  STOP glm|chatgpt (engine stops; DB spark,qwen4max,gemini/none/argon,sonnet,hydrogen,neon)
+  STOP glm|sol62 (engine stops; DB spark,qwen4max,gemini/none/argon,sonnet,hydrogen,neon)
+  STOP sol62|glm (engine stops; DB spark,qwen4max,gemini/none/argon,sonnet,hydrogen,neon)
+DB order {"panel":["sol","sol62","spark"],"alternate":["chatgpt","qwen4max","gemini","argon","sonnet","hydrogen","neon"]} version 3 | neon row {"mt":64000,"act":true,"api":"google/gemini-4-neon","fam":"google","role":"engine"} | debaters claude,chatgpt,gemini,grok,mimo,opus,glm,qwen4max,spark,sol62,hydrogen,neon | fault with neon on the panel: ok
