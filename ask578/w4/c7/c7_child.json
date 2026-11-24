@@ -1,0 +1,57 @@
+{
+ "name": "TEMP W4 ASK578 C7 child (delete after one run)",
+ "settings": {
+  "executionOrder": "v1",
+  "saveManualExecutions": true,
+  "callerPolicy": "workflowsFromSameOwner"
+ },
+ "connections": {
+  "Alternate Pass In": {
+   "main": [
+    [
+     {
+      "node": "Report Length",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  }
+ },
+ "nodes": [
+  {
+   "id": "c7c-1",
+   "name": "Alternate Pass In",
+   "type": "n8n-nodes-base.executeWorkflowTrigger",
+   "typeVersion": 1.1,
+   "position": [
+    0,
+    0
+   ],
+   "parameters": {
+    "inputSource": "workflowInputs",
+    "workflowInputs": {
+     "values": [
+      {
+       "name": "pass",
+       "type": "object"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c7c-2",
+   "name": "Report Length",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    260,
+    0
+   ],
+   "parameters": {
+    "jsCode": "const p=$('Alternate Pass In').first().json.pass||{};const s=typeof p.lib==='string'?p.lib:'';\nreturn [{json:{lib_type:typeof p.lib,received_len:s.length,head:s.slice(0,40),tail:s.slice(-40),parent_exec:p.parent_exec||null}}];"
+   }
+  }
+ ]
+}

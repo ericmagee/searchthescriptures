@@ -1,0 +1,16 @@
+// ASK 578 C7 (W4): the one-time test workflows. node gen578c7.cjs <live engine export> -> c7_child.json, c7_parent.json (CHILD_ID placeholder until the child is created).
+// W1's conditions (Wall 11683): no credential, webhook or schedule; never active; run once by hand (Manual Trigger, manual mode) with no run live; deleted after, deletion read back.
+// (a) $('Shared Library').params.jsCode resolves in an Execute Workflow node although the Shared Library node never runs; (b) the child receives a string of the same length.
+const fs=require('fs');const E=JSON.parse(fs.readFileSync(process.argv[2],'utf8'));const SL=E.nodes.find(n=>n.name==='Shared Library');
+const settings={executionOrder:'v1',saveManualExecutions:true,callerPolicy:'workflowsFromSameOwner'};
+const child={name:'TEMP W4 ASK578 C7 child (delete after one run)',settings,connections:{'Alternate Pass In':{main:[[{node:'Report Length',type:'main',index:0}]]}},nodes:[
+ {id:'c7c-1',name:'Alternate Pass In',type:'n8n-nodes-base.executeWorkflowTrigger',typeVersion:1.1,position:[0,0],parameters:{inputSource:'workflowInputs',workflowInputs:{values:[{name:'pass',type:'object'}]}}},
+ {id:'c7c-2',name:'Report Length',type:'n8n-nodes-base.code',typeVersion:2,position:[260,0],parameters:{jsCode:"const p=$('Alternate Pass In').first().json.pass||{};const s=typeof p.lib==='string'?p.lib:'';\nreturn [{json:{lib_type:typeof p.lib,received_len:s.length,head:s.slice(0,40),tail:s.slice(-40),parent_exec:p.parent_exec||null}}];"}}]};
+const parent={name:'TEMP W4 ASK578 C7 parent (delete after one run)',settings,connections:{'Manual Trigger':{main:[[{node:'Alternate Pass Call',type:'main',index:0}]]},'Alternate Pass Call':{main:[[{node:'Compare',type:'main',index:0}]]}},nodes:[
+ {id:'c7p-1',name:'Manual Trigger',type:'n8n-nodes-base.manualTrigger',typeVersion:1,position:[0,0],parameters:{}},
+ {id:'c7p-2',name:'Shared Library',type:SL.type,typeVersion:SL.typeVersion,position:[0,300],parameters:JSON.parse(JSON.stringify(SL.parameters))},  // copy of the live node; not connected, never runs
+ {id:'c7p-3',name:'Alternate Pass Call',type:'n8n-nodes-base.executeWorkflow',typeVersion:1.2,position:[260,0],parameters:{source:'database',workflowId:{__rl:true,mode:'id',value:'CHILD_ID'},mode:'once',options:{waitForSubWorkflow:true},
+   workflowInputs:{mappingMode:'defineBelow',value:{pass:"={{ ({ lib: $('Shared Library').params.jsCode, parent_exec: $execution.id }) }}"},matchingColumns:[],schema:[{id:'pass',displayName:'pass',required:false,defaultMatch:false,display:true,canBeUsedToMatch:true,type:'object',removed:false}],attemptToConvertTypes:false,convertFieldsToString:false}}},
+ {id:'c7p-4',name:'Compare',type:'n8n-nodes-base.code',typeVersion:2,position:[520,0],parameters:{jsCode:"const c=$input.first().json;const L=String($('Shared Library').params.jsCode);\nreturn [{json:{a_resolves:c.lib_type==='string'&&c.received_len>0,b_same_length:c.received_len===L.length,received_len:c.received_len,expected_len:L.length,head_equal:c.head===L.slice(0,40),tail_equal:c.tail===L.slice(-40),shared_library_ran:$('Shared Library').isExecuted}}];"}}]};
+fs.writeFileSync(__dirname+'/c7_child.json',JSON.stringify(child,null,1));fs.writeFileSync(__dirname+'/c7_parent.json',JSON.stringify(parent));
+console.log('Shared Library copy',SL.parameters.jsCode.length,'chars');
