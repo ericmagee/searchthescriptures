@@ -22,7 +22,7 @@ Found:
 - Resolve Seats sets the enforcer, with `const enf=need('luna')`. It puts out `enforcer:{seat:'luna',api_model,max_tokens}`. This is the only place the enforcer is chosen.
 - Six readers take `RS.enforcer`, unchanged: Enforcer Build, Anticheat Build, Close Enforcer Build, Judge Contradiction Build, Assume Check Build, and the Shared Library (both workflows; the Judge Enforcer path). No change is needed in them; they follow whatever seat Resolve Seats names.
 - Other "luna" hits are seat-to-family or seat-to-provider tables (Init Seats, Build Synthesis, Build Independent Verdict, Build Diagnostic Prompt, Accept Build, dash_judge_lineup, odv1_record_panel_substitution), and the Library's xkJsonModels list (keyed by model, a JSON-format note). None of them picks the enforcer. No change.
-- NOT IN SCOPE, for the operator's notice: Resolve Seats also sets `deepseek: M['deepseek']||enf`. Seat deepseek_debate is inactive, so the Independent Verdict (A2) call and the Diagnostic Prompt run on luna's model too. Ruling 608 names the enforcer only, so this plan keeps those two exactly as today (they keep luna). If the operator wants the ruling to reach them, that is a separate ASK.
+- NOT IN SCOPE, for the operator's notice: Resolve Seats also sets `deepseek: M['deepseek']||enf`. Seat deepseek_debate is inactive, so the Independent Verdict (A2) call and the Diagnostic Prompt run on luna's model too. Ruling 537 names the enforcer only, so this plan keeps those two exactly as today (they keep luna). If the operator wants the ruling to reach them, that is a separate ASK.
 
 Change, in Resolve Seats only (engine; the child has no Resolve Seats):
 1. Keep `enf=need('luna')` for the deepseek fallback, unchanged.
@@ -65,3 +65,10 @@ Run 42071 (11-23): enforcer openai/gpt-6-luna against defender openai/gpt-6.2-so
 2. Build on a fresh live fetch (base named), with T1 to T5. Then W1 grades the build.
 3. Write card to the operator ("Write it" / "Hold"), naming the enforcer each listed pairing would get.
 4. On the press: run gate, PUT the engine, fetch back, then audit, Wall, the W1 readback, and memory. W3 writes the manual entry and the AAR row.
+
+## W1 GRADE NOTES (PASS with N1 to N5, Wall 11659, grade 8f8971d5), folded into the build
+- N1: the model test on luna is dropped; ruling 537 bars the family only. Luna's family openai already covers any OpenAI debater's model.
+- N2: a candidate seat with no family in model_config is skipped while walking the order, not failed.
+- N3: the Library comment "the enforcer model (seat luna)" goes stale; W3's manual entry records it. The Library is not changed.
+- N4: the write card says that the Judge order page still lists the chosen seat as an alternate.
+- N5: "Ruling 608" corrected to "ruling 537".
