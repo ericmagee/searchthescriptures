@@ -7,7 +7,7 @@ PASS D3B Extract: no await, this, arguments or yield outside strings (rough scan
 PASS C3B Extract: one top-level __O423 statement
 PASS C3B Extract: free names are $ and $input only ($,$input)
 PASS C3B Extract: no await, this, arguments or yield outside strings (rough scan)
-PASS no existing library line moved or changed (3567 lines kept; 332 appended)
+PASS no existing library line moved or changed (3567 lines kept; 155 appended)
 PASS C2B Extract: served text equals the live block byte for byte (47031, md5 e4ba58a5)
 PASS C2B Extract: node with the loader parses (49931 to 3510)
 PASS C2B Extract: every character outside the __O423 statement is unchanged
@@ -20,5 +20,7 @@ PASS C3B Extract: served text equals the live block byte for byte (51147, md5 00
 PASS C3B Extract: node with the loader parses (54047 to 3510)
 PASS C3B Extract: every character outside the __O423 statement is unchanged
 PASS C3B Extract: negative control, a changed line fails the length check
-MEASURED: three nodes 155221 to 10585 characters; Shared Library grows by 63914; net stored saving 80722 (engine only; the child has no __O423).
+MEASURED: three nodes 155221 to 10585 characters; Shared Library grows by 38505; net stored saving 106131 (engine only; the child has no __O423).
+REUSED existing library lines: 177 (25058 characters), from line 69 to 2863; MAP p entries: 50, 71, 83
+existing MAP entries that serve any reused line: 40 (Alternate Payloads 145; Panel Payloads 145; R2 Alternate Payloads 145; Alternate Merge Seat 144; Extract Independent Verdict 144; R2 Alternate Merge Seat 144)
 ALL PASS

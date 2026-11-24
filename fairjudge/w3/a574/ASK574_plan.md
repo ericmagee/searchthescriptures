@@ -1,4 +1,6 @@
-# ASK 574: the three B-Extract layer blocks are stored once in the Shared Library (W3, PLAN DRAFT 1)
+# ASK 574: the three B-Extract layer blocks are stored once in the Shared Library (W3, PLAN DRAFT 1a)
+
+Draft 1a takes the coordinator's direction of 18:13 CST 11-23 (the team method): an existing library line is reused wherever it exists, and only lines the library lacks are appended. Changed from draft 1 (md5 d57bfa74): section 4 item 1, section 7 figures, section 8 item 4 (new), criterion C8 (new). Order fixed by the coordinator: after 571 and 559.
 
 DRAFT ONLY. Nothing is written. The plan needs grading (W1), the builder's check (W4) and the operator's approval. Assigned by the coordinator at 18:07 CST 11-23, from W1's survey (ASK 572, Wall 11064, group 2).
 
@@ -21,8 +23,8 @@ SEARCH (live engine after ASK 563, version d8292f62, W4's fetch-back ask563/w4/w
 Not searched: no workflow other than the engine and the child holds debate nodes that I know of; the builder repeats search 1 on a fresh fetch.
 
 ## 4. The change
-1. Shared Library (engine): every different line of the three texts is appended after the last existing line. No existing line is moved, changed or reused (gate entries address existing lines by index; and a line shared with another package could be edited by that package later).
-2. Three MAP entries, "O423 C2B Extract", "O423 D3B Extract", "O423 C3B Extract", each `{n: <length>, p: [...]}` over the appended lines. The three keys are added to the engine's __MAPEXTRA422 (the ASK 539 lesson). The library sha header is reset.
+1. Shared Library (engine): a line of the three texts that already stands in the library is served from where it stands (177 of the 332 different lines today, 25,058 characters, between library lines 69 and 2863). Only the lines the library lacks are appended, after the last existing line. No existing line is moved or changed (gate entries address existing lines by index).
+2. Three MAP entries, "O423 C2B Extract", "O423 D3B Extract", "O423 C3B Extract", each `{n: <length>, p: [...]}` over the reused and the appended lines (50, 71 and 83 p entries today). The three keys are added to the engine's __MAPEXTRA422 (the ASK 539 lesson). The library sha header is reset.
 3. In each of the three nodes the `__O423` statement is replaced by one loader line in the pkgREFP shape. It throws if the entry is missing or the rebuilt length differs from n, and it passes `$` and `$input`:
 `const __O423=(T=>{...const M=...["O423 <node>"];if(!M)throw new Error('pkgO423: the Shared Library holds no O423 <node> entry');const S=...;if(S.length!==M.n)throw new Error('pkgO423: rebuilt O423 <node> is '+S.length+', expected '+M.n);return new Function('$','$input',S+'\nreturn __O423;')($,$input);})($('Shared Library').params.jsCode);`
 The full line is in t574.js (function `stub`).
@@ -40,13 +42,14 @@ C3. The first existing library lines (count read at the build) are unchanged, in
 C4. The free names of each served text are `$` and `$input` only (parser, not the rough scan).
 C5. Negative controls: with one served line changed, the loader throws on the length check; with the MAP key removed, the loader throws on the missing entry; with `$input` not passed, the output test of C6 fails.
 C6. Output test, the method of ASK 571: each node is run offline on the stored inputs of run 41822 with a real `$` and `$input`, once with the pre-write code and once with the loader and the packed library; the two outputs are equal as JSON, for all three nodes. Population: the three node executions of run 41822 (and of run 41736 if its inputs are held).
+C8. The build post lists every reused library line number and every other MAP entry that serves any of them (today: 40 entries), so a later ASK that edits one of those lines can see that it also edits these three texts.
 C7. Library Check passes in the engine with the three keys in __MAPEXTRA422; the run-start check prints GO.
 DONE: written by W4 on its own card, read back by a seat other than W4, C1 to C7 shown on the written engine's fetch-back, and one live run in which the three nodes execute with no pkgO423 error and store their rounds.
 
 ## 7. WRONG-IF
 This plan aims at the wrong thing if, after ASK 571 is written, the net stored saving is too small to be worth a new throw path in three round-keeping nodes. Measurement, taken now as far as it can be:
-1. On the live engine today (before 571), prototype t574.js: the three nodes go from 155,221 to 10,585 characters; the Shared Library grows by 63,914; net stored saving 80,722. ALL PASS (22 checks).
-2. With the L2C statement taken out of each text (the state after 571, estimated by cutting the statement; 571's loader line is not yet written): the three texts are 23,386, 24,643 and 27,502 (75,531); their different lines hold 37,756; the saving is about 37,775 before JSON escaping and the three loader lines. Estimate, not a measurement of the final state.
+1. On the live engine today (before 571), prototype t574.js: the three nodes go from 155,221 to 10,585 characters; the Shared Library grows by 38,505; net stored saving 106,131. ALL PASS (22 checks). (Draft 1, own lines only: library +63,914, net 80,722.)
+2. With the L2C statement taken out of each text (the state after 571, estimated by cutting the statement; 571's loader line is not yet written): the three texts are 23,386, 24,643 and 27,502 (75,531); 153 of their different lines are not in the library (33,088 characters); the saving is about 42,419 before JSON escaping and the three loader lines. Estimate, not a measurement of the final state. Side fact for ASK 571: 143 of the 145 lines of the L2C statement already stand in the library.
 3. Known-good case run: the three live texts rebuild equal. Known-bad case run: a changed line fails the length check (C5, first control).
 The team and the operator should weigh figure 2, not the survey's 95,319. For scale: the engine's code nodes other than the library hold 2,291,899 characters (W4, Wall 11056 item 6).
 
@@ -54,6 +57,8 @@ The team and the operator should weigh figure 2, not the survey's 95,319. For sc
 1. A new failure mode: if the library and a MAP entry ever disagree, the node throws and the run stops at that round. Today the code is inline and cannot disagree with itself. Guards: Library Check at run start, the sha header, the length check, criterion C7.
 2. Each of these nodes already parses the whole library text once per loader it holds (LAY and REFP today; L2C after 571). This adds one more parse of about 1.15 MB per node execution, three per run. Not measured; the builder times it in C6.
 3. Reading the code: the three nodes will show a loader line instead of their logic; the logic is read in the library lines. Same trade as pkgLIB.
+
+4. Reuse couples these three texts to 40 other library modules that serve the same lines. A later edit to a reused line changes these texts too. The length check catches an edit that changes the length; an edit of equal length passes it silently. Guard: criterion C8, and the rule that the pack tool rebuilds every MAP entry and its n at each library write.
 
 ## 9. RUN EVIDENCE
 A live run with the Oracle defending: C2B Extract, D3B Extract and C3B Extract execute and the stored rounds are present; no "pkgO423" text in debate_errors. Registry case: to be named by W4 at the build (ASK 417 registry).
