@@ -1,0 +1,52 @@
+== A. Structure
+PASS engine: only the 11 IMP nodes and the Shared Library change (12)
+PASS child: only the Shared Library changes
+PASS connections unchanged
+PASS LIB unchanged in engine and child (LIB sha unchanged)
+PASS every existing MAP entry unchanged, engine and child
+PASS 3 new MAP entries, the same in engine and child: IMP B Build, IMP B Extract, IMP C4B Extract
+PASS C2B Extract: nested IMP (inside __O423) untouched
+PASS D3B Extract: nested IMP (inside __O423) untouched
+PASS C3B Extract: nested IMP (inside __O423) untouched
+== B. Byte for byte, per node
+PASS C1B Build: only the IMP statement is replaced, by the IMP B Build loader
+PASS C1B Build: served text equals the base IMP statement byte for byte (4616)
+PASS D2B Build: only the IMP statement is replaced, by the IMP B Build loader
+PASS D2B Build: served text equals the base IMP statement byte for byte (4616)
+PASS C2B Build: only the IMP statement is replaced, by the IMP B Build loader
+PASS C2B Build: served text equals the base IMP statement byte for byte (4616)
+PASS D3B Build: only the IMP statement is replaced, by the IMP B Build loader
+PASS D3B Build: served text equals the base IMP statement byte for byte (4616)
+PASS C3B Build: only the IMP statement is replaced, by the IMP B Build loader
+PASS C3B Build: served text equals the base IMP statement byte for byte (4616)
+PASS D4B Build: only the IMP statement is replaced, by the IMP B Build loader
+PASS D4B Build: served text equals the base IMP statement byte for byte (4616)
+PASS C4B Build: only the IMP statement is replaced, by the IMP B Build loader
+PASS C4B Build: served text equals the base IMP statement byte for byte (4616)
+PASS C1B Extract: only the IMP statement is replaced, by the IMP B Extract loader
+PASS C1B Extract: served text equals the base IMP statement byte for byte (6208)
+PASS D2B Extract: only the IMP statement is replaced, by the IMP B Extract loader
+PASS D2B Extract: served text equals the base IMP statement byte for byte (6208)
+PASS D4B Extract: only the IMP statement is replaced, by the IMP B Extract loader
+PASS D4B Extract: served text equals the base IMP statement byte for byte (6208)
+PASS C4B Extract: only the IMP statement is replaced, by the IMP C4B Extract loader
+PASS C4B Extract: served text equals the base IMP statement byte for byte (5949)
+== C. Behaviour on run 41822 rounds (old statement vs loader)
+PASS C1B Build: 600 outputs identical (592 non-empty, 0 throws on both)
+PASS D2B Build: 600 outputs identical (592 non-empty, 0 throws on both)
+PASS C2B Build: 600 outputs identical (592 non-empty, 0 throws on both)
+PASS D3B Build: 600 outputs identical (592 non-empty, 0 throws on both)
+PASS C3B Build: 600 outputs identical (592 non-empty, 0 throws on both)
+PASS D4B Build: 600 outputs identical (592 non-empty, 0 throws on both)
+PASS C4B Build: 600 outputs identical (592 non-empty, 0 throws on both)
+PASS C1B Extract: 600 outputs identical (592 non-empty, 0 throws on both)
+PASS D2B Extract: 600 outputs identical (592 non-empty, 0 throws on both)
+PASS D4B Extract: 600 outputs identical (592 non-empty, 0 throws on both)
+PASS C4B Extract: 600 outputs identical (592 non-empty, 0 throws on both)
+== D. Negative controls
+PASS missing entry: loader throws (ASK 576: the Shared Library holds no IMP B Build entry)
+PASS changed library line: loader throws (ASK 576: rebuilt IMP B Build is 4617, expected 4616)
+PASS a broken AB regex changes the outputs (the test can see AB)
+== E. Parse
+PASS all 11 changed nodes parse as Code node bodies
+ALL PASS
