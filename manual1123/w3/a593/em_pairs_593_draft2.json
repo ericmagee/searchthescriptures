@@ -1,0 +1,44 @@
+{
+ "10.0": [
+  {
+   "old": "is the first free seat that is not time-removed and not of a debater's family. Claude judges as the haiku and sonnet alternates, and sits",
+   "new": "is the first free seat that is not time-removed, not of a debater's family and not sonnet. Claude judges as the sonnet alternate, and sits"
+  },
+  {
+   "old": "  - Order: Init Seats `ORDER0` and Accept Build `ORDER` are chatgpt, sol, sol62, haiku, gemini, hydrogen, spark, qwen4max, argon, sonnet. `__ALT` is haiku, gemini, hydrogen, spark, qwen4max, argon, sonnet:",
+   "new": "  - Order: Init Seats `ORDER0` and Accept Build `ORDER` are chatgpt, sol, sol62, gemini, spark, qwen4max, argon, sonnet. `__ALT` is gemini, spark, qwen4max, argon, sonnet:"
+  },
+  {
+   "old": "its mark is the first run's Init Seats output and Accept Build seat list holding none of ember, glm_legal, hy4, hy4_flash, qwen, deepseek or MiniMax.",
+   "new": "its mark is the first run's Init Seats output and Accept Build seat list holding none of ember, glm_legal, hy4, hy4_flash, qwen, deepseek or MiniMax.\n- HAIKU IS OUT OF THE DEBATE ENGINE IN FULL (ASK 593; engine, 17 nodes, and the Shared Library, both copies; database: dash_debaters, odv1_record_panel_substitution and one model_config row; where it differs from any entry above in this section, this rule is right):\n  - What: haiku is no judge, no alternate and no debater. No engine or child node holds the word haiku, so no node carries an exemption for it. Init Seats: haiku is out of `ORDER0`, `__ALT`, `ENG`, `FAM_PANEL` and the call-family map; the rule that moved haiku behind the other seats after the first three free seats is removed; the single judge's filter is \"not sonnet\". Accept Build: out of `ORDER` and `ENG_SEAT`. Resolve Seats, Build Synthesis, Build Independent Verdict and Build Diagnostic Prompt: out of the call-family map. The direct Anthropic id form in Resolve Seats and in D1 to D4 and C1 to C4 Build reads claude-(opus|sonnet|fable|mythos), so a haiku model id is refused there. Format Markdown and Failure Salvage no longer name it. The Shared Library's cure-note model list (xkJsonModels) no longer holds `anthropic/claude-haiku-5.5`.\n  - Database: `dash_debaters` has no haiku row, so the dashboard does not offer it and `dash_launch_odv1` refuses it; the seat list of `odv1_record_panel_substitution` has no haiku; the model_config row haiku is kept, active false.\n  - A launch that names haiku is refused at Init Seats: 'ORACLE_DEBATE_V1 Init refused: defender engine \"haiku\" is not one of [claude, chatgpt, gemini, grok, mimo, opus, glm, qwen4max, spark, sol62, deepseek].'\n  - Not changed: the display-order lists of `dash_odv1_debates` and `dash_odv1_judges`, which sort past judgments and still name haiku; the comment in `odv1_record_panel_alternates`; past records.\n  - Result: the next seat moves up wherever haiku sat. Four pairs (chatgpt or sol62 against gemini, both ways) have the panel spark, qwen4max and sonnet, with no reserve and no alternate behind it.\n  - Limits: the seat list of `odv1_record_panel_substitution` does not hold qwen4max, and Init Seats makes qwen4max the reserve in 2 pairs (gemini against spark, both ways); a reserve used there would raise at its record. Not shown by a run. Shown offline: Init Seats replayed on 270 cases seats haiku in none and refuses no pair that ran before."
+  }
+ ],
+ "02.0": [
+  {
+   "old": "so qwen is refused and haiku, opus, qwen4max, spark and sol62 are accepted.",
+   "new": "so qwen and haiku are refused and opus, qwen4max, spark and sol62 are accepted."
+  }
+ ],
+ "04.0": [
+  {
+   "old": "claude reads `claude_synthesis`; haiku and opus read their own rows",
+   "new": "claude reads `claude_synthesis`; opus reads its own row"
+  }
+ ],
+ "17.0": [
+  {
+   "old": "Haiku 5.5 (`haiku`) and Opus 5.5 (`opus`) debate, through OpenRouter (model_config provider openrouter).",
+   "new": "Opus 5.5 (`opus`) debates, through OpenRouter (model_config provider openrouter). Haiku 5.5 neither debates nor judges (ASK 593; the model_config row haiku is inactive)."
+  }
+ ],
+ "09.0": [
+  {
+   "old": "a cure call to terra, sol, luna or Haiku (`xkJsonModels()` in the library)",
+   "new": "a cure call to terra, sol or luna (`xkJsonModels()` in the library)"
+  },
+  {
+   "old": "A cure call to terra, sol, luna or Haiku (`xkJsonModels()`) no longer",
+   "new": "A cure call to terra, sol or luna (`xkJsonModels()`) no longer"
+  }
+ ]
+}
