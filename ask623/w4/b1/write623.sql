@@ -1,4 +1,5 @@
--- ASK 623 DB write (W4): the neon model row; the two new seats in the five fixed seat lists; hydrogen and neon appended to the judge order's alternates (option A, card 15:01 CST). md5-gated exact replaces; each block refuses and changes nothing if its object moved.
+-- ASK 623 DB write (W4; W1 N1: sent in one call, wrapped in BEGIN/COMMIT): the neon model row; the two new seats in the five fixed seat lists; hydrogen and neon appended to the judge order's alternates (option A, card 15:01 CST). md5-gated exact replaces; each block refuses and changes nothing if its object moved.
+BEGIN;
 SET LOCAL truth.session_id='session_01H1X3AP1fjeQaEbxPP9UEZH';
 DO $d$ BEGIN
   IF EXISTS (SELECT 1 FROM model_config WHERE seat='neon') THEN RAISE EXCEPTION 'model_config already has a neon row; nothing changed'; END IF;
@@ -77,3 +78,4 @@ DO $d$ DECLARE v_before jsonb := odv1_judge_order_lists(); f text; BEGIN
   INSERT INTO odv1_judge_order VALUES ('hydrogen','alternate',6),('neon','alternate',7);  -- ASK 623, option A
   INSERT INTO odv1_judge_order_log (saved_by, before, after) VALUES ('ASK 623', v_before, odv1_judge_order_lists());
 END $d$;
+COMMIT;
