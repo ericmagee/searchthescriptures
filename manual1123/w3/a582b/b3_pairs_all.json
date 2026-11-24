@@ -1,0 +1,123 @@
+{
+ "08.0": [
+  {
+   "old": "- RULING 460 (operator, 2026-11-15 14:56Z)",
+   "new": "- RULING 460 (operator, 2026-11-15 08:56 CST)",
+   "kind": "time"
+  },
+  {
+   "old": "- RULING 461 (operator, 2026-11-15 14:56Z)",
+   "new": "- RULING 461 (operator, 2026-11-15 08:56 CST)",
+   "kind": "time"
+  }
+ ],
+ "09.1": [
+  {
+   "old": "(ASK 472; live on engine fc6a4583 and child a5b4e84b, from 6519f616 and 33adc248, library 40d3eb4e7d3bc276 on both, on the operator's card \"Write it\" pressed 14:00:58Z on 11-19)",
+   "new": "(ASK 472)",
+   "kind": "cut"
+  }
+ ],
+ "09.7": [
+  {
+   "old": "    - Why: the lab item to strip code comments (ASK 422(b)) was held at 16:56 CST on 11-18 and folded into one package with the library stubs, so one card and one proof cover both; the operator approved that package as ASK 428 on the card of 21:14 CST.",
+   "new": "    - Why: the lab item to strip code comments (ASK 422(b)) was folded into one package with the library stubs (ASK 428), so one proof covers both.",
+   "kind": "cut"
+  },
+  {
+   "old": "(20:47 to 20:55 CST on 11-18), and approved the build on the card of 21:40 CST.",
+   "new": "(20:47 to 20:55 CST on 11-18).",
+   "kind": "cut"
+  }
+ ],
+ "09.8": [
+  {
+   "old": "he ruled at 14:56Z (ruling 460).",
+   "new": "he ruled at 08:56 CST (ruling 460).",
+   "kind": "time"
+  }
+ ],
+ "10.0": [
+  {
+   "old": "he ruled at 14:56Z (ruling 461).",
+   "new": "he ruled at 08:56 CST (ruling 461).",
+   "kind": "time"
+  }
+ ],
+ "11.0": [
+  {
+   "old": " 2,537 rows were pending at 17:36 CST (oldest 2026-11-09 19:39) at 100 rows per hourly call.",
+   "new": " ",
+   "kind": "cut"
+  },
+  {
+   "old": "the operator, 16:44:02Z 2026-11-19:",
+   "new": "the operator, 10:44 CST 2026-11-19:",
+   "kind": "time"
+  },
+  {
+   "old": "the operator, 16:03Z and 16:04Z 11-19:",
+   "new": "the operator, 10:03 and 10:04 CST 11-19:",
+   "kind": "time"
+  },
+  {
+   "old": "each with its version; 17:00Z: \"the model named",
+   "new": "each with its version; 11:00 CST: \"the model named",
+   "kind": "time"
+  },
+  {
+   "old": "    - Why: the operator, 17:00Z 2026-11-19: \"the model named",
+   "new": "    - Why: the operator, 11:00 CST 2026-11-19: \"the model named",
+   "kind": "time"
+  },
+  {
+   "old": "; 17:05Z: \"that need needs",
+   "new": "; 11:05 CST: \"that need needs",
+   "kind": "time"
+  },
+  {
+   "old": "(released 19:22:48Z 2026-11-19; ended 20:25:45Z,",
+   "new": "(released 13:22:48 CST 2026-11-19; ended 14:25:45 CST,",
+   "kind": "time"
+  },
+  {
+   "old": "in the run or after 16:05:44Z;",
+   "new": "in the run or after 10:05:44 CST;",
+   "kind": "time"
+  },
+  {
+   "old": "on W2's card, 18:25:54Z 2026-11-19.",
+   "new": "on W2's card, 12:25 CST 2026-11-19.",
+   "kind": "time"
+  },
+  {
+   "old": "no execution at the 19:00:40Z mark; the newest execution is 18:00:40Z.",
+   "new": "no execution at the 13:00:40 CST mark; the newest execution is 12:00:40 CST.",
+   "kind": "time"
+  },
+  {
+   "old": "(08:24:13Z 2026-11-20, W3 thread)",
+   "new": "(02:24 CST 2026-11-20, W3 thread)",
+   "kind": "time"
+  },
+  {
+   "old": "(08:30:57Z 2026-11-20, W3 thread)",
+   "new": "(02:30 CST 2026-11-20, W3 thread)",
+   "kind": "time"
+  }
+ ],
+ "11.1": [
+  {
+   "old": "The operator, 14:57Z 2026-11-20, W4 thread:",
+   "new": "The operator, 08:57 CST 2026-11-20, W4 thread:",
+   "kind": "time"
+  }
+ ],
+ "12.0": [
+  {
+   "old": "judge-facing, the operator approved it 05:06Z on 11-19):",
+   "new": "judge-facing):",
+   "kind": "cut"
+  }
+ ]
+}
