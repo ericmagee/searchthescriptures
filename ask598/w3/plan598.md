@@ -1,4 +1,4 @@
-# ASK 598 PLAN: REMOVE THE NODES THAT NOTHING REACHES, rev 1 (W1 F1 to F4 of Wall 11482)
+# ASK 598 PLAN: REMOVE THE NODES THAT NOTHING REACHES, rev 2 (W1 F1 to F4 of Wall 11482; R1 of Wall 11492)
 
 MISTAKES IN REV 0, MINE: my scan missed 42 readers (W1 F1), and it named the child's R2 Alternate Merge Seat as a reader of the engine's dead Cure Check when the child has its own live Cure Check (W1 F2).
 
@@ -24,7 +24,7 @@ Ruling 402 (the operator, 11-02, of the single judge: "it trash ... what sense w
 4. THE 28 ARE STILL NAMED BY LIVE CODE. A scan of every reached node's code for `$('<name>')`, and of the library for the name, finds:
    - Anticheat Record: read by Panel Build and Build Save Body. Anticheat Call openrouter: read by Panel Tokens.
    - Extract Independent Verdict: read by Failure Salvage, Assume Check Record, Judge Contradiction Build, and named in the Shared Library (engine and child).
-   - Cure Check: read by Alternate Merge Seat, Alternate Pass Call, Failure Salvage, the child's R2 Alternate Merge Seat, and named in the library.
+   - Cure Check: read by Alternate Merge Seat, Alternate Pass Call, Failure Salvage, and named in the library.
    - Verdict Normalizer, Diagnostic Normalizer, Cure Call openrouter: read by Build Save Body. Extract Diagnostic: read by Failure Salvage.
    - Verdict Call, SJ Re-ask Call, Cure Call, FUM Call Cure, Diagnostic Call (each "... openrouter"): read by Panel Tokens.
    - Build Independent Verdict, Cure Build, Cure Normalize, SJ Re-ask Build, SJ Re-ask Pick, Verdict Normalizer: named in the Shared Library, both copies (its map of which library lines each node runs).
@@ -41,7 +41,7 @@ S1. A node is removed together with every reader of it. Deleting the 28 alone wo
 
 S2. TWO STAGES, each its own build, grade and card.
 - STAGE A, ANTI-CHEAT (6 nodes; readers Panel Build, Build Save Body, Panel Tokens). The operator's ruling stands behind it already: ASK 590, "Build it, with the send-back" (row 516), moved the read into the closing enforcer.
-- STAGE B, SINGLE JUDGE AND DIAGNOSTIC (22 nodes; readers Build Save Body, Failure Salvage, Assume Check Record, Judge Contradiction Build, Alternate Merge Seat, Alternate Pass Call, Panel Tokens, the child's R2 Alternate Merge Seat, the library in both copies). The operator switched the single judge off (ruling 402), and it has stored no verdict since 2026-11-12 (W1, Wall 11462). Removing it for good is more than switching it off, so stage B's card asks him in plain words: REMOVE the single judge and the diagnostic from the engine, or KEEP them unwired. The card RECOMMENDS REMOVE (W1 F4), quoting rule 1 of the standard ("Code that is switched off is removed, not left") and his words of 01:44 CST ("so that we don't have things like dead code in our program? That's just unacceptable."), and names the saved engine version as the way back. Rewiring is not proposed; it would reverse ruling 402.
+- STAGE B, SINGLE JUDGE AND DIAGNOSTIC (22 nodes; readers Build Save Body, Failure Salvage, Assume Check Record, Judge Contradiction Build, Alternate Merge Seat, Alternate Pass Call, Panel Tokens, the library in both copies; the grok pass-back list in 38 engine nodes and 4 child HTTP nodes; and by payload the child's Alternate Pass Check HOLD list and its IF nodes A379 Gate 06 and A379 Gate 22). The operator switched the single judge off (ruling 402), and it has stored no verdict since 2026-11-12 (W1, Wall 11462). Removing it for good is more than switching it off, so stage B's card asks him in plain words: REMOVE the single judge and the diagnostic from the engine, or KEEP them unwired. The card RECOMMENDS REMOVE (W1 F4), quoting rule 1 of the standard ("Code that is switched off is removed, not left") and his words of 01:44 CST ("so that we don't have things like dead code in our program? That's just unacceptable."), and names the saved engine version as the way back. Rewiring is not proposed; it would reverse ruling 402.
 
 S3. PROOF BEFORE EACH CARD (W4):
 1. The reach walk on the target: 22 unreached after stage A, 0 after stage B (Shared Library exempt).
