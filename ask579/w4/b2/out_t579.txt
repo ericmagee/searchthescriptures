@@ -1,0 +1,115 @@
+PASS the library text of engine and child splits and joins back byte for byte
+PASS engine LIB equals child LIB before the change (3582 lines)
+PASS engine nodes with a __O423 statement: C2B Extract, C3B Extract, D3B Extract
+PASS engine nodes with a top-level try{__X2=(()=>{ block: C1B Extract, C3G Extract, C4B Extract, C4G Extract, D2B Extract, D4B Extract
+PASS the child holds neither shape outside its library
+PASS C2B Extract: one top-level __O423 statement
+PASS D3B Extract: one top-level __O423 statement
+PASS C3B Extract: one top-level __O423 statement
+PASS C4G Extract: one large try block of the shape try{__X2=(()=>{...})()[0].json;}catch(x){...}
+PASS C4G Extract: the text around the served call is try{__X2= ... [0].json;}catch(x){return __keep(
+PASS C3G Extract: one large try block of the shape try{__X2=(()=>{...})()[0].json;}catch(x){...}
+PASS C3G Extract: the text around the served call is try{__X2= ... [0].json;}catch(x){return __keep(
+PASS C1B Extract: one large try block of the shape try{__X2=(()=>{...})()[0].json;}catch(x){...}
+PASS C1B Extract: the text around the served call is try{__X2= ... [0].json;}catch(x){return __keep(
+PASS D2B Extract: one large try block of the shape try{__X2=(()=>{...})()[0].json;}catch(x){...}
+PASS D2B Extract: the text around the served call is try{__X2= ... [0].json;}catch(x){return __keep(
+PASS D4B Extract: one large try block of the shape try{__X2=(()=>{...})()[0].json;}catch(x){...}
+PASS D4B Extract: the text around the served call is try{__X2= ... [0].json;}catch(x){return __keep(
+PASS C4B Extract: one large try block of the shape try{__X2=(()=>{...})()[0].json;}catch(x){...}
+PASS C4B Extract: the text around the served call is try{__X2= ... [0].json;}catch(x){return __keep(
+PASS O423 C2B Extract: free names are $ and $input only ($,$input)
+PASS O423 C2B Extract: no this, await, yield or arguments (parser)
+PASS O423 D3B Extract: free names are $ and $input only ($,$input)
+PASS O423 D3B Extract: no this, await, yield or arguments (parser)
+PASS O423 C3B Extract: free names are $ and $input only ($,$input)
+PASS O423 C3B Extract: no this, await, yield or arguments (parser)
+PASS X2 C4G Extract: free names are $ and $input only ($,$input)
+PASS X2 C4G Extract: no this, await, yield or arguments (parser)
+PASS X2 C3G Extract: free names are $ and $input only ($,$input)
+PASS X2 C3G Extract: no this, await, yield or arguments (parser)
+PASS X2 C1B Extract: free names are $ and $input only ($,$input)
+PASS X2 C1B Extract: no this, await, yield or arguments (parser)
+PASS X2 D2B Extract: free names are $ and $input only ($,$input)
+PASS X2 D2B Extract: no this, await, yield or arguments (parser)
+PASS X2 D4B Extract: free names are $ and $input only ($,$input)
+PASS X2 D4B Extract: no this, await, yield or arguments (parser)
+PASS X2 C4B Extract: free names are $ and $input only ($,$input)
+PASS X2 C4B Extract: no this, await, yield or arguments (parser)
+PASS no served text calls $() with anything but a literal node name
+PASS the nine keys are new in both MAPs
+PASS no existing library line moved or changed (3582 kept, 270 appended)
+PASS known-good: the pair check passes on the live pair (lib 2f5aa1e63d51edb1, map ad6e192e0d5a225f)
+PASS the pair check passes on the packed pair (lib a3c1e42f5b0ebda6, map ed7212a3189a4565); the header sha line is reset at the build
+PASS control (W1 574 D1): lines appended to the engine only fail the pair check
+PASS the names __F579 and pkgX579 are free in the nine nodes
+PASS O423 C2B Extract: served text equals the live text byte for byte (24300, md5 98cad835)
+PASS C2B Extract: node with the loader parses (27200 to 3680)
+PASS C2B Extract: every character before the statement and after the served text is unchanged
+PASS C2B Extract: control, one changed line makes the loader throw
+PASS C2B Extract: control, a missing MAP entry makes the loader throw
+PASS O423 D3B Extract: served text equals the live text byte for byte (25557, md5 d69629d1)
+PASS D3B Extract: node with the loader parses (28512 to 3752)
+PASS D3B Extract: every character before the statement and after the served text is unchanged
+PASS D3B Extract: control, one changed line makes the loader throw
+PASS D3B Extract: control, a missing MAP entry makes the loader throw
+PASS O423 C3B Extract: served text equals the live text byte for byte (28416, md5 7a91a5cc)
+PASS C3B Extract: node with the loader parses (31316 to 3715)
+PASS C3B Extract: every character before the statement and after the served text is unchanged
+PASS C3B Extract: control, one changed line makes the loader throw
+PASS C3B Extract: control, a missing MAP entry makes the loader throw
+PASS X2 C4G Extract: served text equals the live text byte for byte (24428, md5 ac267597)
+PASS C4G Extract: node with the loader parses (25512 to 1893)
+PASS C4G Extract: every character before the statement and after the served text is unchanged
+PASS C4G Extract: the loader, run offline on the packed library, rebuilds the served text
+PASS C4G Extract: control, one changed line makes the loader throw
+PASS C4G Extract: control, a missing MAP entry makes the loader throw
+PASS X2 C3G Extract: served text equals the live text byte for byte (16396, md5 f0af915d)
+PASS C3G Extract: node with the loader parses (17473 to 1871)
+PASS C3G Extract: every character before the statement and after the served text is unchanged
+PASS C3G Extract: the loader, run offline on the packed library, rebuilds the served text
+PASS C3G Extract: control, one changed line makes the loader throw
+PASS C3G Extract: control, a missing MAP entry makes the loader throw
+PASS X2 C1B Extract: served text equals the live text byte for byte (12610, md5 3c38cacb)
+PASS C1B Extract: node with the loader parses (18127 to 6243)
+PASS C1B Extract: every character before the statement and after the served text is unchanged
+PASS C1B Extract: the loader, run offline on the packed library, rebuilds the served text
+PASS C1B Extract: control, one changed line makes the loader throw
+PASS C1B Extract: control, a missing MAP entry makes the loader throw
+PASS X2 D2B Extract: served text equals the live text byte for byte (12859, md5 4c301993)
+PASS D2B Extract: node with the loader parses (18493 to 6377)
+PASS D2B Extract: every character before the statement and after the served text is unchanged
+PASS D2B Extract: the loader, run offline on the packed library, rebuilds the served text
+PASS D2B Extract: control, one changed line makes the loader throw
+PASS D2B Extract: control, a missing MAP entry makes the loader throw
+PASS X2 D4B Extract: served text equals the live text byte for byte (22457, md5 ce341ab5)
+PASS D4B Extract: node with the loader parses (28575 to 6929)
+PASS D4B Extract: every character before the statement and after the served text is unchanged
+PASS D4B Extract: the loader, run offline on the packed library, rebuilds the served text
+PASS D4B Extract: control, one changed line makes the loader throw
+PASS D4B Extract: control, a missing MAP entry makes the loader throw
+PASS X2 C4B Extract: served text equals the live text byte for byte (24428, md5 a7a70cae)
+PASS C4B Extract: node with the loader parses (30852 to 7233)
+PASS C4B Extract: every character before the statement and after the served text is unchanged
+PASS C4B Extract: the loader, run offline on the packed library, rebuilds the served text
+PASS C4B Extract: control, one changed line makes the loader throw
+PASS C4B Extract: control, a missing MAP entry makes the loader throw
+PASS engine: the nine nodes and the Shared Library change; nothing else
+PASS child: the Shared Library only
+PASS all 64 existing engine MAP entries rebuild the same text from the packed library
+MEASURED: nine nodes 226060 to 41693 characters (saved 184367); engine Shared Library +70069; child Shared Library +70069.
+NET stored saving: with the child copy 44229; engine alone (the state once ASK 578 removes the child copy) 114298.
+served texts: 9 (191451 characters, 307 different lines); reused existing library lines: 37 (4623 characters); appended: 270 lines (65121 characters)
+existing MAP entries that serve a reused line: 54: Alt Send Back Build 35; R2 Alt Send Back Build 35; Send Back Build 35; IMP B Extract 33; IMP C4B Extract 31; Alt Send Back Record 23; R2 Alt Send Back Record 23; Send Back Record 23; IMP B Build 23; Alternate Merge 1 5; Alternate Payloads 5; Panel Payloads 5; R2 Alternate Merge 5; R2 Alternate Payloads 5; Alt Gate Build 4; Alt Gate Record 4; Alternate Build 4; Alternate Merge Seat 4; Extract Independent Verdict 4; Gate Build 4; Gate Record 4; R2 Alt Gate Build 4; R2 Alt Gate Record 4; R2 Alternate Build 4; R2 Alternate Merge Seat 4; Late Gate Build 4; Alt Late Gate Build 4; R2 Alt Late Gate Build 4; Alternate Cure Build 3; Alternate Cure Normalize 3; Cure Build 3; Cure Check 3; Cure Normalize 3; Panel Cure Build 1 3; Panel Cure Build 2 3; Panel Cure Build 3 3; Panel Cure Check 3; Panel Cure Normalize 1 3; Panel Cure Normalize 2 3; Panel Cure Normalize 3 3; R2 Alternate Cure Build 3; R2 Alternate Cure Normalize 3; L2C Citation Scan 2; L2C Count Plan 2; REFP 1; L2C Extract 1; L2C Build 1; L2C Quote Report 1; L2C Lexicon Plan 1; L2C L2 Lexicon Plan 1; POSTURE Accept Build 1; POSTURE Accept Check 1; POSTURE Accept Return Build 1; POSTURE Accept Final 1
+reused library line numbers: 69,349,509,714,2296,2487,2520,2570,2572,2573,2574,2577,2578,2579,2580,2581,2582,2583,2584,2585,2587,2588,2589,2590,2591,2849,2850,2851,2852,2855,2856,2857,2858,2859,2860,2862,2863
+  O423 C2B Extract: n 24300, p entries 38, node names kept in the if(false) line: C1B Extract, C2 Extract, C2B Build, D1 Extract, D2B Extract, Init Seats, Init with Guards, L2 Count Plan, Shared Library
+  O423 D3B Extract: n 25557, p entries 60, node names kept in the if(false) line: C1B Extract, C2B Extract, D1 Extract, D2B Extract, D3 Extract, D3B Build, Init Seats, Init with Guards, L2 Count Plan, Shared Library
+  O423 C3B Extract: n 28416, p entries 72, node names kept in the if(false) line: C1B Extract, C2B Extract, C3B Build, C3G Extract, D1 Extract, D2B Extract, D3B Extract, Init Seats, Init with Guards, L2 Count Plan, Shared Library
+  X2 C4G Extract: n 24428, p entries 45, node names kept in the if(false) line: C1B Extract, C2B Extract, C3B Extract, C4G Build, D1 Extract, D2B Extract, D3B Extract, D4B Extract, Init Seats, Init with Guards, Shared Library
+  X2 C3G Extract: n 16396, p entries 32, node names kept in the if(false) line: C1B Extract, C2B Extract, C3G Build, D1 Extract, D2B Extract, D3B Extract, Init Seats, Init with Guards, L2 Count Plan, Shared Library
+  X2 C1B Extract: n 12610, p entries 20, node names kept in the if(false) line: C1B Build, D1 Extract, Init Seats, Init with Guards, L2 Count Plan, Shared Library
+  X2 D2B Extract: n 12859, p entries 20, node names kept in the if(false) line: C1B Extract, D1 Extract, D2B Build, Init Seats, Init with Guards, L2 Count Plan, Shared Library
+  X2 D4B Extract: n 22457, p entries 43, node names kept in the if(false) line: C1B Extract, C2B Extract, C3B Extract, D1 Extract, D2B Extract, D3B Extract, D4B Build, Init Seats, Init with Guards, L2 Count Plan, Shared Library
+  X2 C4B Extract: n 24428, p entries 45, node names kept in the if(false) line: C1B Extract, C2B Extract, C3B Extract, C4B Build, D1 Extract, D2B Extract, D3B Extract, D4B Extract, Init Seats, Init with Guards, Shared Library
+NOT TAKEN: the four statements __LB423, __CC423, __LC423, __A423 (2851 characters, one text in three nodes).
+ALL PASS (99 checks)
