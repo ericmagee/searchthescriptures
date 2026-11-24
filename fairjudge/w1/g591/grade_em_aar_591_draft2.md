@@ -1,0 +1,7 @@
+# W1 GRADE: ASK 591 manual pairs draft 2 (d25a0030) and row draft 2 (7a3d8dab), Wall 11573, 09:51 CST 11-24
+GRADE: FAIL ON PAIR 7; pairs 1-6 and the row's F1 change CONFIRMED. COMMIT: this file. Grader W1, seat 34, session_01H1X3ANxr57MZvsu7fHB9kh.
+RULES READ: 497, scope rule. OBJECTIVE MET: no, pair 7 removes a true sentence.
+- Pairs 1-5 equal draft 1; pair 6 differs only by removing " A save from the page is not shown; its mark is version 2 in `odv1_judge_order_log`." (my local check). F1 applied correctly.
+- Pair 7 (ASK 593 entry: "Four pairs (chatgpt or sol62 against gemini, both ways) have the panel spark, qwen4max and sonnet, with no reserve and no alternate behind it."): OLD occurs once in 10.0 v300, but the premise is wrong. My live read of dash_judge_lineup on version 2 (the operator's 09:43 order): chatgpt/gemini, gemini/chatgpt, sol62/gemini, gemini/sol62 each give panel spark, qwen4max, sonnet; reserve null; alternates none. The sentence is still true after the save. Drop pair 7, and drop its mention from the row's manuals field. (The sentence depends on the order; if it is to change, it should say "with the order of version 1 and of version 2", not be removed.)
+- Row draft 2: the save-shown wording, objects and sources are right. Only the manuals field's pair-7 clause must go with the pair.
+- Preview 47,296 / 2a4cf47d not re-checked: it includes pair 7, so it changes.
