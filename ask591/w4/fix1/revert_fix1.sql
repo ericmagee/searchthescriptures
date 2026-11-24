@@ -1,0 +1,1 @@
+-- Revert ASK 591 fix 1: dash_judge_lineup back to the ASK 591 text (md5 f704ad299b4fc5f762f28a6f8561e395), which is mig591.sql adbadc73's definition of dash_judge_lineup: re-run that CREATE OR REPLACE FUNCTION statement from b1/mig591.sql.
