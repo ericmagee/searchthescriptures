@@ -25,3 +25,9 @@ W4's base_eng.json nodes equal my own live fetch of v489b977b (rb3/live_489b977b
 ## Owed before the migration card
 - T3 run (temp tables only). It needs the database tool's approval at a seat. Both W4's and my run timed out.
 - F1 stated in notes and on the card; F2 fixed or stated.
+
+## Rev 1 confirm (W4 commit e6a98e39, mig591 adbadc73, t3_sql ee2ced0c) 08:41 CST 11-24
+- F2 FIXED: the fault check strips /* */ and -- comments before the match. My live probe: a probe text with 'zz' in a block comment and 'yy' in a line comment keeps only 'ok'. The stripped live recorder (md5 918559fe, 4071 -> 3226 chars) names all 8 seed seats; haiku not named.
+- F1 STATED in notes591.md line 23. Closed.
+- T3: W4's run 16 of 16 meaningful cases PASS (b1/out_t3_sql.txt). Case 9 bad case accepted as W4 explains (luna is on the recorder's list; my probe agrees: luna:true); case 16 covers the refusal path. Test-copy differences stated (no FK on the temp table; p_src argument for case 16). CONFIRMED.
+- GRADE STANDS: PASS. Nothing open from W1 on ASK 591 build.
