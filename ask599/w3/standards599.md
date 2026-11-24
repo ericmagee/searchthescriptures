@@ -1,4 +1,4 @@
-# ASK 599: CODING STANDARDS FOR THE DEBATE ENGINE, draft 1
+# ASK 599: CODING STANDARDS FOR THE DEBATE ENGINE, draft 2 (W1 F1, F2, F3 of Wall 11471)
 
 W3 (session_01H1X3ANsGiMnhnbkfphocmo), 2026-11-24 CST. For W1's grade, then the operator's card. Nothing here is written to the engine or the manual.
 
@@ -46,13 +46,13 @@ Size: 1,332 characters as written above (one copy in the engine library, one in 
 
 | # | Source | The check in ASK 596 |
 |---|---|---|
-| 1 | ESLint no-unused-vars "Disallow unused variables"; no-unreachable "Disallow unreachable code after `return`, `throw`, `continue`, and `break` statements"; no-unused-labels. Ours: Wall 11462 (28 nodes reached by nothing). | Walk the connections from every trigger: every node is reached. Run the two ESLint rules on every code node and the library. |
+| 1 | ESLint no-unused-vars "Disallow unused variables"; no-unreachable "Disallow unreachable code after `return`, `throw`, `continue`, and `break` statements"; no-unused-labels. Ours: Wall 11462 (28 nodes reached by nothing). | Walk the connections from every trigger: every node is reached. Exempt by name: the Shared Library node, which is read by code and not by a connection, and canvas sticky notes (W1 F2). Run the two ESLint rules on every code node and the library. |
 | 2 | ESLint no-redeclare "Disallow variable redeclaration"; no-dupe-keys "Disallow duplicate keys in object literals"; the DRY principle (named, not read). Ours: Wall 11462 item 4 (removing one model took 17 nodes). | A named list (judge order, alternates, reserve, family map, call map) stands in exactly one place; the test lists them and counts copies. |
 | 3 | Ours: ASK 587 item A; ASK 595; Wall 11452 (24 cuts at 1,500; cuts at 400, 500, 600, 700 in 117 places; 3 send-back texts show a judge its own line cut to 600). | No `.slice(0,N)` on a line field outside the shared handler (ASK 597). A judge line of 1,600 characters goes through every store and every send-back text whole. |
 | 4 | ESLint no-magic-numbers "Disallow magic numbers". | The ESLint rule, with the named limits listed in one table. |
-| 5 | Power of Ten rule 4: "No function should be longer than what can be printed on a single sheet of paper ... Typically, this means no more than about 60 lines of code per function." ESLint max-lines-per-function "Enforce a maximum number of lines of code in a function". | The ESLint rule set to 60. |
+| 5 | Power of Ten rule 4: "No function should be longer than what can be printed on a single sheet of paper ... Typically, this means no more than about 60 lines of code per function." ESLint max-lines-per-function "Enforce a maximum number of lines of code in a function". | The code is first laid out by a formatter (one statement per line), because the library holds single lines of up to 17,563 characters and a line count on them proves nothing (W1 F1, Wall 11471). Then the ESLint rule set to 60, with max-statements beside it. |
 | 6 | Power of Ten rule 2: "Give all loops a fixed upper bound." | Each `while` and each retry or send-back path names its bound; the test lists loops with none. ESLint no-unreachable-loop. |
-| 7 | Power of Ten rule 7: "Each calling function must check the return value of nonvoid functions". ESLint no-empty "Disallow empty block statements"; no-useless-catch. | No empty `catch` block; each `catch` writes a record. The ESLint rules. |
+| 7 | Power of Ten rule 7: "Each calling function must check the return value of nonvoid functions". ESLint no-empty "Disallow empty block statements"; no-useless-catch. | No empty `catch` block; each `catch` writes a record. A node set to continue on error names where its fault is recorded. The ESLint rules. Baseline from W1's read (Wall 11471): 227 empty `catch` blocks; 148 nodes set to continue on error. |
 | 8 | Power of Ten rule 6: "Declare all data objects at the smallest possible level of scope." ESLint no-shadow; no-implicit-globals; no-undef. | The ESLint rules. |
 | 9 | Power of Ten rule 10: "All code must compile without warnings" and "should pass all analyses with zero warnings". Ours: ASK 590 passed its own 66 tests and broke ASK 587 (Wall 11452). | ASK 596 itself: the checker reports zero warnings, and every earlier ASK's test file is rerun. |
 | 10 | Ours: the build rule (touched nodes only), the scope rule, the readback rule. | The per-node difference between base and target names only the nodes the ASK lists; the fetch-back equals the target. |
@@ -61,13 +61,14 @@ Not taken from the Power of Ten: rule 1 (no goto or recursion), rule 5 (two asse
 
 ## 4. WHAT THE EXISTING CODE DOES TODAY, SAID PLAINLY
 
-1. The live engine does not meet this standard. Known from W1's reads: 28 dead nodes; cuts in over 140 places; lists copied across nodes. Not measured: function length, empty `catch` blocks, bare numbers, shadowed names. The library holds long single-line blocks and many `catch(e){}`; I expect rules 5 and 7 to show many faults on the first measurement. That is a guess until ASK 596 counts it.
+1. The live engine does not meet this standard. Known from W1's reads: 28 dead nodes; cuts in over 140 places; lists copied across nodes. Measured by W1 (Wall 11471): 227 empty `catch` blocks and 148 nodes set to continue on error (rule 7); single library lines of up to 17,563 characters (rule 5). Not measured: function length after formatting, bare numbers, shadowed names.
 2. So the standard binds in two steps. (a) FROM THE DAY IT IS APPROVED: every new or changed piece of code meets all ten rules. (b) THE OLD CODE: ASK 596 counts the faults of each rule once, as a baseline. No build may raise a count. Each count goes down by its own ASK (597 for rule 3, 598 for rule 1), never by a rewrite of the whole engine at once.
 3. A rule with a baseline above zero is not relaxed. It is a debt with a number that the operator can see on each build card.
 
 ## 5. WHERE IT GOES
 
-1. The top of the Shared Library, as a comment, engine and child (the two copies are kept equal by the Library Check pair). Every code node that uses the library reads it.
+1. The top of the Shared Library, as a comment, engine and child (the two copies are kept equal by the Library Check pair). This is the one source of the text. W1's read (F3): only 22 of the 193 code nodes use the library, so the header alone would be missed by anyone working in the other 171.
+1a. One sticky note on the canvas of each workflow (engine and child), holding the same ten lines, where anyone who opens the workflow sees it first. The ASK 596 test checks that the two notes and the manual part equal the library header word for word, so the copies cannot drift (rule 2 is kept by the test).
 2. The engine manual: a new short part after part 00.1, holding the same ten lines and the table of section 3. The manual write is W3's, on the operator's card.
 3. Every build card: one line, "STANDARD: 10 of 10 checks pass; baseline counts unchanged or lower", from the ASK 596 output.
 4. The grader's list: W1's grade of any build states the standard's result.
