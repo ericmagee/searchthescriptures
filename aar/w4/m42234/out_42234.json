@@ -1,0 +1,47 @@
+{
+ "run": "ODV1-42234-501p8uuq",
+ "rounds_chars": 223175,
+ "transcript_chars": 223666,
+ "judges": [
+  {
+   "seat": "sol",
+   "body_chars": 295851,
+   "system_chars": 63691,
+   "user_chars": 225436
+  },
+  {
+   "seat": "sol62",
+   "body_chars": 295853,
+   "system_chars": 63691,
+   "user_chars": 225436
+  },
+  {
+   "seat": "spark",
+   "body_chars": 295851,
+   "system_chars": 63691,
+   "user_chars": 225436
+  }
+ ],
+ "close_enforcer": [
+  {
+   "side": "DEFENDER",
+   "copy": 1,
+   "body_chars": 303638
+  },
+  {
+   "side": "DEFENDER",
+   "copy": 2,
+   "body_chars": 303640
+  },
+  {
+   "side": "CHALLENGER",
+   "copy": 1,
+   "body_chars": 173982
+  },
+  {
+   "side": "CHALLENGER",
+   "copy": 2,
+   "body_chars": 173984
+  }
+ ]
+}
