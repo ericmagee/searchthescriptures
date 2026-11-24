@@ -1,4 +1,4 @@
-# ASK 586 PLAN rev 0: the judges' reasoning (run ODV1-42071-uclot7fi)
+# ASK 586 PLAN rev 1 (W1 conditions C1 to C3 of Wall 11350 met): the judges' reasoning (run ODV1-42071-uclot7fi)
 
 Owner of the plan: W3 (session_01H1X3ANsGiMnhnbkfphocmo). Builder of any code check: W4. Grader: W1. Number and owner from the coordinator, 23:03 CST 2026-11-23. Source of direction: the operator, 23:00 CST 2026-11-23, W3 thread: "this next fix will mostly be around the judges reasoning...". That statement sets direction. It approves no write.
 
@@ -53,6 +53,7 @@ REPLAY (SQL on the 7 lines):
 
 PROPOSAL:
 a. INSTRUCTION TEXT (judges' agreement; its own card to the operator): "When a break's GROUND names a word by its number, write the [L2] entry as: [L2] <word> (<number>): "<the lexicon row, whole, as served>". If your deciding step says more than the row says, write that step in DECIDES and name the verse that carries it."
+   WHOLE means: the text of lexicon_words.anchor_gloss for that number from its first character up to, and not including, the closing "[source: ...]" tag, with the space before the tag left off. The source tag is not quoted. Example, G3933: "of unknown origin; a maiden; by implication, an unmarried daughter:--virgin." The check compares after trimming outer spaces and treating straight and curled quotation marks alike; nothing else is forgiven.
 b. CODE CHECK (W4), TRIAL, record-only: for each `[L2] ... (Gnnnn|Hnnnn ...)` entry in a LINK BROKEN line of a judge's final text, compare the quoted text with the record's row for that number, by the same test the GLOSS CHECK applies to the debaters (WHOLE, GLOSS TRIMMED, GLOSS ADDED). One audit line per seat. It counts nothing and removes no seat.
 c. EXPECTED ON THE STORED DATA: 6 entries, 6 GLOSS TRIMMED, 0 WHOLE, before the instruction text is live. After it: WHOLE on each.
 
@@ -90,7 +91,7 @@ REPLAY (SQL on the enforcer's "ENFORCER: Kn.m -- AGREE|DISAGREE -- RIGHT: <word>
 5. The form the enforcer is given asks for "CARRIED BY:" one verse (seen in 23 of 25). GUESS, the prompt not read: the single verse is what the enforcer's instruction asks for, so the fix is in that instruction and not only in a check.
 
 PROPOSAL:
-a. ENFORCER INSTRUCTION TEXT (its own card): "A DISAGREE must answer each verse on the judge's GROUND line: for each, say in a clause why it does not carry the judge's grade, quoting it. A DISAGREE that answers fewer verses than the GROUND names is not sent to the judge."
+a. ENFORCER INSTRUCTION TEXT (its own card): "A DISAGREE must answer each verse on the judge's GROUND line: for each, say in a clause why it does not carry the judge's grade, quoting it."
 b. CODE CHECK (W4), TRIAL, record-only at first: for each DISAGREE line, every reference on the judge's GROUND (read from the judge's full line, not the 1,500-character copy; ASK 587 item A) must stand in the enforcer's line for that K item. Missing references are listed in one audit line. In TRIAL the send-back still goes; a later ASK may hold it back.
 c. EXPECTED ON THE STORED DATA: the K6.1 item of row 53043 marked. My count of DISAGREE lines with one reference or none is 16 of 25; it is an upper bound, because the reply also holds an "ENGAGE: K6 -- NO -- Jeremiah 22:30 and Acts 2:30" line under the same item, which names verses without answering them. W4's replay, reading the whole K item, gives the final count.
 
@@ -109,6 +110,7 @@ NO BUILD on J1 before his answer.
 3. J6 enforcer instruction text and its TRIAL check.
 4. J1: a question, not a card.
 Each card shows the exact before and after text, after W4 has read the live text it changes and W1 has graded the build.
+NO CARD before W4's replay of that item's check on argon's text and on the stored judgments of runs 41418 and 41822, with counts, is posted and W1 has read it (W1 C3, Wall 11350).
 
 ## 6. EXPECT LINES FOR THE NEXT RUN (after any item is live)
 
