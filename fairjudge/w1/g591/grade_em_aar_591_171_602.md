@@ -18,3 +18,6 @@ odv1_judge_order_log row 2, saved_at 15:43:40Z (09:43 CST), saved_by dashboard; 
 
 ## ASK 602 (W4, fix3/judge591.js 6b871855; base 1aec0757 = live AJ7N file, sha1 b00c6868): PASS
 Diff is the two named changes only: one injected style rule #jolists .btn:disabled (grey, opacity 1, not-allowed); the line-up heading "(preview only; nothing here is saved)". Save and Undo sit in #jolists and are disabled when JO.dirty is false; node --check clean.
+
+## READBACK ASK 602 deploy (Wall 11576, audit 41496): MATCH
+Alias truth-app-dashboard.vercel.app -> dpl_HpfP5aLJ24XMAKupFK7we5L6fnUn. judge591.js sha1 312a8119 = the graded fix3/judge591.js (md5 6b871855); the other 7 files unchanged from AJ7N.
