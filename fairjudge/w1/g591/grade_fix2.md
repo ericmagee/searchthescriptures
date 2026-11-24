@@ -9,3 +9,8 @@ STANDARD (ASK 599): met (one line, gate, read back by md5).
 - test_fix2.sql: header claimed a part (3) it lacked; W4 corrected the header. Parts 1 and 2 test the guard only, not the save. My fuller test (pg_temp copies of the old and fixed save on temp tables, guard loaded) did not run (approval timeout).
 - MY MISTAKE: my ASK 591 build grade and live readback compared text and ran W4's T3 results, but no save was run with the dashboard's guard on. I missed this defect as W4 did.
 - Proof owed: the operator's next Save on the tab (version 2, log row 2), read back by me.
+
+## READBACK of the live write (Wall 11559, audit 41468), 09:34 CST: MATCH
+- odv1_judge_order_save def md5 47b637c5 (length 1566). prosrc md5 a212dc34, length 1367 = my local rebuild: mig591 adbadc73's save body with the one anchor (found once) replaced. SECURITY DEFINER, search_path=public kept.
+- The function's only DML is now "DELETE FROM odv1_judge_order WHERE true;".
+- Table unchanged: 8 rows, version 1. Owed: the operator's next Save, read back as version 2 and log row 2.
