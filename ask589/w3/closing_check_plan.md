@@ -12,7 +12,7 @@ SOURCE AND LIMITS. Engine manual version 275, every line naming the anti-cheat c
 2. THE ANTI-CHEAT CHECK IS NOT OFF. IT IS LIVE AND UNRECORDED. Its notes reach the panel: 59 judge lines in 45 stored judgments of 31 runs name it, the latest in run 41822 (2026-11-23). What was removed at s138 was only its place before the single judge and the save.
 3. THE JUDGES REJECT MANY OF ITS NOTES. 33 of the 59 lines, in 17 runs, are the judge's NOT HELD against the note.
    a. Run 41822, two judges (judgments 1269, 1270): the note gave the DEFENDER's sentence "Two fatherhoods stand together ..." to the CHALLENGER as the challenger's earlier words. Judgment 1269: "The system attributed the defender's earlier quote ... to the challenger, who never said it."
-   b. Run 37203 (manual 09.7, pkgOVS): "all three judges obeyed an anti-cheat strike" that paired a close bullet with the wrong verse.
+   b. Run 37203 (manual 09.8, pkgOVS): "all three judges obeyed an anti-cheat strike" that paired a close bullet with the wrong verse.
    c. Run 41043 (judgment 1248): the judge held the note was no reversal, and still wrote "The flagged sentence remains disregarded as directed." A note the judge finds wrong still strikes the sentence.
 4. THE CLOSING ENFORCER, BY CONTRAST, IS RECORDED AND CHECKED TWICE: 272 rows in 51 runs; 134 NONE; 86 CONFIRMED (47 defender in 15 runs, 39 challenger in 14 runs); 51 NOT A CONTRADICTION. Run 42071: 3 CONFIRMED against the challenger's LINK 1.
 5. THE TWO CAN DISAGREE ON ONE PAIR, and the manual says so: "The disagreement between the anti-cheat check and the post-panel contradiction call (J1) is not resolved" (09.5, 17.0).
