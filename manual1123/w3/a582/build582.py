@@ -14,7 +14,8 @@ for i,(p,l) in enumerate(lines):
     # R1 Live: lines, R2 Revert: lines, R3 Not in this entry / After the N writes
     if re.match(r'- (Live|Revert|Not in this entry):',b) or re.match(r'- After the (two|six) writes the live engine is',b):
         rule='R1' if b.startswith('- Live') else 'R2' if b.startswith('- Revert') else 'R3'
-        edits.append((p-1,p+len(l),'',rule)); continue
+        keep='\n    - The view debate_rounds_by_side is a database read aid; the engine does not read it.' if 'debate_rounds_by_side' in l else ''  # W1 C1, Wall 11202
+        edits.append((p-1,p+len(l),keep,rule)); continue
     # R7 the write-register line in section 18; R8 the read-back and sizes-as-graded item of the 573/575/576 group
     if b.startswith('- Live flow: s244 (n8n version 8bd15b50'):
         edits.append((p-1,p+len(l),'','R7')); continue
