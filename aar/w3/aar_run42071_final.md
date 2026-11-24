@@ -50,7 +50,7 @@ W1: Wall 11296 (and 11303 on the recompute). W3: Wall 11300 and 11301 (file aar/
 3. Guard G4 marks a model used when offered, not when seated; one failed alternate (argon) left qwen4max and spark with no alternate (W4 11294).
 4. argon: the keystone form check asked for a collision label that cannot exist when D5 has no collision line, and the second reading reversed the enforcer's first (W1 item 3; rows 53341, 53360).
 5. The closing-contradiction flag on the challenger's C1 (row 52867). W1 and W4 read the two sentences as agreeing. The flag changed gemini's D3 vs C1 grade and the RESULT word of spark and qwen4max.
-6. The recompute (AUDIT v25) replaced spark's and qwen4max's own RESULT: UNDERDETERMINED with CHALLENGER WINS. W1 Wall 11303: part 09.3 orders the recompute as done; read with part 08.0 it leaves a gap. For the operator.
+6. The recompute (AUDIT v25) replaced spark's and qwen4max's own RESULT: UNDERDETERMINED with CHALLENGER WINS. W1 Wall 11303: part 09.3 orders the recompute as done; read with part 08.0 it leaves a gap. Stronger (Worker_A3 Finding 3; W1 Wall 11309 item 4 agrees): each judge's own CHALLENGE STANDING was PROP-DEPENDENT, and the recompute wrote SELF-SUPPORTED while it counted a challenger break. For the operator.
 7. The gemini seat holds three results in the record: judgment row 1272 BROKEN, CHALLENGER WINS; AUDIT v61 UNDERDETERMINED; applier row 53239 HELD, DEFENDER WINS.
 8. ASK 550: no [REMOVED SEAT] line in review_notes for any of the three removed seats.
 9. spark's removal also lists "UNREAD COUNTED LINE x2 (read 3, count differs)". GUESS: the reader counts the "Premise 4: VOID (ONLY)" line. Not checked in code.
@@ -61,10 +61,12 @@ W1: Wall 11296 (and 11303 on the recompute). W3: Wall 11300 and 11301 (file aar/
 14. (Worker_G1 point 1; Worker_A3 Findings 5c and 7.) gemini and spark wrote KEYSTONE: D5 STANDS beside a result for the challenger. Reported as the third run with a result untied from the keystone.
 15. (Worker_G1 point 2; the grant CHECKED by me in the round.) spark and qwen4max broke D3 on "before they came together" read as the union. In DR3 the challenger answered the Oracle's press, "Matthew dates the finding before the coming together, which the narrative places at Joseph's taking of his wife", with "I grant both halves", and then kept the conjugal sense of G4905 on its [L2] line. Whether the grant bars the judges' ground is a judging question (ruling 383: judges grade the text alone); recorded, not moved.
 16. (Worker_G1 point 3; not checked by me.) gemini's deciding break says Matthew 1:23 "requires the woman with child to be a virgin, which excludes prior knowing"; the lexicon row both sides quoted for G3933 reads "a maiden; by implication, an unmarried daughter:--virgin". The ground adds a step no row states.
-17. (Worker_G1 point 5; CHECKED by me: the Oracle's four rounds hold no "Jeremiah 18", and CR text holds "I do not use it as a repeal".) On Jeremiah 22:30 the Oracle did not cite Jeremiah 18:7-8, which Worker_G1 reports as the answer in a sight served to it (Sight 1578; the serving NOT CHECKED by me), gave up Haggai 2:23, and argued a Judah and Jacob scope instead. qwen4max broke D2 vs C6 there.
+17. (Worker_G1 point 5; CHECKED by me: the Oracle's four rounds hold no "Jeremiah 18", and CR text holds "I do not use it as a repeal".) On Jeremiah 22:30 the Oracle did not cite Jeremiah 18:7-8, which Worker_G1 reports as the answer in a sight served to it (Sight 1578, kb_sights row 1769; CHECKED by me: its text reads "Jeremiah 22:30 Is Uncited by the New Testament, Answered by Haggai 2:23's Signet, Bounded by Jeremiah 18:7-8"; whether it was served to the Oracle in this run is in the prompts, EXECUTION ONLY, not checked), gave up Haggai 2:23, and argued a Judah and Jacob scope instead. qwen4max broke D2 vs C6 there.
 18. (Worker_G1 point 4.) The Oracle drew the "[L4] footing borrowed from contested Links" count by its own wording ("with D1 and D2"), though CR3 also reached the premise from rows.
 19. (Worker_A3 Finding 8.) The enforcer's "right: STANDS" on the two removal items rested on one verse each (Matthew 1:24 without 1:18; Luke 1:33 without Acts 2:30). Not checked by me.
 20. (Worker_G1 points 7 to 9; Worker_A3 Finding 9.) Glosses: the challenger trimmed G1080 and G3543; the Oracle's CR1 gave G4905 by its KJV renderings only, without "cohabit (conjugally)", and tagged G1165 on Matthew 1:19 (NOT COUNTED by the [L2] check) and H5959 on Matthew 1:23 (NOT COUNTED, cross-language).
+21. (Worker_G1 point 10; Worker_A3 Finding 9e, 9f; not checked by me.) The Oracle answered the virgin press by the time of the designation, not by the G3933 row it had quoted; its round 3 premise lists carry no PROVEN IN tags; the Leviticus 19:19 kinds argument was used again.
+22. (W1 Wall 11310 item 2, on DEFECT 15.) The grant is narrower than Worker_G1 states: the challenger granted where the coming together falls and kept the conjugal sense; the judges' breaks rest on no row placing a knowing before the finding.
 
 ## WHAT WENT RIGHT
 1. ASK 584: Sol 6.2 ran four rounds as the Oracle.
@@ -94,7 +96,8 @@ W1: Wall 11296 (and 11303 on the recompute). W3: Wall 11300 and 11301 (file aar/
 3. A cure_reason is the engine's reading; the judge's stored answer is the record.
 
 ## FOR THE OPERATOR
-1. The recompute gap in the engine manual (parts 09.3 and 08.0; W1 Wall 11303).
+1. The recompute: it replaced two judges' own RESULT: UNDERDETERMINED with CHALLENGER WINS and wrote CHALLENGE STANDING SELF-SUPPORTED over the judges' PROP-DEPENDENT while counting a challenger break (engine manual parts 09.3 and 08.0; W1 Wall 11303, 11309; Wall 11298 Finding 3).
+1a. Whether the result line is tied to the keystone line; today part 08.0 derives the RESULT from the verdict and standings, so a STANDS keystone beside a result for the challenger is the written rule (W1 Wall 11310 item 1).
 2. Whether an enforcer may be of the debater's family.
 3. Whether the closing-contradiction flag on the challenger's C1 (row 52867) is a contradiction; W1 and W4 read the two sentences as agreeing, and the flag changed one link grade and two RESULT words.
 4. Carried in: the word on W4's execution read (ASK 578 and 579; the operator said 20:54 CST 2026-11-23 it would follow this run).
