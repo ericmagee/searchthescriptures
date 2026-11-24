@@ -1,0 +1,22 @@
+[
+ {
+  "old": "- The active version is `SELECT max(version) FROM engine_manual`. `SELECT engine_manual_toc()` gives the live map. The revision history is `engine_manual_log`.",
+  "new": "- The manual is held in parts: table `engine_manual_parts`, one row per part per version of that part. `SELECT engine_manual_toc()` lists the parts. `SELECT engine_manual_part('<part>')` gives one part; `SELECT * FROM engine_manual_full()` gives the whole text and its version. The manual's version is the highest part version. The revision history is `engine_manual_log`; its column `part` names the part a version changed. The parts are read in the order `engine_manual_toc()` gives. The table `engine_manual` holds the whole-text versions up to the cut and is not written again."
+ },
+ {
+  "old": "To revise: call engine_manual_apply (ASK 421) in the same batch as",
+  "new": "To revise: call engine_manual_part_apply on the one part (engine_manual_apply refuses now that the manual is in parts) in the same batch as"
+ },
+ {
+  "old": "it refuses unless the base is the max version and has the given md5",
+  "new": "it refuses unless the base is that part's latest version and has the given md5"
+ },
+ {
+  "old": "it inserts version+1 with its summary",
+  "new": "it inserts that part at the manual's highest version + 1 with its summary"
+ },
+ {
+  "old": "Limit: an old text that overlaps itself is counted once.\n",
+  "new": "Limit: an old text that overlaps itself is counted once.\n- New text enters only through engine_manual_part_apply on an existing part. A part that has grown is divided in two with engine_manual_part_split, at a text that occurs once in it, with no change of text; no part and no size is refused.\n"
+ }
+]
