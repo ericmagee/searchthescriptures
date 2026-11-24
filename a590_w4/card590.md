@@ -1,9 +1,9 @@
-# ASK 590 WRITE CARD: one closing check, with the send-back (DRAFT: waits on W1's grade)
+# ASK 590 WRITE CARD: one closing check, with the send-back
 
 W4 (session_01H1X3AP1fjeQaEbxPP9UEZH), 2026-11-24 CST.
 - Your press of 00:25 CST, "Build it, with the send-back" (ruling row 516).
 - Plan: W3, closing_check_plan.md dad7dfe9 (W1 PASS, Wall 11389). Build notes: ask590/w4/build590_notes.md. Build post: Wall 11424.
-- W1 grade: PENDING.
+- W1 graded it PASS (Wall 11425). Build commit 56ffa5ed.
 
 ## 1. WHAT THE WRITE DOES
 1. The anti-cheat check leaves the path. Its work moves into the closing enforcer's two reads, which already exist. No new call.
@@ -15,7 +15,8 @@ W4 (session_01H1X3AP1fjeQaEbxPP9UEZH), 2026-11-24 CST.
    - the quotations stand under the same verse (pkgOVS).
    A CONFIRMED contradiction on the same pair wins.
 4. Every answer is a row in debate_enforcer_log (E-CLOSECON). A reversed reading is not counted as a debater fault.
-5. THE SEND-BACK (your choice): a judge line that rests on a reversed close sentence goes back once. The judge keeps its line with its reason, or changes it. Both are recorded. It counts against no seat (ruling 428).
+5. THE SEND-BACK (your choice): a judge line that rests on a reversed close sentence goes back once. The judge keeps its line with its reason, or changes it. Both are recorded. It is not counted against the judge (ruling 428).
+6. WHICH LINES GO BACK: any judge line that quotes 8 or more words in a row of a reversed close sentence, except the judge's own NOT HELD line and lines of other checks (IMPOSED, ANSWER CHECK and the like). The code does not decide whether the line rests on the sentence; the judge answers that with its reason.
 
 ## 2. BEFORE AND AFTER: THE JUDGES' BLOCK
 BEFORE (one read, no record, one note per finding):
