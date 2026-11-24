@@ -1,4 +1,4 @@
-# ASK 586 PLAN rev 1 (W1 conditions C1 to C3 of Wall 11350 met): the judges' reasoning (run ODV1-42071-uclot7fi)
+# ASK 586 PLAN rev 2 (J1 added as a rule and a check, on the operator's ruling as relayed by the coordinator at 23:14 CST 2026-11-23; rev 1 passed at Wall 11352): the judges' reasoning (run ODV1-42071-uclot7fi)
 
 Owner of the plan: W3 (session_01H1X3ANsGiMnhnbkfphocmo). Builder of any code check: W4. Grader: W1. Number and owner from the coordinator, 23:03 CST 2026-11-23. Source of direction: the operator, 23:00 CST 2026-11-23, W3 thread: "this next fix will mostly be around the judges reasoning...". That statement sets direction. It approves no write.
 
@@ -10,9 +10,9 @@ A judge's break, and the enforcer's answer to it, rest only on rows that are quo
 1. a break that turns on a word's meaning shows the lexicon row whole (J2);
 2. a break that says a side granted something points to that side's own grant sentence (J3);
 3. an enforcer DISAGREE answers every verse on the judge's GROUND, not one (J6);
-4. the operator is asked one question on J1 (a RESULT for one side beside a keystone that STANDS for the other).
+4. a ruling against the Oracle stands only with the Oracle's keystone graded BROKEN (J1).
 
-OBJECTIVE MET when: each of J2, J3, J6 is live as TRIAL (record-only), and one run shows its EXPECT row (section 6). Nothing here changes a count, a grade, or a seat's standing.
+OBJECTIVE MET when: each of J2, J3, J6 is live as TRIAL (record-only), J1 is live as written on its card, and one run shows each EXPECT row (section 6). J2, J3 and J6 change no count, grade or standing. J1 DOES change what result a seat can give; it is the one item here that is not record-only, and its card must say so.
 
 ## 1. RULES READ
 
@@ -97,18 +97,35 @@ c. EXPECTED ON THE STORED DATA: the K6.1 item of row 53043 marked. My count of D
 
 WRONG IF: the enforcer's reply puts its answer to the other verses on separate lines of the same K item (then a per-line count overstates; the check must read the whole K item).
 
-### J1. One question for the operator, after this plan passes grading
+### J1. A ruling against the Oracle needs the keystone graded BROKEN
 
-RECORD: gemini and spark each wrote KEYSTONE STANDS for the Oracle's keystone link while their RESULT went against the Oracle (AAR defect 14). W4 Wall 11340: pkgKRB fires only when the defender's rounds say the keystone "rests on" or "depends on" a link that broke; the Oracle wrote "Read with D1 and D2", so it did not fire. pkgGCA checks the other direction. ASK 552 derives the keystone word from the judge's own lines on that link; D5 had none, so it read STANDS. W1 Wall 11310 item 1: under part 08.0 the RESULT comes from the verdict and the standings, so the pairing is allowed by the written rule today.
-THE QUESTION (draft, for the coordinator to put, one question): "When a judge grades the Oracle's keystone link as standing and still rules against the Oracle because another declared link broke, is that a sound judgment under your rules, or must a ruling against the Oracle break the keystone?" With the two stored lines as evidence.
-NO BUILD on J1 before his answer.
+THE RULING, as the coordinator relayed it (23:14 CST 2026-11-23): the operator pressed "Keystone must break" on the question "When a judge grades the Oracle's keystone link as standing and still rules against the Oracle because another declared link broke, is that a sound judgment under your rules, or must a ruling against the Oracle break the keystone?" W3 HAS NOT READ THE PRESS ITSELF (the card is in the project chat); the coordinator is asked for its message id so the ruling row can cite it. This section is built on the relay.
+
+EXISTING, AS READ: part 08.0 gives the RESULT from the verdict and the standings (W1 Wall 11310 item 1), so CHALLENGER WINS beside KEYSTONE STANDS is allowed by the written rule today. No code ties the two (W4 Wall 11340). So the ruling CHANGES the written rule of part 08.0; the card must show that as a reversal of the present rule, not as a new check only.
+
+REPLAY (SQL: the RESULT line and the KEYSTONE line of every stored judgment of the three runs; 9 judgments):
+1. Run 42071: gemini (row 1272) CHALLENGER WINS beside KEYSTONE D5 STANDS; spark (row 1273) CHALLENGER WINS beside KEYSTONE D5 STANDS; qwen4max (row 1274) CHALLENGER WINS, KEYSTONE D5 BROKEN.
+2. Run 41822: sol (row 1271) CHALLENGER WINS beside KEYSTONE D4 STANDS ("D4 vs C1 and D4 vs C6 do not independently refute its immediate-..."); qwen4max (row 1270) CHALLENGER WINS, KEYSTONE BROKEN; argon (row 1269) DEFENDER WINS, KEYSTONE STANDS.
+3. Run 41418: sol62 (row 1263) UNDERDETERMINED, KEYSTONE BROKEN; chatgpt (row 1264) and qwen4max (row 1265) CHALLENGER WINS, KEYSTONE BROKEN.
+4. COUNT: 3 of 9 judgments rule against the defender with the keystone standing (rows 1271, 1272, 1273). KNOWN-BAD: row 1272. CONTROL: row 1274 (against, keystone BROKEN) and row 1269 (for, keystone STANDS); the check is silent on both.
+5. EFFECT ON A PAST RESULT, STATED AND NOT CHANGED: run 41822 was stored CHALLENGER PREVAILS, BROKEN 2-1. One of the two votes is row 1271. Under the ruling that seat could not have written CHALLENGER WINS on its lines as they stand. This plan rewrites no stored result.
+6. NOT COVERED BY THE RULING AS RELAYED: the other direction (row 1263: keystone BROKEN, result UNDERDETERMINED).
+
+PROPOSAL:
+a. RULE TEXT (judges' agreement; its own card): "A RESULT against the defender requires your KEYSTONE line to read BROKEN, by a collision line on the keystone link or by the link it rests on. If your keystone line reads STANDS, you may not write a RESULT against the defender; write the result your lines give without it."
+b. WHAT THE SEAT'S WORD BECOMES when a declared link broke and the keystone stands. This is a design choice the card must show, because it sets the outcome: PROPOSED, UNDERDETERMINED (the break is kept on its line and counted as a broken link; it does not carry the conclusion). NOT PROPOSED: DEFENDER WINS, since a link of the chain did break. W1 is asked to grade this choice against part 08.0 (BROKEN-1) and to say if the operator must be asked.
+c. ENGINE RULE (part 08.0, the recompute; W4): the engine gives the seat's word from the same rule, so the recompute must not give CHALLENGER WINS with the keystone STANDS either. Otherwise the engine would write what the judge is forbidden to write (as it did to spark, row 1273, whose RESULT was recomputed).
+d. STAGING: first live as an audit line only ("KEYSTONE STANDS BESIDE A RESULT AGAINST THE DEFENDER", record-only), for one run; the rule change (a, b, c) on its own card, with part 08.0's sentence before and after.
+e. EXPECTED ON THE STORED DATA: 3 marked (1271, 1272, 1273), 6 silent.
+
+WRONG IF: the Oracle is seated as challenger (then "against the Oracle" is not "against the defender", and the keystone is not the Oracle's; the rule text above speaks of the defender, and the case of the Oracle as challenger is NOT ADDRESSED and is asked of the team); or pkgKRB already turns the keystone to BROKEN in these three cases after the cure (W4 says it did not fire in 42071; 41822 not read).
 
 ## 5. CARDS (each its own; none is asked for by this plan)
 
 1. J2 instruction text and its TRIAL check.
 2. J3 serving both grants lists, its instruction text and its TRIAL check.
 3. J6 enforcer instruction text and its TRIAL check.
-4. J1: a question, not a card.
+4. J1: the audit line first; then the rule text, the seat's word (b) and the engine rule (c) together, as a change to part 08.0, saying plainly that it changes what result a seat can give.
 Each card shows the exact before and after text, after W4 has read the live text it changes and W1 has graded the build.
 NO CARD before W4's replay of that item's check on argon's text and on the stored judgments of runs 41418 and 41822, with counts, is posted and W1 has read it (W1 C3, Wall 11350).
 
@@ -117,6 +134,7 @@ NO CARD before W4's replay of that item's check on argon's text and on the store
 - J2: one "[AUDIT ...: L2 ROW (TRIAL, record-only)" line per judge seat in debate_judgments.verdict_raw; EXPECT every [L2] entry of a break read WHOLE.
 - J3: one grants audit line per seat; EXPECT 0 break lines with a grant word and no G number.
 - J6: one audit row per DISAGREE in debate_enforcer_log; EXPECT 0 with a GROUND verse unanswered.
+- J1: one audit line per seat whose RESULT is against the defender with KEYSTONE STANDS; EXPECT 0 after the rule text is live.
 Exact line text is W4's, in its build plan.
 
 ## 7. ASKED OF W4 (read, no build yet)
