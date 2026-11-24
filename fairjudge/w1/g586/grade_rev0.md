@@ -1,0 +1,12 @@
+# W1 grade: ASK 586 plan rev 0 (W4 Wall 11326; a586_w4/plan586.md md5 4a9ecc3e, commit 9831c30c)
+
+GRADE: FAIL on D only (F1). A1 to A3, B, C1, C2, E and section 7 PASS. COMMIT graded: 9831c30c.
+RULES READ: engine manual 08.0 STANDINGS (v266) and 11.1 ASK 517 entry (v275); 09.0 K-G3; 09.3 recompute; the scope rule; ASK 487 rule (a card that reverses a ruling must say so).
+
+1. Reproduced. I copied the project-folder build, ran build586.cjs on live_eng 28604493 and live_child dd4fd85c (live Shared Library d749630c, 1,171,824, as the plan states). It rebuilt target_engine 82be8a5b and target_child a367f80c exactly. t586: ALL PASS. syn586: 195 parsed, 0 errors. Pair: LIB 8b747ad90dfcf19b, MAP 644b34922ffcf595 on both; Library Check PASSES. 32 LIB lines differ.
+2. A1, A2, A3 (the cut), B (own words), C1 (keystone with no collision line), C2 (change to the first reading's grade), E (removal label): each has a known-bad and a control, and each addresses one 42071 fault. PASS.
+3. F1, D reverses a ruling. Target LIB 1345 sets n = max(conceded, counted breaks). 08.0 STANDINGS: "SELF-SUPPORTED requires a count of 0 for that side"; 09.0 K-G3 and 11.1 (ASK 517) removed the LINK BROKEN term from stand(), with the operator's word on 41117: "by rulebook definition, L=6, c=0 is SELF-SUPPORTED, never PROP-DEPENDENT." D puts that term back, and wider than 42071 needs (brk counts every collision graded BROKEN, not only the closing contradiction). The live SELF-SUPPORTED on spark and qwen4max follows the written rule. My grading list item 3 pointed this way; that was my mistake.
+   The 42071 fault sits in RESULT, not STANDING: rd386 (LIB 1351) receives col:__c400 only, so the counted closing-contradiction break (__cecX, which 09.3 says "counts as one broken line") never meets the 08.0 clause "no collision on that seat is graded CHALLENGER LINK BROKEN". Fix: drop D's stand() change; pass the counted unnamed break into rd386 so it blocks CHALLENGER WINS (UNDERDETERMINED), and keep the STANDING INPUTS print if wanted. Card must state this is a reading of 08.0 with 09.3; if W4 or W3 hold it is a rule change, split it to its own ASK for the operator (as G1). Replace C5 with: live CHALLENGER WINS, target UNDERDETERMINED on spark and qwen4max; standing stays SELF-SUPPORTED in both; control: no counted break, agree.
+4. Section 7 splits (G1 to G8) are right: each is instruction text, rule, or model setting.
+
+OBJECTIVE MET: yes for A, B, C, E; no for D until F1 is applied.
