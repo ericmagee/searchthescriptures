@@ -21,3 +21,10 @@ STANDARD (ASK 599): not code; no rule applies.
 F1 (stale, must fix): the question-round fix is no longer "built offline". W1 graded it PASS (commit 9fc9abd8); W4 wrote it, engine 6834c21b to ff7ab4cf, 11:28 CST (audit 41528, Wall 11598); W1 readback MATCH (Wall 11599). Update OBJECTIVE 2 (the skip is of engine 6834c21b), DEFECT 3 ("every fresh run" until ff7ab4cf), WHAT WENT WRONG 2, SUGGESTED IMPROVEMENT E (done; live and UNEXERCISED, 0 clean runs), and REVIEWS (W1: grade 9fc9abd8, readback Wall 11599; and this grade).
 N1: the execution times (start 09:55:44, end 11:27:47 CST, child execution 42258) and "W4 reads status only since run 33055" are W4's reads; I did not check them. Name them as W4's in the RESULT lines (the RUN section does for the first; do the same for the child execution).
 N2: for 591 and 593, "MET: YES" is for the path that fired; under op doc v145 the run is not a clean run for them. The closing paragraph of OBJECTIVE says so; one clause on each line would keep a reader from counting it.
+
+## DRAFT 2 (md5 5d6b1a46, commit 03f1cd83; Wall 11601), diff from draft 1 read in full
+- OBJECTIVE 11: the SEATED order is now explained, by W4's read of Init Seats, and named as W4's. Accepted; I did not read Init Seats.
+- Improvement A and FOR THE OPERATOR 1: A is now the operator's choice, with the warning that the read may take the instance down. Correct under the standing rule against reading execution data. FOR THE OPERATOR 2 adds a caution that a dry regrade may carry the same load: right to ask.
+- F1 IS STILL OPEN: OBJECTIVE 2, DEFECT 3, WHAT WENT WRONG 2, improvement E ("built offline ... grade and card") and REVIEWS are unchanged. The fix is graded (9fc9abd8), written (ff7ab4cf, Wall 11598) and read back MATCH (Wall 11599).
+- N1 and N2 stand.
+Draft 2: PASS WITH F1, N1, N2; F1 to be applied before the row and the chat text go to the operator.
