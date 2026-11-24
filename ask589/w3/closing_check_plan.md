@@ -1,8 +1,10 @@
-# ASK 589, item A2: ONE closing check in place of the anti-cheat check. Finding and plan, draft 1
+# ASK 590 (was ASK 589 item A2): ONE closing check in place of the anti-cheat check. Finding and plan, draft 2 (W1 PASS with F1 and F2, Wall 11389, met here)
 
 W3 (session_01H1X3ANsGiMnhnbkfphocmo), 2026-11-24 CST, on the operator's order of 23:59 CST 2026-11-23 (W3 thread): "Turn your opinion into a finding. Work on that recommendation and see if you can bring that into a workable solution." For W1's grade and W4's read of the live engine. Nothing is built or written.
 
 SOURCE AND LIMITS. Engine manual version 275, every line naming the anti-cheat check or the closing enforcer (SQL over engine_manual_full, 40 lines read whole); md_notes_rulings 412 and 427, whole; debate_enforcer_log, rule E-CLOSECON, all 272 rows counted and 4 read; debate_judgments, every line of every stored judgment that names the anti-cheat check (59 lines counted, 6 read whole). NOT read: the code and the live flow (W4's); the judges' prompts as sent (not stored where I read). No judge line was hand-graded right or wrong by me.
+
+METHOD OF THE COUNTS (W1, Wall 11389). Each stored judgment's verdict_raw is split on its literal \n; a LINE is counted when it matches anti-cheat without regard to case: 59 lines holding 64 mentions, in 45 judgments of 31 runs. A line is NOT HELD when NOT HELD leads the line: 33 lines in 17 runs. W1 reproduced 33 and 17 and counted 64 mentions. Query: `WITH j AS (SELECT j.id, x AS line FROM debate_judgments j, regexp_split_to_table(j.verdict_raw, E'\\\\n') x WHERE x ~* 'anti-cheat') SELECT count(*), count(*) FILTER (WHERE line ~ '^\s*NOT HELD') FROM j;`
 
 ## 1. FINDING
 
@@ -30,7 +32,7 @@ S3. WHAT ACTING MEANS FOR (b), LIVE, NOT TRIAL.
    a. The judges receive, before they judge, one block: REVERSED CLOSE SENTENCES, each with both quotations and rounds, under the existing CONFIRMED CLOSING CONTRADICTIONS block. It replaces the [ANTI-CHEAT CHECK] notes.
    b. Every answer, REVERSED or not, is a row in debate_enforcer_log under E-CLOSECON, so each can be reviewed and struck if false, as confirmed contradictions are today.
    c. A judge may still answer NOT HELD with its reason (the judge keeps the decision, ruling 428); that line is recorded.
-   d. FOR W1'S GRADE: whether a judge's grade that quotes a disregarded close sentence as that side's footing is sent back once. I propose NOT in this build: it adds a new send-back rule, and the scope rule says change only what addresses the issue. It can be carded after one run shows whether judges lean on struck sentences.
+   d. THE OPERATOR'S CHOICE, ON THE SAME CARD (W1, Wall 11389; ruling row 512: a narrowing is said plainly and is not parked until after a run): whether a judge's grade that quotes a disregarded close sentence as that side's footing is sent back once, in the form ruling 428 gives (the judge's line goes back once with the quoted reason; the judge keeps the decision; both are recorded). It is not in the base build; the card offers it as a choice with what each answer does.
 
 S4. THE ANTI-CHEAT NODES LEAVE THE PATH (Anticheat Build, Call, Record, Anticheat Only?). One enforcer call fewer; the manual measured that step at 100 to 233 seconds. W4 says whether the nodes stay in the flow unconnected.
 
@@ -41,6 +43,11 @@ S5. PROOF BEFORE THE CARD, offline, by W4 on stored runs, with counts posted for
    d. Run 42071: its 3 confirmed contradictions are unchanged.
    e. Over all stored runs with closing rounds: how many REVERSED findings the one check gives, and for the 33 NOT HELD lines, how many of those notes would no longer be raised.
    f. Size of the judges' block and of the enforcer request.
+   g. A pairing of a close sentence with the OTHER side's earlier quote is not raised (planted case and the 41822 case).
+   h. A pair answered both CONFIRMED and REVERSED is CONFIRMED, once.
+   i. (W1 F1) EVERY JUDGE PATH is listed by W4 and tested: the panel, the reserve, the alternates and the round-2 alternates, the single judge's builder though it is off, and the judges' later turns (cure, send-back, gate). Each carries the new block and none carries an old [ANTI-CHEAT CHECK] note.
+
+S5a. THE UNRESOLVED DISAGREEMENT OF MANUAL 09.5 AND 17.0 (the anti-cheat check against the post-panel contradiction call, J1). With one reader before the judges, the anti-cheat side of that disagreement no longer exists. What remains is the closing enforcer against the post-panel judge contradiction rows (J rows), which have their own two checks today; this plan does not change them. The manual entry, when written, says so in both parts.
 
 S6. WHAT THIS CHANGES IN STANDING RULINGS, to be said on the card. Ruling 427's rule is kept and its TRIAL status ends; its mechanism (a separate DeepSeek read "after both closes") is replaced by the closing enforcer's read. Ruling 412 item 3 is kept. The perjury rule is unchanged. No model setting is touched.
 
@@ -48,7 +55,7 @@ S6. WHAT THIS CHANGES IN STANDING RULINGS, to be said on the card. Ruling 427's 
 1. Where the Anticheat nodes sit in the live path today, and whether any audit row fires.
 2. Why run 41822's note crossed the sides.
 3. Whether the closing enforcer's two reads can carry the added candidates without a new call.
-4. Whether a pair can be answered both CONFIRMED and REVERSED, and which wins (I propose CONFIRMED).
+4. Whether a pair can be answered both CONFIRMED and REVERSED today; under the plan CONFIRMED wins (S5 h).
 
 ## 4. CARD
 One write card from W4 after W1's grade of the build, with the before and after text of the judges' block and of the enforcer instruction, the S5 counts, and the S6 statement.
