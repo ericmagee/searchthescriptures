@@ -15,7 +15,7 @@
 4. CHANGES (exact text), node Alternate Merge only.
  E1 replace `if($('Pass Accumulate').isExecuted)r=$('Pass Accumulate').first().json;`
     with `if($('Pass Accumulate').isExecuted){const __pa=$('Pass Accumulate').first().json;if(__pa&&!__pa.isArtificialRecoveredEventItem)r=__pa;}`
-    (occurs once; result md5 4a623df6, 16,431 chars). Nothing else changes.
+    (occurs once; result md5 4a623df6, 16,454 chars). Nothing else changes.
 
 5. CRITERIA and DONE.
  C1 Offline run of the live and the patched Alternate Merge code (build/t585.cjs) on three cases: (i) normal, Pass Accumulate real: both give the Pass Accumulate debate_id; (ii) Pass Accumulate not run: both give Alternate Merge 1's; (iii) 41147 retry, Pass Accumulate = recovered placeholder: live gives debate_id undefined (the fault), patched gives Alternate Merge 1's debate_id and substitution. Result in hand: build/out_t585.txt, all as stated.
