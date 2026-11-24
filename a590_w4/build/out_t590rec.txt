@@ -1,0 +1,7 @@
+PASS KEEP KEEP: counted in no list (11 count lists and the pkgVP3 trial), judges' bodies unchanged, row recorded record-only; status CURED
+PASS CHANGE CHANGE: counted in no list (11 count lists and the pkgVP3 trial), judges' bodies unchanged, row recorded record-only; status CURED
+PASS NO ANSWER (silent) NO ANSWER (silent): counted in no list (11 count lists and the pkgVP3 trial), judges' bodies unchanged, row recorded record-only; status null; says not counted
+PASS NAMED, NOT READ NAMED, NOT READ: counted in no list (11 count lists and the pkgVP3 trial), judges' bodies unchanged, row recorded record-only; status null
+PASS REPLY ERROR REPLY ERROR: counted in no list (11 count lists and the pkgVP3 trial), judges' bodies unchanged, row recorded record-only; status null
+PASS CONTROL control: the same silent reply on an E-ASSUME item is counted ([{"seat":"sol62","items":["S1"]}]), so the harness sees counts
+RESULT: ALL PASS (6 pass)
