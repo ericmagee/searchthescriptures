@@ -23,3 +23,4 @@ W1 grade 9c1ca3d6 (PASS with N1 to N3), folded in:
 - N1: the fail messages take the seat from k, not a literal. New target 1ba39c5f; t608 T1 ALL PASS and standing 31/0, both rerun.
 - N2: for W3's manual entry. The alternates list drops the enforcer seat even when luna stays. Luna is not in the judge order today, so nothing changes.
 - N3: the write card says glm has never enforced, so the first run with an OpenAI debater is its proof.
+- CORRECTION (W4, 14:2x CST): "fails closed before any call" is wrong. Accept Call openrouter and Accept Return Call openrouter (the model acceptance calls) run before Resolve Seats. The stop comes before any debate round, judge or enforcer call, but after those acceptance calls.
