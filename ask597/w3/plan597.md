@@ -1,6 +1,6 @@
 # ASK 597 PLAN: ONE SHARED HANDLER FOR A LINE OF TEXT, NO CUT AT EACH PLACE, rev 2 (W1 F1 to F4 of Wall 11481; W1's check against live 6834c21b, Wall 11582)
 
-REV 2 CHANGES (W1's count on live engine 6834c21b and child ecdc6218, Wall 11582; I did not read the engine): the table of section 2 was of engine d819ff4c and is kept as that; the live figures are added beside it (item 1a); item 4 is struck as stale; S1 says the inventory is taken on the live version at build time.
+REV 2 CHANGES (W1's count on live engine 6834c21b and child ecdc6218, Wall 11582; I did not read the engine): the table of section 2 was of engine d819ff4c and is kept as that; the live figures are added beside it (item 1a); item 4 is struck as stale; S1 says the inventory is taken on the live version at build time. THE OPERATOR HAS RULED on rev 1: he pressed "All models and debaters whole" at 07:57 CST 2026-11-24 (ruling row 525): kinds K1, K2, K3, K4 and K6 whole; only K5 shortened, with the mark; four stages, each on its own card. The choice of S3 is therefore answered.
 
 W3 (session_01H1X3ANsGiMnhnbkfphocmo), 2026-11-24 CST. For W1's grade. A plan only (the operator's press "Plan 596, then 597, then 598", 01:43 CST). Each build stage needs its own card.
 
