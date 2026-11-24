@@ -1,6 +1,6 @@
-# PRE-RUN AAR OBJECTIVES, second sheet, for run 42373, which the operator started about 17:05 CST 2026-11-24 (draft 2)
+# PRE-RUN AAR OBJECTIVES, second sheet, for run 42373, started 16:44 CST 2026-11-24 (draft 3)
 
-W3 (session_01H1X3ANsGiMnhnbkfphocmo), on the coordinator's order of 17:05 CST. Written while the run is live, from files and from what I had read before it started. I read nothing of the run and made no database read for this sheet.
+W3 (session_01H1X3ANsGiMnhnbkfphocmo), on the coordinator's order of 17:05 CST, the time the operator said the run was going; W1 gives the start as 16:44 CST (launch 101 and execution 42373 at 22:44:11Z). Draft 2 (a7d20478) was graded PASS WITH N1, N2 by W1 (commit b9ec16b4); draft 3 applies N1 (the start time) and N2 (item 16's mark) and changes nothing else. Written while the run is live, from files and from what I had read before it started. I read nothing of the run and made no database read for this sheet.
 
 - LIVE at the start (W1 readback, Wall 11743): engine 20db58ee, child 74353c40, LIB 2f5aa1e63d51edb1. Judge order as the table holds it: panel sol, sol62, spark; alternates chatgpt, qwen4max, gemini, argon, sonnet, hydrogen, neon (log ids 1, 2, 5).
 - The last stored run before it: 42283 (13:48 CST), which did not finish its judging and counted as a live run for no change.
@@ -51,7 +51,7 @@ MEASURE, first time: how glm answers the enforcer's reads against luna (rows ans
 ## 16. ASK 607: a gate change in no line form is recorded, not counted (row 175)
 OBJECTIVE: when a judge answers a NOT APPLIED item at the gate with a CHANGE TO that the engine cannot read as any line form, the refusal is stored with its reason, the judge's line before the change stands, and nothing counts toward removing the seat.
 EXPECT:
-- (ONLY IF a judge's gate CHANGE TO is refused as "the CHANGE TO line has no line form the engine reads") an E-GATE row whose cure_reason begins "GATE CHANGE TO" and whose result reads "pkgFRM refused the gate change ... (RECORD-ONLY)"; no seat removed for it; removed_rules names no E-GATE NOT APPLIED for that item;
+- (ONLY IF a judge's gate CHANGE TO is refused as "the CHANGE TO line has no line form the engine reads") an E-GATE row with cure_status UNCURED whose cure_reason begins "GATE CHANGE TO:", carries "pkgFRM refused the gate change; the judge's line before the change stands" and ends "(RECORD-ONLY)" (debate_enforcer_log has no result column; the whole mark is in cure_reason); no seat removed for it; removed_rules names no E-GATE NOT APPLIED for that item;
 - (always) a silent gate item and a KEEP read as before; a placement refusal ("the flagged line is not in the judge text") is still counted.
 LIKELY UNEXERCISED: the last stored form refusal at the gate before the write was on 11-10.
 
