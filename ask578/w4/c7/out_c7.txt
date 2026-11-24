@@ -1,0 +1,8 @@
+nodes run: ['Manual Trigger', 'Alternate Pass Call', 'Compare']
+Alternate Pass Call {"lib_type": "string", "received_len": 1203331, "head": "// pkgLIB: the shared library for the 22", "tail": ",lines,has,rebutOk,};})();\"]]}}\n/*END*/\n", "parent_exec": "42353"}
+Compare {"a_resolves": true, "b_same_length": true, "received_len": 1203331, "expected_len": 1203331, "head_equal": true, "tail_equal": true, "shared_library_ran": false}
+error: None
+Run: parent KFLI0TzcQ1nQN6Oz execution 42353 (manual, 22:25:37 to 22:25:39 UTC), child VZFfa3gFyte94UAY execution 42354 (success). Both created inactive; never active.
+Change not in the graded JSON: the parent's settings gained availableInMCP true (PUT before the run), because the n8n MCP refused to execute a workflow without it.
+Deleted 16:26 CST: DELETE 200 for both; GET after 404 for both; no workflow named ASK578 remains.
+C7 (a) PASS: $('Shared Library').params.jsCode resolved in the Execute Workflow node, the Shared Library node did not run. C7 (b) PASS: the child received 1,203,331 characters, equal to the node text; head and tail equal. Payload limit NOT ESTABLISHED (the real call carries about 9.1 MB).
