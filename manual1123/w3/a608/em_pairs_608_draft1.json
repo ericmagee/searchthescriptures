@@ -1,0 +1,36 @@
+{
+ "03.0": [
+  {
+   "old": "the enforcer model is luna, §9); qwen as either debater",
+   "new": "the enforcer model is luna, §9, or the backup seat when a model of luna's family debates, THE ENFORCER IS NEVER OF A DEBATER'S FAMILY, §10); qwen as either debater"
+  },
+  {
+   "old": "It requires the ACTIVE `luna` row (the enforcer model, RS.enforcer, §9).",
+   "new": "It requires the ACTIVE `luna` row (the enforcer model, RS.enforcer, §9). When a model of luna's family debates, it requires the backup enforcer seat's row instead and stops the run when that seat cannot enforce (THE ENFORCER IS NEVER OF A DEBATER'S FAMILY, §10)."
+  }
+ ],
+ "09.7": [
+  {
+   "old": "from the active `luna` model_config row; a run is refused if that row is missing.",
+   "new": "from the active `luna` model_config row; a run is refused if that row is missing. Since ASK 608 the seat is luna unless a model of luna's family debates; then it is the backup seat (THE ENFORCER IS NEVER OF A DEBATER'S FAMILY, §10)."
+  }
+ ],
+ "10.0": [
+  {
+   "old": "(NO JUDGE RUNS A DEBATER'S MODEL, the last entry of this section)",
+   "new": "(the entry NO JUDGE RUNS A DEBATER'S MODEL in this section)"
+  },
+  {
+   "old": "the enforcer model is luna (§9). Sol (md_notes_rulings 378)",
+   "new": "the enforcer model is luna (§9), or the backup seat when a model of luna's family debates (THE ENFORCER IS NEVER OF A DEBATER'S FAMILY, the last entry of this section). Sol (md_notes_rulings 378)"
+  },
+  {
+   "old": "The model_config rows `glm_flash` and `glm` are inactive and `glm` is out of",
+   "new": "The model_config row `glm_flash` is inactive; the `glm` row is active, and `glm` is out of"
+  },
+  {
+   "old": "it leaves out sonnet by name.\n",
+   "new": "it leaves out sonnet by name.\n- THE ENFORCER IS NEVER OF A DEBATER'S FAMILY (ASK 608; md_notes_rulings 537; engine: Resolve Seats only; where it differs from any entry of this manual that names luna as the enforcer model, this rule is right):\n  - The rule: the enforcer model is not of the family of either debater. Luna enforces unless a model of luna's family (openai) debates. Then the backup enforcer seat enforces. The operator chose one fixed backup seat, and chose `glm`.\n  - Resolve Seats, after the debaters' families and the reserve are known and before the alternates: when luna's family is not a debater's family, `RS.enforcer` is luna and the node's output is what it was before this rule. When it is, `RS.enforcer` is {seat, api_model, max_tokens} of the backup seat, read from that seat's own `model_config` row as luna's is; no model setting is added or changed. The output then also carries `enforcer_barred` {seat luna, why}, and the execution's custom data `enforcer_seat` is set to the backup seat.\n  - It stops the run before any model call, with a line that begins 'ENFORCER: luna is of family <family>, which debates in this debate, and the backup enforcer seat \"<seat>\"' and ends \"(ASK 608).\", in three cases: the backup seat has no active OpenRouter row with a model and a token limit; the backup seat has no family, or its family debates; the backup seat is seated as a panel judge, the reserve or the single judge in this run.\n  - The alternates list leaves out the enforcer seat of the run, whichever seat that is. Luna and glm are not in the judge order today, so no alternate is dropped by this today.\n  - Every enforcer call reads `RS.enforcer`, so the builds, the Shared Library line and the enforcer HTTP nodes of THE ENFORCER MODEL IS LUNA (§9) are unchanged. Where this manual says \"luna\" of the enforcer model, read the seat `RS.enforcer` holds for the run.\n  - Not changed: the `deepseek` field (Build Independent Verdict, Build Diagnostic Prompt) still takes the luna row when an OpenAI model debates; ruling 537 names the enforcer only.\n  - Shown offline: Resolve Seats, before and after, on the 90 debater pairs the engine accepts, against the saved judge order and the active model rows: 56 have no OpenAI debater and are equal; 34 have one; in 30 of those the enforcer is glm and everything else is equal; 4 stop with the line above, because glm debates there (chatgpt against glm and sol62 against glm, both ways). A backup seat of a debater's family, with no family, or with no row stops the run each time.\n  - Limits: not shown by a run; glm has never enforced, and its mark is the first run with an OpenAI debater, where `enforcer_seat` reads glm and the enforcer rows of the run are answered. How glm reads the enforcer's rules against luna is not measured. A comment in the Shared Library still reads \"the enforcer model (seat luna)\". If the enforcer seat is ever put in the judge order, the Judge order page will still list it as an alternate, and the engine will not seat it.\n"
+  }
+ ]
+}
