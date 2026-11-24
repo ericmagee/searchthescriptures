@@ -1,0 +1,1046 @@
+[
+ {
+  "wf": "engine",
+  "name": "D1 Extract",
+  "type": "code",
+  "reads": []
+ },
+ {
+  "wf": "engine",
+  "name": "C1 Build",
+  "type": "code",
+  "reads": [
+   "D1 Extract"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "C1 Extract",
+  "type": "code",
+  "reads": [
+   "L2 Count Plan",
+   "Shared Library",
+   "C1 Build",
+   "D1 Extract"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "D2 Build",
+  "type": "code",
+  "reads": [
+   "C1B Extract",
+   "D1 Extract",
+   "L2 Count Plan",
+   "Shared Library"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "D2 Extract",
+  "type": "code",
+  "reads": [
+   "L2 Count Plan",
+   "Shared Library",
+   "D2 Build",
+   "D1 Extract",
+   "C1B Extract"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "C2 Build",
+  "type": "code",
+  "reads": [
+   "C1 Build",
+   "C1B Extract",
+   "D1 Extract",
+   "D2B Extract",
+   "L2 Count Plan",
+   "Shared Library"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "C2 Extract",
+  "type": "code",
+  "reads": [
+   "L2 Count Plan",
+   "Shared Library",
+   "C2 Build",
+   "D1 Extract",
+   "C1B Extract",
+   "D2B Extract"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "D3 Build",
+  "type": "code",
+  "reads": [
+   "C1B Extract",
+   "C2B Extract",
+   "D2 Build",
+   "D2B Extract",
+   "L2 Count Plan",
+   "Shared Library"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "D3 Extract",
+  "type": "code",
+  "reads": [
+   "L2 Count Plan",
+   "Shared Library",
+   "D3 Build",
+   "D1 Extract",
+   "C1B Extract",
+   "D2B Extract",
+   "C2B Extract"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "C3 Build",
+  "type": "code",
+  "reads": [
+   "C2 Build",
+   "C2B Extract",
+   "D1 Extract",
+   "D2B Extract",
+   "D3B Extract",
+   "L2 Count Plan",
+   "Shared Library"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "C3 Extract",
+  "type": "code",
+  "reads": [
+   "L2 Count Plan",
+   "Shared Library",
+   "C3 Build",
+   "D1 Extract",
+   "C1B Extract",
+   "D2B Extract",
+   "C2B Extract",
+   "D3B Extract"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Build Synthesis",
+  "type": "code",
+  "reads": [
+   "Shared Library",
+   "D1 Extract",
+   "C1B Extract",
+   "D2B Extract",
+   "C2B Extract",
+   "D3B Extract",
+   "C3B Extract",
+   "D4B Extract",
+   "C4B Extract"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Final Output",
+  "type": "code",
+  "reads": [
+   "Build Synthesis"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Build Independent Verdict",
+  "type": "code",
+  "reads": [
+   "Shared Library",
+   "Anticheat Record",
+   "Close Enforcer Record",
+   "Final Output",
+   "Build Synthesis",
+   "Regrade Row"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Build Diagnostic Prompt",
+  "type": "code",
+  "reads": [
+   "D1 Extract",
+   "D2B Extract"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Build Save Body",
+  "type": "code",
+  "reads": [
+   "Close Enforcer Record",
+   "Shared Library",
+   "D1 Extract",
+   "C1 Extract",
+   "D2 Extract",
+   "C2 Extract",
+   "D3 Extract",
+   "C3 Extract",
+   "D4 Extract",
+   "C4 Extract",
+   "Build Synthesis",
+   "L2 Count Plan",
+   "Anticheat Record",
+   "C1B Extract",
+   "D2B Extract",
+   "C2B Extract",
+   "D3B Extract",
+   "C3B Extract",
+   "D4B Extract",
+   "C4B Extract",
+   "Alternate Merge",
+   "QR Merge"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Check Save",
+  "type": "code",
+  "reads": []
+ },
+ {
+  "wf": "engine",
+  "name": "Panel Build",
+  "type": "code",
+  "reads": [
+   "Shared Library",
+   "Anticheat Record",
+   "Close Enforcer Record",
+   "Regrade Load",
+   "Final Output",
+   "Build Synthesis",
+   "Regrade Row",
+   "Check Save"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Format Markdown",
+  "type": "code",
+  "reads": [
+   "Shared Library",
+   "Build Synthesis",
+   "Panel Build",
+   "Reserve Build",
+   "Alternate Merge",
+   "L2 Count Plan"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Citation Scan",
+  "type": "code",
+  "reads": [
+   "Shared Library",
+   "Regrade Load",
+   "Final Output"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Regrade Row",
+  "type": "httpRequest",
+  "reads": []
+ },
+ {
+  "wf": "engine",
+  "name": "Regrade Load",
+  "type": "code",
+  "reads": [
+   "Regrade Row"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Replay Rows",
+  "type": "code",
+  "reads": [
+   "Alternate Merge",
+   "Regrade Load",
+   "QR Merge"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Write Replay",
+  "type": "httpRequest",
+  "reads": []
+ },
+ {
+  "wf": "engine",
+  "name": "Panel Check",
+  "type": "code",
+  "reads": [
+   "Panel Build",
+   "QR Merge"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Reserve Build",
+  "type": "code",
+  "reads": [
+   "QR Merge",
+   "Panel Build",
+   "Panel Check"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Panel Reserve openrouter",
+  "type": "httpRequest",
+  "reads": []
+ },
+ {
+  "wf": "engine",
+  "name": "Failure Salvage",
+  "type": "code",
+  "reads": [
+   "Build Save Body",
+   "C1 Extract",
+   "C1B Extract",
+   "C2 Extract",
+   "C2B Extract",
+   "C3 Extract",
+   "C3B Extract",
+   "C3G Extract",
+   "C4 Extract",
+   "C4B Extract",
+   "C4G Extract",
+   "Check Save",
+   "D1 Extract",
+   "D2 Extract",
+   "D2B Extract",
+   "D3 Extract",
+   "D3B Extract",
+   "D4 Extract",
+   "D4B Extract",
+   "Final Output"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "D4 Build",
+  "type": "code",
+  "reads": [
+   "C1B Extract",
+   "C2B Extract",
+   "C3B Extract",
+   "D1 Extract",
+   "D2B Extract",
+   "D3 Build",
+   "D3B Extract",
+   "L2 Count Plan",
+   "Shared Library"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "D4 Extract",
+  "type": "code",
+  "reads": [
+   "L2 Count Plan",
+   "Shared Library",
+   "D4 Build",
+   "D1 Extract",
+   "C1B Extract",
+   "D2B Extract",
+   "C2B Extract",
+   "D3B Extract",
+   "C3B Extract"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "C4 Build",
+  "type": "code",
+  "reads": [
+   "C1B Extract",
+   "C2B Extract",
+   "C3 Build",
+   "C3B Extract",
+   "D1 Extract",
+   "D2B Extract",
+   "D3B Extract",
+   "D4B Extract",
+   "L2 Count Plan",
+   "Shared Library"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "C4 Extract",
+  "type": "code",
+  "reads": [
+   "Shared Library",
+   "C4 Build",
+   "C1B Extract",
+   "C2B Extract",
+   "C3B Extract",
+   "D1 Extract",
+   "D2B Extract",
+   "D3B Extract",
+   "D4B Extract"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "L2 Count Plan",
+  "type": "code",
+  "reads": [
+   "Shared Library",
+   "L2 Count Plan",
+   "Citation Scan",
+   "L2 Gloss Plan",
+   "L2 Gloss Pages Plan",
+   "Regrade Load",
+   "Final Output"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "QR Ask Build",
+  "type": "code",
+  "reads": [
+   "Regrade Load",
+   "Final Output",
+   "Panel Build"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "QR Check",
+  "type": "code",
+  "reads": [
+   "Regrade Load",
+   "Final Output",
+   "Panel Build",
+   "QR Ask Build"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "QR Final",
+  "type": "code",
+  "reads": [
+   "Regrade Load",
+   "Final Output",
+   "Panel Build",
+   "QR Check",
+   "Regrade Row"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "QR Merge",
+  "type": "code",
+  "reads": [
+   "Regrade Load",
+   "Final Output",
+   "Panel Build",
+   "Regrade Row",
+   "QR Final",
+   "QR Answer D Done",
+   "QR Answer C Done",
+   "QR Follow Final",
+   "QR Follow D Done",
+   "QR Follow C Done"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Anticheat Build",
+  "type": "code",
+  "reads": [
+   "Regrade Load",
+   "Final Output"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Anticheat Record",
+  "type": "code",
+  "reads": [
+   "Anticheat Build",
+   "Regrade Load",
+   "Final Output"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Alt Seated",
+  "type": "code",
+  "reads": [
+   "Regrade Load",
+   "Final Output"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "C4G Build",
+  "type": "code",
+  "reads": [
+   "C4 Extract",
+   "C4 Build"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "C4G Extract",
+  "type": "code",
+  "reads": [
+   "C4 Extract",
+   "C4G Build",
+   "Shared Library",
+   "C1B Extract",
+   "C2B Extract",
+   "C3B Extract",
+   "D1 Extract",
+   "D2B Extract",
+   "D3B Extract",
+   "D4B Extract"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "C3G Build",
+  "type": "code",
+  "reads": [
+   "C3 Extract",
+   "C3 Build"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "C3G Extract",
+  "type": "code",
+  "reads": [
+   "C3 Extract",
+   "C3G Build",
+   "L2 Count Plan",
+   "Shared Library",
+   "D1 Extract",
+   "C1B Extract",
+   "D2B Extract",
+   "C2B Extract",
+   "D3B Extract"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "C1B Build",
+  "type": "code",
+  "reads": [
+   "Shared Library",
+   "D1 Extract",
+   "C1 Extract",
+   "C1 Build"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "C1B Extract",
+  "type": "code",
+  "reads": [
+   "Shared Library",
+   "D1 Extract",
+   "C1 Extract",
+   "C1B Build",
+   "L2 Count Plan"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "D2B Build",
+  "type": "code",
+  "reads": [
+   "Shared Library",
+   "D1 Extract",
+   "C1B Extract",
+   "D2 Extract",
+   "D2 Build"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "D2B Extract",
+  "type": "code",
+  "reads": [
+   "Shared Library",
+   "D1 Extract",
+   "C1B Extract",
+   "D2 Extract",
+   "D2B Build",
+   "L2 Count Plan"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "C2B Build",
+  "type": "code",
+  "reads": [
+   "Shared Library",
+   "D1 Extract",
+   "C1B Extract",
+   "D2B Extract",
+   "C2 Extract",
+   "C2 Build"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "C2B Extract",
+  "type": "code",
+  "reads": [
+   "D1 Extract",
+   "D3B Extract",
+   "Shared Library",
+   "C1B Extract",
+   "D2B Extract",
+   "C2 Extract",
+   "C2B Build",
+   "L2 Count Plan"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "D3B Build",
+  "type": "code",
+  "reads": [
+   "Shared Library",
+   "D1 Extract",
+   "C1B Extract",
+   "D2B Extract",
+   "C2B Extract",
+   "D3 Extract",
+   "D3 Build"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "D3B Extract",
+  "type": "code",
+  "reads": [
+   "D1 Extract",
+   "D3B Extract",
+   "Shared Library",
+   "C1B Extract",
+   "D2B Extract",
+   "C2B Extract",
+   "D3 Extract",
+   "D3B Build",
+   "L2 Count Plan"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "C3B Build",
+  "type": "code",
+  "reads": [
+   "Shared Library",
+   "D1 Extract",
+   "C1B Extract",
+   "D2B Extract",
+   "C2B Extract",
+   "D3B Extract",
+   "C3G Extract",
+   "C3 Build",
+   "C3G Build"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "C3B Extract",
+  "type": "code",
+  "reads": [
+   "D1 Extract",
+   "D3B Extract",
+   "Shared Library",
+   "C1B Extract",
+   "D2B Extract",
+   "C2B Extract",
+   "C3G Extract",
+   "C3B Build",
+   "L2 Count Plan"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "D4B Build",
+  "type": "code",
+  "reads": [
+   "Shared Library",
+   "D1 Extract",
+   "C1B Extract",
+   "D2B Extract",
+   "C2B Extract",
+   "D3B Extract",
+   "C3B Extract",
+   "D4 Extract",
+   "D4 Build"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "D4B Extract",
+  "type": "code",
+  "reads": [
+   "Shared Library",
+   "D1 Extract",
+   "C1B Extract",
+   "D2B Extract",
+   "C2B Extract",
+   "D3B Extract",
+   "C3B Extract",
+   "D4 Extract",
+   "D4B Build",
+   "L2 Count Plan"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "C4B Build",
+  "type": "code",
+  "reads": [
+   "Shared Library",
+   "D1 Extract",
+   "C1B Extract",
+   "D2B Extract",
+   "C2B Extract",
+   "D3B Extract",
+   "C3B Extract",
+   "D4B Extract",
+   "C4G Extract",
+   "C4 Build",
+   "C4G Build"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "C4B Extract",
+  "type": "code",
+  "reads": [
+   "Shared Library",
+   "D1 Extract",
+   "C1B Extract",
+   "D2B Extract",
+   "C2B Extract",
+   "D3B Extract",
+   "C3B Extract",
+   "D4B Extract",
+   "C4G Extract",
+   "C4B Build"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Shared Library",
+  "type": "code",
+  "reads": [
+   "Shared Library",
+   "L2 Count Plan",
+   "Assume Check Record",
+   "QR Merge",
+   "Panel Build",
+   "Regrade Load",
+   "Final Output",
+   "Reserve Build",
+   "Panel Check",
+   "Alt Seated",
+   "Regrade Row",
+   "Build Save Body",
+   "Close Enforcer Record",
+   "Alternate Merge",
+   "Build Independent Verdict",
+   "SJ Re-ask Build"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Panel Judges Prep",
+  "type": "code",
+  "reads": [
+   "Panel Build",
+   "QR Merge"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Alternate Merge",
+  "type": "code",
+  "reads": [
+   "Build Save Body",
+   "Shared Library"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "SJ Re-ask Build",
+  "type": "code",
+  "reads": [
+   "Build Independent Verdict"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Close Enforcer Build",
+  "type": "code",
+  "reads": [
+   "Regrade Load",
+   "Final Output"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Close Enforcer Record",
+  "type": "code",
+  "reads": [
+   "Close Enforcer Build",
+   "Regrade Load",
+   "Final Output"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Judge Contradiction Build",
+  "type": "code",
+  "reads": [
+   "Regrade Load",
+   "Final Output",
+   "QR Merge",
+   "Close Enforcer Record"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Judge Contradiction Record",
+  "type": "code",
+  "reads": [
+   "Judge Contradiction Build",
+   "Regrade Load",
+   "Final Output"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Assume Check Build",
+  "type": "code",
+  "reads": [
+   "Regrade Load",
+   "Final Output"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Assume Check Record",
+  "type": "code",
+  "reads": [
+   "Assume Check Record",
+   "Judge Contradiction Record",
+   "Assume Check Build"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Close Group Batch Build",
+  "type": "code",
+  "reads": [
+   "Close Enforcer Build",
+   "Assume Check Build"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "Close Group Retry Build",
+  "type": "code",
+  "reads": [
+   "Close Group Batch Build"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "L2 Gloss Plan",
+  "type": "code",
+  "reads": [
+   "L2 Count Plan",
+   "Shared Library",
+   "Citation Scan"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "L2 Gloss Pages Plan",
+  "type": "code",
+  "reads": [
+   "L2 Gloss Plan"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "QR Answer D Build",
+  "type": "code",
+  "reads": [
+   "Regrade Load",
+   "Final Output",
+   "Panel Build",
+   "QR Final"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "QR Answer D Done",
+  "type": "code",
+  "reads": [
+   "Regrade Load",
+   "Final Output",
+   "Panel Build",
+   "QR Answer D Build"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "QR Answer C Build",
+  "type": "code",
+  "reads": [
+   "Regrade Load",
+   "Final Output",
+   "Panel Build",
+   "QR Final"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "QR Answer C Done",
+  "type": "code",
+  "reads": [
+   "Regrade Load",
+   "Final Output",
+   "Panel Build",
+   "QR Answer C Build"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "QR Follow Build",
+  "type": "code",
+  "reads": [
+   "Regrade Load",
+   "Final Output",
+   "Panel Build",
+   "Regrade Row",
+   "QR Final",
+   "QR Answer D Done",
+   "QR Answer C Done"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "QR Follow Final",
+  "type": "code",
+  "reads": [
+   "Regrade Load",
+   "Final Output",
+   "Panel Build",
+   "Regrade Row",
+   "QR Final",
+   "QR Answer D Done",
+   "QR Answer C Done",
+   "QR Follow Build"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "QR Follow D Build",
+  "type": "code",
+  "reads": [
+   "Regrade Load",
+   "Final Output",
+   "Panel Build",
+   "QR Follow Final"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "QR Follow D Done",
+  "type": "code",
+  "reads": [
+   "Regrade Load",
+   "Final Output",
+   "Panel Build",
+   "QR Follow D Build"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "QR Follow C Build",
+  "type": "code",
+  "reads": [
+   "Regrade Load",
+   "Final Output",
+   "Panel Build",
+   "QR Follow Final"
+  ]
+ },
+ {
+  "wf": "engine",
+  "name": "QR Follow C Done",
+  "type": "code",
+  "reads": [
+   "Regrade Load",
+   "Final Output",
+   "Panel Build",
+   "QR Follow C Build"
+  ]
+ },
+ {
+  "wf": "child",
+  "name": "Final Output",
+  "type": "code",
+  "reads": []
+ },
+ {
+  "wf": "child",
+  "name": "Regrade Load",
+  "type": "code",
+  "reads": []
+ },
+ {
+  "wf": "child",
+  "name": "Regrade Row",
+  "type": "code",
+  "reads": []
+ },
+ {
+  "wf": "child",
+  "name": "R2 Alt Seated",
+  "type": "code",
+  "reads": [
+   "Regrade Load",
+   "Final Output"
+  ]
+ },
+ {
+  "wf": "child",
+  "name": "Shared Library",
+  "type": "code",
+  "reads": [
+   "Shared Library",
+   "Regrade Load",
+   "Final Output",
+   "R2 Alt Seated",
+   "Regrade Row"
+  ]
+ }
+]
