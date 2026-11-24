@@ -1,0 +1,39 @@
+=== ODV1-42234-501p8uuq
+PASS readers: Panel Build as QR-merged, old = new (md5 7077cc6a)
+PASS Library key Panel Payloads carries the rebuild at every site
+PASS Library key Alternate Build carries the rebuild at every site
+PASS Library key Panel Cure Build 1 carries the rebuild at every site
+PASS Library key Gate Build carries the rebuild at every site
+PASS child input "Panel Build" piece old = new (md5 8cc72501, 888418 chars)
+PASS judge 1 request posted old = new (md5 81c47af5, 296137 chars)
+PASS judge 2 request posted old = new (md5 8f82446c, 296173 chars)
+PASS judge 3 request posted old = new (md5 df6e00bd, 296081 chars)
+PASS no question round: posted requests old = new
+PASS close batch request 1 sent old = new (md5 bf880f8b, 303645 chars)
+PASS close batch request 2 sent old = new (md5 4022d510, 303647 chars)
+PASS close batch request 3 sent old = new (md5 d36c29e1, 173989 chars)
+PASS close batch request 4 sent old = new (md5 f61a07de, 173991 chars)
+PASS close batch request 5 sent old = new (md5 eb4c79c8, 99 chars)
+PASS retry requests old = new (5)
+PASS Close Enforcer Record prompts old = new (4)
+T2 held: QR Merge 888364 -> 464; Panel Judges Prep 888628 -> 572; Close Enforcer Build + Batch Build 2312882 -> 879891; saved 3208947
+=== ODV1-42071-uclot7fi
+PASS readers: Panel Build as QR-merged, old = new (md5 bd14d700)
+PASS Library key Panel Payloads carries the rebuild at every site
+PASS Library key Alternate Build carries the rebuild at every site
+PASS Library key Panel Cure Build 1 carries the rebuild at every site
+PASS Library key Gate Build carries the rebuild at every site
+PASS child input "Panel Build" piece old = new (md5 45f372f8, 634255 chars)
+PASS judge 1 request posted old = new (md5 f5591520, 211416 chars)
+PASS judge 2 request posted old = new (md5 927ecac0, 211452 chars)
+PASS judge 3 request posted old = new (md5 d15d2c69, 211360 chars)
+PASS no question round: posted requests old = new
+PASS close batch request 1 sent old = new (md5 686d4855, 183755 chars)
+PASS close batch request 2 sent old = new (md5 751d274f, 183757 chars)
+PASS close batch request 3 sent old = new (md5 c8490f2b, 122879 chars)
+PASS close batch request 4 sent old = new (md5 e5356e4d, 122881 chars)
+PASS close batch request 5 sent old = new (md5 eb4c79c8, 99 chars)
+PASS retry requests old = new (5)
+PASS Close Enforcer Record prompts old = new (4)
+T2 held: QR Merge 634201 -> 464; Panel Judges Prep 634465 -> 572; Close Enforcer Build + Batch Build 1479794 -> 559803; saved 2187621
+T1 ALL PASS
