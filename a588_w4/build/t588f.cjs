@@ -48,25 +48,26 @@ const IS={run_token:'t',question_trial:true,qr_follow:true};
 const fb=J(await run(code('QR Follow Build'),{...P1,'Init Seats':IS}));
 const u=fb[0].body.messages;const ut=u[3].content;
 ok(fb.length===3&&ut.indexOf('=== QUESTION ROUND ===')<ut.indexOf('DEBATE TRANSCRIPT')&&ut.includes('Q6 -- judge')&&u[u.length-2].content.includes('=== FOLLOW-UP - BEFORE YOU JUDGE ===')&&u[u.length-2].content.includes('You are judge gemini')&&u[u.length-1].role==='system','T9.7 each judge reads the six questions and answers, then the follow-up ask, under its own seat name');
-ok(u[u.length-2].content.includes('A follow-up does not count as your one question'),'T9.8 the ask says a follow-up does not count as the judge\'s one question');
+ok(u[u.length-2].content.includes('A continuation does not count as your one question')&&u[u.length-2].content.includes('ANOTHER judge')&&u[u.length-2].content.includes('You cannot continue your own question'),'T9.8 the ask: a continuation follows another judge\'s question and does not count as the judge\'s one question (ruling 515)');
 {const off=J(await run(code('QR Follow Build'),{...P1,'Init Seats':{question_trial:true}}));ok(off.length===1&&/off/.test(off[0].qr_skip)&&off[0].body&&off[0].body.max_tokens===16,'T9.9 switch off: a skip item with a 16-token body crosses QR Follow Ask');}
 // T9.10 the checks (F4 a)
 const qa1=J(await run(code('QR Merge'),{...P1,'Init Seats':{run_token:'t',question_trial:true}}))[0].qa;
-const qD1=qa1.find(x=>x.side==='defender'),qC1=qa1.find(x=>x.side==='challenger');
+const qD1=qa1.find(x=>x.side==='defender'&&x.judge==='gemini'),qC1=qa1.find(x=>x.side==='challenger'&&x.judge==='gemini');
 const openD=qD1.quote.split(' ').slice(0,4).join(' ');const valid={defender:{q:'Q'+qD1.n,open:openD},challenger:'NONE'};
 const ff=async reps=>J(await run(code('QR Follow Final'),{...P1,'Init Seats':IS,'QR Follow Build':fb},reps));
-{const o=await ff([mk(valid),mk({defender:'NONE',challenger:'NONE'}),mk({defender:'NONE',challenger:'NONE'})]);const r=o[0].record;
+{const o=await ff([mk({defender:'NONE',challenger:'NONE'}),mk(valid),mk({defender:'NONE',challenger:'NONE'})]);const r=o[0].record;
  ok(o.length===1&&o[0].side==='defender'&&o[0].of===qD1.n&&o[0].question==='Your answer to Q'+qD1.n+' did not answer: "'+openD+'". Please explain that part.'&&o[0].route==='anthropic'&&o[0].body.model==='claude-opus-5-5','T9.10 a valid AGAIN item passes; the program writes: '+o[0].question);
  ok(r.filter(x=>x.status==='NONE').length===5&&r.filter(x=>x.status==='PASSED').length===1,'T9.11 NONE is recorded and asks nothing');
- ok(o[0].body.messages[0].content.includes('Your answer: Defender answer')&&o[0].body.messages[0].content.includes('=== THE FOLLOW-UP OF JUDGE gemini ==='),'T9.12 the debater reads its own question, its answer and the follow-up');}
-const bad=async(f,side,re,what)=>{const o=await ff([mk({defender:'NONE',challenger:'NONE',[side]:f}),mk({defender:'NONE',challenger:'NONE'}),mk({defender:'NONE',challenger:'NONE'})]);const rec=o[0].record.find(x=>x.status==='DROPPED');ok(o[0].qr_skip&&rec&&re.test(rec.faults.join('; ')),'T9.13 known-bad '+what+' is dropped ('+(rec?rec.faults.join('; '):'none')+')');};
+ ok(o[0].body.messages[0].content.includes('Your answer: Defender answer')&&o[0].body.messages[0].content.includes('=== THE FOLLOW-UP OF JUDGE spark ==='),'T9.12 the debater reads its own question, its answer and the follow-up');}
+const bad=async(f,side,re,what,j)=>{const R=[0,1,2].map(()=>mk({defender:'NONE',challenger:'NONE'}));R[j==null?1:j]=mk({defender:'NONE',challenger:'NONE',[side]:f});const o=await ff(R);const rec=o[0].record.find(x=>x.status==='DROPPED');ok(o[0].qr_skip&&rec&&re.test(rec.faults.join('; ')),'T9.13 known-bad '+what+' is dropped ('+(rec?rec.faults.join('; '):'none')+')');};
 await bad({q:'Q99',open:openD},'defender',/Q99 does not exist/,'a Q<n> that does not exist');
 await bad({q:'Q'+qD1.n,open:'words that are not in that question at all'},'defender',/not found word for word/,'a fragment that is not in Q<n>');
 await bad({q:'Q'+qD1.n,open:openD},'challenger',/was put to the defender/,'a Q<n> put to the other debater');
 await bad([{q:'Q'+qD1.n,open:openD},{q:'Q'+qD1.n,open:openD}],'defender',/at most one/,'two follow-ups to one debater');
 await bad({q:'Q'+qD1.n,open:'abc'},'defender',/under 8 characters/,'open words under 8 characters');
+await bad({q:'Q'+qD1.n,open:openD},'defender',/own question.*ruling 515/,'a continuation of the judge\'s OWN question (ruling 515)',0);
 // T9.14 the whole pass, through QR Merge
-const fo=await ff([mk(valid),mk({defender:'NONE',challenger:{q:'Q'+qC1.n,open:qC1.question.slice(0,20)}}),mk({defender:'NONE',challenger:'NONE'})]);
+const fo=await ff([mk({defender:'NONE',challenger:'NONE'}),mk(valid),mk({defender:'NONE',challenger:{q:'Q'+qC1.n,open:qC1.question.slice(0,20)}})]);
 ok(fo.length===2,'T9.14 two follow-ups pass (one to each debater)');
 const fdb=J(await run(code('QR Follow D Build'),{'QR Follow Final':fo}));const fdd=J(await run(code('QR Follow D Done'),{'QR Follow D Build':fdb},fdb.map(()=>an('Defender follow-up answer'))));
 const fcb=J(await run(code('QR Follow C Build'),{'QR Follow Final':fo}));const fcd=J(await run(code('QR Follow C Done'),{'QR Follow C Build':fcb},fcb.map(()=>or('Challenger follow-up answer'))));
@@ -74,7 +75,7 @@ ok(fdb.length===1&&fdb[0].route==='anthropic'&&fcb.length===1&&fcb[0].route==='o
 const M={...P1,'Init Seats':IS,'QR Follow Final':fo,'QR Follow D Done':fdd,'QR Follow C Done':fcd};
 const mg=J(await run(code('QR Merge'),M))[0];
 ok(mg.qr_ok===true&&mg.qa.length===8&&mg.qa.slice(0,6).map(x=>x.n).join()==='1,2,3,4,5,6'&&mg.qa[6].n===7&&mg.qa[6].form==='FOLLOW-UP'&&mg.qa[6].of===qD1.n&&mg.qa[7].answer==='Challenger follow-up answer','T9.16 QR Merge: the six questions stay Q1 to Q6; the follow-ups are Q7 and Q8 (F4: the follow-up does not use the judge\'s one question)');
-ok(mg.qa_text.includes('Q7 -- judge gemini to the defender, FOLLOW-UP to Q'+qD1.n)&&mg.qa_text.includes('A FOLLOW-UP asks again'),'T9.17 the block shows each follow-up with the question it follows');
+ok(mg.qa_text.includes('Q7 -- judge spark to the defender, FOLLOW-UP to Q'+qD1.n)&&mg.qa_text.includes('A FOLLOW-UP asks again'),'T9.17 the block shows each follow-up with the question it follows');
 {const b=mg.judges[0].body.messages[3].content;ok(b.indexOf('=== QUESTION ROUND ===')<b.indexOf('DEBATE TRANSCRIPT\n\n=== [CR1]')&&b.endsWith(T)&&b.split('=== QUESTION ROUND ===').length===2,'T9.18 one block, before the transcript; the transcript unchanged');
  const P=libfn('target_engine_588f.json','Alternate Merge Seat',['ciRounds','gatePromptText2024','cureRounds']);ok(JSON.stringify(P.ciRounds(P.gatePromptText2024(PB.judges[0].body)))===JSON.stringify(P.ciRounds(P.gatePromptText2024(mg.judges[0].body)))&&JSON.stringify(P.cureRounds(PB.judges[0].body))===JSON.stringify(P.cureRounds(mg.judges[0].body)),'T9.19 the round readers read the same eight rounds');}
 {const jcb=code('Judge Contradiction Build');const line=jcb.match(/try\{if\(\$\('QR Merge'\)\.isExecuted\)[^\n]*?catch\(e\)\{\}/)[0];const cand=[];new Function('$','add',line)(n=>({isExecuted:n==='QR Merge',first:()=>({json:mg})}),(...a)=>cand.push(a));ok(cand.length===0,'T9.20 a follow-up is not a contradiction candidate');}

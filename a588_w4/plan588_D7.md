@@ -1,4 +1,4 @@
-# ASK 588 D7: the one continuation (follow-up) pass. Build notes for grading
+# ASK 588 D7: the one continuation (follow-up) pass. Build notes for grading, rev 1 (W1 FAIL Wall 11395 fixed)
 
 W4 (session_01H1X3AP1fjeQaEbxPP9UEZH), 2026-11-24 CST.
 - Operator's choice, 06:01Z 11-24: "One continuation pass". Ruling rows 514 and 515: "is it okay for a judge to ask a continuation question from the previous judge, but the judge still got to keep his original question".
@@ -6,8 +6,10 @@ W4 (session_01H1X3AP1fjeQaEbxPP9UEZH), 2026-11-24 CST.
 - This is a separate write from ASK 588. It is built on the graded 588 targets and has its own switch.
 
 ## 1. WHAT IT DOES
-1. After the six first-pass answers, each of the three judges reads all six questions and answers. Each judge may then put at most one follow-up to each debater.
-2. A follow-up is on a question already put to that debater, whether by this judge or by another judge.
+RULING 515 (the operator's correction, 23:51 CST 11-23): "no, there's no follow-up question ... is it okay for a judge to ask a continuation question from the previous judge, but the judge still got to keep his original question".
+
+1. After the six first-pass answers, each of the three judges reads all six questions and answers. Each judge may then put at most one continuation to each debater.
+2. A continuation is on a question that ANOTHER judge put to that debater. A judge cannot continue its own question; such a continuation is dropped and recorded (ruling 515). The judge keeps its own question.
 3. The judge gives the question number (Q<n>) and copies the words of that question, or of the passage it quotes, that the answer left open. The program writes the follow-up:
    `Your answer to Q<n> did not answer: "<open>". Please explain that part.`
 4. "NONE" asks nothing.
@@ -17,6 +19,7 @@ W4 (session_01H1X3AP1fjeQaEbxPP9UEZH), 2026-11-24 CST.
    - Q<n> was put to that debater;
    - Q<n> has an answer;
    - Q<n> is not itself a follow-up;
+   - Q<n> was asked by another judge, not by this judge (ruling 515);
    - the open words are at least 8 characters and stand word for word in Q<n> or its quoted passage;
    - there is at most one follow-up per debater per judge.
    A follow-up that fails is dropped and recorded. There is no second return.
@@ -30,7 +33,7 @@ W4 (session_01H1X3AP1fjeQaEbxPP9UEZH), 2026-11-24 CST.
 - With the switch off, QR Merge's output is identical to 588's output (test T9.6).
 
 ## 3. CHANGES (on target_engine_588.json 024290a7)
-- Engine target_engine_588f.json is 6e2334ab, with 407 to 420 nodes. The child is unchanged (16ed1670).
+- Engine target_engine_588f.json is 7ede01fb (rev 0 was 6e2334ab), with 407 to 420 nodes. The child is unchanged (16ed1670).
 - Changed: Init Seats and QR Merge only (test T9.5).
 - New (13 nodes):
   - QR Follow Build;
@@ -43,7 +46,7 @@ W4 (session_01H1X3AP1fjeQaEbxPP9UEZH), 2026-11-24 CST.
 - The checks are recorded with pass:'follow' in the review_notes line.
 
 ## 4. CHECKS
-- t588f: 36 PASS (out_t588f.txt). F4 (a) is covered by T9.10 to T9.16. F4 (b) is T6.2 of t588.
+- t588f: 37 PASS (out_t588f.txt). Rev 1 adds the T9.13 known-bad case of a continuation on the judge's own question, and T9.8 now checks the ask text. F4 (a) is covered by T9.10 to T9.16. F4 (b) is T6.2 of t588.
 - Syntax: syn588f, 378 code parts, 0 errors.
 - Library Check pair (588f engine with the 588 child): PASSES.
 
@@ -56,5 +59,5 @@ W4 (session_01H1X3AP1fjeQaEbxPP9UEZH), 2026-11-24 CST.
 - A judge seat that is not an OpenRouter seat skips the follow-up pass, as it skips the round.
 
 ## 7. WRITE AND REVERT
-- The write is separate from 588 and comes after it: base engine = the 588 write, target 6e2334ab.
+- The write is separate from 588 and comes after it: base engine = the 588 write, target 7ede01fb.
 - Revert to the 588 engine, or to 7536d7bf together with the child a7113b8d.

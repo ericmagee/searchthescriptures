@@ -6,7 +6,7 @@ PASS T9.4 qr_follow must be true or false
 PASS T9.5 only Init Seats and QR Merge change among the 588 nodes (Init Seats, QR Merge)
 PASS T9.6 with the follow-up pass off, QR Merge gives exactly the 588 output
 PASS T9.7 each judge reads the six questions and answers, then the follow-up ask, under its own seat name
-PASS T9.8 the ask says a follow-up does not count as the judge's one question
+PASS T9.8 the ask: a continuation follows another judge's question and does not count as the judge's one question (ruling 515)
 PASS T9.9 switch off: a skip item with a 16-token body crosses QR Follow Ask
 PASS T9.10 a valid AGAIN item passes; the program writes: Your answer to Q1 did not answer: "[L1] Matthew 1:18: “Now". Please explain that part.
 PASS T9.11 NONE is recorded and asks nothing
@@ -16,6 +16,7 @@ PASS T9.13 known-bad a fragment that is not in Q<n> is dropped (the open words a
 PASS T9.13 known-bad a Q<n> put to the other debater is dropped (Q1 was put to the defender, not the challenger)
 PASS T9.13 known-bad two follow-ups to one debater is dropped (more than one follow-up for one debater; at most one is allowed)
 PASS T9.13 known-bad open words under 8 characters is dropped (the open words are missing or under 8 characters)
+PASS T9.13 known-bad a continuation of the judge's OWN question (ruling 515) is dropped (Q1 is this judge's own question; a continuation follows another judge's question (ruling 515))
 PASS T9.14 two follow-ups pass (one to each debater)
 PASS T9.15 the follow-ups go by each debater's own route
 PASS T9.16 QR Merge: the six questions stay Q1 to Q6; the follow-ups are Q7 and Q8 (F4: the follow-up does not use the judge's one question)
@@ -34,4 +35,4 @@ PASS T9.26 QR Follow C openrouter is a copy of QR Answer C openrouter
 PASS T9.26 QR Follow D anthropic is a copy of QR Answer D anthropic
 PASS T9.26 QR Follow C anthropic is a copy of QR Answer C anthropic
 PASS T9.27 the follow-up checks go into the record that Build Save Body stores
-RESULT: ALL PASS (36 pass)
+RESULT: ALL PASS (37 pass)
