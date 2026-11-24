@@ -1,0 +1,6 @@
+am_live.js | normal: Pass Accumulate real | debate_id=d-real substitution={"seat":"x"}
+am_live.js | no Pass Accumulate: Alternate Merge 1 only | debate_id=d-am1 substitution={"seat":"y"}
+am_live.js | 41147 retry: Pass Accumulate = recovered placeholder | debate_id=undefined substitution=undefined
+am_585.js | normal: Pass Accumulate real | debate_id=d-real substitution={"seat":"x"}
+am_585.js | no Pass Accumulate: Alternate Merge 1 only | debate_id=d-am1 substitution={"seat":"y"}
+am_585.js | 41147 retry: Pass Accumulate = recovered placeholder | debate_id=d-am1 substitution={"seat":"y"}
