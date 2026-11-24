@@ -3,7 +3,7 @@
  "A1_lib": 20,
  "A1_map": 5,
  "oldsha": "0e1cce8f1b596ea4",
- "newsha": "8b747ad90dfcf19b",
+ "newsha": "305a1bcec07773d3",
  "map_touched": [
   "Alt Gate Build 261424->261412",
   "Alt Gate Record 338718->338676",
@@ -11,19 +11,19 @@
   "Alt Send Back Build 185450->185965",
   "Alt Send Back Record 199765->200262",
   "Alternate Merge 1 191693->191679",
-  "Alternate Merge Seat 403381->403802",
-  "Cure Check 305676->305994",
+  "Alternate Merge Seat 403381->404073",
+  "Cure Check 305676->306265",
   "Gate Build 261757->261745",
   "Gate Record 339029->338987",
   "Judge Enforcer Build 130779->130573",
-  "Panel Cure Check 304708->305012",
+  "Panel Cure Check 304708->305283",
   "R2 Alt Gate Build 261445->261433",
   "R2 Alt Gate Record 338754->338712",
   "R2 Alt Judge Enforcer Build 143909->143703",
   "R2 Alt Send Back Build 185422->185937",
   "R2 Alt Send Back Record 199819->200316",
   "R2 Alternate Merge 191753->191739",
-  "R2 Alternate Merge Seat 403405->403826",
+  "R2 Alternate Merge Seat 403405->404097",
   "Send Back Build 185552->186067",
   "Send Back Record 199805->200302",
   "Late Gate Build 319659->319647",
@@ -60,15 +60,15 @@
   "2679 98b62c64->53c2a74d",
   "2680 0e145bda->237fc9bd",
   "3497 f4cfc60b->4f1bd886",
-  "1345 ef4facd8->01dcff50",
-  "1363 e755e464->887fc04e",
+  "1351 72bd8443->4a34cc0c",
+  "1363 e755e464->b1765a8d",
   "1588 6a24b3df->371fa97e"
  ],
- "node": "Shared Library d749630c->d293b4d9",
+ "node": "Shared Library d749630c->eb4582bd",
  "nodes": [
   "Reread Record 3f7bdf9e->9d506a0f",
   "Alt Reread Record e56f5714->4283a2e0"
  ],
  "caps_left": 0
 }
-{"child_edits":39,"child_map_edits":5,"newsha":"8b747ad90dfcf19b","map_touched":["Alt Gate Build 261424->261412","Alt Gate Record 338718->338676","Alt Judge Enforcer Build 143864->143658","Alt Send Back Build 185450->185965","Alt Send Back Record 199765->200262","Alternate Merge 1 191693->191679","Alternate Merge Seat 403381->403802","Cure Check 305676->305994","Gate Build 261757->261745","Gate Record 339029->338987","Judge Enforcer Build 130779->130573","Panel Cure Check 304708->305012","R2 Alt Gate Build 261445->261433","R2 Alt Gate Record 338754->338712","R2 Alt Judge Enforcer Build 143909->143703","R2 Alt Send Back Build 185422->185937","R2 Alt Send Back Record 199819->200316","R2 Alternate Merge 191753->191739","R2 Alternate Merge Seat 403405->403826","Send Back Build 185552->186067","Send Back Record 199805->200302","Late Gate Build 319659->319647","Alt Late Gate Build 319318->319306","R2 Alt Late Gate Build 319333->319321"],"node":"Shared Library 6d92bf4e->e99334e5","child_reread_nodes":["Reread Record 3f7bdf9e->9d506a0f","Alt Reread Record e56f5714->4283a2e0","R2 Alt Reread Record 36a70121->f6e6bbaa"]}
+{"child_edits":39,"child_map_edits":5,"newsha":"305a1bcec07773d3","map_touched":["Alt Gate Build 261424->261412","Alt Gate Record 338718->338676","Alt Judge Enforcer Build 143864->143658","Alt Send Back Build 185450->185965","Alt Send Back Record 199765->200262","Alternate Merge 1 191693->191679","Alternate Merge Seat 403381->404073","Cure Check 305676->306265","Gate Build 261757->261745","Gate Record 339029->338987","Judge Enforcer Build 130779->130573","Panel Cure Check 304708->305283","R2 Alt Gate Build 261445->261433","R2 Alt Gate Record 338754->338712","R2 Alt Judge Enforcer Build 143909->143703","R2 Alt Send Back Build 185422->185937","R2 Alt Send Back Record 199819->200316","R2 Alternate Merge 191753->191739","R2 Alternate Merge Seat 403405->404097","Send Back Build 185552->186067","Send Back Record 199805->200302","Late Gate Build 319659->319647","Alt Late Gate Build 319318->319306","R2 Alt Late Gate Build 319333->319321"],"node":"Shared Library 6d92bf4e->2636529c","child_reread_nodes":["Reread Record 3f7bdf9e->9d506a0f","Alt Reread Record e56f5714->4283a2e0","R2 Alt Reread Record 36a70121->f6e6bbaa"]}

@@ -25,11 +25,14 @@ PASS control: when the judge does write a D5 collision line, the target still de
 PASS 53360: the judge changed to the first reading's own grade (STANDS): not counted, RECORD-ONLY
 PASS control: a changed line that does not carry the first reading's grade is still counted
 PASS E-RES: same rule on the RESULT word
-== D. Recompute standing (spark 1273, qwen4max 1274: CHALLENGE PROP-DEPENDENT 0, C1 counted as one CHALLENGER LINK BROKEN)
-PASS known-bad: live recomputes CHALLENGE SELF-SUPPORTED (as written in 1273 and 1274)
-PASS target keeps CHALLENGE PROP-DEPENDENT
-PASS control: with no counted break live and target agree
-PASS D2: the recompute line prints its standing inputs
+== D. Recompute (spark 1273, qwen4max 1274: CHALLENGE c=0; C1 counted as one CHALLENGER LINK BROKEN with no collision line; W1 11330 F1)
+PASS the standing stays on the count in both (08.0, ASK 517, the operator on 41117): live SELF-SUPPORTED, target SELF-SUPPORTED
+   RESULT (LIB 1351 with rd386): live CHALLENGER WINS, target UNDERDETERMINED (each judge wrote RESULT: UNDERDETERMINED)
+PASS known-bad: live writes RESULT CHALLENGER WINS (as on 1273 and 1274)
+PASS target writes UNDERDETERMINED: the counted break blocks CHALLENGER WINS
+PASS control: with no counted unnamed break live and target agree (CHALLENGER WINS)
+PASS D2: the recompute line prints its inputs
+PASS LIB 1345 (stand) is unchanged
 == E. Removal reason tally (Alternate Merge Seat)
 PASS known-bad: live tallies a send-back item line as an UNREAD COUNTED LINE
 PASS target does not

@@ -50,12 +50,16 @@ console.log('== C2. Second reading of argon (enforcer log 53360)');
  ok(fr({rule:'E-KEY',reason:A.first_reading_53360.replace('right: STANDS','right: BROKEN'),to:A.keystone_53360})===false,'control: a changed line that does not carry the first reading\'s grade is still counted');
  ok(fr({rule:'E-RES',reason:'(right: UNDERDETERMINED): x',to:'RESULT: UNDERDETERMINED -- y'})===true&&fr({rule:'E-RES',reason:'(right: UNDERDETERMINED): x',to:'RESULT: CHALLENGER WINS -- y'})===false,'E-RES: same rule on the RESULT word');}
 
-console.log('== D. Recompute standing (spark 1273, qwen4max 1274: CHALLENGE PROP-DEPENDENT 0, C1 counted as one CHALLENGER LINK BROKEN)');
-{const mk=X=>new Function('c','brk','orig','const P={st:{}};const unk=[];const Lof=k=>null;'+X.L[1345]+'\n'+X.L[1346]+'\nreturn stand("CHALLENGER","CHALLENGE",orig);');
- const a=mk(LV)({DEFENDER:1,CHALLENGER:0},{DEFENDER:3,CHALLENGER:1},'PROP-DEPENDENT'),b=mk(TG)({DEFENDER:1,CHALLENGER:0},{DEFENDER:3,CHALLENGER:1},'PROP-DEPENDENT');
- ok(a==='SELF-SUPPORTED','known-bad: live recomputes CHALLENGE SELF-SUPPORTED (as written in 1273 and 1274)');ok(b==='PROP-DEPENDENT','target keeps CHALLENGE PROP-DEPENDENT');
- ok(mk(TG)({DEFENDER:0,CHALLENGER:0},{DEFENDER:0,CHALLENGER:0},'PROP-DEPENDENT')===mk(LV)({DEFENDER:0,CHALLENGER:0},{DEFENDER:0,CHALLENGER:0},'PROP-DEPENDENT'),'control: with no counted break live and target agree');
- ok(TG.L[1363].includes("STANDING INPUTS: DEFENDER conceded '+c.DEFENDER+', counted breaks '+brk.DEFENDER"),'D2: the recompute line prints its standing inputs');}
+console.log('== D. Recompute (spark 1273, qwen4max 1274: CHALLENGE c=0; C1 counted as one CHALLENGER LINK BROKEN with no collision line; W1 11330 F1)');
+{const st=X=>new Function('c','brk','orig','const P={st:{}};const unk=[];const Lof=k=>null;'+X.L[1345]+'\n'+X.L[1346]+'\nreturn stand("CHALLENGER","CHALLENGE",orig);');
+ const sl=st(LV)({DEFENDER:1,CHALLENGER:0},{DEFENDER:3,CHALLENGER:1},'PROP-DEPENDENT'),stt=st(TG)({DEFENDER:1,CHALLENGER:0},{DEFENDER:3,CHALLENGER:1},'PROP-DEPENDENT');
+ ok(sl==='SELF-SUPPORTED'&&stt==='SELF-SUPPORTED','the standing stays on the count in both (08.0, ASK 517, the operator on 41117): live '+sl+', target '+stt);
+ const res=(X,cecC)=>new Function('cecC',X.L[1286]+'\nconst word="BROKEN",cst="SELF-SUPPORTED",dst="PROP-DEPENDENT",c={DEFENDER:1,CHALLENGER:0},__c400=[{link:"D3 vs C1",grade:"DEFENDER LINK BROKEN"}],__R399=[],__cecX={DEFENDER:0,CHALLENGER:cecC},trig=[];\n'+X.L[1351]+'\nreturn res;')(cecC);
+ const rl=res(LV,1),rt=res(TG,1);console.log('   RESULT (LIB 1351 with rd386): live '+rl+', target '+rt+' (each judge wrote RESULT: UNDERDETERMINED)');
+ ok(rl==='CHALLENGER WINS','known-bad: live writes RESULT CHALLENGER WINS (as on 1273 and 1274)');ok(rt==='UNDERDETERMINED','target writes UNDERDETERMINED: the counted break blocks CHALLENGER WINS');
+ ok(res(LV,0)===res(TG,0),'control: with no counted unnamed break live and target agree ('+res(TG,0)+')');
+ ok(TG.L[1363].includes("RESULT INPUTS: counted breaks no collision line names: DEFENDER '+__cecX.DEFENDER"),'D2: the recompute line prints its inputs');
+ ok(LV.L[1345]===TG.L[1345],'LIB 1345 (stand) is unchanged');}
 
 console.log('== E. Removal reason tally (Alternate Merge Seat)');
 {const mk=X=>new Function('raw',"const T={};const add=(k,n)=>{T[k]=(T[k]||0)+n;};const isLive=()=>true;const __gOff={};const __gN=x=>x;const top=(s)=>1;\n"+X.L[1581]+'\n'+X.L[1582]+'\n'+X.L[1583]+'\n'+X.L[1584]+'\n'+X.L[1585]+'\n'+X.L[1586]+'\n'+X.L[1587]+'\n'+X.L[1588]+'\nreturn T;');
