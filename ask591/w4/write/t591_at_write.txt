@@ -1,0 +1,9 @@
+PASS T1 with the seeded order, Init Seats gives the live engine's whole output in all 360 cases (10 debaters, every ordered pair, 4 fault-ledger states)
+PASS T2.js 1800 expected line-ups written to t2_cases.json; sonnet is never the single judge (0); errors 0
+PASS T4.1 every path from Debate Start and Manual Start to any HTTP call node, Accept Build or Init Seats passes Judge Order Read
+PASS T4.2 the read node has no onError (a failed read stops the run), retries 3 times, runs once
+PASS T4.3 Init Seats stops with the JUDGE ORDER message when the read did not run, gave under three panel seats, or no list
+PASS T4.4 Accept Build asks the agreement of the table's seats in its order less the debaters (chatgpt, sol, sol62, spark, qwen4max, argon, sonnet), and stops with the JUDGE ORDER message without the read
+PASS T5 Build Save Body is downstream of Init Seats and writes: "\n\n[JUDGE ORDER v1: panel list chatgpt, sol, sol62; alternates list gemini, spark, qwen4max, argon, sonnet | SEATED: panel gemini, spark, qwen4max; reserve argon; alternates argon; single judge gemini]"
+PASS T6 changed or added nodes: Accept Build, Build Save Body, Init Seats, Judge Order Read; nodes 422 -> 423
+RESULT: ALL PASS (8 pass)

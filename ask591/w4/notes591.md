@@ -26,3 +26,11 @@ Plan: ask591/w3/plan591.md rev 4 (W1 PASS). LIVE use (ruling 512); the tests bel
 ## Order of the writes (three cards)
 1. Migration (SQL, one call). 2. Engine (write591.sh) right after, on the migration's readback. 3. Dashboard deploy.
 - Writing the engine on base C makes the J3 write script refuse; J3 is then re-cut on 591 (or J3 goes first and base D is used).
+
+## Written live (2026-11-24, card "Write all three", 14:51 UTC)
+- Database: mig591.sql adbadc73 applied; odv1_judge_order seeded (version 1); dash_api 9888582a -> a866c092.
+- Engine: 489b977b -> 347f3e21 (423 nodes); child e086bb3a untouched; LIB b243080d9bd0b10c. At write: t591 8 PASS, standing 29/29, pair PASS; fetch-back equals target (write/fetchback_eng591.json).
+- Dashboard: production dpl_F4JdWAFWSHCAodqrBa4MtnkpwDA9 -> dpl_GfY2EAHyqufMAeza4eBTW6z6jGhm (judge591.js added, patch.js, odv1.js).
+- T7 real screenshots: dash/t7_order_and_lineup_chatgpt_claude.png, dash/t7_lineup_sol62_gemini.png.
+- Audit 41446; Wall 11543. Revert: write/revert591.sql, write/revert_eng591.json, dashboard back to F4Jd.
+- Open: W1 readback; first live run shows the [JUDGE ORDER v1] review line. J3 write script (base C) now refuses: re-cut on 347f3e21.
