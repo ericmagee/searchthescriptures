@@ -1,0 +1,8 @@
+{
+ "04.0": [
+  {
+   "old": "The request bodies of 38 OpenRouter request nodes (34 Call openrouter nodes, Panel Reserve openrouter, QR Ask, QR Retry Ask and QR Answer), Panel Judges Prep and Early Alternate Build pass a grok (x-ai) reply's own reasoning_details back to it on the next turn, which sets nothing.",
+   "new": "51 nodes send a request to OpenRouter: 43 nodes named \"... Call openrouter\", Panel Reserve openrouter, and the seven question round nodes QR Ask, QR Retry Ask, QR Answer, QR Answer C openrouter, QR Follow Ask, QR Follow D openrouter and QR Follow C openrouter. Seven other nodes named \"... Call openrouter\" send nothing themselves: the code nodes Enforcer Call, Anticheat Call, Judge Enforcer Call, Close Enforcer Call and Assume Check Call, and the sub-workflow calls Cure Call and Alternate Cure Call. The parameters of 38 of the 51 request nodes, and Panel Judges Prep and Early Alternate Build, pass a grok (x-ai) reply's own reasoning_details back to it on the next turn, which sets nothing. The parameters of the other 13 do not hold the pass-back: Alt Judge Enforcer Call, Judge Enforcer Retry Call, Alt Judge Enforcer Retry Call, Enforcer Retry Call, Judge Contradiction Call, Reread Call, Alt Reread Call, Enforcer Resend Call, Judge Enforcer Resend Call, Alt Judge Enforcer Resend Call, Close Group Batch Call, Enforcer Group Batch Call and Close Group Retry Call (each \"... openrouter\"); a body built upstream of one of these may carry it. The four direct Anthropic nodes of the question round (QR Answer D anthropic, QR Answer C anthropic, QR Follow D anthropic and QR Follow C anthropic) send model, max_tokens, system and messages only."
+  }
+ ]
+}
