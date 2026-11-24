@@ -1,0 +1,75 @@
+{
+ "mode": "lines as stored in the log (cut at 1,500)",
+ "pre-587 (196402d0)": {
+  "applied": [
+   "S1",
+   "S2",
+   "S3",
+   "S4",
+   "S5",
+   "S6",
+   "S7",
+   "S8",
+   "S9",
+   "S10",
+   "S11",
+   "S14",
+   "S15",
+   "S17"
+  ],
+  "not_applied": [
+   "S13 NOT APPLIED: the CHANGE TO line has no line form the engine reads; a retraction is written \"RETRACTED: "
+  ],
+  "items": [
+   "S13 NOT APPLIED",
+   "S16 RESULT DIFFERS"
+  ],
+  "fields": {
+   "verdict_tag": "HELD",
+   "defense_standing": "PROP-DEPENDENT",
+   "conceded_links": 1,
+   "challenge_standing": "SELF-SUPPORTED",
+   "challenger_conceded_links": 0
+  },
+  "result": "DEFENDER WINS",
+  "judge_line": "RESULT: CHALLENGER WINS -- The scriptures testify that Chris",
+  "v61_word": "DEFENDER WINS",
+  "v61": "[AUDIT v61: ENGINE RESULT -- SEAT: gemini; WORD: DEFENDER WINS; RULE: engine_manual section 8, STANDINGS, RESULT and VERDICT DEFINITIONS, then the tie rule KB-0030; INPUTS: VERDICT HELD, DEFENSE STANDING PROP-DEPENDENT, CHALLENGE STANDING SELF-SUPPORTED, CONCEDED 1 and 0, BROKEN LINES D3 vs C1 CHALLENGER LINK BROKEN; END]"
+ },
+ "587 live (7536d7bf)": {
+  "applied": [
+   "S1",
+   "S2",
+   "S3",
+   "S4",
+   "S5",
+   "S6",
+   "S7",
+   "S8",
+   "S9",
+   "S10",
+   "S11",
+   "S14",
+   "S15",
+   "S17"
+  ],
+  "not_applied": [
+   "S13 NOT APPLIED: the CHANGE TO line has no line form the engine reads; a retraction is written \"RETRACTED: "
+  ],
+  "items": [
+   "S13 NOT APPLIED",
+   "S16 RESULT DIFFERS"
+  ],
+  "fields": {
+   "verdict_tag": "HELD",
+   "defense_standing": "PROP-DEPENDENT",
+   "conceded_links": 1,
+   "challenge_standing": "SELF-SUPPORTED",
+   "challenger_conceded_links": 0
+  },
+  "result": "DEFENDER WINS",
+  "judge_line": "RESULT: CHALLENGER WINS -- The scriptures testify that Chris",
+  "v61_word": "DEFENDER WINS",
+  "v61": "[AUDIT v61: ENGINE RESULT -- SEAT: gemini; WORD: DEFENDER WINS; RULE: engine_manual section 8, STANDINGS, RESULT and VERDICT DEFINITIONS, then the tie rule KB-0030; INPUTS: VERDICT HELD, DEFENSE STANDING PROP-DEPENDENT, CHALLENGE STANDING SELF-SUPPORTED, CONCEDED 1 and 0, BROKEN LINES D3 vs C1 CHALLENGER LINK BROKEN; END]"
+ }
+}
