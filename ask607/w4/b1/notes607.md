@@ -1,7 +1,7 @@
 # ASK 607 BUILD rev 0 (W4): a gate change the engine cannot read is recorded, not counted
 
 Plan: ask607/w4/plan607.md 34db6c5d (W1 PASS with N1, Wall 11733). Ruling: "Record-only, as ASK 549", pressed 15:33 CST 11-24.
-Base: live engine 94b682a0 and child b9cd4e5c, fetched 15:50:53 to 15:50:57 CST 11-24 (base_*.json; file times). Corrected 16:35 CST: rev 0 said "about 16:10", which was wrong. LIB 802077b0878612c9.
+Base: live engine 94b682a0 and child b9cd4e5c, fetched 15:50:53 to 15:50:57 CST 11-24 (base_*.json; file times). Corrected 16:33 CST: rev 0 said "about 16:10", which was wrong. LIB 802077b0878612c9.
 
 ## The change (build607.cjs)
 One Library line (LIB 1434, the same in engine and child), in sbApply2024's form refusal:
