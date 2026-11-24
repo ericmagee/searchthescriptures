@@ -1,0 +1,20 @@
+// ASK 575 offline build (W1 planning evidence; W4 rebuilds on a fresh live readback before any write).
+// Each distinct Accept POSTURE text gets one MAP entry built from the LIB lines that already hold it; a line not in LIB is carried in the entry as a literal ["text"]. No LIB line is added; the LIB sha is unchanged. Each of the 5 Accept nodes replaces its POSTURE statement with a loader.
+const fs=require('fs');const E=JSON.parse(fs.readFileSync('../a573/base_engine_d8292f62.json'));const T0=JSON.parse(fs.readFileSync('posture_texts.json'));
+const KEY={'Accept Build':'POSTURE Accept Build','Accept Check':'POSTURE Accept Check','Accept Return Build':'POSTURE Accept Return Build','Accept DS Return Build':'POSTURE Accept Return Build','Accept Final':'POSTURE Accept Final'};
+const loader=k=>"const POSTURE=(T=>{const L=JSON.parse(T.slice(T.indexOf('\\n/*LIB*/')+8,T.lastIndexOf('\\n/*MAP*/')));const M=JSON.parse(T.slice(T.lastIndexOf('\\n/*MAP*/')+8,T.lastIndexOf('\\n/*END*/')))["+JSON.stringify(k).replace(/"/g,"'")+"];if(!M)throw new Error('ASK 575: the Shared Library holds no "+k+" entry');const S=M.p.map(e=>typeof e==='number'?L[e]:typeof e[0]==='string'?e[0]:L.slice(e[0],e[1]+1).join('\\n')).join('\\n');if(S.length!==M.n)throw new Error('ASK 575: rebuilt "+k+" is '+S.length+', expected '+M.n);return new Function(S+'\\nreturn POSTURE;')();})($('Shared Library').params.jsCode);";
+const n=E.nodes.find(x=>x.name==='Shared Library');const c=n.parameters.jsCode;const a=c.indexOf('\n/*LIB*/'),b=c.lastIndexOf('\n/*MAP*/'),e=c.lastIndexOf('\n/*END*/');
+const L=JSON.parse(c.slice(a+8,b));const M=JSON.parse(c.slice(b+8,e));const idx=new Map();L.forEach((x,i)=>{if(!idx.has(x))idx.set(x,i)});
+const stat=[];
+for(const [node,k] of Object.entries(KEY)){if(M[k])continue;const t=T0['E:'+node];const p=[];let lit=0;
+ for(const ln of t.split('\n')){if(idx.has(ln)){const i=idx.get(ln);const last=p[p.length-1];if(Array.isArray(last)&&typeof last[0]==='number'&&last[1]===i-1)last[1]=i;else if(typeof last==='number'&&last===i-1)p[p.length-1]=[last,i];else p.push(i)}else{p.push([ln]);lit+=ln.length}}
+ M[k]={n:t.length,p};stat.push(k+': n '+t.length+', entries '+p.length+', literal chars '+lit);}
+n.parameters.jsCode=c.slice(0,a)+'\n/*LIB*/'+JSON.stringify(L)+'\n/*MAP*/'+JSON.stringify(M)+c.slice(e);
+const done=[];for(const [node,k] of Object.entries(KEY)){const x=E.nodes.find(q=>q.name===node);const s=x.parameters.jsCode;const t=T0['E:'+node];if(s.split(t).length!==2)throw new Error(node+' copies');x.parameters.jsCode=s.replace(t,()=>loader(k));done.push(node+' '+s.length+'->'+x.parameters.jsCode.length)}
+fs.writeFileSync('target_engine_575.json',JSON.stringify(E));console.log(stat.join('\n'));console.log(done.join('\n'));
+const B=JSON.parse(fs.readFileSync('../a573/base_engine_d8292f62.json'));const code=w=>w.nodes.reduce((a,q)=>a+((q.parameters&&q.parameters.jsCode)||'').length,0);console.log('engine code',code(B),'->',code(E),'delta',code(E)-code(B),'| MAP growth',JSON.stringify(M).length-c.slice(b+8,e).length);
+// Child: the same four MAP entries are added to the child's Shared Library, so the engine-child MAP drift check (Library Sha / child Library Check, ASK 422a) still matches. The child has no Accept node; the entries are unused there.
+{const C=JSON.parse(fs.readFileSync('../a573/base_child_de9efc4e.json'));const cn=C.nodes.find(x=>x.name==='Shared Library');const cc=cn.parameters.jsCode;const ca=cc.indexOf('\n/*LIB*/'),cb=cc.lastIndexOf('\n/*MAP*/'),ce=cc.lastIndexOf('\n/*END*/');
+ const CL=JSON.parse(cc.slice(ca+8,cb));if(JSON.stringify(CL)!==JSON.stringify(L))throw new Error('child LIB differs');const CM=JSON.parse(cc.slice(cb+8,ce));for(const k of new Set(Object.values(KEY)))CM[k]=M[k];
+ cn.parameters.jsCode=cc.slice(0,ca)+'\n/*LIB*/'+JSON.stringify(CL)+'\n/*MAP*/'+JSON.stringify(CM)+cc.slice(ce);fs.writeFileSync('target_child_575.json',JSON.stringify(C));
+ const B=JSON.parse(fs.readFileSync('../a573/base_child_de9efc4e.json'));const code=w=>w.nodes.reduce((a,q)=>a+((q.parameters&&q.parameters.jsCode)||'').length,0);console.log('child code',code(B),'->',code(C),'delta',code(C)-code(B));}
