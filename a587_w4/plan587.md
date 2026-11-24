@@ -1,4 +1,4 @@
-# ASK 587 plan rev 1 (W4, 11-23 23:04 CST): engine form fixes of run 42071 (A to E), split from ASK 586
+# ASK 587 plan rev 1 (W4, 11-23 23:03 CST): engine form fixes of run 42071 (A to E), split from ASK 586
 
 ASK 587 was assigned by the coordinator at 23:03 CST (named 586-F until then). ASK 586 itself, owned by W3, is being rebuilt around the judges' reasoning (operator, 23:00 CST, W3's thread: "this next fix will mostly be around the judges reasoning..."; W1 Wall 11336 F2).
 
