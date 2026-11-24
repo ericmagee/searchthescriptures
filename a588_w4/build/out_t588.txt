@@ -1,0 +1,77 @@
+PASS T0.1 Init Seats: the dry-only gate is gone
+PASS T0.2 Init Seats: on by default on a fresh run, opt-in on a regrade
+PASS T0.3 the default rule: fresh undefined on, fresh false off, regrade undefined off, regrade true on
+PASS T0.4 QR Ask Build: no dry gate
+PASS T0.5 no "(TRIAL)" label in the question round text
+PASS T0.6 QR Answer D Done is fed by the anthropic, the openrouter and the skip branch
+PASS T0.7 QR Answer C Done likewise
+PASS T0.8 QR Merge has one parent and its output is unchanged (to Panel Judges Prep)
+PASS T0.9 QR Trial? unchanged: false goes straight to Panel Judges Prep
+PASS T0.10 QR Answer D anthropic: the direct Anthropic route, the debater credential, errors continue
+PASS T0.10 QR Answer C anthropic: the direct Anthropic route, the debater credential, errors continue
+PASS T0.11 QR Answer C openrouter is a copy of QR Answer
+PASS T0.12 the route switch: anthropic 0, openrouter 1, anything else 2
+PASS T1.1 QR Ask Build asks each judge in the fixed forms
+PASS T1.2 the MEANING wording is ruling 414 item 2, with plain quotation marks
+PASS T1.3 known-bad term_not_in_quote is returned once (the term "zzzzqq" does not stand in the quotation)
+PASS T1.3 known-bad verse_not_in_quote is returned once (the verse Genesis 1:1 is not named in the quotation)
+PASS T1.3 known-bad quote_not_found is returned once (the quotation is not found word for word in CR3)
+PASS T1.3 known-bad agree_not_closing is returned once (an AGREE question quotes the closing round CR4, not "CR3")
+PASS T1.3 known-bad earlier_on_meaning is returned once (earlier_round and earlier_quote belong only to an AGREE question)
+PASS T1.3 known-bad free_form is returned once (form "FREE" is not one of MEANING, FIT, AGREE)
+PASS T1.4 known-goods pass: MEANING, FIT and AGREE
+PASS T1.5 known-bad: a verse the debater never cited and the quote does not name is returned
+PASS T2.1 QR Check: judge 1 returned, judges 2 and 3 not
+PASS T2.2 QR Final: the defender answers by the direct Anthropic route, model claude-opus-5-5 (B3)
+PASS T2.3 QR Final: the challenger answers by OpenRouter with its own model
+PASS T2.4 the program writes the question: "What does "Matthew" in this passage mean?" / "How does this passage fit Matthew 1:18?"
+PASS T2.5 the record holds six questions; both of judge 1's questions passed on return (a returned judge answers both again, as live)
+PASS T2.6 D stage: three defender items on route anthropic
+PASS T2.7 C stage: three challenger items on route openrouter
+PASS T2.8 QR Merge: qr_ok, six answers read from both reply shapes
+PASS T2.9 a verse the debater never cited is marked NEW VERSE, NOT COUNTED
+PASS T2.10 the block stands before the transcript; the transcript is unchanged to its end
+PASS T2.11 no line of the block reads as a round header (an answer line "[DR4]" is quoted)
+PASS T2.12 D1 option A: the block no longer says an answer counts as a concession (known-bad of the trial text)
+PASS T2.13 control: the live trial text holds the sentence that A removes
+PASS T3.1 ciRounds: the same eight rounds
+PASS T3.2 cureRounds: the same eight rounds
+PASS T3.3 drvLedgerN: the same
+PASS T3.4 control: the block placed after the transcript would change the last round, so the place matters
+PASS T4.1 Send Back Build: every Panel Build read goes through the QR Merge swap
+PASS T4.1 Gate Build: every Panel Build read goes through the QR Merge swap
+PASS T4.1 Late Gate Build: every Panel Build read goes through the QR Merge swap
+PASS T4.1 Panel Cure Build 1: every Panel Build read goes through the QR Merge swap
+PASS T4.1 Panel Cure Build 2: every Panel Build read goes through the QR Merge swap
+PASS T4.1 Panel Cure Build 3: every Panel Build read goes through the QR Merge swap
+PASS T4.1 Alternate Build: every Panel Build read goes through the QR Merge swap
+PASS T4.1 Panel Payloads: every Panel Build read goes through the QR Merge swap
+PASS T4.1 Alternate Merge Seat: every Panel Build read goes through the QR Merge swap
+PASS T4.1 Alt Gate Build: every Panel Build read goes through the QR Merge swap
+PASS T4.1 Alt Late Gate Build: every Panel Build read goes through the QR Merge swap
+PASS T4.2 Reserve Build: the read goes through the swap
+PASS T4.2 Panel Check: the read goes through the swap
+PASS T4.3 every engine library node that reads QR Merge declares it (23)
+PASS T4.4 the swap gives the merged bodies (marker in all three)
+PASS T4.5 qr_ok false: the plain Panel Build
+PASS T4.6 the child, which has no QR Merge node: the plain shim (already swapped by the pass)
+PASS T4.7 the round off: the plain Panel Build
+PASS T4.8 the alternate pass hands the child the merged Panel Build (R2 Alternate Build, R2 send-back, gate)
+PASS T4.9 the alternate pass with no round: the plain Panel Build
+PASS T4.10 Panel Judges Prep: merged only on qr_ok
+PASS T5.1 round off: QR Ask Build passes a skip
+PASS T5.2 a fault in QR Ask Build is a skip, not a stop
+PASS T5.3 QR Check passes the skip on
+PASS T5.4 QR Final passes the skip on
+PASS T5.5 D stage routes the skip to its Done node
+PASS T5.6 QR Merge: qr_ok false, the run goes on with the plain bodies (QR Merge: QR Ask Build: Panel Build has 2 judges, expected 3)
+PASS T5.7 every question dropped: skip, with the six-question record kept
+PASS T5.8 a debater family with no route: that side skipped and recorded
+PASS T5.9 ... and the other side's three answers still go to the judges
+PASS T5.10 a body with no transcript anchor: skip, never a block in the wrong place
+PASS T5.11 a failed answer call is recorded "(no answer)" and the round goes on
+PASS T6.1 the row line: RAN or SKIPPED on one line; nothing when the round is off
+PASS T6.2 the review_notes readers (C4P.stored, the SYNTHESIS CHECK and REMOVED SEAT readers of Format Markdown) give the same output with and without the line
+PASS T7.1 the engine and the child hold the same LIB
+PASS T7.2 the child gains no node
+RESULT: ALL PASS (76 pass)

@@ -113,3 +113,13 @@ The program then writes the question itself: `What does "<word or step>" in this
 4. The card states D7, the follow-up pass, as the build of his piggyback ruling.
 
 Revert: put back the engine 7536d7bf and the child a7113b8d together.
+
+## REV 1 NOTES (W4, after W1's grade at Wall 11386 and the build)
+1. F1: the card quotes ruling 414(1), "the answer is read with the round it came from", and says that option A narrows it: an answer is read with its round as an explanation, and it is never counted as a round.
+2. F2: D3, the contradiction form AGREE, is on the card as the operator's choice. The build has a switch for it (`--no-agree`), so it can be dropped with no other change.
+3. F3: D7 is not in this build. The operator clarified at 23:51 CST (row 515) that a later judge may ask a continuation of an earlier judge's question and still keeps its own question. His card offers: in turn, one continuation pass, or not now. D7 is built after his choice, behind its own switch, and its F4 tests go with it.
+4. The single judge: Build Independent Verdict has no parent in the live graph, so it never runs and is not changed.
+5. Alternates and the child: Alternate Build takes its prompt from a panel judge's body, so the swap covers it. The child receives the merged Panel Build through the Alternate Pass Call (its "Panel Build" shim), so R2 Alternate Build and the R2 send-back and gate get the answers with no child node change. The child's Shared Library changes only to keep the same LIB.
+6. Where the block goes: before the transcript ("DEBATE TRANSCRIPT"), not after it. Placed after it, the block would join the last round [DR4] in every round reader (T3.4). A body with no transcript anchor skips the round.
+7. Existing behaviour kept: a judge returned once answers both of its questions again (T2.5).
+8. Build: build/build588.cjs; tests t588.cjs (76 PASS, out_t588.txt); syn588 (372 sources parse); Library Check pair PASSES (LIB 14d848a99adaf445, MAP 3675b0b63c7c05f7).
