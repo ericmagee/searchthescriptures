@@ -9,3 +9,8 @@ Files: fix1.sql f29b7095, test_fix1.sql 7c4a4442, build_fix1.cjs f0e158b7, targe
 - Page: judge591.js differs only by the deleted "Single judge" row.
 - write_fix1.sh: bash -n clean; run gate, base check on 137378eb, standing at write, PUT, fetch back.
 - F1 (not this fix; for ASK 598): Build Save Body still carries three single-judge texts in the RVW review-note rewrite ("SINGLE JUDGE (second opinion)", "KEPT IN THE SINGLE JUDGE'S TEXT", "CURED by the single judge's cure reply"). With the chain off they should not fire, but they are text for a chain that no longer runs; add them to ASK 598's list with Init Seats' single_judge field.
+
+## READBACK of the live write (Wall 11556, audit 41463), 09:25 CST: MATCH
+- Engine: my fetch v6834c21b-8fd8-45df-9a74-ea1a04dc7641 (createdAt 15:22:12.680Z; updatedAt 15:22:12.656Z), 423 nodes. Target vs live 0 diffs; fetch-back vs live 0; vs 137378eb only Build Save Body. Standing 29/29; pair PASS LIB 47a39128fec62d31. Child ecdc6218 untouched (updatedAt 15:16:48.953Z).
+- Database: dash_judge_lineup def md5 caea9e6c, length 5414 = my computed length after the 4 replacements; no "single", no sj.
+- Dashboard: alias truth-app-dashboard.vercel.app -> dpl_AJ7NzE2AUALvibHUT83ez7WgPomX; judge591.js sha1 b00c6868 = fix1/judge591.js; the other 7 files unchanged from GfY2.
