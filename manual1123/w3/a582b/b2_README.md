@@ -24,7 +24,7 @@ part | base version, md5 | pairs | new md5 | new length
 14.0 | 242 15567cfa | 1 | 5901894ef4def760db8ce819ce9ec7e7 | 2,954
 15.0 | 242 77253aba | 1 | 1b03fbdc20213439c954fa5fb6b28f06 | 6,009
 17.0 | 246 2cfe5415 | 3 | 271977f6b4e42c5a1267b09f85e3a9b1 | 39,877
-Characters removed: 803 in all.
+Characters removed: 753 in all (sum of base length minus new length over the 15 parts).
 
 ## P3. Order and expected whole-manual figures
 Order: the parts in order_index order, after batch 1 stands (so the first batch 2 version is 251). The expected version per part, the md5 and length of 09.0 and 11.0 on their batch 1 bases, and engine_manual_full() version, md5 and length are measured in a rolled-back rehearsal of all 15 writes once batch 1 is written and read back, and posted before the card. Readback: node mrb.cjs <base> <new> <pairs of that part> <part>.
