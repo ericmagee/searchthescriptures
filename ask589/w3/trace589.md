@@ -60,5 +60,5 @@ B1 K-FF (rests on ruling 411, his "approved" of 11-03), B5 K-UNX-A, B6 E-ASM: th
 2. B9 and C7: by W1's grade this is the same question as the ASK 586 J2 and J3 card (does an uncured enforcer item count). It is put to the operator once, on that card, after his answer on C1 and after ASK 588 and J1 are written. The card must state that it touches ruling 428 ("the judge keeps the decision").
 3. B12: the close-round concession counts (ruling 412 item 1), after W4 states what the check does live.
 4. C5 and B10: enforce the assumption charge check and the two-reader item, as his approval of 11-09 said.
-5. A2: restore the anti-cheat check before the judges are seated (ruling 427) and end its TRIAL. Under ASK 589 by the coordinator: W4 confirms the live state after ASK 588, plans the restore and brings the card.
+5. A2: moved out of ASK 589. It is ASK 590, the single closing check (ask589/w3/closing_check_plan.md): the check is live but unrecorded, and the plan replaces it with one closing check before the judges; the operator's build card was posted 00:08 CST 2026-11-24.
 6. Group 3: one card per item or per family, "make live", "keep as trial" or "drop", after W4 confirms the live state and gives the count of what each would have changed on stored runs.
