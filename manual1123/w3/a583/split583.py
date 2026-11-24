@@ -28,12 +28,15 @@ if __name__=='__main__':
     c=open(sys.argv[1],encoding='utf-8').read(); parts=split(c)
     assert ''.join(parts)==c
     print('source',hashlib.md5(c.encode()).hexdigest(),len(c),'parts',len(parts),'max',max(map(len,parts)))
-    sec='00'; k=0
+    sec='00'; k=0; names=[]
     for p in parts:
         m=re.match(r'\n?## (\d+)\. ([^\n]*)',p)
-        if m: sec='%02d'%int(m.group(1)); k=0; title=m.group(2)
-        else: k+=1
+        if m:
+            ns='%02d'%int(m.group(1)); k = k+1 if (ns==sec and names) else 0; sec=ns   # the text before "## 0." is 00.0, section 0 is 00.1
+        else: k = k+1 if names else 0
+        names.append('%s.%d'%(sec,k))
         first=[l for l in p.split('\n') if l.strip()][0].strip()[:60]
         print('%s.%d %6d %s'%(sec,k,len(p),first))
+    assert names==sorted(names) and len(set(names))==len(names)   # name order equals part order (N1)
     bad=c[:300000]+c[300001:]  # known-bad: one character lost
     print('known-bad join equals source:', ''.join(split(bad))==c)
