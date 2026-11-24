@@ -1,4 +1,4 @@
-# ASK 586 PLAN rev 4 (W4's reads of Wall 11369 taken in: J2 rebuilt, J3 count corrected, J6 guess confirmed; W1 conditions C4 and C5 of Wall 11359 met; J1 added as a rule and a check, on the operator's ruling as relayed by the coordinator at 23:14 CST 2026-11-23; rev 1 passed at Wall 11352): the judges' reasoning (run ODV1-42071-uclot7fi)
+# ASK 586 PLAN rev 5 (J1 both seatings stated, on the operator's word of 23:30 CST; rev 4: W4's reads of Wall 11369 taken in: J2 rebuilt, J3 count corrected, J6 guess confirmed; W1 conditions C4 and C5 of Wall 11359 met; J1 added as a rule and a check, on the operator's ruling as relayed by the coordinator at 23:14 CST 2026-11-23; rev 1 passed at Wall 11352): the judges' reasoning (run ODV1-42071-uclot7fi)
 
 Owner of the plan: W3 (session_01H1X3ANsGiMnhnbkfphocmo). Builder of any code check: W4. Grader: W1. Number and owner from the coordinator, 23:03 CST 2026-11-23. Source of direction: the operator, 23:00 CST 2026-11-23, W3 thread: "this next fix will mostly be around the judges reasoning...". That statement sets direction. It approves no write.
 
@@ -122,7 +122,9 @@ c. ENGINE RULE (part 08.0, the recompute; W4): the engine gives the seat's word 
 d. STAGING, TWO OPTIONS ON THE CARD (W1 C5; the operator has ruled, so the choice is his): OPTION 1, the rule live now: rule text (a), the seat's word (b) and the engine rule (c) written together. OPTION 2, audit first: live as an audit line only ("KEYSTONE STANDS BESIDE A RESULT AGAINST THE DEFENDER", record-only), for one run; the rule change (a, b, c) on its own card, with part 08.0's sentence before and after.
 e. EXPECTED ON THE STORED DATA: 3 marked (1271, 1272, 1273), 6 silent.
 
-WRONG IF: the Oracle is seated as challenger (then "against the Oracle" is not "against the defender", and the keystone is not the Oracle's; the rule text above speaks of the defender, and the case of the Oracle as challenger is NOT ADDRESSED and is asked of the team); or pkgKRB already turns the keystone to BROKEN in these three cases after the cure (W4 says it did not fire in 42071; 41822 not read).
+BOTH SEATINGS (the operator, 23:30 CST 2026-11-23, W3 thread: "we already tested the Oracle as the challenger"; debate_results by SQL: 207 runs with challenger_profile 'oracle', the last on 2026-11-20, and 48 with defender_profile 'oracle', among them the three replayed here). The rule text is written by seat, so it holds in both by one standard (Commitment 4): with the Oracle as defender, no RESULT against the Oracle while its keystone stands; with the Oracle as challenger, no win for the Oracle while the other side's keystone stands. My earlier "NOT ADDRESSED" is withdrawn. REPLAY OWED before the write card (W4): stored judgments of runs with the Oracle as challenger, with the count of RESULT against the defender beside KEYSTONE STANDS.
+
+WRONG IF: pkgKRB already turns the keystone to BROKEN in these three cases after the cure (W4 says it did not fire in 42071; 41822 not read).
 
 ## 5. CARDS (each its own; none is asked for by this plan)
 
