@@ -28,7 +28,7 @@ case $BASE in
  B) TE=$B/target_engine_j3_on595c.json; TC=$B/target_child_j3_on595c.json; BE=$K/target_engine_cuts.json; BC=$K/target_child_cuts.json;;
  C) TE=$B/onj2/target_engine_j3_onj2.json; TC=$B/onj2/target_child_j3_onj2.json; BE=/mnt/project-files/ask586/w4/j2/write/fetchback_eng586j2.json; BC=/mnt/project-files/ask586/w4/j2/write/fetchback_child586j2.json;;
  E) TE=$B/on591/target_engine_j3_on591.json; TC=$B/on591/target_child_j3_on591.json; BE=/mnt/project-files/ask591/w4/write/fetchback_eng591.json; BC=/mnt/project-files/ask591/w4/write/fetchback_child591.json;;
- *) echo "LIVE FLOW IS NEITHER BASE (J6 live, or the ASK 595 follow-on); NOTHING WRITTEN"; exit 1;;
+ *) echo "LIVE FLOW IS NONE OF BASES A, B, C, E (J6, ASK 595 follow-on, J2, ASK 591); NOTHING WRITTEN"; exit 1;;
 esac
 echo "base $BASE: target $(basename $TE)"
 ( cd $B && J3_BASE_E=$BE J3_BASE_C=$BC J3_TGT_E=$TE J3_TGT_C=$TC node t_j3.cjs > $O/t_j3_at_write.txt 2>&1 ) ; tail -1 $O/t_j3_at_write.txt | grep -q 'ALL PASS' || { echo "t_j3 FAILED; NOTHING WRITTEN"; exit 1; }; echo "t_j3 $(tail -1 $O/t_j3_at_write.txt)"
