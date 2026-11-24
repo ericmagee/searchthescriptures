@@ -17,3 +17,8 @@ RESULT: ENGINE MATCH. DATABASE MATCH with F3. DASHBOARD FILES MATCH, BUT THE PRO
 ## Dashboard
 - Deployment dpl_GfY2EAHyqufMAeza4eBTW6z6jGhm: READY, target production. All 8 file uids (sha1) equal W4's dash/ files (judge591.js 3aace11b, odv1.js b0fe9a5b, patch.js 95fc4418) and dash_live/ for the 5 unchanged.
 - F4: alias truth-app-dashboard.vercel.app (the project's only domain) still points to dpl_F4JdWAFWSHCAodqrBa4MtnkpwDA9, the old deployment; read at 09:0x CST, about 20 minutes after GfY2 was ready. The new tab and the haiku removal are not on the page users open. Assign the alias to GfY2 (or redeploy) and read back.
+
+## F4, F3 follow-up (W4 Wall 11546, audit 41450)
+- F4 FIXED: alias truth-app-dashboard.vercel.app -> dpl_GfY2EAHyqufMAeza4eBTW6z6jGhm (alias updatedAt 1795532589348). Files of GfY2 already matched (above). MATCH.
+- F3 STATED: EXECUTE on the eight ASK 591 functions is held only by lab_seat, postgres, service_role; anon and authenticated none (my read). Accepted as stated; no revoke on the card.
+- READBACK COMPLETE: ASK 591 engine, database and dashboard MATCH.
