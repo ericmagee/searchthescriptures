@@ -27,7 +27,7 @@ In scope (touched code only):
 2. Resolve Seats: a second guard, using D.model and C.model.
    - A panel judge with a debater's model fails the run, closed, with the reason.
    - A reserve or alternate with a debater's model is filtered out.
-3. odv1_record_panel_alternates (DB): new guard G4. An alternate whose model equals a debater's model raises.
+3. odv1_record_panel_alternates (DB): new guard G-SAME (ASK 601; named so as not to reuse the old alternate guard name G4 of engine 196402d0, Wall 11294). An alternate whose model equals a debater's model raises.
 4. dash_judge_lineup (DB, the Judge order page): the same filter at the same point.
 
 Out of scope: reasoning and prompt text, model settings, the child, the dashboard files.
@@ -49,9 +49,9 @@ Why four homes (standard):
 - Tests:
   - T1: Init Seats plus Resolve Seats code run on all 240 debater pairs against judge order v2. Output differs from live only in the pairs where a judge's model equals a debater's, and there the seat is dropped with the reason.
   - T2: the new dash_judge_lineup (pg_temp copy) equals the engine line-up on all 240 pairs.
-  - T3: the new odv1_record_panel_alternates (pg_temp copy) raises G4 for sonnet in Opus vs Claude, and passes the stored alternates of runs 42071 and 42234.
+  - T3: the new odv1_record_panel_alternates (pg_temp copy) raises G-SAME for sonnet in Opus vs Claude, and passes the stored alternates of runs 42071 and 42234.
   - T4: standing set 29/29; pair Library Check passes.
-  - T5 (four homes equal): for all 240 pairs, the same seats are dropped for the same model in Init Seats, Resolve Seats, dash_judge_lineup and the G4 check.
+  - T5 (four homes equal): for all 240 pairs, the same seats are dropped for the same model in Init Seats, Resolve Seats, dash_judge_lineup and the G-SAME check.
   - No DELETE or UPDATE in the tests, so safeupdate does not apply.
 - Done means:
   - written;
@@ -79,6 +79,6 @@ This plan is wrong if any of these holds:
 
 ## STEPS, with their cards
 1. Build the four changes and T1 to T5. Post them on the Wall for W1's grade.
-2. On PASS: ONE card to the operator, "Write the same-model rule". It writes in this order: the DB functions (G4, page copy), then the engine (Init Seats, Resolve Seats). Revert files are kept for each part.
+2. On PASS: ONE card to the operator, "Write the same-model rule". It writes in this order: the DB functions (G-SAME, page copy), then the engine (Init Seats, Resolve Seats). Revert files are kept for each part.
 3. After the write: fetch-back, audit row, Wall post, W1 readback, memory and md_notes.
 4. W3 drafts the manual entry and the AAR row.
