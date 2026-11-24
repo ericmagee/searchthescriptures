@@ -3,7 +3,7 @@
 // Inputs from the DB (data607.json, read 16:1x CST 11-24): the stored judge text, the stored gate reply (full_reply of the run's first gate row), and each item's stored flagged line.
 // The judge text is the stored final text (after the gate); the refused lines are unchanged in it, so the form refusal is reached as at gate time. its = [] (the send-back items were applied before the gate).
 // Every helper gateCure2024 calls (gateItems2024 and sbApply2024 among them) is cut from the Library as built; nothing is stubbed but $.
-const fs=require('fs');process.env.ACORN_DIR='/tmp/claude-0/-home-user/86d59483-62fd-5fa0-b8c4-6322500f4823/scratchpad/ac/node_modules';
+const fs=require('fs');process.env.ACORN_DIR=process.env.ACORN_DIR||'/opt/node-tools/node_modules'; /* W1 N1 */
 const X=require('/mnt/project-files/ask549/w4/build2/gcx.js');const D=JSON.parse(fs.readFileSync(__dirname+'/data607.json','utf8'));
 const mk=(file,key)=>{const r=X(file,key,'gateCure2024',[]);const $=()=>({isExecuted:false,first:()=>({json:{}}),all:()=>[],params:{}});return new Function('$',r.code+'\nreturn gateCure2024;')($);};
 const CASES=[{seat:'luna',jid:1122,from:29285,to:29295,reply:29283,expect:'pkgFRM'},{seat:'chatgpt',jid:988,from:7218,to:7224,reply:7218,expect:'same'}];
