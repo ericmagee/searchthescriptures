@@ -1,0 +1,10 @@
+# W1 grade: ASK 583 plan draft 1 (manual1123/w3/a583/ASK583_plan.md f0f33bd7, commit 941c4277)
+VERDICT: FAIL (D1 to D3). Design direction sound; the prototype join is lossless on v241 (out file: d0e9efda, 707,670, 31 parts, max 39,934; known-bad copy fails).
+D1 Readers missed (3.4/3.5). engine_manual is SELECTable by anon and authenticated (RLS policies anon_ro_engine_manual, anon_sel: qual true) and by the login role obsidian_ro (policy obsidian_ro_select), plus berean_ro (table grant). After the cut each of these reads the pointer row. The plan names no such reader and gives the new table and engine_manual_full()/engine_manual_part() no grants or policies for them. Fix: name what uses each role (likely the Obsidian sync, the dashboard), and give engine_manual_parts the same SELECT grants and policies and the read functions EXECUTE for those roles; add them to C6.
+D2 6.3 "grants as engine_manual: owner only for the apply function" contradicts live: engine_manual_apply has EXECUTE for postgres, service_role and lab_seat. Owner-only would stop W3 (lab_seat) from writing a part. Fix: state the grants as live.
+D3 C1 vs 6.4: the section 0 pair is applied in the same transaction as the cut, so md5(engine_manual_full()) after 6.4 is not v241's and C1 as written fails at the 6.5 readback. Fix: C1 checked inside the transaction before the section 0 pair, and a C1b with the expected md5 and length after the pair (from its preview).
+Conditions (fix with the above):
+N1 Names: the preamble before "## 0." is named '00.1' and comes before '00.0' (out file lines 1 and 2). Name parts so name order equals order_index.
+N2 Versions at the cut are unstated: which version the 31 part rows take, the pointer row (engine_manual.version is UNIQUE), and the section 0 pair. State them against 4.2.
+N3 Section 8's second wrong-if (parts per task) is unmeasured; measure before the card, as the plan says.
+Checked and correct: 3.1 triggers; 3.3 operational_doc_sections 53 rows; 3.4 a and b (judgment_result_word only names engine_manual in a comment); 3.5 no view; engine_manual_log 210 rows (plan says 209: v241's row was added since; nit).
