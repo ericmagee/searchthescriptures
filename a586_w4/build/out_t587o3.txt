@@ -1,0 +1,39 @@
+== Parse: every library source of option 3, engine and child
+PASS sources parse: 126, errors 0
+== Library Check pair and scope
+   pair: engine lib faf0058d7c246e4f map 0bbe7e352b78b5a9 | child lib faf0058d7c246e4f map 0bbe7e352b78b5a9 | Library Check PASSES
+PASS pair passes
+   target_engine_587o3.json sources 64 uses 76 out of scope 0
+PASS scope: 0 out of scope in target_engine_587o3.json
+   target_child_587o3.json sources 62 uses 75 out of scope 0
+PASS scope: 0 out of scope in target_child_587o3.json
+== v25 recompute (LIB 1351), gate recompute (LIB 1492): one counted unnamed challenger break, the 1273 inputs
+   LIB 1351: pre-587 CHALLENGER WINS, 587 live UNDERDETERMINED, option 3 CHALLENGER WINS
+PASS LIB 1351: option 3 gives the pre-587 word (CHALLENGER WINS); the unnamed break does not enter the RESULT
+PASS LIB 1351 control: with no unnamed break option 3 equals 587 live
+   LIB 1492: pre-587 CHALLENGER WINS, 587 live UNDERDETERMINED, option 3 CHALLENGER WINS
+PASS LIB 1492: option 3 gives the pre-587 word (CHALLENGER WINS); the unnamed break does not enter the RESULT
+PASS LIB 1492 control: with no unnamed break option 3 equals 587 live
+PASS the v25 line prints the break as record only
+== ert386 (AUDIT v61) on the stored judgments 1272 to 1274
+   1272: pre-587 UNDERDETERMINED, 587 live UNDERDETERMINED, option 3 UNDERDETERMINED
+     option 3 tag: [AUDIT v61: ENGINE RESULT -- SEAT: x; WORD: UNDERDETERMINED; RULE: engine_manual section 8, STANDINGS, RESULT and VERDICT DEFINITIONS, then the tie rule KB-0030; INPUTS: VERDICT BROKEN, DEFENSE STANDING PROP-DEPENDENT, CHALLENGE STANDING SELF-SUPPORTED, CONCEDED 0 and 0, BROKEN LINES D3 vs C1 CHALLENGER LINK BROKEN, D3 vs C4 DEFENDER LINK BROKEN; END]
+PASS 1272: option 3 v61 WORD equals pre-587 (UNDERDETERMINED)
+PASS 1272 control: option 3 tag equals 587 live
+   1273: pre-587 CHALLENGER WINS, 587 live UNDERDETERMINED, option 3 CHALLENGER WINS
+     option 3 tag: [AUDIT v61: ENGINE RESULT -- SEAT: x; WORD: CHALLENGER WINS; RULE: engine_manual section 8, STANDINGS, RESULT and VERDICT DEFINITIONS, then the tie rule KB-0030; INPUTS: VERDICT BROKEN, DEFENSE STANDING PROP-DEPENDENT, CHALLENGE STANDING SELF-SUPPORTED, CONCEDED 2 and 0, BROKEN LINES D3 vs C1 DEFENDER LINK BROKEN, RECORD ONLY (not in the RESULT) C1 (CLOSE-CONTRADICTION, no collision line names it) CHALLENGER LINK BROKEN; END]
+PASS 1273: option 3 v61 WORD equals pre-587 (CHALLENGER WINS)
+PASS 1273: the break is printed as RECORD ONLY and is not among BROKEN LINES
+   1274: pre-587 CHALLENGER WINS, 587 live UNDERDETERMINED, option 3 CHALLENGER WINS
+     option 3 tag: [AUDIT v61: ENGINE RESULT -- SEAT: x; WORD: CHALLENGER WINS; RULE: engine_manual section 8, STANDINGS, RESULT and VERDICT DEFINITIONS, then the tie rule KB-0030; INPUTS: VERDICT BROKEN, DEFENSE STANDING PROP-DEPENDENT, CHALLENGE STANDING SELF-SUPPORTED, CONCEDED 2 and 0, BROKEN LINES D2 vs C6 DEFENDER LINK BROKEN, D3 vs C1 DEFENDER LINK BROKEN, D4 vs C3 DEFENDER LINK BROKEN, D5 vs C4 DEFENDER LINK BROKEN, RECORD ONLY (not in the RESULT) C1 (CLOSE-CONTRADICTION, no collision line names it) CHALLENGER LINK BROKEN; END]
+PASS 1274: option 3 v61 WORD equals pre-587 (CHALLENGER WINS)
+PASS 1274: the break is printed as RECORD ONLY and is not among BROKEN LINES
+== sbApply2024 in its real scope (Gate Record), 1273, the run's confirmed list holding the challenger C1 break
+   pre-587 CHALLENGER WINS, 587 live UNDERDETERMINED, option 3 CHALLENGER WINS
+PASS option 3 gives the pre-587 gate word, no error
+PASS control: no confirmed break, option 3 equals 587 live
+== Scope of the change: only LIB 1286, 1351, 1363, 1492 differ from 587 live; A, B, C1, C2, E are untouched
+PASS LIB lines changed: 1286, 1351, 1363, 1492
+PASS engine nodes changed: Shared Library
+PASS child nodes changed: Shared Library
+RESULT: ALL PASS
