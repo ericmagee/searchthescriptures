@@ -1,0 +1,27 @@
+PASS T1.1 the path: Close Enforcer Build -> Assume Check Build; Check Save and Regrade After Quotes? (true) -> Panel Build; the other outputs unchanged
+PASS T1.2 the six anti-cheat nodes stay in the flow, reached by nothing (S4)
+PASS T1.3 the batch call carries the enforcer (C) and assume-check (S) items only
+PASS T1.4 no node calls the anti-cheat note any more ()
+PASS T1.5 Panel Build: the reversed block follows the confirmed block on each close round
+PASS T1.5 Build Independent Verdict: the reversed block follows the confirmed block on each close round
+PASS T1.6 the child and the Shared Library hold no anti-cheat note (every later judge turn takes the Panel Build text)
+PASS T1.7 five nodes change (Build Independent Verdict, Close Enforcer Build, Close Enforcer Record, Close Group Batch Build, Panel Build); the post-panel contradiction call (Judge Contradiction Build, Record) is unchanged
+PASS T2.1 still two reads per side
+PASS T2.2 42071: 55 VERSE candidates, each with an id, a verse key, the side's close and its earlier round
+PASS T2.3 the code's other candidates are unchanged (same ids and text)
+PASS T2.4 the instruction gives the VERSE rule and the three answers
+PASS T2.5 sizes (S5 f): request chars per read now 163841, 163841, 92305, 92305; before 98345, 98345, 53539, 53539
+PASS T2.6 every VERSE item is checked up to 120,000 characters a side; the rest is listed as not checked (0)
+PASS T3.1 planted: the challenger's block that quotes the defender's link is not taken as the challenger's earlier reading
+PASS T3.2 control: the defender's own reading of Luke 2:48 is a candidate
+PASS T4.1 both reads REVERSED READING on a VERSE candidate, quotes standing: listed once as reversed, nothing confirmed
+PASS T4.2 the answer is a row of debate_enforcer_log (E-CLOSECON; the log helper files the status as cure_reason "REVERSED -- ...", as it files CONFIRMED), which the fault ledger does not count (dfl_counted needs a reason that starts CONFIRMED)
+PASS T4.3 one read of two: not reversed
+PASS T4.4 REVERSED READING on a candidate that is not a VERSE candidate (NEW) is a form fault
+PASS T4.5 a quotation that does not stand is a form fault
+PASS T4.6 (S5 h) a pair answered CONFIRMED and REVERSED READING is never listed as reversed (1:NOT CONFIRMED (one check of two); 2:NOT REVERSED (one check of two); confirmed 0)
+PASS T4.7 both reads give both answers: CONFIRMED stands once (if its form holds), REVERSED is not listed (1:CONFIRMED; 1:REVERSED (CONFIRMED stands); 2:CONFIRMED (second check); 2:REVERSED (CONFIRMED stands))
+PASS T5.1 a reply with no REVERSED READING gives the same record as the live node
+PASS T6.1 the block lists each reversed sentence with both quotations and the ruling 427 instruction
+PASS T6.2 no reversed sentence, or no record: no block
+RESULT: ALL PASS (26 pass)
