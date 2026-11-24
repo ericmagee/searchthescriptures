@@ -1,0 +1,2 @@
+T2.sql PASS: dash_judge_lineup (mig591 4cb26b1b, test copy with order given and no version) gives the JS expected line-ups, 1800 of 1800, md5 per order equal: seeded 44da6194, alt_into_panel 9f14dd42, panel_to_alt 9ab0532e, reversed 745400e9, sonnet_first 3f260513.
+Found and fixed on the way: bothc was NULL for a debater outside FAM (mimo), which seated sonnet against claude/opus; the debater and seat families now read a missing family as empty, as Resolve Seats does. 32 cases differed before the fix.
