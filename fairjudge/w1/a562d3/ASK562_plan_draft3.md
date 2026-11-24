@@ -1,9 +1,9 @@
 # ASK 562 plan, draft 3 (W1): "against" heads that LAY reads as blocks, built on ASK 581
 
-DRAFT. Nothing is written. Plan grader: W3. Builder and writer: W4, on its own write card, after the operator approves the build.
+DRAFT 3, re-cut 19:10 CST on the corrected 581 target (581 draft 2, commit 70003e6b). Nothing is written. Plan grader: W3. Builder and writer: W4, on its own write card, after the operator approves the build.
 Draft 2 (fairjudge/w1/ASK562_plan.md) stands for the head change; its replay classing is fairjudge/w1/a562/CLASS562.md, as corrected on Wall 11137 (FALSE 9, TRUE 27).
 Draft 3 changes two things:
-1. It is built on top of ASK 581 (Wall 11137), which reads the tag forms behind 8 of the 9 FALSE items.
+1. It is built on top of ASK 581 draft 2 (Wall 11141), which clears 7 of the 9 FALSE items. #24 stays an item under 581 draft 2 (see 5.3).
 2. It adds one rule for the 9th FALSE item, #10.
 Order (coordinator): v237, then 581, then 562 draft 3.
 
@@ -29,10 +29,10 @@ Two LAY lines in the Shared Library, both copies: LIB 3504 (the CP literal) and 
 
 ## 5. EVIDENCE (base: /mnt/project-files/fairjudge/w1/a581/target_engine_581.json and target_child_581.json; targets: /mnt/project-files/fairjudge/w1/a562d3/target_engine_562.json and target_child_562.json)
 1. build562.cjs on the 581 target:
-   a. LIB 3504 and 3547 change in both copies. The library sha becomes 0ad627f829310cb7, with 3,582 lines.
-   b. MAP LAY n goes from 15,677 to 16,026, and no other MAP entry changes.
-   c. The engine Library Sha fed to the child Library Check gives the same value on both sides.
-   d. Shared Library size: +382 characters in each copy.
+   a. LIB 3504 and 3547 change in both copies. The library sha becomes 0e1cce8f1b596ea4, with 3,582 lines. Targets: engine md5 aa9e5cdf, child md5 44e9c851.
+   b. MAP LAY n goes from 15,842 to 16,191, and no other MAP entry changes.
+   c. The engine Library Sha fed to the child Library Check gives the same value on both sides (map 1c16aec5da4a85e9).
+   d. Shared Library size: engine 1,159,950 to 1,160,332; child 1,159,771 to 1,160,153 (+382 each).
 2. test562d3.cjs, 9 checks with stored KJV rows: ALL PASS.
    a. Under the four head forms, an unfooted block goes from 0 items to 1.
    b. A footed block passes.
@@ -41,14 +41,14 @@ Two LAY lines in the Shared Library, both copies: LIB 3504 (the CP literal) and 
    e. A bold head with its point on its line still opens a block.
    f. A title-only bold head with no body opens none.
 3. replay562d3.cjs, 581 against 581 + 562 draft 3, on 64 checks: the 50 stored rounds, the 41822 and 41418 Oracle drafts, and 41822's 8 stored rounds.
-   a. Items go from 303 to 328: 27 new, 2 gone.
-   b. The 27 new items are exactly the 27 TRUE items of the corrected classing: the 26 of CLASS562.md plus #17.
-   c. No FALSE item remains: #10 is gone by the new rule, and the other 8 were cleared by 581.
+   a. Items go from 303 to 329: 28 new in 12 checks, 2 gone.
+   b. The 28 new items are the 27 TRUE items of the corrected classing (the 26 of CLASS562.md plus #17), and #24 (33389 CR2, "**Against D6 (Isaiah 8:3-4, Genesis 4:25, Matthew 11:11).**", one verse only).
+   c. #10 is gone by the new rule. 581 draft 2 cleared 7. #24 remains: its second verse is written as a bare "24:16", and 581 draft 2 gives it the book only when the row of Genesis 24:16 is held (581 plan 7.4). The replay runs with rows=[]. The item asks the writer to state the reference, which is the note's own rule, so I class it as an item the writer can satisfy, not a false reading of a full reference.
    d. The 2 gone items are the two "## PRESSES AGAINST THE DEFENDER'S CHAIN" blocks (32725 and 36791 DR1). Their against heads now split that text into the against blocks, which carry the items instead. This was the same under draft 2.
    e. Run 41822: no change. Its rounds hold no "against" head.
 
 ## 6. RISK STATED
-This widens the send-back. In the 50 stored rounds, 27 against blocks fall short of their layers, in 12 rounds of 11 runs. Each now gets the STRUCTURE item in the one send-back, as a PRESS block does today. Run 41822 is not affected.
+This widens the send-back. In the 50 stored rounds, 28 against blocks fall short of their layers as LAY reads them, in 12 rounds. Each now gets the STRUCTURE item in the one send-back, as a PRESS block does today. Run 41822 is not affected.
 
 ## 7. ORDER AND WRITE
 After the 581 write; built on what is live then. The write script follows write573.sh c232934c (`|| code=000` on both PUTs, an engine revert with `|| rc=000`, and test562d3 plus the pair check before the PUT).

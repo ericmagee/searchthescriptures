@@ -267,7 +267,7 @@
  {
   "tag": "ODV1-33389-ds52amc3 CR2",
   "before": 2,
-  "after": 7,
+  "after": 8,
   "new": [
    {
     "head": "**Against D1 (Matthew 1:24, Matthew 1:20).**",
@@ -288,6 +288,10 @@
    {
     "head": "**Against D5 (Luke 2:48, 1 Chronicles 28:6, Hebrews 7:5).** Answered in C1, C2 and C3. In Luke 2:49 the child answers Mary's \"thy father\" with \"my Father's busi",
     "why": "no verse quoted with its reference on an [L1] or [L3] line"
+   },
+   {
+    "head": "**Against D6 (Isaiah 8:3-4, Genesis 4:25, Matthew 11:11).**",
+    "why": "one verse only on its layer lines; no further verse is read with it on an [L1] or [L3] line"
    }
   ],
   "gone": []
