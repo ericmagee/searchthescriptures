@@ -1,0 +1,7 @@
+const fs=require('fs');const load=p=>{let j=JSON.parse(fs.readFileSync(p));return j.data||j;};
+function lib(w){const c=w.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;const i=c.indexOf('/*LIB*/'),k=c.indexOf('/*MAP*/');return JSON.parse(c.slice(i+7,k).trim().replace(/;$/,''));}
+function hunks(a,b){const out=[];let i=0,j=0;while(i<a.length||j<b.length){if(a[i]===b[j]){i++;j++;continue;}let best=null;for(let d=0;d<8000&&!best;d++){for(let x=0;x<=d;x++){const y=d-x;const ka=a.slice(i+x,i+x+50),kb=b.slice(j+y,j+y+50);if(ka.length>=50&&ka===kb){best=[x,y];break;}}}if(!best){out.push(['-'+a.slice(i,i+120),'+'+b.slice(j,j+200)+'(TAIL)']);break;}out.push([a.slice(i,i+best[0]),b.slice(j,j+best[1])]);i+=best[0];j+=best[1];}return out;}
+const A=load(process.argv[2]),B=load(process.argv[3]);
+for(const nm of ['Panel Build','Build Independent Verdict']){const h=hunks(A.nodes.find(n=>n.name===nm).parameters.jsCode,B.nodes.find(n=>n.name===nm).parameters.jsCode);console.log('==',nm,h.length,'hunks');h.forEach(([x,y])=>console.log('  -',JSON.stringify(x).slice(0,160),'\n  +',JSON.stringify(y).slice(0,260)));}
+const la=lib(A),lb=lib(B);for(const k of [2953,2784,2789,2929,2959]){const h=hunks(la[k],lb[k]);console.log('== LIB',k);h.forEach(([x,y])=>console.log('  -',JSON.stringify(x).slice(0,200),'\n  +',JSON.stringify(y).slice(0,300)));}
+const h=hunks(la[3564],lb[3564]);console.log('== LIB 3564',h.map(([x,y])=>'-'+x.length+' +'+y.length).join(' '));
