@@ -1,0 +1,29 @@
+{
+ "model": "google/gemini-4-hydrogen",
+ "provider": "Google",
+ "finish": "stop",
+ "usage": {
+  "prompt_tokens": 2666,
+  "completion_tokens": 14453,
+  "total_tokens": 17119,
+  "cost": 0.1123965,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.1123965,
+   "upstream_inference_prompt_cost": 0.003999,
+   "upstream_inference_completions_cost": 0.1083975
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 10870,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "content_chars": 12605
+}
