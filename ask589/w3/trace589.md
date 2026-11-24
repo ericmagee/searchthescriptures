@@ -4,7 +4,7 @@ W3 (session_01H1X3ANsGiMnhnbkfphocmo), 2026-11-23 CST, draft 1, for W1's grade. 
 
 SOURCE AND LIMITS. md_notes_rulings rows 396, 402, 411, 412, 413, 414, 421, 424, 427, 428, 459, 492 (read as far as 520 to 700 characters each); ask_aar_snapshots rows for ASK 530, 531, 533, 534; the Wall, by two SQL searches: the first post naming each ASK number, and the first post naming it together with TRIAL or record-only (about 520 to 650 characters around the hit, not the whole post); Wall 3708 (my proposal, five parts read whole), 4926, 7228, 6283; engine manual parts 09.3, 09.4, 09.5 around each line. I did NOT read the operator's thread messages behind each ruling row, and I did NOT read the code. "Not traced" means the searches above did not show it. The live state of every item is W4's to confirm.
 
-## Group 1. The operator's own request or approved ruling, narrowed by a seat's plan (6 items, cards first)
+## Group 1. The operator's own request or approved ruling, narrowed by a seat's plan (7 items in 6 rows, cards first)
 
 | # | Feature | Who asked (record) | Who made it a trial (record) | Promotion card found |
 |---|---|---|---|---|
@@ -22,7 +22,7 @@ SOURCE AND LIMITS. md_notes_rulings rows 396, 402, 411, 412, 413, 414, 421, 424,
 | A3 | The single judge | The operator, 11-02: "it trash ... what sense would it make to turn on something that doesn't work" (ruling 402); "the single judge switched off under ruling 402" (ruling 428) |
 | C4 | Second reading of replaced lines (pkgVP1) | Proposal part P1 as approved (ruling 459): "Alone: changes no verdict; it makes a reworded line that still fails visible." It was asked for as a record |
 
-## Group 3. Checks the team found in run reviews; the seat's plan set TRIAL or record-only; the operator approved the plan or pressed the write card (21 items)
+## Group 3. Checks the team found in run reviews; the seat's plan set TRIAL or record-only; the operator approved the plan or pressed the write card (20 items)
 
 None of these is the operator's own feature request in what I read. Each still owes a promotion card under his rule of 23:37 CST.
 
@@ -50,9 +50,9 @@ None of these is the operator's own feature request in what I read. Each still o
 B1 K-FF (rests on ruling 411, his "approved" of 11-03), B5 K-UNX-A, B6 E-ASM: the searches did not reach who planned them or who set TRIAL.
 
 ## What the record shows
-1. Six parked items go back to the operator's own request or approved ruling (Group 1). In each traced case the TRIAL words were written by a seat into the plan he approved (Worker E three times, Worker_C once, W3 once), and no card came back to end the trial.
+1. Seven parked items go back to the operator's own request or approved ruling (Group 1). In each traced case the TRIAL words were written by a seat into the plan he approved (Worker E three times, Worker_C once, W3 once), and no card came back to end the trial.
 2. Two items are off or record-only by his own decision (Group 2).
-3. Twenty-one are team checks that a seat's plan made TRIAL or record-only (W4 7, W1 6, W2 3 with one shared, W3 3, coordinator 1, by first writer as found). His word on them was a bulk approval or a write card on that plan.
+3. Twenty are team checks that a seat's plan made TRIAL or record-only (by first writer as found: W4 7, one of them shared with W2; W1 6; W2 2 more; W3 3; the coordinator 1; and B11, a restore built by W1). The whole list is 7 + 2 + 20 + 3 not traced = 32. His word on them was a bulk approval or a write card on that plan.
 4. Ruling 428's sentence "each rule record-only until it passes a known case" is the root cited for the TRIAL posture in four later plans (ASK 274, 277, 533, 534). It was Worker E's plan text.
 
 ## Proposed cards, in this order, one question each
