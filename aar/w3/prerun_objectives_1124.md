@@ -1,6 +1,6 @@
-# PRE-RUN AAR OBJECTIVES for the next live run (draft 1)
+# PRE-RUN AAR OBJECTIVES for the next live run (draft 2)
 
-W3 (session_01H1X3ANsGiMnhnbkfphocmo), 2026-11-24 CST, on the coordinator's order. For W1's grade.
+W3 (session_01H1X3ANsGiMnhnbkfphocmo), 2026-11-24 CST, on the coordinator's order. Draft 2 applies W1's grade of draft 1 (PASS WITH F1, F2 and a note on item 10; W1 commit a1943b7d).
 
 - LIVE NOW (W1 readback, Wall 11557): engine 6834c21b, child ecdc6218, LIB 47a39128fec62d31.
 - No run has executed since run 42071 (debate_results last row 21:57 CST 2026-11-23). Every item below is live and UNEXERCISED.
@@ -74,17 +74,18 @@ LIMIT TO READ FOR: the send-back builders stop before this check on a pass with 
 ## 10. ASK 586 J3: a break that says a side granted something names the grant (no AAR row yet)
 OBJECTIVE: a judge's break line that says a side granted, conceded, dropped or withdrew something names the grant by its number from THE GRANTS LISTS, or says NOT A LISTED GRANT and quotes the side's words with their round; the judge keeps the decision.
 EXPECT:
-- (always) each judge request holds THE GRANTS LISTS block once, above the COLLISION POINTS instructions, with both sides' lists or "none", and no sentence cut;
+- (always) each judge request built by Panel Build (panel, alternates and reserve) holds THE GRANTS LISTS block once, above the COLLISION POINTS instructions, with both sides' lists or "none", and no sentence cut;
 - (ONLY IF a break line uses a grant word) it names a G number of that side's list or NOT A LISTED GRANT, or one E-GRT row is written with the judge's whole line and "record-only, counts against no seat"; no seat count moves by it;
 - MEASURE: how many break lines go back for E-GRT (on stored run 42071: 2 of 13), and whether any goes back for a grant word used of something other than a grant.
 LIMIT TO READ FOR: the same send-back stop as J2.
 
-## 11. ASK 591 and its fix 1: the judge order comes from the table (no AAR row yet)
+## 11. ASK 591 and its fix 1 (fix 2 to be added to this title and the sources when it is written): the judge order comes from the table (no AAR row yet)
 OBJECTIVE: the operator puts the panel judges and the alternates in order on the dashboard page and saves; the next run seats judges in that order; no model edits engine code to change it. The single judge is not shown or computed (fix 1).
 EXPECT (always):
 - the node Judge Order Read executes at the run's start, before Accept Models;
 - review_notes holds one line "[JUDGE ORDER v<n>: panel list ...; alternates list ... | SEATED: panel ...; reserve ...; alternates ...]" with no "single judge" in it;
-- the seats the run seats equal the line-up the dashboard page showed for that pair of debaters before the launch (v<n> is the version saved on the page);
+- the seats the run seats equal the line-up the dashboard page showed for that pair of debaters before the launch;
+- (ONLY IF fix 2 is live and the operator saved an order on the page) v<n> is that save; otherwise v1, the seeded order. At this draft the page's Save fails on the live database (a bare DELETE under the dashboard's safe-update guard; ASK 591 fix 2, not yet written), so without fix 2 the save part of the objective is NOT MET, whatever the run shows;
 - (ONLY IF the read fails) the run stops at the read with its message, before any model call.
 
 ## 12. WHAT THIS RUN CANNOT SHOW
