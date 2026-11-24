@@ -49,6 +49,13 @@ PASS D3 1273: the v61 INPUTS list the counted break
 PASS D3 known-bad 1274: live ert386 writes v61 WORD CHALLENGER WINS
 PASS D3 1274: target ert386 writes v61 WORD UNDERDETERMINED
 PASS D3 1274: the v61 INPUTS list the counted break
+   built sbApply2024 (Gate Record), 1273, counted unnamed C1 break: live CHALLENGER WINS, target UNDERDETERMINED; with none: live CHALLENGER WINS, target CHALLENGER WINS
+PASS D4 real scope: the built sbApply2024 runs without a ReferenceError (__cecX is declared in its own body in the joined source)
+PASS D4 real scope: known-bad live CHALLENGER WINS; target UNDERDETERMINED
+PASS D4 real scope control: with no counted unnamed break live and target agree (CHALLENGER WINS)
+   target_engine_586.json sources 64 uses 93 out of scope 0
+   target_child_586.json sources 62 uses 92 out of scope 0
+PASS scope check (acorn, every joined source of engine and child): every use of __cecX and __cecU586 has a declaration in an enclosing scope
 PASS D3 control: 1273 with the trigger text removed: live and target agree (CHALLENGER WINS)
 == E. Removal reason tally (Alternate Merge Seat)
 PASS known-bad: live tallies a send-back item line as an UNREAD COUNTED LINE

@@ -70,6 +70,18 @@ console.log('== D. Recompute (spark 1273, qwen4max 1274: CHALLENGE c=0; C1 count
  for(const r of rows){const a=v61(eL,r),b=v61(eT,r);console.log('   ert386 on judgment '+r.id+' (AUDIT v61 WORD): live '+a.w+', target '+b.w+'\n     target tag: '+b.z);
   if(r.id==1272)ok(a.w===b.w&&a.z===b.z,'D3 control 1272 (gemini; its collision line carries the CHALLENGER break, no unnamed break): live and target v61 tags are identical');
   else{ok(a.w==='CHALLENGER WINS','D3 known-bad '+r.id+': live ert386 writes v61 WORD CHALLENGER WINS');ok(b.w==='UNDERDETERMINED','D3 '+r.id+': target ert386 writes v61 WORD UNDERDETERMINED');ok(/BROKEN LINES[^;]*C1 \(CLOSE-CONTRADICTION, no collision line names it\) CHALLENGER LINK BROKEN/.test(b.z),'D3 '+r.id+': the v61 INPUTS list the counted break');}}
+ /* D4 in its real scope (W1 11354): sbApply2024 as the Gate Record node builds it (gatefn.cjs: the node's top-level declarations in order, $ stubbed), on stored judgment 1273, with one CHANGE item that writes the judge's own RESULT word, and the run's confirmed list holding the challenger's C1 break (the 42071 flag) */
+ {const G=require('./gatefn.cjs');const r=rows.find(x=>x.id==1273);const F={verdict_tag:r.verdict_tag,defense_standing:r.defense_standing,challenge_standing:r.challenge_standing,conceded_links:r.conceded_links,challenger_conceded_links:r.challenger_conceded_links};
+  const line=String(r.verdict_raw).replace(/\\n/g,'\n').split('\n').find(l=>/^\s*\**RESULT\s*:/.test(l));const its=[{ans:'CHANGE',sid:'S1',line,to:line.replace(/RESULT\s*:\s*[A-Z ]+/,'RESULT: UNDERDETERMINED ')}];
+  const run=(f,ex)=>{try{const o=G(f,'Gate Record',ex);return {res:o.sbApply2024('spark',r.verdict_raw,F,its,{}).result,fail:o.__fail.length};}catch(e){return {res:'THROW '+e.message};}};
+  const cec={'Close Enforcer Record':{cec:{confirmed:[{side:'CHALLENGER',link:1,why:'test'}]}}};
+  const a=run(LV.W===undefined?'live_eng.json':'live_eng.json',cec),b=run('target_engine_586.json',cec),a0=run('live_eng.json',{}),b0=run('target_engine_586.json',{});
+  console.log('   built sbApply2024 (Gate Record), 1273, counted unnamed C1 break: live '+a.res+', target '+b.res+'; with none: live '+a0.res+', target '+b0.res);
+  ok(!/^THROW/.test(String(b.res))&&!/^THROW/.test(String(b0.res)),'D4 real scope: the built sbApply2024 runs without a ReferenceError (__cecX is declared in its own body in the joined source)');
+  ok(a.res==='CHALLENGER WINS'&&b.res==='UNDERDETERMINED','D4 real scope: known-bad live CHALLENGER WINS; target UNDERDETERMINED');
+  ok(a0.res===b0.res,'D4 real scope control: with no counted unnamed break live and target agree ('+b0.res+')');
+  const sc=require('child_process').spawnSync('node',['scope587.cjs','target_engine_586.json'],{encoding:'utf8'}),sc2=require('child_process').spawnSync('node',['scope587.cjs','target_child_586.json'],{encoding:'utf8'});console.log('   '+sc.stdout.trim().split('\n').pop()+'\n   '+sc2.stdout.trim().split('\n').pop());
+  ok(sc.status===0&&sc2.status===0,'scope check (acorn, every joined source of engine and child): every use of __cecX and __cecU586 has a declaration in an enclosing scope');}
  const r3=rows.find(r=>r.id==1273);const r3b=Object.assign({},r3,{verdict_raw:String(r3.verdict_raw).split('(no collision line names it; counted as one CHALLENGER LINK BROKEN)').join('(removed for the control)')});
  ok(v61(eL,r3b).w===v61(eT,r3b).w,'D3 control: 1273 with the trigger text removed: live and target agree ('+v61(eT,r3b).w+')');}
 

@@ -1,4 +1,4 @@
-# ASK 587 plan rev 2 (W4, 11-23 23:09 CST): engine form fixes of run 42071 (A to E), split from ASK 586
+# ASK 587 plan rev 3 (W4, 11-23 23:16 CST): engine form fixes of run 42071 (A to E), split from ASK 586
 
 ASK 587 was assigned by the coordinator at 23:03 CST (named 586-F until then). ASK 586 itself, owned by W3, is being rebuilt around the judges' reasoning (operator, 23:00 CST, W3's thread: "this next fix will mostly be around the judges reasoning..."; W1 Wall 11336 F2).
 
@@ -6,6 +6,8 @@ Rev 1 takes in the following:
 - W1's grade of rev 0 (Wall 11330: A, B, C1, C2, E and section 7 PASS; D FAIL, F1);
 - W3's consolidation (Wall 11329: B1 to B4, C5 to C8, D);
 - W1's grade of that consolidation (Wall 11335).
+
+Rev 3 answers W1's grade of rev 2 (Wall 11354, D4) with a test in the real function scope; the code is unchanged from rev 2 (rev 2 kept as plan587_rev2.md, md5 d974b63c). See section 3b.
 
 Rev 2 fixes D only, per W1's grade of rev 1 (Wall 11342, F1). Everything else stands as in rev 1 (kept as plan587_rev1.md, md5 30b72a6c). See section 3a.
 
@@ -54,6 +56,16 @@ A real fault of the same kind is still raised.
 3. **D4 (LIB 1492, the gate recompute).** The gate sources already compute __cecX: LIB 1321 to 1325 are joined into every source that holds LIB 1492 (checked on all 13 engine and 13 child sources). So LIB 1492 gets the same input as D1: `col:__c400.concat(Array.from({length:__cecX.CHALLENGER||0},...))`. My earlier note that the gate path has no __cecX was wrong. It held only for the plain LIB lines and not for the joined source.
 4. **Not changed.** stand() (LIB 1345), the gate tie line (LIB 1491), and the defender side. The ruling note and the false-flag limit of section 3, D items 6 and 7, apply to D3 and D4 as well.
 
+## 3b. REV 3: D4 IN ITS REAL SCOPE (W1 11354)
+1. **W1's point.** In the plain LIB order, __cecX is declared at LIB 1321, inside cureRecompute, and LIB 1492 sits inside sbApply2024 (from LIB 1403). Read that way, D4 would throw a ReferenceError, and the rev 2 test declared __cecX itself.
+2. **What the built node holds.** A node's code is not the plain LIB order. It is its MAP list, joined. The Gate Record MAP list places LIB 1321, 1325 and 1344 inside sbApply2024, between LIB 1483 and 1487. So in the joined source, `const __cecX=` stands in sbApply2024's own body, before LIB 1492 (Gate Record: function at character 200,752, declaration at 223,666, use at 226,629).
+3. **Test 1, the built function run.** gatefn.cjs (md5 18b43d2a) loads the Gate Record node's own top-level declarations in their built order, with $ stubbed and nothing fetched. It then calls sbApply2024 itself on stored judgment 1273, with one CHANGE item that writes the judge's own RESULT word, UNDERDETERMINED. The run's confirmed list holds the challenger's C1 break, as flagged in 42071. Results:
+   - live: CHALLENGER WINS (the item is not applied: RESULT DIFFERS);
+   - target: UNDERDETERMINED (S1 applied), with no ReferenceError;
+   - control with an empty confirmed list: live and target agree (CHALLENGER WINS).
+4. **Test 2, scope.** scope587.cjs (md5 3fd8778f) parses every joined source of the engine (64) and the child (62) with acorn. Every use of __cecX and __cecU586 (93 and 92) has a declaration in an enclosing scope: 0 out of scope.
+5. **Why D4 keeps __cecX rather than __cecU586.** In this scope __cecX is the same count that LIB 1344 adds into brk. D1 and D4 then read one input, and the gate's RESULT and its standing read the same breaks. __cecU586 is kept for ert386, which runs outside any recompute and has no __cecX.
+
 ## 4. W3's B1 TO B4: ONE LINE EACH
 **B1. ASK 550 ("[REMOVED SEAT" line): a defect, SPLIT OUT to its own ASK. Code read.**
 1. Build Save Body writes review_notes at row creation. It writes the 550 lines only `if($('Alternate Merge').isExecuted)`.
@@ -89,7 +101,7 @@ The text of A1 to A3, B, C1, C2 and E is unchanged from rev 0. D is as in sectio
 
 The Library Check pair is LIB f45effef8ec77157, MAP b0d91d9c30aa1654, and it PASSES (out_pair586.txt 872cf0fb). Target md5s: target_engine_586 d643fc34, target_child_586 4476e122.
 
-## 6. CRITERIA (build/t586.cjs a068d6ee; out_t586.txt 6622d92d: 36 PASS, ALL PASS; syn586: 195 sources parse, 0 errors)
+## 6. CRITERIA (build/t586.cjs 597906b4; out_t586.txt 486a114e: 40 PASS, ALL PASS; syn586: 195 sources parse, 0 errors)
 **C1 to C4 and C6** are as in rev 0, and all PASS.
 
 **C5 (D), replaced per W1 11330 item 5d.**
@@ -98,7 +110,7 @@ The Library Check pair is LIB f45effef8ec77157, MAP b0d91d9c30aa1654, and it PAS
 3. The target writes UNDERDETERMINED, each judge's own word.
 4. Control: with no counted unnamed break, live and target agree.
 5. The D2 inputs line is present.
-6. D4, LIB 1492 with rd386 and one counted unnamed break: live CHALLENGER WINS (known-bad), target UNDERDETERMINED. Control with none: live and target agree.
+6. D4 in its real scope (section 3b): the built sbApply2024 runs without a ReferenceError, and the scope check finds 0 uses out of scope. Line test: LIB 1492 with rd386 and one counted unnamed break: live CHALLENGER WINS (known-bad), target UNDERDETERMINED. Control with none: live and target agree.
 7. D3, ert386 run as the engine builds it (the Alternate Merge ERT library source) on the stored judgments, whose verdict_raw matches the DB md5:
    - 1273 (spark) and 1274 (qwen4max): live v61 WORD CHALLENGER WINS (known-bad); target UNDERDETERMINED, and the v61 INPUTS list "C1 (CLOSE-CONTRADICTION, no collision line names it) CHALLENGER LINK BROKEN".
    - Control 1272 (gemini, whose D3 vs C1 line carries the CHALLENGER break): live and target v61 tags are identical, UNDERDETERMINED.
@@ -135,7 +147,7 @@ Each line stays UNEXERCISED until a run holds that case.
 Branch claude/untitled-9jle0o, folder a586_w4/: this plan; the rev 0 plan; build/ (build586.cjs, libpatch.js, syn586.cjs, t586.cjs, out_t586.txt, out_pair586.txt, out_build586.txt, data/*.json). The four workflow JSON files stay in the project folder ask586/w4/build/ and are named by md5.
 
 ## 10. STEPS AND REVERT
-1. W1 regrades rev 2 (D3, D4 and their criteria).
+1. W1 regrades rev 3 (D4 in its real scope).
 2. The ASK number is 587 (coordinator, 23:03 CST).
 3. The operator's card goes in W4's thread.
 4. On the press, with no run live, follow C8, then the audit row, the Wall post and W1's readback.
