@@ -57,7 +57,8 @@ const libEdit=(W,tag)=>{const {N:SL,T,a,b,c0,e,L,M}=cut(W);let nl=0,nm=0;const c
 const re=libEdit(E,'engine'),rc=libEdit(C,'child');
 // engine library node stubs declare the QR Merge reference
 {const {L,M}=cut(E);const srcOf=k=>M[k].p.map(x=>typeof x==='number'?L[x]:typeof x[0]==='string'?x[0]:L.slice(x[0],x[1]+1).join('\n')).join('\n');let n=0;
- for(const x of E.nodes){const s=x.parameters&&x.parameters.jsCode;if(typeof s!=='string'||!s.startsWith('if(false){')||!M[x.name])continue;if(!srcOf(x.name).includes("$('QR Merge')"))continue;if(s.includes('$("QR Merge")'))continue;x.parameters.jsCode='if(false){$("QR Merge");'+s.slice(10);n++;}
+ const keyOf=s=>{const m=s.match(/\(__LT\.lastIndexOf\(.\\n\/\*MAP\*\/.\)\+8,__LT\.lastIndexOf\(.\\n\/\*END\*\/.\)\)\)\["([^"]+)"\]/);return m?m[1]:null;};
+ for(const x of E.nodes){const s=x.parameters&&x.parameters.jsCode;if(typeof s!=='string'||!s.startsWith('if(false){'))continue;const key=keyOf(s);if(!key||!M[key])continue;if(!srcOf(key).includes("$('QR Merge')"))continue;if(s.includes('$("QR Merge")'))continue;x.parameters.jsCode='if(false){$("QR Merge");'+s.slice(10);n++;}
  log.push('engine stubs given $("QR Merge"): '+n);}
 // plain nodes
 for(const nm of ['Reserve Build','Panel Check']){const x=N(E,nm);const k=x.parameters.jsCode.split(PBJ).length-1;if(k!==1)throw new Error(nm+' reads '+k);x.parameters.jsCode=x.parameters.jsCode.split(PBJ).join(H);log.push(nm+' edited');}

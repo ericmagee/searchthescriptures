@@ -30,4 +30,7 @@ function qrCheck(q,side,F){const f=[];if(!q||typeof q!=='object')return ['no que
 function qrQuestion(q){const form=qrForm(q);if(form==='MEANING')return 'What does "'+String(q.term).trim()+'" in this passage mean?';if(form==='FIT')return 'How does this passage fit '+qrRefs(q.verse)[0]+'?';if(form==='AGREE')return 'How do these two passages agree?';return null;}
 function qrRounds(){let G=null;try{if($('Regrade Load').isExecuted)G=$('Regrade Load').first().json;}catch(e){G=null;}const F=G?G.f:$('Final Output').first().json;if(!F||typeof F!=='object')throw new Error('no rounds to read');return F;}
 const qrSkipOf=arr=>{const x=(arr||[]).find(a=>a&&a.qr_skip);return x?x.qr_skip:null;};
+/* a skip item crosses the two judge HTTP nodes with a 16-token request on the judge's own model, never with no body */
+const qrOK=m=>m?{model:m,max_tokens:16,messages:[{role:'user',content:'Reply with the single word OK.'}]}:null;
+const qrModel=()=>{try{const j=$('Panel Build').first().json.judges;return (Array.isArray(j)&&j[0]&&j[0].api_model)||null;}catch(e){return null;}};
 const qrErr=(node,e)=>node+': '+String((e&&e.message)||e).slice(0,300);

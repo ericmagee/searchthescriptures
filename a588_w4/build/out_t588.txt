@@ -51,7 +51,8 @@ PASS T4.1 Alt Gate Build: every Panel Build read goes through the QR Merge swap
 PASS T4.1 Alt Late Gate Build: every Panel Build read goes through the QR Merge swap
 PASS T4.2 Reserve Build: the read goes through the swap
 PASS T4.2 Panel Check: the read goes through the swap
-PASS T4.3 every engine library node that reads QR Merge declares it (23)
+PASS T4.3a Early Alternate Build (it loads the Alternate Build source) is among them
+PASS T4.3 every engine library node that reads QR Merge declares it (24)
 PASS T4.4 the swap gives the merged bodies (marker in all three)
 PASS T4.5 qr_ok false: the plain Panel Build
 PASS T4.6 the child, which has no QR Merge node: the plain shim (already swapped by the pass)
@@ -72,6 +73,11 @@ PASS T5.10 a body with no transcript anchor: skip, never a block in the wrong pl
 PASS T5.11 a failed answer call is recorded "(no answer)" and the round goes on
 PASS T6.1 the row line: RAN or SKIPPED on one line; nothing when the round is off
 PASS T6.2 the review_notes readers (C4P.stored, the SYNTHESIS CHECK and REMOVED SEAT readers of Format Markdown) give the same output with and without the line
+PASS T8.1 __JFLX (Alternate Build, Reserve Build) swaps the seat's fault ledger and keeps the block before the transcript
+PASS T8.2 ... and with no fault ledger
+PASS T8.3 Judge Contradiction Build reads the AGREE question as one contradiction candidate (judge, side, CR2 earlier, CR4 closing), as in the trials
+PASS T8.4 a skip item crosses QR Ask with a 16-token request on the judge's own model, not with no body
+PASS T8.5 ... and QR Retry Ask likewise
 PASS T7.1 the engine and the child hold the same LIB
 PASS T7.2 the child gains no node
-RESULT: ALL PASS (76 pass)
+RESULT: ALL PASS (82 pass)

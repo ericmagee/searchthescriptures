@@ -10,10 +10,10 @@ const addUser=(body,text)=>{const b=JSON.parse(JSON.stringify(body));const m=b.m
 if(!Array.isArray(PB.judges)||PB.judges.length!==3)throw new Error('Panel Build has '+(PB.judges||[]).length+' judges, expected 3');
 return PB.judges.map((j,i)=>{if(j.fam!=='openrouter')throw new Error('seat '+j.seat+' is '+j.fam+'; the question round routes only OpenRouter judge seats');
  return {json:{i,seat:j.seat,body:addUser(j.body,ASK)}};});
-}catch(e){return [{json:{qr_skip:qrErr('QR Ask Build',e)}}];}`;
+}catch(e){return [{json:{qr_skip:qrErr('QR Ask Build',e),body:qrOK(qrModel())}}];}`;
 
 const CHECK=`try{
-const A=$('QR Ask Build').all().map(x=>x.json);const sk=qrSkipOf(A);if(sk)return [{json:{qr_skip:sk}}];
+const A=$('QR Ask Build').all().map(x=>x.json);const sk=qrSkipOf(A);if(sk)return [{json:{qr_skip:sk,body:qrOK(qrModel())}}];
 const F=qrRounds();const R=$input.all().map(x=>x.json);
 if(R.length!==A.length)throw new Error(R.length+' replies for '+A.length+' asks');
 const __Q=A.map((a,i)=>qrParse(qrText(R[i])));const __ct=q=>!!(q&&typeof q==='object'&&qrForm(q)==='AGREE'&&!qrEmpty(q.earlier_quote));
@@ -26,7 +26,7 @@ return A.map((a,i)=>{const t=qrText(R[i]);const o=qrParse(t);const out={i,seat:a
  const body=JSON.parse(JSON.stringify(a.body));if(bad.length||rs.length){body.messages.push({role:'assistant',content:t||'(no reply)'});body.messages.push({role:'user',content:RET});}
  else{body.messages=[{role:'user',content:'Reply with the single word OK.'}];body.max_tokens=16;}
  return {json:{...out,retry:bad.length>0||rs.length>0,why:bad,redirect:rd,body}};});
-}catch(e){return [{json:{qr_skip:qrErr('QR Check',e)}}];}`;
+}catch(e){return [{json:{qr_skip:qrErr('QR Check',e),body:qrOK(qrModel())}}];}`;
 
 const FINAL=`try{
 const C=$('QR Check').all().map(x=>x.json);const sk=qrSkipOf(C);if(sk)return [{json:{qr_skip:sk}}];
