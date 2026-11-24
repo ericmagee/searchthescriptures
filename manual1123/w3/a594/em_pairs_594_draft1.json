@@ -1,0 +1,12 @@
+{
+ "10.0": [
+  {
+   "old": "  - Limits: the seat list of `odv1_record_panel_substitution` does not hold qwen4max, and Init Seats makes qwen4max the reserve in 2 pairs (gemini against spark, both ways); a reserve used there would raise at its record. Not shown by a run.",
+   "new": "  - Limits: not shown by a run."
+  },
+  {
+   "old": "the reserve judges the failed slot's own prompt and `rpc/odv1_record_panel_substitution` records it before any judgment row is written.",
+   "new": "the reserve judges the failed slot's own prompt and `rpc/odv1_record_panel_substitution` records it before any judgment row is written. The recorder accepts a failed seat and a reserve only from its own seat list and raises for any other seat; the list holds qwen4max (ASK 594). A substitution with qwen4max as the failed seat or the reserve is not shown by a run."
+  }
+ ]
+}
