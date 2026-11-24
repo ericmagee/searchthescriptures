@@ -1,0 +1,12 @@
+PASS T1.1 control (live 06ba53ad): Build Save Body runs before QR Merge, so its record line cannot see the round
+PASS T1.3 the regrade branch reaches QR Merge (Build Save Body on it: true)
+PASS T1.4 QR Merge feeds Panel Judges Prep (first, unchanged) and QR Record Build; QR Record ends the branch
+PASS T1.5 QR Record is reached on the fresh path and on the regrade path, after QR Merge
+PASS T1.6 no existing node changes; two nodes added
+PASS T2.1 RAN: every question and answer, the follow-up with its Q<n>, the checks, the skips; no judge bodies
+PASS T2.2 SKIPPED with its reason; a dry regrade is marked
+PASS T2.3 a fault in the node is a SKIPPED record, not a stop
+PASS T3.1 QR Record: the new RPC, the same Supabase credential as Write Tokens, errors continue
+PASS T3.2 the body names the five RPC arguments
+PASS T4.1 the migration: one new table (RLS on), one insert function, execute for service_role and lab_seat as Write Tokens has; no drop, delete or update
+RESULT: ALL PASS (11 pass)
