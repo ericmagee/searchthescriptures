@@ -1,12 +1,12 @@
-# PRE-RUN AAR OBJECTIVES for the next live run (draft 2)
+# PRE-RUN AAR OBJECTIVES for the next live run (draft 3)
 
-W3 (session_01H1X3ANsGiMnhnbkfphocmo), 2026-11-24 CST, on the coordinator's order. Draft 2 applies W1's grade of draft 1 (PASS WITH F1, F2 and a note on item 10; W1 commit a1943b7d).
+W3 (session_01H1X3ANsGiMnhnbkfphocmo), 2026-11-24 CST, on the coordinator's order. Draft 2 applies W1's grade of draft 1 (PASS WITH F1, F2 and a note on item 10; W1 commit a1943b7d, Wall 11562). Draft 3 states ASK 591 fix 2, written 09:34 CST (Wall 11559, audit 41468).
 
 - LIVE NOW (W1 readback, Wall 11557): engine 6834c21b, child ecdc6218, LIB 47a39128fec62d31.
 - No run has executed since run 42071 (debate_results last row 21:57 CST 2026-11-23). Every item below is live and UNEXERCISED.
 - Each OBJECTIVE is the ASK's own, from its plan to done as its AAR row or its plan holds it. An objective is a brief expectation of what the ASK achieves; it is never a command from the operator.
 - Each EXPECT is what the run's record shows if the objective is met. Items marked ONLY IF show nothing unless their case arises in the run; a run in which the case does not arise leaves that item UNEXERCISED, not met.
-- Sources: ask_aar_snapshots rows 158 to 166 (objective and run_evidence, read by SQL); plan591.md d84a0dd3 section 3; notes594.md section 1; notes_j3.md 5b527f95; Wall 11543, 11552, 11556.
+- Sources: ask_aar_snapshots rows 158 to 166 (objective and run_evidence, read by SQL); plan591.md d84a0dd3 section 3; notes594.md section 1; notes_j3.md 5b527f95; Wall 11543, 11552, 11556, 11559, 11561.
 
 ## 1. ASK 587: engine form fixes A to E (row 158)
 OBJECTIVE: a judge is not sent back, counted or removed for a defect of the engine's own making, and a judge's RESULT is not raised to a challenger win past a counted challenger break. A real fault of the same kind is still raised.
@@ -79,13 +79,13 @@ EXPECT:
 - MEASURE: how many break lines go back for E-GRT (on stored run 42071: 2 of 13), and whether any goes back for a grant word used of something other than a grant.
 LIMIT TO READ FOR: the same send-back stop as J2.
 
-## 11. ASK 591 and its fix 1 (fix 2 to be added to this title and the sources when it is written): the judge order comes from the table (no AAR row yet)
-OBJECTIVE: the operator puts the panel judges and the alternates in order on the dashboard page and saves; the next run seats judges in that order; no model edits engine code to change it. The single judge is not shown or computed (fix 1).
+## 11. ASK 591 with fix 1 and fix 2: the judge order comes from the table (no AAR row yet)
+OBJECTIVE: the operator puts the panel judges and the alternates in order on the dashboard page and saves; the next run seats judges in that order; no model edits engine code to change it. The single judge is not shown or computed (fix 1). The page's Save works under the dashboard's guard (fix 2).
 EXPECT (always):
 - the node Judge Order Read executes at the run's start, before Accept Models;
 - review_notes holds one line "[JUDGE ORDER v<n>: panel list ...; alternates list ... | SEATED: panel ...; reserve ...; alternates ...]" with no "single judge" in it;
 - the seats the run seats equal the line-up the dashboard page showed for that pair of debaters before the launch;
-- (ONLY IF fix 2 is live and the operator saved an order on the page) v<n> is that save; otherwise v1, the seeded order. At this draft the page's Save fails on the live database (a bare DELETE under the dashboard's safe-update guard; ASK 591 fix 2, not yet written), so without fix 2 the save part of the objective is NOT MET, whatever the run shows;
+- (ONLY IF the operator saved an order on the page after fix 2) v<n> is that save; otherwise v1, the seeded order. Until fix 2 the page's Save failed (a table clear with no WHERE, refused by the dashboard's safe-update guard). Fix 2 is live and its test was NOT RUN; its proof is the operator's next Save (version 2, log row 2), read back by W1 and W4. Until that Save is read back, the save part of the objective is NOT SHOWN, whatever the run shows;
 - (ONLY IF the read fails) the run stops at the read with its message, before any model call.
 
 ## 12. WHAT THIS RUN CANNOT SHOW
