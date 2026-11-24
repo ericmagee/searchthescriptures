@@ -1,0 +1,18 @@
+{
+ "14.0": [
+  {
+   "old": "    - Record: none is stored. Build Save Body holds a line \"[QUESTION ROUND v1: ...]\" for review_notes, but on a live run Build Save Body runs before the round, so the line never writes. The judges receive the questions and answers; the run row does not hold them.",
+   "new": "    - Record (ASK 588 R): QR Record Build and QR Record, right after QR Merge, write to `odv1_question_round_log`, through `rpc/odv1_record_question_round` (insert only), one row for each run in which the question round is switched on (RAN, or SKIPPED with the reason), a fresh run or a regrade; a dry regrade writes its row too, marked dry. A run with the round switched off writes no row. The row holds run_token, regrade, dry, status RAN or SKIPPED, and the record: every question and answer with its judge, side, form, round, quotations, route and finish; each continuation with the question it follows; the checks; the skips; and, when the round did not run, the reason. A fault in either node never stops the run. Build Save Body still holds a line \"[QUESTION ROUND v1: ...]\" for review_notes; on a live run it runs before the round, so that line never writes, and the run row does not hold the round."
+  },
+  {
+   "old": "`How do these two passages agree?`\n",
+   "new": "`How do these two passages agree?` The debater sees both quotes. The judges' text labels a CONTRADICTION QUESTION with both quotes.\n"
+  }
+ ],
+ "17.1": [
+  {
+   "old": "no record of the round is stored (the review_notes line never writes); ",
+   "new": "the record row in odv1_question_round_log (ASK 588 R) is first written by a run; the review_notes line never writes; "
+  }
+ ]
+}
