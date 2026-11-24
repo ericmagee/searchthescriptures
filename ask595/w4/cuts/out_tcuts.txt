@@ -1,0 +1,21 @@
+PASS S1 engine engine: changed nodes Build Independent Verdict, Panel Build, QR Final, QR Follow Final, Shared Library; node count and connections equal
+PASS S2 engine engine: LIB lines changed 2277, 3564
+PASS S1 child child: changed nodes Shared Library; node count and connections equal
+PASS S2 child child: LIB lines changed 2277, 3564
+PASS S3 no 2,000 cut is left in QR Final or QR Follow Final
+PASS S4 no cut is left on the ASK 590 closing_q or earlier_q quotations in Panel Build, Build Independent Verdict or LIB 3564 (the older TRIAL block r.close_q/r.earlier_q 400 is not in this change)
+PASS Q1 QR Final: a DROPPED first and second reply of 3200 characters are stored whole
+PASS Q2 control: the live QR Final stores it cut to 2000
+PASS Q3 QR Follow Final: the DROPPED reply is stored whole (live cuts to 2,000)
+PASS Q4 a PASSED reply adds no field, as before
+PASS P Panel Build Panel Build: both reversed-close blocks (verse and link) show a 900-character close quotation and a 700-character earlier quotation whole
+PASS P Panel Build control control: live shows the 900 and 700 character quotations cut to 500
+PASS P Build Independent Verdict Build Independent Verdict: both reversed-close blocks (verse and link) show a 900-character close quotation and a 700-character earlier quotation whole
+PASS P Build Independent Verdict control control: live shows the 900 and 700 character quotations cut to 500
+PASS R engine engine: the E-REVCLOSE send-back shows the 661 and 529 character quotations whole
+PASS R child child: the E-REVCLOSE send-back shows the 661 and 529 character quotations whole
+PASS R control control: the live send-back text cuts them to 400
+PASS M1 mlsBlock returns the whole block (2491 characters, 7 lines) in the engine
+PASS M2 child library: the same
+PASS M3 control: the live mlsBlock cuts it to 1500
+RESULT: ALL PASS (20 pass)

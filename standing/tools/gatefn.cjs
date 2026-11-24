@@ -1,0 +1,7 @@
+// Loads a node's built top-level declarations (in order, its main statements left out), with $ stubbed. From ask586/w4/build/gatefn.cjs, taking a workflow object.
+const acorn=require('/opt/node-tools/node_modules/acorn');const {code}=require('../lib.cjs');
+module.exports=(W,node,extra,names)=>{const s=code(W,node);const P='(async function(){';const ast=acorn.parse(P+s+'\n})',{ecmaVersion:'latest'});const body=ast.body[0].expression.body.body;
+ const T=n=>s.slice(n.start-P.length,n.end-P.length);const keep=[];for(const b of body){if(b.type==='FunctionDeclaration'){keep.push(T(b));continue;}if(b.type!=='VariableDeclaration')continue;for(const d of b.declarations){if(d.id.type==='Identifier'){keep.push('let '+d.id.name+';try{'+d.id.name+'='+(d.init?T(d.init):'undefined')+';}catch(e){__fail.push('+JSON.stringify(d.id.name)+'+": "+e.message);}');}}}
+ const stub='const $=(n)=>{const x=(extra&&extra[n])||null;return {isExecuted:!!x,first:()=>({json:x||{}}),all:()=>x?[{json:x}]:[],item:{json:x||{}}};};const $input={all:()=>[],first:()=>({json:{}}),item:{json:{}}};const $json={};const $execution={id:"0",mode:"manual"};const $workflow={id:"x"};const $env={};const fetch=()=>{throw new Error("no fetch")};const helpers={};const $node={name:'+JSON.stringify(node)+'};\n';
+ const ret='{'+(names||['sbApply2024']).map(n=>n+':typeof '+n+'==="undefined"?undefined:'+n).join(',')+',__fail}';
+ return new Function('extra','const __fail=[];'+stub+keep.join('\n')+'\nreturn '+ret+';')(extra);};

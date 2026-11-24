@@ -1,0 +1,44 @@
+{
+ "engine_nodes": [
+  "QR Final c6534baa->b5a92b3e",
+  "QR Follow Final b7ffece6->c7e97a50",
+  "Panel Build dec3b126->a40789ea",
+  "Build Independent Verdict f5afdcbc->a009fddb"
+ ],
+ "engine_lib": {
+  "oldsha": "3e42df7e04db6ad2",
+  "newsha": "04ac120b9bf3a19c",
+  "map_touched": [
+   "Alt Send Back Build 191006->190980",
+   "Alternate Payloads 254456->254442",
+   "Extract Independent Verdict 267503->267489",
+   "Panel Payloads 260326->260312",
+   "R2 Alt Send Back Build 190978->190952",
+   "R2 Alternate Payloads 254362->254348",
+   "Send Back Build 191413->191387"
+  ],
+  "lib_changed": [
+   "3564 9f98cde3->cb14b331",
+   "2277 e42b8d62->f062f237"
+  ],
+  "node": "Shared Library 81c10ebe->3584597c"
+ },
+ "child_lib": {
+  "oldsha": "3e42df7e04db6ad2",
+  "newsha": "04ac120b9bf3a19c",
+  "map_touched": [
+   "Alt Send Back Build 191006->190980",
+   "Alternate Payloads 254456->254442",
+   "Extract Independent Verdict 267503->267489",
+   "Panel Payloads 260326->260312",
+   "R2 Alt Send Back Build 190978->190952",
+   "R2 Alternate Payloads 254362->254348",
+   "Send Back Build 191413->191387"
+  ],
+  "lib_changed": [
+   "3564 9f98cde3->cb14b331",
+   "2277 e42b8d62->f062f237"
+  ],
+  "node": "Shared Library c0aaa904->b4ab740a"
+ }
+}
