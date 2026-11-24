@@ -1,0 +1,11 @@
+S13 stored answer (row 53168): SENDBACK: S13 || CHANGE TO: RETRACTED: D3 vs C4 || In [CR3], the defender explains that "Luke identifies that virgin at the announcement and speaks of her conceiving and bearing in the future", so D3 
+pre-587 196402d0 load faults: [ "bodies: Cannot read properties of undefined (reading 'slice')" ]
+pre-587 196402d0 | lines whole | S13 as sent back | S13 APPLIED | FORCED D3 vs C4 lines left: 0 | result DEFENDER WINS
+pre-587 196402d0 | lines whole | S13 = gate change of 53202 | S13 APPLIED | FORCED D3 vs C4 lines left: 0 | result DEFENDER WINS
+pre-587 196402d0 | lines cut at 1,500 | S13 as sent back | S13 NOT APPLIED: the CHANGE TO line has no line form the engine reads; a retraction is written "RETRACTED: <pair>" with nothing | FORCED D3 vs C4 lines left: 0 | result DEFENDER WINS
+pre-587 196402d0 | lines cut at 1,500 | S13 = gate change of 53202 | S13 NOT APPLIED: the CHANGE TO line has no line form the engine reads; a retraction is written "RETRACTED: <pair>" with nothing | FORCED D3 vs C4 lines left: 0 | result DEFENDER WINS
+live 94b682a0 load faults: [ "bodies: Cannot read properties of undefined (reading 'slice')" ]
+live 94b682a0 | lines whole | S13 as sent back | S13 APPLIED | FORCED D3 vs C4 lines left: 0 | result DEFENDER WINS
+live 94b682a0 | lines whole | S13 = gate change of 53202 | S13 APPLIED | FORCED D3 vs C4 lines left: 0 | result DEFENDER WINS
+live 94b682a0 | lines cut at 1,500 | S13 as sent back | S13 NOT APPLIED: the CHANGE TO line has no line form the engine reads; a retraction is written "RETRACTED: <pair>" with nothing | FORCED D3 vs C4 lines left: 0 | result DEFENDER WINS
+live 94b682a0 | lines cut at 1,500 | S13 = gate change of 53202 | S13 NOT APPLIED: the CHANGE TO line has no line form the engine reads; a retraction is written "RETRACTED: <pair>" with nothing | FORCED D3 vs C4 lines left: 0 | result DEFENDER WINS
