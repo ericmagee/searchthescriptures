@@ -1,6 +1,6 @@
 #!/bin/bash
 # ASK 623 engine write: Init Seats, Resolve Seats, Build Synthesis, Build Independent Verdict, Build Diagnostic Prompt (hydrogen and neon seat tables). Child untouched.
-# Runs AFTER write623.sql has been applied through the database tool. Key from the environment only.
+# Rev 1: takes the live engine and replaces only the five nodes (ASK 607 Library written first). Runs AFTER write623.sql has been applied through the database tool. Key from the environment only.
 # Refuses while any engine or child execution runs, when live is not 94b682a0's parameters, or when t623 or the standing set fails.
 set -u
 : "${N8N_API_KEY:?N8N_API_KEY not set; NOTHING WRITTEN}"
@@ -10,15 +10,21 @@ RUN=$(curl -s -H "X-N8N-API-KEY: $N8N_API_KEY" "$H/executions?status=running&lim
 ( cd $B && node build623.cjs && node t623.cjs > $O/t623_at_write.txt 2>&1 ); tail -1 $O/t623_at_write.txt | grep -q "ALL PASS" || { echo "BUILD/T623 FAILED; NOTHING WRITTEN"; exit 1; }
 node /mnt/project-files/standing/run.cjs $B/target_engine_623.json $CB > $O/standing_at_write.txt 2>&1 || { echo "STANDING FAILED; NOTHING WRITTEN"; exit 1; }; tail -1 $O/standing_at_write.txt
 curl -s -H "X-N8N-API-KEY: $N8N_API_KEY" $H/workflows/$E -o $O/prewrite_eng.json || exit 1
-python3 -I - $O $BASE $B <<'PY' || { echo "LIVE IS NOT THE BASE (94b682a0); NOTHING WRITTEN"; exit 1; }
+python3 -I - $O $BASE $B <<'PY' || { echo "LIVE FIVE NODES ARE NOT THE BASE (94b682a0); NOTHING WRITTEN"; exit 1; }
 import json,sys
 O,BS,B=sys.argv[1],sys.argv[2],sys.argv[3]
 def P(d):return {n['name']:json.dumps(n['parameters'],sort_keys=True) for n in d['nodes']}
 a=json.load(open(f'{O}/prewrite_eng.json'));b=json.load(open(BS));T=json.load(open(f'{B}/target_engine_623.json'))
-assert P(a)==P(b) and a['connections']==b['connections']
+FIVE=['Init Seats','Resolve Seats','Build Synthesis','Build Independent Verdict','Build Diagnostic Prompt']
+# live may carry ASK 607 (Shared Library only, written first 16:01 CST); the five nodes and connections must still be the base's
+assert all(P(a)[n]==P(b)[n] for n in FIVE) and a['connections']==b['connections'] and set(P(a))==set(P(b))
 json.dump({k:a[k] for k in ('name','nodes','connections','settings')},open(f'{O}/revert_eng_623.json','w'),ensure_ascii=False)
-json.dump({'name':a['name'],'nodes':T['nodes'],'connections':T['connections'],'settings':a['settings']},open(f'{O}/put_eng.json','w'),ensure_ascii=False)
+TN={n['name']:n for n in T['nodes']}
+for n in a['nodes']:
+  if n['name'] in FIVE: n['parameters']=TN[n['name']]['parameters']
+json.dump({'name':a['name'],'nodes':a['nodes'],'connections':a['connections'],'settings':a['settings']},open(f'{O}/put_eng.json','w'),ensure_ascii=False)
 PY
+node /mnt/project-files/standing/run.cjs $O/put_eng.json /mnt/project-files/ask607/w4/write/fetchback_child_607.json > $O/standing_put.txt 2>&1 || { echo "STANDING ON PUT FAILED; NOTHING WRITTEN"; rm -f $O/put_eng.json; exit 1; }; tail -1 $O/standing_put.txt
 code=$(curl -s -o $O/putreply_eng.json -w '%{http_code}' -X PUT -H "X-N8N-API-KEY: $N8N_API_KEY" -H 'Content-Type: application/json' --data-binary @$O/put_eng.json $H/workflows/$E) || code=000
 echo "PUT eng http $code"; [ "$code" = 200 ] || { echo "PUT FAILED"; exit 1; }
 curl -s -H "X-N8N-API-KEY: $N8N_API_KEY" $H/workflows/$E -o $O/fetchback_eng_623.json
@@ -28,7 +34,7 @@ import json,sys
 O,B=sys.argv[1],sys.argv[2]
 def P(d):return {n['name']:json.dumps(n['parameters'],sort_keys=True) for n in d['nodes']}
 f=json.load(open(f'{O}/fetchback_eng_623.json'));T=json.load(open(f'{B}/target_engine_623.json'));r=json.load(open(f'{O}/revert_eng_623.json'))
-print('eng',f['versionId'],'active',f.get('active'),'nodes',len(f['nodes']),'params equal target',P(f)==P(T),'conn equal',f['connections']==T['connections'],'changed',[k for k in P(f) if P(f)[k]!=P(r).get(k)])
+print('eng',f['versionId'],'active',f.get('active'),'nodes',len(f['nodes']),'five equal target',all(P(f)[n]==P(T)[n] for n in ['Init Seats','Resolve Seats','Build Synthesis','Build Independent Verdict','Build Diagnostic Prompt']),'conn equal',f['connections']==T['connections'],'changed',[k for k in P(f) if P(f)[k]!=P(r).get(k)])
 PY
 node /mnt/project-files/standing/run.cjs $O/fetchback_eng_623.json $O/fetchback_child_623.json | tail -1
 node /mnt/project-files/ask557/w4/build/test557.js --pair $O/fetchback_eng_623.json $O/fetchback_child_623.json | tail -1

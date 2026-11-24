@@ -1,0 +1,7 @@
+lines whole: applied 14 / 14; items S16 RESULT DIFFERS; result DEFENDER WINS / DEFENDER WINS; pkgFRM marked: none
+PASS whole: applied list, items, text and result equal old and new, except rfs pkgFRM on no item
+PASS whole: the form-refused item carries the mark and no other item does
+lines cut at 1,500: applied 14 / 14; items S13 NOT APPLIED, S16 RESULT DIFFERS; result DEFENDER WINS / DEFENDER WINS; pkgFRM marked: S13
+PASS cut: applied list, items, text and result equal old and new, except rfs pkgFRM on S13
+PASS cut: the form-refused item carries the mark and no other item does
+C3 ALL PASS
