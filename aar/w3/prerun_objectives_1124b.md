@@ -1,11 +1,20 @@
-# PRE-RUN AAR OBJECTIVES, second sheet, for the run the operator started about 17:05 CST 2026-11-24 (draft 1)
+# PRE-RUN AAR OBJECTIVES, second sheet, for run 42373, which the operator started about 17:05 CST 2026-11-24 (draft 2)
 
 W3 (session_01H1X3ANsGiMnhnbkfphocmo), on the coordinator's order of 17:05 CST. Written while the run is live, from files and from what I had read before it started. I read nothing of the run and made no database read for this sheet.
 
 - LIVE at the start (W1 readback, Wall 11743): engine 20db58ee, child 74353c40, LIB 2f5aa1e63d51edb1. Judge order as the table holds it: panel sol, sol62, spark; alternates chatgpt, qwen4max, gemini, argon, sonnet, hydrogen, neon (log ids 1, 2, 5).
 - The last stored run before it: 42283 (13:48 CST), which did not finish its judging and counted as a live run for no change.
 - THE FIRST SHEET STILL STANDS: aar/w3/prerun_objectives_1124.md (0cc2e269), items 1 to 11 (ASK 587, 588, 590, 593, 595, 594, 586 J1, J6, J2, J3, 591). The run's AAR answers those eleven and the six below.
-- NOT KNOWN TO ME: the run's pairing and which seat the Oracle holds. Several items below show nothing unless the pairing makes their case; such an item is then UNEXERCISED, not met.
+- THE PAIRING, as the coordinator relayed it from W1 at 17:07 CST (not read by me): run 42373, launch 101; challenger claude (plain), defender opus (the Oracle); both Anthropic. It is the pairing of run 42283. Section 11a marks each item for this pairing. Draft 1 (d33ff2d1) did not know the pairing; draft 2 adds this line and section 11a and changes nothing else.
+
+## 11a. WHAT THIS PAIRING CAN SHOW (claude against opus, both Anthropic)
+- 12, ASK 611 with fix 1: CAN FIRE, all checks. The alternate pass shows only if a judge is removed.
+- 13, the anchor fix: CAN FIRE for the log row. The OpenRouter answer route CANNOT fire (both debaters are Anthropic seats).
+- 14, ASK 601: CAN FIRE. The challenger runs the model of the seat sonnet, so sonnet should stand in the alternates list and not among the SEATED, as on 42283; this time with a judgment.
+- 15, ASK 608: the no-change path only. No debater is an OpenAI seat, so the enforcer stays luna. The backup seat glm is UNEXERCISED by this run whatever it shows.
+- 16, ASK 607: only if a gate CHANGE TO is refused for form. Otherwise UNEXERCISED.
+- 17, ASK 623: neither new seat debates. The always-line can show (order version 5, alternates list ending hydrogen, neon). Either seat judges only if the alternates ahead of it are used up (chatgpt, qwen4max, gemini, argon; sonnet is out by ASK 601). Otherwise UNEXERCISED as debaters and as judges.
+- First sheet: items 2 (the question round, Anthropic route only), 4, 7 to 11 can fire once the run is judged; item 6 (ASK 594) only if a panel seat fails with qwen4max as the failed seat or the reserve.
 - Each OBJECTIVE is the ASK's own, from its plan or its AAR row. It is never a command from the operator. MET is answered YES, NO, IN PART, UNEXERCISED or NOT SHOWN.
 - TWO LIVE RUNS (the operator, 10:38 CST 2026-11-24): "if a change goes through 2 live runs with no issues, it's considered a pass." This run can be the FIRST of the two for each change below, and only if it finishes with a judgment and that change's path fired without a fault.
 
