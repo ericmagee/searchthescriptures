@@ -1,0 +1,6 @@
+const fs=require('fs');const load=p=>{let j=JSON.parse(fs.readFileSync(p));return j.data||j;};
+function onlyDel(a,b){let i=0,j=0;const dels=[];while(i<a.length||j<b.length){if(a[i]===b[j]){i++;j++;continue;}const m=a.slice(i).match(/^\.slice\(0,\d+\)/);if(!m)return {ok:false,at:i,a:a.slice(i-80,i+80),b:b.slice(j-80,j+80)};dels.push(a.slice(Math.max(0,i-60),i)+'«'+m[0]+'»');i+=m[0].length;}return {ok:true,dels};}
+function lib(w){const c=w.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;const i=c.indexOf('/*LIB*/'),k=c.indexOf('/*MAP*/');return JSON.parse(c.slice(i+7,k).trim().replace(/;$/,''));}
+const A=load(process.argv[2]),B=load(process.argv[3]);
+for(const nm of ['QR Final','QR Follow Final','Panel Build','Build Independent Verdict']){const a=A.nodes.find(n=>n.name===nm),b=B.nodes.find(n=>n.name===nm);if(!a)continue;const r=onlyDel(a.parameters.jsCode||'',b.parameters.jsCode||'');console.log('==',nm,r.ok?'ONLY DELETIONS':'OTHER CHANGE');(r.dels||[r.a,r.b]).forEach(x=>console.log('   ',x));}
+const la=lib(A),lb=lib(B);for(const k of [2277,3564]){const r=onlyDel(la[k],lb[k]);console.log('== LIB',k,r.ok?'ONLY DELETIONS':'OTHER CHANGE');(r.dels||[r.a,r.b]).forEach(x=>console.log('   ',x));}
