@@ -1,0 +1,10 @@
+ASK 584 C1, C2, C6 test, 21:15 CST 11-23, one DO block: D1 applied, checks run, then RAISE so the whole block rolled back.
+C1 md5 0c0c2efb keys claude:anthropic/claude-sonnet-5.5:true,chatgpt:openai/gpt-6.1-terra:true,gemini:google/gemini-3.8-flash:true,grok:x-ai/grok-4.7:true,mimo:xiaomi/mimo-v2.6-pro:true,haiku:anthropic/claude-haiku-5.5:true,opus:anthropic/claude-opus-5.5:true,glm:z-ai/glm-5.3:true,qwen4max:qwen/qwen4-max:true,spark:meta/muse-spark-1.3:true,sol62:openai/gpt-6.2-sol:true
+C6 odv1_engines expression count 11 last {"key": "sol62", "ord": 11, "name": "Sol 6.2", "active": true, "mc_seat": "sol62", "api_model": "openai/gpt-6.2-sol"}
+C2a sol62 def: fired
+C2b sol62 ch: fired
+C2c deepseek: error Pick an engine for each side.
+C2d sol99: error Pick an engine for each side.
+launches rows added inside test 2
+AFTER ROLLBACK (separate read): dash_debaters md5 a0347d3a (unchanged), odv1_launches rows with the test topic 0, net.http_request_queue 0.
+Note: C6 used the exact expression dash_api uses for odv1_engines (dash_api itself needs a pass, which W4 does not handle).

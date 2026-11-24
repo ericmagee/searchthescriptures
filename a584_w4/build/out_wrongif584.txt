@@ -1,0 +1,2 @@
+PASS odv1_live_efb5c5f9.js: the drop-down is filled from dash_debaters()
+FAIL odv1_knownbad.js: the drop-down is NOT filled from the database

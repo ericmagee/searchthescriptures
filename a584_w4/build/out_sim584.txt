@@ -1,0 +1,24 @@
+existing 100 pairs: same 100, differ 0
+OK  claude v sol62: panel gemini,spark,qwen4max reserve argon single_judge gemini D.mc claude_synthesis C.mc sol62
+OK  chatgpt v sol62: panel haiku,gemini,spark reserve qwen4max single_judge gemini D.mc chatgpt C.mc sol62
+OK  gemini v sol62: panel haiku,spark,qwen4max reserve sonnet single_judge spark D.mc gemini C.mc sol62
+OK  grok v sol62: panel haiku,gemini,spark reserve qwen4max single_judge gemini D.mc grok C.mc sol62
+OK  mimo v sol62: panel haiku,gemini,spark reserve qwen4max single_judge gemini D.mc mimo C.mc sol62
+OK  haiku v sol62: panel gemini,spark,qwen4max reserve argon single_judge gemini D.mc haiku C.mc sol62
+OK  opus v sol62: panel gemini,spark,qwen4max reserve argon single_judge gemini D.mc opus C.mc sol62
+OK  glm v sol62: panel haiku,gemini,spark reserve qwen4max single_judge gemini D.mc glm C.mc sol62
+OK  qwen4max v sol62: panel haiku,gemini,spark reserve argon single_judge gemini D.mc qwen4max C.mc sol62
+OK  spark v sol62: panel haiku,gemini,qwen4max reserve argon single_judge gemini D.mc spark C.mc sol62
+OK  sol62 v claude: panel gemini,spark,qwen4max reserve argon single_judge gemini D.mc sol62 C.mc claude_synthesis
+OK  sol62 v chatgpt: panel haiku,gemini,spark reserve qwen4max single_judge gemini D.mc sol62 C.mc chatgpt
+OK  sol62 v gemini: panel haiku,spark,qwen4max reserve sonnet single_judge spark D.mc sol62 C.mc gemini
+OK  sol62 v grok: panel haiku,gemini,spark reserve qwen4max single_judge gemini D.mc sol62 C.mc grok
+OK  sol62 v mimo: panel haiku,gemini,spark reserve qwen4max single_judge gemini D.mc sol62 C.mc mimo
+OK  sol62 v haiku: panel gemini,spark,qwen4max reserve argon single_judge gemini D.mc sol62 C.mc haiku
+OK  sol62 v opus: panel gemini,spark,qwen4max reserve argon single_judge gemini D.mc sol62 C.mc opus
+OK  sol62 v glm: panel haiku,gemini,spark reserve qwen4max single_judge gemini D.mc sol62 C.mc glm
+OK  sol62 v qwen4max: panel haiku,gemini,spark reserve argon single_judge gemini D.mc sol62 C.mc qwen4max
+OK  sol62 v spark: panel haiku,gemini,qwen4max reserve argon single_judge gemini D.mc sol62 C.mc spark
+OK  sol62 v sol62: panel haiku,gemini,spark reserve qwen4max single_judge gemini D.mc sol62 C.mc sol62
+sol62 pairs: 21 of 21 OK
+old code, sol62 v claude: REFUSED ORACLE_DEBATE_V1 Init refused: defender engine "sol62" is not one of [claude, chatgpt, gemini, grok, mimo, haiku, opus, glm, qwen4max, spark, deepseek].
