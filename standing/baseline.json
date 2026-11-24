@@ -84,7 +84,9 @@
   "child R2 Alternate Merge :: m[6]",
   "child R2 Alternate Merge :: String(z.to||'')",
   "engine Send Back Build :: __gl",
-  "child R2 Alt Send Back Build :: __gl"
+  "child R2 Alt Send Back Build :: __gl",
+  "engine Send Back Build :: __ll",
+  "child R2 Alt Send Back Build :: __ll"
  ],
  "s3_setters_known_note": "Cut setters (any source) of a property that flagged_line reads, on the ASK 595 target (W1 F2, Wall 11291 b1857765: K-CMTL cuts the judge line to 400; K-ML and K-LB the debaters words). Named for ASK 597; a new one FAILS.",
  "s3_setters_known": [
@@ -171,6 +173,14 @@
     "child R2 Alt Send Back Build :: __gl"
    ],
    "why": "E-GRT item (LIB 3564 J3 block): __gl is one line of the judge verdict_raw, trimmed only; read by W4; t_j3 C15 stores a 2,120-character line whole"
+  },
+  {
+   "ask": "586 J2",
+   "names": [
+    "engine Send Back Build :: __ll",
+    "child R2 Alt Send Back Build :: __ll"
+   ],
+   "why": "E-L2G item (LIB 3564 J2 block): __ll is one line of the judge verdict_raw, trimmed only; read by W4; t_j2 C13 stores a long line whole"
   }
  ]
 }
