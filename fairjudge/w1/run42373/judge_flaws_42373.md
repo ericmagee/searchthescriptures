@@ -24,10 +24,12 @@ Each judge writes that the defender's block exhibits L1, L2 and L3 and answers t
 
 A link the judge thinks fails on meaning is graded LINK BROKEN or FORCED. Counting it again as a concession charges the same link twice. That double charge is what turns sol62's verdict into COLLAPSED.
 
-## F2. The defender's answer on Luke 1:34 is never met (sol62 D2 and D6; sol)
+## F2. The break lines do not quote the defender's answer on Luke 1:34 (sol62 D2 and D6; sol)
 The defender answered "seeing I know not a man" by its tense: a present state, with the conceiving still future ("thou shalt conceive"), so the knowing falls after the word, within the espousal. spark's own answer check graded that answer MEETS.
 
-sol62 and sol both decide that Luke 1:34 "poses the lack of knowing as the obstacle". Neither quotes the tense answer. Their MEETS lines quote only the defender's Ruth 4:13 sentence. A break that never meets the answer actually given is not shown.
+sol62 and sol both decide that Luke 1:34 "poses the lack of knowing as the obstacle". Their break lines on D2 vs C6 and D6 vs C6 quote only the defender's Ruth 4:13 sentence in MEETS.
+
+CORRECTED 18:00 CST: the first version of this file said they never met the tense answer. That was wrong. Each judge has an ANSWER CHECK on Luke 1:34 that grades the tense answer MEETS. sol62 writes "MEETS as to the stated time of her condition" and holds that the added positive inference (a knowing inside the espousal) is not shown. The fault is narrower: the break lines do not quote the answer the judges themselves graded.
 
 ## F3. The challenger is awarded although its own flesh route fails (all three)
 All three find the challenger's route of David's seed through Mary (via Heli and Nathan) UNEXHIBITED. Yet all three set WHICH HOLDS: CHALLENGER.
