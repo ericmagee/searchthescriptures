@@ -1,4 +1,4 @@
-# ASK 586 PLAN rev 5 (J1 both seatings stated, on the operator's word of 23:30 CST; rev 4: W4's reads of Wall 11369 taken in: J2 rebuilt, J3 count corrected, J6 guess confirmed; W1 conditions C4 and C5 of Wall 11359 met; J1 added as a rule and a check, on the operator's ruling as relayed by the coordinator at 23:14 CST 2026-11-23; rev 1 passed at Wall 11352): the judges' reasoning (run ODV1-42071-uclot7fi)
+# ASK 586 PLAN rev 6 (J2, J3, J6 go LIVE, not to trial: section 4A, which overrides every "TRIAL, record-only" line below for these three; rev 5: J1 both seatings stated, on the operator's word of 23:30 CST; rev 4: W4's reads of Wall 11369 taken in: J2 rebuilt, J3 count corrected, J6 guess confirmed; W1 conditions C4 and C5 of Wall 11359 met; J1 added as a rule and a check, on the operator's ruling as relayed by the coordinator at 23:14 CST 2026-11-23; rev 1 passed at Wall 11352): the judges' reasoning (run ODV1-42071-uclot7fi)
 
 Owner of the plan: W3 (session_01H1X3ANsGiMnhnbkfphocmo). Builder of any code check: W4. Grader: W1. Number and owner from the coordinator, 23:03 CST 2026-11-23. Source of direction: the operator, 23:00 CST 2026-11-23, W3 thread: "this next fix will mostly be around the judges reasoning...". That statement sets direction. It approves no write.
 
@@ -126,6 +126,41 @@ BOTH SEATINGS (the operator, 23:30 CST 2026-11-23, W3 thread: "we already tested
 
 WRONG IF: pkgKRB already turns the keystone to BROKEN in these three cases after the cure (W4 says it did not fire in 42071; 41822 not read).
 
+## 4A. LIVE, NOT TRIAL (rev 6). What each check DOES when it fires
+
+WHY. The operator, 23:36 to 23:37 CST 2026-11-23, W3 thread (ruling row 512; Wall 11376): "Every time I request something that's critical, it gets pushed to testing or something with a dry run, and it doesn't go to fucking live". The coordinator's order, 23:38 CST: J2, J3 and J6 go live, instruction text and check together, and the plan states what acting means for each.
+
+THIS REVERSES A STANDING RULE, AND THE CARDS MUST SAY SO: until tonight the rule for a judge failure was "a countermeasure in the judges' agreement plus a code check, TRIAL first". Under rev 6 there is no trial run. THE FIRST LIVE RUN IS THE FIRST TEST of each new form. The safety is offline: W4's test on stored lines (known-bad fires, control silent) and the replay of W1's C3, before each write card.
+
+LIVE TEXT READ: ask586/w4/live_texts_J2J3J6.md (2fc0ca71, W4, from engine 7536d7bf), read in full by W3 for this revision.
+
+### J2 LIVE
+TEXT CHANGED, in every place the [L2] form of a break stands (Panel Build and Build Independent Verdict, the FORCED form and the collision line form; Shared Library LIB 2953):
+- before: `[L2] <word> (<Strong's number>, <gloss>), when the break turns on a word's meaning`
+- after: `[L2] <word> (<Strong's number>): "<the gloss as a side quoted it, word for word>" [<round>], when the break turns on a word's meaning; if your deciding step says more than that gloss says, say so in DECIDES and name the verse that carries it`
+- the "counted when" clause of LIB 2953 gains: "and the quoted gloss stands in the round named, beside that number".
+WHAT THE CHECK DOES: an [L2] entry on a LINK BROKEN or FORCED line whose quoted gloss does not stand word for word in the round it names, beside that number (or which gives no quoted gloss and round), is NOT COUNTED as an [L2]. The line then falls under the rule that is already live (part 09.1, E-COL by layers, Commitment 13: a break "turning on a word's meaning with no counted [L2]" is sent back). So: (1) the line is SENT BACK to the judge once, with the fault named and the form shown; (2) the judge cures it by rewriting the entry, or by a KEEP that gives the quoted gloss and round; (3) an UNCURED item COUNTS against the seat, as every live E-COL layer item does today.
+STATED RISK: the form is new to every judge. A judge that cannot produce it after one send-back loses its seat on form. Run 42071 lost three seats to form. The pressed-witness [L2] form (Panel Build 20718) is NOT changed.
+NOT CAUGHT BY CODE, as rev 4 said: whether a deciding step goes beyond the gloss. The enforcer's E-COL reading sees the quoted gloss beside the step and is the reader of that.
+
+### J3 LIVE
+TEXT ADDED to the judges' agreement, after "A shown chain is footing only through its rows and what the other side has granted (pkgBCL).": "THE GRANTS LISTS below give each side's own grant sentences, numbered G<n> with their round. If a break line says a side granted, conceded, dropped or withdrew something, name the grant by its number (G<n>). If the words are not in that side's list, write NOT A LISTED GRANT and quote the words with their round; they are then your reading."
+SERVED: both sides' grants lists, built by the engine's own harvester (13 and 0 in run 42071), each item with its round; a bare grant ("I grant it.") carries the line before it.
+WHAT THE CHECK DOES: a LINK BROKEN or FORCED line that holds grant, grants, granted, concede(s|d), dropped or withdrew, of a side, with no G<n> of that side's list and no NOT A LISTED GRANT with a quotation found in that side's rounds, is SENT BACK once; cured by adding either; an UNCURED item COUNTS against the seat. A G<n> that is not in the list is the same fault.
+STATED RISK: prompt size grows by the two lists (W4 measures it before the card); the word "dropped" or "granted" used of something other than a side's grant would be sent back (W4's test on the 9 stored judgments of three runs gives the false count).
+ON THE STORED DATA: 2 of 7 lines would be sent back (qwen4max D4 vs C3 and D5 vs C4); each is cured by writing NOT A LISTED GRANT with the Oracle's quoted words.
+
+### J6 LIVE
+TEXT CHANGED, Shared Library LIB 3194 (E-COL) and LIB 3196 (E-HOLD), the CARRIED BY instruction: after "Read the answer with every other verse either side quoted on the subject (Isaiah 28:10)." add: "A DISAGREE answers every verse on the judge's GROUND line: for each one, a clause that quotes it and says why it does not carry the judge's grade, or one CARRIED BY for each. A DISAGREE that leaves a verse of the GROUND unanswered is recorded and not sent back." The reader at LIB 3496 reads every CARRIED BY of the K item, not only the last.
+WHAT THE CHECK DOES: for each DISAGREE, every verse reference on the judge's GROUND (the judge's whole line) must stand in the enforcer's K item. If one is missing, the DISAGREE is RECORDED AND NOT SENT BACK to the judge. This is the engine's existing action for a STANDS without its CARRIED BY ("Without it the STANDS is recorded and not sent back"). It touches no seat and no count; the judge's grade stands.
+STATED RISK: a right correction by the enforcer that skips one verse no longer reaches the judge. On run 42071, up to 16 of 25 DISAGREE lines would not have been sent (my count, an upper bound), among them the two that began the removals of qwen4max and spark.
+THIS IS THE ANSWER TO W1's C1 of Wall 11350: the sentence removed in rev 1 returns, because the check now does what the sentence says.
+
+### What W1 is asked to grade in rev 6
+1. For J2 and J3: "sent back once; uncured counts against the seat", the same standing as today's E-COL layer items. If W1 holds that a new form should not cost a seat on its first run, the alternative is "sent back once; uncured recorded, not counted", and the choice goes on the card for the operator.
+2. For J6: "recorded and not sent back".
+3. The reversal statement above.
+
 ## 5. CARDS (each its own; none is asked for by this plan)
 
 1. J2 instruction text and its TRIAL check.
@@ -134,6 +169,7 @@ WRONG IF: pkgKRB already turns the keystone to BROKEN in these three cases after
 4. J1: the audit line first; then the rule text, the seat's word (b) and the engine rule (c) together, as a change to part 08.0, saying plainly that it changes what result a seat can give.
 Each card shows the exact before and after text, after W4 has read the live text it changes and W1 has graded the build.
 NO CARD before W4's replay of that item's check on argon's text and on the stored judgments of runs 41418 and 41822, with counts, is posted and W1 has read it (W1 C3, Wall 11350).
+Each J2, J3, J6 card is a WRITE card for the text and the check together, live (section 4A); it says there is no trial run and that it reverses "TRIAL first".
 
 ## 6. EXPECT LINES FOR THE NEXT RUN (after any item is live)
 
