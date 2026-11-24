@@ -40,15 +40,25 @@ Two LAY lines in the Shared Library, both copies: LIB 3504 (the CP literal) and 
    d. The #10 form (a title over PRESS heads) gives 0 items. Draft 2 alone gave 1 here (checked).
    e. A bold head with its point on its line still opens a block.
    f. A title-only bold head with no body opens none.
-3. replay562d3.cjs, 581 against 581 + 562 draft 3, on 64 checks: the 50 stored rounds, the 41822 and 41418 Oracle drafts, and 41822's 8 stored rounds.
+3. replay562d3.cjs, 581 against 581 + 562 draft 3, on 64 checks (75 with the C1 runs of 5.3f; a to e below are the 64): the 50 stored rounds, the 41822 and 41418 Oracle drafts, and 41822's 8 stored rounds.
    a. Items go from 303 to 329: 28 new in 12 checks, 2 gone.
    b. The 28 new items are the 27 TRUE items of the corrected classing (the 26 of CLASS562.md plus #17), and #24 (33389 CR2, "**Against D6 (Isaiah 8:3-4, Genesis 4:25, Matthew 11:11).**", one verse only).
    c. #10 is gone by the new rule. 581 draft 2 cleared 7. #24 remains: its second verse is written as a bare "24:16", and 581 draft 2 gives it the book only when the row of Genesis 24:16 is held (581 plan 7.4). The replay runs with rows=[]. The item asks the writer to state the reference, which is the note's own rule, so I class it as an item the writer can satisfy, not a false reading of a full reference.
    d. The 2 gone items are the two "## PRESSES AGAINST THE DEFENDER'S CHAIN" blocks (32725 and 36791 DR1). Their against heads now split that text into the against blocks, which carry the items instead. This was the same under draft 2.
    e. Run 41822: no change. Its rounds hold no "against" head.
+   f. C1 (W3, Wall 11145): the Oracle gate on the defender rounds. D2B, D3B and D4B Build pass {oracle:true} for an Oracle defender, and an against block is then also tested for an [L2] and an [L4] line. The replay now also runs the 11 stored defender rounds (CR2, CR4) with the gate (75 checks in all):
+      - plain, the 11 defender rounds give 8 new items;
+      - with the gate, they give 13 new items, and 11 of them name a missing [L2] or [L4] line;
+      - with the gate, 1 item is gone: 37113 CR2 "## PRESSES AGAINST THE CHALLENGER'S CHAIN", whose text now falls into its against blocks, as in 5.3d.
+      These figures equal W3's own measure.
 
 ## 6. RISK STATED
-This widens the send-back. In the 50 stored rounds, 28 against blocks fall short of their layers as LAY reads them, in 12 rounds. Each now gets the STRUCTURE item in the one send-back, as a PRESS block does today. Run 41822 is not affected.
+This widens the send-back. In the 50 stored rounds, 28 against blocks fall short of their layers as LAY reads them, in 12 rounds. Each now gets the STRUCTURE item in the one send-back, as a PRESS block does today. For an Oracle defender, the gate also asks each against block for an [L2] and an [L4] line. In the 11 stored defender rounds, that gives 13 new items instead of 8, and 11 of the 13 name a missing [L2] or [L4] (5.3f). This is the operator's ruling of 16:52 and 16:54 CST 11-23 applied to the Oracle's replies: the Oracle breaks its opponent's replies down with the layers. Run 41822 is not affected.
+
+Limits (W3 notes, Wall 11145):
+1. An against line inside a PRESS block now ends that block. A PRESS block whose verses stand after such a line is flagged. None of the stored rounds has this.
+2. A prose line that begins "Against D1 ...", has no full stop, and ends in ":" within 80 characters reads as a head.
+3. A title-only head with a blank line and prose under it still opens a block, as planned.
 
 ## 7. ORDER AND WRITE
 After the 581 write; built on what is live then. The write script follows write573.sh c232934c (`|| code=000` on both PUTs, an engine revert with `|| rc=000`, and test562d3 plus the pair check before the PUT).
