@@ -1,4 +1,4 @@
-STANDING SET on target_engine_608.json (fbc09389-6d80-42ac-9547-a7bd485a4724) and fetchback_child611.json (b9cd4e5c-9758-47ad-abd2-7aef9d56f1a1)
+STANDING SET on target_engine_608.json (3cef3eab-9197-4d25-a51f-33af500a089d) and fetchback_child_611f1.json (b9cd4e5c-9758-47ad-abd2-7aef9d56f1a1)
 # inv_587.cjs
 == 587 A: the whole judge line reaches the layer check
 PASS 587.A1 gemini_1272 gemini_1272 (1685 characters): the whole line has its deciding step (deciding step written (ASK 504))
@@ -44,4 +44,8 @@ PASS S3.a UNTRACED places the scan cannot trace: 104, not on the baseline list: 
 PASS S3.a2 properties flagged_line reads: 22 (item, line, detail, report, flagged_line, to, row, n, clause, keystone_line, round, sentence, ...); cut setters of them in any source: 74 distinct, 74 on the named baseline list (ASK 597); new: 0
 == S3 (b): the judge's own line shown in a send-back text
 PASS S3.b send-back texts that show "Your line:" cut: 3 (baseline 3; ASK 597 takes it to 0)
-STANDING: 29 PASS, 0 FAIL (6.5 s)
+# s4_compile.cjs
+== S4 expressions compile in n8n parser
+PASS S4.engine 290 of 290 compile (@n8n/tournament 1.16.0)
+PASS S4.child 67 of 67 compile (@n8n/tournament 1.16.0)
+STANDING: 31 PASS, 0 FAIL (7.0 s)

@@ -1,6 +1,6 @@
-// ASK 608 T1-T3 (W4): Init Seats + Resolve Seats, live fbc09389 vs target, every debater pair the engine accepts; judge order and model rows as read 11-24 13:2x CST (data_608.json).
+// ASK 608 T1-T3 (W4): Init Seats + Resolve Seats, live 3cef3eab vs target, every debater pair the engine accepts; judge order and model rows as read 11-24 13:2x CST (data_608.json).
 const fs=require('fs');const D=require(__dirname+'/data_608.json');
-const L=require(process.env.LIVE||'/mnt/project-files/ask611/w4/write/fetchback_eng611.json');const T=require(process.env.TGT||__dirname+'/target_engine_608.json');
+const L=require(process.env.LIVE||'/mnt/project-files/ask611/w4/fix1/fetchback_eng_611f1.json');const T=require(process.env.TGT||__dirname+'/target_engine_608.json');
 const code=(W,n)=>W.nodes.find(x=>x.name===n).parameters.jsCode;
 const ENGS=['claude','chatgpt','gemini','grok','mimo','opus','glm','qwen4max','spark','sol62'];
 const run=(src,nodes,input,cd)=>{const $=n=>{const it=nodes[n];return {isExecuted:it!==undefined,first:()=>{if(!it)throw new Error('stub '+n);return {json:it[0]};},all:()=>(it||[]).map(json=>({json}))};};
@@ -26,6 +26,6 @@ for(const d of ENGS)for(const c of ENGS){if(d===c)continue;n++;const a=one(L,d,c
 console.log('pairs',n,'| no OpenAI debater, byte-equal',eq,'| luna barred',bar,'| replaced',lines.length,'| fail closed',fails.length);
 lines.forEach(x=>console.log('  '+x));fails.forEach(x=>console.log('  FAIL CLOSED '+x));
 // T3: the backup seat cannot serve: fails closed with the reason, before any call
-const T3=[['backup of a debater family',D.rows.map(r=>r.seat==='hy4'?{...r,family:'google'}:r)],['backup with no family',D.rows.map(r=>r.seat==='hy4'?{...r,family:''}:r)],['backup row missing',D.rows.filter(r=>r.seat!=='hy4')]];
+const T3=[['backup of a debater family',D.rows.map(r=>r.seat==='glm'?{...r,family:'google'}:r)],['backup with no family',D.rows.map(r=>r.seat==='glm'?{...r,family:''}:r)],['backup row missing',D.rows.filter(r=>r.seat!=='glm')]];
 for(const [w,rows] of T3){const t=one(T,'chatgpt','gemini',rows);const ok=t.R&&t.R.err&&/ENFORCER:.*ASK 608/.test(t.R.err);if(!ok)bad.push('T3 '+w);console.log('T3',w,ok?'fails closed: '+t.R.err.slice(0,170):'DID NOT FAIL CLOSED');}
 console.log(bad.length?'T1 FAIL '+bad.join('; '):'T1 ALL PASS');
