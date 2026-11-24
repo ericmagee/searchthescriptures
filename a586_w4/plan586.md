@@ -1,4 +1,4 @@
-# ASK 586 plan rev 0 (W4, 11-23 22:58 CST): fix the engine form defects of run 42071, and answer WALL-11298 and WALL-11305
+# ASK 586 plan rev 0 (W4, 11-23 22:56 CST): fix the engine form defects of run 42071, and answer WALL-11298 and WALL-11305
 
 Sources taken in: the coordinator's assignment (W1 11296 item 7; W4 11297); W3's inputs at 11300 and after; the operator's feedback WALL-11298 (Worker_A3) and WALL-11305/11306 (Worker_G1), sent to the team 22:42 CST; W1 11309 and 11310; and W1's grading list of 22:47 CST (items 1 to 6 below).
 
