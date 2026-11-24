@@ -1,7 +1,7 @@
 # ASK 611 build rev 0 (W4, 11-24): stop four extra copies of the debate in the judging
 Plan: ask611/w4/plan611.md e597b4ff (W1 PASS, Wall 11647).
 Base: live engine ff7ab4cf and child ecdc6218.
-Targets: target_engine_611.json (bdb01c50) and target_child_611.json (afc58aff). The child changes only in its Shared Library, so that the Library stays equal across the pair.
+Targets: target_engine_611.json (66e3e781, rev 1) and target_child_611.json (afc58aff). The child changes only in its Shared Library, so that the Library stays equal across the pair.
 Build: build611.cjs.
 
 ## Changes, in plain words
@@ -44,3 +44,8 @@ If ASK 601 is written first, re-cut with B611E/B611C on its fetch-back.
 ## Open, said plainly
 - The two jsonBody expressions were tested as JavaScript, offline. They have not run in n8n's own expression evaluator. A precedent is QR Ask's jsonBody, which runs ORF-style code with a Map in an expression on live today. The first live run is the proof.
 - Found while building, not in this ASK: Close Enforcer Resume ("return $('Close Enforcer Build').all()") and Close Enforcer Needed? pass the close items on, which is one more copy each. After this change that is about 650k each on 42234, a candidate for a next step.
+
+Rev 1 (for W1 grade 60c7aeb8, Wall 11649):
+- F1 (rule 1): Panel Judges Prep no longer defines ORF or qt. ORF moves, unchanged, into the Panel Judges Parallel expression, its only reader. Prep keeps P1 and P23, which it reads for the provider. The expression no longer carries P1 or P23.
+- F2 (rule 10): both jsonBody expressions (Panel Judges Parallel; Close Group Batch Call openrouter) carry an ASK 611 comment inside.
+- Reran: t611 T1 ALL PASS on rows 42234 and 42071 (35 PASS), T2 saves 3,208,947 and 2,187,621; standing 29/29; pair Library Check PASSES (lib 802077b0878612c9, map 86cbe4d352598877). Engine 66e3e781, child afc58aff (unchanged).
