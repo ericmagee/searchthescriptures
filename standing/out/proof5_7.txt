@@ -2,17 +2,29 @@
 STANDING SET on p7a_eng.json (d819ff4c-059d-438a-96f0-36ca31e93021) and target_child_fix.json (31329164-efe2-40c9-8791-be855e8025b4)
 FAIL S3.a CUT engine Proof7 New Builder: the value is cut: __q.line.slice(0,1500)
 FAIL S3.a places that set flagged_line: 117 found by scan (14 traced whole, 100 not traced, 3 cut, of them 2 on the named baseline list); new cuts: 1
-STANDING: 27 PASS, 2 FAIL (5.3 s)
+FAIL S3.a2 CUT SETTER engine Proof7 New Builder: flagged_line: __q.line.slice(0,1500)
+FAIL S3.a2 properties flagged_line reads: 22 (item, line, detail, report, flagged_line, to, row, n, clause, keystone_line, round, sentence, ...); cut setters of them in any source: 75 distinct, 74 on the named baseline list (ASK 597); new: 1
+STANDING: 27 PASS, 4 FAIL (5.3 s)
 == PROOF 7b new builder, cut in the producer
 STANDING SET on p7b_eng.json (d819ff4c-059d-438a-96f0-36ca31e93021) and target_child_fix.json (31329164-efe2-40c9-8791-be855e8025b4)
 FAIL S3.a CUT engine Proof7 Producer Builder: __h.line is set cut by hits: {line:l.slice(0
 FAIL S3.a places that set flagged_line: 117 found by scan (14 traced whole, 100 not traced, 3 cut, of them 2 on the named baseline list); new cuts: 1
-STANDING: 27 PASS, 2 FAIL (4.9 s)
+STANDING: 28 PASS, 2 FAIL (5.7 s)
 == PROOF 7c new untraced place
 STANDING SET on p7c_eng.json (d819ff4c-059d-438a-96f0-36ca31e93021) and target_child_fix.json (31329164-efe2-40c9-8791-be855e8025b4)
 FAIL S3.a UNTRACED places the scan cannot trace: 101, not on the baseline list: 1 (engine Proof7 Untraced :: z.line)
-STANDING: 27 PASS, 1 FAIL (4.7 s)
+STANDING: 28 PASS, 1 FAIL (5.4 s)
+== PROOF 7d cut in another node (item maker), stored by a recorder
+STANDING SET on p7d_eng.json (d819ff4c-059d-438a-96f0-36ca31e93021) and target_child_fix.json (31329164-efe2-40c9-8791-be855e8025b4)
+FAIL S3.a UNTRACED places the scan cannot trace: 101, not on the baseline list: 1 (engine Proof7d Recorder :: it.line)
+FAIL S3.a2 CUT SETTER engine Proof7d Item Maker: line: t.trim().slice(0,333)
+FAIL S3.a2 properties flagged_line reads: 22 (item, line, detail, report, flagged_line, to, row, n, clause, keystone_line, round, sentence, ...); cut setters of them in any source: 75 distinct, 74 on the named baseline list (ASK 597); new: 1
+STANDING: 27 PASS, 3 FAIL (5.2 s)
 == PROOF 5 marker renamed (LIB 1286)
 STANDING SET on p5_eng.json (d819ff4c-059d-438a-96f0-36ca31e93021) and target_child_fix.json (31329164-efe2-40c9-8791-be855e8025b4)
-FAIL 587 D: the recompute counts a break no collision line names: marker not found: "const cureSafe=s=>String(s).replace(/[\\r"
-STANDING: 19 PASS, 1 FAIL (0.4 s)
+FAIL 587.D2 NOT RUN: marker not found: "const cureSafe=s=>String(s).replace(/[\\r"
+FAIL 587.D3 NOT RUN: marker not found: "const cureSafe=s=>String(s).replace(/[\\r"
+FAIL 587.D5 1272 NOT RUN: error: cureSafe is not defined
+FAIL 587.D5 1273 NOT RUN: error: cureSafe is not defined
+FAIL 587.D5 1274 NOT RUN: error: cureSafe is not defined
+STANDING: 24 PASS, 5 FAIL (5.3 s)

@@ -1,9 +1,16 @@
-# ASK 596 CORE BUILD rev 0: the standing runner, the long-line test S3, and the ASK 587 tests
+# ASK 596 CORE BUILD rev 1 (W1 F1, F2 of Wall 11291, b1857765): the standing runner, the long-line test S3, and the ASK 587 tests
 
 W4, 2026-11-24 CST. For W1's grade.
 - Operator's press (W3 thread, 01:57 CST): "Build the core right after 595". Plan: ask596/w3/plan596.md rev 1 8d4ca45e, sections 3 and 4.
 - Files only. Nothing in n8n changes, and nothing is fetched.
 - Location: /mnt/project-files/standing/ and the repository, under standing/.
+
+## 0. REV 1 CHANGES
+- F1: a group names the tests it holds. When a marker is missing, each test the group holds FAILS by name ("NOT RUN: marker not found"), and the other groups run on. The 587 D group is split in six, so one marker stops only the tests that read it. Proof 5 now gives 29 lines (24 PASS, 5 FAIL), not 20.
+- F2: new group S3 (a2). It collects every property that a flagged_line value reads (22 names: line, to, detail, sentence, ...). It then scans every source of engine and child for a setter of one of those properties whose value is cut. This finds the K-CMTL line cut to 400, and the K-ML and K-LB cuts of the debaters' words.
+  - On the 595 target there are 74 distinct cut setters. They are named in baseline.json for ASK 597, and a new one FAILS.
+  - Proof 7d: one new node makes items whose line is cut to 333, and another node stores it as flagged_line. S3.a2 names the cut setter, and S3.a names the new untraced place.
+- W1's ruling, recorded: the K-KJV report goes on the named baseline for ASK 597.
 
 ## 1. FILES
 - run.cjs: `node run.cjs <engine.json> <child.json> [--detail out.json]`. It runs every file in inv/ and prints one line per test, ending "STANDING: <n> PASS, <m> FAIL (<s> s)". The exit code is 1 on any FAIL.
@@ -25,15 +32,15 @@ Named exception, for W1's ruling: the K-KJV TRIAL report is stored in flagged_li
 (b) Send-back texts that show "Your line:" cut: 3, as W1 counted. A fourth is a FAIL.
 
 ## 3. PROOFS (plan section 4), outputs in out/
-1. Live d819ff4c / 31329164: 27 PASS, 3 FAIL. All three are S3 at the E-REVCLOSE item (Send Back Build and its twins, rev590Hits); every ASK 587 test passes.
-2. The ASK 595 target: 28 PASS, 0 FAIL.
-3. Before 587 (prewrite_eng587, 196402d0): 11 PASS, 67 FAIL. Every A to E test that 587 changed fails, and S3 names 52 cut places.
+1. Live d819ff4c / 31329164: 27 PASS, 6 FAIL. All six are S3 (a) and (a2) at the E-REVCLOSE item (rev590Hits line:l.slice(0,1500), engine and child); every ASK 587 test passes.
+2. The ASK 595 target: 29 PASS, 0 FAIL.
+3. Before 587 (prewrite_eng587, 196402d0): 11 PASS, 98 FAIL. Every A to E test that 587 changed fails, and S3 names 52 cut places.
    - B2 and B3 pass there; they are the controls.
 4. Not in the core. The reach walk belongs to Layer A (ASK 599 rules), which comes after 594.
-5. A marker renamed in a copy of the library (cureSafe, LIB 1286): "587 D ... marker not found".
-6. Time: about 5 seconds for one full run.
-7. A new builder that cuts flagged_line: 7a, cut in the value, FAILS and names "Proof7 New Builder". 7b, cut in its producer function, FAILS and names "hits". 7c, a new untraced place, FAILS and names it.
-Also run: live now (04273989 / c9acb53a, after 595, J1 and J6) 28 PASS; the 595 follow-on target 28 PASS.
+5. A marker renamed in a copy of the library (cureSafe, LIB 1286): D2 and D3 FAIL "NOT RUN: marker not found", and D5 FAILS because its code calls the renamed function. The other 24 tests run and PASS.
+6. Time: about 6 seconds for one full run.
+7. A new builder that cuts flagged_line: 7a, cut in the value, FAILS and names "Proof7 New Builder". 7b, cut in its producer function, FAILS and names "hits". 7c, a new untraced place, FAILS and names it. 7d, a cut in another node, FAILS and names "Proof7d Item Maker".
+Also run: live now (04273989 / c9acb53a, after 595, J1 and J6) 29 PASS; the 595 follow-on target 29 PASS.
 
 ## 4. ANSWERS TO PLAN SECTION 7
 1. Markers: the older library code needs no added markers for these tests. Unique substrings of the code serve as markers. When an ASK rewrites the line, the test fails "marker not found", which is what S2 asks for. No engine change is needed.
@@ -44,5 +51,5 @@ Also run: live now (04273989 / c9acb53a, after 595, J1 and J6) 28 PASS; the 595 
 3. Time: about 5 seconds a run, so it will not be skipped.
 
 ## 5. LIMITS
-1. The trace follows one step inside one source. A cut made in another node and carried by an item is not traced; those places are on the untraced list by name.
+1. The trace follows one step inside one source. A cut made in another node is caught by S3 (a2) by property name. A cut made in another node under a different property name, then renamed on the way, is not caught.
 2. The 587 D tests give the judge's parsed lines with no keystone (P.key null), because J1 reads P.key. J1's own behaviour is not in this file; inv_586j1 comes next.

@@ -11,6 +11,10 @@ const W=()=>JSON.parse(fs.readFileSync(ef,'utf8'));const out=[];
 // proof 7c: a new untraceable place (value from another node)
 {const E=W();E.nodes.push({name:'Proof7 Untraced',type:'n8n-nodes-base.code',parameters:{jsCode:"const z=$('Somewhere').first().json;return [{json:{flagged_line:z.line}}];"},position:[0,0]});
  const f=path.join(tmp,'p7c_eng.json');fs.writeFileSync(f,JSON.stringify(E));const r=run(f,cf);fs.unlinkSync(f);out.push(['7c new untraced place',r.split('\n').filter(l=>/^FAIL|^STANDING/.test(l)).join('\n')]);}
+// proof 7d (W1 F2): a new node makes items whose line is cut, and another node stores that line as flagged_line
+{const E=W();E.nodes.push({name:'Proof7d Item Maker',type:'n8n-nodes-base.code',parameters:{jsCode:"const items=[];for(const t of String($json.verdict_raw).split('\\n'))items.push({rule:'K-NEW',line:t.trim().slice(0,333)});return [{json:{items}}];"},position:[0,0]});
+ E.nodes.push({name:'Proof7d Recorder',type:'n8n-nodes-base.code',parameters:{jsCode:"const rows=[];for(const it of $('Proof7d Item Maker').first().json.items)rows.push({kind:'send_back',flagged_line:it.line});return rows.map(json=>({json}));"},position:[0,0]});
+ const f=path.join(tmp,'p7d_eng.json');fs.writeFileSync(f,JSON.stringify(E));const r=run(f,cf);fs.unlinkSync(f);out.push(['7d cut in another node (item maker), stored by a recorder',r.split('\n').filter(l=>/^FAIL|^STANDING/.test(l)).join('\n')]);}
 // proof 5: a marker renamed in a copy of the library (cureSafe, LIB line of ert386)
 {const E=W();const {L}=lp.cut(E);const i=L.findIndex(l=>l.includes('const cureSafe=s=>String(s).replace(/[\\r'));lp.apply(E,[{line:i,a:'const cureSafe=s=>String(s).replace(',b:'const cureSafeRENAMED=s=>String(s).replace(',what:'proof 5'}]);
  const f=path.join(tmp,'p5_eng.json');fs.writeFileSync(f,JSON.stringify(E));const r=run(f,cf);fs.unlinkSync(f);out.push(['5 marker renamed (LIB '+i+')',r.split('\n').filter(l=>/^FAIL|^STANDING/.test(l)).join('\n')]);}

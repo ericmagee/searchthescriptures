@@ -22,13 +22,19 @@ function scan(W,tag){const out=[];const seen=new Set();
   else if(setp)out.push({...site,state:'OK',why:v+'.'+p+' set whole by '+(call[2]||call[1])});
   else out.push({...site,state:'UNRESOLVED',why:(call[2]||call[1])+' sets no '+p+':'});}}
  return out;}
+// the properties flagged_line reads (X.p), and every setter "p: <value with a cut>" of such a property in any source (W1 F2: the setter may stand in another node)
+function readProps(W){const P=new Set();for(const [,s] of sources(W)){let m;const re=/\bflagged_line\s*:/g;while((m=re.exec(s))){const e=expr(s,m.index+m[0].length).trim();for(const q of e.matchAll(/\b[A-Za-z_$][\w$]*\.([A-Za-z_$][\w$]*)\b(?!\s*\()/g))P.add(q[1]);}}return P;}
+function crossSetters(W,tag,P){const out=[];const seen=new Set();for(const [name,s] of sources(W)){let m;const re=/[{,]\s*([A-Za-z_$][\w$]*)\s*:/g;while((m=re.exec(s))){const p=m[1];if(!P.has(p))continue;const e=expr(s,m.index+m[0].length).trim();if(!CUT.test(e))continue;const k=p+': '+e.slice(0,140);const key=tag+' '+k;if(seen.has(key))continue;seen.add(key);out.push({where:tag+' '+name,prop:p,expr:e.slice(0,140),key:tag+' :: '+k});}}return out;}
 function shown(W){const set=new Set();for(const [,s] of sources(W)){let m;const re=/[Yy]our line:\s*(?:\\?["'])?'\s*\+\s*([^+]{1,80}?)\.slice\(0,\s*\d+\)/g;while((m=re.exec(s)))set.add(s.slice(Math.max(0,m.index-60),m.index+m[0].length));}return [...set];}
 module.exports=(ctx)=>{const {E,C,T,group,base}=ctx;const K=x=>x.where+' :: '+x.expr;
- group('S3 (a): flagged_line is stored and shown whole',()=>{const all=scan(E,'engine').concat(scan(C,'child'));const known=base('s3_cut_known')||[];const cut=all.filter(x=>x.state==='CUT'),un=all.filter(x=>x.state==='UNRESOLVED'),ok=all.filter(x=>x.state==='OK');
+ group('S3 (a): flagged_line is stored and shown whole',['S3.a','S3.a UNTRACED'],()=>{const all=scan(E,'engine').concat(scan(C,'child'));const known=base('s3_cut_known')||[];const cut=all.filter(x=>x.state==='CUT'),un=all.filter(x=>x.state==='UNRESOLVED'),ok=all.filter(x=>x.state==='OK');
   const newcut=cut.filter(x=>!known.includes(K(x)));for(const x of newcut)T('S3.a CUT',false,x.where+': '+x.why);
   T('S3.a',newcut.length===0,'places that set flagged_line: '+all.length+' found by scan ('+ok.length+' traced whole, '+un.length+' not traced, '+cut.length+' cut, of them '+(cut.length-newcut.length)+' on the named baseline list); new cuts: '+newcut.length);
   const bu=base('s3_unresolved')||[];const nu=un.filter(x=>!bu.includes(K(x)));T('S3.a UNTRACED',nu.length===0,'places the scan cannot trace: '+un.length+', not on the baseline list: '+nu.length+(nu.length?' ('+nu.map(K).join(' | ').slice(0,600)+')':''));
   ctx.detail('s3_unresolved',un.map(K));ctx.detail('s3_cut',cut.map(K));});
- group('S3 (b): the judge\'s own line shown in a send-back text',()=>{const s=[...new Set(shown(E).concat(shown(C)))];const b=base('s3_shown_cut');T('S3.b',s.length<=b,'send-back texts that show "Your line:" cut: '+s.length+' (baseline '+b+'; ASK 597 takes it to 0)');ctx.detail('s3_shown_cut',s);});
+ group('S3 (a2): a cut setter, in any source, of a property flagged_line reads',['S3.a2'],()=>{const P=new Set([...readProps(E),...readProps(C)]);const all=crossSetters(E,'engine',P).concat(crossSetters(C,'child',P));const known=base('s3_setters_known')||[];const nw=all.filter(x=>!known.includes(x.key));
+  for(const x of nw)T('S3.a2 CUT SETTER',false,x.where+': '+x.prop+': '+x.expr.slice(0,100));
+  T('S3.a2',nw.length===0,'properties flagged_line reads: '+P.size+' ('+[...P].slice(0,12).join(', ')+(P.size>12?', ...':'')+'); cut setters of them in any source: '+all.length+' distinct, '+(all.length-nw.length)+' on the named baseline list (ASK 597); new: '+nw.length);ctx.detail('s3_setters',all.map(x=>x.key));});
+ group('S3 (b): the judge\'s own line shown in a send-back text',['S3.b'],()=>{const s=[...new Set(shown(E).concat(shown(C)))];const b=base('s3_shown_cut');T('S3.b',s.length<=b,'send-back texts that show "Your line:" cut: '+s.length+' (baseline '+b+'; ASK 597 takes it to 0)');ctx.detail('s3_shown_cut',s);});
 };
-module.exports.scan=scan;module.exports.shown=shown;
+module.exports.scan=scan;module.exports.readProps=readProps;module.exports.crossSetters=crossSetters;module.exports.shown=shown;
