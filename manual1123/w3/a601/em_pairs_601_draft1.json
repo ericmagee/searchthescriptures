@@ -1,0 +1,38 @@
+{
+ "03.0": [
+  {
+   "old": "a panel judge or single judge whose family debates in this debate.",
+   "new": "a panel judge or single judge whose family debates in this debate; a panel judge whose model is the model of a debater (NO JUDGE RUNS A DEBATER'S MODEL, §10)."
+  }
+ ],
+ "10.0": [
+  {
+   "old": "(THE JUDGE ORDER IS A TABLE, the last entry of this section)",
+   "new": "(the entry THE JUDGE ORDER IS A TABLE in this section)"
+  },
+  {
+   "old": "and without a seat of the same `FAM_PANEL` family as a debater (sol and chatgpt are both openai).",
+   "new": "without a seat of the same `FAM_PANEL` family as a debater (sol and chatgpt are both openai), and without a seat whose model is the model of a debater (NO JUDGE RUNS A DEBATER'S MODEL, the last entry of this section)."
+  },
+  {
+   "old": "G1, G2, G3, MiniMax and the model match still apply.",
+   "new": "G1, G-SAME, G2, G3, MiniMax and the model match still apply."
+  },
+  {
+   "old": "and sits on a debate with a Claude debater only when both debaters are Claude;",
+   "new": "and sits on a debate with a Claude debater only when both debaters are Claude and neither runs the sonnet seat's own model;"
+  },
+  {
+   "old": "a model that passes G1 (its family does not debate), G2 (not the removed seat's model) and G3 (not already on this panel).",
+   "new": "a model that passes G1 (its family does not debate), G-SAME (not the model of a debater), G2 (not the removed seat's model) and G3 (not already on this panel)."
+  },
+  {
+   "old": "the time-removed list, the family map and the OpenRouter seat list;",
+   "new": "the time-removed list, the family map, the OpenRouter seat list and the same-model test;"
+  },
+  {
+   "old": " Neither the page nor the review line names a single judge (§7); Init Seats still names the single_judge seat.",
+   "new": " Neither the page nor the review line names a single judge (§7); Init Seats still names the single_judge seat.\n- NO JUDGE RUNS A DEBATER'S MODEL (ASK 601; engine: Init Seats, Resolve Seats; database: `odv1_record_panel_alternates`, `dash_judge_lineup`; where it differs from any entry above in this section, this rule is right):\n  - The rule: a judge seat whose model is the model of either debater does not sit: not on the panel, not as the reserve, not as an alternate. It holds when both debaters are Anthropic, where the family rule lets an Anthropic judge sit.\n  - The same-model test: two model names are the same when they are equal after four steps: trim; lower-case; drop a leading \"anthropic/\"; turn each \".\" into \"-\".\n  - Init Seats reads each seat's model from the Accept Models rows; the debaters' models are those of `D.mc_seat` and `C.mc_seat`. It drops from the free seats (`pfree0`, from which the panel, the reserve and the alternates are drawn) a seat whose model is a debater's, with the reason \"runs the same model as a debater (<model>)\". The test stands after the family test, so a seat that fails both carries the family reason. When a debater's row is missing from the Accept Models rows, no seat is dropped for that debater here.\n  - Resolve Seats tests against `D.model` and `C.model`. A panel judge with a debater's model stops the run: 'judge seat \"<seat>\" runs <model>, the same model as a debater (ASK 601).' A reserve with a debater's model is not seated (no reserve then). An alternate with a debater's model is left out of the alternates.\n  - Database: `odv1_record_panel_alternates` raises \"G-SAME: <model> is the model of a debater in this debate (ASK 601)\" for such an alternate; G-SAME is tested after G1 and before G2. `dash_judge_lineup` drops such a seat after its family test, with the reason above, so the Judge order page shows it among the dropped seats. Each function holds its own copy of the same-model test; a change to the test in the engine must be made in both.\n  - Result: among the active model_config rows one pair of seats shares a model: the debater claude (seat `claude_synthesis`) and the judge seat sonnet, both `anthropic/claude-sonnet-5.5`. When claude debates opus, either way, sonnet is dropped and does not sit.\n  - Shown offline: Init Seats and Resolve Seats, before and after, on the 90 debater pairs the engine accepts: 88 are equal and 2 differ (claude against opus, both ways), where sonnet is dropped with the reason and the alternates are chatgpt, qwen4max, gemini, argon. With sonnet put first on the panel list, Resolve Seats stops the run with the line above. `dash_judge_lineup`, before and after, on 240 pairs: 238 are equal and the same two differ; after, it equals the engine on the 90 pairs. `odv1_record_panel_alternates`, before and after, on copies of the stored alternates of runs 42071 and 42234: one case changes, 42234's sonnet in place of sol, which now raises G-SAME.\n  - Limits: not shown by a run; its mark is sonnet among the dropped seats with the reason, in a run where claude debates another Anthropic model. `alt_dropped` lists only alternate-list seats, so a same-model seat dropped from the panel list is not listed there (as for a family drop). The models are read from three sources (the Accept Models rows; the active rows of `model_config_jfl`; `model_config`, all rows); they agree now, and a change to a seat's model must leave them agreeing."
+  }
+ ]
+}
