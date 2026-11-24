@@ -1,0 +1,6 @@
+DB test run 11-24 (execute_sql, pg_temp copies, temp tables dr/dj; nothing public written):
+T2 pairs 240, equal 238, differ 2: claude vs opus and opus vs claude, sonnet dropped "runs the same model as a debater (anthropic/claude-sonnet-5.5)", alternates chatgpt, qwen4max, gemini, argon.
+T3 (old / new):
+ 42234 opus vs claude: sol->sonnet WRITTEN / RAISED G-SAME; sol->chatgpt WRITTEN / WRITTEN; spark->argon WRITTEN / WRITTEN
+ 42071 sol62 vs claude: spark->sonnet G1 / G1; spark->chatgpt G1 / G1; spark->argon WRITTEN / WRITTEN
+T5 pairs 90: page md5 59457aaf675dc2acc87a698fa06aebe8 = engine (t1_601.cjs target) 59457aaf675dc2acc87a698fa06aebe8

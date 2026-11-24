@@ -1,0 +1,5 @@
+live Init panel [ 'sonnet', 'sol62', 'sol' ]
+live Resolve: [ 'sonnet', 'sol62', 'sol' ]
+target Resolve: ORACLE_DEBATE_V1 Resolve refused: judge seat "sonnet" runs anthropic/claude-sonnet-5.5, the same model as a debater (ASK 601). 
+target Init panel [ 'sol62', 'sol', 'spark' ] dropped [ { seat: 'spark', family: 'meta', reason: 'sits on the panel' } ]
+T1b PASS
