@@ -1,0 +1,21 @@
+# Engine manual: one entry for ASK 586 J2 (the [L2] entry of a break quotes the gloss a side gave)
+
+W3, 2026-11-24 CST. J2 is live since 08:11 CST on your press "Write J2, not counted". W1 graded this text PASS (Wall 11535) and checked each line against the live code.
+
+## Where it goes
+
+Part 08.0 (the judges' rulebook), as a new entry after the line "DEBATE RULE VIOLATION (rule B ...)" and before the line "Mandatory lines". Nothing is deleted and no existing line is changed.
+
+## The text added, exactly
+
+- THE [L2] ENTRY OF A BREAK QUOTES THE GLOSS A SIDE GAVE (ASK 586 J2; Panel Build, Build Independent Verdict, and the Shared Library, both copies; the judges are shown the rounds only, so the gloss is a side's own, never the record's lexicon row, rulings 382 and 383):
+  - Judges' text, in the FORCED form and in the collision line form: `[L2] <word> (<Strong's number>): "<the gloss as a side quoted it, word for word>" [<round>]`, when the break turns on a word's meaning. After each form stands: "If the deciding step of a break says more than the quoted gloss says, say so in DECIDES and name the verse that carries it." The send-back form of a break (Shared Library) gives the same entry. The pressed-witness form and the enforcer's CARRIED BY [L2] form are as they were.
+  - The count is as it was: the E-COL [L2] reader takes the same word, number and verses from this form as from the form `(<Strong's number>, <gloss>)`. The gloss is not read by the count.
+  - The check (rule E-L2G; Send Back Build, Alt Send Back Build, R2 Alt Send Back Build; on the alternate pass only the seated alternate is read): on each LINK BROKEN or FORCED line of a judge, every [L2] entry outside quotations that names a Strong's number is read against the rounds in that judge's own request. Fault 3: the number stands in no round ("names <number>, which no side quoted in the rounds"). Fault 1: the entry is not in the form above ("gives no gloss quoted from a round"). Fault 2: the gloss does not stand in the round named, in a block that holds the number ("quotes a gloss that does not stand word for word in [<round>] beside <number>"). A block is the text between blank lines. A gloss may mark a left-out part with "..."; each part must stand in that block. Curly quotation marks, markdown marks and letter case are ignored. A request with no rounds is not checked, and an [L2] entry with no Strong's number is not read.
+  - The item: one per line, on the first entry at fault; the judge's whole line is read and stored (flagged_line and response_line). It goes back once: "ENFORCER DISAGREE: [L2] GLOSS NOT QUOTED (ASK 586 J2): the [L2] entry of your line on <pair> <fault>. Write the entry as [L2] <word> (<Strong's number>): "<the gloss as a side quoted it, word for word>" [<round>]. CHANGE the entry, or KEEP your line and give the quoted gloss and its round. If your deciding step says more than that gloss says, say so in DECIDES and name the verse that carries it. The judge keeps the decision (ruling 428). This item is recorded and counts against no seat."
+  - The record: the row's cure_reason carries "[L2] GLOSS NOT QUOTED (E-L2G, ASK 586 J2, fault <n>): record-only, counts against no seat; the judge keeps the decision (ruling 428)". With an answer the row is CURED and response_line holds the judge's whole reply line; with none it carries "NO ANSWER: recorded; not counted". An E-L2G item is never counted as silence and enters no count.
+  - Limits: the send-back builders return before this check on a pass where no enforcer reported a violation, so the item goes out only when some enforcer item exists on that pass. K-GLS (TRIAL, record-only) reads only the form `(<Strong's number>, <gloss>)` and reads nothing from this form. Whether a deciding step says more than the gloss is not checked by code. A round that sets several numbers and glosses in one block lets a gloss given for another number pass as beside the number. Not shown by a run.
+
+## Size
+
+Part 08.0 grows from 40,997 to 44,456 characters. The manual becomes version 298.
