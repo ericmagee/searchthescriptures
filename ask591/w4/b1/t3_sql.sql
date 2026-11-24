@@ -1,4 +1,4 @@
-CREATE TEMP TABLE odv1_judge_order (seat text PRIMARY KEY REFERENCES public.model_config(seat), list text NOT NULL CHECK (list IN ('panel','alternate')), ord integer NOT NULL CHECK (ord >= 1), UNIQUE (list, ord));
+CREATE TEMP TABLE odv1_judge_order (seat text PRIMARY KEY, list text NOT NULL CHECK (list IN ('panel','alternate')), ord integer NOT NULL CHECK (ord >= 1), UNIQUE (list, ord));
 CREATE TEMP TABLE odv1_judge_order_log (id bigserial PRIMARY KEY, saved_at timestamptz NOT NULL DEFAULT now(), saved_by text NOT NULL, before jsonb, after jsonb NOT NULL);
 INSERT INTO odv1_judge_order (seat, list, ord) VALUES ('chatgpt','panel',1), ('sol','panel',2), ('sol62','panel',3), ('gemini','alternate',1), ('spark','alternate',2), ('qwen4max','alternate',3), ('argon','alternate',4), ('sonnet','alternate',5);
 CREATE OR REPLACE FUNCTION pg_temp.odv1_judge_order_lists()
@@ -7,7 +7,7 @@ RETURNS jsonb LANGUAGE sql STABLE SECURITY DEFINER SET search_path TO 'public' A
     'panel',     coalesce((SELECT jsonb_agg(seat ORDER BY ord) FROM odv1_judge_order WHERE list='panel'), '[]'::jsonb),
     'alternate', coalesce((SELECT jsonb_agg(seat ORDER BY ord) FROM odv1_judge_order WHERE list='alternate'), '[]'::jsonb));
 $f$;
-CREATE OR REPLACE FUNCTION pg_temp.odv1_judge_order_fault(p_panel text[], p_alt text[])
+CREATE OR REPLACE FUNCTION pg_temp.odv1_judge_order_fault(p_panel text[], p_alt text[], p_src text DEFAULT NULL)
 RETURNS text LANGUAGE plpgsql STABLE SECURITY DEFINER SET search_path TO 'public' AS $f$
 DECLARE v_all text[] := coalesce(p_panel,'{}') || coalesce(p_alt,'{}'); s text; v_src text; v_act int;
 BEGIN
@@ -19,7 +19,7 @@ BEGIN
   SELECT count(*) INTO v_act FROM unnest(coalesce(p_panel,'{}')) x;
   IF v_act < 3 THEN RETURN 'the panel list holds '||v_act||' seat(s); it needs at least three'; END IF;
   -- The reserve recorder admits only the seats it names (ASK 591 L3): every seat that could stand fourth must be on its list.
-  SELECT prosrc INTO v_src FROM pg_proc WHERE oid = 'public.odv1_record_panel_substitution'::regproc;
+  SELECT regexp_replace(regexp_replace(coalesce(p_src, prosrc), '/\*.*?\*/', '', 'g'), '--[^\n]*', '', 'g') INTO v_src FROM pg_proc WHERE oid = 'public.odv1_record_panel_substitution'::regproc;
   FOREACH s IN ARRAY v_all LOOP
     IF position(''''||s||'''' in v_src) = 0 THEN RETURN 'seat '||s||' is not on the reserve recorder''s list (odv1_record_panel_substitution)'; END IF;
   END LOOP;
@@ -70,6 +70,9 @@ INSERT INTO t3 SELECT 11,'after refusals: table and log unchanged', pg_temp.odv1
 INSERT INTO t3 SELECT 12,'valid save (gemini into the panel)', (r->>'ok')='true' AND (r->>'version')='2' AND r->'order'='{"panel":["chatgpt","sol","sol62","gemini"],"alternate":["spark","qwen4max","argon","sonnet"]}', r::text FROM (SELECT pg_temp.odv1_judge_order_save('["chatgpt","sol","sol62","gemini"]','["spark","qwen4max","argon","sonnet"]','dashboard') r) x;
 INSERT INTO t3 SELECT 13,'log row holds before and after', l.before='{"panel":["chatgpt","sol","sol62"],"alternate":["gemini","spark","qwen4max","argon","sonnet"]}' AND l.after->'panel'='["chatgpt","sol","sol62","gemini"]' AND l.saved_by='dashboard', l.before::text||' -> '||l.after::text FROM pg_temp.odv1_judge_order_log l WHERE id=2;
 INSERT INTO t3 SELECT 14,'read gives the saved order and version 2', (r->>'version')='2' AND r->'panel'='["chatgpt","sol","sol62","gemini"]', r::text FROM (SELECT pg_temp.odv1_judge_order_read() r) x;
+INSERT INTO t3 SELECT 16,'F2: a seat named only in a comment is refused', f LIKE 'seat spark is not on the reserve recorder%', f FROM (SELECT pg_temp.odv1_judge_order_fault(ARRAY['chatgpt','sol','sol62'],ARRAY['spark'], $s$ x := ARRAY['chatgpt','sol','sol62']; -- 'spark' only here
+ /* and 'spark' here */ $s$) f) x;
+INSERT INTO t3 SELECT 17,'F2: the live recorder text without comments still names all eight', pg_temp.odv1_judge_order_fault(ARRAY['chatgpt','sol','sol62'],ARRAY['gemini','spark','qwen4max','argon','sonnet']) IS NULL, 'see 1';
 DELETE FROM pg_temp.odv1_judge_order WHERE list='panel' AND ord>2;
 DO $d$ BEGIN PERFORM pg_temp.odv1_judge_order_read(); INSERT INTO t3 VALUES (15,'read raises on a bad table (two panel seats)',false,'no raise');
 EXCEPTION WHEN OTHERS THEN INSERT INTO t3 VALUES (15,'read raises on a bad table (two panel seats)', SQLERRM LIKE 'JUDGE ORDER: the order table could not be read (the panel list holds 2 seat(s)%); no call was made', SQLERRM); END $d$;

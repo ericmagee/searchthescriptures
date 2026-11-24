@@ -47,7 +47,7 @@ BEGIN
   SELECT count(*) INTO v_act FROM unnest(coalesce(p_panel,'{}')) x;
   IF v_act < 3 THEN RETURN 'the panel list holds '||v_act||' seat(s); it needs at least three'; END IF;
   -- The reserve recorder admits only the seats it names (ASK 591 L3): every seat that could stand fourth must be on its list.
-  SELECT prosrc INTO v_src FROM pg_proc WHERE oid = 'public.odv1_record_panel_substitution'::regproc;
+  SELECT regexp_replace(regexp_replace(prosrc, '/\*.*?\*/', '', 'g'), '--[^\n]*', '', 'g') INTO v_src FROM pg_proc WHERE oid = 'public.odv1_record_panel_substitution'::regproc;  -- comments removed: a seat named only in a comment is not on the list (W1 F2)
   FOREACH s IN ARRAY v_all LOOP
     IF position(''''||s||'''' in v_src) = 0 THEN RETURN 'seat '||s||' is not on the reserve recorder''s list (odv1_record_panel_substitution)'; END IF;
   END LOOP;
