@@ -1,0 +1,52 @@
+BASE /mnt/project-files/ask591/w4/write/fetchback_eng591.json TARGET /mnt/project-files/ask586/w4/j3/on591/target_engine_j3_on591.json
+PASS S1 engine: only Panel Build, Build Independent Verdict and the Shared Library change (Build Independent Verdict, Panel Build, Shared Library); wiring and settings unchanged
+PASS S2 child: only the Shared Library changes
+PASS S3 no node setting, model setting or request parameter changes (every node equal with its code set aside)
+PASS S4 Library Check pair: pair: engine lib 47a39128fec62d31 map efe8431fb6af14e1 | child lib 47a39128fec62d31 map efe8431fb6af14e1 | Library Check PASSES
+PASS S5 the agreement text stands once in Panel Build and once in Build Independent Verdict, directly after the FIRST anchor; the anchor still stands twice
+PASS S6 both anchors and the block lie inside the one SYS array of each judge request; the block is served once, directly above the COLLISION POINTS instructions
+PASS S7 removing the three J3 inserts gives back live Panel Build and Build Independent Verdict exactly
+PASS S8 Panel Build and Build Independent Verdict parse
+PASS S9 engine engine: every library-built source parses, and every use of J3C, PB, PCC, dis, E421, E428 and __acxAlt (the names the check reads; its round reader and quotation test are its own) is declared in scope (422 uses)
+PASS S9 child child: every library-built source parses, and every use of J3C, PB, PCC, dis, E421, E428 and __acxAlt (the names the check reads; its round reader and quotation test are its own) is declared in scope (422 uses)
+PASS H1 run 42071: defender 0, challenger 13 (the engine harvester's own count on the Oracle's rounds)
+PASS H2 every sentence stands word for word in its round (markdown marks, curly quotes and a list marker such as - [L1] at a line start made plain only); none is cut, the longest 262 characters
+PASS H3 a closing quotation mark is kept (G1 ends .", where the old harvester dropped the mark)
+PASS H4 a bare grant ("I grant both halves.", "I grant it.") is served with the line before it in the same quotation
+PASS H5 bare grant, synthetic: "The first point stands. I grant it."
+PASS H6 a grant sentence of 480 characters is served whole
+PASS H7 the block keeps the form of texts 2.2: header, DEFENDER: none, CHALLENGER: G1 [DR3] "..." | ... ]
+PASS H8 one numbering, the defender's first (defender G1, challenger G2)
+PASS H9 a fault while gathering serves "[THE GRANTS LISTS -- not available this run.]" and no lists
+PASS H10 the node line builds the block from F.cr1..cr4 (defender) and F.gr1, gr2, dr3, dr4 (challenger)
+PASS H11 round trip: the check reads back from the served block exactly the 13 entries harvested (numbers, rounds, whole sentences with their inner quotations)
+PASS H12 round trip holds when a sentence itself holds " | G2 [DR1] "
+PASS C0 the check's helpers cureRounds and ciFound load from the library
+PASS C1 known-bad: qwen4max (row 1274) D4 vs C3 and D5 vs C4 are sent back, the defender's grant, fault 1 (D4 vs C3 DEFENDER f1; D5 vs C4 DEFENDER f1)
+PASS C2 silent on the other break lines of rows 1272 (gemini) and 1273 (spark)
+PASS C3 the item text is texts 2.3 with option A's cost sentence, word for word
+PASS C4 the two FORCED lines of 1274 are silent: their grant words stand only inside quotations
+PASS C5 G5, the challenger's own number, passes, in parentheses or not
+PASS C6 G5547 alone is a Strong's number, not a grant number: fault 1
+PASS C7 G99 is not in the list: fault 2 ("G99 is not in the challenger's list")
+PASS C8 G3 is the challenger's; said of the defender it is fault 2
+PASS C9a the sample stands in the defender's [CR3] (the words row 1274 quotes as MEETS [CR3])
+PASS C9 NOT A LISTED GRANT: words that stand in the defender's rounds pass; words that do not, or no quotation, are fault 3 (sample line from [CR3] passes; a phrase in the defender's quotation of scripture also stands)
+PASS C10 a grant word inside a quotation is not read
+PASS C11 a negated grant word ("never granted", "did not concede") is not read
+PASS C12 no side named, no LINK BROKEN grade and no ANSWER round: no side, no item
+PASS C13 a FORCED line with ANSWER [CR3] and "the answer grants": the defender's grant
+PASS C14 no block in the request, or the "not available" block: no check
+PASS C15 a judge line of 2120 characters is read whole and stored whole in flagged_line and response_line
+PASS C16 the lists are read from every request shape: messages, string content 1; messages, parts array 1; systemInstruction parts (Gemini form) 1; system string 1
+PASS C17 alternates: only the seated alternate is read (argon), as the ASK 590 block does
+PASS C18 a fault in the block adds nothing and stops nothing
+PASS C19 the item: rule E-GRT, item "grant not named on D2 vs C1 (defender)", grt3 {side, word, fault, pair}
+PASS C20 the grantor, not the thing granted: "the answer grants the challenger's reading" DEFENDER; "the challenger's point, which the answer grants" DEFENDER; "the defender's answer grants the challenger's reading" DEFENDER; "a reading granted by the challenger" CHALLENGER; "the challenger grants the timing" CHALLENGER; "the challenger's own close concedes the timing" CHALLENGER
+PASS R KEEP KEEP: counted in no list, row recorded record-only, status CURED
+PASS R CHANGE (line over 1,500) CHANGE (line over 1,500): counted in no list, row recorded record-only, status CURED, response_line 2021 characters, whole
+PASS R NO ANSWER (silent) NO ANSWER (silent): counted in no list, row recorded record-only, status null
+PASS R REPLY ERROR REPLY ERROR: counted in no list, row recorded record-only, status null
+PASS R CONTROL control: the same silent reply on an E-ASSUME item is counted, so the harness sees counts
+PASS R2929 the send-back item and the shown item carry grt3 beside rvc
+RESULT: ALL PASS (50 pass)
