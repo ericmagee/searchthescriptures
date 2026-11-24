@@ -1,0 +1,1417 @@
+[
+ {
+  "k": "L2C",
+  "n": 23,
+  "texts": 7,
+  "mx": 23752,
+  "tot": 376846,
+  "save": 353094,
+  "ids": [
+   "C1 Extract",
+   "D2 Build",
+   "D2 Extract",
+   "C2 Build",
+   "C2 Extract",
+   "D3 Build",
+   "D3 Extract",
+   "C3 Build",
+   "C3 Extract",
+   "Citation Scan",
+   "Quote Report",
+   "D4 Build",
+   "D4 Extract",
+   "C4 Build",
+   "D2 Lexicon Plan",
+   "C2 Lexicon Plan",
+   "D3 Lexicon Plan",
+   "C3 Lexicon Plan",
+   "D4 Lexicon Plan",
+   "C4 Lexicon Plan",
+   "L2 Lexicon Plan",
+   "L2 Count Plan",
+   "L2 Gloss Plan"
+  ]
+ },
+ {
+  "k": "__R",
+  "n": 3,
+  "texts": 3,
+  "mx": 149498,
+  "tot": 293709,
+  "save": 144211,
+  "ids": [
+   "Build Independent Verdict",
+   "Panel Build",
+   "Reserve Build"
+  ]
+ },
+ {
+  "k": "~__X2=(()=>{ const L2C=(()=>{ const SB='https://bh",
+  "n": 4,
+  "texts": 4,
+  "mx": 45390,
+  "tot": 156054,
+  "save": 110664,
+  "ids": [
+   "C3G Extract",
+   "C1B Extract",
+   "D2B Extract",
+   "D4B Extract"
+  ]
+ },
+ {
+  "k": "__O423",
+  "n": 3,
+  "texts": 3,
+  "mx": 51147,
+  "tot": 146466,
+  "save": 95319,
+  "ids": [
+   "C2B Extract",
+   "D3B Extract",
+   "C3B Extract"
+  ]
+ },
+ {
+  "k": "__RL",
+  "n": 6,
+  "texts": 1,
+  "mx": 16453,
+  "tot": 98718,
+  "save": 82265,
+  "ids": [
+   "Build Save Body",
+   "Format Markdown",
+   "Enforcer Build",
+   "Judge Enforcer Retry Build",
+   "Alt Judge Enforcer Retry Build",
+   "C:R2 Alt Judge Enforcer Retry Build"
+  ]
+ },
+ {
+  "k": "POSTURE",
+  "n": 5,
+  "texts": 4,
+  "mx": 21357,
+  "tot": 99588,
+  "save": 78231,
+  "ids": [
+   "Accept Build",
+   "Accept Check",
+   "Accept Return Build",
+   "Accept Final",
+   "Accept DS Return Build"
+  ]
+ },
+ {
+  "k": "IMP",
+  "n": 11,
+  "texts": 3,
+  "mx": 6208,
+  "tot": 56885,
+  "save": 50677,
+  "ids": [
+   "C1B Build",
+   "C1B Extract",
+   "D2B Build",
+   "D2B Extract",
+   "C2B Build",
+   "D3B Build",
+   "C3B Build",
+   "D4B Build",
+   "D4B Extract",
+   "C4B Build",
+   "C4B Extract"
+  ]
+ },
+ {
+  "k": "C4P",
+  "n": 6,
+  "texts": 5,
+  "mx": 16275,
+  "tot": 59124,
+  "save": 42849,
+  "ids": [
+   "Build Synthesis",
+   "Format Markdown",
+   "D4 Build",
+   "D4 Extract",
+   "C4 Build",
+   "C4 Extract"
+  ]
+ },
+ {
+  "k": "PWL",
+  "n": 4,
+  "texts": 4,
+  "mx": 9561,
+  "tot": 36735,
+  "save": 27174,
+  "ids": [
+   "D3 Build",
+   "C3 Build",
+   "D4 Build",
+   "C4 Build"
+  ]
+ },
+ {
+  "k": "SHEET",
+  "n": 15,
+  "texts": 3,
+  "mx": 2803,
+  "tot": 29892,
+  "save": 27089,
+  "ids": [
+   "Init with Guards",
+   "D1 Build",
+   "C1 Build",
+   "C1 Extract",
+   "D2 Build",
+   "D2 Extract",
+   "C2 Build",
+   "C2 Extract",
+   "D3 Build",
+   "D3 Extract",
+   "C3 Build",
+   "C3 Extract",
+   "D4 Build",
+   "D4 Extract",
+   "C4 Build"
+  ]
+ },
+ {
+  "k": "BAR",
+  "n": 11,
+  "texts": 2,
+  "mx": 2843,
+  "tot": 27525,
+  "save": 24682,
+  "ids": [
+   "C1B Build",
+   "C1B Extract",
+   "D2B Build",
+   "D2B Extract",
+   "C2B Build",
+   "D3B Build",
+   "C3B Build",
+   "D4B Build",
+   "D4B Extract",
+   "C4B Build",
+   "C4B Extract"
+  ]
+ },
+ {
+  "k": "~__X2=(()=>{ const OGR=(()=>{ const RX=/\\bI\\s+(?:(",
+  "n": 2,
+  "texts": 2,
+  "mx": 24442,
+  "tot": 48884,
+  "save": 24442,
+  "ids": [
+   "C4G Extract",
+   "C4B Extract"
+  ]
+ },
+ {
+  "k": "fn wn390",
+  "n": 8,
+  "texts": 1,
+  "mx": 2322,
+  "tot": 18576,
+  "save": 16254,
+  "ids": [
+   "D1 Extract",
+   "C1 Extract",
+   "D2 Extract",
+   "C2 Extract",
+   "D3 Extract",
+   "C3 Extract",
+   "D4 Extract",
+   "C4 Extract"
+  ]
+ },
+ {
+  "k": "readEnv",
+  "n": 8,
+  "texts": 8,
+  "mx": 2108,
+  "tot": 16864,
+  "save": 14756,
+  "ids": [
+   "D1 Extract",
+   "C1 Extract",
+   "D2 Extract",
+   "C2 Extract",
+   "D3 Extract",
+   "C3 Extract",
+   "D4 Extract",
+   "C4 Extract"
+  ]
+ },
+ {
+  "k": "msgs",
+  "n": 7,
+  "texts": 7,
+  "mx": 4282,
+  "tot": 17217,
+  "save": 12935,
+  "ids": [
+   "D1 Build",
+   "D2 Build",
+   "C2 Build",
+   "D3 Build",
+   "C3 Build",
+   "D4 Build",
+   "C4 Build"
+  ]
+ },
+ {
+  "k": "__PROVE9",
+  "n": 9,
+  "texts": 1,
+  "mx": 1244,
+  "tot": 11196,
+  "save": 9952,
+  "ids": [
+   "Init with Guards",
+   "D1 Build",
+   "C1 Build",
+   "D2 Build",
+   "C2 Build",
+   "D3 Build",
+   "C3 Build",
+   "D4 Build",
+   "C4 Build"
+  ]
+ },
+ {
+  "k": "REFP",
+  "n": 19,
+  "texts": 2,
+  "mx": 2281,
+  "tot": 12109,
+  "save": 9828,
+  "ids": [
+   "Init with Guards",
+   "C1 Extract",
+   "D2 Build",
+   "D2 Extract",
+   "C2 Build",
+   "C2 Extract",
+   "D3 Build",
+   "D3 Extract",
+   "C3 Build",
+   "C3 Extract",
+   "Build Synthesis",
+   "Format Markdown",
+   "Citation Scan",
+   "Quote Report",
+   "D4 Build",
+   "D4 Extract",
+   "C4 Build",
+   "C4 Extract",
+   "L2 Count Plan"
+  ]
+ },
+ {
+  "k": "__L",
+  "n": 15,
+  "texts": 15,
+  "mx": 1088,
+  "tot": 10084,
+  "save": 8996,
+  "ids": [
+   "D1 Build",
+   "C1 Build",
+   "D2 Build",
+   "C2 Build",
+   "D3 Build",
+   "C3 Build",
+   "Panel Done",
+   "Format Markdown",
+   "Panel Check",
+   "Failure Salvage",
+   "Panel Tokens",
+   "D4 Build",
+   "C4 Build",
+   "Accept Final",
+   "Enforcer Build"
+  ]
+ },
+ {
+  "k": "__RFX",
+  "n": 8,
+  "texts": 8,
+  "mx": 1220,
+  "tot": 8880,
+  "save": 7660,
+  "ids": [
+   "D1 Extract",
+   "C1 Extract",
+   "D2 Extract",
+   "C2 Extract",
+   "D3 Extract",
+   "C3 Extract",
+   "D4 Extract",
+   "C4 Extract"
+  ]
+ },
+ {
+  "k": "bodyFor",
+  "n": 8,
+  "texts": 2,
+  "mx": 1040,
+  "tot": 8296,
+  "save": 7256,
+  "ids": [
+   "D1 Build",
+   "C1 Build",
+   "D2 Build",
+   "C2 Build",
+   "D3 Build",
+   "C3 Build",
+   "D4 Build",
+   "C4 Build"
+  ]
+ },
+ {
+  "k": "OGR",
+  "n": 3,
+  "texts": 3,
+  "mx": 6028,
+  "tot": 12965,
+  "save": 6937,
+  "ids": [
+   "D4 Build",
+   "C4 Build",
+   "C4 Extract"
+  ]
+ },
+ {
+  "k": "RF",
+  "n": 8,
+  "texts": 1,
+  "mx": 990,
+  "tot": 7920,
+  "save": 6930,
+  "ids": [
+   "D1 Extract",
+   "C1 Extract",
+   "D2 Extract",
+   "C2 Extract",
+   "D3 Extract",
+   "C3 Extract",
+   "D4 Extract",
+   "C4 Extract"
+  ]
+ },
+ {
+  "k": "PROMPT",
+  "n": 3,
+  "texts": 3,
+  "mx": 3442,
+  "tot": 9112,
+  "save": 5670,
+  "ids": [
+   "Close Enforcer Build",
+   "Judge Contradiction Build",
+   "Assume Check Build"
+  ]
+ },
+ {
+  "k": "~if(!e.text||String(e.text).trim()===''){const d0=$",
+  "n": 8,
+  "texts": 8,
+  "mx": 779,
+  "tot": 6224,
+  "save": 5445,
+  "ids": [
+   "D1 Extract",
+   "C1 Extract",
+   "D2 Extract",
+   "C2 Extract",
+   "D3 Extract",
+   "C3 Extract",
+   "D4 Extract",
+   "C4 Extract"
+  ]
+ },
+ {
+  "k": "__RD",
+  "n": 9,
+  "texts": 6,
+  "mx": 986,
+  "tot": 6333,
+  "save": 5347,
+  "ids": [
+   "D2B Build",
+   "D2B Extract",
+   "C2B Build",
+   "D3B Build",
+   "C3B Build",
+   "D4B Build",
+   "D4B Extract",
+   "C4B Build",
+   "C4B Extract"
+  ]
+ },
+ {
+  "k": "__SHA422",
+  "n": 3,
+  "texts": 1,
+  "mx": 2266,
+  "tot": 6798,
+  "save": 4532,
+  "ids": [
+   "Library Sha (ASK 422a)",
+   "Library Check",
+   "C:Library Check (ASK 422a)"
+  ]
+ },
+ {
+  "k": "LAY",
+  "n": 9,
+  "texts": 1,
+  "mx": 546,
+  "tot": 4914,
+  "save": 4368,
+  "ids": [
+   "D2B Build",
+   "D2B Extract",
+   "C2B Build",
+   "D3B Build",
+   "C3B Build",
+   "D4B Build",
+   "D4B Extract",
+   "C4B Build",
+   "C4B Extract"
+  ]
+ },
+ {
+  "k": "~B.forEach((b,i)=>{let txt='',err=null;try{txt=Stri",
+  "n": 3,
+  "texts": 2,
+  "mx": 2182,
+  "tot": 6542,
+  "save": 4360,
+  "ids": [
+   "Reread Record",
+   "Alt Reread Record",
+   "C:R2 Alt Reread Record"
+  ]
+ },
+ {
+  "k": "__METHOD_TOP",
+  "n": 3,
+  "texts": 1,
+  "mx": 1784,
+  "tot": 5352,
+  "save": 3568,
+  "ids": [
+   "Build Independent Verdict",
+   "Panel Build",
+   "Reserve Build"
+  ]
+ },
+ {
+  "k": "__orc",
+  "n": 10,
+  "texts": 1,
+  "mx": 368,
+  "tot": 3680,
+  "save": 3312,
+  "ids": [
+   "D1 Build",
+   "C1 Build",
+   "D2 Build",
+   "C2 Build",
+   "D3 Build",
+   "C3 Build",
+   "Build Synthesis",
+   "Build Diagnostic Prompt",
+   "D4 Build",
+   "C4 Build"
+  ]
+ },
+ {
+  "k": "call",
+  "n": 8,
+  "texts": 1,
+  "mx": 454,
+  "tot": 3632,
+  "save": 3178,
+  "ids": [
+   "D1 Build",
+   "C1 Build",
+   "D2 Build",
+   "C2 Build",
+   "D3 Build",
+   "C3 Build",
+   "D4 Build",
+   "C4 Build"
+  ]
+ },
+ {
+  "k": "QR_C8",
+  "n": 4,
+  "texts": 1,
+  "mx": 1050,
+  "tot": 4200,
+  "save": 3150,
+  "ids": [
+   "QR Ask Build",
+   "QR Check",
+   "QR Final",
+   "QR Merge"
+  ]
+ },
+ {
+  "k": "~for(const rp of RP){const n0=rows.length;for(const",
+  "n": 2,
+  "texts": 2,
+  "mx": 2962,
+  "tot": 5914,
+  "save": 2952,
+  "ids": [
+   "Close Enforcer Record",
+   "Judge Contradiction Record"
+  ]
+ },
+ {
+  "k": "why",
+  "n": 4,
+  "texts": 3,
+  "mx": 1075,
+  "tot": 3954,
+  "save": 2879,
+  "ids": [
+   "Judge Enforcer Retry Build",
+   "Alt Judge Enforcer Retry Build",
+   "Enforcer Retry Build",
+   "C:R2 Alt Judge Enforcer Retry Build"
+  ]
+ },
+ {
+  "k": "__AMOUT",
+  "n": 2,
+  "texts": 2,
+  "mx": 4232,
+  "tot": 7092,
+  "save": 2860,
+  "ids": [
+   "Alternate Merge",
+   "Pass Accumulate"
+  ]
+ },
+ {
+  "k": "__SHT",
+  "n": 8,
+  "texts": 8,
+  "mx": 457,
+  "tot": 3194,
+  "save": 2737,
+  "ids": [
+   "D1 Build",
+   "C1 Build",
+   "D2 Build",
+   "C2 Build",
+   "D3 Build",
+   "C3 Build",
+   "D4 Build",
+   "C4 Build"
+  ]
+ },
+ {
+  "k": "OAN",
+  "n": 2,
+  "texts": 2,
+  "mx": 3550,
+  "tot": 6079,
+  "save": 2529,
+  "ids": [
+   "C3 Build",
+   "C3 Extract"
+  ]
+ },
+ {
+  "k": "__LB423",
+  "n": 3,
+  "texts": 1,
+  "mx": 1201,
+  "tot": 3603,
+  "save": 2402,
+  "ids": [
+   "C2B Extract",
+   "D3B Extract",
+   "C3B Extract"
+  ]
+ },
+ {
+  "k": "RULES",
+  "n": 3,
+  "texts": 3,
+  "mx": 5971,
+  "tot": 8273,
+  "save": 2302,
+  "ids": [
+   "Format Markdown",
+   "Enforcer Build",
+   "Anticheat Build"
+  ]
+ },
+ {
+  "k": "~for(const x of want){const c=ids.filter(y=>y.seat=",
+  "n": 3,
+  "texts": 1,
+  "mx": 1075,
+  "tot": 3225,
+  "save": 2150,
+  "ids": [
+   "Reread Build",
+   "Alt Reread Build",
+   "C:R2 Alt Reread Build"
+  ]
+ },
+ {
+  "k": "__DIAGPREV",
+  "n": 8,
+  "texts": 1,
+  "mx": 305,
+  "tot": 2440,
+  "save": 2135,
+  "ids": [
+   "D1 Build",
+   "C1 Build",
+   "D2 Build",
+   "C2 Build",
+   "D3 Build",
+   "C3 Build",
+   "D4 Build",
+   "C4 Build"
+  ]
+ },
+ {
+  "k": "~B.forEach((b,i)=>{if(!b||b.je_skip||!Array.isArray",
+  "n": 3,
+  "texts": 1,
+  "mx": 1044,
+  "tot": 3132,
+  "save": 2088,
+  "ids": [
+   "Judge Enforcer Retry Build",
+   "Alt Judge Enforcer Retry Build",
+   "C:R2 Alt Judge Enforcer Retry Build"
+  ]
+ },
+ {
+  "k": "__AGR_SB",
+  "n": 3,
+  "texts": 1,
+  "mx": 1026,
+  "tot": 3078,
+  "save": 2052,
+  "ids": [
+   "Build Independent Verdict",
+   "Panel Build",
+   "Reserve Build"
+  ]
+ },
+ {
+  "k": "~return $input.all().map((it,i)=>{let p=null;try{p=",
+  "n": 6,
+  "texts": 6,
+  "mx": 413,
+  "tot": 2426,
+  "save": 2013,
+  "ids": [
+   "FUM Merge Panel 1",
+   "FUM Merge Panel 2",
+   "FUM Merge Panel 3",
+   "FUM Merge Alternate",
+   "FUM Merge Cure",
+   "C:FUM Merge R2 Alternate"
+  ]
+ },
+ {
+  "k": "__L2S",
+  "n": 6,
+  "texts": 6,
+  "mx": 375,
+  "tot": 2250,
+  "save": 1875,
+  "ids": [
+   "D2 Build",
+   "C2 Build",
+   "D3 Build",
+   "C3 Build",
+   "D4 Build",
+   "C4 Build"
+  ]
+ },
+ {
+  "k": "~if(j&&Array.isArray(j.candidates)&&j.candidates[0]",
+  "n": 3,
+  "texts": 1,
+  "mx": 888,
+  "tot": 2664,
+  "save": 1776,
+  "ids": [
+   "Synthesis Normalizer",
+   "Diagnostic Normalizer",
+   "Verdict Normalizer"
+  ]
+ },
+ {
+  "k": "QR_BOOKS",
+  "n": 4,
+  "texts": 1,
+  "mx": 587,
+  "tot": 2348,
+  "save": 1761,
+  "ids": [
+   "QR Ask Build",
+   "QR Check",
+   "QR Final",
+   "QR Merge"
+  ]
+ },
+ {
+  "k": "fn qrCheck",
+  "n": 2,
+  "texts": 1,
+  "mx": 1686,
+  "tot": 3372,
+  "save": 1686,
+  "ids": [
+   "QR Check",
+   "QR Final"
+  ]
+ },
+ {
+  "k": "LRF",
+  "n": 3,
+  "texts": 2,
+  "mx": 1139,
+  "tot": 2763,
+  "save": 1624,
+  "ids": [
+   "D3 Extract",
+   "C3 Extract",
+   "Failure Salvage"
+  ]
+ },
+ {
+  "k": "DD",
+  "n": 2,
+  "texts": 1,
+  "mx": 1565,
+  "tot": 3130,
+  "save": 1565,
+  "ids": [
+   "D1 Build",
+   "D2 Build"
+  ]
+ },
+ {
+  "k": "__A423",
+  "n": 3,
+  "texts": 1,
+  "mx": 780,
+  "tot": 2340,
+  "save": 1560,
+  "ids": [
+   "C2B Extract",
+   "D3B Extract",
+   "C3B Extract"
+  ]
+ },
+ {
+  "k": "fn __agrTail",
+  "n": 3,
+  "texts": 1,
+  "mx": 779,
+  "tot": 2337,
+  "save": 1558,
+  "ids": [
+   "Build Independent Verdict",
+   "Panel Build",
+   "Reserve Build"
+  ]
+ },
+ {
+  "k": "__ZH",
+  "n": 4,
+  "texts": 2,
+  "mx": 441,
+  "tot": 1746,
+  "save": 1305,
+  "ids": [
+   "D3 Build",
+   "C3 Build",
+   "D4 Build",
+   "C4 Build"
+  ]
+ },
+ {
+  "k": "__MT",
+  "n": 3,
+  "texts": 1,
+  "mx": 645,
+  "tot": 1935,
+  "save": 1290,
+  "ids": [
+   "Build Independent Verdict",
+   "Panel Build",
+   "Reserve Build"
+  ]
+ },
+ {
+  "k": "cecDeclared",
+  "n": 3,
+  "texts": 1,
+  "mx": 596,
+  "tot": 1788,
+  "save": 1192,
+  "ids": [
+   "Close Enforcer Build",
+   "Judge Contradiction Build",
+   "Judge Contradiction Record"
+  ]
+ },
+ {
+  "k": "~RB.forEach((h,k)=>{const r=RR[k];const c=r&&Array.",
+  "n": 4,
+  "texts": 1,
+  "mx": 387,
+  "tot": 1548,
+  "save": 1161,
+  "ids": [
+   "Enforcer Resend Build",
+   "Judge Enforcer Resend Build",
+   "Alt Judge Enforcer Resend Build",
+   "C:R2 Alt Judge Enforcer Resend Build"
+  ]
+ },
+ {
+  "k": "cecBlock",
+  "n": 2,
+  "texts": 1,
+  "mx": 1090,
+  "tot": 2180,
+  "save": 1090,
+  "ids": [
+   "Close Enforcer Build",
+   "Judge Contradiction Build"
+  ]
+ },
+ {
+  "k": "cec_log",
+  "n": 2,
+  "texts": 2,
+  "mx": 1312,
+  "tot": 2363,
+  "save": 1051,
+  "ids": [
+   "Close Enforcer Record",
+   "Judge Contradiction Record"
+  ]
+ },
+ {
+  "k": "~if(__fam2==='gemini')__nb={systemInstruction:{part",
+  "n": 2,
+  "texts": 1,
+  "mx": 990,
+  "tot": 1980,
+  "save": 990,
+  "ids": [
+   "Build Synthesis",
+   "Build Diagnostic Prompt"
+  ]
+ },
+ {
+  "k": "HEAD",
+  "n": 3,
+  "texts": 1,
+  "mx": 494,
+  "tot": 1482,
+  "save": 988,
+  "ids": [
+   "Reread Build",
+   "Alt Reread Build",
+   "C:R2 Alt Reread Build"
+  ]
+ },
+ {
+  "k": "~if(j.error&&!j.response){const e=pe(j.error);e.mes",
+  "n": 3,
+  "texts": 1,
+  "mx": 492,
+  "tot": 1476,
+  "save": 984,
+  "ids": [
+   "Panel Judge 2 openrouter",
+   "Panel Judge 3 openrouter",
+   "Panel Judge 1 openrouter"
+  ]
+ },
+ {
+  "k": "NCR",
+  "n": 3,
+  "texts": 2,
+  "mx": 487,
+  "tot": 1457,
+  "save": 970,
+  "ids": [
+   "Reread Record",
+   "Alt Reread Record",
+   "C:R2 Alt Reread Record"
+  ]
+ },
+ {
+  "k": "__why",
+  "n": 4,
+  "texts": 2,
+  "mx": 324,
+  "tot": 1260,
+  "save": 936,
+  "ids": [
+   "C1B Extract",
+   "D2B Extract",
+   "D4B Extract",
+   "C4B Extract"
+  ]
+ },
+ {
+  "k": "OWR",
+  "n": 2,
+  "texts": 1,
+  "mx": 919,
+  "tot": 1838,
+  "save": 919,
+  "ids": [
+   "D4 Build",
+   "C4 Build"
+  ]
+ },
+ {
+  "k": "__PWFORM9",
+  "n": 2,
+  "texts": 2,
+  "mx": 1136,
+  "tot": 2052,
+  "save": 916,
+  "ids": [
+   "C2 Build",
+   "D3 Build"
+  ]
+ },
+ {
+  "k": "__KEEP",
+  "n": 4,
+  "texts": 2,
+  "mx": 314,
+  "tot": 1228,
+  "save": 914,
+  "ids": [
+   "D4 Build",
+   "C4 Build",
+   "D4 Lexicon Plan",
+   "C4 Lexicon Plan"
+  ]
+ },
+ {
+  "k": "__CC423",
+  "n": 3,
+  "texts": 1,
+  "mx": 445,
+  "tot": 1335,
+  "save": 890,
+  "ids": [
+   "C2B Extract",
+   "D3B Extract",
+   "C3B Extract"
+  ]
+ },
+ {
+  "k": "~if(false){$(\"Close Enforcer Record\");$(\"Judge Cont",
+  "n": 3,
+  "texts": 3,
+  "mx": 452,
+  "tot": 1311,
+  "save": 859,
+  "ids": [
+   "Panel Payloads",
+   "Alternate Payloads",
+   "C:R2 Alternate Payloads"
+  ]
+ },
+ {
+  "k": "~return C.map((c,ci)=>({json:{rr_skip:false,call:ci",
+  "n": 3,
+  "texts": 1,
+  "mx": 422,
+  "tot": 1266,
+  "save": 844,
+  "ids": [
+   "Reread Build",
+   "Alt Reread Build",
+   "C:R2 Alt Reread Build"
+  ]
+ },
+ {
+  "k": "__LC423",
+  "n": 3,
+  "texts": 1,
+  "mx": 418,
+  "tot": 1254,
+  "save": 836,
+  "ids": [
+   "C2B Extract",
+   "D3B Extract",
+   "C3B Extract"
+  ]
+ },
+ {
+  "k": "want",
+  "n": 3,
+  "texts": 1,
+  "mx": 409,
+  "tot": 1227,
+  "save": 818,
+  "ids": [
+   "Reread Build",
+   "Alt Reread Build",
+   "C:R2 Alt Reread Build"
+  ]
+ },
+ {
+  "k": "__eplOK",
+  "n": 3,
+  "texts": 1,
+  "mx": 400,
+  "tot": 1200,
+  "save": 800,
+  "ids": [
+   "Judge Enforcer Retry Build",
+   "Alt Judge Enforcer Retry Build",
+   "C:R2 Alt Judge Enforcer Retry Build"
+  ]
+ },
+ {
+  "k": "note",
+  "n": 2,
+  "texts": 2,
+  "mx": 975,
+  "tot": 1749,
+  "save": 774,
+  "ids": [
+   "C4G Build",
+   "C3G Build"
+  ]
+ },
+ {
+  "k": "__jl",
+  "n": 2,
+  "texts": 1,
+  "mx": 768,
+  "tot": 1536,
+  "save": 768,
+  "ids": [
+   "Enforcer Build",
+   "Judge Contradiction Build"
+  ]
+ },
+ {
+  "k": "~if($('Close Group Batch Call openrouter').isExecut",
+  "n": 3,
+  "texts": 1,
+  "mx": 380,
+  "tot": 1140,
+  "save": 760,
+  "ids": [
+   "Anticheat Call openrouter",
+   "Close Enforcer Call openrouter",
+   "Assume Check Call openrouter"
+  ]
+ },
+ {
+  "k": "RX",
+  "n": 3,
+  "texts": 1,
+  "mx": 374,
+  "tot": 1122,
+  "save": 748,
+  "ids": [
+   "Reread Record",
+   "Alt Reread Record",
+   "C:R2 Alt Reread Record"
+  ]
+ },
+ {
+  "k": "log",
+  "n": 3,
+  "texts": 3,
+  "mx": 429,
+  "tot": 1159,
+  "save": 730,
+  "ids": [
+   "Close Enforcer Record",
+   "Judge Contradiction Record",
+   "Assume Check Record"
+  ]
+ },
+ {
+  "k": "cecDlinks",
+  "n": 3,
+  "texts": 1,
+  "mx": 339,
+  "tot": 1017,
+  "save": 678,
+  "ids": [
+   "Close Enforcer Build",
+   "Judge Contradiction Build",
+   "Judge Contradiction Record"
+  ]
+ },
+ {
+  "k": "add",
+  "n": 3,
+  "texts": 3,
+  "mx": 398,
+  "tot": 1027,
+  "save": 629,
+  "ids": [
+   "QR Merge",
+   "SJ Re-ask Pick",
+   "Judge Contradiction Build"
+  ]
+ },
+ {
+  "k": "NAMED",
+  "n": 2,
+  "texts": 1,
+  "mx": 600,
+  "tot": 1200,
+  "save": 600,
+  "ids": [
+   "Init with Guards",
+   "Regrade Load"
+  ]
+ },
+ {
+  "k": "SYS",
+  "n": 2,
+  "texts": 2,
+  "mx": 982,
+  "tot": 1528,
+  "save": 546,
+  "ids": [
+   "QR Final",
+   "Enforcer Build"
+  ]
+ },
+ {
+  "k": "VP4_STOP",
+  "n": 2,
+  "texts": 1,
+  "mx": 520,
+  "tot": 1040,
+  "save": 520,
+  "ids": [
+   "Assume Check Build",
+   "Assume Check Record"
+  ]
+ },
+ {
+  "k": "__A379",
+  "n": 2,
+  "texts": 1,
+  "mx": 495,
+  "tot": 990,
+  "save": 495,
+  "ids": [
+   "Format Markdown",
+   "Panel Tokens"
+  ]
+ },
+ {
+  "k": "__JFAM2",
+  "n": 2,
+  "texts": 1,
+  "mx": 451,
+  "tot": 902,
+  "save": 451,
+  "ids": [
+   "Build Synthesis",
+   "Build Diagnostic Prompt"
+  ]
+ },
+ {
+  "k": "__MAPSHA422",
+  "n": 2,
+  "texts": 1,
+  "mx": 420,
+  "tot": 840,
+  "save": 420,
+  "ids": [
+   "Library Sha (ASK 422a)",
+   "C:Library Check (ASK 422a)"
+  ]
+ },
+ {
+  "k": "MN",
+  "n": 2,
+  "texts": 1,
+  "mx": 403,
+  "tot": 806,
+  "save": 403,
+  "ids": [
+   "Format Markdown",
+   "Failure Salvage"
+  ]
+ },
+ {
+  "k": "cecStands",
+  "n": 2,
+  "texts": 1,
+  "mx": 401,
+  "tot": 802,
+  "save": 401,
+  "ids": [
+   "Close Enforcer Record",
+   "Judge Contradiction Record"
+  ]
+ },
+ {
+  "k": "RP",
+  "n": 2,
+  "texts": 2,
+  "mx": 435,
+  "tot": 804,
+  "save": 369,
+  "ids": [
+   "Close Enforcer Record",
+   "Judge Contradiction Record"
+  ]
+ },
+ {
+  "k": "~for(const x of rows){if(x.status!=='CONFIRMED')con",
+  "n": 2,
+  "texts": 1,
+  "mx": 357,
+  "tot": 714,
+  "save": 357,
+  "ids": [
+   "Close Enforcer Record",
+   "Judge Contradiction Record"
+  ]
+ },
+ {
+  "k": "body",
+  "n": 2,
+  "texts": 2,
+  "mx": 420,
+  "tot": 777,
+  "save": 357,
+  "ids": [
+   "Judge Contradiction Build",
+   "Assume Check Build"
+  ]
+ },
+ {
+  "k": "~if(__two)rows.forEach(x=>{if(x.status!=='CONFIRMED",
+  "n": 2,
+  "texts": 2,
+  "mx": 403,
+  "tot": 753,
+  "save": 350,
+  "ids": [
+   "Close Enforcer Record",
+   "Judge Contradiction Record"
+  ]
+ },
+ {
+  "k": "~return [{json:{...__K,raw:__S.raw+__BC,labelled:ty",
+  "n": 2,
+  "texts": 1,
+  "mx": 327,
+  "tot": 654,
+  "save": 327,
+  "ids": [
+   "D2B Extract",
+   "D4B Extract"
+  ]
+ },
+ {
+  "k": "seats",
+  "n": 2,
+  "texts": 2,
+  "mx": 688,
+  "tot": 1014,
+  "save": 326,
+  "ids": [
+   "Accept Check",
+   "Accept Final"
+  ]
+ },
+ {
+  "k": "out",
+  "n": 2,
+  "texts": 2,
+  "mx": 646,
+  "tot": 961,
+  "save": 315,
+  "ids": [
+   "Accept Return Build",
+   "Panel Judges Collect"
+  ]
+ },
+ {
+  "k": "~for(const k in G){const g=G[k];const yes=g.filter(",
+  "n": 2,
+  "texts": 1,
+  "mx": 315,
+  "tot": 630,
+  "save": 315,
+  "ids": [
+   "Close Enforcer Record",
+   "Judge Contradiction Record"
+  ]
+ },
+ {
+  "k": "LN",
+  "n": 2,
+  "texts": 2,
+  "mx": 340,
+  "tot": 646,
+  "save": 306,
+  "ids": [
+   "Close Enforcer Record",
+   "Judge Contradiction Record"
+  ]
+ },
+ {
+  "k": "G1CL",
+  "n": 2,
+  "texts": 2,
+  "mx": 380,
+  "tot": 681,
+  "save": 301,
+  "ids": [
+   "D4 Build",
+   "C4 Build"
+  ]
+ },
+ {
+  "k": "rounds",
+  "n": 2,
+  "texts": 2,
+  "mx": 1005,
+  "tot": 1305,
+  "save": 300,
+  "ids": [
+   "Format Markdown",
+   "Citation Scan"
+  ]
+ }
+]
