@@ -1,4 +1,6 @@
-# ASK 596 PLAN: ONE STANDING TEST SET THAT EVERY BUILD PASSES, rev 0
+# ASK 596 PLAN: ONE STANDING TEST SET THAT EVERY BUILD PASSES, rev 1 (W1 F1, F2, F3 of Wall 11476)
+
+MISTAKE IN REV 0, MINE: section 2 item 1 said test files stand in 11 ASK folders. W1 counted 32. My search looked only four folders deep and only for names t*.cjs.
 
 W3 (session_01H1X3ANsGiMnhnbkfphocmo), 2026-11-24 CST. For W1's grade. A plan only: the operator pressed "Plan 596, then 597, then 598" at 01:43 CST (the newest ruling row of seat 33 at that time; Wall 11465). The build needs its own card.
 
@@ -12,7 +14,7 @@ OBJECTIVE MET when:
 3. run on the engine as it stood before ASK 587 (ask587/w4/write/prewrite_eng587.json) the ASK 587 tests FAIL;
 4. every build card after it carries the line of section 5.
 
-Items 2 and 3 are the known-bad cases. A test set that passes on an engine known to hold the defect proves nothing.
+Items 2 and 3 are the known-bad cases, with proof 7 of section 4. A test set that passes on an engine known to hold the defect proves nothing.
 
 ## 1. RULES READ
 
@@ -20,7 +22,7 @@ Ruling rows of 2026-11-24 (plans only, each build its own card); ASK 587 item A;
 
 ## 2. WHAT STANDS TODAY, AS READ FROM THE FILES
 
-1. Test files (names t*.cjs or test*.cjs) stand in 11 of the ASK folders numbered 500 and up: 532, 542, 573, 575, 576, 581, 585, 586, 588, 590, 593. The other folders hold none by those names. ASK 587 has no test file in its own folder; one test of it (t587o3.cjs) stands under ask586.
+1. Test files stand in 32 of the ASK folders numbered 500 and up (W1's count, Wall 11476): 526, 530, 532, 533, 536, 537, 539, 542, 547, 548, 549, 550, 552, 556, 557, 559, 561, 563, 564, 565, 566, 570, 571, 573, 575, 576, 581, 585, 586, 588, 590, 593. ASK 587 has no test file in its own folder; one test of it (t587o3.cjs) stands under ask586.
 2. Each test file reads the base and target files of its own build from its own folder by fixed name (for example t593.cjs reads base_eng.json and target_engine_593.json beside it). It cannot be pointed at a later engine as written.
 3. Each mixes two kinds of test:
    - BUILD TESTS, true only of that one build: "only these nodes changed", "LIB lines changed: 2784, 2789, 2929, 2959, 3564" (t590s L1.1, L1.3). On any later engine they fail by design.
@@ -37,7 +39,11 @@ S2. THREE LAYERS.
 - LAYER B, THE EARLIER FIXES: one file per ASK, `standing/inv/inv_<ask>.cjs`, holding that ASK's BEHAVIOUR TESTS only. Each test takes the two workflow objects as arguments. It finds its code by a marker in the code (a function name or a marker comment such as /*REV590{*/), never by a line number. If the marker is gone, the test FAILS with "marker not found": removed code is a failure until an ASK says it was meant.
 - LAYER C, STORED CASES: a small fixed set of stored judge texts and enforcer replies with the result each must give, copied once into `standing/fixtures/` with its row id: judgments 1272, 1273, 1274 of run 42071 (the ASK 587 cases); enforcer row 53043 (the J6 case); the stored lines of 37203 and 41822 that ASK 590 uses. A case is never edited; a new case is added by the ASK that needs it.
 
-S3. THE LONG LINE, IN EVERY SEND-BACK. One standing test builds a judge line of 2,000 characters and passes it through every builder that makes a send-back item and every record that stores one. It FAILS if any stored or shown copy is shorter than the line. This is the test that fails on d819ff4c today (the E-REVCLOSE item) and that any future send-back must pass without anyone remembering ASK 587.
+S3. THE LONG LINE, IN EVERY SEND-BACK. One standing test builds a judge line of 2,000 characters and passes it through every place that stores or shows it. It FAILS if a copy is shorter than the line.
+- HOW THE PLACES ARE FOUND (W1 F2): by a scan of the code, not by a list. The scan takes every object that sets `flagged_line` and every send-back text that shows the judge its own line. Tonight's defect was a new place; a list would not have held it.
+- SCOPE (W1 F3): (a) `flagged_line`, stored and shown: a hard FAIL from the first day. (b) The judge's own line shown inside a send-back text: W1 found 3 such texts that cut it to 600 characters, and they still stand in the ASK 595 target. They enter Layer A as a baseline count of 3, named one by one; a fourth is a FAIL; ASK 597 takes the count to 0, and then (b) becomes a hard FAIL like (a). FOR W1: your F3 put (b) inside S3's scope; with it as a hard FAIL, proof 2 could not pass on the 595 target, so I made it a baseline. Say if you meant otherwise.
+- NOT IN S3: the cuts on `response_line` (700), on record fields (1,500) and on shown quotations (400, 500, 600). They are Layer A baseline counts, for ASK 597.
+This is the test that fails on d819ff4c today (the E-REVCLOSE item) and that any future send-back must pass without anyone remembering ASK 587.
 
 S4. THE FIRST SET, in this order: ASK 587 A to E (from the six items and the "Marks for the next run" of manual part 11.1, and the offline cases on judgments 1272 to 1274); 595; 590; 588 with 588 R; 593; J6 and J1 of ASK 586 when written. Then backward through the manual's entries, one ASK per file, newest first. An ASK with no test file gets its tests written from its manual entry's marks.
 
@@ -55,6 +61,7 @@ S5. THE RULES OF USE.
 4. Runner on a target with one Anticheat node deleted and on one with an unconnected node added: the reach walk count goes down by one and up by one.
 5. A marker renamed in a copy of the library: the test that uses it FAILS with "marker not found".
 6. The time one full run takes, in seconds.
+7. A copy of the ASK 595 target with one new builder added that cuts `flagged_line`: S3 FAILS, and names the new place (W1 F2).
 
 ## 5. WHAT THIS DOES NOT DO
 
