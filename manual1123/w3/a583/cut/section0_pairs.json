@@ -16,6 +16,10 @@
   "new": "it inserts that part at the manual's highest version + 1 with its summary"
  },
  {
+  "old": "the readback is mrb.cjs (ASK 420(b))",
+  "new": "the readback is mrb.cjs with the part as its fourth argument, node mrb.cjs <base> <new> <pairs.json> <part> (ASK 420(b))"
+ },
+ {
   "old": "Limit: an old text that overlaps itself is counted once.\n",
   "new": "Limit: an old text that overlaps itself is counted once.\n- New text enters only through engine_manual_part_apply on an existing part. A part that has grown is divided in two with engine_manual_part_split, at a text that occurs once in it, with no change of text; no part and no size is refused.\n"
  }

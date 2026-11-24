@@ -34,6 +34,7 @@ pairs=[{'old':B1,'new':N1},
  {'old':"To revise: call engine_manual_apply (ASK 421) in the same batch as",'new':"To revise: call engine_manual_part_apply on the one part (engine_manual_apply refuses now that the manual is in parts) in the same batch as"},
  {'old':"it refuses unless the base is the max version and has the given md5",'new':"it refuses unless the base is that part's latest version and has the given md5"},
  {'old':"it inserts version+1 with its summary",'new':"it inserts that part at the manual's highest version + 1 with its summary"},
+ {'old':"the readback is mrb.cjs (ASK 420(b))",'new':"the readback is mrb.cjs with the part as its fourth argument, node mrb.cjs <base> <new> <pairs.json> <part> (ASK 420(b))"},
  {'old':L,'new':L+NB}]
 t=sec0
 for p in pairs: assert t.count(p['old'])==1,p['old'][:30]; t=t.replace(p['old'],p['new'])
@@ -75,13 +76,13 @@ BEGIN
 END $cut$;
 """
 apply_args="'00.1', 242, '%s', %s::jsonb, %s, %s, 'ASK 583: section 0 names the parts and their read and write calls', 'Section 0: the manual is held in parts; read calls engine_manual_toc, engine_manual_part, engine_manual_full; revise with engine_manual_part_apply; divide a grown part with engine_manual_part_split. No other section changed.', %s, %s"
-LOG="Writer W3 (seat 33). Part 00.1 (section 0), base version 242 md5 "+md5_001+". Five pairs (manual1123/w3/a583/cut/section0_pairs.json): bullet 1 replaced; three phrases of the To revise bullet; one bullet added after it. Wording approved text: section0_new_text.md 09babd38 (W1 PASS Wall 11224). Result md5 "+new_md5+", "+str(new_len)+" characters; the whole manual then has md5 "+full_md5+", "+str(len(full_new))+" characters."
-cut+="SELECT engine_manual_part_apply("+apply_args%(md5_001,q(json.dumps(pairs,ensure_ascii=False)),"'"+new_md5+"'",new_len,q(LOG),'true')+") AS section0_write;\n"
+LOG="Writer W3 (seat 33). Part 00.1 (section 0), base version 242 md5 "+md5_001+". Six pairs (manual1123/w3/a583/cut/section0_pairs.json): bullet 1 replaced; three phrases of the To revise bullet; one bullet added after it. Wording approved text: section0_new_text.md 09babd38 (W1 PASS Wall 11224). Result md5 "+new_md5+", "+str(new_len)+" characters; the whole manual then has md5 "+full_md5+", "+str(len(full_new))+" characters."
+cut+="DO $s0$\nDECLARE r jsonb;\nBEGIN\n  r := engine_manual_part_apply("+apply_args%(md5_001,q(json.dumps(pairs,ensure_ascii=False)),"'"+new_md5+"'",new_len,q(LOG),'true')+");\n  IF (r->>'success') IS DISTINCT FROM 'true' OR (r->>'written') IS DISTINCT FROM 'true' OR (r->>'version')::int <> 243 THEN\n    RAISE EXCEPTION 'cut583 section 0 write FAILED, the whole cut is rolled back: %', r::text; END IF;\n  IF (SELECT md5(f.content) FROM engine_manual_full() f) <> '"+full_md5+"' THEN\n    RAISE EXCEPTION 'cut583 C1b FAILED: the whole manual is not "+full_md5+"'; END IF;\nEND $s0$;\nSELECT version, md5(content) AS md5, length(content) AS length FROM engine_manual_full();\n"
 open('cut583.sql','w',encoding='utf-8').write(cut)
 mig=open('/mnt/project-files/ask583/w4/build/migration583.sql',encoding='utf-8').read()
 body=cut.replace(SESS,'').replace('AS section0_write;','INTO r0;').replace('SELECT engine_manual_part_apply','PERFORM 1; SELECT engine_manual_part_apply')
 # preview: BEGIN; migration; cut; checks; RAISE (rolled back)
-cutdo=cut.replace(SESS,'').split("SELECT engine_manual_part_apply(")[0]
+cutdo=cut.replace(SESS,'').split("DO $s0$")[0]
 prev="BEGIN;\n"+SESS.replace('@@CARD@@','PREVIEW 583 (rolled back) W3')+mig+"\n"+cutdo+"""DO $chk$
 DECLARE r0 jsonb; f record; same int; toc text; ap jsonb; ptr text;
 BEGIN

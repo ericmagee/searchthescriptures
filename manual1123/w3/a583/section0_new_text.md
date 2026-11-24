@@ -9,10 +9,12 @@
 ## New bullet, placed directly after the "To revise" bullet
 - New text enters only through engine_manual_part_apply on an existing part. A part that has grown is divided in two with engine_manual_part_split, at a text that occurs once in it, with no change of text; no part and no size is refused.
 
-## Bullet 4, three phrases change (the rest of the bullet stands)
+## Bullet 4, four phrases change (the rest of the bullet stands)
 - NOW: To revise: call engine_manual_apply (ASK 421) in the same batch as
   NEW: To revise: call engine_manual_part_apply on the one part (engine_manual_apply refuses now that the manual is in parts) in the same batch as
 - NOW: it refuses unless the base is the max version and has the given md5
   NEW: it refuses unless the base is that part's latest version and has the given md5
 - NOW: it inserts version+1 with its summary
   NEW: it inserts that part at the manual's highest version + 1 with its summary
+- NOW: the readback is mrb.cjs (ASK 420(b))
+  NEW: the readback is mrb.cjs with the part as its fourth argument, node mrb.cjs <base> <new> <pairs.json> <part> (ASK 420(b))
