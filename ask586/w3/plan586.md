@@ -1,4 +1,4 @@
-# ASK 586 PLAN rev 3 (W1 conditions C4 and C5 of Wall 11359 met; J1 added as a rule and a check, on the operator's ruling as relayed by the coordinator at 23:14 CST 2026-11-23; rev 1 passed at Wall 11352): the judges' reasoning (run ODV1-42071-uclot7fi)
+# ASK 586 PLAN rev 4 (W4's reads of Wall 11369 taken in: J2 rebuilt, J3 count corrected, J6 guess confirmed; W1 conditions C4 and C5 of Wall 11359 met; J1 added as a rule and a check, on the operator's ruling as relayed by the coordinator at 23:14 CST 2026-11-23; rev 1 passed at Wall 11352): the judges' reasoning (run ODV1-42071-uclot7fi)
 
 Owner of the plan: W3 (session_01H1X3ANsGiMnhnbkfphocmo). Builder of any code check: W4. Grader: W1. Number and owner from the coordinator, 23:03 CST 2026-11-23. Source of direction: the operator, 23:00 CST 2026-11-23, W3 thread: "this next fix will mostly be around the judges reasoning...". That statement sets direction. It approves no write.
 
@@ -51,20 +51,24 @@ REPLAY (SQL on the 7 lines):
 3. KNOWN-BAD: gemini D3 vs C4 (above). Also gemini D3 vs C1: `[L2] heos (G2193, till, until)`, DECIDES "the preposition of continuance marks the limit of the narrated abstinence"; the row reads "a conjunction, preposition and adverb of continuance, until (of time and place)". Here the judge's step is close to the row, and the line still does not show it.
 4. CONTROL: qwen4max D2 vs C6, `[L2] yashab (H3427, sitting)`. The row holds "to sit down ... sit". The deciding step does not turn on the word; it turns on Acts 2:30 against Jeremiah 22:30. The proposed check marks this line too (one rendering, row not quoted), which is why it is record-only.
 
-PROPOSAL:
-a. INSTRUCTION TEXT (judges' agreement; its own card to the operator): "When a break's GROUND names a word by its number, write the [L2] entry as: [L2] <word> (<number>): "<the lexicon row, whole, as served>". If your deciding step says more than the row says, write that step in DECIDES and name the verse that carries it."
-   WHOLE means: the text of lexicon_words.anchor_gloss for that number from its first character up to, and not including, the closing "[source: ...]" tag, with the space before the tag left off. The source tag is not quoted. Example, G3933: "of unknown origin; a maiden; by implication, an unmarried daughter:--virgin." The check compares after trimming outer spaces and treating straight and curled quotation marks alike; nothing else is forgiven.
-b. CODE CHECK (W4), TRIAL, record-only: for each `[L2] ... (Gnnnn|Hnnnn ...)` entry in a LINK BROKEN line of a judge's final text, compare the quoted text with the record's row for that number, by the same test the GLOSS CHECK applies to the debaters (WHOLE, GLOSS TRIMMED, GLOSS ADDED). One audit line per seat. It counts nothing and removes no seat.
-c. EXPECTED ON THE STORED DATA: 6 entries, 6 GLOSS TRIMMED, 0 WHOLE, before the instruction text is live. After it: WHOLE on each.
+W4'S READ (Wall 11369 item 1): the lexicon rows are NOT served to the judges, and the judges' own form asks for "[L2] <word> (<number>, <gloss>)". So the rev 3 proposal (quote the record's row whole) met its own WRONG IF and is WITHDRAWN. It would also have put the corpus before the judges, against ruling 382 ("we can not impose our corpus on the judges") and ruling 383 (the judges grade the text, the evidence presented to them, alone). The 6 one-rendering entries of the replay follow the form the judges are given; they are not a judge's fault.
 
-WRONG IF: the rows are not served to the judges at all (then (a) asks for text the judge cannot see; W4 to answer); or the check, run on the stored lines, reads any of the 6 as WHOLE.
+WHAT THE JUDGES DO HAVE (SQL on the eight rounds): every number in the 6 entries is quoted with its gloss by the debaters in the rounds. G3933 in all eight rounds (first, "[L2] G3933, "virgin": "a maiden ... virgin.""); G4905 and G1080 in all eight; G2193 in six; H3427 in four. The gloss is evidence presented.
+
+PROPOSAL (rev 4):
+a. INSTRUCTION TEXT (judges' agreement; its own card): "When a break's GROUND names a word by its number, write the [L2] entry as: [L2] <word> (<number>): "<the gloss as a side quoted it>" [<round>]. If your deciding step says more than that gloss says, say so in DECIDES and name the verse that carries it."
+b. CODE CHECK (W4), TRIAL, record-only: for each [L2] entry in a LINK BROKEN line of a judge's final text, (1) the quoted gloss stands word for word in the round named, beside that number; (2) if no side quoted that number, one audit line "L2 NUMBER NOT IN THE ROUNDS". It counts nothing and removes no seat. The record's own row is not shown to the judge and is not the standard.
+c. EXPECTED ON THE STORED DATA: 6 entries, 0 in the new form (the form did not exist); 0 "NOT IN THE ROUNDS" (all five numbers are in the rounds). KNOWN-BAD after the text is live: an entry whose gloss is not in the round it names. The gemini D3 vs C4 case is then visible to a reader (the quoted gloss "a maiden ... virgin." beside "excludes prior knowing"), but NO CODE CHECK decides whether a step goes beyond a gloss; that stays the judge's and the enforcer's reading. Stated plainly: this item makes the footing visible and does not catch the failure by code.
+d. CHANGE TO THE JUDGES' FORM: (a) changes the [L2] form the judges are given today; W4 names the nodes that hold it in its build plan.
+
+WRONG IF: a judge's line cannot carry a quoted gloss within the length the form allows (W4 to say); or the glosses the sides quote differ between rounds for one number in a way that makes "as a side quoted it" unclear (then the entry names the round, which (a) already asks).
 
 ### J3. A break that says a side granted something points to that side's grant sentence
 
 FAILURE: a judge's break rests on "the answer grants ...", and no reader can check the grant against the side's own words. Also the converse: a side's real grants on the verse of a pair are not weighed in writing.
 
 REPLAY:
-1. The pkgGAV grant words, applied by SQL to all eight rounds: 15 grant sentences, all in the challenger's rounds (DR3 9, DR4 6). 0 in the Oracle's four rounds. (My regex is a copy of the manual's rule, not the engine's code; the count is MEASURED by my regex and is to be confirmed by W4 with the engine's harvester.)
+1. The pkgGAV grant words, applied by SQL to all eight rounds: my regex gives 15 grant sentences, all in the challenger's rounds (DR3 9, DR4 6), 0 in the Oracle's four rounds. THE ENGINE'S OWN HARVESTER (W4 Wall 11369 item 2): 0 for the Oracle, confirmed; 13 for the challenger, not 15 (DR4 4, not 6). The engine's count stands; mine was a copy of the manual's rule. No grants list of either side is in the judges' prompt today.
 2. 2 of the 7 break lines use a grant word, both qwen4max, both of the DEFENDER's answer: D4 vs C3 "the answer grants the margin's begetting and the preposition of origin"; D5 vs C4 "the answer grants the finding is part of that fulfilment".
 3. KNOWN-BAD: qwen4max D5 vs C4. The words it calls a grant are the Oracle's "'All this' includes that finding as fulfilment" (CR3). That sentence holds no grant word, and the harvester finds no grant in the Oracle's rounds. The judge named a grant the grants rule does not hold as one. Whether the judge is right to treat it as a grant is the judge's decision (ruling 428); the failure is that the line does not show it is the judge's reading and not a listed grant.
 4. CONTROL: the challenger's "I grant that the sitting and the ruling are the prospering that Jeremiah 22:30 names" (DR3, repeated DR4). It is a listed grant on the verse of D2 vs C6. qwen4max's D2 vs C6 break (against the defender) does not use it and need not; the check is silent on a line that claims no grant.
@@ -88,7 +92,7 @@ REPLAY (SQL on the enforcer's "ENFORCER: Kn.m -- AGREE|DISAGREE -- RIGHT: <word>
 2. Of the 25 DISAGREE lines, 1 names no verse reference, 15 name exactly one, 9 name two or more. 23 of 25 end in "CARRIED BY:" one verse.
 3. KNOWN-BAD: row 53043 (qwen4max, D2 vs C6), line K6.1: "DISAGREE -- RIGHT: STANDS ... CARRIED BY: Luke 1:33". The judge's GROUND on that pair names Jeremiah 22:30, Luke 1:32-33, Matthew 1:11-12 and Acts 2:30. The enforcer's line names one of the four and does not answer Acts 2:30, which is the row the judge's WHY IT FAILS names. This is the item the seat was later removed on (row 53144).
 4. CONTROL: row 53039 (gemini, D3 vs C4), line K2.1: AGREE, RIGHT: BROKEN. An AGREE line needs no further verse; the check is silent on it.
-5. The form the enforcer is given asks for "CARRIED BY:" one verse (seen in 23 of 25). GUESS, the prompt not read: the single verse is what the enforcer's instruction asks for, so the fix is in that instruction and not only in a check.
+5. CONFIRMED by W4's read (Wall 11369 item 3): the enforcer's instruction asks for one CARRIED BY verse, and the code reads only the last one. So the single verse is what the engine asks of the enforcer; the fix is in that instruction and in the reader, not only in a check.
 
 PROPOSAL:
 a. ENFORCER INSTRUCTION TEXT (its own card): "A DISAGREE must answer each verse on the judge's GROUND line: for each, say in a clause why it does not carry the judge's grade, quoting it."
