@@ -1,0 +1,23 @@
+PASS L1.1 engine: only the Shared Library differs from layer 1; wiring unchanged
+PASS L1.2 child: only the Shared Library differs from live 2d5bdc94
+PASS L1.3 LIB lines changed: 2784, 2789, 2929, 2959, 3564
+PASS L1.4 engine and child carry the same LIB
+PASS L1.5 the new block runs in all three send-back builders: panel, alternates, round-2 alternates
+PASS L1.6 the record-only cure runs in all three send-back records
+PASS L2.1 a judge line quoting 8 words of the reversed close sentence is caught
+PASS L2.2 a line that itself treats the sentence as reversed or disregarded is not sent back
+PASS L2.3 a line quoting only the earlier sentence is not caught
+PASS L2.4 a close sentence under 6 words is not matched
+PASS L2.5 audit and extractor lines are skipped
+PASS L2.6 one item per judge per side and verse
+PASS L2.7 7 words in a row are not enough
+PASS L3.1 panel: one E-REVCLOSE item for the judge that quotes the sentence, none for the other
+PASS L3.2 the item carries both quotations, both rounds and ruling 428's form
+PASS L3.3 no reversed sentence: no item (today's send-back unchanged)
+PASS L3.4 alternates: only the seated alternate is sent back
+PASS L3.5 a fault in the block adds nothing and stops nothing
+PASS L4.1 a silent E-REVCLOSE item is not counted as silence
+PASS L4.2 the record line says record-only and ruling 428
+PASS L4.3 it.rvc appears only in the silence guard and the record line: no failure map takes it
+PASS L4.4 the flag rides from the item list to the send-back output
+RESULT: ALL PASS (22 pass)

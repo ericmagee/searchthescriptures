@@ -1,0 +1,17 @@
+INFO S5 (e/f) run 32643: VERSE candidates D 39, C 58; not checked (over 120,000 characters) 0/0; request characters per read now D1 142029, D2 142029, C1 189872, C2 189872; before D1 55463, D2 55463, C1 54501, C2 54501
+INFO S5 (e/f) run 37203: VERSE candidates D 44, C 44; not checked (over 120,000 characters) 0/0; request characters per read now D1 170566, D2 170566, C1 171135, C2 171135; before D1 70636, D2 70636, C1 64938, C2 64938
+INFO S5 (e/f) run 41822: VERSE candidates D 33, C 18; not checked (over 120,000 characters) 0/0; request characters per read now D1 158314, D2 158314, C1 114136, C2 114136; before D1 66653, D2 66653, C1 58878, C2 58878
+INFO S5 (e/f) run 42071: VERSE candidates D 39, C 24; not checked (over 120,000 characters) 0/0; request characters per read now D1 182209, D2 182209, C1 119718, C2 119718; before D1 98345, D2 98345, C1 53539, C2 53539
+PASS S5a.1 32643: the defender's Deuteronomy 22:24 is a VERSE candidate for the enforcer (close [CR4] against earlier [CR3])
+INFO S5a 32643 candidate: CLOSE [CR4] "The challenger's own reading of it gives the husband as the wronged party." | EARLIER [CR3] "Within the espousal, the law treats the man's lying with her as humbling her, an offence worth stoning."
+PASS S5a.2 32643 (planted answer, both reads): REVERSED stands, listed once; nothing confirmed
+PASS S5a.3 32643: a held reading (NOT A CONTRADICTION in both reads) raises nothing
+PASS S5b.1 41822: no challenger candidate carries the defender's "Two fatherhoods" sentence as the challenger's earlier words (the 120,000-character cap leaves 0 challenger items unchecked)
+PASS S5b.2/S5g 41822 (the note's own pairing planted in both reads, on challenger candidate X49 Luke 2:49): not reversed -- 1:NOT REVERSED (other side's words) (the EARLIER quotation is the defender's own words (CR2, CR3, outside quotation marks) and stands in the challenger's rou); 2:NOT REVERSED (other side's words) (the EARLIER quotation is the defender's own words (CR2, CR3, outside quotation marks) and stands in the challenger's rou)
+INFO S5c 37203: defender Matthew 1:19 candidates whose close holds the Mark 7:8 sentence: 1 (X25; the finder is the anti-cheat finder verbatim, so the guard is the record's pkgOVS check)
+PASS S5c.1 37203 (the note's pairing planted in both reads on X25 Matthew 1:19): not reversed -- 1:NOT REVERSED (form) (a quotation stands under another verse than Matthew 1:19 (pkgOVS)); 2:NOT REVERSED (form) (a quotation stands under another verse than Matthew 1:19 (pkgOVS))
+PASS S5d.1 42071: the stored replies give the same confirmed list in the new node as in the live node (1 confirmed: CHALLENGER LINK 1)
+PASS S5d.2 42071: row statuses unchanged (1:CHALLENGER:CONFIRMED; 1:CHALLENGER:NOT CONFIRMED (form); 2:CHALLENGER:CONFIRMED (second check))
+PASS S5d.3 42071: the debate_enforcer_log rows of the stored answers are the same text (5 rows); the replayed replies were never asked the 63 VERSE candidates, so each is logged NO ANSWER (63 rows); a live read is asked to answer each by its id
+INFO S5d stored statuses: 52867 CONFIRMED; 52868 NOT CONFIRMED (form); 52869 CONFIRMED (second check); 52870 NONE FOUND; 52871 NONE FOUND
+RESULT: ALL PASS (9 pass)
