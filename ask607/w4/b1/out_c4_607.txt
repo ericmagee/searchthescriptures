@@ -1,0 +1,10 @@
+ASK 607 C4 (W4, 16:2x CST 11-24): stored gate form refusals by item kind.
+SQL:
+select case when item ~ '^G\d+ NOT APPLIED' then 'A NOT APPLIED item' else 'B other kind: '||regexp_replace(item,'^G\d+\s+','') end cls,
+ count(*) n, min(id) first_id, max(id) last_id, string_agg(distinct seat, ',') seats, count(distinct debate_id) debates
+from debate_enforcer_log
+where rule='E-GATE' and kind='send_back' and cure_status='UNCURED' and item ~ '^G\d+ ' and cure_reason like 'GATE CHANGE TO:%' and cure_reason like '%ENGINE: the CHANGE TO line has no line form the engine reads%' and cure_reason like '%counted in drv_uncured%'
+group by 1 order by 1;
+Result: A NOT APPLIED item: 25 rows, ids 7218 to 53202, seats chatgpt, gemini, grok, luna, sol, 6 debates. B other kind: 0 rows.
+Looser check (any E-GATE G item whose cure_reason holds the form reason, any status): NOT APPLIED items only (61 CURED, 25 UNCURED); other kinds 0.
+So no stored form refusal answers an item of another kind; nothing goes to the operator as a question.

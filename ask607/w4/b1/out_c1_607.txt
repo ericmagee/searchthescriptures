@@ -1,0 +1,41 @@
+== luna judgment 1122 rows 29285 to 29295 (11 items)
+  29285 G3 | before: UNCURED, counted, the gate change was not applied | after: UNCURED, record-only, pkgFRM refused the gate change; the judge's line before the change stands (recorded, no seat removed): the CHANGE TO line has no line form the engine 
+PASS 29285 G3: counted before; UNCURED and record-only after, with the pkgFRM reason
+  29286 G4 | before: UNCURED, counted, the gate change was not applied | after: UNCURED, record-only, pkgFRM refused the gate change; the judge's line before the change stands (recorded, no seat removed): the CHANGE TO line has no line form the engine 
+PASS 29286 G4: counted before; UNCURED and record-only after, with the pkgFRM reason
+  29287 G5 | before: UNCURED, counted, the gate change was not applied | after: UNCURED, record-only, pkgFRM refused the gate change; the judge's line before the change stands (recorded, no seat removed): the CHANGE TO line has no line form the engine 
+PASS 29287 G5: counted before; UNCURED and record-only after, with the pkgFRM reason
+  29288 G6 | before: UNCURED, counted, the gate change was not applied | after: UNCURED, record-only, pkgFRM refused the gate change; the judge's line before the change stands (recorded, no seat removed): the CHANGE TO line has no line form the engine 
+PASS 29288 G6: counted before; UNCURED and record-only after, with the pkgFRM reason
+  29289 G7 | before: UNCURED, counted, the gate change was not applied | after: UNCURED, record-only, pkgFRM refused the gate change; the judge's line before the change stands (recorded, no seat removed): the CHANGE TO line has no line form the engine 
+PASS 29289 G7: counted before; UNCURED and record-only after, with the pkgFRM reason
+  29290 G8 | before: UNCURED, counted, the gate change was not applied | after: UNCURED, record-only, pkgFRM refused the gate change; the judge's line before the change stands (recorded, no seat removed): the CHANGE TO line has no line form the engine 
+PASS 29290 G8: counted before; UNCURED and record-only after, with the pkgFRM reason
+  29291 G9 | before: UNCURED, counted, the gate change was not applied | after: UNCURED, record-only, pkgFRM refused the gate change; the judge's line before the change stands (recorded, no seat removed): the CHANGE TO line has no line form the engine 
+PASS 29291 G9: counted before; UNCURED and record-only after, with the pkgFRM reason
+  29292 G10 | before: UNCURED, counted, the gate change was not applied | after: UNCURED, record-only, pkgFRM refused the gate change; the judge's line before the change stands (recorded, no seat removed): the CHANGE TO line has no line form the engine 
+PASS 29292 G10: counted before; UNCURED and record-only after, with the pkgFRM reason
+  29293 G11 | before: UNCURED, counted, the gate change was not applied | after: UNCURED, record-only, pkgFRM refused the gate change; the judge's line before the change stands (recorded, no seat removed): the CHANGE TO line has no line form the engine 
+PASS 29293 G11: counted before; UNCURED and record-only after, with the pkgFRM reason
+  29294 G12 | before: UNCURED, counted, the gate change was not applied | after: UNCURED, record-only, pkgFRM refused the gate change; the judge's line before the change stands (recorded, no seat removed): the CHANGE TO line has no line form the engine 
+PASS 29294 G12: counted before; UNCURED and record-only after, with the pkgFRM reason
+  29295 G13 | before: UNCURED, counted, the gate change was not applied | after: UNCURED, record-only, pkgFRM refused the gate change; the judge's line before the change stands (recorded, no seat removed): the CHANGE TO line has no line form the engine 
+PASS 29295 G13: counted before; UNCURED and record-only after, with the pkgFRM reason
+  counted before 11, after 0 | drv_uncured before 11, after 0 (stored drv_uncured 12)
+== chatgpt judgment 988 rows 7218 to 7224 (7 items)
+  7218 G1 | before: UNCURED, counted, the gate change was not applied | after: UNCURED, counted, the gate change was not applied
+PASS 7218 G1: today's engine does not form-refuse it; old and new give the same row
+  7219 G2 | before: UNCURED, counted, the gate change was not applied | after: UNCURED, counted, the gate change was not applied
+PASS 7219 G2: today's engine does not form-refuse it; old and new give the same row
+  7220 G3 | before: UNCURED, counted, the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLA | after: UNCURED, counted, the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D2 vs C4 CHALLENGER LINK BROKEN counts a witness as unanswered; t
+PASS 7220 G3: today's engine does not form-refuse it; old and new give the same row
+  7221 G4 | before: UNCURED, counted, the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLA | after: UNCURED, counted, the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D3 vs C5 DEFENDER LINK BROKEN counts a witness as unanswered; the
+PASS 7221 G4: today's engine does not form-refuse it; old and new give the same row
+  7222 G5 | before: UNCURED, counted, the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLA | after: UNCURED, counted, the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D2 vs C4 CHALLENGER LINK BROKEN counts a witness as unanswered; t
+PASS 7222 G5: today's engine does not form-refuse it; old and new give the same row
+  7223 G6 | before: CURED, counted, the gate change is already in the corrected text (another change wrote | after: CURED, counted, the gate change is already in the corrected text (another change wrote the same line; W3 2319)
+PASS 7223 G6: today's engine does not form-refuse it; old and new give the same row
+  7224 G7 | before: CURED, counted, the gate change was applied | after: CURED, counted, the gate change was applied
+PASS 7224 G7: today's engine does not form-refuse it; old and new give the same row
+  counted before 5, after 5 | drv_uncured before 2, after 2 (stored drv_uncured 7)
+C1 ALL PASS

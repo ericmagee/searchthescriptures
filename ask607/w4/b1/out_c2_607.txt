@@ -1,0 +1,17 @@
+PASS G3 gate line found in the stored reply
+   (a) KEEP on NOT APPLIED item G3: before CURED, counted, KEEP: the change stays unapplied | after CURED, counted, KEEP: the change stays unapplied
+PASS (a) KEEP on NOT APPLIED item G3: same row old and new (CURED)
+   (b) silent item G3: before UNCURED, counted, no GATE line for this item (silence counts) | after UNCURED, counted, no GATE line for this item (silence counts)
+PASS (b) silent item G3: same row old and new (UNCURED, counted)
+   (c) G1: before CURED, counted, the later gate change G2 of this judge rewrote the same line (the last change wins) and was applied (apply rec | after CURED, counted, the later gate change G2 of this judge rewrote the same line (the last change wins) and was applied (apply rec
+PASS (c) applied gate change G1: same row old and new, CURED
+   (c) G2: before CURED, counted, the gate change was applied | after CURED, counted, the gate change was applied
+PASS (c) applied gate change G2: same row old and new, CURED
+PASS (c) every gate row other than G3 to G13 is byte-equal old and new: G1, G2
+   (d) pkgSGA: before UNCURED, record-only, pkgSGA refused the gate change; the judge's line before the change stands (recorded, no seat removed): the cha | after UNCURED, record-only, pkgSGA refused the gate change; the judge's line before the change stands (recorded, no seat removed): the cha
+PASS (d) a pkgSGA refusal: same row old and new, record-only, named pkgSGA
+   (d) pkgPS: before UNCURED, record-only, pkgPS refused the gate change; the judge's line before the change stands (recorded, no seat removed): the chan | after UNCURED, record-only, pkgPS refused the gate change; the judge's line before the change stands (recorded, no seat removed): the chan
+PASS (d) a pkgPS refusal: same row old and new, record-only, named pkgPS
+   (e) 31511: before CURED, counted, the gate change was applied | after CURED, counted, the gate change was applied
+PASS (e) row 31511: same row old and new, never record-only (on the stored final text today's engine applies the change; the 11-11 placement refusal is not reproduced, and the plan keeps 31511 out of the class)
+C2 ALL PASS
