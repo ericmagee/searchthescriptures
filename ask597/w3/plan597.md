@@ -1,4 +1,6 @@
-# ASK 597 PLAN: ONE SHARED HANDLER FOR A LINE OF TEXT, NO CUT AT EACH PLACE, rev 1 (W1 F1 to F4 of Wall 11481)
+# ASK 597 PLAN: ONE SHARED HANDLER FOR A LINE OF TEXT, NO CUT AT EACH PLACE, rev 2 (W1 F1 to F4 of Wall 11481; W1's check against live 6834c21b, Wall 11582)
+
+REV 2 CHANGES (W1's count on live engine 6834c21b and child ecdc6218, Wall 11582; I did not read the engine): the table of section 2 was of engine d819ff4c and is kept as that; the live figures are added beside it (item 1a); item 4 is struck as stale; S1 says the inventory is taken on the live version at build time.
 
 W3 (session_01H1X3ANsGiMnhnbkfphocmo), 2026-11-24 CST. For W1's grade. A plan only (the operator's press "Plan 596, then 597, then 598", 01:43 CST). Each build stage needs its own card.
 
@@ -29,16 +31,17 @@ My own scan of W4's fetch-back of the live engine (ask590/w4/write_r593/fetchbac
 | all | 151 | 102 | 49 |
 
 1. W1's strict scan (Wall 11481) gives the same table row by row, 151; W1 withdrew its earlier 141. No `substring` or `substr` form stands.
+1a. LIVE NOW, engine 6834c21b (W1, Wall 11582): 139 places (Shared Library 98, other nodes 41). By length, as library / other nodes: 1,500: 17 / 5; 700: 24 / 3; 600: 31 / 11; 500: 1 / 1; 400: 25 / 21. The fall from 151 is the ASK 595 follow-on. ASK 586 J2 and J3, ASK 591 and its fix 1 added no cut at the five lengths. The child ecdc6218 holds 101 (was 105). Other lengths: 686 in the engine (was 689); the cuts at 2,000 are now 0.
 2. The child 31329164 holds 105 cuts at these five lengths, 102 of them in its library copy (W1).
 2a. OTHER LENGTHS (W1 F1): the engine holds 689 more `.slice(0,N)` at other lengths (148 at 200, 102 at 300, 9 at 1,200, 6 at 900, 3 at 2,000, others) and the child 269. Many cut arrays or ids. They are all in the inventory; each is classed K1 to K6 or NOT TEXT.
 2b. NO SIZE LIMIT IN THE DATABASE (W1 F4): debate_enforcer_log, odv1_question_round_log and debate_results hold no length limit on their text columns. The longest stored flagged_line is 5,719 characters and the longest response_line 1,742, so one path already stores a reply over 700 whole; S1 names that path.
 3. What the text before each cut names, by my scan (a rough reading, not a classification): at 700, 23 of 27 follow `response_line`; at 1,500, 12 follow a `line` field and 3 follow `response_line`; at 600, 5 follow the words "Your line" (W1 named at least 3 send-back texts that show a judge its own line cut to 600).
-4. Known from the build files: ASK 590's judges' block shows each debater's close sentence and earlier sentence cut to 500 characters, and its send-back text cuts them to 400 (build590.cjs, build590_l2.cjs), with no mark.
+4. STRUCK (W1, Wall 11582): rev 1 said ASK 590's judges' block cut each debater's close sentence to 500 characters and its send-back to 400. The ASK 595 follow-on removed those cuts; they do not stand on the live engine.
 5. ASK 587 item A stands: a line that reaches the E-COL layer check ending " [...]" is NOT READ, never UNCURED.
 
 ## 3. THE DESIGN
 
-S1. THE INVENTORY. One table, one row per cut in the engine and the child: node or library line, the field, whose words they are, where the cut text goes (stored, shown to a judge, shown to the enforcer, a record note), and its kind:
+S1. THE INVENTORY. Taken on the live engine and child as they stand at the build, not from the figures of section 2. One table, one row per cut in the engine and the child: node or library line, the field, whose words they are, where the cut text goes (stored, shown to a judge, shown to the enforcer, a record note), and its kind:
 - K1: a judge's line as stored (`flagged_line`). Uncut since ASK 587 and 595.
 - K2: a judge's own line shown back to that judge in a send-back.
 - K3: a judge's reply as stored (`response_line`).
@@ -75,7 +78,7 @@ S5. PROOF BEFORE EACH CARD (W4), on stored runs 37203, 41822 and 42071:
 ## 4. WHAT THIS CHANGES FOR A JUDGE OR A RUN
 
 1. K2: a judge sent back sees its whole line, not the first 600 characters.
-2. K4: a judge and the enforcer see a debater's whole sentence where they now see 400 or 500 characters of it.
+2. K4: a judge and the enforcer see a debater's whole sentence at every place the inventory finds one still cut (the ASK 590 close-sentence cuts are already gone, section 2 item 4).
 3. K3: the record holds a judge's whole reply.
 4. No count, grade, standing or removal rule is changed by this ASK. If a stage would change one (for example a check that now reads text it could not see before and so raises an item it did not raise), the stage's card says so in plain words, with the count on the stored runs.
 

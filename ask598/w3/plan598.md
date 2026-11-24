@@ -1,4 +1,6 @@
-# ASK 598 PLAN: REMOVE THE NODES THAT NOTHING REACHES, rev 2 (W1 F1 to F4 of Wall 11482; R1 of Wall 11492)
+# ASK 598 PLAN: REMOVE THE NODES THAT NOTHING REACHES, rev 3 (W1 F1 to F4 of Wall 11482; R1 of Wall 11492; W1's check against live 6834c21b, Wall 11582: D1, D2, D3, D5)
+
+REV 3 CHANGES (W1's read of live engine 6834c21b and child ecdc6218, Wall 11582; I did not read the engine): (1) D1: THE SINGLE_JUDGE SEAT STAYS. Init Seats' single_judge is live as the synthesis seat; stage B does not remove it (section 2 item 7, S2, section 4 item 6, section 6 item 4). (2) D2: Build Save Body's three single-judge texts join stage B (section 2 item 4, S2). (3) D3: the manual edits after stage B include part 08.0 version 299 and part 10.0 version 302 (section 4 item 4). (4) D5: the page and the JUDGE ORDER review line no longer name a single judge (section 6 item 2). (5) The live figures: 423 nodes, the same 28 unreached (section 2 item 1).
 
 MISTAKES IN REV 0, MINE: my scan missed 42 readers (W1 F1), and it named the child's R2 Alternate Merge Seat as a reader of the engine's dead Cure Check when the child has its own live Cure Check (W1 F2).
 
@@ -14,9 +16,9 @@ OBJECTIVE MET when: the ASK 596 reach walk counts 0 unreached nodes in the engin
 
 Ruling 402 (the operator, 11-02, of the single judge: "it trash ... what sense would it make to turn on something that doesn't work"); ruling 428 ("the single judge switched off under ruling 402"); ruling 427 and ASK 590 (the anti-cheat read moved into the closing enforcer); ASK 599 rule 1; the build rule; the scope rule; Wall 11462.
 
-## 2. WHAT STANDS TODAY (my own walk of W4's fetch-back of live engine d819ff4c and child 31329164, ask590/w4/write_r593)
+## 2. WHAT STANDS TODAY (my own walk of W4's fetch-back of engine d819ff4c and child 31329164, ask590/w4/write_r593; W1 re-checked it on live engine 6834c21b and child ecdc6218, Wall 11582)
 
-1. Engine: 422 nodes; start nodes Manual Start, Debate Start, Respond Accepted. Walking every connection from them leaves 29 nodes unreached: the Shared Library node (read by code, not by a connection) and 28 others. This agrees with W1's count (Wall 11462). No node is marked disabled.
+1. Engine: 422 nodes; start nodes Manual Start, Debate Start, Respond Accepted. Walking every connection from them leaves 29 nodes unreached: the Shared Library node (read by code, not by a connection) and 28 others. This agrees with W1's count (Wall 11462). No node is marked disabled. ON LIVE 6834c21b (W1, Wall 11582): 423 nodes (ASK 591 added Judge Order Read); unreached 29, the same 28 and the Shared Library; the `$()` readers and the pass-back list (38 engine nodes, 4 child nodes) unchanged.
 2. The 28:
    - ANTI-CHEAT, 6 (unreached since ASK 590, 01:32 CST 2026-11-24): Anticheat Build, Anticheat Needed?, Anticheat Call openrouter, Anticheat Record, Anticheat Only?, Anticheat Resume.
    - SINGLE JUDGE AND DIAGNOSTIC, 22: Build Independent Verdict, Verdict Judge Route, Verdict Call openrouter, Verdict Normalizer, Extract Independent Verdict, SJ Re-ask?, SJ Re-ask Build, SJ Re-ask Call openrouter, SJ Re-ask Pick, Cure Build, Cure Needed?, Cure Call openrouter, Cure Normalize, Cure Check, FUM Needed? Cure, FUM Call Cure openrouter, FUM Merge Cure, Build Diagnostic Prompt, Diagnostic Judge Route, Diagnostic Call openrouter, Diagnostic Normalizer, Extract Diagnostic.
@@ -30,10 +32,13 @@ Ruling 402 (the operator, 11-02, of the single judge: "it trash ... what sense w
    - Build Independent Verdict, Cure Build, Cure Normalize, SJ Re-ask Build, SJ Re-ask Pick, Verdict Normalizer: named in the Shared Library, both copies (its map of which library lines each node runs).
    - THE GROK PASS-BACK LIST (W1 F1, missed by my scan): a list of node names, `for (const xn of [... "Diagnostic Call openrouter", "Verdict Call openrouter", ... "Cure Call openrouter" ...])`, stands in 38 engine nodes (36 HTTP request bodies, Panel Judges Prep, Early Alternate Build) and 4 child HTTP nodes (R2 Alternate Call, R2 Alt Send Back Call, R2 Alt Gate Call, R2 Alt Late Gate Call). Stage B takes the three names out of all 42.
    - THE CHILD (W1 F2): the child has its own live code node named Cure Check. R2 Alternate Merge Seat's `$("Cure Check")` reads THAT node; it is not a reader of the engine's dead Cure Check and is not cut, unless W4 shows otherwise. The child's real readers are by payload: the engine's Alternate Pass Call sends `"Cure Check": {ran}` to the child; the child's Alternate Pass Check HOLD list and its IF nodes A379 Gate 06 and A379 Gate 22 test `ran["Cure Check"] === true`. Stage B lists these and states, for each, the result with the key gone.
+   - BUILD SAVE BODY'S THREE SINGLE-JUDGE TEXTS (W1 F1 of Wall 11555; D2 of Wall 11582): in its rewrite of the review notes, "SINGLE JUDGE (second opinion)", "KEPT IN THE SINGLE JUDGE'S TEXT" and "CURED by the single judge's cure reply". They are text for a judge that does not run; stage B removes them with the branch that writes them.
    - No `$node["..."]` or `$items("...")` form names any of the 28 (W1).
    - Named by nothing: Anticheat Build, Anticheat Needed?, Anticheat Only?, Anticheat Resume, Build Diagnostic Prompt, Cure Needed?, Diagnostic Judge Route, FUM Merge Cure, FUM Needed? Cure, SJ Re-ask?, Verdict Judge Route.
 5. Size: the 28 nodes are 175,615 characters of the engine file's 6,576,380.
 6. NOT READ BY ME: what each of those live readers does when the node it names has not run (run 42071 completed with the single-judge nodes not run, so each coped there; I have not read how), and which library lines belong only to the removed nodes. W4 reads both in the build.
+
+7. THE SINGLE_JUDGE SEAT IS LIVE AND IS NOT ONE OF THE 28 (W1 D1, Wall 11582; not read by me). Init Seats computes single_judge. Build Synthesis picks the synthesis model from it and throws if the seat has no family map or no active row. Resolve Seats fails the run if that seat's family debates. Format Markdown reads it. The synthesis runs on every run, so this field and its three readers are live code. ASK 591 fix 1 took the single judge off the page and out of the review line and left Init Seats' field "for 598"; that note was wrong as to the field: it stays.
 
 ## 3. THE DESIGN
 
@@ -41,7 +46,7 @@ S1. A node is removed together with every reader of it. Deleting the 28 alone wo
 
 S2. TWO STAGES, each its own build, grade and card.
 - STAGE A, ANTI-CHEAT (6 nodes; readers Panel Build, Build Save Body, Panel Tokens). The operator's ruling stands behind it already: ASK 590, "Build it, with the send-back" (row 516), moved the read into the closing enforcer.
-- STAGE B, SINGLE JUDGE AND DIAGNOSTIC (22 nodes; readers Build Save Body, Failure Salvage, Assume Check Record, Judge Contradiction Build, Alternate Merge Seat, Alternate Pass Call, Panel Tokens, the library in both copies; the grok pass-back list in 38 engine nodes and 4 child HTTP nodes; and by payload the child's Alternate Pass Check HOLD list and its IF nodes A379 Gate 06 and A379 Gate 22). The operator switched the single judge off (ruling 402), and it has stored no verdict since 2026-11-12 (W1, Wall 11462). Removing it for good is more than switching it off, so stage B's card asks him in plain words: REMOVE the single judge and the diagnostic from the engine, or KEEP them unwired. The card RECOMMENDS REMOVE (W1 F4), quoting rule 1 of the standard ("Code that is switched off is removed, not left") and his words of 01:44 CST ("so that we don't have things like dead code in our program? That's just unacceptable."), and names the saved engine version as the way back. Rewiring is not proposed; it would reverse ruling 402.
+- STAGE B, SINGLE JUDGE AND DIAGNOSTIC (22 nodes; Build Save Body's three single-judge texts; readers Build Save Body, Failure Salvage, Assume Check Record, Judge Contradiction Build, Alternate Merge Seat, Alternate Pass Call, Panel Tokens, the library in both copies; the grok pass-back list in 38 engine nodes and 4 child HTTP nodes; and by payload the child's Alternate Pass Check HOLD list and its IF nodes A379 Gate 06 and A379 Gate 22). The operator switched the single judge off (ruling 402), and it has stored no verdict since 2026-11-12 (W1, Wall 11462). Removing it for good is more than switching it off, so stage B's card asks him in plain words: REMOVE the single judge and the diagnostic from the engine, or KEEP them unwired. The card RECOMMENDS REMOVE (W1 F4), quoting rule 1 of the standard ("Code that is switched off is removed, not left") and his words of 01:44 CST ("so that we don't have things like dead code in our program? That's just unacceptable."), and names the saved engine version as the way back. Rewiring is not proposed; it would reverse ruling 402. STAGE B DOES NOT TOUCH Init Seats' single_judge field or its readers Build Synthesis, Resolve Seats and Format Markdown (section 2 item 7). Whether the field is renamed to say what it now is (the synthesis seat) is a separate question, put to the operator on the stage B card as its own line: PROPOSED no rename in stage B, because a rename touches four live nodes for no change in what the engine does; if he wants the name changed it is its own small build.
 
 S3. PROOF BEFORE EACH CARD (W4):
 1. The reach walk on the target: 22 unreached after stage A, 0 after stage B (Shared Library exempt).
@@ -55,8 +60,10 @@ S3. PROOF BEFORE EACH CARD (W4):
 1. No seat, grade, count or standing rule changes. The removed nodes do not run today.
 2. Stored columns: Build Save Body today fills the single judge's and the diagnostic's columns from nodes that did not run. After stage B those columns are written empty by plain code, not by a failed read. W4 names each column and its value before and after; past rows are not touched.
 3. Panel Tokens no longer lists the removed calls.
-4. The engine manual: part 07.0 ("Synthesis, single judge, diagnostic", 14,737 characters) and every entry on the anti-cheat nodes and the single judge describe nodes that will not exist. The body law says the text holds only what the engine does. W3 drafts the manual pairs for each stage after its write, W1 grades, the operator's card. This is the larger part of the work: by my scan 9 manual parts name the anti-cheat nodes.
+4. The engine manual: part 07.0 ("Synthesis, single judge, diagnostic", 14,737 characters) and every entry on the anti-cheat nodes and the single judge describe nodes that will not exist. The body law says the text holds only what the engine does. W3 drafts the manual pairs for each stage after its write, W1 grades, the operator's card. This is the larger part of the work: by my scan 9 manual parts name the anti-cheat nodes. Since this plan's rev 2 the manual has gained two texts that stage B makes untrue (W1 D3): part 08.0 version 299, the ASK 586 J3 entry, "Build Independent Verdict holds the same paragraph; that node has no incoming connection and does not run." (and the like sentence of the J2 entry's heading), and part 10.0 version 302, whose entries name Build Independent Verdict and the single judge. Part 07.0's sentence "The synthesis still runs, on the seat named single_judge in Init Seats; that seat must stay named" STAYS TRUE after stage B.
 5. ASK 593 and ASK 590 edited Build Independent Verdict, and the ASK 586 J2 and J3 texts name it as a twin of Panel Build. After stage B those edits fall away and the texts act through Panel Build alone, as texts586_J2J3J6.md draft 2 section 0 item 5 says.
+
+6. THE SYNTHESIS IS UNCHANGED: it runs on the single_judge seat as today (section 2 item 7). S3 item 4's control must show Build Synthesis, Resolve Seats and Format Markdown byte for byte the same, base against target.
 
 ## 5. LIMITS
 
@@ -67,8 +74,10 @@ S3. PROOF BEFORE EACH CARD (W4):
 ## 6. THIS PLAN IS WRONG IF
 
 1. A reader's branch for a removed node does run today in some path (then it is not dead, and item 4 of S3 shows a difference).
-2. A dashboard or database function reads the single judge's or the diagnostic's columns and breaks on empty ones (W4 names the readers of those columns).
+2. A dashboard or database function reads the single judge's or the diagnostic's columns and breaks on empty ones (W4 names the readers of those columns). Already so since ASK 591 fix 1 (W1 D5): the Judge order page and the "[JUDGE ORDER v<n>" review line do not name a single judge.
 3. The operator keeps the single judge (then stage B is dropped, and the 22 nodes stay as a named exception to rule 1, written into the standard's baseline with his ruling).
+
+4. Stage B removes or empties Init Seats' single_judge (then the synthesis has no seat: Build Synthesis throws and the run fails). S3 gains item 6: the target's Init Seats output still carries single_judge, equal to the base's, on the three stored runs.
 
 ## 7. ORDER WITH THE OTHER WORK
 
