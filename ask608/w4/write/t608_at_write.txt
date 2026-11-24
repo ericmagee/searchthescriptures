@@ -1,0 +1,39 @@
+pairs 90 | no OpenAI debater, byte-equal 56 | luna barred 34 | replaced 30 | fail closed 4
+  claude vs chatgpt: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,gemini; reserve null; alternates argon
+  claude vs sol62: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,gemini; reserve null; alternates argon
+  chatgpt vs claude: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,gemini; reserve null; alternates argon
+  chatgpt vs gemini: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,sonnet; reserve null; alternates 
+  chatgpt vs grok: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,gemini; reserve null; alternates argon,sonnet
+  chatgpt vs mimo: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,gemini; reserve null; alternates argon,sonnet
+  chatgpt vs opus: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,gemini; reserve null; alternates argon
+  chatgpt vs qwen4max: enforcer glm (z-ai/glm-5.3); judges spark,gemini,argon; reserve sonnet; alternates sonnet
+  chatgpt vs spark: enforcer glm (z-ai/glm-5.3); judges qwen4max,gemini,argon; reserve sonnet; alternates sonnet
+  chatgpt vs sol62: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,gemini; reserve null; alternates argon,sonnet
+  gemini vs chatgpt: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,sonnet; reserve null; alternates 
+  gemini vs sol62: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,sonnet; reserve null; alternates 
+  grok vs chatgpt: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,gemini; reserve null; alternates argon,sonnet
+  grok vs sol62: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,gemini; reserve null; alternates argon,sonnet
+  mimo vs chatgpt: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,gemini; reserve null; alternates argon,sonnet
+  mimo vs sol62: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,gemini; reserve null; alternates argon,sonnet
+  opus vs chatgpt: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,gemini; reserve null; alternates argon
+  opus vs sol62: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,gemini; reserve null; alternates argon
+  qwen4max vs chatgpt: enforcer glm (z-ai/glm-5.3); judges spark,gemini,argon; reserve sonnet; alternates sonnet
+  qwen4max vs sol62: enforcer glm (z-ai/glm-5.3); judges spark,gemini,argon; reserve sonnet; alternates sonnet
+  spark vs chatgpt: enforcer glm (z-ai/glm-5.3); judges qwen4max,gemini,argon; reserve sonnet; alternates sonnet
+  spark vs sol62: enforcer glm (z-ai/glm-5.3); judges qwen4max,gemini,argon; reserve sonnet; alternates sonnet
+  sol62 vs claude: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,gemini; reserve null; alternates argon
+  sol62 vs chatgpt: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,gemini; reserve null; alternates argon,sonnet
+  sol62 vs gemini: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,sonnet; reserve null; alternates 
+  sol62 vs grok: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,gemini; reserve null; alternates argon,sonnet
+  sol62 vs mimo: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,gemini; reserve null; alternates argon,sonnet
+  sol62 vs opus: enforcer glm (z-ai/glm-5.3); judges spark,qwen4max,gemini; reserve null; alternates argon
+  sol62 vs qwen4max: enforcer glm (z-ai/glm-5.3); judges spark,gemini,argon; reserve sonnet; alternates sonnet
+  sol62 vs spark: enforcer glm (z-ai/glm-5.3); judges qwen4max,gemini,argon; reserve sonnet; alternates sonnet
+  FAIL CLOSED chatgpt vs glm: ORACLE_DEBATE_V1 Resolve refused: ENFORCER: luna is of family openai, which debates in this debate, and the backup enforcer seat "glm" is of family zhipu, which may not enforce here (ASK 608). 
+  FAIL CLOSED glm vs chatgpt: ORACLE_DEBATE_V1 Resolve refused: ENFORCER: luna is of family openai, which debates in this debate, and the backup enforcer seat "glm" is of family zhipu, which may not enforce here (ASK 608). 
+  FAIL CLOSED glm vs sol62: ORACLE_DEBATE_V1 Resolve refused: ENFORCER: luna is of family openai, which debates in this debate, and the backup enforcer seat "glm" is of family zhipu, which may not enforce here (ASK 608). 
+  FAIL CLOSED sol62 vs glm: ORACLE_DEBATE_V1 Resolve refused: ENFORCER: luna is of family openai, which debates in this debate, and the backup enforcer seat "glm" is of family zhipu, which may not enforce here (ASK 608). 
+T3 backup of a debater family fails closed: ORACLE_DEBATE_V1 Resolve refused: ENFORCER: luna is of family openai, which debates in this debate, and the backup enforcer seat "glm" is of family google, which may not 
+T3 backup with no family fails closed: ORACLE_DEBATE_V1 Resolve refused: ENFORCER: luna is of family openai, which debates in this debate, and the backup enforcer seat "glm" is of family (none), which may not 
+T3 backup row missing fails closed: ORACLE_DEBATE_V1 Resolve refused: ENFORCER: luna is of family openai, which debates in this debate, and the backup enforcer seat "glm" has no active OpenRouter model_conf
+T1 ALL PASS
