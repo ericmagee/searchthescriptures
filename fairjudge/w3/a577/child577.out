@@ -1,0 +1,87 @@
+CHILD file bytes 2644003 | nodes 156 | code nodes 61 | code chars 1198296 | Shared Library 1145843 | other code 52453
+node types: executeWorkflowTrigger 1, code 61, if 47, set 37, httpRequest 8, executeWorkflow 2
+parameters outside jsCode (JSON chars): 35640 | connections JSON 15694 | library as a JSON string 1189169
+LIB engine 979141 1922a698 child 979141 1922a698 identical true | MAP engine 166418 child 166239 | head equal true
+MAP keys engine 49 child 47 | child-only none | engine-only 2 | shared keys with equal entries 47
+LIB lines 3567 | lines any child MAP entry serves 3564 (978562 chars as stored) | lines no child entry serves 3 (579 chars)
+
+CHILD CODE NODES (other than the library):
+  Alternate Pass Check | 1412 | ede618d3 | reads library: false 
+  Accept Final | 93 | 0ec0e926 | reads library: false 
+  Assume Check Record | 100 | 980abbc2 | reads library: false 
+  Build Save Body | 96 | 8ba75f5c | reads library: false 
+  Cited Verses | 93 | 0c6852c1 | reads library: false 
+  Close Enforcer Record | 102 | 05d21556 | reads library: false 
+  Cure Check | 91 | 6cda0660 | reads library: false 
+  Enforcer Record | 96 | 74df40b3 | reads library: false 
+  Fetch Models | 93 | 23bd8492 | reads library: false 
+  Final Output | 93 | 096f466e | reads library: false 
+  Gate Record | 92 | ec396c60 | reads library: false 
+  Init Seats | 91 | bf2146f0 | reads library: false 
+  Judge Contradiction Record | 107 | 709a0d37 | reads library: false 
+  Judge Enforcer Record | 102 | 66350273 | reads library: false 
+  L2 Count Plan | 94 | 280b617f | reads library: false 
+  L2 Lexicon | 91 | 3f17e321 | reads library: false 
+  L2 Words | 89 | d45003ea | reads library: false 
+  Panel Build | 92 | ff43daf8 | reads library: false 
+  Panel Check | 92 | 07f91539 | reads library: false 
+  Panel Cure Call 1 openrouter | 109 | db2f74e6 | reads library: false 
+  Panel Cure Call 2 openrouter | 109 | 13a1c552 | reads library: false 
+  Panel Cure Call 3 openrouter | 109 | af61ac1c | reads library: false 
+  Panel Cure Check | 97 | b373d386 | reads library: false 
+  Panel Cure Normalize 1 | 103 | b30c2195 | reads library: false 
+  Panel Cure Normalize 2 | 103 | b6c4a410 | reads library: false 
+  Panel Cure Normalize 3 | 103 | c4144888 | reads library: false 
+  Panel Judge 1 openrouter | 105 | 8357b087 | reads library: false 
+  Panel Judge 2 openrouter | 105 | bb9bcc2d | reads library: false 
+  Panel Judge 3 openrouter | 105 | 5fc371b4 | reads library: false 
+  Panel Payloads | 95 | c341914a | reads library: false 
+  Panel Reserve openrouter | 105 | c29ad8e5 | reads library: false 
+  Quote Report | 93 | 6ecf0cd6 | reads library: false 
+  Regrade Load | 93 | c25fe8fa | reads library: false 
+  Regrade Row | 92 | ea365a11 | reads library: false 
+  Reread Record | 94 | 4bbef3a9 | reads library: false 
+  Reserve Build | 94 | f2e518db | reads library: false 
+  Resolve Seats | 94 | 87d73a72 | reads library: false 
+  Send Back Record | 97 | 4cdecb3f | reads library: false 
+  Alternate Pass Entry | 95 | 18473347 | reads library: false 
+  R2 Alternate Build | 852 | 8faf69a1 | reads library: true 
+  R2 Alternate Merge Seat | 1065 | 7fd77ff0 | reads library: true 
+  R2 Alt Seated | 1060 | 478d5174 | reads library: false 
+  R2 Alt Judge Enforcer Build | 1059 | 5f1256ea | reads library: true 
+  R2 Alt Judge Enforcer Record | 1154 | 17246aa6 | reads library: true 
+  R2 Alt Send Back Build | 1185 | 73dabf06 | reads library: true 
+  R2 Alt Send Back Record | 1034 | ad347cc0 | reads library: true 
+  R2 Alt Reread Build | 3979 | c8bcedd2 | reads library: false 
+  R2 Alt Reread Record | 3837 | 36a70121 | reads library: false 
+  R2 Alt Gate Build | 869 | 8279f94a | reads library: true 
+  R2 Alt Gate Record | 1001 | 5d1d0b48 | reads library: true 
+  R2 Alt Late Gate Build | 907 | c27a09f1 | reads library: true 
+  R2 Alt Judge Enforcer Retry Build | 19304 | 5d21732b | reads library: false 
+  R2 Alt Judge Enforcer Resend Build | 548 | 72d9591f | reads library: false 
+  R2 Alternate Payloads | 1192 | 0573f316 | reads library: true 
+  R2 Alternate Cure Build | 782 | 41f73619 | reads library: true 
+  R2 Alternate Cure Normalize | 804 | 38e80ba0 | reads library: true 
+  FUM Merge R2 Alternate | 413 | e275ed1f | reads library: false 
+  R2 Alternate Merge | 1034 | bd3170c0 | reads library: true 
+  Alternate Pass Out | 1588 | d246fe69 | reads library: false 
+  Library Check (ASK 422a) | 3667 | a7a41edb | reads library: true 
+
+STATEMENTS of 300+ chars in child code nodes: 24 total 32159 | parse failures none
+identical repeats WITHIN the child: saving 0 | child statements that also stand byte-identical in an engine node: 27488 chars
+  16453 x1 child[R2 Alt Judge Enforcer Retry Build] engine copies 5 (Build Save Body, Format Markdown, Enforcer Build) | const __RL=(function(){const module={exports:{}};const expor
+  2266 x1 child[Library Check (ASK 422a)] engine copies 2 (Library Sha (ASK 422a), Library Check) | const __SHA422=(s)=>{const u=[];for(let i=0;i<s.length;i++){
+  2182 x1 child[R2 Alt Reread Record] engine copies 1 (Alt Reread Record) | B.forEach((b,i)=>{let txt='',err=null;try{txt=String(R[i].ch
+  1075 x1 child[R2 Alt Reread Build] engine copies 2 (Reread Build, Alt Reread Build) | for(const x of want){const c=ids.filter(y=>y.seat===x.seat&&
+  1075 x1 child[R2 Alt Judge Enforcer Retry Build] engine copies 1 (Alt Judge Enforcer Retry Build) | const why=(r,b)=>{if(!r)return 'no reply';if(r.error)return 
+  1044 x1 child[R2 Alt Judge Enforcer Retry Build] engine copies 2 (Judge Enforcer Retry Build, Alt Judge Enforcer Retry Build) | B.forEach((b,i)=>{if(!b||b.je_skip||!Array.isArray(b.ids)||!
+  888 x1 child[Alternate Pass Out] engine copies 0 | const A={"R2 Alternate Build":()=>$("R2 Alternate Build"),"R
+  739 x1 child[Alternate Pass Check] engine copies 0 | const HOLD=["Accept Final","Assume Check Record","Build Save
+  494 x1 child[R2 Alt Reread Build] engine copies 2 (Reread Build, Alt Reread Build) | const HEAD='SECOND READING. Each ITEM below is shown as it w
+  487 x1 child[R2 Alt Reread Record] engine copies 1 (Alt Reread Record) | const NCR=(nc,M0)=>(nc||[]).map(w=>{const m=String(w).match(
+  452 x1 child[R2 Alternate Payloads] engine copies 0 | if(false){$("Close Enforcer Record");$("Judge Contradiction 
+  443 x1 child[R2 Alt Send Back Build] engine copies 0 | if(false){$("Cited Verses");$("L2 Lexicon");$("L2 Words");$(
+  422 x1 child[R2 Alt Reread Build] engine copies 2 (Reread Build, Alt Reread Build) | return C.map((c,ci)=>({json:{rr_skip:false,call:ci+1,calls:C
+  420 x1 child[Library Check (ASK 422a)] engine copies 1 (Library Sha (ASK 422a)) | const __MAPSHA422=(code,side)=>{const s=String(code||'');con
+
+loader cost here: parse of LIB and MAP, mean of 20: 2.351 ms (this container; not n8n)
