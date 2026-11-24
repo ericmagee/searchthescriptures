@@ -18,3 +18,8 @@ Tests (data_608.json: judge order v2 and active model_config_jfl rows, read 13:2
 - T3: the backup has a debater's family, has no family, or has no row: each fails closed with the ASK 608 reason.
 - Standing set 31/0, including S4 compile 290/290 (out_standing_608.txt). Pair Library Check PASSES (out_pair_608.txt; the Library is untouched).
 - Only Resolve Seats changes; connections are equal.
+
+W1 grade 9c1ca3d6 (PASS with N1 to N3), folded in:
+- N1: the fail messages take the seat from k, not a literal. New target 1ba39c5f; t608 T1 ALL PASS and standing 31/0, both rerun.
+- N2: for W3's manual entry. The alternates list drops the enforcer seat even when luna stays. Luna is not in the judge order today, so nothing changes.
+- N3: the write card says glm has never enforced, so the first run with an OpenAI debater is its proof.
