@@ -1,4 +1,4 @@
-# AAR, run ODV1-42071-uclot7fi (W3; Wall manual section 7.4 order). Draft 1 passed W1's grade with F1 (Wall 11308); F1 and note N2 are met in this text.
+# AAR, run ODV1-42071-uclot7fi (W3; Wall manual section 7.4 order). Draft 1 passed W1's grade with F1 (Wall 11308); F1 and note N2 are met in this text. The outside reads the operator sent to the team (Wall 11298, Wall 11305) are taken in after that grade; those additions are not yet graded.
 
 Built on the skeleton aar/w3/aar_next_run_skeleton_draft2.md (782f19d7). Every RESULT below is from SQL on the run's rows read for this draft, or from a seat's Wall post, named. "EXECUTION ONLY" means the record that would show it is in the n8n execution, which no seat has read for this run.
 
@@ -42,7 +42,7 @@ Numbering follows the skeleton. MET is YES, NO, IN PART, UNEXERCISED or NOT SHOW
 ASK 584 (Sol 6.2 as a debater): exercised; four Oracle rounds stored; the panel held no OpenAI judge (W4 11297). MET: YES. ASK 585: not live for this run. ASK 578, 579: not live.
 
 ## REVIEWS
-W1: Wall 11296 (and 11303 on the recompute). W3: Wall 11300 and 11301 (file aar/w3/run42071_w3_review.md, 154854f4). W4: Wall 11294 and 11297. W2: at rest. A post by Worker_A3 (Wall 11298, its own root) calls the gemini removal a model failure; W1, W3 and W4 read the rows otherwise (Wall 11301).
+W1: Wall 11296 (and 11303 on the recompute). W3: Wall 11300 and 11301 (file aar/w3/run42071_w3_review.md, 154854f4). W4: Wall 11294 and 11297. W2: at rest. Two outside reads, sent to the team by the operator at 22:42 CST 2026-11-23: Worker_A3 (Wall 11298, ten findings) and Worker_G1 (Wall 11305, ten points on the judges' reasoning). Both are taken in below, each item marked with its source and whether a team seat checked it. One conflict: 11298 opens by calling the gemini removal a live model failure; W1 (Wall 11304), W3 (Wall 11301) and W4 read rows 53168, 53169, 53240, 53241 and 53202 as an engine splice of an answer written in the prompt's own form. 11298 Findings 1 and 2 agree with DEFECTS 1 and 2.
 
 ## DEFECTS
 1. The enforcer log's 1,500-character copy of a judge's line was used for the check and for the splice (W1 11296 item 1; W4 11297 item 3a). It removed qwen4max (row 53144: a false "no deciding step"; my measure: line 1,721 characters, WHY IT FAILS at 1,572) and gemini (rows 53240, 53202: the retraction spliced onto the old line's tail, then refused as text after the pair).
@@ -57,6 +57,14 @@ W1: Wall 11296 (and 11303 on the recompute). W3: Wall 11300 and 11301 (file aar/
 10. Judges' reasoning (W4 item 6): spark graded an answer MISSES on a quotation spliced across sentences; gemini broke D3 vs C1 on "until" with no row placing a knowing before the birth.
 11. The Oracle: link D3 rests on an act no verse states, admitted in round 1 and footed on D1 and D2; five pressed verses have no ANSWER line in the close; Acts 16:13 is new in the close; Haggai 2:23 is misquoted in CR2; the challenger's maternal-line gap was not charged.
 12. The challenger: two barred sentences in DR3 (sent back and replaced); Luke 1:35 misquoted in DR4.
+13. (Worker_A3 Finding 3, Worker_G1 point 6; agrees with W1 Wall 11303.) The recompute counts the C1 close contradiction as one CHALLENGER LINK BROKEN and in the same step raises CHALLENGE STANDING to SELF-SUPPORTED. A side with a counted broken link is not self-supported. This states DEFECT 6 more exactly.
+14. (Worker_G1 point 1; Worker_A3 Findings 5c and 7.) gemini and spark wrote KEYSTONE: D5 STANDS beside a result for the challenger. Reported as the third run with a result untied from the keystone.
+15. (Worker_G1 point 2; the grant CHECKED by me in the round.) spark and qwen4max broke D3 on "before they came together" read as the union. In DR3 the challenger answered the Oracle's press, "Matthew dates the finding before the coming together, which the narrative places at Joseph's taking of his wife", with "I grant both halves", and then kept the conjugal sense of G4905 on its [L2] line. Whether the grant bars the judges' ground is a judging question (ruling 383: judges grade the text alone); recorded, not moved.
+16. (Worker_G1 point 3; not checked by me.) gemini's deciding break says Matthew 1:23 "requires the woman with child to be a virgin, which excludes prior knowing"; the lexicon row both sides quoted for G3933 reads "a maiden; by implication, an unmarried daughter:--virgin". The ground adds a step no row states.
+17. (Worker_G1 point 5; CHECKED by me: the Oracle's four rounds hold no "Jeremiah 18", and CR text holds "I do not use it as a repeal".) On Jeremiah 22:30 the Oracle did not cite Jeremiah 18:7-8, which Worker_G1 reports as the answer in a sight served to it (Sight 1578; the serving NOT CHECKED by me), gave up Haggai 2:23, and argued a Judah and Jacob scope instead. qwen4max broke D2 vs C6 there.
+18. (Worker_G1 point 4.) The Oracle drew the "[L4] footing borrowed from contested Links" count by its own wording ("with D1 and D2"), though CR3 also reached the premise from rows.
+19. (Worker_A3 Finding 8.) The enforcer's "right: STANDS" on the two removal items rested on one verse each (Matthew 1:24 without 1:18; Luke 1:33 without Acts 2:30). Not checked by me.
+20. (Worker_G1 points 7 to 9; Worker_A3 Finding 9.) Glosses: the challenger trimmed G1080 and G3543; the Oracle's CR1 gave G4905 by its KJV renderings only, without "cohabit (conjugally)", and tagged G1165 on Matthew 1:19 (NOT COUNTED by the [L2] check) and H5959 on Matthew 1:23 (NOT COUNTED, cross-language).
 
 ## WHAT WENT RIGHT
 1. ASK 584: Sol 6.2 ran four rounds as the Oracle.
@@ -77,7 +85,8 @@ W1: Wall 11296 (and 11303 on the recompute). W3: Wall 11300 and 11301 (file aar/
 ## SUGGESTED IMPROVEMENTS
 1. ASK 586 (W4 plans; nothing built, no card yet): run the layer check and the CHANGE TO splice on the judge's whole line; limit the own-words exclusion to verse rows; stop the keystone form check asking for a label that cannot exist; do not count a second reading against the change the first reading asked for (W1 11296 item 7, W4 11297).
 2. For team weight, no ASK yet: the closing-contradiction test; G4 marking on offer; the recompute gap (W1 11303); an enforcer of the debater's family (the coordinator sent it to W4 for 586); the ASK 550 line.
-3. Carried in: ASK 579 and 578 (built, held on the execution read).
+3. Proposed by the outside reads, for team review, none graded, no ASK yet: (a) when a stored line is cut, a check returns NOT READ, never UNCURED (11298 Solution 1b); (b) standing recomputed from the counted breaks, with the inputs printed (11298 Solution 3, 11305 point 6); (c) the result line tied to the keystone line, and a keystone STANDS beside a result for the other side made a live item (11305 point 1, 11298 Solution 7); (d) the grants list served to the judge beside each collision (11305 point 2); (e) a break on a lexical meaning quotes the lexicon row whole (11305 point 3); (f) the Oracle states each [L4] from its rows and never names its own links as footing (11305 point 4); (g) a served-row use check on the Oracle's answer to a pressed verse (11305 point 5); (h) one ANSWER line in the Oracle's close for each pressed verse (11298 Solution 9); (i) the enforcer's right-word read quotes every verse on the judge's ground (11298 Solution 8); (j) re-derive run 42071 with the qwen4max and spark seats restored (11298 Solutions 1c, 2c). NOT SUPPORTED by the team's read: 11298 Solution 5 (keep gemini-3.8-flash off the roster), which rests on the model-failure reading the rows contradict; it would also be a model-specific fix.
+4. Carried in: ASK 579 and 578 (built, held on the execution read).
 
 ## KNOWLEDGE BASE
 1. debate_enforcer_log.flagged_line is a 1,500-character copy; read verdict_raw for the whole line before judging a seat (W4).
@@ -89,4 +98,5 @@ W1: Wall 11296 (and 11303 on the recompute). W3: Wall 11300 and 11301 (file aar/
 2. Whether an enforcer may be of the debater's family.
 3. Whether the closing-contradiction flag on the challenger's C1 (row 52867) is a contradiction; W1 and W4 read the two sentences as agreeing, and the flag changed one link grade and two RESULT words.
 4. Carried in: the word on W4's execution read (ASK 578 and 579; the operator said 20:54 CST 2026-11-23 it would follow this run).
+5. Whether run 42071 is re-derived with the removed seats restored once the form checks are fixed (11298 Solutions 1c, 2c).
 No card is open from this AAR; the ASK 586 plan comes first.
