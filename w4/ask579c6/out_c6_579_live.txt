@@ -1,0 +1,10 @@
+C1B Extract: input from C1B Build output 0 (for C1B Route) (1 item) -> EQUAL
+D2B Extract: input from D2B Route output 7 (1 item) -> EQUAL
+C2B Extract: input from C2B Call anthropic output 0 (1 item) -> EQUAL
+D3B Extract: input from D3B Route output 7 (1 item) -> EQUAL
+C3G Extract: input from C3G Route output 7 (1 item) -> EQUAL
+C3B Extract: input from C3B Call anthropic output 0 (1 item) -> EQUAL
+D4B Extract: input from D4B Route output 7 (1 item) -> EQUAL
+C4G Extract: input from C4G Route output 7 (1 item) -> EQUAL
+C4B Extract: input from C4B Route output 7 (1 item) -> EQUAL
+9 of 9 equal
