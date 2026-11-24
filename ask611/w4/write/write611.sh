@@ -1,17 +1,17 @@
 #!/bin/bash
 # ASK 611 write (W4): stop four extra copies of the debate in the judging (engine + child Library mirror).
-# Base: live engine ff7ab4cf / child ecdc6218 (fetch-backs in ask601/w4/b1). Refuses while any engine or child run is live, or when live is not the base
-# (if ASK 601 is written first, re-cut with B611E/B611C and run again).
+# Base: live engine 21316a8e / child ecdc6218 (fetch-backs in ask601/w4/b1). Refuses while any engine or child run is live, or when live is not the base
+# (re-cut 11-24 after ASK 601 was written).
 set -u
 : "${N8N_API_KEY:?N8N_API_KEY not set; NOTHING WRITTEN}"
 H=https://truthapp.app.n8n.cloud/api/v1; B=/mnt/project-files/ask611/w4/b1; O=/mnt/project-files/ask611/w4/write
-BE=/mnt/project-files/ask601/w4/b1/base_eng.json; BC=/mnt/project-files/ask601/w4/b1/base_child.json; TE=$B/target_engine_611.json; TC=$B/target_child_611.json
+BE=/mnt/project-files/ask611/w4/base/base_eng_21316a8e.json; BC=/mnt/project-files/ask611/w4/base/base_child_ecdc6218.json; TE=$B/target_engine_611.json; TC=$B/target_child_611.json
 E=moMxiV4Irg1uRBZN; C=MqQHRl7mQQ0z8QdT
 RUN=$(curl -s -H "X-N8N-API-KEY: $N8N_API_KEY" "$H/executions?status=running&limit=100" | python3 -I -c "import json,sys;d=json.load(sys.stdin).get('data') or [];print(' '.join(x['id'] for x in d if x.get('workflowId') in ('$E','$C')))") || { echo "RUN CHECK FAILED; NOTHING WRITTEN"; exit 1; }
 [ -z "$RUN" ] || { echo "ENGINE OR CHILD RUN LIVE ($RUN); NOTHING WRITTEN"; exit 1; }
 curl -s -H "X-N8N-API-KEY: $N8N_API_KEY" $H/workflows/$E -o $O/prewrite_eng611.json || exit 1
 curl -s -H "X-N8N-API-KEY: $N8N_API_KEY" $H/workflows/$C -o $O/prewrite_child611.json || exit 1
-python3 -I - $O $BE $BC <<'PY' || { echo "LIVE IS NOT THE BASE (ff7ab4cf / ecdc6218); NOTHING WRITTEN"; exit 1; }
+python3 -I - $O $BE $BC <<'PY' || { echo "LIVE IS NOT THE BASE (21316a8e / ecdc6218); NOTHING WRITTEN"; exit 1; }
 import json,sys
 O,BE,BC=sys.argv[1:4]
 def P(d):return {n['name']:json.dumps(n['parameters'],sort_keys=True) for n in d['nodes']}

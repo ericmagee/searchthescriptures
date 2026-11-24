@@ -1,7 +1,7 @@
 # ASK 611 build rev 0 (W4, 11-24): stop four extra copies of the debate in the judging
 Plan: ask611/w4/plan611.md e597b4ff (W1 PASS, Wall 11647).
 Base: live engine ff7ab4cf and child ecdc6218.
-Targets: target_engine_611.json (66e3e781, rev 1) and target_child_611.json (afc58aff). The child changes only in its Shared Library, so that the Library stays equal across the pair.
+Targets: target_engine_611.json (b15ab82f, rev 1 re-cut on 21316a8e) and target_child_611.json (afc58aff). The child changes only in its Shared Library, so that the Library stays equal across the pair.
 Build: build611.cjs.
 
 ## Changes, in plain words
@@ -49,3 +49,5 @@ Rev 1 (for W1 grade 60c7aeb8, Wall 11649):
 - F1 (rule 1): Panel Judges Prep no longer defines ORF or qt. ORF moves, unchanged, into the Panel Judges Parallel expression, its only reader. Prep keeps P1 and P23, which it reads for the provider. The expression no longer carries P1 or P23.
 - F2 (rule 10): both jsonBody expressions (Panel Judges Parallel; Close Group Batch Call openrouter) carry an ASK 611 comment inside.
 - Reran: t611 T1 ALL PASS on rows 42234 and 42071 (35 PASS), T2 saves 3,208,947 and 2,187,621; standing 29/29; pair Library Check PASSES (lib 802077b0878612c9, map 86cbe4d352598877). Engine 66e3e781, child afc58aff (unchanged).
+
+Re-cut 11-24 12:2x CST after ASK 601 was written (live engine ff7ab4cf -> 21316a8e; ASK 601 touched only Init Seats and Resolve Seats, which ASK 611 does not touch). Base files: ask611/w4/base/base_eng_21316a8e.json and base_child_ecdc6218.json (the ASK 601 fetch-backs). build611.cjs, t611.cjs and write/write611.sh now point at these. Target engine b15ab82f (ASK 601's __SAMEM kept), child afc58aff. Reran: t611 T1 ALL PASS (35 PASS), T2 savings unchanged; standing 29/0; pair PASSES (lib 802077b0878612c9).

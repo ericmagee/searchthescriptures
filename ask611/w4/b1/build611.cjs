@@ -1,8 +1,8 @@
-// ASK 611 build (W4): stop four extra copies of the debate in the judging. Base: live engine ff7ab4cf, child ecdc6218 (env B611E/B611C to re-cut).
+// ASK 611 build (W4): stop four extra copies of the debate in the judging. Base: live engine 21316a8e (after ASK 601), child ecdc6218 (env B611E/B611C to re-cut).
 // Every request sent stays byte-equal; the copies are rebuilt at the point of use instead of kept as a step's output.
 const fs=require('fs');const crypto=require('crypto');const md5=s=>crypto.createHash('md5').update(s).digest('hex');
 const lp=require('/mnt/project-files/ask588/w4/build/libpatch.js');
-const BE=process.env.B611E||'/mnt/project-files/ask601/w4/b1/base_eng.json',BC=process.env.B611C||'/mnt/project-files/ask601/w4/b1/base_child.json';
+const BE=process.env.B611E||'/mnt/project-files/ask611/w4/base/base_eng_21316a8e.json',BC=process.env.B611C||'/mnt/project-files/ask611/w4/base/base_child_ecdc6218.json';
 const E=JSON.parse(fs.readFileSync(BE,'utf8')),C=JSON.parse(fs.readFileSync(BC,'utf8'));
 const once=(s,a,b,what)=>{const k=s.split(a).length-1;if(k!==1)throw new Error(what+': anchor occurs '+k+' times');return s.replace(a,()=>b);};
 const node=(W,n)=>{const x=W.nodes.find(y=>y.name===n);if(!x)throw new Error('no node '+n);return x;};

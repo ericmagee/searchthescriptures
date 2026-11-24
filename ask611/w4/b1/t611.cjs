@@ -1,7 +1,7 @@
-// ASK 611 T1/T2 (W4): old (live ff7ab4cf) against new (target) on run 42234's and 42071's stored rows. No n8n call.
+// ASK 611 T1/T2 (W4): old (live 21316a8e) against new (target) on run 42234's and 42071's stored rows. No n8n call.
 // Checks: every request body sent is byte-equal (md5), the readers' outputs are equal, the child input piece is equal; sizes before and after.
 const fs=require('fs');const crypto=require('crypto');const md5=s=>crypto.createHash('md5').update(s).digest('hex');
-const OLD=require('/mnt/project-files/ask601/w4/b1/base_eng.json'),NEW=require(__dirname+'/target_engine_611.json');
+const OLD=require('/mnt/project-files/ask611/w4/base/base_eng_21316a8e.json'),NEW=require(__dirname+'/target_engine_611.json');
 const code=(W,n)=>W.nodes.find(x=>x.name===n).parameters.jsCode;const par=(W,n)=>W.nodes.find(x=>x.name===n).parameters;
 const mk$=(W,nodes)=>n=>{const it=nodes[n];const ex=it!==undefined;return {isExecuted:ex,params:{jsCode:n==='Shared Library'?code(W,'Shared Library'):''},first:()=>{if(!ex)throw new Error('stub missing: '+n);return {json:it[0]};},all:()=>(it||[]).map(json=>({json})),item:{json:(it||[{}])[0]}};};
 const run=async(W,n,nodes,input)=>{const $=mk$(W,nodes);const $execution={id:'4242',customData:{set(){}}};const $input={all:()=>(input||[{}]).map(json=>({json})),first:()=>({json:(input||[{}])[0]})};
