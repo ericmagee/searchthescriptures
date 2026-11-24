@@ -1,0 +1,27 @@
+PASS T1.1 engine: 17 nodes change, no node added or removed, wiring unchanged
+PASS T1.2 child: only the Shared Library changes
+PASS T1.3 no engine or child node holds "haiku" (Shared Library included)
+PASS T1.4 each changed node only gets shorter, and each held "haiku" before
+PASS T2.1 379 code parts parse, 0 errors
+PASS T3.1 debater keys: 12 before, 11 after; only haiku leaves
+PASS T3.2 no drawing seats haiku anywhere (330 cases: 11 debaters, every ordered pair, with no fault-ledger move and with sol or gemini moved)
+PASS T3.3 every case that ran before runs after, with the same refusal where it refused
+INFO the panel, the alternates without haiku and the single judge are unchanged in 192 of 270 cases; the reserve may change where haiku stood next
+INFO changed: chatgpt/gemini: {"p":["haiku","spark","qwen4max"],"r":"sonnet","a":["sonnet"],"s":"spark"} -> {"p":["spark","qwen4max","sonnet"],"r":null,"a":[],"s":"spark"}
+INFO changed: chatgpt/gemini moved sol: {"p":["haiku","spark","qwen4max"],"r":"sonnet","a":["sonnet"],"s":"spark"} -> {"p":["spark","qwen4max","sonnet"],"r":null,"a":[],"s":"spark"}
+INFO changed: chatgpt/gemini moved gemini: {"p":["haiku","spark","qwen4max"],"r":"sonnet","a":["sonnet"],"s":"spark"} -> {"p":["spark","qwen4max","sonnet"],"r":null,"a":[],"s":"spark"}
+INFO changed: chatgpt/grok: {"p":["haiku","gemini","spark"],"r":"qwen4max","a":["qwen4max","argon","sonnet"],"s":"gemini"} -> {"p":["gemini","spark","qwen4max"],"r":"argon","a":["argon","sonnet"],"s":"gemini"}
+INFO changed: chatgpt/grok moved sol: {"p":["haiku","gemini","spark"],"r":"qwen4max","a":["qwen4max","argon","sonnet"],"s":"gemini"} -> {"p":["gemini","spark","qwen4max"],"r":"argon","a":["argon","sonnet"],"s":"gemini"}
+INFO changed: chatgpt/grok moved gemini: {"p":["haiku","gemini","spark"],"r":"qwen4max","a":["qwen4max","argon","sonnet"],"s":"gemini"} -> {"p":["gemini","spark","qwen4max"],"r":"argon","a":["argon","sonnet"],"s":"gemini"}
+INFO changed: chatgpt/mimo: {"p":["haiku","gemini","spark"],"r":"qwen4max","a":["qwen4max","argon","sonnet"],"s":"gemini"} -> {"p":["gemini","spark","qwen4max"],"r":"argon","a":["argon","sonnet"],"s":"gemini"}
+INFO changed: chatgpt/mimo moved sol: {"p":["haiku","gemini","spark"],"r":"qwen4max","a":["qwen4max","argon","sonnet"],"s":"gemini"} -> {"p":["gemini","spark","qwen4max"],"r":"argon","a":["argon","sonnet"],"s":"gemini"}
+PASS T3.4 where haiku sat neither on the panel nor among the alternates, the panel, alternates and single judge are unchanged; 78 cases changed, each one where haiku sat
+PASS T3.5 a launch naming haiku as a debater is refused at Init Seats: ORACLE_DEBATE_V1 Init refused: defender engine "haiku" is not one of [claude, chatgpt, gemini, grok, mimo, opus, glm, qwen4max, spark, sol62, deepseek]. run_tok
+INFO reserve changes (no fault-ledger move): 26 e.g. chatgpt/gemini sonnet->null; chatgpt/grok qwen4max->argon; chatgpt/mimo qwen4max->argon; chatgpt/glm qwen4max->argon
+PASS T3.6 (information) reserve changes listed above
+INFO pairs that lose their reserve: 4 (chatgpt/gemini, gemini/chatgpt, gemini/sol62, sol62/gemini)
+INFO pairs left with no alternate: 4 (chatgpt/gemini, gemini/chatgpt, gemini/sol62, sol62/gemini)
+INFO pairs that ran before and are now refused: 0 
+PASS T3.7 no debater pair that ran before is refused after the removal
+RESULT: ALL PASS (12 pass)
+INFO reserves the substitution recorder would refuse (not on its seat list): before 16 (chatgpt/grok qwen4max, chatgpt/mimo qwen4max, chatgpt/glm qwen4max, chatgpt/sol62 qwen4max, gemini/spark qwen4max, grok/chatgpt qwen4max); after 2 (gemini/spark qwen4max, spark/gemini qwen4max)
