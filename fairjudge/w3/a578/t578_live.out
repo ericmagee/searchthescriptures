@@ -1,0 +1,25 @@
+PASS child stubs that read the library: 13 (expected 13)
+PASS each stub asks for one key, 13 different keys
+PASS for all 13 keys the engine library rebuilds the same text, of the same n, as the child library
+PASS none of the 13 served texts names the Shared Library node (so nothing inside them reads the child node)
+PASS the child Shared Library node has no connection in or out
+PASS child Library Check: the tail replaced is the one read (md5 293429b9, 704 characters)
+PASS child target: no node reads $('Shared Library')
+PASS child nodes changed or removed: 15 (13 stubs, Library Check, Shared Library); every other node identical
+PASS child connections unchanged
+PASS the 14 changed child nodes parse
+PASS engine Alternate Pass Call: the anchor "lib_sha: $json.__lib422," stands once
+PASS the changed expression parses (5950 to 5990)
+PASS engine: only Alternate Pass Call changes
+PASS known-good: the check passes on the engine text (lib f24a5192c60cbc55, map 25ada437e556ce0b); its output keeps pass without the library text 
+PASS control: no library text in the call throws
+PASS control: a text cut short throws
+PASS control: one changed character in LIB throws
+PASS control: one changed character in MAP throws
+PASS control: no engine sha throws
+PASS control: with the child's old __MAPEXTRA422 list the check throws (the list must equal the engine's): engine const __MAPEXTRA422=["REFP","Alternate Merge CPD"]; child today const __MAPEXTRA422=["REFP"];
+PASS 13 stubs: the source each rebuilds from the passed engine text equals the source it rebuilds today from the child node
+MEASURED child nodes as JSON: 1302659 to 113697 (saved 1188962); child Shared Library node as JSON 1189332; engine nodes grow by 40; text passed in the call: 1146022 characters (1148862 bytes UTF-8, 1189360 as a JSON string)
+CORRECTION to the ASK 577 survey: the child asks for 13 keys (not 22) of 47; they serve 3494 of 3567 lines, 963305 characters as stored
+engine MAP keys 49, child MAP keys 47; LIB equal: true
+ALL PASS (21 checks)
