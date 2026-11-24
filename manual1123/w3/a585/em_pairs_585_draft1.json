@@ -1,0 +1,14 @@
+{
+ "10.0": [
+  {
+   "old": "\n- PARALLEL JUDGES: Panel Judges Prep builds",
+   "new": "\n- A RETRIED RUN SENDS RECORD SUBSTITUTION THE REAL DEBATE (ASK 585; engine node Alternate Merge):\n    - Why: when n8n retries a crashed execution, every node of the crashed run carries a placeholder item marked isArtificialRecoveredEventItem. Alternate Merge took the Pass Accumulate item whenever that node had executed, so it took the placeholder, and Record Substitution was called with no parameters (\"odv1_record_panel_substitution without parameters\").\n    - What it does: Alternate Merge takes the Pass Accumulate item only when that item is not marked isArtificialRecoveredEventItem; otherwise it takes Alternate Merge 1's item. A normal run is unchanged. Record Substitution, Format Markdown and Panel Tokens are not changed; the child is not changed.\n    - Limits: when Alternate Merge 1 also holds only a placeholder, the run fails to Panel Failure Note. Not shown by a run: only a retry of a crashed execution takes the path. Shown offline on three cases (normal; Pass Accumulate not run; placeholder).\n    - Size: code +64; prompt 0.\n- PARALLEL JUDGES: Panel Judges Prep builds"
+  }
+ ],
+ "11.1": [
+  {
+   "old": " (41147 also failed on 516, at Record Substitution, a separate fault)",
+   "new": ""
+  }
+ ]
+}
