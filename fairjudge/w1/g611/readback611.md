@@ -13,3 +13,11 @@ CONFIRM ASK 601 manual pairs draft 2 (manual1123/w3/a601/em_pairs_601_draft2.jso
 - Diff from draft 1: pair 10.0 #2 now runs "md_notes_rulings 421) and without" to "md_notes_rulings 421), without" (F1 met). Pair 10.0 #7 adds only " The single judge's draw is not tested for the same model; it leaves out sonnet by name." at the end of Limits (N1 taken). Nothing else changed.
 - SQL: the new old string stands once in 10.0 (base df2791bc).
 - Delta +3,650 gives 51,089, matching the notes. 03.0 is unchanged (2,780).
+
+READBACK ASK 611 fix 1 (write 19:58:01Z): MATCH.
+- Engine fetched by me: 3cef3eab-9197-4d25-a51f-33af500a089d = activeVersionId, 423 nodes.
+  - Parameters and connections EQUAL target_engine_611f1.json b7950f11.
+  - Against fbc09389, only Panel Judges Parallel and Alternate Pass Call differ.
+- Child: b9cd4e5c, untouched (updated 18:31:19Z).
+- n8n's parser (@n8n/tournament 1.16.0): engine 290/0 fail, child 67/0 fail.
+- Pair Library Check PASSES.
