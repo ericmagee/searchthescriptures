@@ -1,0 +1,33 @@
+source d0e9efda3280624ce987050bc9568197 707670 parts 31 max 39934
+00.1   1230 ---------------------------------------
+00.0   2204 ## 0. How to read this manual
+01.0    961 ## 1. What the engine is
+02.0   1791 ## 2. Firing a run and reading it
+03.0   2775 ## 3. Request rules (Init Seats, in this order)
+04.0  13743 ## 4. Seats, models, tokens, caching
+05.0  14317 ## 5. What each seat is given
+06.0  24197 ## 6. Rounds
+07.0  14737 ## 7. Synthesis, single judge, diagnostic
+08.0  39149 ## 8. The judges' rulebook
+09.0  38944 ## 9. Enforcers
+09.1  38916 - CLOSE-ROUND CHECKS (D4 and C4 Build and Extract, Panel Bui
+09.2  39649 - ANSWER CHECK, FULL ANSWER SERVED (pkgEAF form AU; Shared L
+09.3  38740 - CLOSING BREAK IN THE RECOMPUTE (pkgCEC; library cecBroken2
+09.4  36613 - THE OPEN TEST ALSO READS "DISPUTING" AND "DIFFER ON, OVER,
+09.5  39934 - A RETRACTED MEANING BREAK STAYS UNCURED (Shared Library, l
+09.6  38990 - THE COUNT LIST NOTE IS CUT FROM THE ROUND TEXT (pkgACT par
+09.7  38546 - THE ENFORCER MODEL IS LUNA (ASK 426; Resolve Seats; Enforc
+09.8  28517 - RULING 383 REMOVAL: NO JUDGE PATH TESTS A JUDGE AGAINST TH
+10.0  39835 ## 10. The panel
+11.0  38945 ## 11. Persistence and the column map (crossed columns: read
+11.1  35620 - THE ENFORCER CHECKS ONE-VERSE GRADES AND DEFERRALS (ASK 51
+11.2  14690 - THE ABSENCE MOVES, THE TWO OPENING CHECKS, THE REFUSED GAT
+12.0  38117 ## 12. Citation check against the KJV
+13.0  14945 ## 13. Debate documents
+14.0   2968 ## 14. Regrade and dry regrade
+15.0   6023 ## 15. Verifying a change
+16.0   2087 ## 16. Troubleshooting (symptom -> cause -> what to do)
+17.0  39590 ## 17. Known open items (verify live before acting)
+17.1  20347 - pkgP72 (ruling 372 in DeepSeek's RULE E-PREM, THE COUNTED 
+18.0    550 ## 18. Write register
+known-bad join equals source: False
