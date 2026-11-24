@@ -59,7 +59,19 @@ console.log('== D. Recompute (spark 1273, qwen4max 1274: CHALLENGE c=0; C1 count
  ok(rl==='CHALLENGER WINS','known-bad: live writes RESULT CHALLENGER WINS (as on 1273 and 1274)');ok(rt==='UNDERDETERMINED','target writes UNDERDETERMINED: the counted break blocks CHALLENGER WINS');
  ok(res(LV,0)===res(TG,0),'control: with no counted unnamed break live and target agree ('+res(TG,0)+')');
  ok(TG.L[1363].includes("RESULT INPUTS: counted breaks no collision line names: DEFENDER '+__cecX.DEFENDER"),'D2: the recompute line prints its inputs');
- ok(LV.L[1345]===TG.L[1345],'LIB 1345 (stand) is unchanged');}
+ ok(LV.L[1345]===TG.L[1345],'LIB 1345 (stand) is unchanged');
+ const res2=(X,cecC)=>new Function('cecC',X.L[1286]+'\nconst word="BROKEN",cst="SELF-SUPPORTED",dst="PROP-DEPENDENT",c={DEFENDER:1,CHALLENGER:0},__c400=[{link:"D3 vs C1",grade:"DEFENDER LINK BROKEN"}],__R399=[],__cecX={DEFENDER:0,CHALLENGER:cecC};\n'+X.L[1492]+'\nreturn res;')(cecC);
+ console.log('   gate RESULT (LIB 1492): live '+res2(LV,1)+', target '+res2(TG,1));
+ ok(res2(LV,1)==='CHALLENGER WINS'&&res2(TG,1)==='UNDERDETERMINED','D4 gate recompute LIB 1492: known-bad live CHALLENGER WINS, target UNDERDETERMINED');
+ ok(res2(LV,0)===res2(TG,0),'D4 control: with no counted unnamed break the gate path agrees ('+res2(TG,0)+')');
+ const {src}=require('./libpatch.js');const ERT=W=>new Function('$',src(W,'Alternate Merge ERT')+'\nreturn ert386;')(()=>({isExecuted:false,first:()=>({json:{}}),all:()=>[]}));
+ const eL=ERT(LV.W),eT=ERT(TG.W);const JD=J('judgments_1272_1274.json');const rows=Array.isArray(JD)?JD:Object.values(JD);
+ const v61=(e,r)=>{const t=String(e(r.verdict_raw,'x',{verdict_tag:r.verdict_tag,defense_standing:r.defense_standing,challenge_standing:r.challenge_standing,conceded_links:r.conceded_links,challenger_conceded_links:r.challenger_conceded_links}));const i=t.lastIndexOf('[AUDIT v61: ENGINE RESULT');const z=t.slice(i,t.indexOf('END]',i)+4);return {w:(z.match(/WORD: ([A-Z ]+);/)||[])[1],z};};
+ for(const r of rows){const a=v61(eL,r),b=v61(eT,r);console.log('   ert386 on judgment '+r.id+' (AUDIT v61 WORD): live '+a.w+', target '+b.w+'\n     target tag: '+b.z);
+  if(r.id==1272)ok(a.w===b.w&&a.z===b.z,'D3 control 1272 (gemini; its collision line carries the CHALLENGER break, no unnamed break): live and target v61 tags are identical');
+  else{ok(a.w==='CHALLENGER WINS','D3 known-bad '+r.id+': live ert386 writes v61 WORD CHALLENGER WINS');ok(b.w==='UNDERDETERMINED','D3 '+r.id+': target ert386 writes v61 WORD UNDERDETERMINED');ok(/BROKEN LINES[^;]*C1 \(CLOSE-CONTRADICTION, no collision line names it\) CHALLENGER LINK BROKEN/.test(b.z),'D3 '+r.id+': the v61 INPUTS list the counted break');}}
+ const r3=rows.find(r=>r.id==1273);const r3b=Object.assign({},r3,{verdict_raw:String(r3.verdict_raw).split('(no collision line names it; counted as one CHALLENGER LINK BROKEN)').join('(removed for the control)')});
+ ok(v61(eL,r3b).w===v61(eT,r3b).w,'D3 control: 1273 with the trigger text removed: live and target agree ('+v61(eT,r3b).w+')');}
 
 console.log('== E. Removal reason tally (Alternate Merge Seat)');
 {const mk=X=>new Function('raw',"const T={};const add=(k,n)=>{T[k]=(T[k]||0)+n;};const isLive=()=>true;const __gOff={};const __gN=x=>x;const top=(s)=>1;\n"+X.L[1581]+'\n'+X.L[1582]+'\n'+X.L[1583]+'\n'+X.L[1584]+'\n'+X.L[1585]+'\n'+X.L[1586]+'\n'+X.L[1587]+'\n'+X.L[1588]+'\nreturn T;');

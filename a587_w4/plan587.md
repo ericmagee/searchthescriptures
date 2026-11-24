@@ -1,4 +1,4 @@
-# ASK 587 plan rev 1 (W4, 11-23 23:03 CST): engine form fixes of run 42071 (A to E), split from ASK 586
+# ASK 587 plan rev 2 (W4, 11-23 23:09 CST): engine form fixes of run 42071 (A to E), split from ASK 586
 
 ASK 587 was assigned by the coordinator at 23:03 CST (named 586-F until then). ASK 586 itself, owned by W3, is being rebuilt around the judges' reasoning (operator, 23:00 CST, W3's thread: "this next fix will mostly be around the judges reasoning..."; W1 Wall 11336 F2).
 
@@ -6,6 +6,8 @@ Rev 1 takes in the following:
 - W1's grade of rev 0 (Wall 11330: A, B, C1, C2, E and section 7 PASS; D FAIL, F1);
 - W3's consolidation (Wall 11329: B1 to B4, C5 to C8, D);
 - W1's grade of that consolidation (Wall 11335).
+
+Rev 2 fixes D only, per W1's grade of rev 1 (Wall 11342, F1). Everything else stands as in rev 1 (kept as plan587_rev1.md, md5 30b72a6c). See section 3a.
 
 Rev 0 (ask586/w4/plan586.md, md5 4a9ecc3e, commit 9831c30c) is kept as plan586_rev0_combined.md. Its section 3 (SCOPE AND SEARCH, items a to d and f to g) and the exact text of A1 to A3, B, C1, C2 and E stand unchanged. They are not repeated here.
 
@@ -43,6 +45,15 @@ A real fault of the same kind is still raised.
 - W1 11296 7b (exclude verse rows only): a quoted non-verse source, such as a lexicon row the answering side quoted, would count as its own words.
 - W1 accepts B as the closer reading of "own words", with the narrower error.
 
+## 3a. REV 2: D REACHES THE v61 TAG AND THE GATE PATH (W1 11342 F1)
+1. **The fault in rev 1.** D1 fed the counted unnamed break only to the v25 recompute (LIB 1351). ert386 (LIB 1286) writes the AUDIT v61 ENGINE RESULT tag, which readers take as final, and its col held only the text's collision lines. So a replay of 1273 or 1274 gave v25 UNDERDETERMINED and v61 CHALLENGER WINS. The gate recompute (LIB 1492) was also unpatched.
+2. **D3 (LIB 1286, ert386).** A helper __cecU586(text, col) is placed just before ert386. It reads the challenger's counted unnamed breaks from two sources:
+   - the seat's own v25 trigger in the text, "CLOSE-CONTRADICTION C<k> (no collision line names it; counted as one CHALLENGER LINK BROKEN)";
+   - the run's confirmed list cecBroken2024(), side CHALLENGER (inside try; on a replay with no run it gives nothing).
+   A C label is dropped when a collision line names it and does not carry the DEFENDER break, which is the pkgCMX rule of LIB 1323. ert386 then calls rd386 with `col:P.col.concat(P.ls||[]).concat(__cecU586(s,P.col))`. Each added entry is listed in the v61 INPUTS under BROKEN LINES as "C<k> (CLOSE-CONTRADICTION, no collision line names it) CHALLENGER LINK BROKEN".
+3. **D4 (LIB 1492, the gate recompute).** The gate sources already compute __cecX: LIB 1321 to 1325 are joined into every source that holds LIB 1492 (checked on all 13 engine and 13 child sources). So LIB 1492 gets the same input as D1: `col:__c400.concat(Array.from({length:__cecX.CHALLENGER||0},...))`. My earlier note that the gate path has no __cecX was wrong. It held only for the plain LIB lines and not for the joined source.
+4. **Not changed.** stand() (LIB 1345), the gate tie line (LIB 1491), and the defender side. The ruling note and the false-flag limit of section 3, D items 6 and 7, apply to D3 and D4 as well.
+
 ## 4. W3's B1 TO B4: ONE LINE EACH
 **B1. ASK 550 ("[REMOVED SEAT" line): a defect, SPLIT OUT to its own ASK. Code read.**
 1. Build Save Body writes review_notes at row creation. It writes the 550 lines only `if($('Alternate Merge').isExecuted)`.
@@ -66,19 +77,19 @@ A real fault of the same kind is still raised.
 2. Whether a judge's own bad form at the gate should cost the seat is the operator's ruling.
 
 ## 5. CHANGES AND NODES
-The text of A1 to A3, B, C1, C2 and E is unchanged from rev 0. D is as in section 3. The script is build/build586.cjs (md5 cb036331).
+The text of A1 to A3, B, C1, C2 and E is unchanged from rev 0. D is as in section 3. The script is build/build586.cjs (md5 3f4e28bf).
 
 | Workflow | Node | Before | After |
 |---|---|---|---|
-| Engine | Shared Library | d749630c, 1,171,824 | eb4582bd, 1,172,862 |
+| Engine | Shared Library | d749630c, 1,171,824 | 752887af, 1,174,075 |
 | Engine | Reread Record | 3f7bdf9e | 9d506a0f |
 | Engine | Alt Reread Record | e56f5714 | 4283a2e0 |
-| Child | Shared Library | 6d92bf4e | 2636529c, 1,172,683 |
+| Child | Shared Library | 6d92bf4e | 3159ff7d, 1,173,896 |
 | Child | R2 Alt Reread Record | 36a70121 | f6e6bbaa |
 
-The Library Check pair is LIB 305a1bcec07773d3, MAP b6df4839319b6633, and it PASSES (out_pair586.txt). Target md5s: target_engine_586 5ce76ff6, target_child_586 d36047cf.
+The Library Check pair is LIB f45effef8ec77157, MAP b0d91d9c30aa1654, and it PASSES (out_pair586.txt 872cf0fb). Target md5s: target_engine_586 d643fc34, target_child_586 4476e122.
 
-## 6. CRITERIA (build/t586.cjs bd8d6b04; out_t586.txt dc3770ab: ALL PASS; syn586: 195 sources parse)
+## 6. CRITERIA (build/t586.cjs a068d6ee; out_t586.txt 6622d92d: 36 PASS, ALL PASS; syn586: 195 sources parse, 0 errors)
 **C1 to C4 and C6** are as in rev 0, and all PASS.
 
 **C5 (D), replaced per W1 11330 item 5d.**
@@ -87,6 +98,11 @@ The Library Check pair is LIB 305a1bcec07773d3, MAP b6df4839319b6633, and it PAS
 3. The target writes UNDERDETERMINED, each judge's own word.
 4. Control: with no counted unnamed break, live and target agree.
 5. The D2 inputs line is present.
+6. D4, LIB 1492 with rd386 and one counted unnamed break: live CHALLENGER WINS (known-bad), target UNDERDETERMINED. Control with none: live and target agree.
+7. D3, ert386 run as the engine builds it (the Alternate Merge ERT library source) on the stored judgments, whose verdict_raw matches the DB md5:
+   - 1273 (spark) and 1274 (qwen4max): live v61 WORD CHALLENGER WINS (known-bad); target UNDERDETERMINED, and the v61 INPUTS list "C1 (CLOSE-CONTRADICTION, no collision line names it) CHALLENGER LINK BROKEN".
+   - Control 1272 (gemini, whose D3 vs C1 line carries the CHALLENGER break): live and target v61 tags are identical, UNDERDETERMINED.
+   - Control 1273 with the trigger text removed: live and target agree.
 
 **C7.** Every library source parses. The Library Check pair PASSES.
 
@@ -102,7 +118,7 @@ The Library Check pair is LIB 305a1bcec07773d3, MAP b6df4839319b6633, and it PAS
 **DONE:** C1 to C8 met, and W1's readback.
 
 ## 7. WRONG-IF
-As in rev 0: the whole 1272 and 1274 lines pass dec504, and the 1,500-character cut fails. For D: if LIB 1351 with the counted break still gave CHALLENGER WINS, D would aim at the wrong place. t586 shows that it gives UNDERDETERMINED.
+As in rev 0: the whole 1272 and 1274 lines pass dec504, and the 1,500-character cut fails. For D: if LIB 1351, LIB 1492 or ert386 with the counted break still gave CHALLENGER WINS, D would aim at the wrong place. t586 shows UNDERDETERMINED at all three.
 
 ## 8. EXPECT LINES FOR THE NEXT RUN'S OBJECTIVE SHEET (W3 D)
 - **A:** any debate_enforcer_log row whose flagged_line is over 1,500 characters is stored whole. No E-COL send-back reads "no deciding step" on a line that carries "-- WHY IT FAILS:".
@@ -110,7 +126,7 @@ As in rev 0: the whole 1272 and 1274 lines pass dec504, and the 1,500-character 
 - **B:** an E-COL KEEP that quotes the answering side's own unquoted sentence, also quoted by the other side, is CURED with "quotes the answer".
 - **C1:** no pkgLAY KEYSTONE item "names no collision line of D<k>" when the judge wrote no "D<k> vs C" line.
 - **C2:** an E-REREAD row whose changed line carries the first reading's grade reads RECORD-ONLY and adds nothing to drv_uncured.
-- **D:** an AUDIT v25 line with "counted as one CHALLENGER LINK BROKEN" carries RESULT INPUTS CHALLENGER >= 1, and its RECOMPUTED RESULT is not CHALLENGER WINS.
+- **D:** an AUDIT v25 line with "counted as one CHALLENGER LINK BROKEN" carries RESULT INPUTS CHALLENGER >= 1, and its RECOMPUTED RESULT is not CHALLENGER WINS. The same seat's last AUDIT v61 tag lists the break under BROKEN LINES, and its WORD is not CHALLENGER WINS.
 - **E:** removed_rules carries no "UNREAD COUNTED LINE" from a SEND-BACK ITEM line.
 
 Each line stays UNEXERCISED until a run holds that case.
@@ -119,7 +135,7 @@ Each line stays UNEXERCISED until a run holds that case.
 Branch claude/untitled-9jle0o, folder a586_w4/: this plan; the rev 0 plan; build/ (build586.cjs, libpatch.js, syn586.cjs, t586.cjs, out_t586.txt, out_pair586.txt, out_build586.txt, data/*.json). The four workflow JSON files stay in the project folder ask586/w4/build/ and are named by md5.
 
 ## 10. STEPS AND REVERT
-1. W1 regrades rev 1.
+1. W1 regrades rev 2 (D3, D4 and their criteria).
 2. The ASK number is 587 (coordinator, 23:03 CST).
 3. The operator's card goes in W4's thread.
 4. On the press, with no run live, follow C8, then the audit row, the Wall post and W1's readback.

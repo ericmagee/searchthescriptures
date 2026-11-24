@@ -33,6 +33,23 @@ PASS target writes UNDERDETERMINED: the counted break blocks CHALLENGER WINS
 PASS control: with no counted unnamed break live and target agree (CHALLENGER WINS)
 PASS D2: the recompute line prints its inputs
 PASS LIB 1345 (stand) is unchanged
+   gate RESULT (LIB 1492): live CHALLENGER WINS, target UNDERDETERMINED
+PASS D4 gate recompute LIB 1492: known-bad live CHALLENGER WINS, target UNDERDETERMINED
+PASS D4 control: with no counted unnamed break the gate path agrees (CHALLENGER WINS)
+   ert386 on judgment 1272 (AUDIT v61 WORD): live UNDERDETERMINED, target UNDERDETERMINED
+     target tag: [AUDIT v61: ENGINE RESULT -- SEAT: x; WORD: UNDERDETERMINED; RULE: engine_manual section 8, STANDINGS, RESULT and VERDICT DEFINITIONS, then the tie rule KB-0030; INPUTS: VERDICT BROKEN, DEFENSE STANDING PROP-DEPENDENT, CHALLENGE STANDING SELF-SUPPORTED, CONCEDED 0 and 0, BROKEN LINES D3 vs C1 CHALLENGER LINK BROKEN, D3 vs C4 DEFENDER LINK BROKEN; END]
+PASS D3 control 1272 (gemini; its collision line carries the CHALLENGER break, no unnamed break): live and target v61 tags are identical
+   ert386 on judgment 1273 (AUDIT v61 WORD): live CHALLENGER WINS, target UNDERDETERMINED
+     target tag: [AUDIT v61: ENGINE RESULT -- SEAT: x; WORD: UNDERDETERMINED; RULE: engine_manual section 8, STANDINGS, RESULT and VERDICT DEFINITIONS, then the tie rule KB-0030; INPUTS: VERDICT BROKEN, DEFENSE STANDING PROP-DEPENDENT, CHALLENGE STANDING SELF-SUPPORTED, CONCEDED 2 and 0, BROKEN LINES D3 vs C1 DEFENDER LINK BROKEN, C1 (CLOSE-CONTRADICTION, no collision line names it) CHALLENGER LINK BROKEN; END]
+PASS D3 known-bad 1273: live ert386 writes v61 WORD CHALLENGER WINS
+PASS D3 1273: target ert386 writes v61 WORD UNDERDETERMINED
+PASS D3 1273: the v61 INPUTS list the counted break
+   ert386 on judgment 1274 (AUDIT v61 WORD): live CHALLENGER WINS, target UNDERDETERMINED
+     target tag: [AUDIT v61: ENGINE RESULT -- SEAT: x; WORD: UNDERDETERMINED; RULE: engine_manual section 8, STANDINGS, RESULT and VERDICT DEFINITIONS, then the tie rule KB-0030; INPUTS: VERDICT BROKEN, DEFENSE STANDING PROP-DEPENDENT, CHALLENGE STANDING SELF-SUPPORTED, CONCEDED 2 and 0, BROKEN LINES D2 vs C6 DEFENDER LINK BROKEN, D3 vs C1 DEFENDER LINK BROKEN, D4 vs C3 DEFENDER LINK BROKEN, D5 vs C4 DEFENDER LINK BROKEN, C1 (CLOSE-CONTRADICTION, no collision line names it) CHALLENGER LINK BROKEN; END]
+PASS D3 known-bad 1274: live ert386 writes v61 WORD CHALLENGER WINS
+PASS D3 1274: target ert386 writes v61 WORD UNDERDETERMINED
+PASS D3 1274: the v61 INPUTS list the counted break
+PASS D3 control: 1273 with the trigger text removed: live and target agree (CHALLENGER WINS)
 == E. Removal reason tally (Alternate Merge Seat)
 PASS known-bad: live tallies a send-back item line as an UNREAD COUNTED LINE
 PASS target does not
