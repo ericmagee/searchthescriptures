@@ -1,0 +1,15 @@
+const fs=require('fs');const {B,A}=require('./mk.cjs');const rows=JSON.parse(fs.readFileSync('./rows.json','utf8'));
+const H='**PRESS 1.** Against D2, the point pressed here with its verses.\n';
+const T=(n,t,rw)=>{const b=B.check(H+t,rw),a=A.check(H+t,rw);console.log(n,'| before',b.items.length,(b.items[0]||{}).why||'','| after',a.items.length,(a.items[0]||{}).why||'');};
+const L='[L1] Luke 1:35: "The Holy Ghost shall come upon thee"\n';
+T('A same verse twice',L+'As Luke 1:35 says, "the power of the Highest shall overshadow thee" **[L3]**.',rows);
+T('B bare c:v wrong book, row absent',L+'[L3] Luke 1:35 again, and at 1:8 "after that the Holy Ghost is come upon you".',rows);
+T('B2 same, tagged line names Luke only in passing',L+'[L3] Compare Luke 1:35 with what is said at 1:8, "after that the Holy Ghost is come upon you".',rows);
+T('D time read as verse',L+'[L3] Luke 1:35 was read at 10:30 "in the morning service of the church".',rows);
+T('D2 time, rows=[]',L+'[L3] Luke 1:35 was read at 10:30 "in the morning service of the church".',[]);
+T('D0 control: full bogus ref, row absent',L+'[L3] Luke 10:30 "in the morning service of the church".',rows);
+T('E prose about a missing tag',L+'My opponent offers "after that the Holy Ghost is come upon you" (Acts 1:8), but never tags it [L3].',rows);
+T('E2 negated before paren',L+'It is false that "after that the Holy Ghost is come upon you" (Acts 1:8) [L3].',rows);
+T('F ratio 3:1',L+'[L3] Luke 1:35 outweighs the rest 3:1, "after that the Holy Ghost is come upon you".',rows);
+T('G noref wording','The Spirit came "upon thee with power" **[L3]**.',rows);
+T('H combined L1-L4',"[L1-L4] Luke 1:35: \"The Holy Ghost shall come upon thee\" so Acts 1:8: \"after that the Holy Ghost is come upon you\".",rows);

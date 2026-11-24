@@ -1,8 +1,8 @@
-# ASK 581 plan, draft 1 (W1): LAY's tag reader reads five more tag forms
+# ASK 581 plan, draft 2 (W1): LAY's tag reader reads five more tag forms
 
-DRAFT. Nothing is written. Plan grader: W3. Builder and writer: W4, on its own write card, after the operator approves the build.
+DRAFT 2. Nothing is written. Draft 1 (4a0c52fc) FAILED with W3 on D1 (Wall 11140, fairjudge/w3/g581/grade.md): ref581 credited a time, a ratio and another book's chapter:verse when that verse's row was not held. Draft 2 fixes D1 in the code (section 4.3), adds four negative controls (5.2), and corrects 7.2. Plan grader: W3. Builder and writer: W4, on its own write card, after the operator approves the build.
 Assigned by the coordinator (00:36 UTC relay, 18:36 CST): "LAY's tag reader misses five tag forms where the layers are present ... Plan it with a replay on run 41822 and the stored runs, plus negative controls, and W3 grades it." Order: ahead of ASK 562 draft 3.
-Base for this evidence: the stacked base that W4 builds 573 on (live engine c188b3cf / child b4f662d4, plus 559+560, 549 and 561+569; I reproduced it myself, Wall 11130). LAY is LIB 3499-3557 (MAP LAY n 13,455 on that base).
+Base for this evidence: W4's stack file itself, /mnt/project-files/ask573/w4/stack/base_engine_559_549_561.json and base_child_559_549_561.json (live engine c188b3cf / child b4f662d4, plus 559+560, 549 and 561+569). Draft 1 was cut on my own reproduction, which differs in the id of node D1 Check only (W3 grade, item 2); draft 2 is cut on W4's file. LAY is LIB 3499-3557 (MAP LAY n 13,455 on that base).
 
 ## 1. OBJECTIVE
 The layers check (LAY, rulings 397 to 400) asks each critical point for two verses, quoted with their references on [L1] or [L3] lines, with an [L1] among them. When a writer has given those verses but tagged them in a form LAY does not read, LAY says the layers are missing. That is a false item, and it is sent back to the debater as a STRUCTURE item.
@@ -18,7 +18,7 @@ Planner W1. Plan grader W3. Builder W4, on a fresh live readback. Build grader: 
    b. A trailing tag after the quotation: the reference stands before the quotation, the tag stands after it, and only ".", ";", "," or the line end follow (#6, '... "Joseph the husband of Mary, of whom was born Jesus" **[L1]**.'). The reader reads forward from a tag, so it reads the words after the tag.
    c. Two verses under one trailing tag pair, "**[L1][L3]**." (#7: 2 Samuel 7:14 and 7:12). canon566 form 3 rewrites only the quotation directly before the tag, so 7:14 was not read.
    d. A lead-in tag over a list: "**[L1]** The order runs in three steps:" over a numbered list (#18), and "[L2] and [L3], verb by verb:" over bullets (#26). inherit() carries a tag only onto bullets, and only the first tag of the line.
-   e. A short reference "24:16" after the book was named on the same line (#24). REFS needs a book name.
+   e. A short reference "24:16" after the book was named on the same line (#24). REFS needs a book name. (See 7.4: under the held-row rule #24 is cleared only when the row of Genesis 24:16 is on the sheet.)
 2. SEARCH, the code. Every place a layer tag is read in LAY: the tag split in verses(), the BK (quoted above) branch, the paren-tag branch, inherit(), canon566() and paired(). Only verses() (through its pre-pass) and inherit() change. structure(), words(), absent(), the CP heads, the Oracle [L2]/[L4] test and note() are unchanged.
 3. SEARCH, the callers. LAY is served from the Shared Library through MAP LAY to every node that loads it (the B Builds and the nodes ASK 559 changed). No node text changes. The library is a shared copy, so both the engine and the child get the same LIB change, and the child Library Check stays the same on both sides.
 4. OUT of scope:
@@ -32,7 +32,7 @@ Three LIB lines of LAY change: LIB 3534 and 3535 (inherit) and LIB 3536 (its las
    a. Its list may be a numbered list ("1." or "1)") as well as bullets.
    b. When the lead-in holds several tags, the list takes [L1] if one of them is [L1], else [L3] if one is [L3], else the first tag, as before.
    c. Every other tag line works exactly as before: bullets only, the first tag.
-3. ref581(l): a bare "C:V" takes the book of the last full reference on the same line. With no full reference earlier on the line, nothing changes.
+3. ref581(l,RW): a bare "C:V" takes the book of the last full reference on the same line, and ONLY when the row of that derived verse is held (RW, the rows verses() already has). With no full reference earlier on the line, with no rows, or with the derived row not held, nothing changes. So a time ("10:30"), a ratio ("3:1") or another book's chapter:verse ("1:8" after Luke) is not made a verse unless that exact row is on the sheet, and then the credit test reads the quotation against that row.
 4. trail581(l): a tag cluster is trailing when:
    - only ".", ";", "," or the line end follow it (bold marks allowed);
    - it stands outside parentheses;
@@ -43,14 +43,15 @@ Three LIB lines of LAY change: LIB 3534 and 3535 (inherit) and LIB 3536 (its las
 6. The credit test is unchanged. A quotation is credited only when its words stand in that verse's row. Without rows the credit test is permissive, the same as in W4's replays.
 
 ## 5. EVIDENCE (scripts in fairjudge/w1/a581. Base: /mnt/project-files/ask573/w4/stack/base_*_559_549_561.json. Targets: /mnt/project-files/fairjudge/w1/a581/target_engine_581.json and target_child_581.json, built by build581.cjs. Run: BASE_E=<base engine> TARGET_E=<target engine> R41822=<r41822.json> node test581.cjs | replay581.cjs | replay581_562.cjs)
-1. build581.cjs on the stacked base (engine 21155110, child 417a53f7):
-   a. LIB 3534, 3535 and 3536 change in both copies. Library sha b2c059e0ea3a0e9a becomes 89d25eb67157df22; LIB has 3,582 lines, as before.
-   b. MAP LAY n goes from 13,455 to 15,677, and no other MAP entry changes.
-   c. The engine Library Sha fed to the child Library Check gives the same value on both sides (map 8dbe4aad6b92291c).
-   d. Shared Library size: engine 1,157,501 to 1,159,784; child 1,157,322 to 1,159,605 (+2,283 each).
-2. test581.cjs, 19 checks with stored KJV rows (rows.json, read from kjv_verses): ALL PASS.
+1. build581.cjs on W4's stack file (engine 21155110, child 417a53f7). Targets /mnt/project-files/fairjudge/w1/a581/target_engine_581.json (md5 33ef5599) and target_child_581.json (md5 b0ffc613):
+   a. LIB 3534, 3535 and 3536 change in both copies. Library sha b2c059e0ea3a0e9a becomes 95906f844eb547b9; LIB has 3,582 lines, as before.
+   b. MAP LAY n goes from 13,455 to 15,842, and no other MAP entry changes.
+   c. The engine Library Sha fed to the child Library Check gives the same value on both sides (map f6c0219b41167270).
+   d. Shared Library size: engine 1,157,501 to 1,159,950; child 1,157,322 to 1,159,771 (+2,449 each).
+   e. NEW: the build parses the new LAY text (new Function) and requires LAY.check before it writes a target.
+2. test581.cjs, 23 checks with stored KJV rows (rows.json, 15 rows read from kjv_verses): ALL PASS.
    a. 7 positive checks: each form is flagged before and passes after.
-   b. 10 negative controls stay flagged:
+   b. 14 negative controls stay flagged:
       - a trailing tag with no reference in its sentence;
       - a combined [L2-L4];
       - a bare C:V with no book on its line;
@@ -60,7 +61,11 @@ Three LIB lines of LAY change: LIB 3534 and 3535 (inherit) and LIB 3536 (its las
       - a prose mention "no [L1], [L2] or [L3] row";
       - an [L4] line;
       - a trailing-tagged quotation whose words are not in its row;
-      - and one verse only.
+      - one verse only;
+      - NEW N11, a time after a full reference (W3 plant D);
+      - NEW N12, a ratio after a full reference (W3 plant F);
+      - NEW N13, a bare C:V of another book (W3 plant B, the words are Acts 1:8, the named book is Luke);
+      - NEW N14, the P7 form when the row of Genesis 24:16 is not held.
    c. 2 unchanged forms pass before and after.
 3. replay581.cjs, LAY as live (no 562), before against after: 117 checks, 761 items before and 761 after, none new and none gone. The checks are:
    a. the 50 stored rounds, each run plain and with the Oracle gate (rows=[] as in W4's replays);
@@ -68,9 +73,9 @@ Three LIB lines of LAY change: LIB 3534 and 3535 (inherit) and LIB 3536 (its las
    c. the 8 stored rounds of run 41822, with the 41822 rows (and the defender rounds also with the Oracle gate).
    So on the live heads, 581 changes no item today.
 4. replay581_562.cjs, with the ASK 562 draft 2 heads, on the same 50 rounds:
-   a. 562 alone adds 36 items; 562 with 581 adds 28.
-   b. The 8 items 581 clears are exactly the 8 FALSE form items: 29820 D2; 32293 D2 and D6; 32373 D2 and D5; 33107 D4; 33389 CR2 D6; 36212 D3.
-   c. The 28 kept are the 26 TRUE items plus #10 (562's own defect) and #17.
+   a. 562 alone adds 36 items; 562 with 581 adds 29.
+   b. The 7 items 581 clears: 29820 D2; 32293 D2 and D6; 32373 D2 and D5; 33107 D4; 36212 D3. The eighth FALSE form item, 33389 CR2 D6 (#24), is not cleared here: the replay runs with rows=[], and the held-row rule then gives no book (see 7.4).
+   c. The 29 kept are the 26 TRUE items plus #10 (562's own defect), #17 and #24.
    d. No item is new under 562 with 581 that 562 alone did not give.
 5. Run 41822's stored rounds (debate_results row f810b760, 8 columns, each md5 checked against SQL; saved as /mnt/project-files/fairjudge/w1/a581/r41822.json):
    a. Live LAY gives 4, 4, 0, 1, 0, 0, 0 and 0 items on claude_r1, engine_r1, claude_r2, engine_r2, engine_r3, challenger_r3, defender_r4 and challenger_r4.
@@ -82,8 +87,14 @@ Three LIB lines of LAY change: LIB 3534 and 3535 (inherit) and LIB 3536 (its las
 
 ## 7. RISKS AND LIMITS
 1. A trailing tag credits its whole sentence, so a writer who tags one verse at the end of a sentence that quotes two gets both read. The credit still requires each quotation in its own row.
-2. ref581 could read a time such as "18:23" as a verse if a book reference stands earlier on the same line. The credit test then looks for the quotation in that verse's row and fails.
-3. Cost: LAY grows by 2,222 characters in both libraries (2,283 with JSON escaping). Nothing else changes.
+2. CORRECTED (draft 1 said the credit test then fails; W3 measured that it does not when the row is not held). Credit is permissive for a verse whose row is not held; that is existing LAY behaviour for a full reference (W3 control D0: before 0, after 0). Draft 2 therefore lets ref581 give a book only when the derived verse's row is held. With the row held, the quotation must stand in that row. Measured on the corrected target with W3's own plant scripts (copied to fairjudge/w1/a581/w3plants/): B, B2, D, D2 and F each give 1 item before and 1 after; plant2 (P7 with the row absent, and with wrong words) gives 1 after.
+3. Limits W3 named as notes, unchanged by draft 2:
+   a. (N1) A sentence that speaks about a tag ("... but never tags it [L3].") reads as a trailing tag: plant E, before 1, after 0. The stop list covers only "no", "not" and the like directly before the tag.
+   b. (N2) A combined tag that holds 1 reads as [L1] whatever else it holds: "[L1-L4] ..." plant H, before 1, after 0.
+   c. (N3) The extra read line of trail581 can raise the "tagged verse(s) quoted with no reference" count in the why text of an item that is flagged anyway (plant G). No item is added or removed by it.
+4. Form (e) depends on the sheet. The live sheet is built from the references the scan reads, and the scan does not read a bare chapter:verse. So #24 (33389 CR2 D6) is cleared only when the round also names Genesis 24:16 in full somewhere the scan reads it. Otherwise it stays an item, and the note's ask, "state the reference", is the correct ask for it, as with #17.
+5. ref581 could read a time such as "18:23" as a verse only when that exact verse's row of the named book is held; then the quotation must stand in that row.
+6. Cost: LAY grows by 2,387 characters in both libraries (2,449 with JSON escaping). Nothing else changes.
 
 ## 8. ORDER AND WRITE
 1. After the 559+560 write (559 changes LIB 3547 and 3552 of LAY). It is independent of 573, 575 and 576, which do not touch LIB 3499-3557, but it is built on whatever is live at build time.

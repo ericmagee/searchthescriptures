@@ -11,5 +11,6 @@ function patch(w){const n=w.nodes.find(x=>x.name==='Shared Library');const c=n.p
  const sha=cr.createHash('sha256').update(JSON.stringify(L)).digest('hex').slice(0,16);
  const head=c.slice(0,a).replace(/library sha [0-9a-f]{16}, \d+ lines/,'library sha '+sha+', '+L.length+' lines');
  n.parameters.jsCode=head+'\n/*LIB*/'+JSON.stringify(L)+'\n/*MAP*/'+JSON.stringify(M)+c.slice(e);return {sha,lines:L.length,changed,mapChanged,len:[c.length,n.parameters.jsCode.length]};}
+const parseLAY=w=>{const T=w.nodes.find(x=>x.name==='Shared Library').parameters.jsCode;const L=JSON.parse(T.slice(T.indexOf('\n/*LIB*/')+8,T.lastIndexOf('\n/*MAP*/')));const M=JSON.parse(T.slice(T.lastIndexOf('\n/*MAP*/')+8,T.lastIndexOf('\n/*END*/'))).LAY;const S=rebuild(L,M);if(S.length!==M.n)throw new Error('LAY n');const X=new Function('$',S+'\nreturn LAY;')(undefined);if(typeof X.check!=='function')throw new Error('LAY.check missing');};
 const E=JSON.parse(fs.readFileSync(BE)),C=JSON.parse(fs.readFileSync(BC));const re=patch(E),rc=patch(C);
-fs.writeFileSync(OE,JSON.stringify(E));fs.writeFileSync(OC,JSON.stringify(C));console.log('engine',JSON.stringify(re));console.log('child',JSON.stringify(rc));
+parseLAY(E);parseLAY(C);fs.writeFileSync(OE,JSON.stringify(E));fs.writeFileSync(OC,JSON.stringify(C));console.log('engine',JSON.stringify(re));console.log('child',JSON.stringify(rc));
