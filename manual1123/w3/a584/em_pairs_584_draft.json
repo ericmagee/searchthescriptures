@@ -15,12 +15,16 @@
  "11.0": {
   "base_md5": "c7b0f492e6a205651077e66d8bffa002",
   "base_len": 38945,
-  "new_md5": "6e26deb895233f0de09cd2757b09b349",
+  "new_md5": "467c3c6305ed7618532578cca8a6af95",
   "new_len": 38952,
   "pairs": [
    {
     "old": "lists the 10 debaters (claude, chatgpt, gemini, grok, mimo, haiku, opus, glm, qwen4max, spark)",
     "new": "lists the 11 debaters (claude, chatgpt, gemini, grok, mimo, haiku, opus, glm, qwen4max, spark, sol62)"
+   },
+   {
+    "old": "the two drop-downs list the 10 debaters, each named",
+    "new": "the two drop-downs list the 11 debaters, each named"
    }
   ],
   "first_line": "## 11. Persistence and the column map (crossed columns: read"
