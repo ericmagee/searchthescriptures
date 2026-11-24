@@ -1,4 +1,4 @@
-# AAR, run ODV1-42234-501p8uuq (W3; Wall manual section 7.4 order). Draft 1, for W1's grade.
+# AAR, run ODV1-42234-501p8uuq (W3; Wall manual section 7.4 order). Draft 2, for W1's grade: W4's two corrections of 11:32 CST 11-24 (the SEATED order; improvement A) are applied.
 
 Every RESULT is from SQL on the run's rows read 10:43 to 11:31 CST 2026-11-24, or from a seat's post, named. I read all eight rounds and the synthesis whole (notes: aar/w3/run42234_notes.md). THE RUN CRASHED BEFORE ANY JUDGMENT WAS STORED, so this AAR cannot report on the judges or the enforcers of this run. "EXECUTION ONLY" means the record is in the n8n execution, which no seat has read (W4 reads status only).
 
@@ -17,7 +17,7 @@ Numbering follows the pre-run sheet (aar/w3/prerun_objectives_1124.md 0cc2e269).
 8. ASK 586 J6. MET: UNEXERCISED.
 9. ASK 586 J2. MET: NOT SHOWN (the judges' request is EXECUTION ONLY; no E-L2G row).
 10. ASK 586 J3. MET: NOT SHOWN (THE GRANTS LISTS block is EXECUTION ONLY; no E-GRT row).
-11. ASK 591 with fix 1 and fix 2. RESULT: review_notes ends "[JUDGE ORDER v2: panel list sol, sol62, spark; alternates list chatgpt, qwen4max, gemini, argon, sonnet | SEATED: panel sol62, spark, sol; reserve none; alternates chatgpt, qwen4max, gemini, argon, sonnet]", no "single judge". v2 is the operator's save of 09:43 CST. MET: YES for the read, the line and the version. Two things to check: the SEATED panel order (sol62, spark, sol) differs from the list order (sol, sol62, spark), cause not known to me; whether the seats equal the dashboard's line-up for this pair before the launch is NOT SHOWN (not compared).
+11. ASK 591 with fix 1 and fix 2. RESULT: review_notes ends "[JUDGE ORDER v2: panel list sol, sol62, spark; alternates list chatgpt, qwen4max, gemini, argon, sonnet | SEATED: panel sol62, spark, sol; reserve none; alternates chatgpt, qwen4max, gemini, argon, sonnet]", no "single judge". v2 is the operator's save of 09:43 CST. MET: YES for the read, the line and the version. The SEATED order (sol62, spark, sol) is the order the engine used after the fault ledger's move, and it does not rank the seats (W4, read of Init Seats): the engine starts from the table's panel list and alternates, drops debaters, refusals and same-family seats, moves every seat the fault ledger moved to the end behind the other non-alternates, and takes the first three; sol was at the ledger's stage ALTERNATE and was moved behind the others, and it still sat because only three panel seats were left. One thing not shown: whether the seats equal the dashboard's line-up for this pair before the launch is NOT SHOWN (not compared).
 
 By the operator's rule (WALL-11593, operational document v145, TWO LIVE RUNS): this run counts as a live run for NO change, because no change's path both fired and finished clean; ASK 591's read fired, and the run then crashed.
 
@@ -55,8 +55,8 @@ W3: this draft and aar/w3/run42234_notes.md. W4: thread notes 10:48, 11:11 and 1
 3. Nothing the judges or enforcers did before the crash survives (DEFECT 4).
 
 ## SUGGESTED IMPROVEMENTS (drafts for ASK numbers; none planned, none graded)
-A. FIND THE CRASH BEFORE THE NEXT RUN. W4 reads the dead execution 42234 (it is no longer running): the last node that finished, and the size of the judge and enforcer request bodies. Until that read, the cause is my inference.
-B. JUDGE THE STORED ROUNDS. A dry regrade of row 8dd067f4 (the operator's own plan of 01:34 CST was a dry regrade first), after A, so that the judges and the enforcers are seen on these rounds without paying for the debate again. It also exercises J1, J2, J3, J6, 587, 590, 594 and 595.
+A. FIND THE CRASH. The last finished node and the request sizes are in the execution's data. W4: reading that data loads the whole execution into n8n's memory; a full data read crashed the instance on run 33055; this execution is the largest yet and the instance has just gone down; stopped status does not lower the risk; and the crash may have left no data to read. Only a status read is safe. So A is NOT a team step: it goes to the operator as its own card that says the read may take the instance down, or it is dropped. Without it the cause stays my inference.
+B. JUDGE THE STORED ROUNDS. A dry regrade of row 8dd067f4 (the operator's own plan of 01:34 CST was a dry regrade first), so that the judges and the enforcers are seen on these rounds without paying for the debate again. It also exercises J1, J2, J3, J6, 587, 590, 594 and 595.
 C. KEEP THE JUDGES' WORK AS IT IS DONE. Write each seat's judgment row and its enforcer rows when that seat finishes, not all at the run's end, so a crash loses one seat's work and not all of it.
 D. A LAY-only resend must not make a round longer without limit: record the size before and after, and decide a rule (the operator's ruling of 20:52 CST 11-23 forbids a cap on the manual; no ruling covers round size).
 E. The question-round fix (W4, built offline, ask588/w4/fixqr/): grade and card.
@@ -68,6 +68,6 @@ F. For the Oracle's text (after the judges and enforcers, which the operator set
 3. Measure the rounds' total size on every run; 223,175 characters is the largest stored.
 
 ## FOR THE OPERATOR
-1. Whether W4 may read the dead execution 42234 in full (improvement A). W4's seat reads status only since the read that crashed the instance on run 33055; the execution is no longer running.
-2. Whether the stored rounds of 42234 are regraded dry (improvement B) before another paid run.
+1. Whether W4 reads the data of the dead execution 42234 (improvement A), knowing the read may take the n8n instance down and may find nothing; W4 will card it with that warning, or it is dropped.
+2. Whether the stored rounds of 42234 are regraded dry (improvement B) before another paid run. CAUTION, mine: if the rounds' size caused the crash, a regrade of the same rounds may crash the same way; W4 to say whether a dry regrade carries the same load.
 No card is open from this AAR.
