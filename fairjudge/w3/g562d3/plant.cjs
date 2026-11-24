@@ -1,0 +1,14 @@
+const fs=require('fs');const {B,A}=require('../a581/mk.cjs');const rows=JSON.parse(fs.readFileSync('./rows.json','utf8'));
+const n=(L,t,o)=>L.check(t,rows,o).items.length;const T=(nm,t,o)=>console.log(nm,'| before',n(B,t,o),'after',n(A,t,o), (A.check(t,rows,o).items[0]||{}).head||'');
+const ABS='The defender quotes Luke 1:35 and Matthew 1:20 and builds on them; neither verse is laid beside a second verse here, and the point is pressed on the words alone.';
+const FOOT='[L1] Luke 1:35: "The Holy Ghost shall come upon thee"\n[L3] Acts 1:8: "after that the Holy Ghost is come upon you"';
+T('P1 title-only md head, body after a blank line (not empty)','## Against D1: the source\n\n'+ABS);
+T('P2 md title then sub-PRESS without blank','## Against D5 and more\n**PRESS 13.** The press on D5.\n'+FOOT);
+T('P3 "against" prose line ending in colon mid-argument','**PRESS 1.** The press.\n'+FOOT+'\nAgainst D1 I set the following long consideration which the defender has not met at all:\n'+ABS);
+T('P4 "D3 against C5:" title only then PRESS','D3 against C5:\n**PRESS 2.** x\n'+FOOT);
+T('P5 footed PRESS block, then against head splits its tail','**PRESS 1.** The press here is long enough to be read as a block by the check.\n'+ABS+'\n## Against D2: more\n'+FOOT);
+T('P6 footed block whose verses stand after an against line','**PRESS 1.** The press here is long enough to be read as a block by the check.\n'+ABS+'\n**Against D2.** The same point.\n'+FOOT);
+T('P7 recap/withdrawal head','## Against D1 (withdrawn)\n'+ABS);
+T('P8 oracle gate, footed against block without L2/L4','## Against D1: the source\n'+FOOT,{oracle:true});
+T('P9 lowercase prose "against C5 the text says:"','**PRESS 1.** The press.\n'+FOOT+'\nagainst C5 the text says:\n'+ABS);
+T('P10 "Against the defender" (no D/C number)','## Against the defender\'s chain\n'+ABS);
