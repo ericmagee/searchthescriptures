@@ -1,0 +1,281 @@
+--- v240
++++ v241
+@@ -430 +429,0 @@
+-  - Live: engine 4877ce74 and child e9a13846 (from db713b6a and 98e77130), library 4d19497f4f93879b, on the operator's card pressed 05:16:48Z on 11-19 (with ASK 439).
+@@ -1245 +1243,0 @@
+-    - Live: engine 5c0f00ab and child b10fcad2 (from 839d34ad and a5b4e84b), library 56c66d536f088f5d on both (was 40d3eb4e7d3bc276), on the operator's card "Write it" pressed 14:10:27Z on 11-19.
+@@ -1389 +1386,0 @@
+-    - Live: engine db091b9e (from 3257a833), saved 23:06:39Z on 11-18; library unchanged (sha 7b1cd78b3c25da5c), child unchanged.
+@@ -1397 +1393,0 @@
+-    - Live: engine 040e0e02 (from db091b9e), saved 23:54:07Z on 11-18; child a9229af9 (from 0e006a24), saved 23:54:24Z on 11-18; lib_sha 5b8a26a88fc94b12 on both.
+@@ -1406 +1401,0 @@
+-    - Live: engine 1861543f (from 040e0e02), saved 23:56:49Z on 11-18; child c226d9cb (from a9229af9), saved 23:56:53Z on 11-18; lib_sha 5b8a26a88fc94b12 and map_sha ad61e1e3658dd351 on both.
+@@ -1414 +1408,0 @@
+-    - Live: engine b780b2ae (from 1861543f), saved 02:17:21Z on 11-19; child 7b043bab (from c226d9cb), saved 02:17:27Z on 11-19; lib_sha c91b9f1489e9c132 on both.
+@@ -1421 +1414,0 @@
+-    - Live: engine 06967796 (from b780b2ae), saved 03:14:41Z on 11-19; child e1f2b1c4 (from 7b043bab), saved 03:14:45Z on 11-19; lib_sha c91b9f1489e9c132 on both.
+@@ -1428 +1420,0 @@
+-    - Live: engine c1256eec (from 7cd61791), on the operator's card "Write all four" pressed 06:37:05Z on 11-19 (with ASK 444 A2, 455 and 456); library sha cad3b4f8239c2504 on both workflows.
+@@ -1435 +1426,0 @@
+-    - Live: engine c1256eec (from 7cd61791), on the operator's card "Write all four" pressed 06:37:05Z on 11-19.
+@@ -1443 +1433,0 @@
+-    - Live: engine c1256eec and child cd11b411 (from 7cd61791 and e9a13846), on the operator's card "Write all four" pressed 06:37:05Z on 11-19.
+@@ -1450 +1439,0 @@
+-    - Live: engine c1256eec and child cd11b411 (from 7cd61791 and e9a13846), on the operator's card "Write all four" pressed 06:37:05Z on 11-19.
+@@ -1457 +1445,0 @@
+-    - Live: engine 4cb54cf0 and child 3e0810d5 (from c1256eec and cd11b411), on the operator's card "Write it" pressed 06:49:24Z on 11-19.
+@@ -1464 +1451,0 @@
+-    - Live: engine 828dc91d and child 33adc248 (from 4cb54cf0 and 3e0810d5), on the operator's card "Write it" pressed 07:10:01Z on 11-19.
+@@ -1471 +1457,0 @@
+-    - Live: ODV1 Cure Call e2fa573a (from 5accea17), on the operator's card "Write it" pressed 07:31Z on 11-19. Engine and child unchanged.
+@@ -1479 +1464,0 @@
+-    - Live: Panel Judge Call b48bddee (from 5297cdd3), on the operator's card "Write it" pressed 12:46Z on 11-19.
+@@ -1486 +1470,0 @@
+-    - Live: Panel Judge Call 474d8def (from b48bddee), on the operator's card "Write it" pressed 12:49Z on 11-19.
+@@ -1493 +1476,0 @@
+-    - Live: ODV1 Cure Call fb18e79a (from e2fa573a), Panel Judge Call 15a91429 (from 474d8def), Early Alternate f47f5955 (from 30a47a4a), on the operator's card "Write it" pressed 13:24:13Z on 11-19.
+@@ -1501 +1483,0 @@
+-    - Live: engine 2d40e6ad (from 06967796), saved 03:41:02Z on 11-19; child aa9ed5c5 (from e1f2b1c4), saved 03:41:06Z on 11-19; lib_sha e3f899d169578be0 on both (was c91b9f1489e9c132), map_sha 09e0812aa2dd4d26.
+@@ -1514 +1495,0 @@
+-    - Live: engine 6519f616 (from 828dc91d), on the operator's card "Write it" pressed 13:45:44Z on 11-19; child unchanged; library 0f221f86024a2c69.
+@@ -1520 +1500,0 @@
+-    - Live: engine e0a61271 and child 4982c042 (from 5c0f00ab and b10fcad2), library 8bd8d2a7dc9d2ed0 on both (was 56c66d536f088f5d), on the operator's card "Write it" pressed 14:15:56Z on 11-19.
+@@ -1642 +1621,0 @@
+-    - Live: engine 839d34ad (from fc6a4583), on the operator's card "Write it" pressed 14:02:46Z on 11-19; child unchanged (a5b4e84b); library unchanged (40d3eb4e7d3bc276).
+@@ -1755 +1733,0 @@
+-  - Live: engine 60bf6007 (from 2d40e6ad), saved 04:27:07Z on 11-19; child unchanged.
+@@ -1802 +1779,0 @@
+-    - Live: engine 4cb77319, Alternate Pass 0dd9b96b, Cure Call 65444f6f (16:44:34Z 2026-11-19 card; audit rows 38498 to 38500). Read back live by W1 (engine, child); the Cure Call is not readable through n8n MCP and was checked from the writer's fetchback file (W2 9673, W3 9675).
+@@ -1808 +1784,0 @@
+-    - Live: engine eed7e2c8, Alternate Pass d7e57ead (16:47:40Z 2026-11-19 card; audit rows 38508, 38509). Read back live by W1 (9674) and W3 (9675).
+@@ -1814 +1789,0 @@
+-    - Live: engine c94948c0 (card 17:06:40Z 2026-11-19; audit row 38562). Read back live by W1 (9705) and W3 (9702).
+@@ -1821,2 +1795,0 @@
+-    - Live: row audit 38577, engine dd636c25 (card 17:08:10Z 2026-11-19; audit 38579); read back live by W3 (Wall 9711) and W1 (Wall 9715). Once ASK 482 is written, the dashboard's Any vs Any list reads gemini_deb for the gemini row.
+-    - Revert: the engine token first, then the row made inactive (kept for the record).
+@@ -1828 +1800,0 @@
+-    - Live: card 17:10:42Z 2026-11-19, audit 38597; prosrc md5 dash_api c541b307, dash_debaters b6084d5a, dash_launch_odv1 3b74a293, dash_odv1_debates 1fc8bc68, dash_odv1_judges 9796ab3c; the page's odv1.js sha1 88c58ac7. Read back live by W2 (Wall 9721) and W3 (Wall 9722).
+@@ -1831 +1802,0 @@
+-    - Revert: rev 5 first (the alias back to dpl_42mbKJpfP3uioX1vyBdViZqJ4Ae4, then revert482r5.sql, db44e6f1), then rev 4 (the alias back to the earlier deployment, then revert482.sql).
+@@ -1837 +1807,0 @@
+-    - Live: card "Write it" 18:03:24Z 2026-11-19 in W4's thread, audit 38710; function md5 fd075696 to ea1eb1e1, length 27,340. Read back live by W2 (Wall 9801) and W1 (Wall 9803).
+@@ -1839 +1808,0 @@
+-    - Revert: revert488.sql (d241bd0e) rebuilds the prior text and checks md5 fd075696.
+@@ -1842,2 +1810,0 @@
+-    - Live: card "Write it" 18:05:09Z 2026-11-19 in W4's thread, audit 38718. Read back live by W1 (Wall 9806) and W3 (Wall 9809).
+-    - Revert: revert489.sql (33c09658).
+@@ -1848 +1814,0 @@
+-    - Live: engine dd636c25 to 533f77a1 (card "Write it" 18:09:59Z 2026-11-19 in W4's thread; audit 38738). Read back live by W1 (Wall 9820) and W3 (Wall 9824); W2 checked the fetchback file (Wall 9817).
+@@ -1850 +1815,0 @@
+-    - Revert: write back the dd636c25 fetchback (fetchback_a487_engine.json) with restw.py.
+@@ -1853,2 +1817,0 @@
+-    - Live: card "Write it" 18:11:13Z 2026-11-19 in W4's thread, audit 38745; prosrc unchanged (5377cd45, fb398290, 481ace04). Read back live by W1 (Wall 9820) and W3 (Wall 9824). Proven: the 18:17:00Z expire run succeeded after the revoke (W1 Wall 9836).
+-    - Revert: revert491.sql (6841b272).
+@@ -1858 +1820,0 @@
+-    - Live: card "Write it" 18:14:12Z 2026-11-19 in W4's thread, audit 38761. Read back live by W3 (Wall 9832), W1 (Wall 9833) and W2 (Wall 9839).
+@@ -1860 +1821,0 @@
+-    - Revert: revert492.sql (928b6eca).
+@@ -1863 +1823,0 @@
+-    - Live: engine 533f77a1 to d491f4a5 (card "Write it" 18:18:48Z 2026-11-19 in W4's thread; audit 38773). Read back live by W3 (Wall 9841) and W1 (Wall 9843).
+@@ -1865 +1824,0 @@
+-    - Revert: write back the 533f77a1 fetchback (fetchback_a490_engine.json) with restw.py.
+@@ -1869,2 +1827,0 @@
+-    - Live: card "Write it" 18:13:08Z 2026-11-19 in W4's thread, audit 38750. Read back live by W2 (Wall 9822) and W1 (Wall 9823).
+-    - Revert: publish the workflow again, on the operator's word.
+@@ -1874 +1830,0 @@
+-    - Live: card "Write it" 18:31:56Z 2026-11-19 in W4's thread, audit 38810; plan rev 1 a9029c31. Read back live by W1 (Wall 9875), W3 (Wall 9876) and W2 (Wall 9878): inactive, version 66f18454 kept.
+@@ -1876 +1831,0 @@
+-    - Revert: publish the workflow again, on the operator's word.
+@@ -1881 +1835,0 @@
+-    - Live: card "Write it" 18:44:56Z 2026-11-19 in W4's thread, audit 38890; step493.sql 2769dff6 (commit 5ff09ab1); prosrc md5 after_insert b55dbe2c, before_insert 8d309b66, no_change 2f315710; rows 0. The rolled-back test passed first (W4 9897; W1 9899, W2 9900). Read back live by W2 (Wall 9903) and W1 (Wall 9904).
+@@ -1883 +1836,0 @@
+-    - Revert: revert493.sql (514a3efa), only while the table holds no row; after the first row, stop filling and keep the rows, on the operator's word.
+@@ -1888 +1840,0 @@
+-    - Live: card "Write it" 19:43:01Z 2026-11-19 in W4's thread; migration ask497_ask_aar_snapshots_check applied step497.sql 6df72062 unchanged; audit 39023 to 39025; prosrc md5 08f53748; read live after the write: 17 rows of code d (ids 3 to 19), no a, b, c or e finding (W4 9985). The rolled-back test passed first (W4 9979; W1 9980, W2 9981); it used snapshot ids 20 to 22. Read back live by W1 
+@@ -1890 +1841,0 @@
+-    - Revert: revert497.sql (5cac5883).
+@@ -1894 +1844,0 @@
+-    - Live: card "Write it" 19:57:15Z 2026-11-19 in W4's thread; migration ask498_ask_aar_builders applied step498.sql 0d5ddbc8 unchanged; audit 39084 to 39098; prosrc md5 ask_aar_grades_check 2e26db98, before_insert 32b5ab87, after_insert 6208002b, no_change f3dc2d4a; read live after the write: 20 rows of "no builder row" (ok null), 0 findings, and ASK 497 still clean (W4 10000). The rolled-back
+@@ -1896 +1845,0 @@
+-    - Revert: revert498.sql (60ee025d), only while ask_aar_builders holds no row.
+@@ -1901 +1849,0 @@
+-    - Live: written on the operator's card "Write it" at 20:51:10Z 2026-11-19 in W4's thread; migration ask494_a2_revoke_public_write_rpcs (20261119205124) holds step494.sql (fc32cec9) unchanged after the session and card lines; audit 39218 to 39226 (AUTO-PRIV REVOKE) and 39227 (build row) (W4 10070). Read back live by W3 (10071) and W1 (10072): only postgres, service_role and lab_seat hold EXECU
+@@ -1903 +1850,0 @@
+-    - Revert: revert494.sql (dfcfdd2f): restores the EXECUTE grantees of all nine to their state before the step.
+@@ -1908 +1854,0 @@
+-    - Live: written on the operator's card "Push it" at 21:38:57Z 2026-11-19 in W4's thread: engine d491f4a5 to 01691ed8, Panel Judge Call 15a91429 to d19d8de6; fetchbacks equal to the targets (W4 10140); audit 39312 and 39313 (written late, 21:55Z; W4 10150). The engine read back live by W1 (10141) and W2 (10148); Panel Judge Call cannot be read through the n8n MCP and was checked against W4's f
+@@ -1910 +1855,0 @@
+-    - Revert: write back live_engine_499.json (8197ec2e) and live_pjc_499.json (26ab0bac), on the operator's word.
+@@ -1916 +1860,0 @@
+-    - Live: written on the operator's card "Write it" at 04:23:35Z 2026-11-20 in W4's thread: engine ddbd7afc to 6bb4647a (fetchback bfe33ea5 equals target 40eb352b), child d7e57ead to c2e4af89 (fetchback 67ae2ce8 equals target 7cf72c53); library sha 89fa920efdbde6b9 to ae0b9a1abad1c58d; audit 39410 and 39411 (W4 10231). Graded by W3 only (10230); the second grade was held on the operator's word 
+@@ -1918 +1861,0 @@
+-    - Revert: write back live_moMxiV4Irg1uRBZN.json and live_MqQHRl7mQQ0z8QdT.json (ask504/w4), on the operator's word.
+@@ -1926 +1868,0 @@
+-    - Live: written on the operator's card "Write it" at 05:08:01Z 2026-11-20 in W4's thread: engine 6bb4647a to 783e9f44 (fetchback 2a711680 equals target e325bfdb), child c2e4af89 to d6908ec6 (fetchback e95badda equals target f796ae1c); library sha ae0b9a1abad1c58d to 680dd2af97c187be; audit 39425 and 39426 (W4 10238). Graded by W3 only (10237); the second grade was held on the operator's word 
+@@ -1928 +1869,0 @@
+-    - Revert: write back pre_moMxiV4Irg1uRBZN.json and pre_MqQHRl7mQQ0z8QdT.json (ask506/w4), on the operator's word.
+@@ -1936 +1876,0 @@
+-    - Live: written on the operator's card "Write it" at 08:10:37Z 2026-11-20 in W4's thread: engine 783e9f44 to c6e630a4 (fetchback c6d3c637 equals target 08046dfa), child d6908ec6 to ecb82fb2 (fetchback 54048b71 equals target 23c14f70); library sha 680dd2af97c187be to b940895bd43124b7; audit 39439 and 39440 (W4 10247). Graded by W3 only (10246); the second grade was held on the operator's word 
+@@ -1938 +1877,0 @@
+-    - Revert: write back pre_engine_507.json and pre_child_507.json (ask507/w4), on the operator's word.
+@@ -1944 +1882,0 @@
+-    - Live: written on the operator's card "Write it" at 08:33:40Z 2026-11-20 in W4's thread; trigger_terms md5 e515ba0a to 3c900d8c; audit 39450. Grades owed (planner W3; W1 and W2 asleep).
+@@ -1946 +1883,0 @@
+-    - Revert: set guard 8 trigger_terms back to the nine words (plan508.md, ask508/w3), on the operator's word.
+@@ -1953 +1889,0 @@
+-    - Live: written on the operator's card "Write it" at 08:34:49Z 2026-11-20 in W4's thread; function md5 75a7aa5b to d43c0860; audit 39453. Grades owed (planner W3; W1 and W2 asleep).
+@@ -1955 +1890,0 @@
+-    - Revert: revert509.sql (ask509/w4, 49080ef7), on the operator's word.
+@@ -1961 +1895,0 @@
+-    - Live: written on the operator's card "Write it" at 16:03:34Z 2026-11-20 in W4's thread. Engine c6e630a4 to a08e387a; child ecb82fb2 to 45a121d2; library sha b940895bd43124b7 to 3929ad23c9371833; audit 39468/39469. Build graded PASS by W3 (the planner, at W4's request; builder W4). Read back by W3, CONFIRMED. Second grade owed (W1 and W2 asleep).
+@@ -1963 +1896,0 @@
+-    - Revert: write back pre_engine_510.json and pre_child_510.json (ask510/w4/build), on the operator's word.
+@@ -1969 +1901,0 @@
+-    - Live: written on the operator's card "Write it" at 16:31:44Z 2026-11-20 in W4's thread. Engine a08e387a to 321144bd; child 45a121d2 to fee9f696; library sha 3929ad23c9371833 to d45d546ddc3d99ce. Build graded PASS by W3 (the planner, at W4's request; builder W4). Read back by W3, CONFIRMED. Second grade owed (W1 and W2 asleep).
+@@ -1971 +1902,0 @@
+-    - Revert: write back pre_engine_513.json and pre_child_513.json (ask513/w4/build), on the operator's word.
+@@ -1983 +1913,0 @@
+-    - Live: written on the operator's card "Write it" at 18:06:20Z 2026-11-20 in W4's thread. Engine 321144bd to fb3ff9d7; child fee9f696 to e1ae55a9; library sha d45d546ddc3d99ce to fa6e8159e811863c. Build graded PASS by W3 (the planner; builder W4), Wall 10299. Second grade held (W1 and W2 stood down under the usage rule). Read back by W3, CONFIRMED: both fetchbacks equal the targets node for n
+@@ -1985 +1914,0 @@
+-    - Revert: write back pre_engine_515.json and pre_child_515.json (ask515/w4/build), on the operator's word.
+@@ -1995 +1923,0 @@
+-    - Live: ASK 515 rev 7 written on the operator's card "Write it" at 19:11:33Z 2026-11-20 in W4's thread (engine fb3ff9d7 to 1b20b067; child e1ae55a9 to c9db9777; library fa6e8159e811863c to 6f2ae36f19303a92). ASK 516 written on the operator's card "Write it" at 19:23:42Z in W4's thread (engine 1b20b067 to 38d1020c; child c9db9777 to 48ea0c0d; library 6f2ae36f19303a92 to 1bcba53c4b456acf). Both
+@@ -1997 +1924,0 @@
+-    - Revert: write back pre_engine_516.json and pre_child_516.json (ask516/w4), on the operator's word; for rev 7, pre_*_r7.json (ask515/w4/r7).
+@@ -2010 +1936,0 @@
+-    - Live: written on the operator's card "Write 516b" at 02:16 CST 2026-11-23 in W4's thread. Engine 31702b15 to 0427ec91; child cd2d84d8 to 47df6892; library 6f2ae36f19303a92 to e481127ff69347f9. Read back by W2, CONFIRMED (Wall 10409).
+@@ -2017 +1942,0 @@
+-    - Revert: revert516b.sh with revert_engine_516b.json and revert_child_516b.json (ask516/w4/b), on the operator's word.
+@@ -2028 +1952,0 @@
+-    - Live: written on the operator's card "Write 517" at 07:21:29 CST 2026-11-23 in W4's thread. Engine 0427ec91 to c5dcd97a; child 47df6892 to 8bfbc810; derive_debate_outcome 2a853df6 to a59400d8 (29,446 characters); v_517_from 07:22:24 CST; audit rows 39771 and 39772. Read back by W2, CONFIRMED (Wall 10491).
+@@ -2030,26 +1954,24 @@
+-    - Revert: revert517.sh (a06b3e09, ask517/w4/write) and revert517_s6.sql (82fcafab, ask517/w1), on the operator's word.
+-  - ENGINE STACK OF 2026-11-23, ASK 502 A1 AND ASKS 518 TO 542 (one batch entry; written from the write rows in audit_log and the read-back rows in ask_aar_snapshots). Every item below is live and read back. None is shown by a run yet: the first run after 12:50 CST 2026-11-23 is the first to exercise them. In write order:
+-    - ASK 518 rev 6, CLOSING CONTRADICTION, ADDED REFERENCE (engine nodes Close Enforcer Build and Judge Contradiction Build, PROMPT only; plan518 rev 6 f3ee867a S1): the closing-contradiction enforcer prompts cover the case where a closing round adds a reference. Written on the card "Write 518" at 07:30:12 CST in W4's thread. Engine c5dcd97a to c243b2c9 (audit row 39789; W2 PASS Wall 10497; read
+-    - ASK 519, GRANT SENTENCES THAT NAME NOTHING (Shared Library, both copies): a K-W or K-S3 grant-class sentence that names no link, premise or press is not raised. Written on the card "Write 519" at 07:33:04 CST in W4's thread. Engine c243b2c9 to c35d330e; child 8bfbc810 to b66da7aa (audit row 39793; build W2 PASS Wall 10476; read back, AAR snapshot 78). Revert: ask520/w4/stack/steps/revert_51
+-    - ASK 520 rev 3 variant B, K-UNX AND THE JUDGE'S OWN ANSWER CHECK (Shared Library, both copies; the exemption at index 479): K-UNX is not raised on a premise whose press the judge's own ANSWER CHECK grades MISSES or FAILS, for presses from rounds 2 and 3. Written on the card "Write 520" at 08:07:20 CST in W4's thread. Engine c35d330e to ea8e8b80; child b66da7aa to dfa5fecc; library 1baf759d74
+-    - ASK 502 A1, THE EARLY ALTERNATE CALLS USE THE SUPABASE ACCOUNT CREDENTIAL (workflow SX4ZWtgHNs96uBOo WALL-2024 Early Alternate, node Record Early Alternate; engine node Get Early Alternate): each node's authentication changes from genericCredentialType (httpHeaderAuth, credential Supabase Anon Key) to predefinedCredentialType supabaseApi, credential Supabase account. URL, body, method, opti
+-    - ASK 527 rev 3, RESPONSE LINES ANSWER SEND-BACK ITEMS (Shared Library lines 2773 and 2788, both copies): line 2773 reads an "Sn RESPONSE:" or "Sa-Sb RESPONSE:" line as the answer to each item it names that no SENDBACK line answered (FORCED only for FORCED, plain collision only for plain). Line 2788 gives the row text for an item written but not read. Written on the card "Write 527" at 08:42:
+-    - ASKs 524 and 525, THE ASSUMPTION CHECK ON BOTH SIDES (engine nodes Assume Check Build, Assume Check Record and D3 Build; W1 plan rev 1): the assumption check also runs on the challenger premises, and it reads the side's listed verses together. D3 Build adds the sentence that carries round 2 assumption charges into the round 3 premise list. This reverses the ASK 374 choice, as named on the c
+-    - ASK 526 rev 2, THE FINAL COUNT PASS IN ALTERNATE MERGE (engine node Alternate Merge; Shared Library MAP entry "Alternate Merge CPD", no LIB line): a final cpdSync pass (count marked FINAL PASS) runs per judge body. Only a side that DERIVES is kept: the array is replaced, with one AUDIT v50 DERIVED line and the mark "COUNT: FINAL PASS to n". Written on the card "Write 526" at 08:50:36 CST in
+-    - ASK 523 rev 1, DECIDING-LINE DISAGREE COUNTS (Shared Library lines 2642, 2809, 2815 and 2844, with 3560 to 3562 appended as pkgDLU; the Reread Record, Alt Reread Record and R2 Alt Reread Record nodes; engine and child): an uncured E-ANS on a verse that the seat's KEYSTONE or RESULT quotes counts in drv_uncured (AUDIT v64). A second reading's DISAGREE on E-RES or E-KEY is marked rr_dlu and c
+-    - ASK 531 rev 1b, E-ASSUME ITEMS ENFORCED (pkgACX; Shared Library lines 461, 466, 1376, 1382, 1435, 2642, 2781, 2785, 2803, 2815, 2844, 2929, 2947, 2956 and 2959, with 3563 to 3565 appended; engine nodes Assume Check Record, Send Back Build and Record, Alt Send Back Build and Record; child nodes R2 Alt Send Back Build and Record): under M524, a seat that SPARES a premise whose fact both reade
+-    - ASK 537 rev 3, THE ORACLE'S ONE-VERSE RESTRICTION AND GAPS LEFT OPEN (engine nodes Init with Guards, D4 Build and C4 Build; the Oracle seat only): the restriction text stands at the end of TEXTPROOF, and the GAPS LEFT OPEN text is added to the Oracle's round 4 builds. Written on the card "Write 537" at 10:21 CST in W4's thread. Engine 9240349c to 04450043; the child is untouched (audit row 
+-    - ASK 539, MAP DRIFT FIX (engine node Library Sha, ASK 422a): __MAPEXTRA422 gains "Alternate Merge CPD", the MAP entry ASK 526 added. Written on the card at 10:41 CST in W4's thread. Engine 04450043 to ae0f90de; the child is not written; Library Check pair PASSES (audit row 40043; read back, AAR snapshot 94). Revert: ask539/w4/write/revert_engine.json.
+-    - ASK 530, THE ENFORCER ENGAGES THE ANSWER ROWS (TRIAL, record only; Shared Library lines 3057 and 3457, both copies): the E-COL item carries THE ANSWER'S ROWS and a TRIAL QUESTION, and E-ONE rows are record only. Written on the card at 10:41 CST in W4's thread. Engine ae0f90de to daf5da98; child 334f0518 to 10624dd2; library cf88f4765f035f23 to 5aedc2f2ac70ba66 (audit row 40044; read back, A
+-    - ASK 536 rev 2a, unxLack READS ONLY ITS OWN CLAUSE (Shared Library lines 428 and 429, both copies): the text read before an [Ln] tag stops at "despite", "though", "although" or "even with", and up to two other words may stand between the tag and "missing". Written on the card at 12:12 CST in W4's thread. Engine daf5da98 to e5bad791; child 10624dd2 to 580125e4; library 5aedc2f2ac70ba66 to c75
+-    - ASK 541 rev 1, RECORD-ONLY ROWS ARE STORED AS RECORD-ONLY (database only: the debate_enforcer_log cure_status constraint, the new function enforcer_status_stored, and record_enforcer_log): a record-only enforcer row that would have been stored UNCURED is stored as RECORD-ONLY. Written on the card "Write 541" at 12:19:09 CST in W4's thread. record_enforcer_log 8d4cde99 to 2b96a501 (audit row
+-    - ASK 532, THE PRESS CHECK (engine nodes Assume Check Build and Assume Check Record; Shared Library lines 1511, 1516, 1660, 1667, 1686, 1749, 1752 and 2390, both copies): the assumption enforcer also gets the press list and a TASK 2 PRESS-CHECK, and records one E-PRESS row per press. The E-GATE M/B push is withheld unless the press reads FOOTED (pft532Read), and pft532_withheld is reported. W
+-    - ASK 534 rev 2, A VERSE READ APART FROM ITS SENTENCE (K-SU; Shared Library line 2277, both copies; TRIAL, list only): a new pass in mlsLines2024 reads each verse that a deciding line names (KEYSTONE, RESULT, WHICH HOLDS, ANSWER CHECK, or a collision line graded LINK BROKEN). It raises one K-SU item when the line names no other verse of the KJV sentence, a round of either side does, and the s
+-    - ASK 542 rev 0, THE K-UNX EXEMPTION READS THE SIDE'S ROUND 2 TO 4 TAGS (Shared Library index 479, both copies): the ASK 520 exemption also holds when the judge graded the premise's press MISSES or FAILS, with no MEETS, under any of the side's own round 2 to 4 tags, not only round 3. Written on the card at 12:43 CST in W4's thread. Engine 6341b2c4 to e5b2f68f; child d8503277 to b647b6a9; libr
+-    - ASK 533 rev 1a, AN [L2] GLOSS THAT IS NOT A KJV RENDERING (K-GLS; engine node L2 Count Plan, which now exports ren, the KJV renderings per Strong's number from its gloss reads; Shared Library lines 483, 489, 514, 517, 849, 1052, 1212, 1311, 2177 and 3314, both copies; TRIAL): a judge's [L2] gloss on a collision line that holds no KJV rendering of its number gets one TRIAL item that lists th
+-    - Not in this entry: ASKs 521 and 522 (operational doc only), 528 (Wall manual v19 and op doc v142 only), 529 (held), 535 (not written), and 538, 540 and 543 (closed, not needed). The view debate_rounds_by_side (run 41418 item E9, written 12:51 CST) is a database read aid; the engine does not read it.
+-  - FIXES FROM RUN 41736, WRITTEN 2026-11-23 AFTER 14:20 CST (one batch entry; written from the write rows in audit_log and the readback posts on the Wall). Every item below is live and read back. None is shown by a run yet. In write order:
+-    - ASK 544 (pkgCKL), A CLOSING CONTRADICTION THAT RESTATES A KEPT LINK IS NOT APPLIED (engine node Close Enforcer Record only; plan Wall 10877, rev 1 Wall 10886): a CONFIRMED close-contradiction line is recorded as NOT CONFIRMED (kept link), and breaks no link, when three things hold. (a) Its EARLIER quotation stands in the block of another link m of its round. (b) That round heads the named l
+-    - ASK 546 (541 fix A), TWO LABEL CASES IN enforcer_status_stored (database only; plan Wall 10881, rev 0a Wall 10889): the engine's suffix " (RECORD-ONLY)" on an uncounted gate row is a record-only marker (M4), and the marker "CURE (record-only until promoted)" (M2) does not apply to an E-ASSUME row counted under ASK 531 ("ENFORCED, pkgACX"). The "counted in drv_uncured" guard is unchanged. In
+-    - ASK 545 (pkgBFX), THE K-UNX RANGE TEST READS "LINK none" BLOCKS (Shared Library index 466 and new index 3566, both copies; 15 MAP entries re-measured): the range test at index 466 takes its premise blocks from bfx544Block (the name was fixed before the ASK number was assigned), which reads a block headed "LINK n" or "LINK none". A premise that round 3 answers under a heading "LINK none [pre
+-  - FIXES FROM RUN 41822 AND THE FIRST LIBRARY CONSOLIDATION, WRITTEN 2026-11-23 AFTER 17:15 CST (one batch entry; written from the write rows in audit_log and the readback posts on the Wall). Every item below is live and read back. None is shown by a run yet. In write order:
++  - ENGINE STACK OF 2026-11-23, ASK 502 A1 AND ASKS 518 TO 542:
++    - ASK 518 rev 6, CLOSING CONTRADICTION, ADDED REFERENCE (engine nodes Close Enforcer Build and Judge Contradiction Build, PROMPT only; plan518 rev 6 f3ee867a S1): the closing-contradiction enforcer prompts cover the case where a closing round adds a reference.
++    - ASK 519, GRANT SENTENCES THAT NAME NOTHING (Shared Library, both copies): a K-W or K-S3 grant-class sentence that names no link, premise or press is not raised.
++    - ASK 520 rev 3 variant B, K-UNX AND THE JUDGE'S OWN ANSWER CHECK (Shared Library, both copies; the exemption at index 479): K-UNX is not raised on a premise whose press the judge's own ANSWER CHECK grades MISSES or FAILS, for presses from rounds 2 and 3.
++    - ASK 502 A1, THE EARLY ALTERNATE CALLS USE THE SUPABASE ACCOUNT CREDENTIAL (workflow SX4ZWtgHNs96uBOo WALL-2024 Early Alternate, node Record Early Alternate; engine node Get Early Alternate): each node's authentication changes from genericCredentialType (httpHeaderAuth, credential Supabase Anon Key) to predefinedCredentialType supabaseApi, credential Supabase account. URL, body, method, opti
++    - ASK 527 rev 3, RESPONSE LINES ANSWER SEND-BACK ITEMS (Shared Library lines 2773 and 2788, both copies): line 2773 reads an "Sn RESPONSE:" or "Sa-Sb RESPONSE:" line as the answer to each item it names that no SENDBACK line answered (FORCED only for FORCED, plain collision only for plain). Line 2788 gives the row text for an item written but not read.
++    - ASKs 524 and 525, THE ASSUMPTION CHECK ON BOTH SIDES (engine nodes Assume Check Build, Assume Check Record and D3 Build; W1 plan rev 1): the assumption check also runs on the challenger premises, and it reads the side's listed verses together. D3 Build adds the sentence that carries round 2 assumption charges into the round 3 premise list. This reverses the ASK 374 choice, as named on the c
++    - ASK 526 rev 2, THE FINAL COUNT PASS IN ALTERNATE MERGE (engine node Alternate Merge; Shared Library MAP entry "Alternate Merge CPD", no LIB line): a final cpdSync pass (count marked FINAL PASS) runs per judge body. Only a side that DERIVES is kept: the array is replaced, with one AUDIT v50 DERIVED line and the mark "COUNT: FINAL PASS to n".
++    - ASK 523 rev 1, DECIDING-LINE DISAGREE COUNTS (Shared Library lines 2642, 2809, 2815 and 2844, with 3560 to 3562 appended as pkgDLU; the Reread Record, Alt Reread Record and R2 Alt Reread Record nodes; engine and child): an uncured E-ANS on a verse that the seat's KEYSTONE or RESULT quotes counts in drv_uncured (AUDIT v64). A second reading's DISAGREE on E-RES or E-KEY is marked rr_dlu and c
++    - ASK 531 rev 1b, E-ASSUME ITEMS ENFORCED (pkgACX; Shared Library lines 461, 466, 1376, 1382, 1435, 2642, 2781, 2785, 2803, 2815, 2844, 2929, 2947, 2956 and 2959, with 3563 to 3565 appended; engine nodes Assume Check Record, Send Back Build and Record, Alt Send Back Build and Record; child nodes R2 Alt Send Back Build and Record): under M524, a seat that SPARES a premise whose fact both reade
++    - ASK 537 rev 3, THE ORACLE'S ONE-VERSE RESTRICTION AND GAPS LEFT OPEN (engine nodes Init with Guards, D4 Build and C4 Build; the Oracle seat only): the restriction text stands at the end of TEXTPROOF, and the GAPS LEFT OPEN text is added to the Oracle's round 4 builds.
++    - ASK 539, MAP DRIFT FIX (engine node Library Sha, ASK 422a): __MAPEXTRA422 gains "Alternate Merge CPD", the MAP entry ASK 526 added.
++    - ASK 530, THE ENFORCER ENGAGES THE ANSWER ROWS (TRIAL, record only; Shared Library lines 3057 and 3457, both copies): the E-COL item carries THE ANSWER'S ROWS and a TRIAL QUESTION, and E-ONE rows are record only.
++    - ASK 536 rev 2a, unxLack READS ONLY ITS OWN CLAUSE (Shared Library lines 428 and 429, both copies): the text read before an [Ln] tag stops at "despite", "though", "although" or "even with", and up to two other words may stand between the tag and "missing".
++    - ASK 541 rev 1, RECORD-ONLY ROWS ARE STORED AS RECORD-ONLY (database only: the debate_enforcer_log cure_status constraint, the new function enforcer_status_stored, and record_enforcer_log): a record-only enforcer row that would have been stored UNCURED is stored as RECORD-ONLY.
++    - ASK 532, THE PRESS CHECK (engine nodes Assume Check Build and Assume Check Record; Shared Library lines 1511, 1516, 1660, 1667, 1686, 1749, 1752 and 2390, both copies): the assumption enforcer also gets the press list and a TASK 2 PRESS-CHECK, and records one E-PRESS row per press. The E-GATE M/B push is withheld unless the press reads FOOTED (pft532Read), and pft532_withheld is reported.
++    - ASK 534 rev 2, A VERSE READ APART FROM ITS SENTENCE (K-SU; Shared Library line 2277, both copies; TRIAL, list only): a new pass in mlsLines2024 reads each verse that a deciding line names (KEYSTONE, RESULT, WHICH HOLDS, ANSWER CHECK, or a collision line graded LINK BROKEN). It raises one K-SU item when the line names no other verse of the KJV sentence, a round of either side does, and the s
++    - ASK 542 rev 0, THE K-UNX EXEMPTION READS THE SIDE'S ROUND 2 TO 4 TAGS (Shared Library index 479, both copies): the ASK 520 exemption also holds when the judge graded the premise's press MISSES or FAILS, with no MEETS, under any of the side's own round 2 to 4 tags, not only round 3.
++    - ASK 533 rev 1a, AN [L2] GLOSS THAT IS NOT A KJV RENDERING (K-GLS; engine node L2 Count Plan, which now exports ren, the KJV renderings per Strong's number from its gloss reads; Shared Library lines 483, 489, 514, 517, 849, 1052, 1212, 1311, 2177 and 3314, both copies; TRIAL): a judge's [L2] gloss on a collision line that holds no KJV rendering of its number gets one TRIAL item that lists th
++  - FIXES FROM RUN 41736:
++    - ASK 544 (pkgCKL), A CLOSING CONTRADICTION THAT RESTATES A KEPT LINK IS NOT APPLIED (engine node Close Enforcer Record only; plan Wall 10877, rev 1 Wall 10886): a CONFIRMED close-contradiction line is recorded as NOT CONFIRMED (kept link), and breaks no link, when three things hold. (a) Its EARLIER quotation stands in the block of another link m of its round. (b) That round heads the named l
++    - ASK 546 (541 fix A), TWO LABEL CASES IN enforcer_status_stored (database only; plan Wall 10881, rev 0a Wall 10889): the engine's suffix " (RECORD-ONLY)" on an uncounted gate row is a record-only marker (M4), and the marker "CURE (record-only until promoted)" (M2) does not apply to an E-ASSUME row counted under ASK 531 ("ENFORCED, pkgACX"). The "counted in drv_uncured" guard is unchanged. In
++    - ASK 545 (pkgBFX), THE K-UNX RANGE TEST READS "LINK none" BLOCKS (Shared Library index 466 and new index 3566, both copies; 15 MAP entries re-measured): the range test at index 466 takes its premise blocks from bfx544Block (the name was fixed before the ASK number was assigned), which reads a block headed "LINK n" or "LINK none". A premise that round 3 answers under a heading "LINK none [pre
++  - FIXES FROM RUN 41822 AND THE FIRST LIBRARY CONSOLIDATION:
+@@ -2062,2 +1984 @@
+-      6. Written on the card "Write 557 and 558" at 17:15:34 CST in W4's thread (text approved 17:09 CST on W3's card). Engine 5bc57e2a to 215e327a; child a77aadd2 to 67351fd6 (Shared Library only); library 8fe7b8b502dd6ad9 to c05b6e3a684532bd (audit row 40434; draft 5b W1 PASS Wall 10986; read back W1 PASS Wall 11011). Revert: ask557/w4/write/revert_engine.json and revert_child.json.
+-    - ASK 564, THE ORACLE CHARGES EVERY WEAKNESS ITS LAYER TEST FINDS (Init with Guards, inside __ORACLE9; the Oracle seat only; text fairjudge/w3/ASK564_draft2.md draft 2b, md5 fd322e62; the operator's statement of 17:14 CST, ruling row 505): 1,004 characters are added between "Say which layer fails and quote the words that show it." and "Prove every position with the layers." Each point of the 
++    - ASK 564, THE ORACLE CHARGES EVERY WEAKNESS ITS LAYER TEST FINDS (Init with Guards, inside __ORACLE9; the Oracle seat only; text fairjudge/w3/ASK564_draft2.md draft 2b, md5 fd322e62; the operator's statement of 17:14 CST, ruling row 505): 1,004 characters are added between "Say which layer fails and quote the words that show it." and "Prove every position with the layers." Each point of the 
+@@ -2068,3 +1989,2 @@
+-      4. Written on the card "Write 566 and 567" at 17:36:50 CST in W4's thread. Engine 771c24c5 to f63b73de; child 67351fd6 to de9efc4e (Shared Library only); library c05b6e3a684532bd to f24a5192c60cbc55; MAP LAY n 11987 to 12859 (audit row 40463; 566 W3 PASS Wall 11022 and 11025; 567 W1 PASS Wall 11017; read back W1 PASS Wall 11037). Revert: ask566/w4/write/revert_engine.json and revert_child.j
+-    - ASK 563, THE ORACLE LAYERS AUDIT LINE (record only; engine node Build Save Body; text fairjudge/w3/ASK563_draft1.md draft 1a, md5 b7ff12d9): when the defender is the Oracle and a close is stored, one line is appended to review_notes: "[AUDIT: ORACLE LAYERS (record-only) -- CLOSE ANSWERS: <n>; WITH [L2]: <a>; WITH [L4]: <b>]". It counts the blocks of the stored close that begin "ANSWER:" and
+-    - ASK 554 and ASK 555, TWO AUDIT VIEWS OVER debate_enforcer_log (database only; the engine does not read them; file fairjudge/w3/ASK554_555_views.sql rev 2, md5 08502d1e): enforcer_rulings_by_collision gives every enforcer ruling on a collision, with split = true when the enforcer gave different RIGHT words on the same collision in the same run. enforcer_pushes_by_side gives every push from U
++    - ASK 563, THE ORACLE LAYERS AUDIT LINE (record only; engine node Build Save Body; text fairjudge/w3/ASK563_draft1.md draft 1a, md5 b7ff12d9): when the defender is the Oracle and a close is stored, one line is appended to review_notes: "[AUDIT: ORACLE LAYERS (record-only) -- CLOSE ANSWERS: <n>; WITH [L2]: <a>; WITH [L4]: <b>]". It counts the blocks of the stored close that begin "ANSWER:" and
++    - ASK 554 and ASK 555, TWO AUDIT VIEWS OVER debate_enforcer_log (database only; the engine does not read them; file fairjudge/w3/ASK554_555_views.sql rev 2, md5 08502d1e): enforcer_rulings_by_collision gives every enforcer ruling on a collision, with split = true when the enforcer gave different RIGHT words on the same collision in the same run. enforcer_pushes_by_side gives every push from U
+@@ -2076,4 +1996,2 @@
+-      5. Written on the card "Write 571 + 570" at 18:23 CST in W4's thread. Engine d8292f62 to ee70cf05 (the thirty L2C nodes and the Shared Library); child de9efc4e to 5406c38f (Shared Library only); library f24a5192c60cbc55 to de221df74811d115; map 0994aa5fe546d9fc (audit row 40519; 571 plan W1 PASS WITH C1 Wall 11076, C1 met Wall 11080; 565 W3 PASS Wall 11019; 568 W3 PASS Wall 11036; 570 W1 PA
+-      6. Marks for the next run: the D2 to C4 Builds' [L2] SHEET cap line names 130000; a second-kind premise push reads ENFORCER HELD; no "pkgL2C:" error.
+-    - Not in this entry: ASKs approved or built and not yet written at 18:30 CST 2026-11-23, and ASKs 551, 553 and 574 (withdrawn).
+-  - THE RUN ROW, THE COLLISION AND KEYSTONE CHECKS AND THE CLOSE PRESS LIST, WRITTEN 2026-11-23 AT 18:38 TO 18:39 CST (one batch entry; written from the write rows in audit_log and the readback post on the Wall). Every item below is live and read back. None is shown by a run yet. In write order:
++      5. Marks for the next run: the D2 to C4 Builds' [L2] SHEET cap line names 130000; a second-kind premise push reads ENFORCER HELD; no "pkgL2C:" error.
++  - THE RUN ROW, THE COLLISION AND KEYSTONE CHECKS AND THE CLOSE PRESS LIST:
+@@ -2084,2 +2002 @@
+-      4. Written on the card "Write 550" at 18:38 CST in W4's thread (plans approved 17:40 CST on W3's card). Engine ee70cf05 to 9ae92845; Build Save Body 81,281 to 82,967 characters; Format Markdown 110,378 to 110,595; the child and the Library are unchanged (audit row 40547; plan W1 PASS Wall 10966; build W1 PASS Wall 11108; read back W1 MATCH Wall 11123). Revert: ask550/w4/write/revert_engine.
+-      5. Mark for the next run: a run with a removed seat shows its REMOVED SEAT line once in review_notes and under "## Removed seats". Limit: the line for a NOT SEATED alternate was tested on a made-up entry only; the next run with such an alternate must show it.
++      4. Mark for the next run: a run with a removed seat shows its REMOVED SEAT line once in review_notes and under "## Removed seats". Limit: the line for a NOT SEATED alternate was tested on a made-up entry only; the next run with such an alternate must show it.
+@@ -2090,2 +2007 @@
+-      4. Written on the card "Write 547 + 548 + 552" at 18:39 CST in W4's thread (plans approved 17:40 CST on W3's card). Engine 9ae92845 to dc36cdfe (Shared Library only, 1,154,813 to 1,156,500 characters); child 5406c38f to b4f662d4 (Shared Library only, 1,154,634 to 1,156,321); library de221df74811d115 to 7e9025163b67ee8e; map 5b1684f01b220d97 (audit row 40548; plans W1 PASS Wall 10966; 552 bu
+-      5. Marks for the next run: no E-COL or E-ONE item whose line is the tail of an audit mark; an E-COL CHANGE whose CHANGE TO names the answering side is not refused "the line names no answering side"; a keystone word that follows from the judge's own lines shows the NOT ASKED (code, ASK 552) row and no E-KEY call.
++      4. Marks for the next run: no E-COL or E-ONE item whose line is the tail of an audit mark; an E-COL CHANGE whose CHANGE TO names the answering side is not refused "the line names no answering side"; a keystone word that follows from the judge's own lines shows the NOT ASKED (code, ASK 552) row and no E-KEY call.
+@@ -2094,4 +2010,2 @@
+-      2. Written on the card "Write 556" at 18:39 CST in W4's thread (text approved 17:59 CST on W3's card). Engine dc36cdfe to c188b3cf; Build Save Body 82,967 to 83,941 characters (one insert of 974, before "const RN="); the child and the Library are unchanged (audit row 40549; draft 2 W1 PASS WITH ONE CONDITION Wall 11049, the condition carried byte for byte in draft 2a, Wall 11125; read back 
+-      3. Mark for the next run: the line stands once in review_notes. On run 41822's stored rounds it reads PRESSED: 21, with Esther 2:7, Isaiah 7:14, John 1:14, John 6:42 and Luke 2:49 named.
+-    - Not in this entry: ASKs approved or built and not yet written at 18:50 CST 2026-11-23.
+-  - THE ABSENCE MOVES, THE TWO OPENING CHECKS, THE REFUSED GATE CHANGE AND THREE TEXTS SERVED FROM THE SHARED LIBRARY, WRITTEN 2026-11-23 BETWEEN 19:18 AND 19:21 CST (one batch entry; written from the write rows in audit_log, the write post and the readback post on the Wall). Six writes, each built on the fetch-back of the one before. Every item below is live and read back for the final state. No
++      2. Mark for the next run: the line stands once in review_notes. On run 41822's stored rounds it reads PRESSED: 21, with Esther 2:7, Isaiah 7:14, John 1:14, John 6:42 and Luke 2:49 named.
++  - THE ABSENCE MOVES, THE TWO OPENING CHECKS, THE REFUSED GATE CHANGE AND THREE TEXTS SERVED FROM THE SHARED LIBRARY:
+@@ -2102,2 +2016 @@
+-      4. Written on the card "Write 559 + 560", pressed at 19:18 CST in W4's thread (plan approved for build 17:40 CST on W3's card "Approve 559 and 560 step 1"). Engine c188b3cf to d6af7230; child b4f662d4 to 663f3b6e (Shared Library only); Build Save Body 83,941 to 84,477 characters, the ASK 550 and ASK 556 inserts kept byte for byte; library 7e9025163b67ee8e to 907dec9d3fa905f7 (audit row 4061
+-      5. Marks for the next run: an absence-only LINK or PREMISE block draws a STRUCTURE item; a sentence such as "Luke 1:35 does not show a begetting" in an answer block is harvested by BAR; review_notes holds the CR1 CHECK line once. Limits: the plan's figures (0 to 1 items; BAR 1 to 4 hits) come from planted blocks, not from a run; on run 41822's CR1 the plan measured LAY ITEMS 4, a lower boun
++      4. Marks for the next run: an absence-only LINK or PREMISE block draws a STRUCTURE item; a sentence such as "Luke 1:35 does not show a begetting" in an answer block is harvested by BAR; review_notes holds the CR1 CHECK line once. Limits: the plan's figures (0 to 1 items; BAR 1 to 4 hits) come from planted blocks, not from a run; on run 41822's CR1 the plan measured LAY ITEMS 4, a lower boun
+@@ -2108,2 +2021 @@
+-      4. Written on the card "Write 549", pressed at 18:56 CST in W4's thread and run after the 559 + 560 write (plan approved for build 17:40 CST on W3's card). Engine d6af7230 to d644f766; child 663f3b6e to 21fc55c6; the Shared Library only, in both; library 907dec9d3fa905f7 to 565aca1f48b7ff65 (audit row 40614; plan W1 PASS Wall 10966; first build W1 FAIL Wall 11060, the test not run and no ch
+-      5. Mark for the next run: a refused gate CHANGE shows UNCURED and RECORD-ONLY with the reason naming pkgSGA or pkgPS, and the seat is not removed for it. On the stored reply of run 41822 (enforcer log row 52585) G1 and G2 go from 2 counted to 0 counted. Limit: LIB line 1641 (the E-APPLY row) still says an item left uncured "is counted in drv_uncured"; after this write that is untrue for a r
++      4. Mark for the next run: a refused gate CHANGE shows UNCURED and RECORD-ONLY with the reason naming pkgSGA or pkgPS, and the seat is not removed for it. On the stored reply of run 41822 (enforcer log row 52585) G1 and G2 go from 2 counted to 0 counted. Limit: LIB line 1641 (the E-APPLY row) still says an item left uncured "is counted in drv_uncured"; after this write that is untrue for a r
+@@ -2114,2 +2026 @@
+-      4. Written on the card "Write 561 + 569", pressed at 18:56 CST in W4's thread and run after the 549 write. Engine d644f766 to d1ef096c; C1B Build 9,035 to 9,961 characters; C1B Extract 23,094 to 23,949; child 21fc55c6 to 11ab85fa (Shared Library only); library 565aca1f48b7ff65 to b2c059e0ea3a0e9a (audit row 40615; 561 plan W3 PASS Wall 10995; 569 plan W3 PASS Wall 11052; build W1 PASS Wall 
+-      5. Marks for the next run: the C1B row carries lay_check; a DR1 with bare summary lines is resent once with the LAY note, which carries the 569 sentence once; a summary line in the tag-first form draws no item for a verse quoted with its layer elsewhere in the round. On run 41822's DR1 the new C1B Build resends for 4 layer points, the four summary lines. Limit: the tag-after form ("<referen
++      4. Marks for the next run: the C1B row carries lay_check; a DR1 with bare summary lines is resent once with the LAY note, which carries the 569 sentence once; a summary line in the tag-first form draws no item for a verse quoted with its layer elsewhere in the round. On run 41822's DR1 the new C1B Build resends for 4 layer points, the four summary lines. Limit: the tag-after form ("<referen
+@@ -2117,8 +2028,5 @@
+-      1. ASK 573, the judge line parser __RL (16,453 characters; the library holds it from LIB line 240 on): one new MAP entry "__RL"; a loader replaces the copy in six nodes. Engine: Build Save Body 84,477 to 68,570 characters; Format Markdown 110,595 to 94,688; Enforcer Build 48,193 to 32,286; Judge Enforcer Retry Build 19,296 to 3,389; Alt Judge Enforcer Retry Build 19,301 to 3,394. Child: R2 
+-      2. ASK 575, the POSTURE text of the five Accept nodes (4 texts): four MAP entries built from existing library lines, the few lines the library lacks carried in the entry itself. Accept Build 21,170 to 2,762 characters; Accept Check 22,153 to 1,826; Accept Return Build 19,636 to 1,115; Accept DS Return Build 19,558 to 1,037; Accept Final 23,431 to 2,677; each Shared Library +5,120. Written o
+-      3. ASK 576, the IMP statement (the barred-move harvest) of 11 B-round nodes (3 texts): three MAP entries built from existing library lines. The seven B Builds lose 4,236 characters each; C1B, D2B and D4B Extract lose 5,822 each; C4B Extract loses 5,557; the engine Shared Library gains 6,337. The copy of IMP nested inside C2B, D3B and C3B Extract stays inline. Written on the card "Write 576"
+-      4. All three: read back W1 MATCH Wall 11156. Sizes as graded: 573 net -99,350 characters of node parameter JSON over engine and child; 575 engine -91,411 and child +5,120 in code characters; 576 net -41,667 of node parameter JSON (engine -48,590, child +6,923). Each plan was approved for build by the operator on W1's card in W1's thread, "Approve for build": 576 at 18:38 CST, 575 and 573 at
+-      5. Marks for the next run: no error text "ASK 573:", "ASK 575:" or "ASK 576:" in debate_errors, and the run's saved row and report exist. No other run mark: the three are storage only.
+-    - After the six writes the live engine is b971dd86, the child 4078dbc5, the library b2c059e0ea3a0e9a (3,582 lines) and the map 98f2fbc5d543e617. The readback (Wall 11156) compared the final state only; the five versions between are covered by the writer's fetch-backs.
+-    - Not in this entry: ASKs approved or built and not yet written at 19:26 CST 2026-11-23 (562, 578, 579, 581).
+-  - THE LAYERS CHECK READS FIVE MORE TAG FORMS AND THE "AGAINST" HEADS, WRITTEN 2026-11-23 AT 19:29 CST (one batch entry; written from the write rows in audit_log, the write post and the readback post on the Wall). Two Shared Library writes, both copies, the second built on the fetch-back of the first. Both are live and read back. Neither is shown by a run yet. In write order:
++      1. ASK 573, the judge line parser __RL (16,453 characters; the library holds it from LIB line 240 on): one new MAP entry "__RL"; a loader replaces the copy in six nodes. Engine: Build Save Body 84,477 to 68,570 characters; Format Markdown 110,595 to 94,688; Enforcer Build 48,193 to 32,286; Judge Enforcer Retry Build 19,296 to 3,389; Alt Judge Enforcer Retry Build 19,301 to 3,394. Child: R2 
++      2. ASK 575, the POSTURE text of the five Accept nodes (4 texts): four MAP entries built from existing library lines, the few lines the library lacks carried in the entry itself. Accept Build 21,170 to 2,762 characters; Accept Check 22,153 to 1,826; Accept Return Build 19,636 to 1,115; Accept DS Return Build 19,558 to 1,037; Accept Final 23,431 to 2,677; each Shared Library +5,120.
++      3. ASK 576, the IMP statement (the barred-move harvest) of 11 B-round nodes (3 texts): three MAP entries built from existing library lines. The seven B Builds lose 4,236 characters each; C1B, D2B and D4B Extract lose 5,822 each; C4B Extract loses 5,557; the engine Shared Library gains 6,337. The copy of IMP nested inside C2B, D3B and C3B Extract stays inline.
++      4. Marks for the next run: no error text "ASK 573:", "ASK 575:" or "ASK 576:" in debate_errors, and the run's saved row and report exist. No other run mark: the three are storage only.
++  - THE LAYERS CHECK READS FIVE MORE TAG FORMS AND THE "AGAINST" HEADS:
+@@ -2131,2 +2039 @@
+-      6. Written on the card "Write 581", pressed at 19:29 CST in W4's thread (plan approved for build 19:18 CST on W1's card "Approve 581 for build", Wall 11153). Engine b971dd86 to 139bd8e2; child 4078dbc5 to 28f6d69c; the Shared Library only, in both; MAP LAY 13,455 to 15,842 characters; library b2c059e0ea3a0e9a to 95906f844eb547b9; map d69de81a157f6852 (audit row 40634; plan draft 1 W3 FAIL W
+-      7. Marks for the next run: no LAY item on a footed block written in one of the five forms. On the heads that were live before ASK 562 the replay changed no item (117 checks, 761 items before and 761 after), so by itself this write shows nothing; it matters under the heads ASK 562 opens. Limits stated in the plan: a sentence that speaks about a tag and ends in it ("... but never tags it [L3]
++      6. Marks for the next run: no LAY item on a footed block written in one of the five forms. On the heads that were live before ASK 562 the replay changed no item (117 checks, 761 items before and 761 after), so by itself this write shows nothing; it matters under the heads ASK 562 opens. Limits stated in the plan: a sentence that speaks about a tag and ends in it ("... but never tags it [L3]
+@@ -2137,4 +2044 @@
+-      4. Written on the card "Write 562", pressed at 19:29 CST in W4's thread and run after the 581 write (plan approved for build 19:17 CST on W1's card "Approve 562 for build", Wall 11151). Engine 139bd8e2 to 8c633631; child 28f6d69c to f900375e; the Shared Library only, in both; MAP LAY 15,842 to 16,191 characters; library 95906f844eb547b9 to 0e1cce8f1b596ea4; map 6c6047999c902537 (audit row 4
+-      5. Marks for the next run: an unfooted block under an "against" head draws a STRUCTURE item in the one send-back; for an Oracle defender such a block without an [L2] or an [L4] line draws the item too; a title-only "against" head over PRESS heads draws none. This write widens the send-back. Replay on the stored rounds (75 checks; 442 items before, 480 after): the 50 stored rounds give 28 ne
+-    - After the two writes the live engine is 8c633631, the child f900375e, the library 0e1cce8f1b596ea4 (3,582 lines) and the map 6c6047999c902537.
+-    - Not in this entry: ASKs approved or built and not yet written at 19:31 CST 2026-11-23 (578, 579).
++      4. Marks for the next run: an unfooted block under an "against" head draws a STRUCTURE item in the one send-back; for an Oracle defender such a block without an [L2] or an [L4] line draws the item too; a title-only "against" head over PRESS heads draws none. This write widens the send-back. Replay on the stored rounds (75 checks; 442 items before, 480 after): the 50 stored rounds give 28 ne
+@@ -2215 +2118,0 @@
+-  - Live: engine 9a7841f0 (from 60bf6007), saved 04:46:25Z on 11-19; child unchanged.
+@@ -2222 +2124,0 @@
+-  - Live: engine 7cd61791 (from 4877ce74), on the operator's card pressed 05:19:47Z on 11-19; child unchanged.
+@@ -2229 +2130,0 @@
+-  - Live: engine 4877ce74 (from db713b6a, with ASK 434), on the operator's card pressed 05:16:48Z on 11-19.
+@@ -2241 +2141,0 @@
+-  - Live: engine db713b6a and child 98e77130 (from 9a7841f0 and aa9ed5c5), library 1a9d23268043980c, written 04:55Z on 11-19 on the operator's card.
+@@ -2310 +2209,0 @@
+-        - Revert: w4/rcs/revert_schema_RCS.sql restores the live five-argument function and grants.
+@@ -2500 +2398,0 @@
+-- Live flow: s244 (n8n version 8bd15b50, 458 nodes; Shared Library 1,028,129 characters, sha ce7da4b3ae8956a5). s189 = s184 + pkgABR rev 3 + pkgGKV rev 2 (s185) + pkgKDN rev 3 (s186) + pkgERC rev 2 (s187) + pkgJ2 rev 2 (s188) + pkgONR + pkgAJN (s189). s198 = s189 + pkgD22 (s190) + pkgEPT (s191) + pkgPWF rev 2 (s192) + pkgBCL rev 4 (s193) + pkgJBC rev 2 (s194) + pkgPSN (s195) + pkgBFX rev 2 (s196)
