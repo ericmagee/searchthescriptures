@@ -1,0 +1,114 @@
+== A. Structure
+PASS 30 engine nodes hold L2C in the base (30)
+PASS engine: only the 30 L2C nodes and the Shared Library change (31)
+PASS child: only the Shared Library changes (Shared Library)
+PASS connections unchanged, engine and child
+PASS node names, types, onError and positions unchanged
+PASS every existing LIB line unchanged; new lines appended only (engine +15, child +15)
+PASS engine and child: same LIB, same 7 new MAP entries (engine-only keys REFP and Alternate Merge CPD unchanged)
+PASS every existing MAP entry (49) unchanged and rebuilds to the same source
+PASS 7 new MAP entries: L2C Extract, L2C Build, L2C Citation Scan, L2C Quote Report, L2C Lexicon Plan, L2C L2 Lexicon Plan, L2C Count Plan
+PASS each new entry: rebuilt length equals its n
+== A2. Byte for byte, per node
+PASS C1 Extract: only the block is replaced, by the L2C Extract loader (keeps the L2 Count Plan reference)
+PASS C1 Extract: served text equals today's block byte for byte (23652)
+PASS D2 Build: only the block is replaced, by the L2C Build loader (keeps the L2 Count Plan reference)
+PASS D2 Build: served text equals today's block + 565 + 568 byte for byte (24128)
+PASS D2 Extract: only the block is replaced, by the L2C Extract loader (keeps the L2 Count Plan reference)
+PASS D2 Extract: served text equals today's block byte for byte (23652)
+PASS C2 Build: only the block is replaced, by the L2C Build loader (keeps the L2 Count Plan reference)
+PASS C2 Build: served text equals today's block + 565 + 568 byte for byte (24128)
+PASS C2 Extract: only the block is replaced, by the L2C Extract loader (keeps the L2 Count Plan reference)
+PASS C2 Extract: served text equals today's block byte for byte (23652)
+PASS D3 Build: only the block is replaced, by the L2C Build loader (keeps the L2 Count Plan reference)
+PASS D3 Build: served text equals today's block + 565 + 568 byte for byte (24128)
+PASS D3 Extract: only the block is replaced, by the L2C Extract loader (keeps the L2 Count Plan reference)
+PASS D3 Extract: served text equals today's block byte for byte (23652)
+PASS C3 Build: only the block is replaced, by the L2C Build loader (keeps the L2 Count Plan reference)
+PASS C3 Build: served text equals today's block + 565 + 568 byte for byte (24128)
+PASS C3 Extract: only the block is replaced, by the L2C Extract loader (keeps the L2 Count Plan reference)
+PASS C3 Extract: served text equals today's block byte for byte (23652)
+PASS Citation Scan: only the block is replaced, by the L2C Citation Scan loader
+PASS Citation Scan: served text equals today's block byte for byte (14216)
+PASS Quote Report: only the block is replaced, by the L2C Quote Report loader
+PASS Quote Report: served text equals today's block byte for byte (4254)
+PASS D4 Build: only the block is replaced, by the L2C Build loader (keeps the L2 Count Plan reference)
+PASS D4 Build: served text equals today's block + 565 + 568 byte for byte (24128)
+PASS D4 Extract: only the block is replaced, by the L2C Extract loader (keeps the L2 Count Plan reference)
+PASS D4 Extract: served text equals today's block byte for byte (23652)
+PASS C4 Build: only the block is replaced, by the L2C Build loader (keeps the L2 Count Plan reference)
+PASS C4 Build: served text equals today's block + 565 + 568 byte for byte (24128)
+PASS D2 Lexicon Plan: only the block is replaced, by the L2C Lexicon Plan loader
+PASS D2 Lexicon Plan: served text equals today's block byte for byte (5780)
+PASS C2 Lexicon Plan: only the block is replaced, by the L2C Lexicon Plan loader
+PASS C2 Lexicon Plan: served text equals today's block byte for byte (5780)
+PASS D3 Lexicon Plan: only the block is replaced, by the L2C Lexicon Plan loader
+PASS D3 Lexicon Plan: served text equals today's block byte for byte (5780)
+PASS C3 Lexicon Plan: only the block is replaced, by the L2C Lexicon Plan loader
+PASS C3 Lexicon Plan: served text equals today's block byte for byte (5780)
+PASS D4 Lexicon Plan: only the block is replaced, by the L2C Lexicon Plan loader
+PASS D4 Lexicon Plan: served text equals today's block byte for byte (5780)
+PASS C4 Lexicon Plan: only the block is replaced, by the L2C Lexicon Plan loader
+PASS C4 Lexicon Plan: served text equals today's block byte for byte (5780)
+PASS L2 Lexicon Plan: only the block is replaced, by the L2C L2 Lexicon Plan loader
+PASS L2 Lexicon Plan: served text equals today's block byte for byte (5680)
+PASS L2 Count Plan: only the block is replaced, by the L2C Count Plan loader (keeps the L2 Count Plan reference)
+PASS L2 Count Plan: served text equals today's block byte for byte (16796)
+PASS C3G Extract: only the block is replaced, by the L2C Extract loader (keeps the L2 Count Plan reference)
+PASS C3G Extract: served text equals today's block byte for byte (23652)
+PASS C1B Extract: only the block is replaced, by the L2C Extract loader (keeps the L2 Count Plan reference)
+PASS C1B Extract: served text equals today's block byte for byte (23652)
+PASS D2B Extract: only the block is replaced, by the L2C Extract loader (keeps the L2 Count Plan reference)
+PASS D2B Extract: served text equals today's block byte for byte (23652)
+PASS C2B Extract: only the block is replaced, by the L2C Extract loader (keeps the L2 Count Plan reference)
+PASS C2B Extract: served text equals today's block byte for byte (23652)
+PASS D3B Extract: only the block is replaced, by the L2C Extract loader (keeps the L2 Count Plan reference)
+PASS D3B Extract: served text equals today's block byte for byte (23652)
+PASS C3B Extract: only the block is replaced, by the L2C Extract loader (keeps the L2 Count Plan reference)
+PASS C3B Extract: served text equals today's block byte for byte (23652)
+PASS D4B Extract: only the block is replaced, by the L2C Extract loader (keeps the L2 Count Plan reference)
+PASS D4B Extract: served text equals today's block byte for byte (23652)
+PASS L2 Gloss Plan: only the block is replaced, by the L2C Count Plan loader (keeps the L2 Count Plan reference)
+PASS L2 Gloss Plan: served text equals today's block byte for byte (16796)
+PASS Build text equals the graded 565+568 Build block (ask565 target) byte for byte
+== B. Behaviour on run 41822 inputs (old block vs new loader, same $ and REFP)
+PASS C1 Extract (Extract): 27 calls, outputs identical
+PASS D2 Build (Build): 27 calls, outputs identical
+PASS D2 Extract (Extract): 27 calls, outputs identical
+PASS C2 Build (Build): 27 calls, outputs identical
+PASS C2 Extract (Extract): 27 calls, outputs identical
+PASS D3 Build (Build): 27 calls, outputs identical
+PASS D3 Extract (Extract): 27 calls, outputs identical
+PASS C3 Build (Build): 27 calls, outputs identical
+PASS C3 Extract (Extract): 27 calls, outputs identical
+PASS Citation Scan (Citation Scan): 7 calls, outputs identical
+PASS Quote Report (Quote Report): 2 calls, outputs identical
+PASS D4 Build (Build): 27 calls, outputs identical
+PASS D4 Extract (Extract): 27 calls, outputs identical
+PASS C4 Build (Build): 27 calls, outputs identical
+PASS D2 Lexicon Plan (Lexicon Plan): 15 calls, outputs identical
+PASS C2 Lexicon Plan (Lexicon Plan): 15 calls, outputs identical
+PASS D3 Lexicon Plan (Lexicon Plan): 15 calls, outputs identical
+PASS C3 Lexicon Plan (Lexicon Plan): 15 calls, outputs identical
+PASS D4 Lexicon Plan (Lexicon Plan): 15 calls, outputs identical
+PASS C4 Lexicon Plan (Lexicon Plan): 15 calls, outputs identical
+PASS L2 Lexicon Plan (L2 Lexicon Plan): 15 calls, outputs identical
+PASS L2 Count Plan (Count Plan): 10 calls, outputs identical
+PASS C3G Extract (Extract): 27 calls, outputs identical
+PASS C1B Extract (Extract): 27 calls, outputs identical
+PASS D2B Extract (Extract): 27 calls, outputs identical
+PASS C2B Extract (Extract): 27 calls, outputs identical
+PASS D3B Extract (Extract): 27 calls, outputs identical
+PASS C3B Extract (Extract): 27 calls, outputs identical
+PASS D4B Extract (Extract): 27 calls, outputs identical
+PASS L2 Gloss Plan (Count Plan): 10 calls, outputs identical
+   the $ mock serves L2 Count Plan e340 {ok:true, eng:["margin"]}; the synthetic claim shows that path
+== C. Negative controls (the test must fail when the scope is broken)
+PASS REFP missing: outputs differ on tags, check D2, check C3, check synthetic English word (reads $ L2 Count Plan), sheetPlan, refsIn, blockAt
+PASS $ without L2 Count Plan: outputs differ on check D2, check C3, check synthetic English word (reads $ L2 Count Plan)
+PASS missing MAP entry: loader throws (pkgL2C: the Shared Library holds no L2C Build entry)
+PASS library line changed: loader throws (pkgL2C: rebuilt L2C Build is 24129, expected 24128)
+== D. Parse
+PASS all 30 changed nodes parse as Code node bodies
+== SIZE (MEASURED): 30 nodes 1027445 -> 505827 chars (521618 less); Shared Library engine 1146022 -> 1154736; engine workflow JSON 7632719 -> 7110944; child JSON 2638287 -> 2647355
+ALL PASS
