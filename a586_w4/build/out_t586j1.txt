@@ -1,0 +1,54 @@
+== Parse, pair, scope
+PASS sources parse: 126, errors 0
+   pair: engine lib eccb90fb06a25a25 map e71091d76281ae8a | child lib eccb90fb06a25a25 map e71091d76281ae8a | Library Check PASSES
+PASS pair passes
+PASS scope (__cecX, __cecU586): target_engine_586j1.json sources 64 uses 93 out of scope 0
+PASS scope (__cecX, __cecU586): target_child_586j1.json sources 62 uses 92 out of scope 0
+PASS LIB lines changed: 1286, 1351, 1492
+PASS target_engine_586j1.json: nodes changed: Build Independent Verdict, Panel Build, Shared Library
+PASS target_child_586j1.json: nodes changed: Shared Library
+PASS Panel Build: the only change is the J1 (a) sentence, inserted once
+PASS Panel Build parses
+PASS Build Independent Verdict: the only change is the J1 (a) sentence, inserted once
+PASS Build Independent Verdict parses
+== rd386 (the one decider), direct
+PASS BROKEN, KEYSTONE: D5 -- STANDS -- x: target UNDERDETERMINED (live CHALLENGER WINS)
+PASS BROKEN, **KEYSTONE:** D5 — STANDS: target UNDERDETERMINED (live CHALLENGER WINS)
+PASS BROKEN, KEYSTONE: D5 -- BROKEN -- x: target CHALLENGER WINS (live CHALLENGER WINS)
+PASS BROKEN, KEYSTONE: D5 -- WITHDRAWN: target CHALLENGER WINS (live CHALLENGER WINS)
+PASS BROKEN, no keystone line: target CHALLENGER WINS (live CHALLENGER WINS)
+PASS HELD is untouched (DEFENDER WINS stays)
+PASS the reason names the keystone rule
+== ert386 (AUDIT v61) on stored judgments 1263 to 1274 (verdict_raw md5 equal to the DB)
+   1263 sol62 | KEYSTONE: D5 -- BROKEN (Commitment 3) -- D5 vs C2 | v61 live UNDERDETERMINED, target UNDERDETERMINED
+   1264 chatgpt | KEYSTONE: D5 -- BROKEN -- D5 vs C2: [L1] Matthew  | v61 live CHALLENGER WINS, target CHALLENGER WINS
+   1265 qwen4max | KEYSTONE: D5 -- BROKEN -- the last declared link, | v61 live CHALLENGER WINS, target CHALLENGER WINS
+   1266 sol62 | KEYSTONE: D5 -- BROKEN (Commitment 5) -- Joseph's | v61 live UNDERDETERMINED, target UNDERDETERMINED
+   1267 chatgpt | KEYSTONE: D5 -- BROKEN -- D5 vs C2: [L1] Matthew  | v61 live UNDERDETERMINED, target UNDERDETERMINED
+   1268 sol | KEYSTONE: D5 -- BROKEN (Commitments 3 and 13) --  | v61 live UNDERDETERMINED, target UNDERDETERMINED
+   1269 argon | KEYSTONE: D4 -- STANDS -- Decided by D4 vs C6 on  | v61 live DEFENDER WINS, target DEFENDER WINS
+PASS 1269: control, unchanged (DEFENDER WINS)
+   1270 qwen4max | KEYSTONE: D4 -- BROKEN -- the last declared link, | v61 live CHALLENGER WINS, target CHALLENGER WINS
+   1271 sol | KEYSTONE: D4 -- STANDS -- D4 vs C1 and D4 vs C6 d | v61 live CHALLENGER WINS, target UNDERDETERMINED
+PASS 1271: known-bad, CHALLENGER WINS beside KEYSTONE STANDS becomes UNDERDETERMINED, with the reason
+   1272 gemini | KEYSTONE: D5 -- STANDS -- D5 is graded STANDS at  | v61 live UNDERDETERMINED, target UNDERDETERMINED
+PASS 1272: control, unchanged (UNDERDETERMINED)
+   1273 spark | KEYSTONE: D5 -- STANDS -- D5 vs C3: UNDERDETERMIN | v61 live UNDERDETERMINED, target UNDERDETERMINED
+PASS 1273: control, unchanged (UNDERDETERMINED)
+   1274 qwen4max | KEYSTONE: D5 -- BROKEN -- D5, the last declared l | v61 live UNDERDETERMINED, target UNDERDETERMINED
+PASS 1274: control, unchanged (UNDERDETERMINED)
+   v61 words moved: 1271
+PASS only 1271 moves on the 587 base (1272 and 1273 already read UNDERDETERMINED)
+   pre-587 (196402d0) for reference: 1273 CHALLENGER WINS, 1272 UNDERDETERMINED
+PASS reference: before 587, 1273 read CHALLENGER WINS beside KEYSTONE D5 STANDS
+== v25 (LIB 1351) and gate (LIB 1492) lines, the 1273 inputs, keystone STANDS and BROKEN
+   LIB 1351: STANDS live CHALLENGER WINS, target UNDERDETERMINED; BROKEN target CHALLENGER WINS
+PASS LIB 1351: STANDS gives UNDERDETERMINED; BROKEN keeps CHALLENGER WINS
+   LIB 1492: STANDS live CHALLENGER WINS, target UNDERDETERMINED; BROKEN target CHALLENGER WINS
+PASS LIB 1492: STANDS gives UNDERDETERMINED; BROKEN keeps CHALLENGER WINS
+PASS the v25 trigger list names the keystone rule
+== sbApply2024 in its real scope (Gate Record), judgment 1273 (KEYSTONE D5 STANDS), one CHANGE item writing RESULT: CHALLENGER WINS, no confirmed closing contradiction
+   live CHALLENGER WINS / items: 
+   target UNDERDETERMINED / items: S1 RESULT DIFFERS
+PASS gate: live accepts CHALLENGER WINS; target derives UNDERDETERMINED and raises RESULT DIFFERS to the judge
+RESULT: ALL PASS
