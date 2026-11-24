@@ -1,0 +1,22 @@
+[
+ {
+  "section": "4",
+  "old": "`operational_doc` (this), `engine_manual`, `blackboard_manual`",
+  "new": "`operational_doc` (this), `engine_manual` (held in parts in `engine_manual_parts`, §7), `blackboard_manual`"
+ },
+ {
+  "section": "7",
+  "old": "The debate engine's own manual: `engine_manual` (versioned; `select max(version)`);",
+  "new": "The debate engine's own manual is held in parts in the table `engine_manual_parts`: `SELECT engine_manual_toc()` lists the parts, `SELECT engine_manual_part('<part>')` gives one, and `SELECT * FROM engine_manual_full()` gives the whole text and its version; the table `engine_manual` holds only the whole-text versions before the cut and a pointer row;"
+ },
+ {
+  "section": "12",
+  "old": "The writer sets `SET LOCAL truth.card = '<card label> <press time>Z <thread seat>'` in the same call",
+  "new": "The writer sets `SET LOCAL truth.card = '<card label> <press time in Central time with its zone, for example 21:29 CST> <thread seat>'` in the same call"
+ },
+ {
+  "section": "29",
+  "old": "the engine manual is written only through engine_manual_apply.",
+  "new": "the engine manual is written only through engine_manual_part_apply, one part at a time."
+ }
+]
