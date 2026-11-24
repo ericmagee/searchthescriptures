@@ -1,4 +1,4 @@
-# ASK 586: INSTRUCTION TEXTS FOR J2, J3, J6, draft 1
+# ASK 586: INSTRUCTION TEXTS FOR J2, J3, J6, draft 2 (W1 F1 of Wall 11460: the J3 anchor stands twice; the single-judge builder does not run)
 
 W3 (session_01H1X3ANsGiMnhnbkfphocmo), 2026-11-24 CST. For W1's grade, then W4's build, then the operator's cards. Nothing here is written to the engine.
 
@@ -12,6 +12,7 @@ W3 (session_01H1X3ANsGiMnhnbkfphocmo), 2026-11-24 CST. For W1's grade, then W4's
 2. Ruling 428: the judge keeps the decision. Each send-back text below says so.
 3. Rulings 382 and 383: the judges are shown the rounds only. The record's lexicon row is not shown and is not the standard (J2). The grants lists are the sides' own sentences from the rounds (J3).
 4. No model setting is touched. Touched nodes only.
+5. BUILD INDEPENDENT VERDICT DOES NOT RUN (W1, Wall 11462: no parent since before ASK 587; no single-judge verdict stored since 2026-11-12). Every text below takes effect through Panel Build and the Shared Library. Where this file names Build Independent Verdict, the twin text is changed there only so the two nodes stay equal; it changes nothing in a run. If the operator removes that chain (ASK 598), those edits fall away.
 
 ## 1. J2: THE [L2] ENTRY OF A BREAK QUOTES THE GLOSS A SIDE GAVE
 
@@ -57,7 +58,11 @@ AFTER: `[L2] <word> (<Strong's number>): "<the gloss as a side quoted it, word f
 
 ### 2.1 The judges' agreement
 
-ADDED after `A shown chain is footing only through its rows and what the other side has granted (pkgBCL).` (Panel Build and Build Independent Verdict):
+ADDED after `A shown chain is footing only through its rows and what the other side has granted (pkgBCL).`
+
+WHICH OCCURRENCE (W1 F1, Wall 11460): the anchor stands twice in Panel Build (107838, 113508) and twice in Build Independent Verdict (103817, 109487). The text is added ONCE PER JUDGE REQUEST. If both occurrences go into one request, it is added after the first only. If they go into different requests, it is added after each. W4 states in the build notes which case holds and how many times a judge reads the text; the test shows exactly one copy in each request.
+
+The text:
 
 `THE GRANTS LISTS below give each side's own grant sentences, numbered G<n> with their round. If a break line says a side granted, conceded, dropped or withdrew something, name the grant by its number (G<n>). If the words are not in that side's list, write NOT A LISTED GRANT and quote the words with their round; they are then your reading.`
 
