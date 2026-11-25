@@ -1,10 +1,10 @@
 #!/bin/bash
-# ASK 647 write (base engine 8470161f (on the 645 fetch-back) / child aad0ad9c): ENGINE ONLY, Shared Library LIB 2482 (unseated alternate's final text, W4 build b1 30e51269, W1 grade PASS Wall 12064).
+# ASK 647 write (base engine e11a57aa (on the 646 fetch-back) / child aad0ad9c): ENGINE ONLY, Shared Library LIB 2482 (unseated alternate's final text, W4 build b1 30e51269, W1 grade PASS Wall 12064).
 # Operator press: PRESS_LINE
 # Refuses while any engine or child execution runs, when live is not the base, or when the rebuild, t647, standing set, pair check or one-copy check fail.
 set -u
 : "${N8N_API_KEY:?N8N_API_KEY not set; NOTHING WRITTEN}"
-H=https://truthapp.app.n8n.cloud/api/v1; B=/mnt/project-files/ask647/w4/b3; O=/mnt/project-files/ask647/w4/write; T=/mnt/project-files/ask578/w4/tools; E=moMxiV4Irg1uRBZN; C=MqQHRl7mQQ0z8QdT; cd $O
+H=https://truthapp.app.n8n.cloud/api/v1; B=/mnt/project-files/ask647/w4/b4; O=/mnt/project-files/ask647/w4/write; T=/mnt/project-files/ask578/w4/tools; E=moMxiV4Irg1uRBZN; C=MqQHRl7mQQ0z8QdT; cd $O
 RUN=$(curl -s -H "X-N8N-API-KEY: $N8N_API_KEY" "$H/executions?status=running&limit=100" | python3 -I -c "import json,sys;d=json.load(sys.stdin).get('data') or [];print(' '.join(x['id'] for x in d if x.get('workflowId') in ('$E','$C')))") || { echo "RUN CHECK FAILED; NOTHING WRITTEN"; exit 1; }
 [ -z "$RUN" ] || { echo "ENGINE OR CHILD RUN LIVE ($RUN); NOTHING WRITTEN"; exit 1; }
 rm -rf atw && mkdir -p atw && node $B/b647.cjs $B/base_eng.json $O/atw/target_engine_647.json > atw/build.txt 2>&1 || { echo "REBUILD FAILED; NOTHING WRITTEN"; exit 1; }
@@ -16,12 +16,12 @@ python3 -I - $O $B <<'PY' || { echo "LIVE IS NOT THE BASE; NOTHING WRITTEN"; exi
 import json,sys
 O,B=sys.argv[1],sys.argv[2]
 P=lambda d:{n['name']:json.dumps(n['parameters'],sort_keys=True) for n in d['nodes']}
-a=json.load(open(f'{O}/prewrite_eng.json'));b=json.load(open('/mnt/project-files/ask645/w4/write/fetchback_eng_645.json'));T=json.load(open(f'{B}/tg/target_engine_647.json'))
+a=json.load(open(f'{O}/prewrite_eng.json'));b=json.load(open('/mnt/project-files/ask646/w4/write/fetchback_eng_646.json'));T=json.load(open(f'{B}/tg/target_engine_647.json'))
 assert a['versionId']==b['versionId'],('live engine version',a['versionId'],'base',b['versionId'])
 assert P(a)==P(b),'live engine nodes are not the base'; assert a['connections']==b['connections'],'engine connections moved'
 assert T['connections']==b['connections'] and set(P(T))==set(P(b)),'target changes nodes or connections'
 ch=[n for n in P(b) if P(T)[n]!=P(b)[n]];assert sorted(ch)==['Shared Library'],ch
-c=json.load(open(f'{O}/prewrite_child.json'));cb=json.load(open('/mnt/project-files/ask645/w4/write/fetchback_child_645.json'));assert P(c)==P(cb) and c['connections']==cb['connections'],'live child is not the base'
+c=json.load(open(f'{O}/prewrite_child.json'));cb=json.load(open('/mnt/project-files/ask646/w4/write/fetchback_child_646.json'));assert P(c)==P(cb) and c['connections']==cb['connections'],'live child is not the base'
 json.dump({x:a[x] for x in ('name','nodes','connections','settings')},open(f'{O}/revert_eng_647.json','w'),ensure_ascii=False)
 TN={n['name']:n for n in T['nodes']};a['nodes']=[({**n,'parameters':TN[n['name']]['parameters']} if n['name'] in ch else n) for n in a['nodes']]
 json.dump({'name':a['name'],'nodes':a['nodes'],'connections':a['connections'],'settings':a['settings']},open(f'{O}/put_eng.json','w'),ensure_ascii=False)

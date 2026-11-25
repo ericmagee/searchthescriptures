@@ -1,6 +1,6 @@
 #!/bin/bash
 # ASK 646 write (base engine 8470161f (on the 645 fetch-back) / child aad0ad9c): ENGINE ONLY, Init Seats and Build Save Body (LEFT OUT, W4 build b1 dc3bedc6, W1 grade PASS Wall 12062).
-# Operator press: Eric pressed W4 card "Write it" 08:25 CST 11-25 (cmsg_017ZQamDMHrS6fqMHnQDVo58Jbsg9gUqijyeXPR8zJryhd); run after W1's recheck
+# Operator press: Eric pressed W4 card "Write it" 08:25 CST 11-25 (cmsg_017ZQamDMHrS6fqMHnQDVo58Jbsg9gUqijyeXPR8zJryhd); W1 recheck PASS Wall 12076
 # Refuses while any engine or child execution runs, when live is not the base, or when the rebuild, t646, standing set, pair check or one-copy check fail.
 set -u
 : "${N8N_API_KEY:?N8N_API_KEY not set; NOTHING WRITTEN}"

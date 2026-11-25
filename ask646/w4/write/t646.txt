@@ -1,0 +1,35 @@
+PASS 42071: no Judge Order Read stored (run before ASK 591); not replayable, skipped
+PASS 42234: both refuse alike
+PASS 42283: both refuse alike
+PASS 42373: every old output field is equal
+PASS 42373: every order seat is seated or left out, never both
+PASS 42373: no seat listed twice
+PASS 42373: every left-out seat has its recorded reason (no "not reached" case arises)
+PASS 42373: the line is the old line plus the LEFT OUT part
+   42373 [JUDGE ORDER v5: panel list sol, sol62, spark; alternates list chatgpt, qwen4max, gemini, argon, sonnet, hydrogen, neon | SEATED: panel sol62, spark, sol; reserve qwen4max; alternates chatgpt, qwen4max, gemini, argon, hydrogen, neon; LEFT OUT: sonnet (runs the same model as a debater (anthropic/claude-sonnet-5.5))]
+PASS 42505: every old output field is equal
+PASS 42505: every order seat is seated or left out, never both
+PASS 42505: no seat listed twice
+PASS 42505: every left-out seat has its recorded reason (no "not reached" case arises)
+PASS 42505: the line is the old line plus the LEFT OUT part
+   42505 [JUDGE ORDER v5: panel list sol, sol62, spark; alternates list chatgpt, qwen4max, gemini, argon, sonnet, hydrogen, neon | SEATED: panel sol62, spark, sol; reserve qwen4max; alternates chatgpt, qwen4max, gemini, argon, hydrogen, neon; LEFT OUT: sonnet (runs the same model as a debater (anthropic/claude-sonnet-5.5))]
+PASS 42517: every old output field is equal
+PASS 42517: every order seat is seated or left out, never both
+PASS 42517: no seat listed twice
+PASS 42517: every left-out seat has its recorded reason (no "not reached" case arises)
+PASS 42517: the line is the old line plus the LEFT OUT part
+   42517 [JUDGE ORDER v6: panel list gemini, qwen4max, hydrogen; alternates list sol, sol62, spark, chatgpt, argon, sonnet, neon | SEATED: panel gemini, qwen4max, hydrogen; reserve sonnet; alternates argon, sonnet, neon; LEFT OUT: sol (family openai debates in this debate), sol62 (is a debater), spark (is a debater), chatgpt (family openai debates in this debate)]
+PASS 42528: every old output field is equal
+PASS 42528: every order seat is seated or left out, never both
+PASS 42528: no seat listed twice
+PASS 42528: every left-out seat has its recorded reason (no "not reached" case arises)
+PASS 42528: the line is the old line plus the LEFT OUT part
+   42528 [JUDGE ORDER v6: panel list gemini, qwen4max, hydrogen; alternates list sol, sol62, spark, chatgpt, argon, sonnet, neon | SEATED: panel qwen4max, sol, sol62; reserve sonnet; alternates chatgpt, sonnet; LEFT OUT: gemini (family google debates in this debate), hydrogen (is a debater), spark (is a debater), argon (family google debates in this debate), neon (family google debates in this debate)]
+PASS C2 a seat that did not accept the posture shows that reason
+PASS C2 brackets in a reason are removed
+PASS C2 nobody left out prints none
+PASS C3 only Init Seats and Build Save Body change
+PASS C3 connections equal
+PASS C4 tagged ASK 646; no new catch
+29 pass, 0 fail
+ALL PASS
