@@ -46,3 +46,12 @@ C. THE JUDGES
 
 IN ONE LINE: the Oracle loses on its own argument, chiefly the espousal knowing it states and does not show, though the record's answers were in its prompt. In 42528 the engine's costless-press label may have added to one judge's breaks. Two of the three runs gave no counted verdict at all.
 NOT CHECKED: for each 42528 verse, the engine's UNPROVEN status against the judges' "proven" reading; the execution data behind W4's items.
+
+## UPDATE 08:48 CST 11-25, after W4 Wall 12098
+E1 RULING CHANGED: ENGINE FAULT, CONTRIBUTING CAUSE in 42528, NOT DECISIVE.
+- W4 replayed the live D4 Build code offline on the 42528 rounds; it reproduces the live list word for word. None of the four verses labelled costless was unproven under the engine's own rule: Luke 1:35 was proven in DR1 P5 and the PROVEN IN check missed it; Matthew 1:20 and Galatians 4:4 are [L3] layer verses that the list reader counted as presses; Luke 1:34 is proven by reference in premise 6.
+- So the engine told the Oracle that proven presses cost nothing. That is a fault, not only a disagreement with one judge.
+- Still not decisive: the Oracle did answer Luke 1:34, 1:35 and Matthew 1:20, and sol and sol62 broke D3, D5 and D6 on those answers. The keystone falls 2 of 3 without qwen4max.
+- Two bugs for the second objective: the PROVEN IN check ("named there but not quoted"), and the list reader counting layer verses as presses.
+- B5 in the cause list now reads: ENGINE FAULT, contributing in 42528 (costless label on proven presses).
+NOT CHECKED by me: W4's offline replay; I took its result as W4 reported it.
