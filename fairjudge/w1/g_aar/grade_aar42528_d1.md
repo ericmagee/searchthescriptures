@@ -17,3 +17,8 @@ F2 (required). RECORD-ONLY rows number ten, not five or six: the six above plus 
 F3 (required). Item 5 says "54 panel send-back items ... all 54 carry the judge's response line; the only unsent rows are the three TRIAL E-PTS rows". The 54 are the panel send_back rows of rules E-ANS 22, E-ASSUME 6, E-COL 14, E-HOLD 4, E-L2G 2, E-LAY 5, E-RES 1, all with a response: true. But the panel seats also hold 20 E-APPLY rows and 5 E-GATE rows with no response line, besides the 3 E-PTS. Name the 54 by rule and say what the E-APPLY and E-GATE rows are, or drop "the only unsent rows".
 N1. Cost parts and the 7.54 judging figure: the parts sum to 11.18 (rounding); NOT CHECKED entry by entry.
 N2. "Clean run 2 for 591, 593, 601" rests on AAR 42373 and this run; I agree for the lines checked here (order line, debaters not seated, no haiku: NOT CHECKED for haiku beyond W3's statement).
+
+## Draft 2 (Wall 11939, aar_run42528_draft2.md md5 87de2ee1, commit a92df4c1): PASS
+Diff from draft 1: header, SQL span, items 1, 4, 5, 6, 11, 15, DEFECTS 2 and 7, SUGGESTED 1, ASK AAR ROWS, FOR THE OPERATOR 2. Nothing else changed.
+F1 fixed: J6 = 23 E-COL rows, counted as clean run 1 for the record-only side; row 191 added to the revision list. F2 fixed: ten RECORD-ONLY rows, split checked against my SQL (E-ANS sol62; second readings sol 3, sol62 1, chatgpt 1; E-GATE sol 4). F3 fixed: the 54 named by rule; E-PTS 3, E-APPLY 20, E-GATE 5 (four RECORD-ONLY, one CURED: 54584) named.
+W4's Wall 11938 readings are marked as W4's and not read by W3; NOT CHECKED by me. OBJECTIVE MET: yes. STANDARD (ASK 599): not applicable.
