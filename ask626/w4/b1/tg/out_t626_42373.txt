@@ -1,0 +1,235 @@
+PASS fixture: the 42373 [CR3] list carries six "**k.**" heads
+PASS C2 D3 Build: live reads 0 premises of the 42373 [CR3] list, new reads 6
+PASS C2 D3 Build: form bold reads 6 premises in order
+PASS C2 D3 Build: form plain reads 6 premises in order
+PASS C2 D3 Build: form paren reads 6 premises in order
+PASS C2 D3 Build: form h3 reads 6 premises in order
+PASS C2 D3 Build: form h4bold reads 6 premises in order
+PASS C2 D3 Build: form boldopen reads 6 premises in order
+PASS C2 D3 Build: form numbold reads 6 premises in order
+PASS C3 D3 Build: "### k." list with inner "1. 2. 3." lines reads 6, the inner lines inside premise 1 (run 42234 shape)
+PASS C3 D3 Build: a "1." list with a "### 2." line inside an item reads byte-equal to live
+PASS C4 D3 Build: a list with no numbered head reads 0 (LIST NOT READ case)
+PASS C2 D4 Build: live reads 0 premises of the 42373 [CR3] list, new reads 6
+PASS C2 D4 Build: form bold reads 6 premises in order
+PASS C2 D4 Build: form plain reads 6 premises in order
+PASS C2 D4 Build: form paren reads 6 premises in order
+PASS C2 D4 Build: form h3 reads 6 premises in order
+PASS C2 D4 Build: form h4bold reads 6 premises in order
+PASS C2 D4 Build: form boldopen reads 6 premises in order
+PASS C2 D4 Build: form numbold reads 6 premises in order
+PASS C3 D4 Build: "### k." list with inner "1. 2. 3." lines reads 6, the inner lines inside premise 1 (run 42234 shape)
+PASS C3 D4 Build: a "1." list with a "### 2." line inside an item reads byte-equal to live
+PASS C4 D4 Build: a list with no numbered head reads 0 (LIST NOT READ case)
+PASS C2 Panel Build: live reads 0 premises of the 42373 [CR3] list, new reads 6
+PASS C2 Panel Build: form bold reads 6 premises in order
+PASS C2 Panel Build: form plain reads 6 premises in order
+PASS C2 Panel Build: form paren reads 6 premises in order
+PASS C2 Panel Build: form h3 reads 6 premises in order
+PASS C2 Panel Build: form h4bold reads 6 premises in order
+PASS C2 Panel Build: form boldopen reads 6 premises in order
+PASS C2 Panel Build: form numbold reads 6 premises in order
+PASS C3 Panel Build: "### k." list with inner "1. 2. 3." lines reads 6, the inner lines inside premise 1 (run 42234 shape)
+PASS C3 Panel Build: a "1." list with a "### 2." line inside an item reads byte-equal to live
+PASS C4 Panel Build: a list with no numbered head reads 0 (LIST NOT READ case)
+PASS C2 Build Independent Verdict: live reads 0 premises of the 42373 [CR3] list, new reads 6
+PASS C2 Build Independent Verdict: form bold reads 6 premises in order
+PASS C2 Build Independent Verdict: form plain reads 6 premises in order
+PASS C2 Build Independent Verdict: form paren reads 6 premises in order
+PASS C2 Build Independent Verdict: form h3 reads 6 premises in order
+PASS C2 Build Independent Verdict: form h4bold reads 6 premises in order
+PASS C2 Build Independent Verdict: form boldopen reads 6 premises in order
+PASS C2 Build Independent Verdict: form numbold reads 6 premises in order
+PASS C3 Build Independent Verdict: "### k." list with inner "1. 2. 3." lines reads 6, the inner lines inside premise 1 (run 42234 shape)
+PASS C3 Build Independent Verdict: a "1." list with a "### 2." line inside an item reads byte-equal to live
+PASS C4 Build Independent Verdict: a list with no numbered head reads 0 (LIST NOT READ case)
+PASS C2 Build Save Body: live reads 0 premises of the 42373 [CR3] list, new reads 6
+PASS C2 Build Save Body: form bold reads 6 premises in order
+PASS C2 Build Save Body: form plain reads 6 premises in order
+PASS C2 Build Save Body: form paren reads 6 premises in order
+PASS C2 Build Save Body: form h3 reads 6 premises in order
+PASS C2 Build Save Body: form h4bold reads 6 premises in order
+PASS C2 Build Save Body: form boldopen reads 6 premises in order
+PASS C2 Build Save Body: form numbold reads 6 premises in order
+PASS C3 Build Save Body: "### k." list with inner "1. 2. 3." lines reads 6, the inner lines inside premise 1 (run 42234 shape)
+PASS C3 Build Save Body: a "1." list with a "### 2." line inside an item reads byte-equal to live
+PASS C4 Build Save Body: a list with no numbered head reads 0 (LIST NOT READ case)
+PASS C2 Assume Check Build: live reads 0 premises of the 42373 [CR3] list, new reads 6
+PASS C2 Assume Check Build: form bold reads 6 premises in order
+PASS C2 Assume Check Build: form plain reads 6 premises in order
+PASS C2 Assume Check Build: form paren reads 6 premises in order
+PASS C2 Assume Check Build: form h3 reads 6 premises in order
+PASS C2 Assume Check Build: form h4bold reads 6 premises in order
+PASS C2 Assume Check Build: form boldopen reads 6 premises in order
+PASS C2 Assume Check Build: form numbold reads 6 premises in order
+PASS C3 Assume Check Build: "### k." list with inner "1. 2. 3." lines reads 6, the inner lines inside premise 1 (run 42234 shape)
+PASS C3 Assume Check Build: a "1." list with a "### 2." line inside an item reads byte-equal to live
+PASS C4 Assume Check Build: a list with no numbered head reads 0 (LIST NOT READ case)
+PASS C2 C3 Build: live reads 0 premises of the 42373 [CR3] list, new reads 6
+PASS C2 C3 Build: form bold reads 6 premises in order
+PASS C2 C3 Build: form plain reads 6 premises in order
+PASS C2 C3 Build: form paren reads 6 premises in order
+PASS C2 C3 Build: form h3 reads 6 premises in order
+PASS C2 C3 Build: form h4bold reads 6 premises in order
+PASS C2 C3 Build: form boldopen reads 6 premises in order
+PASS C2 C3 Build: form numbold reads 6 premises in order
+PASS C3 C3 Build: "### k." list with inner "1. 2. 3." lines reads 6, the inner lines inside premise 1 (run 42234 shape)
+PASS C3 C3 Build: a "1." list with a "### 2." line inside an item reads byte-equal to live
+PASS C4 C3 Build: a list with no numbered head reads 0 (LIST NOT READ case)
+PASS C2 C3 Build: live reads 0 premises of the 42373 [CR3] list, new reads 6
+PASS C2 C3 Build: form bold reads 6 premises in order
+PASS C2 C3 Build: form plain reads 6 premises in order
+PASS C2 C3 Build: form paren reads 6 premises in order
+PASS C2 C3 Build: form h3 reads 6 premises in order
+PASS C2 C3 Build: form h4bold reads 6 premises in order
+PASS C2 C3 Build: form boldopen reads 6 premises in order
+PASS C2 C3 Build: form numbold reads 6 premises in order
+PASS C3 C3 Build: "### k." list with inner "1. 2. 3." lines reads 6, the inner lines inside premise 1 (run 42234 shape)
+PASS C3 C3 Build: a "1." list with a "### 2." line inside an item reads byte-equal to live
+PASS C4 C3 Build: a list with no numbered head reads 0 (LIST NOT READ case)
+PASS C2 C3 Extract: live reads 0 premises of the 42373 [CR3] list, new reads 6
+PASS C2 C3 Extract: form bold reads 6 premises in order
+PASS C2 C3 Extract: form plain reads 6 premises in order
+PASS C2 C3 Extract: form paren reads 6 premises in order
+PASS C2 C3 Extract: form h3 reads 6 premises in order
+PASS C2 C3 Extract: form h4bold reads 6 premises in order
+PASS C2 C3 Extract: form boldopen reads 6 premises in order
+PASS C2 C3 Extract: form numbold reads 6 premises in order
+PASS C3 C3 Extract: "### k." list with inner "1. 2. 3." lines reads 6, the inner lines inside premise 1 (run 42234 shape)
+PASS C3 C3 Extract: a "1." list with a "### 2." line inside an item reads byte-equal to live
+PASS C4 C3 Extract: a list with no numbered head reads 0 (LIST NOT READ case)
+PASS C2 C4 Build: live reads 0 premises of the 42373 [CR3] list, new reads 6
+PASS C2 C4 Build: form bold reads 6 premises in order
+PASS C2 C4 Build: form plain reads 6 premises in order
+PASS C2 C4 Build: form paren reads 6 premises in order
+PASS C2 C4 Build: form h3 reads 6 premises in order
+PASS C2 C4 Build: form h4bold reads 6 premises in order
+PASS C2 C4 Build: form boldopen reads 6 premises in order
+PASS C2 C4 Build: form numbold reads 6 premises in order
+PASS C3 C4 Build: "### k." list with inner "1. 2. 3." lines reads 6, the inner lines inside premise 1 (run 42234 shape)
+PASS C3 C4 Build: a "1." list with a "### 2." line inside an item reads byte-equal to live
+PASS C4 C4 Build: a list with no numbered head reads 0 (LIST NOT READ case)
+PASS C2 LIB 998 (pwList/kvCharges/kvUni items): live reads 0 premises of the 42373 [CR3] list, new reads 6
+PASS C2 LIB 998 (pwList/kvCharges/kvUni items): form bold reads 6 premises in order
+PASS C2 LIB 998 (pwList/kvCharges/kvUni items): form plain reads 6 premises in order
+PASS C2 LIB 998 (pwList/kvCharges/kvUni items): form paren reads 6 premises in order
+PASS C2 LIB 998 (pwList/kvCharges/kvUni items): form h3 reads 6 premises in order
+PASS C2 LIB 998 (pwList/kvCharges/kvUni items): form h4bold reads 6 premises in order
+PASS C2 LIB 998 (pwList/kvCharges/kvUni items): form boldopen reads 6 premises in order
+PASS C2 LIB 998 (pwList/kvCharges/kvUni items): form numbold reads 6 premises in order
+PASS C3 LIB 998 (pwList/kvCharges/kvUni items): "### k." list with inner "1. 2. 3." lines reads 6, the inner lines inside premise 1 (run 42234 shape)
+PASS C3 LIB 998 (pwList/kvCharges/kvUni items): a "1." list with a "### 2." line inside an item reads byte-equal to live
+PASS C4 LIB 998 (pwList/kvCharges/kvUni items): a list with no numbered head reads 0 (LIST NOT READ case)
+PASS C2 LIB 1672 (gate PL items): live reads 0 premises of the 42373 [CR3] list, new reads 6
+PASS C2 LIB 1672 (gate PL items): form bold reads 6 premises in order
+PASS C2 LIB 1672 (gate PL items): form plain reads 6 premises in order
+PASS C2 LIB 1672 (gate PL items): form paren reads 6 premises in order
+PASS C2 LIB 1672 (gate PL items): form h3 reads 6 premises in order
+PASS C2 LIB 1672 (gate PL items): form h4bold reads 6 premises in order
+PASS C2 LIB 1672 (gate PL items): form boldopen reads 6 premises in order
+PASS C2 LIB 1672 (gate PL items): form numbold reads 6 premises in order
+PASS C3 LIB 1672 (gate PL items): "### k." list with inner "1. 2. 3." lines reads 6, the inner lines inside premise 1 (run 42234 shape)
+PASS C3 LIB 1672 (gate PL items): a "1." list with a "### 2." line inside an item reads byte-equal to live
+PASS C4 LIB 1672 (gate PL items): a list with no numbered head reads 0 (LIST NOT READ case)
+PASS C2 LIB 2035 (premiseMap/pressed items): live reads 0 premises of the 42373 [CR3] list, new reads 6
+PASS C2 LIB 2035 (premiseMap/pressed items): form bold reads 6 premises in order
+PASS C2 LIB 2035 (premiseMap/pressed items): form plain reads 6 premises in order
+PASS C2 LIB 2035 (premiseMap/pressed items): form paren reads 6 premises in order
+PASS C2 LIB 2035 (premiseMap/pressed items): form h3 reads 6 premises in order
+PASS C2 LIB 2035 (premiseMap/pressed items): form h4bold reads 6 premises in order
+PASS C2 LIB 2035 (premiseMap/pressed items): form boldopen reads 6 premises in order
+PASS C2 LIB 2035 (premiseMap/pressed items): form numbold reads 6 premises in order
+PASS C3 LIB 2035 (premiseMap/pressed items): "### k." list with inner "1. 2. 3." lines reads 6, the inner lines inside premise 1 (run 42234 shape)
+PASS C3 LIB 2035 (premiseMap/pressed items): a "1." list with a "### 2." line inside an item reads byte-equal to live
+PASS C4 LIB 2035 (premiseMap/pressed items): a list with no numbered head reads 0 (LIST NOT READ case)
+PASS C2 LIB 2550 (send-back ledger items): live reads 0 premises of the 42373 [CR3] list, new reads 6
+PASS C2 LIB 2550 (send-back ledger items): form bold reads 6 premises in order
+PASS C2 LIB 2550 (send-back ledger items): form plain reads 6 premises in order
+PASS C2 LIB 2550 (send-back ledger items): form paren reads 6 premises in order
+PASS C2 LIB 2550 (send-back ledger items): form h3 reads 6 premises in order
+PASS C2 LIB 2550 (send-back ledger items): form h4bold reads 6 premises in order
+PASS C2 LIB 2550 (send-back ledger items): form boldopen reads 6 premises in order
+PASS C2 LIB 2550 (send-back ledger items): form numbold reads 6 premises in order
+PASS C3 LIB 2550 (send-back ledger items): "### k." list with inner "1. 2. 3." lines reads 6, the inner lines inside premise 1 (run 42234 shape)
+PASS C3 LIB 2550 (send-back ledger items): a "1." list with a "### 2." line inside an item reads byte-equal to live
+PASS C4 LIB 2550 (send-back ledger items): a list with no numbered head reads 0 (LIST NOT READ case)
+PASS C2 LIB 437 (unxPresses items): live reads 0 premises of the 42373 [CR3] list, new reads 6
+PASS C2 LIB 437 (unxPresses items): form bold reads 6 premises in order
+PASS C2 LIB 437 (unxPresses items): form plain reads 6 premises in order
+PASS C2 LIB 437 (unxPresses items): form paren reads 6 premises in order
+PASS C2 LIB 437 (unxPresses items): form h3 reads 6 premises in order
+PASS C2 LIB 437 (unxPresses items): form h4bold reads 6 premises in order
+PASS C2 LIB 437 (unxPresses items): form boldopen reads 6 premises in order
+PASS C2 LIB 437 (unxPresses items): form numbold reads 6 premises in order
+PASS C3 LIB 437 (unxPresses items): "### k." list with inner "1. 2. 3." lines reads 6, the inner lines inside premise 1 (run 42234 shape)
+PASS C3 LIB 437 (unxPresses items): a "1." list with a "### 2." line inside an item reads byte-equal to live
+PASS C4 LIB 437 (unxPresses items): a list with no numbered head reads 0 (LIST NOT READ case)
+PASS C2 LIB 3716 (OAN harvest items): live reads 0 premises of the 42373 [CR3] list, new reads 6
+PASS C2 LIB 3716 (OAN harvest items): form bold reads 6 premises in order
+PASS C2 LIB 3716 (OAN harvest items): form plain reads 6 premises in order
+PASS C2 LIB 3716 (OAN harvest items): form paren reads 6 premises in order
+PASS C2 LIB 3716 (OAN harvest items): form h3 reads 6 premises in order
+PASS C2 LIB 3716 (OAN harvest items): form h4bold reads 6 premises in order
+PASS C2 LIB 3716 (OAN harvest items): form boldopen reads 6 premises in order
+PASS C2 LIB 3716 (OAN harvest items): form numbold reads 6 premises in order
+PASS C3 LIB 3716 (OAN harvest items): "### k." list with inner "1. 2. 3." lines reads 6, the inner lines inside premise 1 (run 42234 shape)
+PASS C3 LIB 3716 (OAN harvest items): a "1." list with a "### 2." line inside an item reads byte-equal to live
+PASS C4 LIB 3716 (OAN harvest items): a list with no numbered head reads 0 (LIST NOT READ case)
+PASS C2 head: "1 Corinthians 15:38", "- Luke 1:27" and "- 1. Luke 2:4" are not read as premises
+PASS C2 pwList (Alternate Payloads): CHALLENGER live 0, new 6
+PASS C2 premise 5 carries Hebrews 7:14 and 7:5 (Genesis 48:5, Hebrews 7:14, Numbers 1:2, Ezra 2:59, Hebrews 7:5); premise 6 carries Ruth 4:13 (Acts 1:8, Luke 9:34, Luke 1:32, Ruth 4:13, Luke 1:15)
+PASS C3 pwList DEFENDER (the [DR2] list, "1." heads) is byte-equal
+PASS C4 pwList: heading with an unreadable list gives null (no list to the K checks); live gave []
+PASS C4 pwList: "PREMISE COUNT: 0" stays an empty list ([]), not LIST NOT READ
+PASS C4 pwList: no heading stays null
+PASS C2 live K-G10/K-P on the 42373 judgments, CHALLENGER: 2 (chatgpt CHALLENGER premise 5 Hebrews 7:14/Hebrews 7:5; chatgpt CHALLENGER premise 6 Ruth 4:13)
+PASS C2 new K-G10/K-P on the same judgments, CHALLENGER: 0
+PASS C4 LIST NOT READ: no K-G10/K-P item on that side (0)
+NOTE premiseMap is inside a module in Alt Send Back Build; its item line (LIB 2035) is tested above
+PASS C2 unxPresses (Alt Gate Build) on 42373 [CR3]: live 0 presses, new 30
+PASS C3 unxPresses on [DR3] byte-equal
+PASS Build Save Body C2: live writes 1 FORFEITED line(s); new writes none (vsCh.n=6)
+PASS C4 Build Save Body: unreadable list gives the LIST NOT READ line
+PASS C4 Build Save Body: no heading, and PREMISE COUNT: 0, still give the forfeit line
+PASS C3 Build Save Body: a "1." list gives the same counts and lines
+PASS C2 Build Save Body listCount form bold = 6
+PASS C2 Build Save Body listCount form plain = 6
+PASS C2 Build Save Body listCount form paren = 6
+PASS C2 Build Save Body listCount form h3 = 6
+PASS C2 Build Save Body listCount form h4bold = 6
+PASS C2 Build Save Body listCount form boldopen = 6
+PASS C2 Build Save Body listCount form numbold = 6
+PASS Format Markdown C2: live writes 1 FORFEITED line(s); new writes none (vsCh.n=6)
+PASS C4 Format Markdown: unreadable list gives the LIST NOT READ line
+PASS C4 Format Markdown: no heading, and PREMISE COUNT: 0, still give the forfeit line
+PASS C3 Format Markdown: a "1." list gives the same counts and lines
+PASS C2 Format Markdown listCount form bold = 6
+PASS C2 Format Markdown listCount form plain = 6
+PASS C2 Format Markdown listCount form paren = 6
+PASS C2 Format Markdown listCount form h3 = 6
+PASS C2 Format Markdown listCount form h4bold = 6
+PASS C2 Format Markdown listCount form boldopen = 6
+PASS C2 Format Markdown listCount form numbold = 6
+PASS C4 Panel Build ledger: an unread list gives one LIST NOT READ line naming the side that wrote it, never an empty side
+PASS C4 Panel Build lnr626: text under the heading is unread; PREMISE COUNT: 0 and "none" are empty
+PASS C4 Panel Build ledger side() carries unread
+PASS C3 Panel Build preCheckSide: a "1." list gives the same lines
+PASS C2 Panel Build preCheckSide: bold, "### 1." and "#### **1.**" lists give the same lines as the "1." list
+PASS C4 Build Independent Verdict ledger: an unread list gives one LIST NOT READ line naming the side that wrote it, never an empty side
+PASS C4 Build Independent Verdict lnr626: text under the heading is unread; PREMISE COUNT: 0 and "none" are empty
+PASS C4 Build Independent Verdict ledger side() carries unread
+PASS C3 Build Independent Verdict preCheckSide: a "1." list gives the same lines
+PASS C2 Build Independent Verdict preCheckSide: bold, "### 1." and "#### **1.**" lists give the same lines as the "1." list
+PASS C2 Assume Check vp4All: live 0, new 6
+PASS C2 Assume Check form bold: vp4All 6, vp4List as for "1."
+PASS C2 Assume Check form plain: vp4All 6, vp4List as for "1."
+PASS C2 Assume Check form paren: vp4All 6, vp4List as for "1."
+PASS C2 Assume Check form h3: vp4All 6, vp4List as for "1."
+PASS C2 Assume Check form h4bold: vp4All 6, vp4List as for "1."
+PASS C2 Assume Check form boldopen: vp4All 6, vp4List as for "1."
+PASS C2 Assume Check form numbold: vp4All 6, vp4List as for "1."
+PASS C3 Assume Check on the 42373 [DR2] list: byte-equal
+PASS C2/C3 C2B Extract __LC423: live null, new 6; every form 6; "1." unchanged
+PASS C2/C3 D3B Extract __LC423: live null, new 6; every form 6; "1." unchanged
+PASS C2/C3 C3B Extract __LC423: live null, new 6; every form 6; "1." unchanged
+RESULT: ALL PASS

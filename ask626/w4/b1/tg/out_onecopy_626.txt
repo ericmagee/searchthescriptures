@@ -1,0 +1,48 @@
+SERVED base_child.json: no Shared Library node; library copies counted from the engine library sent in the call (ASK 578)
+NAME psGrades: 38 copies, 1 text(s)
+  83582a6521cf x38  e.g. target_engine_626.json lib:Alt Gate Build; target_engine_626.json lib:Alt Gate Record; target_engine_626.json lib:Alt Send Back Record
+NAME REFP: 120 copies, 4 text(s)
+  ec7bb07ea842 x39  e.g. target_engine_626.json Init with Guards; target_engine_626.json C1 Extract; target_engine_626.json D2 Build
+  3f80dae54ad4 x1  e.g. target_engine_626.json Quote Report
+  4e040eda4629 x64  e.g. target_engine_626.json lib:Alt Gate Build; target_engine_626.json lib:Alt Gate Record; target_engine_626.json lib:Alt Send Back Build
+  32b08f26e979 x16  e.g. target_engine_626.json lib:Alternate Build; target_engine_626.json lib:Alternate Cure Build; target_engine_626.json lib:Cure Build
+  ACCEPTED ec7bb07ea842 vs 3f80dae54ad4: ASK 409: the 30 engine loaders declare REFP by rebuilding the one block from the Shared Library MAP entry REFP (n 8133, md5 37d0a6bd); the loader text is one text in all 30 nodes and the block it rebuilds is the full copy 00d90255b2e3 (Wall 8738, 8741, 8743)
+  ACCEPTED ec7bb07ea842 vs 4e040eda4629: ASK 435 (rulings 495, 496): the same relation as before, with the library REFP texts rebuilt after the BARE line (496) and the bare-number step (507) change; was: ASK 409: the 30 engine loaders declare REFP by rebuilding the one block from the Shared Library MAP entry REFP (n 8133, md5 37d0a6bd); the loader text is one text in all 30 nodes and the block it rebuilds is the full copy 00d90255b2e3 (Wall 8738, 8741, 8743, ASK 435 build)
+  ACCEPTED ec7bb07ea842 vs 32b08f26e979: ASK 435 (rulings 495, 496): the same relation as before, with the library REFP texts rebuilt after the BARE line (496) and the bare-number step (507) change; was: ASK 409: the 30 engine loaders declare REFP by rebuilding the one block from the Shared Library MAP entry REFP (n 8133, md5 37d0a6bd); the loader text is one text in all 30 nodes and the block it rebuilds is the full copy 00d90255b2e3 (Wall 8738, 8741, 8743, ASK 435 build)
+  ACCEPTED 3f80dae54ad4 vs 4e040eda4629: ASK 435 (rulings 495, 496): the same relation as before, with the library REFP texts rebuilt after the BARE line (496) and the bare-number step (507) change; was: ASK 384 (Wall 8405, 8419): trimmed copies (BK and BOOKS only, no keys, parse or book call): Quote Report keeps the old BARE line, the 16 library stubs carry the new BARE line from the shared library lines; the full copy 00d90255b2e3 is the ASK 384 reader. Quote Report moves under the second card (Wall 8126, 8405, 8419, ASK 435 build)
+  ACCEPTED 3f80dae54ad4 vs 32b08f26e979: ASK 435 (rulings 495, 496): the same relation as before, with the library REFP texts rebuilt after the BARE line (496) and the bare-number step (507) change; was: ASK 384 (Wall 8405, 8419): trimmed copies (BK and BOOKS only, no keys, parse or book call): Quote Report keeps the old BARE line, the 16 library stubs carry the new BARE line from the shared library lines; the full copy 00d90255b2e3 is the ASK 384 reader. Quote Report moves under the second card (Wall 8126, 8405, 8419, ASK 435 build)
+  ACCEPTED 4e040eda4629 vs 32b08f26e979: ASK 435 (rulings 495, 496): the same relation as before, with the library REFP texts rebuilt after the BARE line (496) and the bare-number step (507) change; was: ASK 384 (Wall 8405, 8419): trimmed copies (BK and BOOKS only, no keys, parse or book call): Quote Report keeps the old BARE line, the 16 library stubs carry the new BARE line from the shared library lines; the full copy 00d90255b2e3 is the ASK 384 reader. Quote Report moves under the second card (Wall 8126, 8405, 8419, ASK 435 build)
+NAME ackFoot2024: 12 copies, 1 text(s)
+  a71f3d15ce16 x12  e.g. target_engine_626.json lib:Alt Judge Enforcer Record; target_engine_626.json lib:Alt Send Back Record; target_engine_626.json lib:Judge Enforcer Record
+NAME ackForm2024: 12 copies, 1 text(s)
+  ff4d7f01bfa0 x12  e.g. target_engine_626.json lib:Alt Judge Enforcer Record; target_engine_626.json lib:Alt Send Back Record; target_engine_626.json lib:Judge Enforcer Record
+NAME unxAcFail: 30 copies, 1 text(s)
+  f4b5acf60252 x30  e.g. target_engine_626.json lib:Alt Gate Build; target_engine_626.json lib:Alt Gate Record; target_engine_626.json lib:Alternate Merge Seat
+NAME unxaCheck: 30 copies, 1 text(s)
+  52a045b51e85 x30  e.g. target_engine_626.json lib:Alt Gate Build; target_engine_626.json lib:Alt Gate Record; target_engine_626.json lib:Alternate Merge Seat
+NAME lbFoot: 77 copies, 1 text(s)
+  7c52cab8016a x77  e.g. target_engine_626.json Build Independent Verdict; target_engine_626.json Panel Build; target_engine_626.json D4 Build
+NAME ri5Rd2024: 72 copies, 1 text(s)
+  5b0a2535f31a x72  e.g. target_engine_626.json lib:Alt Gate Build; target_engine_626.json lib:Alt Gate Record; target_engine_626.json lib:Alt Judge Enforcer Build
+NAME ri6Col2024: 52 copies, 1 text(s)
+  bd143f6983f7 x52  e.g. target_engine_626.json lib:Alt Gate Build; target_engine_626.json lib:Alt Gate Record; target_engine_626.json lib:Alt Judge Enforcer Build
+NAME __RL: 102 copies, 3 text(s)
+  0f0fa74632df x5  e.g. target_engine_626.json Build Save Body; target_engine_626.json Format Markdown; target_engine_626.json Enforcer Build
+  3be38199f953 x96  e.g. target_engine_626.json lib:Alt Gate Build; target_engine_626.json lib:Alt Gate Record; target_engine_626.json lib:Alt Judge Enforcer Build
+  2be75845b4d7 x1  e.g. base_child.json R2 Alt Judge Enforcer Retry Build
+  ACCEPTED 0f0fa74632df vs 3be38199f953: ASK 573: the 0f0fa74632df text is the library loader in the node (Build Save Body, Format Markdown, Enforcer Build and others), which the scan counts as a copy; it is not a second body. Failing since 19:21 CST 11-23 (W1 Wall 11864 N1) (Wall 11864)
+  ACCEPTED 0f0fa74632df vs 2be75845b4d7: ASK 578: the child R2 Alt Judge Enforcer Retry Build copy differs from the 0f0fa74632df node copies only in the IIFE argument ($('Alternate Pass In').first().json.pass.lib in place of $('Shared Library').params.jsCode); the body is the same text (ASK 578 tools (W4), to be graded by W1)
+  ACCEPTED 3be38199f953 vs 2be75845b4d7: ASK 578: the child R2 Alt Judge Enforcer Retry Build copy differs from the 0f0fa74632df node copies only in the IIFE argument ($('Alternate Pass In').first().json.pass.lib in place of $('Shared Library').params.jsCode); the body is the same text (ASK 578 tools (W4), to be graded by W1)
+NAME rd386: 34 copies, 1 text(s)
+  ba5f44a49ae8 x34  e.g. target_engine_626.json lib:Alt Gate Build; target_engine_626.json lib:Alt Gate Record; target_engine_626.json lib:Alternate Merge 1
+NAME ert386: 34 copies, 1 text(s)
+  e074fed66630 x34  e.g. target_engine_626.json lib:Alt Gate Build; target_engine_626.json lib:Alt Gate Record; target_engine_626.json lib:Alternate Merge 1
+NAME rcLines: 34 copies, 1 text(s)
+  4bad968464de x34  e.g. target_engine_626.json lib:Alt Gate Build; target_engine_626.json lib:Alt Gate Record; target_engine_626.json lib:Alternate Merge 1
+NAME cureJText: 40 copies, 1 text(s)
+  75865912696d x40  e.g. target_engine_626.json lib:Alt Gate Build; target_engine_626.json lib:Alt Gate Record; target_engine_626.json lib:Alt Judge Enforcer Build
+NAME ret386: 34 copies, 1 text(s)
+  e9a19f8dfba7 x34  e.g. target_engine_626.json lib:Alt Gate Build; target_engine_626.json lib:Alt Gate Record; target_engine_626.json lib:Alternate Merge 1
+NAME cjrLoose2024: 56 copies, 1 text(s)
+  2eabafad8478 x56  e.g. target_engine_626.json lib:Alt Gate Build; target_engine_626.json lib:Alt Gate Record; target_engine_626.json lib:Alternate Cure Build
+RESULT: PASS
