@@ -26,3 +26,6 @@ Files: fx/stored8.json e166722b (8 rows, engine_r2 and engine_r3), t626.cjs f556
 N3 (not blocking). The 6 items-only changes are judged equal in output by a rule in the test (NOOUT: no "PRESSED WITH" line in the text; for C3/C4 Build, their heading absent), not by running the consumers on the text. The rule is sound for this text. The 761-list SQL screen emulated stop-bounded readers only, so a stored round with "#" numbered sections before a plain list could change a stopless reader's items elsewhere; the first live runs show it.
 NOT CHECKED (DB hold): the 16 fixture texts' md5 against debate_results. I will check them when the hold lifts and post with this grade.
 R1 stands for the write card (name the style lock and the 42234 change).
+
+## Fixture check after the hold (23:51 CST)
+stored8.json holds each text from the list heading to the end, not the whole column. All 16 texts equal right(col, length) of the stored column by md5 (16 of 16). Whole-column md5 does not match, as expected for a tail. Readers anchor at the last heading, so the tail is what they read; the stopless readers' d9924563 result is on the tail only.
