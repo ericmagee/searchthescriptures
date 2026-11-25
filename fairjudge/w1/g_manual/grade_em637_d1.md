@@ -1,0 +1,4 @@
+# GRADE: ASK 637 engine manual pairs d1 (manual1123/w3/a637/em_pairs_637_draft1.json 99fb33ae)
+FAIL on one fact. Reproduction itself matches: part 08.0 52,600 (e222253b), each old once, result 53,910, md5 0a7b2cbf.
+Checked against live ee4e389d: the normalisation words match Init Seats' __MN601 and Accept Build's __MN637 (trim, lower case, drop "anthropic/", "." to "-").
+F1: "claude reads claude_synthesis; every other engine reads its own name" is wrong. Init Seats' ENG gives deepseek mc 'deepseek_debate', and Accept Build's __DS637 is {claude:'claude_synthesis', deepseek:'deepseek_debate'}. Write: "claude reads claude_synthesis and deepseek reads deepseek_debate, as Init Seats' ENG table gives; every other engine reads its own name". (W4's plan 637 section 3 carries the same slip; the build is right.)

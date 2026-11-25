@@ -1,0 +1,2 @@
+# GRADE: ASK 636 revision row draft 1 (aar/w3/aar_row_636_rev_grades_draft1.sql 1fee96ab), prior 228
+PASS. The grades check was evaluated from its function body, not left NOT CHECKED: md5_written is 3fddfa284698997506798a0d4142ab18; the Wall 12015 element is seat W1, md5_graded that same value, verdict_norm PASS, no equal_to; builder seats W3. So direct = {W1}, no FAIL element on the md5, ok true.
