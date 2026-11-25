@@ -1,0 +1,12 @@
+{
+ "08.0": [
+  {
+   "old": "(the judge order less the debaters and the time-removed seat)",
+   "new": "(the judge order less the debaters, the time-removed seat and every seat that cannot sit in this debate; see SEATS THAT CANNOT SIT ARE NOT ASKED below)"
+  },
+  {
+   "old": "\n- COMMITMENT 16, THE JUDGE NOTICE:",
+   "new": "\n  - SEATS THAT CANNOT SIT ARE NOT ASKED (ASK 637; Accept Build only): Accept Build does not send the posture to a seat that Init Seats would drop for the debate's pairing: (a) a seat whose family, in its Accept Models row, equals a debater's family, unless both debaters' families are anthropic; (b) a seat whose `api_model`, normalised as Init Seats normalises it (trimmed, lower case, \"anthropic/\" dropped, \".\" read as \"-\"), equals a debater's model. A debater's family and model are read from the Accept Models row of the debater's model_config seat (the seat Init Seats' ENG table gives for that engine: claude reads `claude_synthesis` and deepseek reads `deepseek_debate`; every other engine reads its own name). A seat whose row has no family or no model is not filtered and is asked. Init Seats is unchanged: a seat not asked passes its agreement test and is dropped by its own family or model test, with that reason, so who sits does not change. Why: such a seat was asked and paid for and could never sit (run 42528: gemini, argon and neon, three calls). Limits: the row carries no AGREEMENT line for a seat not asked; not shown by a run; its mark is a run whose debaters' family has a judge seat in the order, with no AGREEMENT line and no Accept Call cost for those seats, and the seating as before.\n- COMMITMENT 16, THE JUDGE NOTICE:"
+  }
+ ]
+}
