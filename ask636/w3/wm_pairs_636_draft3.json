@@ -1,0 +1,20 @@
+{
+ "the_wall_manual": [
+  {
+   "old": "RUN: the run token, the live version, the outcome and the panel verdict, in one line.",
+   "new": "RUN: the run token, the live version, the outcome, the panel verdict and the run's cost (operational_doc §30, the cost of a live run), in one line."
+  },
+  {
+   "old": "The report follows the post style of §7 and the operator's standing post rules, in this order.",
+   "new": "The report follows the post style of §7 and the operator's standing post rules, in short plain lines, with no reading notes, sources or revision history. Before it is written, the previous run's report is read whole and every defect, suggested improvement and question in it is listed. The report is in this order."
+  },
+  {
+   "old": "DEFECTS: each defect found, in plain words, with the seat or outside read that found it.",
+   "new": "IMPROVEMENTS SINCE THE LAST RUN: each defect of the previous run's report that this run shows fixed, with the evidence, or NONE. DEFECTS NOT RESOLVED: each defect of the previous report that is still present, or whose fix is written and was not exercised, or that has no fix, with its ASK number and its status, or NONE. NEW DEFECTS: each defect the previous report does not hold, in plain words, with the seat or outside read that found it, or NONE. STATUS OF ALL OBSERVATIONS: one line for every defect, suggested improvement and question of the previous run's report, marked FIXED, LIVE AND UNEXERCISED, NOT WRITTEN (a fix approved and not yet written), OPEN, DENIED or CLOSED, and a question ANSWERED or NOT ANSWERED, with its ASK number or NO ASK NUMBER; an item not FIXED, DENIED, CLOSED or ANSWERED is carried into the next report."
+  },
+  {
+   "old": "REVIEWS: each seat's review by its Wall number.",
+   "new": "REVIEWS: each seat's review by its Wall number. JUDGES' REASONING: each issue found in a judge's reasoning (a misreading of a round, a contradiction of a rule or of the judge's own lines, a claim with no support, or a line that goes against a drift guard, which is marked PANEL MEASURE and is not a fault), naming the judge, the line, the round text it was checked against, and its ASK number or NO RULE COVERS IT, or NONE FOUND; the judgments read are named, and one not read whole is named NOT READ WHOLE."
+  }
+ ]
+}
