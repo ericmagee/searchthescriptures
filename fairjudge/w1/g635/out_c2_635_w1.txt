@@ -1,0 +1,7 @@
+PASS hydrogen row 65536: Resolve Seats judge max_tokens 65536 (google/gemini-4-hydrogen); other judges gemini:64000 qwen4max:131072
+PASS Panel Build rule (max(v,8000); google/ body max_tokens = j.max_tokens) gives 65536
+PASS hydrogen row 131072: Resolve Seats judge max_tokens 131072 (google/gemini-4-hydrogen); other judges gemini:64000 qwen4max:131072
+PASS Panel Build rule (max(v,8000); google/ body max_tokens = j.max_tokens) gives 131072
+RS.judges.2.max_tokens: 65536 -> 131072
+PASS Resolve Seats output differs only at hydrogen max_tokens (1 path(s))
+RESULT: ALL PASS (5)
