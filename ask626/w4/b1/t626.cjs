@@ -80,6 +80,16 @@ for(const nn of ['C2B Extract','D3B Extract','C3B Extract']){const o=G(B,nn,null
 if(ST){const S=JSON.parse(fs.readFileSync(ST,'utf8'));let n=0,eq=0,newly=[],diff=[];
  for(const row of S)for(const [col,re] of [['engine_r2',DFH],['engine_r3',CHH]]){const t=row[col];if(!t)continue;const i=lastAt(t,re);if(i<0)continue;
   for(const [nm,o,w] of readers){const a=(o.length===1?o(t.slice(i)):o(t,i)),b=(w.length===1?w(t.slice(i)):w(t,i));n++;if(JSON.stringify(a)===JSON.stringify(b))eq++;else if(a.length===0&&b.length>0)newly.push(row.id+' '+col+' '+nm);else diff.push(row.id+' '+col+' '+nm+' '+a.length+'->'+b.length);}}
- ok(diff.length===0,'C3 stored rounds: '+S.length+' debates, '+n+' reader runs, '+eq+' byte-equal; newly read (live read 0): '+newly.length+'; changed: '+diff.length+(diff.length?' '+diff.slice(0,12).join('; '):''));
+ // F1 (W1 Wall 11918): intended changes, each with its reason; any other change or newly read list FAILs.
+ const INTD={'8dd067f4-da47-402b-8188-f5c5cce07635 engine_r3':'run 42234 [CR3] "### k." premises with "1. 2. 3." lines inside premise 1; live read the inner lines (3), style lock reads the 6 premises'};
+ const INTN={'12957d6e-eaeb-41f5-a9f8-ebe6c9cf6328 engine_r3':'run 42505 [CR3] "**k.**" list, live read 0','e7f6922f-746c-41f6-9f86-d3e5d3bb53c8 engine_r3':'run 42373 [CR3] "**k.**" list, live read 0'};
+ // An item change with no output change: the reader is a PRESSED WITH harvest (C3 Extract, LIB 437 unxPresses, LIB 3716 OAN harvest, C3 Build harvest) and the text has no "PRESSED WITH:" line, so both return [];
+ // or the reader is C3/C4 Build side(), whose own heading /UNSUPPORTED-L4 PREMISES/ (hyphen) does not occur in the text, so the reader never reaches it.
+ const byId=Object.fromEntries(S.map(r=>[r.id,r]));const NOOUT=x=>{const [id,col,...rest]=x.split(' ');const t=byId[id][col],nm=rest.join(' ');
+  if(/PRESSED WITH\s*:/i.test(t))return false;if(/^(C3 Extract|LIB 437|LIB 3716|C3 Build|C4 Build)/.test(nm))return /^(C3 Extract|LIB 437|LIB 3716)/.test(nm)||!/UNSUPPORTED-L4 PREMISES/i.test(t);return false;};
+ const key=x=>x.split(' ').slice(0,2).join(' ');const badD=diff.filter(x=>!INTD[key(x)]&&!NOOUT(x)),badN=newly.filter(x=>!INTN[key(x)]);
+ for(const x of diff)console.log('  changed: '+x+(INTD[key(x)]?'  [intended]':NOOUT(x)?'  [items only; output equal: no PRESSED WITH line, and C3/C4 Build heading absent]':'  [NOT INTENDED]'));
+ for(const k of Object.keys(INTD))console.log('  intended change '+k+': '+INTD[k]);for(const k of Object.keys(INTN))console.log('  intended newly read '+k+': '+INTN[k]);
+ ok(badD.length===0&&badN.length===0,'C3 stored rounds: '+S.length+' debates, '+n+' reader runs, '+eq+' byte-equal; newly read (live read 0): '+newly.length+' ('+badN.length+' not intended); changed: '+diff.length+' ('+diff.filter(x=>INTD[key(x)]).length+' intended, '+diff.filter(x=>!INTD[key(x)]&&NOOUT(x)).length+' items-only with equal output, '+badD.length+' not intended)');
  if(newly.length)console.log('  newly read: '+[...new Set(newly.map(x=>x.split(' ').slice(0,2).join(' ')))].join(', '));}
 console.log(fail?'RESULT: '+fail+' FAIL':'RESULT: ALL PASS');process.exit(fail?1:0);
