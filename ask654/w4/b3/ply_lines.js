@@ -8,6 +8,7 @@ const PLY=(()=>{ /* ASK 654: a pressed verse answered at the verse, in the FORM 
  const RQ=new RegExp(RF+'[\\s:*_,]*["“`][^"”`\\n]{6,}','g'),QR=new RegExp('["“`][^"”`\\n]{6,}["”`][\\s*_]*\\(\\s*'+RF+'\\s*\\)','g'); /* the reference before the quotation, or in brackets directly after it (W1 N3) */
  const units=l=>[...l.matchAll(RQ)].map(m=>KY(m[1])).concat([...l.matchAll(QR)].map(m=>KY(m[1]))); /* one entry per quoted reference, as its verse keys */
  const refs=l=>units(l).flat();
+ const RK=l=>[...l.matchAll(RQ)].concat([...l.matchAll(QR)]).flatMap(m=>REFP.keys(m[1],{cap:30}).map(x=>x.key)); /* REFP-resolved keys only: an unresolvable reference does not meet the [L3] mark (W1 F1, Wall 12235) */
  const tagged=(lines,k)=>lines.filter(l=>new RegExp('^[\\s>*_-]*\\[L'+k+'\\]').test(l));
  const chap=r=>{const m=String(r).match(/^(.*) (\d+):(\d+)$/);return m?{b:m[1],c:+m[2]}:null;};
  const same=(a,b)=>{const x=chap(a),y=chap(b);return !!(x&&y&&x.b===y.b&&x.c===y.c);};
@@ -17,7 +18,7 @@ const PLY=(()=>{ /* ASK 654: a pressed verse answered at the verse, in the FORM 
   for(const r of P){const bs=B.filter(b=>b.ref===r);if(!bs.length){items.push({ref:r,lacks:['B']});continue;}const lines=bs.flatMap(b=>b.lines);const lacks=[];
    const l1=tagged(lines,1).flatMap(refs);if(!l1.includes(r))lacks.push('V');if(!l1.some(x=>x!==r&&same(x,r)))lacks.push('S');
    if(!tagged(lines,2).some(l=>/\b[GH]\d{1,5}\b/.test(l)))lacks.push('G');
-   if(!tagged(lines,3).flatMap(refs).some(x=>x!==r&&!l1.includes(x)))lacks.push('X');
+   if(!tagged(lines,3).flatMap(RK).some(x=>x!==r&&!l1.includes(x)))lacks.push('X');
    let ok=false;for(const m of tagged(lines,4).join('\n').matchAll(/\[\s*(DR[1-4])\s*\][\s:,]*["“]([^"”\n]+)["”]/gi)){const k=m[1].toUpperCase(),q=W(m[2]);if(q.split(' ').length>=6&&opp&&opp[k]&&W(opp[k]).includes(q)){ok=true;break;}}if(!ok)lacks.push('O');
    if(lacks.length)items.push({ref:r,lacks});}
   return {applies:true,pressed:P.length,items,pass:!items.length};}

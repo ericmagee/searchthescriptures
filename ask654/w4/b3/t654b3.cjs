@@ -79,4 +79,5 @@ ok(xs(mk(H,'[L3] Matthew 1:25 "And knew her not"'))==='','W1 (e): adjacent verse
 {const o={DR1:'',DR2:'',DR3:'For thy violence against thy brother Jacob shame shall cover thee'};const t=['ANSWER: Obadiah 1:10 -- D2 --','[L1] Obadiah 1:10 "For thy violence against thy brother Jacob"','[L1] Obadiah 1:11 "In the day that thou stoodest on the other side"','[L2] H2555 chamac: "violence".','[L3] Obadiah 1:15 "For the day of the LORD is near upon all the heathen"','[L4] [DR3] "For thy violence against thy brother Jacob shame shall cover" is my opponent\'s inference.'].join('\n');
  const c=PLY.check(['PRESSED WITH: Obadiah 1:10 "For thy violence"'],t,o);ok(!c.items.some(i=>i.lacks.includes('X')),'W1 (f): Obadiah 1:15 at [L3] against [L1] 1:10 and 1:11: not listed'+(c.items.length?' '+JSON.stringify(c.items):''));}
 ok(xs(mk(H,'[L3] Isaiah 7:14 "Therefore the Lord himself shall give you a sign"'))==='','W1 (g): Matthew 1:23 with [L3] Isaiah 7:14: not listed');
+ok(xs(mk(H,'[L3] Hezekiah 3:4 "A verse that is in no book"'))==='X','W1 F1: an unresolvable [L3] reference (Hezekiah 3:4) lacks X');
 console.log('TOTAL '+pass+' PASS, '+fail+' FAIL');
