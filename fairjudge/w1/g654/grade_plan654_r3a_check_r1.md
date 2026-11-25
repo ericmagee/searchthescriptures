@@ -21,3 +21,11 @@ F1: PART MET, STILL FAIL. The head form sentence is added. But part 1 still does
 F2: NOT MET. Rev 2 text remains: OBJECTIVE "Expected effect" (fixed lines; "what its words state"; "the opponent's inference ... quoted"); WRONG-IF "the STATES line"; C3 and C4 "part 1's lines"; RUN EVIDENCE "[L2] or [L3]" (the check requires all four); STEP 3 "rev 2's words", STEP 4 "W1's PASS of rev 1".
 N1 (unchanged): the [L4] mark checks only the opponent's inference. The Oracle's own union stated as fact, which has been the first loss three runs running, is not checked by code. Say this on the card.
 GRADE REV 4: FAIL F1 F2. CHECK PLAN REV 1: PASS WITH N1 N2, unchanged.
+
+## REGRADE: PLAN REV 6 (8cab334c, commit aa264a44), read whole: PASS WITH N1 N2
+- The four layer lines equal the operator's message of 15:34 CST (cmsg_...SmAj, read by id) word for word, including "L4 must have two supporting layers." Both quotations remain in the book (checked earlier).
+- F1 MET by fix (a): the FORM lines are in part 1, shown apart, in engine form only; C4 is restated to a test block written from those lines.
+- F2 MET: headings 1, 4, 5, 6 and 8 now match the check's marks; WRONG-IF carries my N1.
+- C1 holds.
+N1. C4's test block, written from the FORM lines as worded, is owed by W4 (STEP 3). It must be posted, with 0 items and 0 finder hits, before card (a) goes to the operator.
+N2. Stale figures in PART 2: "Cost: 0 calls" and "about 200 characters per listed verse" should be replaced by check plan rev 2 (at most 1 call per round, 2 per run; note 405 to 957 characters). C5 asks W4 for a count on 42528, but W4 has shown that count is impossible (no execution data); cite 42517 +2 and 42373 0 instead.
