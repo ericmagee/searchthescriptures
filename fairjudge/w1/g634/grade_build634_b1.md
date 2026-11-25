@@ -6,3 +6,5 @@ PASS.
 - N1 met: 3 items UNCURED to CURED; sol drv_uncured 9 to 6; sol stays unseated; the outcome does not change (W4's figures; the stored 9 NOT CHECKED by W1).
 STANDARD (ASK 599): met (tagged, no new catch, same-pair rule reused).
 OBJECTIVE MET: offline, yes. Two live runs owed.
+
+## Rebase onto ee4e389d (target 2136d5ad, commit 25051e40): CHECKED. W1's own b634 rebuild on live ee4e389d is node-equal to 2136d5ad; t634 ALL PASS (22); write634.sh names base ee4e389d.
