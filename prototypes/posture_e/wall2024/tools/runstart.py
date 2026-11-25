@@ -9,7 +9,7 @@ Checks:
     (two of "Post a Directive" have waited since 2026-08-18 until the year 3000).
  2. VERSIONS: the live engine and child versionIds equal the ones given (the readback-matched versions of the last write), and each is active
     and published (activeVersionId equals versionId).
- 3. LIBRARY (ASK 422(a) item 8): lib_sha of the engine and the child bodies are equal, and each equals the sha its own header names.
+ 3. LIBRARY (ASK 422(a) item 8; ASK 578: a child with no Shared Library node is served the engine text in the call, so the engine header, the engine sending it, and equal MAPEXTRA lists are checked instead): lib_sha of the engine and the child bodies are equal, and each equals the sha its own header names.
     map_sha (ASK 422(a) rev 3 item 10-11) of the engine and the child are equal: the child's MAP keys sorted, the engine's less MAPEXTRA ['REFP'],
     which the engine must hold; a changed shared entry, a child key missing from the engine, or an unlisted engine-only key differs.
  4. ONE COPY (ASK 385): a385/reg385.cjs passes on the live pair (skipped with --no385, which is printed).
@@ -27,6 +27,14 @@ def libsha(w):
   s=hashlib.sha256(json.dumps(json.loads(c[a:b]),ensure_ascii=False,separators=(',',':')).encode('utf-8')).hexdigest()[:16]
   h=re.search(r'library sha ([0-9a-f]{16})',c[:a]);return s,(h.group(1) if h else None)
 MAPEXTRA=['REFP']
+# ASK 578: after ASK 578 the child has no Shared Library node; it is served the engine library text in the call (Alternate Pass Call field lib) and its Library Check checks it.
+def served(w): return not any(n['name']=='Shared Library' for n in w['nodes']) and any(n['name'].startswith('Library Check') and '__p.lib' in (n['parameters'].get('jsCode') or '') for n in w['nodes'])
+def xlist(w,prefix):
+  n=[x for x in w['nodes'] if x['name'].startswith(prefix)]
+  m=re.search(r'const __MAPEXTRA422=(\[[^\]]*\]);',(n[0]['parameters'].get('jsCode') or '') if n else '')
+  return json.loads(m.group(1)) if m else None
+def sends(w):
+  n=[x for x in w['nodes'] if x['name']=='Alternate Pass Call'];return bool(n) and json.dumps(n[0]['parameters']).count("lib: $('Shared Library').params.jsCode")==1
 def mapsha(w,side):
   c=[n for n in w['nodes'] if n['name']=='Shared Library'][0]['parameters']['jsCode'];M=json.loads(c[c.rindex('\n/*MAP*/')+8:c.rindex('\n/*END*/')]);k=list(M)
   if side=='engine':
@@ -55,17 +63,28 @@ for k in WF:
   chk(v==want[k],'2 %s version %s'%(k,v),'2 %s VERSION %s is not the expected %s'%(k,v,want[k]))
   chk(bool(w.get('active')) and w.get('activeVersionId')==v,'2 %s active and published'%k,'2 %s NOT PUBLISHED (active %s, activeVersionId %s)'%(k,w.get('active'),w.get('activeVersionId')))
 # 3 library
-S={}
-for k in WF:
-  try: S[k]=libsha(W[k])
-  except Exception as e: S[k]=('unreadable','?');bad.append('3 %s LIBRARY UNREADABLE: %s'%(k,str(e)[:100]))
-chk(S['engine'][0]==S['child'][0],'3 library sha equal %s'%S['engine'][0],'3 LIBRARY DIFFERS: engine %s, child %s'%(S['engine'][0],S['child'][0]))
-for k in WF: chk(S[k][0]==S[k][1],'3 %s header names its sha'%k,'3 %s HEADER names %s, body is %s'%(k,S[k][1],S[k][0]))
-MS={}
-for k in WF:
-  try: MS[k]=mapsha(W[k],k)
-  except Exception as e: MS[k]='unreadable';bad.append('3 %s MAP UNREADABLE: %s'%(k,str(e)[:100]))
-chk(MS['engine'] is not None and MS['engine']==MS['child'],'3 map_sha equal %s'%MS['engine'],'3 MAP DIFFERS: engine %s, child %s'%(MS['engine'] or 'none (an engine-only listed key is missing)',MS['child']))
+_x=xlist(W['engine'],'Library Sha')
+if _x: MAPEXTRA[:]=_x  # ASK 578: the engine-only keys are the engine Library Sha node's own list, not a copy here
+if served(W['child']):
+  ok.append('3 child has no Shared Library node; it is served the engine library in the call (ASK 578)')
+  try: se=libsha(W['engine'])
+  except Exception as e: se=('unreadable','?');bad.append('3 engine LIBRARY UNREADABLE: %s'%str(e)[:100])
+  chk(se[0]==se[1],'3 engine header names its sha %s'%se[0],'3 engine HEADER names %s, body is %s'%(se[1],se[0]))
+  chk(sends(W['engine']),'3 engine Alternate Pass Call sends the library text','3 ENGINE Alternate Pass Call DOES NOT SEND the library text')
+  xe,xc=xlist(W['engine'],'Library Sha'),xlist(W['child'],'Library Check')
+  chk(xe is not None and xe==xc,'3 child Library Check MAPEXTRA equals the engine %s'%json.dumps(xe),'3 MAPEXTRA DIFFERS: engine %s, child %s'%(json.dumps(xe),json.dumps(xc)))
+else:
+  S={}
+  for k in WF:
+    try: S[k]=libsha(W[k])
+    except Exception as e: S[k]=('unreadable','?');bad.append('3 %s LIBRARY UNREADABLE: %s'%(k,str(e)[:100]))
+  chk(S['engine'][0]==S['child'][0],'3 library sha equal %s'%S['engine'][0],'3 LIBRARY DIFFERS: engine %s, child %s'%(S['engine'][0],S['child'][0]))
+  for k in WF: chk(S[k][0]==S[k][1],'3 %s header names its sha'%k,'3 %s HEADER names %s, body is %s'%(k,S[k][1],S[k][0]))
+  MS={}
+  for k in WF:
+    try: MS[k]=mapsha(W[k],k)
+    except Exception as e: MS[k]='unreadable';bad.append('3 %s MAP UNREADABLE: %s'%(k,str(e)[:100]))
+  chk(MS['engine'] is not None and MS['engine']==MS['child'],'3 map_sha equal %s'%MS['engine'],'3 MAP DIFFERS: engine %s, child %s'%(MS['engine'] or 'none (an engine-only listed key is missing)',MS['child']))
 # 4 one copy
 if '--no385' in A: ok.append('4 ASK 385 check SKIPPED (--no385)')
 else:

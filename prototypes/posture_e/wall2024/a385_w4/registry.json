@@ -101,6 +101,27 @@
    "sha_b": "32b08f26e979",
    "reason": "ASK 435 (rulings 495, 496): the same relation as before, with the library REFP texts rebuilt after the BARE line (496) and the bare-number step (507) change; was: ASK 409: the 30 engine loaders declare REFP by rebuilding the one block from the Shared Library MAP entry REFP (n 8133, md5 37d0a6bd); the loader text is one text in all 30 nodes and the block it rebuilds is the full copy 00d90255b2e3",
    "wall": "Wall 8738, 8741, 8743, ASK 435 build"
+  },
+  {
+   "name": "__RL",
+   "sha_a": "2be75845b4d7",
+   "sha_b": "0f0fa74632df",
+   "reason": "ASK 578: the child R2 Alt Judge Enforcer Retry Build copy differs from the 0f0fa74632df node copies only in the IIFE argument ($('Alternate Pass In').first().json.pass.lib in place of $('Shared Library').params.jsCode); the body is the same text",
+   "wall": "ASK 578 tools (W4), to be graded by W1"
+  },
+  {
+   "name": "__RL",
+   "sha_a": "2be75845b4d7",
+   "sha_b": "3be38199f953",
+   "reason": "ASK 578: the child R2 Alt Judge Enforcer Retry Build copy differs from the 0f0fa74632df node copies only in the IIFE argument ($('Alternate Pass In').first().json.pass.lib in place of $('Shared Library').params.jsCode); the body is the same text",
+   "wall": "ASK 578 tools (W4), to be graded by W1"
+  },
+  {
+   "name": "__RL",
+   "sha_a": "0f0fa74632df",
+   "sha_b": "3be38199f953",
+   "reason": "ASK 573: the 0f0fa74632df text is the library loader in the node (Build Save Body, Format Markdown, Enforcer Build and others), which the scan counts as a copy; it is not a second body. Failing since 19:21 CST 11-23 (W1 Wall 11864 N1)",
+   "wall": "Wall 11864"
   }
  ]
 }

@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """ASK 463 (tools copy): both workflows are written and read back first; only then one audit_log row per workflow is written through tools/audit_row.py (a failed row prints its SQL and the script exits 3 at the end); a failed readback writes no row. ASK 458 variant (W4): adds --removes (live nodes absent from the target are removed, listed, and checked absent after the write). ASK 455 D variant (W4): adds --renames (target nodes matched to live by node id; renamed nodes declared). ASK 422(a): one writer for the engine and its child ("two copies, one writer, checked at load"). Joins rdf/wgen.py and rdf/wchild.py.
+ASK 578 (W4): --engine-only writes the engine alone when the child is served the library in the call; give --targets <eng_target> <child_base>; it checks the engine sends the text and both MAPEXTRA lists agree; --registry is passed to reg385.
 usage: python3 tools/libw.py <eng_versionId> <child_versionId> <eng_base.json> <child_base.json> <tag>
          (--pairs pairs.json | --targets eng_target.json child_target.json) [--add-eng n1,n2] [--add-child n1,n2] [--allow-reasoning] [--write --seat <seat> --card "<card text and time>"]
 --pairs: one set of library pairs, applied to both Shared Libraries by a422a/lib_apply.cjs (refuses unless both bodies give one sha).
 --targets: whole targets (a package that also changes other nodes). Every route: versions, no running execution, live equals the base,
 the reasoning guard on each, the ASK 385 one-copy check on the pair, and the two library shas equal. Writes the engine, then the child; reads both back."""
 import json,os,sys,subprocess,urllib.request,hashlib
-sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)));import audit_row
+sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)));import audit_row,re
 R=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 H={'X-N8N-API-KEY':os.environ['N8N_API_KEY'],'Content-Type':'application/json','Accept':'application/json'}
 API='https://truthapp.app.n8n.cloud/api/v1/';WF={'engine':'moMxiV4Irg1uRBZN','child':'MqQHRl7mQQ0z8QdT'};D=os.environ.get('RDF','rdf/');A=sys.argv
@@ -16,8 +17,15 @@ js=lambda x:json.dumps(x,sort_keys=True)
 def libsha(w):
   c=[n for n in w['nodes'] if n['name']=='Shared Library'][0]['parameters']['jsCode'];a=c.index('\n/*LIB*/')+8;b=c.index('\n/*MAP*/')
   return hashlib.sha256(json.dumps(json.loads(c[a:b]),ensure_ascii=False,separators=(',',':')).encode('utf-8')).hexdigest()[:16]
+EO='--engine-only' in A  # ASK 578: the child has no Shared Library; it is served the engine library in the call, so only the engine is written
+def served(w):return not any(n['name']=='Shared Library' for n in w['nodes']) and any(n['name'].startswith('Library Check') and '__p.lib' in (n['parameters'].get('jsCode') or '') for n in w['nodes'])
+def sends(w):return sum(json.dumps(n['parameters']).count("lib: $('Shared Library').params.jsCode") for n in w['nodes'] if n['name']=='Alternate Pass Call')==1
+def xlist(w,pre):
+  m=[re.search(r'const __MAPEXTRA422=(\[[^\]]*\]);',n['parameters'].get('jsCode') or '') for n in w['nodes'] if n['name'].startswith(pre)];m=[x for x in m if x]
+  return json.loads(m[0].group(1)) if len(m)==1 else None
 ver={'engine':A[1],'child':A[2]};base={'engine':A[3],'child':A[4]};tag=A[5];arg=lambda k:A[A.index(k)+1] if k in A else None
 if bool(arg('--pairs'))==bool(arg('--targets')):sys.exit('give --pairs or --targets')
+if EO and arg('--pairs'):sys.exit('REFUSED: --engine-only takes --targets <eng_target.json> <child_base.json> (the child is not changed)')
 live={};
 for k in WF:
   live[k]=req(API+'workflows/'+WF[k])
@@ -32,6 +40,9 @@ if arg('--pairs'):
   if subprocess.call(['node',os.path.join(R,'a422a_w4','lib_apply.cjs'),base['engine'],base['child'],arg('--pairs'),tg['engine'],tg['child']])!=0:sys.exit('REFUSED by lib_apply')
 else: tg={'engine':A[A.index('--targets')+1],'child':A[A.index('--targets')+2]}
 T={};RMS={};ADD={'engine':(arg('--add-eng') or '').split(',') if arg('--add-eng') else [],'child':(arg('--add-child') or '').split(',') if arg('--add-child') else []}
+if EO:
+  if not served(live['child']):sys.exit('REFUSED: --engine-only needs a child served the library in the call (ASK 578)')
+  if js(json.load(open(tg['child'])).get('nodes'))!=js(json.load(open(base['child'])).get('nodes')):sys.exit('REFUSED: --engine-only: the child target must equal the child base')
 for k in WF:
   TG=json.load(open(tg[k]));TG=TG.get('data',TG);TN={x['name']:x for x in TG['nodes']}
   TID={x['id']:x['name'] for x in TG['nodes']};REN={x['name']:TID[x['id']] for x in live[k]['nodes'] if x['id'] in TID and TID[x['id']]!=x['name']}
@@ -54,14 +65,20 @@ for k in WF:
   print(k,'changed',[b['name'] for a,b in zip(live_kept,t['nodes']) if js({kk:v for kk,v in a.items() if kk!='name'})!=js({kk:v for kk,v in b.items() if kk!='name'})],'added',ADD[k])
   T[k]=t;RMS[k]=RM;json.dump(t,open(D+'_guard_%s_%s.json'%(tag,k),'w'))
   if subprocess.call(['node',os.path.join(R,'guards','reasoning_guard.cjs'),D+'prewrite_%s_%s.json'%(tag,k),D+'_guard_%s_%s.json'%(tag,k)]+(['--allow'] if '--allow-reasoning' in A else []))!=0:sys.exit('REFUSED: reasoning guard (%s)'%k)
-if subprocess.call(['node',os.path.join(R,'a385_w4','reg385.cjs'),D+'_guard_%s_engine.json'%tag,D+'_guard_%s_child.json'%tag],stdout=subprocess.DEVNULL)!=0:sys.exit('REFUSED: ASK 385 one-copy check failed')
-se,sc=libsha(T['engine']),libsha(T['child']);print('library sha engine',se,'child',sc)
-if se!=sc:sys.exit('REFUSED: the two library bodies differ')
+if subprocess.call(['node',os.path.join(R,'a385_w4','reg385.cjs')]+(['--registry',arg('--registry')] if arg('--registry') else [])+[D+'_guard_%s_engine.json'%tag,D+'_guard_%s_child.json'%tag],stdout=subprocess.DEVNULL)!=0:sys.exit('REFUSED: ASK 385 one-copy check failed')
+if EO:
+  se=libsha(T['engine']);xe,xc=xlist(T['engine'],'Library Sha'),xlist(T['child'],'Library Check')
+  print('library sha engine',se,'(child served in the call); engine sends it:',sends(T['engine']),'MAPEXTRA engine',xe,'child',xc)
+  if not sends(T['engine']):sys.exit('REFUSED: engine Alternate Pass Call does not send the library text')
+  if xe is None or xe!=xc:sys.exit('REFUSED: MAPEXTRA differs between the engine and the child Library Check')
+else:
+  se,sc=libsha(T['engine']),libsha(T['child']);print('library sha engine',se,'child',sc)
+  if se!=sc:sys.exit('REFUSED: the two library bodies differ')
 if '--write' not in A:print('DRY: nothing written');sys.exit()
 seat,card=arg('--seat'),arg('--card')
 if not (seat and card):sys.exit('REFUSED: --write needs --seat and --card (ASK 463)')
-out={};AUDIT_FAIL=[];BACK={}
-for k in WF:
+out={};AUDIT_FAIL=[];BACK={};WW=['engine'] if EO else list(WF)
+for k in WW:
   t=T[k];req(API+'workflows/'+WF[k],'PUT',{'name':live[k]['name'],'nodes':t['nodes'],'connections':t['connections'],'settings':live[k]['settings']})
   back=req(API+'workflows/'+WF[k]);KN={x['name']:x for x in back['nodes']};fail=[]
   for x in t['nodes']:
@@ -72,13 +89,16 @@ for k in WF:
   if js(back['connections'])!=js(t['connections']):fail.append('connections')
   fail+=['still present '+n for n in RMS[k] if n in KN]
   if back.get('activeVersionId')!=back.get('versionId') or not back.get('active'):fail.append('NOT PUBLISHED')
-  json.dump(back,open(D+'fetchback_%s_%s.json'%(tag,k),'w'));out[k]=(back['versionId'],libsha(back),back.get('updatedAt'))
+  json.dump(back,open(D+'fetchback_%s_%s.json'%(tag,k),'w'));out[k]=(back['versionId'],None if (EO and k=='child') else libsha(back),back.get('updatedAt'))
   print(k,'back',back['versionId'],'nodes',len(KN),'lib',out[k][1],'FAIL' if fail else 'READBACK OK',fail[:10])
   if fail:
     for w in BACK:audit_row.post('n8n_workflow_publish',audit_row.notes(seat,card,live[w],BACK[w],'Tag %s_%s; written and read back before %s failed its readback; revert %sprewrite_%s_%s.json.'%(tag,w,k,D,tag,w)),fatal=False)
     sys.exit('STOPPED after %s; no audit row for it; rows written for %s; revert from %sprewrite_%s_*.json'%(k,list(BACK),D,tag))
   BACK[k]=back
-print('BOTH LIBRARIES', 'EQUAL' if out['engine'][1]==out['child'][1] else 'DIFFER', out['engine'][1], out['child'][1])
-for k in WF:
+if EO:
+  cb=req(API+'workflows/'+WF['child'])
+  print('ENGINE LIBRARY',out['engine'][1],'| child',cb['versionId'],'unchanged' if cb['versionId']==live['child']['versionId'] else 'MOVED')
+else:print('BOTH LIBRARIES', 'EQUAL' if out['engine'][1]==out['child'][1] else 'DIFFER', out['engine'][1], out['child'][1])
+for k in WW:
   if audit_row.post('n8n_workflow_publish',audit_row.notes(seat,card,live[k],BACK[k],'Tag %s_%s; library sha %s; revert %sprewrite_%s_%s.json.'%(tag,k,out[k][1],D,tag,k)),fatal=False) is None:AUDIT_FAIL.append(k)
 if AUDIT_FAIL:sys.exit('BOTH WRITTEN AND READ BACK, but the audit row failed for %s: run the printed SQL by hand (ASK 463)'%AUDIT_FAIL)

@@ -17,11 +17,16 @@ function copies(src,where,out,errs){let cm=[];let ast;
   for(const k in n){const v=n[k];if(Array.isArray(v))v.forEach(walk);else if(v&&typeof v.type==='string')walk(v);}};
  walk(ast);}
 const out={},errs=[];const perFile={};
-for(const f of files){const w=rd(f);const tag=path.basename(f);perFile[tag]=w;
+/* ASK 578: a child with no Shared Library node whose Library Check reads __p.lib is served the engine library in the call; its library copies are the engine's */
+const WS=files.map(rd);const ENG=WS.find(w=>w.nodes.some(n=>n.name==='Shared Library'));
+const served=w=>!w.nodes.some(n=>n.name==='Shared Library')&&w.nodes.some(n=>/^Library Check/.test(n.name)&&/__p\.lib/.test((n.parameters&&n.parameters.jsCode)||''));
+files.forEach((f,i)=>{const w=WS[i];const tag=path.basename(f);perFile[tag]=w;
+ if(served(w)&&ENG){console.log('SERVED '+tag+': no Shared Library node; library copies counted from the engine library sent in the call (ASK 578)');const U=T.unpack(ENG);const seen=new Set();
+  for(const k of Object.keys(U.M)){const s=T.rb(U.L,U.M[k]);const h=sha(s);if(seen.has(h))continue;seen.add(h);copies(s,tag+' served:'+k,out,errs);}}
  for(const n of w.nodes){const j=n.parameters&&n.parameters.jsCode;if(typeof j!=='string')continue;
   if(n.name==='Shared Library'){const U=T.unpack(w);const seen=new Set();
    for(const k of Object.keys(U.M)){const s=T.rb(U.L,U.M[k]);const h=sha(s);if(seen.has(h))continue;seen.add(h);copies(s,tag+' lib:'+k,out,errs);}}
-  else copies(j,tag+' '+n.name,out,errs);}}
+  else copies(j,tag+' '+n.name,out,errs);}});
 /* W3 condition: a file holding 0 copies of a registered name FAILs (a wrong --child file must not pass) */
 let zero=0;for(const tag of Object.keys(perFile))for(const name of R.names){const c=(out[name]||[]).filter(x=>x.where.startsWith(tag+' ')).length;if(!c){zero++;console.log('FAIL '+tag+': 0 copies of '+name);}}
 const acc=(R.accepted||[]).map(a=>[a.name,[a.sha_a,a.sha_b].sort().join('|'),a]);let fail=0;
