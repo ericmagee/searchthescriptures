@@ -1,0 +1,40 @@
+PASS A 42071: no Judge Order Read stored (run before ASK 591); not replayable, skipped
+PASS A 42234: both refuse alike (ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-42234-50t4glz5)
+PASS A 42283: both refuse alike (ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-42283-k0a4wkhr)
+PASS A 42373: the base code reproduces the stored Init Seats (panel sol62,spark,sol; reserve null; alt_order chatgpt,qwen4max,gemini,argon,hydrogen,neon)
+PASS A 42373: old reserve null; new reserve qwen4max; fields changed: [panel_reserve] (only panel_reserve may change); alt_order unchanged ["chatgpt","qwen4max","gemini","argon","hydrogen","neon"]
+PASS A 42373: the new reserve qwen4max is not JFL-moved, not time-removed and not on the panel
+PASS A 42505: the base code reproduces the stored Init Seats (panel sol62,spark,sol; reserve null; alt_order chatgpt,qwen4max,gemini,argon,hydrogen,neon)
+PASS A 42505: old reserve null; new reserve qwen4max; fields changed: [panel_reserve] (only panel_reserve may change); alt_order unchanged ["chatgpt","qwen4max","gemini","argon","hydrogen","neon"]
+PASS A 42505: the new reserve qwen4max is not JFL-moved, not time-removed and not on the panel
+PASS A 42517: the base code reproduces the stored Init Seats (panel gemini,qwen4max,hydrogen; reserve null; alt_order argon,sonnet,neon)
+PASS A 42517: old reserve null; new reserve sonnet; fields changed: [panel_reserve] (only panel_reserve may change); alt_order unchanged ["argon","sonnet","neon"]
+PASS A 42517: the new reserve sonnet is not JFL-moved, not time-removed and not on the panel
+PASS A 42528: the base code reproduces the stored Init Seats (panel qwen4max,sol,sol62; reserve null; alt_order chatgpt,sonnet)
+PASS A 42528: old reserve null; new reserve sonnet; fields changed: [panel_reserve] (only panel_reserve may change); alt_order unchanged ["chatgpt","sonnet"]
+PASS A 42528: the new reserve sonnet is not JFL-moved, not time-removed and not on the panel
+PASS A2 every seat after the panel JFL-moved: the new reserve is null, as before (null)
+PASS A2 no seat JFL-moved: pfree[3] argon is eligible; new output byte-equal to old (reserve argon)
+PASS A2 argon not JFL-moved: pfree[3] argon is eligible; new output byte-equal to old (reserve argon)
+PASS C 42517 Init Seats: reserve old null, new sonnet (argon, pfree[3], is JFL-moved: true)
+PASS C 42517 Resolve Seats (base, old Init Seats) reproduces the stored reserve (null) and alternates
+PASS C 42517 Resolve Seats (new Init Seats): reserve {"seat":"sonnet","fam":"openrouter","api_model":"anthropic/claude-sonnet-5.5","max_tokens":64000}
+PASS C 42517 Resolve Seats: alternates unchanged [argon, sonnet, neon] (sonnet stays in the pool as live keeps the reserve there)
+PASS C 42517 Panel Check (live): throws as stored: FAIL-CLOSED: seat "hydrogen" returned an envelope this parser does not recognise. Top-level keys: [id,object,created,model,provider,system_fingerprint,service_tier,choices,usage]. NO ROW IS WRITTEN. r
+PASS C 42517 Panel Check (new): one substitution, no throw: {"slot":2,"failed_seat":"hydrogen","substitute":"sonnet","failure_kind":"no_usable_judgment","reason":"empty reply"}
+PASS B 42517 failure detail (new): FAIL-CLOSED: seat "hydrogen" returned no text: finish_reason length; output tokens 65,536 (reasoning 65,533); prompt tokens 75,848. NO ROW IS WRITTEN.
+PASS B 42517 with no reserve (new Panel Check): FAIL-CLOSED: seat "hydrogen" returned no text: finish_reason length; output tokens 65,536 (reasoning 65,533); prompt tokens 75,848. NO ROW IS WRITTEN. [no reserve seat is free]
+PASS B envelope string: byte-equal ({"text":"{\"a\":1}","finish":"stop"})
+PASS B envelope empty_string: byte-equal ({"text":"","finish":"stop"})
+PASS B envelope gemini: byte-equal ({"text":"{\"x\":1}","finish":"STOP"})
+PASS B envelope gemini_thought_only: byte-equal (THROW FAIL-CLOSED: seat "s" returned an envelope this parser does not recognise.)
+PASS B envelope error: byte-equal (THROW FAIL-CLOSED: seat "s" returned an envelope this parser does not recognise.)
+PASS B envelope unknown: byte-equal (THROW FAIL-CLOSED: seat "s" returned an envelope this parser does not recognise.)
+PASS B envelope empty: byte-equal (THROW FAIL-CLOSED: seat "s" returned an envelope this parser does not recognise.)
+PASS B envelope no_message: byte-equal (THROW FAIL-CLOSED: seat "s" returned an envelope this parser does not recognise.)
+PASS B envelope nulljson: byte-equal (THROW FAIL-CLOSED: seat "s" returned an envelope this parser does not recognise.)
+PASS B content null with usage: THROW FAIL-CLOSED: seat "s" returned no text: finish_reason length; output tokens 65,536 (reasoning 65,533); prompt tokens 75,848. NO ROW IS WRITTEN. run_token=X
+PASS B content null, no usage, no finish: THROW FAIL-CLOSED: seat "s" returned no text: finish_reason not given; output tokens not given (reasoning not given); prompt tokens not given. NO ROW IS WRITTEN. run_token=X
+PASS R1 reserve that substituted: sonnet is refused as an alternate: G3: anthropic/claude-sonnet-5.5 already sits on this panel
+PASS R1 reserve not used: sonnet is still offered as an alternate (guard result null)
+RESULT: ALL PASS (39)
