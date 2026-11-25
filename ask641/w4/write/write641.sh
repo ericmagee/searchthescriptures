@@ -1,6 +1,6 @@
 #!/bin/bash
 # ASK 641 write (base engine ee4e389d / child aad0ad9c): ENGINE ONLY, Panel Tokens + Shared Library changed, 3 salvage nodes added (W4 build b1 dbeff2f6, W1 grade PASS commit 00b9f16a).
-# Operator press: PRESS_LINE
+# Operator press: Eric pressed W4 card "Write it" 08:19 CST 11-25 (cmsg_017ZQamDMHrS6fqMHnQDVo58A2dTgHnyvXTJT6Vh5XmnQJ)
 # Refuses while any engine or child execution runs, when live is not the base, or when the rebuild, t641, standing set, pair check or one-copy check fail.
 set -u
 : "${N8N_API_KEY:?N8N_API_KEY not set; NOTHING WRITTEN}"
