@@ -1,0 +1,52 @@
+STANDING SET on target_engine_626.json (2df7f6fa-d552-4764-aa31-05789a149925) and base_child.json (aad0ad9c-ecc7-49a1-9079-57a065d9ec74)
+child has no Shared Library node; it is served the engine library in the call (ASK 578)
+# inv_587.cjs
+== 587 A: the whole judge line reaches the layer check
+PASS 587.A1 gemini_1272 gemini_1272 (1685 characters): the whole line has its deciding step (deciding step written (ASK 504))
+PASS 587.A1 qwen4max_1274 qwen4max_1274 (1721 characters): the whole line has its deciding step (deciding step written (ASK 504))
+PASS 587.A2 engine engine: no library object sets flagged_line with a 1,500 cut (0 found)
+PASS 587.A2 child child: no library object sets flagged_line with a 1,500 cut (0 found)
+PASS 587.A3 the " [...]" NOT READ guard stands once in the layer check (1)
+== 587 B: a KEEP in the judge's own words is read over the record lines
+PASS 587.B1 the spark S3 KEEP (enforcer log 53175) is accepted
+PASS 587.B2 control S1 KEEP is accepted
+PASS 587.B3 a KEEP quoting only verse words the answer holds in quotation marks still fails
+== 587 C1: no label demanded of a keystone with no collision line
+PASS 587.C1a argon D5 has no collision line, so no label is demanded
+PASS 587.C1b control: with a D5 collision line, the label is still demanded
+== 587 C2: second reading (enforcer log 53360) RECORD-ONLY
+PASS 587.C2a 53360: changed to the first reading's own grade: RECORD-ONLY
+PASS 587.C2b control: a change that does not carry the first reading's grade is counted
+PASS 587.C2c E-RES: the same rule on the RESULT word
+== 587 D1: the standing stays on the count
+PASS 587.D1 the standing stays on the count (SELF-SUPPORTED): SELF-SUPPORTED
+== 587 D2, D3: the recompute counts a break no collision line names
+PASS 587.D2 RESULT recompute: a counted unnamed CHALLENGER break blocks CHALLENGER WINS (UNDERDETERMINED); with none, CHALLENGER WINS
+PASS 587.D3 gate recompute: the same (UNDERDETERMINED / CHALLENGER WINS)
+== 587 D4: the recompute line prints its inputs
+PASS 587.D4 the recompute line prints its inputs
+== 587 D5: engine result on judgments 1272 to 1274
+PASS 587.D5 1272 judgment 1272: v61 WORD UNDERDETERMINED (UNDERDETERMINED)
+PASS 587.D5 1273 judgment 1273: v61 WORD UNDERDETERMINED, its INPUTS list the counted break (UNDERDETERMINED)
+PASS 587.D5 1274 judgment 1274: v61 WORD UNDERDETERMINED, its INPUTS list the counted break (UNDERDETERMINED)
+== 587 D6: the built sbApply2024 in its real scope
+PASS 587.D6 built sbApply2024 (Gate Record) on 1273 with the counted unnamed C1 break: UNDERDETERMINED
+== 587 D7: scope of __cecX and __cecU586
+PASS 587.D7 engine engine: every use of __cecX and __cecU586 is in scope (93 uses, 0 out of scope)
+PASS 587.D7 child child: every use of __cecX and __cecU586 is in scope (93 uses, 0 out of scope)
+== 587 E: a send-back item line is not an UNREAD COUNTED LINE
+PASS 587.E1 a send-back item line is not tallied
+PASS 587.E2 control: an unknown counted AUDIT line is still tallied
+# s3_longline.cjs
+== S3 (a): flagged_line is stored and shown whole
+PASS S3.a places that set flagged_line: 122 found by scan (14 traced whole, 106 not traced, 2 cut, of them 2 on the named baseline list); new cuts: 0
+PASS S3.a UNTRACED places the scan cannot trace: 106, not on the baseline list: 0
+== S3 (a2): a cut setter, in any source, of a property flagged_line reads
+PASS S3.a2 properties flagged_line reads: 22 (item, line, detail, report, flagged_line, to, row, n, clause, keystone_line, round, sentence, ...); cut setters of them in any source: 74 distinct, 74 on the named baseline list (ASK 597); new: 0
+== S3 (b): the judge's own line shown in a send-back text
+PASS S3.b send-back texts that show "Your line:" cut: 3 (baseline 3; ASK 597 takes it to 0)
+# s4_compile.cjs
+== S4 expressions compile in n8n parser
+PASS S4.engine 290 of 290 compile (@n8n/tournament 1.16.0)
+PASS S4.child 67 of 67 compile (@n8n/tournament 1.16.0)
+STANDING: 31 PASS, 0 FAIL (18.3 s)
