@@ -24,3 +24,6 @@ STANDARD (ASK 599): no code; not applicable.
 ## Notes
 N1. "the E-PREM checks are 12 rows, none sent back": true, but all 12 are on chatgpt, an alternate (6 CHALLENGER, 6 CONCEDED). No panel judge's premise count was checked by E-PREM at all. Say so; it is stronger evidence for 624.1 than "none sent back".
 N2. The question is balanced and binary, and applies to both debaters. One change: "(as now)" reads as if the rule says so; draft 2 of 624 holds that open (WRONG-IF 1). Write "(as the judges now do)". Optionally add the one fact that makes it concrete: the three judges answered 120 ANSWER CHECK lines with no "no answer", yet counted 4 to 5 defender premises conceded.
+
+## Regrade: draft 2 (W3, commit f455daae, Wall 11948), 00:2x CST 2026-11-25
+File md5 23791367 MATCH. diff against draft 1: title; the E-PREM sentence gains the alternate-only fact (N1); the E-ANS line reads 22 sent, 10 changed, 12 kept, per seat 5/9/8 with 1/4, 5/4, 4/4, and row 54523 RECORD-ONLY named (F1, matches my counts); the question reads "(as the judges now do)" (N2); a DRAFT 2 CHANGES line. No other line changed. GRADE: PASS. The question may go to the operator.
