@@ -1,0 +1,8 @@
+{
+ "06.0": [
+  {
+   "old": "\n- C3G, THE LINK-ROUND MEANS CHECK:",
+   "new": "\n  - THE ROW'S RE-CALL LINE NAMES EVERY CAUSE (ASK 633; Build Save Body only): each round that was sent back is recorded in review_notes as `[AUDIT v47: ROUND RE-CALL (pkgBAR, pkgLAYB) -- SEAT: <seat> (<side>); ROUND: [<round>]; SENT BACK: <n> barred sentence(s); <m> layer point(s); KEPT: ...; VOID: ...]`. n is the number of barred sentences found in the first answer. m is the number of layer points found in the first answer (the items of `layers.first` in that round's B Extract; a record with no layers field reads 0). On the round D4B checks ([CR4]) alone, the line adds `; <k> pressed verse(s) with no ANSWER line` after the layer count; k is the length of D4B Build's `press_open`, and reads 0 when D4B Build did not run. The SEAT, ROUND, KEPT and VOID parts of the line and the BARRED MOVE VOID line are unchanged; KEPT still compares barred counts only. Why: a round is sent back for barred sentences, for layer points, or (D4B) for pressed verses with no ANSWER line, but the line was labelled \"BARRED MOVE RE-CALL (pkgBAR)\" and counted barred sentences only, so a round sent back for layer points read \"SENT BACK: 0 sentence(s)\". The change is to the record alone: what a seat is sent and when a round is sent back are as before. Limits: lines stored before the change keep the old label and count; not shown by a run; its mark is a row whose ROUND RE-CALL lines carry barred and layer counts equal to that round's B Build `why`, with no line reading \"SENT BACK: 0 sentence(s)\".\n- C3G, THE LINK-ROUND MEANS CHECK:"
+  }
+ ]
+}
