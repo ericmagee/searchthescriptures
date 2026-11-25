@@ -1,4 +1,4 @@
-# ASK 632 PLAN (W1), rev 0: the input-token field of an OpenRouter cost entry is never negative, and it is right when the cache fields overlap
+# ASK 632 PLAN (W1), rev 1 (W4 PASS WITH N1 to N3 on rev 0, Wall 11988; N1 to N3 applied): the input-token field of an OpenRouter cost entry is never negative, and it is right when the cache fields overlap
 
 Source: W4, Wall 11931 (cause and proposed fix); the 42528 AAR, DEFECT 8 (Wall 11953); the coordinator's assignment, 05:49 CST 11-25.
 Live base: engine 066525aa (ASK 629). Child aad0ad9c: it holds no cost reader (searched). Nothing in this plan touches reasoning, a model setting, a prompt or a dollar figure.
@@ -21,7 +21,7 @@ In call_costs, the `i` field (input tokens not served from cache) is wrong for g
 - Reads back: W1. Manual entry and AAR rows: W3.
 
 ## 3. SCOPE, SEARCH, NOT SEARCHED
-Change: one statement in the Panel Tokens code node, in the `else` branch of `__CU` (the OpenRouter/other branch). Today it reads `e.i=__N(u.prompt_tokens)-e.cr-e.w5;`. The new statement sets `e.ov=1` and `e.i=__N(u.prompt_tokens)-e.cr` when `(e.w5>0&&e.w5===e.cr)||__N(u.prompt_tokens)-e.cr-e.w5<0`, and keeps the old value otherwise. The line is tagged ASK 632. No other node and no connection changes.
+Change: one statement in the Panel Tokens code node, in the `else` branch of `__CU` (the OpenRouter/other branch). Today it reads `e.i=__N(u.prompt_tokens)-e.cr-e.w5;`. The new statement sets `e.ov=1` and `e.i=Math.max(0,__N(u.prompt_tokens)-e.cr)` (W4 N3: the clamp is in the statement) when `(e.w5>0&&e.w5===e.cr)||__N(u.prompt_tokens)-e.cr-e.w5<0`, and keeps the old value otherwise. The line is tagged ASK 632. No other node and no connection changes.
 
 SEARCH (done for this plan):
 - Readers that subtract cache fields from prompt tokens, in the live engine 066525aa and child aad0ad9c (text search for cache_write_tokens and cached_tokens):
@@ -29,11 +29,12 @@ SEARCH (done for this plan):
   - The D/C Extract nodes, the Shared Library readers, Build Save Body and the Normalizers store the fields as totals and subtract nothing.
   - The child has no call_costs builder.
 - Gemini direct (`usageMetadata`) branch: `i = promptTokenCount - cachedContentTokenCount`. It has no write field. Unchanged.
+- Plain Rule Lines (W4 N2) reads the stored call_costs and sums `e.i` per model in the transcript's cost section. It needs no change; its per-model input total changes for gemini-3.8-flash by the corrected entries only (C6).
 - DB: the only function that names call_costs is `record_debate_row_tokens`. It takes `usd` from `b` when billed, otherwise from model_prices. All 111 gemini-3.8-flash entries are billed, so no dollar figure depends on `i`.
 - SCALE (SQL 05:5x CST 11-25):
   - 57 entries have `i < 0`, in 24 runs, all google/gemini-3.8-flash. The last is in the row of 04:59Z 11-25.
   - In all 57, `cr = w5`.
-  - OpenRouter entries with both `cr > 0` and `w5 > 0`: 662. The other 605 are OpenAI models and qwen4max, none with `cr = w5` and none negative (minimum `i` is 0).
+  - OpenRouter entries with both `cr > 0` and `w5 > 0`: 719 (W4 N1), the 57 plus 662 of other models (OpenAI models and qwen4max), none of which has `cr = w5` or `i < 0` (minimum `i` 0).
 - FIT (ask632/w1/fit632.sql):
   - The billed cost of all 111 stored gemini-3.8-flash entries is solved exactly at input 0.75/M, cache read 0.075/M, cache write 1/24 per M and output 3.75/M.
   - It fits only when the uncached input is prompt minus read: 57 of 57 with a write fit that reading and 0 of 57 fit the disjoint reading. The 54 without a write fit at the same prices.
@@ -51,6 +52,7 @@ NOT SEARCHED: the dashboard (Vercel app) pages that may show `i`. Correcting the
   - write = read: overlap;
   - remainder < 0 with write ≠ read: overlap, and `i = max(0, prompt - read)`. A clamp at 0 is added only for this last case, as W4 proposed.
 - C4: Engine: only Panel Tokens changes, by that one statement; every other node is byte-equal to 066525aa; connections are equal; standing 31/0; S4 compile; Library Check pair PASSES.
+- C6 (W4 N2): the per-model sum of `i` that Plain Rule Lines prints, computed over the fixture with old and new entries: unchanged for every model but gemini-3.8-flash; for it, the new total equals the old total plus the sum of `w5` over the 57 entries.
 - C5: ASK 599: the line is tagged, there is no dead code, and there is no new catch.
 - DONE: W4 PASS on the plan and the build; the operator presses W4's card; W4 writes; W1 reads back; two clean live runs in which a gemini-3.8-flash call reports a cache write (marked as in section 6).
 

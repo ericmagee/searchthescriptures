@@ -1,0 +1,21 @@
+PASS same 423 node names
+PASS only Panel Tokens changed: Panel Tokens
+PASS connections equal
+PASS base holds the old statement once
+PASS one line changed (line 19)
+PASS C5: the line differs only by the tagged statement (exact, NEW read from b632.cjs)
+PASS the base __CU rebuilds every stored entry from its usage (1922 of 1922)
+PASS 57 stored entries with i < 0
+PASS C1: each of the 57 gets i = prompt - cr (>= 0), ov 1, every other field unchanged
+PASS C1: QR Ask -75,869 becomes 664
+PASS C2: the other 1865 entries byte-equal, no ov key (1865)
+PASS C3 no cache: i 100 unchanged
+PASS C3 read only: i 60 unchanged
+PASS C3 disjoint write, remainder >= 0: i 30 unchanged
+PASS C3 write = read, remainder >= 0: i 150 ov 1
+PASS C3 write = read, remainder < 0: i 664 ov 1
+PASS C3 remainder < 0, write != read: i 40 ov 1
+PASS C3 remainder < 0 with prompt < read (clamp): i 0 ov 1
+PASS C6: per-model i sum unchanged for 19 other models
+PASS C6: gemini-3.8-flash i sum 29593 -> 1818652 (= old + sum of w5 over the 57, 1789059)
+RESULT: ALL PASS (20)
