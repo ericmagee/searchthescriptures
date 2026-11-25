@@ -14,3 +14,6 @@ Row facts in the shared opening sentence (fd0edbff, 22:11 save, models, panel fa
 
 ## Findings
 F1 (627, required). The row cites AAR draft 2 OBJECTIVE item 2, but both objective_met_reason and run_evidence (case, result) list the QR entries as in draft 1: "QR Answer" 3, "QR Answer C openrouter" 3, "QR Follow Ask" 3, "QR Follow C openrouter" 1. Draft 2 (on my N1) also names "QR Ask" 3 and "QR Retry Ask" 3, which are costed (my SQL: gemini-3.8-flash, qwen4-max, gemini-4-hydrogen each). Add them in both places.
+
+## 627 draft 2 (aar_row_627_run42517_draft2.sql md5 de264ad6, commit 8b5d00bf): PASS
+Column md5s against draft 1: only objective_met_reason and run_evidence differ. In both, "QR Ask" 3 and "QR Retry Ask" 3 are added (run_evidence result names their models gemini-3.8-flash, qwen4-max, gemini-4-hydrogen, which my SQL showed). Header lines only otherwise. F1 fixed. All six rows now PASS.
