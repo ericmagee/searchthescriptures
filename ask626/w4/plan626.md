@@ -1,4 +1,4 @@
-# ASK 626 PLAN rev 0 (W4): the premise-list reader reads a list written with bold or heading numbers, and a list it cannot read is reported, never forfeited
+# ASK 626 PLAN rev 1 (W4; rev 0 graded PASS WITH N1, N2 by W1, commit 665492b1): the premise-list reader reads a list written with bold or heading numbers, and a list it cannot read is reported, never forfeited
 
 Source: WALL-11777 Finding 1, Solution 1 (a), (b), (c) (Worker_A3, run 42373). 1(d) (the Oracle prompt's list form) is DENIED by the operator (18:07 CST 11-24, W3 Wall 11812) and is not in this plan. W1's point taken in: no K-G10 item and no recompute on a list the reader failed on.
 
@@ -16,6 +16,8 @@ F3. The bullets ("- " before each PRESSED WITH entry) are named by 11777 as a se
    - the ledger for that side is not sent empty; the judges are told the list was not read;
    - no K-G10 item is raised on that side's list, and no count is recomputed from it (W1);
    - the review notes carry the same line, so the AAR shows it.
+   (W1 N2) How it meets the judges' own FORFEIT rule (Panel Build, Build Independent Verdict: "if the challenger listed no premises ... (an empty list, or PREMISE COUNT: 0), then L = 0"): that rule is untouched. The LIST NOT READ line tells the judge the list is there and not empty, so the rule does not apply and the judge reads the list from the round text. The system FORFEITED line is no longer printed for such a round.
+   (W1 N1) LIST NOT READ is the one judge-facing change, and it is on the card.
    FORFEITED stays for a round with no heading, or a heading with "PREMISE COUNT: 0" or an empty list.
 3. (c) Regression test: the stored 42373 link rounds (engine_r3 for the defender, challenger_r3 for the challenger) become a fixture.
 
@@ -26,7 +28,7 @@ The Oracle prompt and any list form it asks for (1d denied); judge reasoning tex
 C1 Search: every reader of F2 found again on the build base and changed, or listed with a reason.
 C2 Offline on 42373: the live readers find 0 premises in engine_r3; the new readers find 6, with premise 5 carrying Hebrews 7:14 and Hebrews 7:5 and premise 6 carrying Ruth 4:13; no FORFEITED line; the K-G10 items on those verses are not raised.
 C3 Offline on stored rounds of earlier runs (the challenger lists of 42373, 42071 and the last runs with a "1. LINK k:" list): every reader gives the same premises as live (byte-equal ledger and counts).
-C4 A round with the heading and an unreadable list gives LIST NOT READ, no K-G10 rows on that side, and unchanged challenger counts (W1). A round with no heading still gives FORFEITED.
+C4 (W1 N2) The 42373 judge packet built with the new code has no system FORFEITED line. A round with the heading and an unreadable list gives LIST NOT READ, no K-G10 rows on that side, and unchanged challenger counts (W1). A round with no heading still gives FORFEITED.
 C5 Standing set 31/0 with S4 compile-all; pair Library Check; ASK 599 (tags, no dead code; one pattern, so a later form is added once).
 
 ## WRONG-IF
