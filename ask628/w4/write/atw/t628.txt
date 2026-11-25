@@ -1,0 +1,31 @@
+PASS C5 engine: only the six named nodes change ["Build Independent Verdict","Build Save Body","D4 Build","D4B Build","Panel Build","Shared Library"]
+PASS C5 child: only the Shared Library changes
+PASS C5 connections unchanged
+PASS C5 all 73 existing MAP entries rebuild the same text
+PASS C5 engine and child LIB lines equal; the PRESS LIST entry equal; every other child MAP entry unchanged
+PASS PRESS LIST rebuilds at its stated length
+PASS C5 compiles: Build Save Body
+PASS C5 compiles: D4 Build
+PASS C5 compiles: D4B Build
+PASS C5 compiles: Panel Build
+PASS C5 compiles: Build Independent Verdict
+PASS C1 42373 audit line byte-equal: old, new and stored ([AUDIT: CLOSE PRESS LIST (record-only) -- PRESSED: 31; NO ANSWER LINE ...)
+PASS C1 audit byte-equal with a dr4 press too (the audit keeps reading dr4)
+PASS C1 PRESS LIST gives 31 pressed and 20 open on 42373
+PASS C2 Oracle close prompt carries the 31 pressed verses
+PASS C2 other profiles: prompt unchanged
+PASS C2b a press in dr4 only does not change the prompt list (W1 N2)
+   42373 close: live D4B resend=false (no barred move harvested); new resend=true (0 barred sentence(s); 0 layer point(s); 20 pressed verse(s) with no ANSWER line)
+PASS C3 D4B re-calls the 42373 close naming the 20 unanswered verses
+PASS C3 one re-call request: the close plus one note
+PASS C3 every verse answered: this trigger adds nothing (resend false, as live)
+PASS C3 other profiles: same decision and note as live
+PASS C2b the re-call list reads DR1 to DR3 only, no dr4 source (W1 N2)
+PASS C4 judges get the 20 still unanswered on the 42373 close
+PASS C4 all answered: no line (packet byte-equal)
+PASS C4 other profiles: no line
+PASS C2b the judges' list never reads dr4 (W1 N2)
+PASS C4 Build Independent Verdict carries the same line on its ledger
+PASS C4 Panel Build ledger ends with the line
+PASS C5 ASK 599: every change tagged ASK 628
+ALL PASS
