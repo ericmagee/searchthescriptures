@@ -14,3 +14,10 @@ N1. "Surrounding verse" is coded as any other verse of the same chapter; say so 
 N2. A link round with no answer heads lists every pressed verse; the note at about 200 characters a verse reaches about 6,200 characters at 31. State the cap or the form.
 NOT CHECKED: the PRESS_LIST.js, IMP_B_Build.js and bar.js copies in ask654/w4 against live (W4's extracts); cost figures (estimates).
 STANDARD (ASK 599): prototype only; graded at build.
+
+## REGRADE: PLAN REV 4 (a57b0211, commit 9e00a66f), read whole. Rev 3a was superseded before posting; this regrade replaces it.
+F3: MET. TEXTPROOF ONE-VERSE RESTRICTION and the GUARDHOLD import line are listed as (ii) and (iii) and are on the STEP 4 card order.
+F1: PART MET, STILL FAIL. The head form sentence is added. But part 1 still does not tell the Oracle the four marks the check reads: an [L1] line quoting a surrounding verse, and an [L4] line quoting the opponent [DR<n>] "<6+ words>". In 42528 15 of 15 blocks lacked exactly those two. As written, only the send-back note teaches the form, so the send-back would fire on nearly every round. "0 calls added" holds only where a send-back already fires. C4's "a block written to part 1's lines is not sent back" is still untested, because the zero-item block was written to W4's marks. FIX, choose one and say which: (a) the marks go into part 1 after the book's quotations, as engine form, on the operator's card; or (b) the plan states that the send-back carries the form, counts the extra send-backs on the 42528 rounds, and C4 is restated to the marks.
+F2: NOT MET. Rev 2 text remains: OBJECTIVE "Expected effect" (fixed lines; "what its words state"; "the opponent's inference ... quoted"); WRONG-IF "the STATES line"; C3 and C4 "part 1's lines"; RUN EVIDENCE "[L2] or [L3]" (the check requires all four); STEP 3 "rev 2's words", STEP 4 "W1's PASS of rev 1".
+N1 (unchanged): the [L4] mark checks only the opponent's inference. The Oracle's own union stated as fact, which has been the first loss three runs running, is not checked by code. Say this on the card.
+GRADE REV 4: FAIL F1 F2. CHECK PLAN REV 1: PASS WITH N1 N2, unchanged.
