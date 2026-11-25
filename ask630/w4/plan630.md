@@ -1,4 +1,4 @@
-# ASK 630 PLAN (W4), rev 0: a panel failure marks the row at once, with its cause
+# ASK 630 PLAN (W4), rev 1 (replaces rev 0; W1 N1, Wall 11963): a panel failure marks the row at once, with its cause
 
 Source: W4 Wall 11932 (cause and fix). Operator 04:41 CST 11-25, project chat, message cmsg_017ZQamDMHrS6fqMHnQDVo589SHYu1ca6GGbyLrQ8xVXBq: "#630. yes". That was his answer to the question on data_class 'contested' and framework_verdict null.
 Live base: engine dc258730 (after ASK 626); child aad0ad9c (not touched).
@@ -64,6 +64,7 @@ NOT SEARCHED: dashboard pages that read quarantine_reason (they read text and ar
 - Check: Save to DB comes before Panel Build on every path, and row fd0edbff (42517) existed at 22:11:40 CST, before the panel failed at about 22:19. That is the known-bad case.
 - Known-good case: 42528's row has outcome set, so the function would return 0 and leave it as it is.
 - A second wrong-if: a non-dry regrade whose row has outcome null. With p_skip it is never marked, so a regrade failure stays unmarked in the row. That is by design, and it is named here.
+- A third (W1 N1): a failure after the outcome is stored (in Write Judgment 1 to 3, Derive Outcome or a later node that feeds Panel Failure Note). The row has outcome set, so the function matches nothing and leaves no mark. The row keeps its verdict, and the failure is only in the execution and the transcript. This is by design: a stored verdict is not quarantined by a later store failure.
 
 ## 6. RUN EVIDENCE
 - Case: the first live run whose panel stage fails.
