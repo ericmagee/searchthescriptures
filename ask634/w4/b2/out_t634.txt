@@ -1,0 +1,24 @@
+PASS only Shared Library changed (426 nodes)
+PASS connections equal
+PASS one LIB line changed (index 1426)
+PASS the old line is kept whole; the new statement is inserted before the NOT APPLIED push
+PASS ASK 599: tagged ASK 634; no new catch
+PASS library entry Gate Record rebuilds and loads on base and target
+PASS library entry Gate Build rebuilds and loads on base and target
+PASS library entry Late Gate Build rebuilds and loads on base and target
+PASS library entry Alternate Merge Seat rebuilds and loads on base and target
+PASS library entry R2 Alt Gate Record rebuilds and loads on base and target
+PASS C1 base: G2, G3, G7 NOT APPLIED, "the flagged line is not in the judge text" (as stored, rows 54568, 54569, 54573)
+PASS C1 target: G2, G3, G7 applied
+PASS C1 target: each pair's FORCED line is replaced by its gate line
+PASS C1 target: the collision lines are unchanged
+  N1 effect: 3 items UNCURED -> CURED; sol drv_uncured 9 -> 6 (stored 9). A seat with drv_uncured > 0 is not seated, so sol's standing and the outcome do not change.
+PASS C2 no FORCED line for the pair: NOT APPLIED under both, same reason
+PASS C2 two FORCED lines for the pair: NOT APPLIED under both
+PASS C2 the pair's line changed earlier in the pass: G2 is applied to it exactly as the base applies a second change on a found line (the last change wins)
+PASS C2/C3 a flagged line that is found: identical result under both
+PASS C2/C3 a RETRACTED change: identical result under both
+PASS C3 an absent line with a collision-line change: identical result under both
+PASS C3 an absent line with a non-FORCED change: identical result under both
+PASS C2 a FORCED change for a pair with no FORCED line: NOT APPLIED under both
+RESULT: ALL PASS (22)

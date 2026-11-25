@@ -1,0 +1,14 @@
+loaded: gateItems2024:function d38Items2024:function cureJText:function sbApply2024:function gatePromptText2024:function ciRounds:function drvLinks:function D38_STATUS:object
+gate-time fields: {"verdict_tag":"BROKEN","defense_standing":"COLLAPSED","conceded_links":4,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":1} | array old "counted_premises_challenger": [3, 4] | new "counted_premises_challenger": [3]
+D38 items old: 0 []
+D38 items new: 0 []
+BASIS old 0 new 0
+gate items old 13 new 13
+T0 challenger count line: CHALLENGER CONCEDED LINKS: 1 -- recomputed after the cure from the cured lines (CORRECTED COUNT CHALLENGER 1) -- grounds: the cure names none (the cure lowered 
+T1 challenger count line: CHALLENGER CONCEDED LINKS: 1 -- recomputed after the cure from the cured lines (CORRECTED COUNT CHALLENGER 1) -- grounds: the cure names none (the cure lowered 
+T0 lines on C3: ["D1 vs C3 (Romans 1:3; Galatians 4:4): UNDERDETERMINED (Commitments 3 and 8) -- The competi"]
+T1 lines on C3: ["D1 vs C3 (Romans 1:3; Galatians 4:4): UNDERDETERMINED (Commitments 3 and 8) -- The competi"]
+SYNTHETIC D38 old [] new ["D38|BASIS|CHALLENGER|3"] | LIVE: LIVE
+  why: your CHALLENGER CONCEDED LINKS line counts 1 with challenger premise 3 among them (counted premises 3), but D1 vs C3 is now graded STANDS (it was CHALLENGER LINK BROKEN), and no line left in your text grounds premise 3 as conceded or unexhibited. Recount the line, or regrade the collision.
+5 pass, 0 fail
+ALL PASS

@@ -1,0 +1,8 @@
+C1 drop list from 54270/54271: {"DEFENDER":[],"CHALLENGER":[4]}
+C1 old array [3,4] mark: [AUDIT v50: COUNTED PREMISES NOT DERIVED (pkgCPD) -- SEAT: sol; SIDE: CHALLENGER; COUNT: 2 to 1; ARRAY: [3,4] (kept); WHY: the count line names 0 counted premise(s) (none) for a count of 1; LINE: CHALLENGER CONCEDED LINKS: 1 -- recomputed after the cure from the cured lines (CORRECTED COUNT CHALLENGER 1) -- grounds: the cure names none (the cure lowered the count from 2 and does not say which premises it keeps).; record-only, it removes no seat. REVIEW THIS ROW. ; END]
+C1 new array [3] mark: [AUDIT v50: COUNTED PREMISES DERIVED (pkgCPD) -- SEAT: sol; SIDE: CHALLENGER; COUNT: 2 to 1; WAS: [3,4]; NOW: [3]; FROM: the cure took premise(s) 4 out of the count; record-only, it removes no seat ; END]
+N1 K-G8 if the post-cure array were tested: old 1 new 0 (not run live: drvBroken is called only at LIB 2426, before the cure)
+ENFORCER PROMPT old: STORED COUNTED PREMISES FOR THIS SIDE: 3, 4 -- premise 4 is COUNTED
+ENFORCER PROMPT new: STORED COUNTED PREMISES FOR THIS SIDE: 3 -- premise 4 is not counted (SPARED)
+28 pass, 0 fail
+ALL PASS
