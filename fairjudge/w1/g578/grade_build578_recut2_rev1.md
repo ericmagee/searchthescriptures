@@ -13,3 +13,7 @@ OBJECTIVE MET: yes, offline.
 - aar_row_627_draft2.sql (md5 9bf5db57): CONFIRMED. A diff against draft 1 shows only the header, 34 checks (two places), the full live names (batch, costing nodes, C3 test), and the source ids 11839 and 11845.
 - aar_row_628_draft2.sql (md5 e1e19162): CONFIRMED. A diff shows only the header, 29 checks (three places), and source id 11845.
 W1, seat 34, session_01H1X3ANxr57MZvsu7fHB9kh
+
+# Confirms: AAR row drafts 3 (Wall 11849)
+- aar_row_627_draft3.sql (944b1d22): CONFIRMED. Draft 2 plus only the notes627.md element: md5 f1cba0ed, equal to my md5sum now.
+- aar_row_628_draft3.sql (e1486215): CONFIRMED. Draft 2 plus only the notes628.md element: md5 d1c3fc0b, equal to my md5sum now.
