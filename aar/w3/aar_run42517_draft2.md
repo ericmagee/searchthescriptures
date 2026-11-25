@@ -35,8 +35,8 @@ None stored. Two panel judges were called and billed (gemini, qwen4max); their j
 3. THE CLOSE ENFORCER WORK IS PAID AND NOT RECORDED WHEN THE PANEL FAILS. Four Close Enforcer calls (0.33 dollars) were billed; debate_enforcer_log holds no row for the run.
 4. THE CHALLENGER WAS RE-CALLED IN ROUND 1 WITH NOTHING BARRED. The pkgBAR line for DR1 reads "SENT BACK: 0 sentence(s) ... barred sentences 0 -> 0" and keeps the second round. Seen in run 42373 also (its DEFECT 6). The DR2 re-call removed one barred sentence.
 5. NO RUN-START CHECK. No runstart.py GO preceded the run. The judge order was changed one minute before the launch.
-7. FIVE call_costs ENTRIES CARRY A NEGATIVE INPUT-TOKEN COUNT (found by W1, Wall 11923; confirmed by my SQL). All five are google/gemini-3.8-flash calls: Synthesis Call -1, Accept Call -1, Panel Judge 1 -1, QR Ask -75,869 and QR Follow Ask -77,682 (field i). The dollar figures are billed figures and are right; any token total built from call_costs is wrong for this run.
 6. The defender's close names one verse no earlier round names (Revelation 22:16; AUDIT v25, marked NOT COUNTED).
+7. FIVE call_costs ENTRIES CARRY A NEGATIVE INPUT-TOKEN COUNT (found by W1, Wall 11923; confirmed by my SQL). All five are google/gemini-3.8-flash calls: Synthesis Call -1, Accept Call -1, Panel Judge 1 -1, QR Ask -75,869 and QR Follow Ask -77,682 (field i). The dollar figures are billed figures and are right; any token total built from call_costs is wrong for this run.
 
 ## WHAT WENT RIGHT
 - The Oracle's close answered all 17 pressed verses; all 24 answers of the close carry [L2] and [L4].
