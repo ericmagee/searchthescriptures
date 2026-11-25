@@ -1,4 +1,4 @@
-STANDING SET on target_engine_634.json (3b72583c-43b2-4236-8f05-5fa67ed8fcb8) and fetchback_child_632.json (aad0ad9c-ecc7-49a1-9079-57a065d9ec74)
+STANDING SET on target_engine_634.json (ccaf4660-c6d0-4a22-bd49-97e645f19a1f) and fetchback_child_633.json (aad0ad9c-ecc7-49a1-9079-57a065d9ec74)
 child has no Shared Library node; it is served the engine library in the call (ASK 578)
 # inv_587.cjs
 == 587 A: the whole judge line reaches the layer check
@@ -49,4 +49,4 @@ PASS S3.b send-back texts that show "Your line:" cut: 3 (baseline 3; ASK 597 tak
 == S4 expressions compile in n8n parser
 PASS S4.engine 290 of 290 compile (@n8n/tournament 1.16.0)
 PASS S4.child 67 of 67 compile (@n8n/tournament 1.16.0)
-STANDING: 31 PASS, 0 FAIL (7.5 s)
+STANDING: 31 PASS, 0 FAIL (7.4 s)
