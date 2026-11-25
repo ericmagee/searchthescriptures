@@ -13,15 +13,26 @@ ok(JSON.stringify(ch(be,te))==='["Shared Library"]','C5 engine: only the Shared 
 ok(JSON.stringify(bc)===JSON.stringify(tc),'C5 child unchanged (it takes the engine library in the call, ASK 578)');
 ok(JSON.stringify(be.connections)===JSON.stringify(te.connections),'C5 engine connections unchanged');
 const CHL=[];pb.L.forEach((l,i)=>{if(pt.L[i]!==l)CHL.push(i);});const SCK=pb.L.length;
-ok(JSON.stringify(CHL)==='[1370,1375,3467,3471,3474,3475,3478,3482,3485,3486,3487]'&&pt.L.length===SCK+1,'C5 LIB lines changed '+JSON.stringify(CHL)+', one line added at '+SCK);
+ok(JSON.stringify(CHL)==='[1370,1375,3467,3471,3474,3475,3478,3482,3485,3486,3487,3490]'&&pt.L.length===SCK+1,'C5 LIB lines changed '+JSON.stringify(CHL)+', one line added at '+SCK);
 const SIX=['Gate Build','Alt Gate Build','R2 Alt Gate Build','Gate Record','Alt Gate Record','R2 Alt Gate Record','Late Gate Build','Alt Late Gate Build','R2 Alt Late Gate Build'];
 const LATE=['Late Gate Build','Alt Late Gate Build','R2 Alt Late Gate Build','Gate Record','Alt Gate Record','R2 Alt Gate Record'];
 for(const k of LATE){const p=pt.M[k].p;const iw=p.indexOf(3559),is=p.indexOf(SCK);ok(iw>=0&&is>iw&&reb(pt,k).length===pt.M[k].n,'C5 '+k+': WHL507 then SCK624 in its source; rebuilds at its stated length');}
 const same=Object.keys(pb.M).filter(k=>reb(pb,k)===reb(pt,k)).length,diff=Object.keys(pb.M).filter(k=>reb(pb,k)!==reb(pt,k));
-ok(diff.every(k=>pt.M[k].p.some(e=>[1375,3467,3471,3474,3475,3478,3482,3485,3486,3487,SCK].includes(e)||(Array.isArray(e)&&typeof e[0]==='number'&&[1370,1375,3467,3471,3474,3475,3478,3482,3485,3486,3487].some(i=>i>=e[0]&&i<=e[1])))),'C5 '+same+' MAP entries rebuild the same text; the '+diff.length+' that differ all hold a changed line: '+diff.join(', '));
+ok(diff.every(k=>pt.M[k].p.some(e=>[1375,3467,3471,3474,3475,3478,3482,3485,3486,3487,SCK].includes(e)||(Array.isArray(e)&&typeof e[0]==='number'&&[1370,1375,3467,3471,3474,3475,3478,3482,3485,3486,3487,3490].some(i=>i>=e[0]&&i<=e[1])))),'C5 '+same+' MAP entries rebuild the same text; the '+diff.length+' that differ all hold a changed line: '+diff.join(', '));
 // C6 tags and compile
 ok(CHL.concat([SCK]).every(i=>/ASK 624\.5/.test(pt.L[i])),'C6 ASK 599 rule 10: every changed or added LIB line carries "ASK 624.5"');
 for(const k of SIX){let e=null;try{new Function('$','$input','$json','$execution','$workflow','$node',reb(pt,k));}catch(x){e=x.message;}ok(!e,'C6 compiles: '+k+(e?' '+e:''));}
+const S0=()=>G(te,'Late Gate Build',{},['SCK624']).SCK624;
+// C6 ASK 599 rule 7: every catch the build adds records the fault (W1 Wall 11878)
+{const NEW=CHL.concat([SCK]).map(i=>[i,pt.L[i],pb.L[i]||'']);const cnt=(t)=>(t.match(/catch\(e\)\{/g)||[]).length;
+ const added=NEW.filter(([i,t,b])=>cnt(t)>cnt(b));const bad=[];for(const [i,t,b] of added){const ms=[...t.matchAll(/catch\(e\)\{([^}]{0,160})\}/g)].map(m=>m[1]);const mb=[...b.matchAll(/catch\(e\)\{([^}]{0,160})\}/g)].map(m=>m[1]);for(const m of ms){if(mb.includes(m))continue;if(!/(?:__sckE|__e|LG\.sckErr)=String\(e|SELF-CHECK FAULT/.test(m))bad.push(i+': catch{'+m+'}');}}
+ ok(!bad.length&&added.length,'C6 rule 7: '+added.length+' lines add catch blocks; each new catch records the fault'+(bad.length?' BAD '+bad.join(' | '):''));}
+{const SK=new Function('WHL507',pt.L[SCK]+'\nreturn SCK624;')({faults(){throw new Error('forced');}});const it=SK.items('WHICH HOLDS: CHALLENGER\nRESULT: HELD','HELD');
+ ok(it.length===1&&it[0].kind==='SELF-CHECK FAULT'&&!it[0].send&&/forced/.test(it[0].text),'C6 whl(): a WHL507 fault comes back as a SELF-CHECK FAULT item, not sent');}
+{const t=pt.L[3474];const blk=t.slice(t.indexOf('{let __r=[]'),t.indexOf('/* ASK 624.5: faults and record-only'));const run=(C,S)=>{const p={verdict_raw:'',verdict_tag:'HELD'};new Function('C','p','g','safe','SCK624',blk)(C,p,{seat:'x'},z=>String(z),S);return p.verdict_raw;};
+ const thr={get R2(){throw new Error('forced R2');}};ok(/\[AUDIT v60: SELF-CHECK FAULT \(ASK 624\.5\) -- SEAT: x; the self-check threw and was not run: forced R2/.test(run(thr,S0())),'C6 Gate Record: a fault in the self-check writes an AUDIT v60 SELF-CHECK FAULT line');
+ const cgx=JS.find(r=>r.id==1276);const out=run({R2:{R1:{text:cgx.verdict_raw,fields:{verdict_tag:'HELD'}}}},S0());ok((out.match(/SELF-CHECK RECORD ONLY/g)||[]).length===2&&!/SELF-CHECK FAULT/.test(out),'C6 Gate Record: the 2 record-only items of 1276 are written as AUDIT v60 SELF-CHECK RECORD ONLY lines');
+ ok(/catch\(e\)\{__sckE=String\(e/.test(pt.L[3482])&&/sck_fault:__sckE/.test(pt.L[3490]),'C6 Late Gate Build: a fault is kept and carried as sck_fault on the sent item (Gate Record re-runs the same check and records it)');}
 // C1, C2 on the built SCK624 in the Late Gate Build scope
 const LGB=G(te,'Late Gate Build',{},['SCK624','WHL507']);ok(!LGB.__fail.length&&LGB.SCK624,'C1 SCK624 loads in the built Late Gate Build scope '+LGB.__fail.join('; '));
 const S=LGB.SCK624;let tot=0;

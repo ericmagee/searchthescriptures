@@ -22,3 +22,11 @@ Targets: tg/target_engine_624.json 3f0c688c; tg/target_child_624.json 29b7f676 =
 
 ## Write
 ask624/w4/write/write624.sh a9dda2f5: engine only. Refuses on a running execution, a live Shared Library or connections not the base, a live child not the base, a rebuild not byte-equal, t624, standing, pair or one-copy failing. PUT engine, fetchback compare, child checked unchanged, standing and pair on the fetchbacks. Revert revert_eng_624.json. lib_repo.cjs 37a92d98 is the repo tools/lib.cjs, for the one-copy step.
+
+## REV 1 (20:00 CST 11-24): W1 F1 (Wall 11878, ASK 599 rule 7) fixed
+Every catch the build adds now records the fault (b624.cjs 252d5e11, rev 1 kept b624_rev1.cjs; sck624.js f146d735, rev 1 kept sck624_rev1.js):
+- LIB 3482 Late Gate Build: the fault is kept (__sckE) and carried as sck_fault on the sent item (LIB 3490, now changed too). Gate Record runs the same check on the same text, so the fault is also recorded there on every path.
+- LIB 3474 Gate Record (new block, every seat, every path): runs SCK624 on the text after the gate. A throw writes "[AUDIT v60: SELF-CHECK FAULT (ASK 624.5) -- SEAT: <seat>; the self-check threw and was not run: <error>. REVIEW THIS ROW.]". Each item not sent is written as "[AUDIT v60: SELF-CHECK RECORD ONLY (ASK 624.5) -- SEAT: <seat>; <kind>: <item text> NOT SENT: no apply path for this line.]". This also makes the E-RTL record-only items real records; before rev 1 they were recorded nowhere, which was a defect in rev 0's notes ("recorded").
+- LIB 3471 Gate Record re-check: a throw sets LG.sckErr, and the item's why reads "the change could not be applied for the re-check: <error>".
+- LIB 3858 whl(): a WHL507 throw returns a SELF-CHECK FAULT item (never sent), which the 3474 block records.
+Target engine bafa0a0c (child unchanged 29b7f676). t624 54cd2b9e ALL PASS, with C6 rule 7 tests: every new catch records; a forced WHL507 fault; a forced Gate Record fault writes the FAULT line; the 2 record-only items of 1276 are written. Standing 31/0; pair PASSES; one-copy PASS; rebuild byte-equal. On the 12 stored judgments only 1276 has items (3 sent, 2 record-only).

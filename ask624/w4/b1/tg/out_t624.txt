@@ -1,7 +1,7 @@
 PASS C5 engine: only the Shared Library changes ["Shared Library"]
 PASS C5 child unchanged (it takes the engine library in the call, ASK 578)
 PASS C5 engine connections unchanged
-PASS C5 LIB lines changed [1370,1375,3467,3471,3474,3475,3478,3482,3485,3486,3487], one line added at 3858
+PASS C5 LIB lines changed [1370,1375,3467,3471,3474,3475,3478,3482,3485,3486,3487,3490], one line added at 3858
 PASS C5 Late Gate Build: WHL507 then SCK624 in its source; rebuilds at its stated length
 PASS C5 Alt Late Gate Build: WHL507 then SCK624 in its source; rebuilds at its stated length
 PASS C5 R2 Alt Late Gate Build: WHL507 then SCK624 in its source; rebuilds at its stated length
@@ -19,6 +19,11 @@ PASS C6 compiles: R2 Alt Gate Record
 PASS C6 compiles: Late Gate Build
 PASS C6 compiles: Alt Late Gate Build
 PASS C6 compiles: R2 Alt Late Gate Build
+PASS C6 rule 7: 4 lines add catch blocks; each new catch records the fault
+PASS C6 whl(): a WHL507 fault comes back as a SELF-CHECK FAULT item, not sent
+PASS C6 Gate Record: a fault in the self-check writes an AUDIT v60 SELF-CHECK FAULT line
+PASS C6 Gate Record: the 2 record-only items of 1276 are written as AUDIT v60 SELF-CHECK RECORD ONLY lines
+PASS C6 Late Gate Build: a fault is kept and carried as sck_fault on the sent item (Gate Record re-runs the same check and records it)
 PASS C1 SCK624 loads in the built Late Gate Build scope 
 PASS C1 42373 chatgpt (1276, HELD): sent 3 [WHICH HOLDS AGREEMENT, RETRACTION LEFT STANDING, TWO GRADES], recorded only 2
 PASS C1 each sent item ends "A KEEP does not cure this item."; recorded items do not

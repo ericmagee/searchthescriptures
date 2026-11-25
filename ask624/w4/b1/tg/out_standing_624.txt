@@ -49,4 +49,4 @@ PASS S3.b send-back texts that show "Your line:" cut: 3 (baseline 3; ASK 597 tak
 == S4 expressions compile in n8n parser
 PASS S4.engine 290 of 290 compile (@n8n/tournament 1.16.0)
 PASS S4.child 67 of 67 compile (@n8n/tournament 1.16.0)
-STANDING: 31 PASS, 0 FAIL (6.1 s)
+STANDING: 31 PASS, 0 FAIL (16.6 s)
