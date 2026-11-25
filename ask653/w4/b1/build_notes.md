@@ -1,0 +1,11 @@
+# ASK 653 build b1 (W4)
+- Plan: ask653/w4/plan653.md rev 0 fefa1ca5, W1 PASS WITH N1 (Wall 12125).
+- Base: live engine 50ade174 (the 651+652 fetch-back), tg/live_50ade174.json md5 4bf159e4.
+- Builder: b653.cjs md5 b51d91b7 (anchor line146_before.txt md5 0f350693).
+- Target: tg/target_engine_653.json md5 bd095179. Changed nodes vs live: Shared Library only; LIB lines 146 and 153; 46 MAP n re-measured; line count unchanged. Equal Shared Library to the earlier folded build on 1aa15175 (tg/target_engine_651_652_653.json).
+- Tests: t653.cjs md5 399ca8db: 14 PASS, 0 FAIL (out_t653.txt). Includes N1 (absent "compare ἄνθρωπος" alone stays NOT COUNTED).
+- Full [L2] check before/after, every tag: l2_42528_before_after.txt md5 3e37eb6f, l2_42373_before_after.txt md5 6d35f517. Fixtures fx_42528.json, fx_42373.json (L2 Count Plan output of each run).
+- 42528: 15 tags change, all DEFENDER, all NOT COUNTED -> COUNTED (88,90,91,99,101,107,108,112,113,151,152,155,160,171,236). Root marks change without a status change on 2 more: 110 (G4815, COUNTED both) and 172 (G1080 sheet, NOT COUNTED both: G1080 is not in the cited verse). NOT COUNTED 31 -> 16. Replay reproduces stored status 386/387 (the one differing tag is the same before and after).
+- 42373: no tag changes, either side (NOT COUNTED 4 -> 4).
+- Standing 31 PASS 0 FAIL; pair Library Check PASSES (lib f73f1bddf5d16f0e map c9d27dc9f026361c); one-copy check RESULT PASS; t651_652 ALL PASS (28) on the target.
+- Write script: ask653/w4/write/write653.sh md5 3aeb0b19 (from write651_652.sh: base 50ade174, changed nodes exactly [Shared Library], t653 gate).

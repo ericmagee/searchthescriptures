@@ -1,0 +1,19 @@
+PASS 42528: before-replay reproduces stored status 386/387
+PASS 42528: changed tags exactly [88,90,91,99,101,107,108,112,113,151,152,155,160,171,236]
+PASS 42528: every change is NOT COUNTED -> COUNTED
+PASS 42528: sides of changes DEFENDER
+PASS 42528: other tags whose root marks change keep their status: 2
+    ROOTS ONLY 110 DEFENDER CR2 COUNTED roots now: σύν λαμβάνω | G4815 (*syllambánō*, shalt conceive): "from σύν and λαμβάνω; to clasp, i.e. seize (arrest, capture);
+    ROOTS ONLY 172 DEFENDER CR2 NOT COUNTED roots now: γένος | ` SHEET for G1080: `G1080 γεννάω gennáō: from a variation of γένος; to procreate (properly, of the f
+  42528 NOT COUNTED after: 16 -> DCR1:not in the cited verse: G1165, deigmatizō (cited: Matthew 1: || DCR1:not in the cited verse: G5545, chrisma (cited: Matthew 1:20, || CDR1:not in the cited verse: H1330 (cited: Isaiah 7:14, Luke 1:34 || CDR1:not in the cited verse: H2029 (cited: Isaiah 7:14, Luke 1:34 || CDR1:not in the cited verse: G1080 (cited: Luke 1:31, Luke 1:32,  || CDR1:not in the cited verse: G1080 (cited: Luke 1:31, Luke 1:32,  || DCR2:not in the cited verse: H1330 (cited: Isaiah 7:14, Luke 1:34 || DCR2:not in the cited verse: H1330, bethulah (cited: Isaiah 7:14, || DCR2:not in the cited verse: conceive (cited: Isaiah 7:14, Luke 1 || DCR2:not in the cited verse: H1330 (cited: Isaiah 7:14, Luke 1:34 || DCR2:not in the cited verse: G1080 (cited: Luke 1:31, Hebrews 7:1 || DCR2:not in the cited verse: G1080, gennáō (cited: Luke 1:31, Heb || DCR2:not in the cited verse: H1330 (cited: Isaiah 7:14, Luke 1:34 || DCR2:not in the cited verse: H1330 (cited: Isaiah 7:14, Luke 1:34 || DCR2:not in the cited verse: G1080, γεννάω, gennáō (cited: Luke 1 || CDR3:not in the cited verse: begat (cited: Matthew 1:16, John 6:4
+PASS 42373: before-replay reproduces stored status 304/304
+PASS 42373: changed tags exactly []
+PASS 42373: every change is NOT COUNTED -> COUNTED
+PASS 42373: sides of changes 
+PASS 42373: other tags whose root marks change keep their status: 0
+  42373 NOT COUNTED after: 4 -> DCR1:not in the cited verse: G1165, deigmatizō (cited: Matthew 1: || DCR1:not in the cited verse: G1080, gennaō (cited: Genesis 4:1, 1 || DCR2:not in the cited verse: anatellō (cited: Isaiah 11:1, Hebrew || DCR3:not in the cited verse: H6185, ʻărîyrîy (cited: 1 Chronicles
+PASS compare marks root, number stays core
+PASS and between two numbers: no root
+PASS and with no root before it: no root
+PASS N1: tag with only an absent "compare ἄνθρωπος" stays NOT COUNTED (NOT COUNTED; not in the cited verse: ἄνθρωπος (cited: Matthew 1:16))
+14 PASS, 0 FAIL

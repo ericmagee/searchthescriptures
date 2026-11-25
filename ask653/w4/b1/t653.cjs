@@ -5,7 +5,7 @@ function L2Cof(file){const E=JSON.parse(fs.readFileSync(file,'utf8'));const T=E.
  let S=M.p.map(e=>typeof e==='number'?L[e]:typeof e[0]==='string'?e[0]:L.slice(e[0],e[1]+1).join('\n')).join('\n');if(S.length!==M.n)throw new Error('MAP n mismatch '+file);
  S=S.replace('return {tags,tagWords,','return {markRoots,tags,tagWords,');
  return new Function('$','REFP',S+'\nreturn L2C;')(()=>{throw new Error('no $')},new Proxy({},{get:()=>undefined}));}
-const OLD=L2Cof('tg/target_engine_651_652.json'),NEW=L2Cof('tg/target_engine_651_652_653.json');
+const OLD=L2Cof('tg/live_50ade174.json'),NEW=L2Cof('tg/target_engine_653.json');
 let pass=0,fail=0;const ok=(c,m)=>{if(c){pass++;console.log('PASS',m);}else{fail++;console.log('FAIL',m);}};
 const strip=t=>({...t,words:(t.words||[]).map(w=>({w:w.w,kind:w.kind})),status:undefined,why:undefined});
 const exp={'42528':[88,90,91,99,101,107,108,112,113,151,152,155,160,171,236],'42373':[]};
@@ -20,7 +20,7 @@ for(const run of ['42528','42373']){
  ok(JSON.stringify(ch)===JSON.stringify(exp[run]),run+': changed tags exactly '+JSON.stringify(ch));
  ok(ch.every(j=>A[j].status==='NOT COUNTED'&&B[j].status==='COUNTED'),run+': every change is NOT COUNTED -> COUNTED');
  ok(ch.every(j=>F.tags[j].side==='DEFENDER'),run+': sides of changes '+[...new Set(ch.map(j=>F.tags[j].side))].join(','));
- ok(F.tags.every((t,j)=>ch.includes(j)||JSON.stringify(A[j].words)===JSON.stringify(B[j].words)),run+': no other tag changes its words');
+ {const wc=F.tags.map((t,j)=>j).filter(j=>!ch.includes(j)&&JSON.stringify(A[j].words)!==JSON.stringify(B[j].words));ok(wc.every(j=>A[j].status===B[j].status),run+': other tags whose root marks change keep their status: '+wc.length);for(const j of wc)console.log('    ROOTS ONLY',j,F.tags[j].side,F.tags[j].round,A[j].status,'roots now:',(B[j].words||[]).filter(w=>w.root).map(w=>w.w).join(' '),'|',F.tags[j].seg.slice(0,100));}
  const nc=B.map((t,j)=>t.status==='NOT COUNTED'?j:-1).filter(j=>j>=0);console.log('  '+run+' NOT COUNTED after: '+nc.length+' -> '+nc.map(j=>F.tags[j].side[0]+F.tags[j].round+':'+(B[j].why||'').slice(0,60)).join(' || '));
 }
 // unit cases on NEW
