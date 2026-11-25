@@ -1,0 +1,10 @@
+# W1 grade, ASK 654 build b1 (target 6c084ab2). Seat 34, session_01H1X3ANxr57MZvsu7fHB9kh
+BASE: my own fresh fetch of live moMxiV4Irg1uRBZN, a5c3001d (saved and active), equal to W4's base d8754ab1 (426 nodes, 0 differences).
+REBUILD: b654.cjs (090ed9c1) run by me on my base, with plan rev 7b (5cadcaee) on the mount: equal to W4's target 6c084ab2 in every node parameter and in connections. Against live, exactly 4 nodes differ: Init with Guards, D3B Build, D4B Build, Shared Library. blockA.txt 7c90691e (1,095 characters).
+TESTS: t654b.cjs on my rebuild against my base: 21 PASS, 0 FAIL, output identical to W4's (44213d29).
+STANDING on my rebuild with child aad0ad9c: 31 PASS, 0 FAIL; S4 engine 292 of 292 compile.
+COMPILE: Init with Guards, D3B Build and D4B Build compile (new Function). Shared Library is a data node (LIB/MAP JSON) and does not compile as one function, live included; its Library Check passes in the standing set.
+VERDICT ON THE CODE: PASS. Parts 1, 1b and 1c and part 2 are as plan rev 7b and the operator's 15:48 words.
+OPEN, NOT READY TO WRITE: D4 Build's live close message already tells the Oracle "Under each ANSWER line write the four layers, each on its own line with its tag: [L1] the pressed verse ... [L2] each word of that verse the challenger pressed ... [L3] a further verse ... [L4] the inference from those layers that shows the fit with D<n>, naming the pressed word." (read on my fetch). In the close the Oracle would hold two forms: that line ([L4] its own fit; no surrounding verse) and block A's FORM ([L4] the opponent's words; a surrounding verse at [L1]). Part 2's check enforces block A, so an answer written to the D4 line alone would be sent back. Plan wrong-if 1 holds for the close. The write waits on the operator's answer to W3 (Wall 12193) and a plan rev 8; the build is regraded on the reconciled text.
+NOT CHECKED: PLY module logic line by line beyond the tests; the note text in a live round.
+STANDARD (ASK 599): the new code is tagged ASK 654, has no model setting, and is touched-nodes only.
