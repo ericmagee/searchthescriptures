@@ -1,0 +1,5 @@
+opus answers 0.6601 sonnet answers 0.2225 follow ask 0.449 missing 1.3316 true 11.4533
+C3 (read of 42373, node-filtered, Eric 18:04 CST): Close Group Batch Call has 5 replies; Close Enforcer Call carries 4 and Assume Check Call 1, with the same reply ids (gen-1795562401-*). Enforcer Group Batch Call has 11 replies; Enforcer Call carries item 0 with the same id; the other 10 are the 10 Judge Enforcer Call entries in call_costs. So both batch calls are already counted downstream, and adding them is safe only because __SN counts one id once.
+Ran in 42373 and not priced: QR Answer D anthropic (3, claude-opus-5-5), QR Answer C anthropic (3, claude-sonnet-5-5), QR Follow Ask (3, openrouter BYOK/billed). Not run: QR Answer, QR Answer C openrouter, QR Follow D/C, the three Resend calls, Close Group Retry Call.
+C4: stored run_cost_usd 10.1217; missing 1.3316 (opus answers 0.6601, sonnet answers 0.2225, follow ask 0.4490, at model_prices list rates and openrouter billed figures); true cost about 11.45.
+Verified 00:05Z: Enforcer Group Batch items 1-10 reply ids all found among Judge Enforcer Call reply ids (True); no other ids.

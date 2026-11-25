@@ -1,0 +1,36 @@
+PASS C5 engine: only Panel Tokens changed ["Panel Tokens"]
+PASS C5 child: only Alternate Pass Out changed ["Alternate Pass Out"]
+PASS C5 connections unchanged
+PASS C5 compiles: Panel Tokens
+PASS C5 compiles: Alternate Pass Out
+PASS C5 ASK 599: one ASK 627 tag per changed node
+PASS C1 engine: every model-API node priced or out with a reason; missing []; out by reason: Close Group Batch Call openrouter, Enforcer Group Batch Call openrouter
+PASS C1 child: every model-API node carried back and priced through __A379; missing [] (8 nodes)
+PASS C2 QR Answer D anthropic anthropic: one entry, right family and fields (live code gives 0)
+PASS C2 QR Answer C anthropic anthropic: one entry, right family and fields (live code gives 0)
+PASS C2 QR Answer C openrouter orcost: one entry, right family and fields (live code gives 0)
+PASS C2 QR Answer C openrouter orbyok: one entry, right family and fields (live code gives 0)
+PASS C2 QR Follow Ask orcost: one entry, right family and fields (live code gives 0)
+PASS C2 QR Follow Ask orbyok: one entry, right family and fields (live code gives 0)
+PASS C2 QR Follow D anthropic anthropic: one entry, right family and fields (live code gives 0)
+PASS C2 QR Follow D openrouter orcost: one entry, right family and fields (live code gives 0)
+PASS C2 QR Follow D openrouter orbyok: one entry, right family and fields (live code gives 0)
+PASS C2 QR Follow C anthropic anthropic: one entry, right family and fields (live code gives 0)
+PASS C2 QR Follow C openrouter orcost: one entry, right family and fields (live code gives 0)
+PASS C2 QR Follow C openrouter orbyok: one entry, right family and fields (live code gives 0)
+PASS C2 Enforcer Resend Call openrouter orcost: one entry, right family and fields (live code gives 0)
+PASS C2 Enforcer Resend Call openrouter orbyok: one entry, right family and fields (live code gives 0)
+PASS C2 Judge Enforcer Resend Call openrouter orcost: one entry, right family and fields (live code gives 0)
+PASS C2 Judge Enforcer Resend Call openrouter orbyok: one entry, right family and fields (live code gives 0)
+PASS C2 Alt Judge Enforcer Resend Call openrouter orcost: one entry, right family and fields (live code gives 0)
+PASS C2 Alt Judge Enforcer Resend Call openrouter orbyok: one entry, right family and fields (live code gives 0)
+PASS C2 Close Group Retry Call openrouter orcost: one entry, right family and fields (live code gives 0)
+PASS C2 Close Group Retry Call openrouter orbyok: one entry, right family and fields (live code gives 0)
+PASS C2 R2 Alt Judge Enforcer Resend Call openrouter through __A379: one entry
+PASS C2 no added node ran: no entries
+PASS C2 same reply id in two nodes: counted once
+PASS C2 retry reply already counted in its call node: counted once
+C4 per node: QR Answer D anthropic 0.6601; QR Answer C anthropic 0.2225; QR Follow Ask 0.4490
+PASS C4 42373 QR replies: live code prices 0 of 9, new code 9 of 9
+PASS C4 missing cost 1.3316 (stored 10.1217, true 11.4533)
+ALL PASS
