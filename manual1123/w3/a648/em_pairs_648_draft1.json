@@ -1,0 +1,12 @@
+{
+ "11.0": [
+  {
+   "old": "  - THE GEMINI DEBATER RUNS GEMINI 4 HYDROGEN (ASK 487; model_config row gemini_deb, Init Seats ENG):\n    - Why: the operator chose option A on the gemini card: \"point gemini (debater) at a non-flash model\".\n    - What it does: one model_config row, gemini_deb (provider openrouter, role engine, `google/gemini-4-hydrogen`, OpenRouter endpoint, max_tokens 64000 per the standing \"set all to 64k\", family google, active), written before the code; Init Seats ENG gemini reads mc `gemini_deb` instead of `gemini`. The debater named \"gemini\" now runs `google/gemini-4-hydrogen`; judge seat gemini stays `google/gemini-3.8-flash`, and seat hydrogen is unchanged. gemini_deb is in no seat list; it is read only as the gemini debater's mc_seat. Family stays google, so the debater-family exclusions are unchanged.\n    - The fault ledger (model_config_jfl) is keyed by model, so gemini_deb shows hydrogen's jfl_counts, jfl_move and jfl_block; none of them reaches a debater (jfl_block enters prompts only through `__JFL` in Panel Build, Reserve Build and the alternate builds, looked up by judge seat).\n    - Cost: the gemini debater's price per million tokens goes from 0.75 in / 3.75 out to 1.50 / 7.50 USD (Vercel AI Gateway list price). Stored rows name the engine gemini with model `google/gemini-4-hydrogen`.\n    - Limits: shown by the next run with gemini as a debater.\n",
+   "new": "  - THE GEMINI DEBATER READS THE SEAT gemini (ASK 648; the ASK 487 rule, under which it read `gemini_deb`, is no longer in force):\n    - What the engine does: Init Seats ENG gemini reads mc `gemini`. The debater named \"gemini\" runs the model of the `gemini` row, the row the judge seat gemini also reads. The row `gemini_deb` is inactive and is read by no node. `google/gemini-4-hydrogen` debates under its own name, hydrogen, from the row of that name (section 10, ASK 623). Family is google for all of them, so the debater-family exclusions are unchanged.\n    - Stored rows of runs made under ASK 487 name the engine gemini with model `google/gemini-4-hydrogen`.\n"
+  },
+  {
+   "old": "gemini reads seat gemini_deb (ASK 487)",
+   "new": "gemini reads seat gemini"
+  }
+ ]
+}
