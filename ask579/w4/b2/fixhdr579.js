@@ -2,7 +2,7 @@
 // node fixhdr579.js <engine.json> <child.json>   (files rewritten in place)
 // The engine Library Check runs here on the first file; the child side is checked by the pair check (test557.js --pair).
 const fs=require('fs'),cr=require('crypto');let fail=0;
-const FS=process.argv.slice(2);for(const f of FS){const W=JSON.parse(fs.readFileSync(f));const n=W.nodes.find(x=>x.name==='Shared Library');const c=n.parameters.jsCode;const a=c.indexOf('\n/*LIB*/'),b=c.lastIndexOf('\n/*MAP*/');
+const FS=process.argv.slice(2);for(const f of FS){const W=JSON.parse(fs.readFileSync(f));const n=W.nodes.find(x=>x.name==='Shared Library');if(!n){console.log('SKIP '+f.split('/').pop()+': no Shared Library node (ASK 578: served the engine text in the call)');continue;}const c=n.parameters.jsCode;const a=c.indexOf('\n/*LIB*/'),b=c.lastIndexOf('\n/*MAP*/');
  const L=JSON.parse(c.slice(a+8,b));const sha=cr.createHash('sha256').update(JSON.stringify(L)).digest('hex').slice(0,16);
  const head=c.slice(0,a);if((head.match(/library sha [0-9a-f]{16}, \d+ lines/g)||[]).length!==1){console.log('FAIL header form in '+f);fail++;continue;}
  n.parameters.jsCode=head.replace(/library sha [0-9a-f]{16}, \d+ lines/,'library sha '+sha+', '+L.length+' lines')+c.slice(a);fs.writeFileSync(f,JSON.stringify(W));
