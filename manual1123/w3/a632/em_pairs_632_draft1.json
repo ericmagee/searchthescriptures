@@ -1,0 +1,8 @@
+{
+ "13.0": [
+  {
+   "old": "Mark for the next run in which the question round runs: call_costs holds the QR entries, and run_cost_usd equals the sum of its priced entries.",
+   "new": "Mark for the next run in which the question round runs: call_costs holds the QR entries, and run_cost_usd equals the sum of its priced entries.\n        - AN OPENROUTER ENTRY'S UNCACHED INPUT WHEN THE CACHE WRITE REPEATS THE CACHE READ (ASK 632; Panel Tokens): for an OpenRouter call the uncached input (field `i`) is prompt tokens minus cache read (`cr`) minus cache write (`w5`). When the write count overlaps the read, that is, the write is above 0 and equals the read, or that remainder is below 0, `i` is prompt tokens minus cache read, never below 0, and the entry carries `ov:1`. `cr` and `w5` are stored as reported. The billed USD (`b`), `usd`, run_cost_usd and the four token totals do not read `i` and are unchanged; Plain Rule Lines sums `i` per model in \"Cost of this run\", so that per-model input figure follows the corrected entries. Why: google/gemini-3.8-flash reports a cache write equal to its cache read, for the same tokens, so `i` came out negative (57 stored entries, from -1 to -77,682), and the billed cost of those entries fits only prompt minus read. Limits: entries stored before the change are left as written; the Gemini direct branch has no write field and is unchanged. Not shown by a run. Mark for the next run in which a gemini-3.8-flash call reports a cache write: no call_costs entry has `i` below 0, and those entries carry `ov:1` with `i` equal to prompt tokens minus cache read."
+  }
+ ]
+}
