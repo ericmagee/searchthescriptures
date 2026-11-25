@@ -17,3 +17,8 @@ RULES READ: Wall manual v19 7.4; op doc s30.
 - Item 8 (chatgpt). Row 54716 reads "APPLIED S1, S2, S3, S4, S5, S6, S8, S10, G2, S9". So the regrades of D1 vs C3 (S4) and D5 vs C1 (S5) to STANDS WERE applied. Their cure is UNCURED (rows 54701, 54702: pkgUND, "regraded STANDS; no quote of the answer's fit"). The conceded-links change S11 (to 4) was NOT APPLIED (row 54718: pkgACX form at the gate; row 54708: pkgPS, it regrades premise 2). The gate change G2, CONCEDED LINKS 3, WAS applied and CURED (row 54715). The draft's "All three changes were refused for their form. The stored judgment reads BROKEN with 2" contradicts the log. By the log, the judgment carries both STANDS and 3. NOT CHECKED: the stored chatgpt judgment text itself; W3 must read it and state what it carries.
 - Section header: "NOT READ WHOLE: the full reasoning text of the four". See the 636 d3 grade, N1. The judgments that sat should be read whole.
 NOT CHECKED: items 1 to 5, 7, 9 to 11.
+
+## Draft 6 (b57b22b2): PASS.
+- Old items 6 and 8 (now 9 and 12) match debate_enforcer_log. Item 9: S22 and S23 were refused for the regrade (54621, 54622), and sol answered KEEP at the gate on both (G10 54576, G11 54577), so the stored 1 is sol's last word. Item 12: S4, S5 and G2 were applied (54716), S11 was refused (54718), and S4 and S5 were uncured for no fit quote (54701, 54702).
+- The header names every judgment read whole and names chatgpt's final text NOT READ WHOLE with its reason, as 636 d4 requires.
+NOT CHECKED: that "these three unseated it" is the exact drv count for chatgpt (54717 S7 is also UNCURED); new items 5, 6, 8, 11, 13, 15 against the judgment text; item 16's count of 70.
