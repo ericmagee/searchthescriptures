@@ -1,0 +1,4 @@
+C1 old {"run":true,"seats":["qwen4max","sol"],"tried":["openai/gpt-6.1-terra"],"free":["sonnet","luna"],"retry":["anthropic/claude-sonnet-5.5"],"why":"round 2 for qwen4max, sol; free: sonnet, luna"}
+C1 new {"run":true,"seats":["qwen4max","sol"],"tried":["openai/gpt-6.1-terra","anthropic/claude-sonnet-5.5"],"free":["luna"],"retry":[],"why":"round 2 for qwen4max, sol; free: luna"}
+17 pass, 0 fail
+ALL PASS
