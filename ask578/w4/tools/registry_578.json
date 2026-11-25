@@ -115,6 +115,13 @@
    "sha_b": "3be38199f953",
    "reason": "ASK 578: the child R2 Alt Judge Enforcer Retry Build copy differs from the 0f0fa74632df node copies only in the IIFE argument ($('Alternate Pass In').first().json.pass.lib in place of $('Shared Library').params.jsCode); the body is the same text",
    "wall": "ASK 578 tools (W4), to be graded by W1"
+  },
+  {
+   "name": "__RL",
+   "sha_a": "0f0fa74632df",
+   "sha_b": "3be38199f953",
+   "reason": "ASK 573: the 0f0fa74632df text is the library loader in the node (Build Save Body, Format Markdown, Enforcer Build and others), which the scan counts as a copy; it is not a second body. Failing since 19:21 CST 11-23 (W1 Wall 11864 N1)",
+   "wall": "Wall 11864"
   }
  ]
 }

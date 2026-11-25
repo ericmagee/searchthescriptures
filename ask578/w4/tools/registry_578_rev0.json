@@ -1,0 +1,120 @@
+{
+ "names": [
+  "psGrades",
+  "REFP",
+  "ackFoot2024",
+  "ackForm2024",
+  "unxAcFail",
+  "unxaCheck",
+  "lbFoot",
+  "ri5Rd2024",
+  "ri6Col2024",
+  "__RL",
+  "rd386",
+  "ert386",
+  "rcLines",
+  "cureJText",
+  "ret386",
+  "cjrLoose2024"
+ ],
+ "accepted": [
+  {
+   "name": "__RL",
+   "sha_a": "0f43c34b3f94",
+   "sha_b": "3be38199f953",
+   "reason": "live before ASK 394: 30 node copies are older than the 66 library copies (library adds K-kind RETRACTED, PRESSED and SHORT pipe forms, C-vs-D reversal); 394 adds no copy; merge is ASK 395",
+   "wall": "Wall 8242, 8243, 8246"
+  },
+  {
+   "name": "REFP",
+   "sha_a": "00d90255b2e3",
+   "sha_b": "3f80dae54ad4",
+   "reason": "ASK 384 (Wall 8405, 8419): trimmed copies (BK and BOOKS only, no keys, parse or book call): Quote Report keeps the old BARE line, the 16 library stubs carry the new BARE line from the shared library lines; the full copy 00d90255b2e3 is the ASK 384 reader. Quote Report moves under the second card",
+   "wall": "Wall 8126, 8405, 8419"
+  },
+  {
+   "name": "REFP",
+   "sha_a": "00d90255b2e3",
+   "sha_b": "7aa185e3802e",
+   "reason": "ASK 384 (Wall 8405, 8419): trimmed copies (BK and BOOKS only, no keys, parse or book call): Quote Report keeps the old BARE line, the 16 library stubs carry the new BARE line from the shared library lines; the full copy 00d90255b2e3 is the ASK 384 reader. Quote Report moves under the second card",
+   "wall": "Wall 8126, 8405, 8419"
+  },
+  {
+   "name": "REFP",
+   "sha_a": "3f80dae54ad4",
+   "sha_b": "7aa185e3802e",
+   "reason": "ASK 384 (Wall 8405, 8419): trimmed copies (BK and BOOKS only, no keys, parse or book call): Quote Report keeps the old BARE line, the 16 library stubs carry the new BARE line from the shared library lines; the full copy 00d90255b2e3 is the ASK 384 reader. Quote Report moves under the second card",
+   "wall": "Wall 8126, 8405, 8419"
+  },
+  {
+   "name": "REFP",
+   "sha_a": "ec7bb07ea842",
+   "sha_b": "00d90255b2e3",
+   "reason": "ASK 409: the 30 engine loaders declare REFP by rebuilding the one block from the Shared Library MAP entry REFP (n 8133, md5 37d0a6bd); the loader text is one text in all 30 nodes and the block it rebuilds is the full copy 00d90255b2e3",
+   "wall": "Wall 8738, 8741, 8743"
+  },
+  {
+   "name": "REFP",
+   "sha_a": "ec7bb07ea842",
+   "sha_b": "3f80dae54ad4",
+   "reason": "ASK 409: the 30 engine loaders declare REFP by rebuilding the one block from the Shared Library MAP entry REFP (n 8133, md5 37d0a6bd); the loader text is one text in all 30 nodes and the block it rebuilds is the full copy 00d90255b2e3",
+   "wall": "Wall 8738, 8741, 8743"
+  },
+  {
+   "name": "REFP",
+   "sha_a": "ec7bb07ea842",
+   "sha_b": "7aa185e3802e",
+   "reason": "ASK 409: the 30 engine loaders declare REFP by rebuilding the one block from the Shared Library MAP entry REFP (n 8133, md5 37d0a6bd); the loader text is one text in all 30 nodes and the block it rebuilds is the full copy 00d90255b2e3",
+   "wall": "Wall 8738, 8741, 8743"
+  },
+  {
+   "name": "REFP",
+   "sha_a": "4e040eda4629",
+   "sha_b": "3f80dae54ad4",
+   "reason": "ASK 435 (rulings 495, 496): the same relation as before, with the library REFP texts rebuilt after the BARE line (496) and the bare-number step (507) change; was: ASK 384 (Wall 8405, 8419): trimmed copies (BK and BOOKS only, no keys, parse or book call): Quote Report keeps the old BARE line, the 16 library stubs carry the new BARE line from the shared library lines; the full copy 00d90255b2e3 is the ASK 384 reader. Quote Report moves under the second card",
+   "wall": "Wall 8126, 8405, 8419, ASK 435 build"
+  },
+  {
+   "name": "REFP",
+   "sha_a": "4e040eda4629",
+   "sha_b": "32b08f26e979",
+   "reason": "ASK 435 (rulings 495, 496): the same relation as before, with the library REFP texts rebuilt after the BARE line (496) and the bare-number step (507) change; was: ASK 384 (Wall 8405, 8419): trimmed copies (BK and BOOKS only, no keys, parse or book call): Quote Report keeps the old BARE line, the 16 library stubs carry the new BARE line from the shared library lines; the full copy 00d90255b2e3 is the ASK 384 reader. Quote Report moves under the second card",
+   "wall": "Wall 8126, 8405, 8419, ASK 435 build"
+  },
+  {
+   "name": "REFP",
+   "sha_a": "3f80dae54ad4",
+   "sha_b": "32b08f26e979",
+   "reason": "ASK 435 (rulings 495, 496): the same relation as before, with the library REFP texts rebuilt after the BARE line (496) and the bare-number step (507) change; was: ASK 384 (Wall 8405, 8419): trimmed copies (BK and BOOKS only, no keys, parse or book call): Quote Report keeps the old BARE line, the 16 library stubs carry the new BARE line from the shared library lines; the full copy 00d90255b2e3 is the ASK 384 reader. Quote Report moves under the second card",
+   "wall": "Wall 8126, 8405, 8419, ASK 435 build"
+  },
+  {
+   "name": "REFP",
+   "sha_a": "ec7bb07ea842",
+   "sha_b": "4e040eda4629",
+   "reason": "ASK 435 (rulings 495, 496): the same relation as before, with the library REFP texts rebuilt after the BARE line (496) and the bare-number step (507) change; was: ASK 409: the 30 engine loaders declare REFP by rebuilding the one block from the Shared Library MAP entry REFP (n 8133, md5 37d0a6bd); the loader text is one text in all 30 nodes and the block it rebuilds is the full copy 00d90255b2e3",
+   "wall": "Wall 8738, 8741, 8743, ASK 435 build"
+  },
+  {
+   "name": "REFP",
+   "sha_a": "ec7bb07ea842",
+   "sha_b": "32b08f26e979",
+   "reason": "ASK 435 (rulings 495, 496): the same relation as before, with the library REFP texts rebuilt after the BARE line (496) and the bare-number step (507) change; was: ASK 409: the 30 engine loaders declare REFP by rebuilding the one block from the Shared Library MAP entry REFP (n 8133, md5 37d0a6bd); the loader text is one text in all 30 nodes and the block it rebuilds is the full copy 00d90255b2e3",
+   "wall": "Wall 8738, 8741, 8743, ASK 435 build"
+  },
+  {
+   "name": "__RL",
+   "sha_a": "2be75845b4d7",
+   "sha_b": "0f0fa74632df",
+   "reason": "ASK 578: the child R2 Alt Judge Enforcer Retry Build copy differs from the 0f0fa74632df node copies only in the IIFE argument ($('Alternate Pass In').first().json.pass.lib in place of $('Shared Library').params.jsCode); the body is the same text",
+   "wall": "ASK 578 tools (W4), to be graded by W1"
+  },
+  {
+   "name": "__RL",
+   "sha_a": "2be75845b4d7",
+   "sha_b": "3be38199f953",
+   "reason": "ASK 578: the child R2 Alt Judge Enforcer Retry Build copy differs from the 0f0fa74632df node copies only in the IIFE argument ($('Alternate Pass In').first().json.pass.lib in place of $('Shared Library').params.jsCode); the body is the same text",
+   "wall": "ASK 578 tools (W4), to be graded by W1"
+  }
+ ]
+}
