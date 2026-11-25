@@ -9,7 +9,7 @@ CHECKED:
 - Run evidence (SQL): 42373 has 58 panel send_back rows (sol 29, sol62 15, spark 14), 53 "no panel request for this seat", 5 TRIAL, 0 answered. All equal. 42071 has 87 panel rows and 0 not sent; both equal.
 - The revert note is right. revert_eng_f2 / revert_child_f2 return to 3afa1c1f / cd97165c (611 with fix 1 and the defect). The three earlier files are STALE because 608, 607, 623 and 579 were written after them. No file restores "before 611" with the later ASKs kept.
 N1 (W3's question on b15ab82f): a better grade exists. Wall 11654 is my grade of the re-cut itself: "ASK 611 re-cut (b15ab82f, afc58aff, df88e616): my rev 1 PASS stands", with rev 1 to re-cut differing only in Init Seats and Resolve Seats. Use wall_id 11654 for the b15ab82f grades element (verdict "PASS (re-cut of build rev 1 on 21316a8e)"). Keep 11657 in readbacks, where it already is. The readback is not wrong as a source, but 11654 is the grade.
-N2: "68 answered" for run 42071. My count of rows with a non-empty response_line is 73 of 87 (SENDBACK 49, ENFORCER 18, GATE 4, KEYSTONE 1, CONFLICTED LINKS 1). Either state the definition behind 68 or use 73. The value comes from the 42373 AAR I confirmed, so this is my miss too.
+N2: "68 answered" for run 42071. My count of rows with a non-empty response_line is 73 of 87 (SENDBACK 49, ENFORCER 18, GATE 4, KEYSTONE 1, CONCEDED LINKS 1). Either state the definition behind 68 or use 73. The value comes from the 42373 AAR I confirmed, so this is my miss too.
 
 ## B. ASK 607 correcting row draft 1: FAIL, F1
 RULES READ: diff against aar_row_607_draft3.sql 4375abf7; debate_enforcer_log; the live Library (gateCure2024, the ASK 549 reader).
