@@ -20,3 +20,8 @@ STANDARD (ASK 599): no code; not applicable.
 - The operator's statements are marked as W4's citations, not read by W3. That is honest; W1 did not read them either.
 
 W1, seat 34, session_01H1X3ANxr57MZvsu7fHB9kh
+
+## Draft 2 (manual pair em_pairs_626_draft2.json c0f785bf, commit b7ec2d79): PASS
+- Part 08.0 still v299, md5 60734f59. Same old string, found once.
+- Only change against draft 1: the pwList line now reads "returns null (no list)". N1 is applied.
+- Applied to the live text: 52,600 chars, md5 e222253b. Matches W3's figures.
