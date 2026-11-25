@@ -1,6 +1,6 @@
-# ASK 654 plan, rev 0 (W3): the Oracle answers a pressed verse AT that verse, through the four layers
+# ASK 654 plan, rev 1 (W3): the Oracle answers a pressed verse AT that verse, through the four layers
 
-Planner W3 (session_01H1X3ANsGiMnhnbkfphocmo). Not built. Not written. Nothing here is the operator's instruction to write; part 1 changes what the Oracle is told and needs his instruction on the exact words.
+Planner W3 (session_01H1X3ANsGiMnhnbkfphocmo). Rev 1 replaces rev 0 (1480165b, commit 79eec156, never posted) and restates heading 3 parts 1 and 3 after W1's review on Wall 12167. Not built. Not written. Nothing here is the operator's instruction to write; part 1 changes what the Oracle is told and needs his instruction on the exact words.
 
 Source: the operator in the W3 thread, 2026-11-25, verbatim.
 - 15:13 CST: "yes. you're correct.  but you first some must prove your position using the framework (Layers)"
@@ -21,10 +21,11 @@ Planner W3. Builder W4 (engine, n8n). Grader W1. Write card: W4's thread for the
 ## 3. SCOPE
 Three parts.
 PART 1, instruction, Oracle seat only (Ruling 383). One standing paragraph in the Oracle's own prompt (GUARDHOLD in Init with Guards, by the manual). DRAFT WORDS, for the operator's ruling, not final:
-"ANSWER AT THE PRESSED VERSE. For every verse pressed against you, answer at that verse before any other row, by the four layers. [L1]: quote the verse whole and say what its words state, read with the verses around it. [L2]: its word, in the lexicon gloss as served. [L3]: the rows that read with it. [L4]: name as inference what is inferred from it, your own step and the step your opponent rests on it. Then show the fit with your chain."
+"ANSWER AT THE PRESSED VERSE. For every verse pressed against you, answer at that verse before any other row, by the four layers. [L1]: quote the verse whole and say what its words state, read with the verses around it. [L2]: its word, in the lexicon gloss as served. [L3]: the rows that read with it; the seed rows are this verse's [L3]. [L4]: name as inference what is inferred from it, your own step and the step your opponent rests on it. Then show the fit with your chain."
+[L1] is worded as what the verse states (W1, Wall 12167 item 3): a sentence on what the verse does not state only ever follows a positive [L1] statement and never stands as the answer.
 PART 2, check, by code. An answer to a pressed verse that lacks, on that verse, an [L1] quotation of it and one of [L2] or [L3] is sent back to its seat once, on the existing send-back paths (manual 06.0: D4B sends back for a pressed verse with no ANSWER line and for layer points; the link rounds have C3G and the B nodes). OPEN FOR REVIEW: Oracle seat only, or both seats (a form check on layers is side-neutral).
 PART 3, conflict to settle before parts 1 and 2. BARRED MOVES (a), both debaters (manual 06.0): "an answer from silence, answering a press from what a verse does not name, state or say". A Layer 1 statement of what the pressed verse states must not be harvested and voided as (a). W4 reads the finder and reports; if it is harvested, the plan gains a bound in rev 1.
-Read with, not replaced: the ASK 408 line ("answer from the DAVIDIC seed rows ... the absence alone is never your answer") and DG-8 (b) ("answer it from the seed chain above"). Under part 1 those rows are the pressed verse's Layer 3, after its Layer 1 and 2. Whether either needs a word changed is W1's review question; a guard change is the operator's to instruct and none is proposed.
+Read with, not replaced: the ASK 408 line ("answer from the DAVIDIC seed rows ... the absence alone is never your answer") and DG-8 (b) ("answer it from the seed chain above"). Under part 1 those rows are the pressed verse's Layer 3, after its Layer 1 and 2. W1's review (Wall 12167): they agree with part 1 in substance and conflict in order as worded, because each names the seed rows as the first step for the same press; with two first steps the model follows one, and 42528 shows which. ORDER CLAUSE, for the operator's ruling, his text: the ASK 408 line gains "after the pressed verse's own layers" (so it reads "... or challenges the union, answer, after the pressed verse's own layers, from the DAVIDIC seed rows ..."). DG-8 (b) is a guard; whether it gains the same clause is the operator's to instruct and none is drafted.
 NOT IN SCOPE: any sight, any guard, the judges' prompts, the plain seat's prompt (unless part 2 is ruled both seats), any model setting, reasoning effort, max_tokens.
 SEARCH: NOT DONE in rev 0. W3 read engine manual parts 05.0 and 06.0 whole; W3 does not read n8n. W4 owes the search of the engine, the child and every workflow they reach for: the GUARDHOLD string and its uses; the D3, D4, C3, C4 round forms and their B and G nodes; the barred-move finder copies; the layer-point check (pkgLAYB) copies; every hit listed. Rev 1 carries it.
 
@@ -53,7 +54,7 @@ This plan: ask654/w3/plan654.md (commit named in the Wall post). W3's run 42528 
 1. W4: finder read (part 3) and the search (heading 3). No card.
 2. W1: review question on ASK 408 and DG-8 (b). No card.
 3. W3: plan rev 1 with the search, the finder result and part 2's seat question settled; W1 grades.
-4. The operator: a card in the W3 thread on part 1's exact words and on part 2 (Oracle only, or both seats). Waits on W1's PASS of rev 1.
+4. The operator: a card in the W3 thread on part 1's exact words, the order clause in the ASK 408 line, and part 2 (Oracle only, or both seats). Waits on W1's PASS of rev 1.
 5. W4: build, replays; W1 grades the build.
 6. The operator: W4's write card.
 7. W3: manual entry (parts 05.0 and 06.0) on W3's card; AAR row.
