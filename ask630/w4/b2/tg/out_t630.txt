@@ -1,0 +1,26 @@
+PASS nodes 423 -> 427 (four added)
+PASS every base node byte-equal in the target
+PASS the four new nodes exist
+PASS connections changed only at Dry Failed? and the new nodes: Dry Failed?, Failure Enforcer Log, Failure Judgments, Panel Failure Mark, Panel Failure Rows
+PASS Dry Failed? true (dry) still goes to Dry Failure Stop only
+PASS chain: Dry Failed? false -> Mark -> Rows -> Failure Enforcer Log -> Failure Judgments -> Panel Tokens
+PASS every new node has onError continueRegularOutput
+PASS the three HTTP nodes use Write Tokens' Supabase credential
+PASS 42517: enforcer rows 103, equal to Close Enforcer Record cec_log
+PASS 42517: judgments gemini slot 1, qwen4max slot 2; hydrogen absent
+PASS 42517: reply text whole, finish stop, completion_tokens as stored (29340, 40697)
+PASS 42517: debate_id fd0edbff-ffe8-4bc3-9e41-16c8cbfb2a90, run_token ODV1-42517-5yb0fmgv, failed_node Panel Check
+PASS judge_api_model from Resolve Seats: google/gemini-3.8-flash, qwen/qwen4-max
+PASS Write Enforcer Log and Write Judgment 1 to 3 succeeded (failure at Derive Outcome): 0 enforcer rows, 0 judgments (never twice)
+PASS W1 N2: Write Enforcer Log itself failed: its rows are written (103)
+PASS W1 N1: failure at Write Judgment 2: slot 1 not stored again; slot 2 stored; slot 3 (no text in 42517) absent
+PASS Alternate Merge ran: its enforcer_log is the set
+PASS reserve reply is taken (slot null, seat from Resolve Seats reserve)
+PASS an all-space reply is not stored
+PASS Mark body: run_token, node Panel Check, the failure message, skip false (FAIL-CLOSED: seat "hydrogen" returned an envelope this parser does not recognise. Top-leve)
+PASS Mark body: a regrade sends skip true
+PASS Failure Enforcer Log body: 103 rows, run_token, debate_id
+PASS Failure Enforcer Log body equals what Write Enforcer Log would send for the same rows
+PASS Failure Judgments body: 2 rows, debate_id, failed node
+PASS ASK 599: every line of Panel Failure Rows is tagged ASK 631
+RESULT: ALL PASS (25 pass)
