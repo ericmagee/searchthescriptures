@@ -1,0 +1,8 @@
+ASK 651 + 652 BUILD b1 (W4), offline, on live engine 7f4e5503 (base_eng.json md5 9eb6db1e = 634 fetch-back).
+Build: node b651.cjs base_eng.json tg/target_engine_651.json; node b652.cjs tg/target_engine_651.json tg/target_engine_651_652.json
+Target: tg/target_engine_651_652.json md5 1aa15175. Nodes changed: D4 Build, Panel Build, Build Independent Verdict, Shared Library (LIB line 36; 29 MAP lengths re-measured by the tooling). Connections unchanged.
+Tests: t651_652.cjs ALL PASS (28), out_t651_652.txt. Standing 31 PASS 0 FAIL. Pair check: Library Check PASSES (lib 78f56d1449dc8e96 map b5974b30d48fe432).
+Ledger replay (judge-facing), before and after, from ledger652.cjs on the stored rounds: out_<run>_<node>_before/after.txt. The 42528 Panel Build "before" replay matches the live Panel Build output 18 of 18 lines. 42373 ran on an older engine; its "before" is today's code on those rounds.
+Effect on judges (42528, AGAINST THE CHALLENGER = the Oracle's presses): 25 layer verses no longer labelled "UNPROVEN, not a witness"; Job 14:1 and Acts 13:33 (Oracle presses) counted instead of "over the cap"; premise counts 7/7/8/8/8/8 -> 3/3/5/4/4/4 (presses only). AGAINST THE DEFENDER: Luke 1:35 PROVEN BY REFERENCE in premises 2, 3, 4; Matthew 1:20 and Galatians 4:4 no longer listed. The two WALL-2024 floor items (Luke 1:34 premise 4; 2 Samuel 7:12) stay.
+Both directions: in 42373 the challenger's presses Luke 1:32 and Hebrews 7:10 (premise 6) are also counted instead of "over the cap". The fix is side-neutral.
+Layer verses in a premise head now show under "other verses the premise names (informational, not witnesses)" where they appear in the head text.

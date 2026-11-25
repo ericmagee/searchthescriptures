@@ -1,0 +1,29 @@
+PASS only the four nodes change; connections unchanged
+PASS D4 Build: one ASK 651 and one ASK 652 tag
+PASS Panel Build: one ASK 651 and one ASK 652 tag
+PASS Build Independent Verdict: one ASK 651 and one ASK 652 tag
+PASS Shared Library: one ASK 651 tag, no 652 change
+PASS 651 N1: LIB source writes the newline escaped
+PASS 651 LIB copy, before: Luke 1:35 is UNPROVEN
+PASS 651 LIB copy, after: Luke 1:35 is PROVEN BY REFERENCE
+PASS 42528 D4 open_list before = live
+PASS 42528 D4 open_list after = "premise 4: Luke 1:34" (WALL-2024 floor item only)
+PASS 42373 D4 open_list after: no unproven list
+PASS PRSP null: D4 open_list identical before and after (42528)
+PASS PRSP null: D4 open_list identical before and after (42373)
+PASS r42528 Panel Build: no Luke 1:35 "not quoted" line
+PASS r42528 Panel Build: no layer verse labelled "no MEANS sentence" after ()
+PASS r42528 Panel Build: ledger headings unchanged
+PASS r42528 Build Independent Verdict: no Luke 1:35 "not quoted" line
+PASS r42528 Build Independent Verdict: no layer verse labelled "no MEANS sentence" after ()
+PASS r42528 Build Independent Verdict: ledger headings unchanged
+PASS r42373 Panel Build: no Luke 1:35 "not quoted" line
+PASS r42373 Panel Build: no layer verse labelled "no MEANS sentence" after ()
+PASS r42373 Panel Build: ledger headings unchanged
+PASS r42373 Build Independent Verdict: no Luke 1:35 "not quoted" line
+PASS r42373 Build Independent Verdict: no layer verse labelled "no MEANS sentence" after ()
+PASS r42373 Build Independent Verdict: ledger headings unchanged
+PASS 42528 Panel Build: the Oracle's proven press Job 14:1 is counted, not over the cap
+PASS 42528 Panel Build: the two WALL-2024 floor items stay
+PASS cap: 10 real presses give 8 counted and "over the cap" names Matthew 1:9, 1:10 (not the [L3] John 1:1) [8; Matthew 1:9, Matthew 1:10]
+ALL PASS (28)
