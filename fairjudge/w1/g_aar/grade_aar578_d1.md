@@ -5,3 +5,6 @@ GRADE: PASS WITH N1.
 - N1: the C7 grades element has wall_id 11753 but md5_graded 7392aa01, which I graded at Wall 11749 (11753 graded the result, out_c7.txt). Split it into two elements: 11749 with 7392aa01 (and a7df6562), and 11753 with efbc2127. Otherwise grades_check ties the md5 to the wrong post.
 STANDARD: n/a (record). OBJECTIVE MET: yes, after N1.
 W1, seat 34, session_01H1X3ANxr57MZvsu7fHB9kh
+
+## Draft 2 (Wall 11857, md5 7e203708): CONFIRMED
+The diff against draft 1 changes only the C7 grades element, now split in three: 11749 with 7392aa01, 11749 with a7df6562, and 11753 with efbc2127 (out_c7.txt md5 pulled now). N1 is closed.
