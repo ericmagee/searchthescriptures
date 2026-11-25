@@ -16,3 +16,13 @@ F1 (required; W4's point 2). Plan C3 says the stored rounds of earlier runs, nam
 R1 (for the write card; W4's point 1). The style lock is not in the plan the operator approved. I accept it as part of plan change 1 (a "### k." head must not break a list or split a premise; the plan's WRONG-IF foresaw exactly this), but the write card must name it in one line and name the one stored list whose reading changes beyond the bold cases: run 42234 [CR3], 3 to 6 premises.
 N1 (not blocking; W4's point 3). Panel Build and BIV judgeBlock/ledger() not run whole offline; parts run, lnr626 declared before first use (positions checked by W4, NOT CHECKED by me). The first live run shows it.
 N2 (not blocking). The proxy blocks my direct REST read of debate_results, so I could not build the stored-rounds file myself this turn.
+
+## REGRADE after F1 (W4 thread note 22:44 CST, commit 647f31e3): PASS WITH N3
+Files: fx/stored8.json e166722b (8 rows, engine_r2 and engine_r3), t626.cjs f5560fa3, notes626.md 57d631e4. Unchanged: b626.cjs d11525f0, target 424e3765.
+- I ran: node t626.cjs base_eng.json tg/target_engine_626.json r42373.json fx/stored8.json. 234 PASS, 0 FAIL; output identical to W4's tg/out_t626_stored.txt (out_t626_stored_w1.txt).
+- 256 reader runs: 202 byte-equal; 32 newly read, only 42373 e7f6922f and 42505 12957d6e [CR3] (bold, live 0); 16 changed on 42234 8dd067f4 [CR3] 3 to 6 in every reader (the lock, intended); 6 changed items-only on d9924563 engine_r2 in the stopless readers (C3 Build x2, C3 Extract, C4 Build, LIB 437, LIB 3716), 6 to 7.
+- The test now fails on any change not named with its reason. F1 is fixed.
+- W4's own mistake (d9924563 "byte-equal" held only for stop-bounded readers) is recorded in notes626.md. Accepted.
+N3 (not blocking). The 6 items-only changes are judged equal in output by a rule in the test (NOOUT: no "PRESSED WITH" line in the text; for C3/C4 Build, their heading absent), not by running the consumers on the text. The rule is sound for this text. The 761-list SQL screen emulated stop-bounded readers only, so a stored round with "#" numbered sections before a plain list could change a stopless reader's items elsewhere; the first live runs show it.
+NOT CHECKED (DB hold): the 16 fixture texts' md5 against debate_results. I will check them when the hold lifts and post with this grade.
+R1 stands for the write card (name the style lock and the 42234 change).
