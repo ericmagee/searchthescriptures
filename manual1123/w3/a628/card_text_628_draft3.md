@@ -1,0 +1,34 @@
+# Card text: the ASK 628 entry for the engine manual (draft 3)
+
+ASK 628 is the engine check that stops a close from printing "GAPS: NONE" while pressed verses stand unanswered. It is live. This card writes its description into the engine manual. Nothing in the engine changes.
+
+## Change 1 (part 11.1)
+
+NOW:
+
+ASK 556, THE CLOSE PRESS LIST AUDIT LINE (record only; engine node Build Save Body; text
+
+AFTER:
+
+ASK 556, THE CLOSE PRESS LIST AUDIT LINE (record only; engine node Build Save Body, which reads through the Shared Library entry PRESS LIST of ASK 628 below; text
+
+## Change 2 (part 11.1)
+
+NOW:
+
+ and Luke 2:49 named.
+  - FIXES FROM RUN 42071, THE ENGINE'S OWN FORM DEFECTS:
+
+AFTER:
+
+ and Luke 2:49 named.
+    - ASK 628, THE ORACLE'S CLOSE ANSWERS EVERY VERSE PRESSED AGAINST IT (Shared Library entry PRESS LIST; engine nodes Build Save Body, D4 Build, D4B Build, Panel Build and Build Independent Verdict; the Oracle defender only, every other profile unchanged). Why: in run 42373 the Oracle's close left 20 of the 31 verses pressed against it with no ANSWER line; the engine recorded that after the panel and did nothing with it.
+      1. One reader: the Shared Library entry PRESS LIST reads the verses under PRESSED WITH and the ANSWER lines of the close, by the reading of ASK 556. The ASK 556 audit line reads through it over the challenger's four rounds and is unchanged. The three lists below read the challenger's rounds 1 to 3 only, never its close: the defender cannot answer a press made after its own close.
+      2. The close prompt (D4 Build): "THE VERSES PRESSED AGAINST YOU -- computed by the system, not by a model: every verse the challenger carried under PRESSED WITH in its rounds 1 to 3 (<n>): <list>. Write one ANSWER line for each of them in this close, in the ANSWER form above."
+      3. The re-call (D4B Build): a listed verse with no ANSWER line in the close is a third reason for D4B's one re-call of the close, beside barred sentences and layer points. Every reason goes in the one request; there is no second re-call. The note reads, in two lines: "PRESSED VERSES WITH NO ANSWER LINE -- computed by the system, not by a model: the challenger carried these verses under PRESSED WITH in its rounds 1 to 3, and your close has no ANSWER line for them (<n>): <list>." and "Write your whole close again, the same case, with one ANSWER line for each of them in the ANSWER form your instructions give. Return the whole round; this is the only request of its kind." On a re-call D4B's output carries press_open, and its why reads "<n> barred sentence(s); <n> layer point(s); <n> pressed verse(s) with no ANSWER line"; with no re-call the item carries no press_open.
+      4. The judges (Panel Build and Build Independent Verdict; the alternates take their request from Panel Build): when a listed verse still has no ANSWER line after the close, the PRESSED-WITNESS LEDGER (section 8) is followed (in Panel Build after the cList block too, when that is present) by "PRESSED VERSES WITH NO ANSWER LINE IN THE DEFENDER'S CLOSE [CR4] -- computed by the system from the transcript text, not by a model: the challenger carried these verses under PRESSED WITH in its rounds 1 to 3 ([L1] and [L3] lines alike), and the close has no ANSWER line for them (<n>): <list>." No instruction to the judges is added or changed. With every listed verse answered, the judges' request is as before.
+      5. Limits: the limits of ASK 556 apply (a press written in another form is not counted; an ANSWER line counts whatever stands under it), and [L1] and [L3] lines count alike, so supporting verses are listed too. This list is not the GAPS LEFT OPEN list of ASK 537, which holds the Oracle's own presses: a close may print "GAPS: NONE" and still be re-called here. A re-called close that still leaves a verse open is not sent back again; the judges are shown the verse. When the re-call fires, it is one more close call of the defender. Not shown by a run. Shown offline on the stored rounds of run 42373: the audit line is byte-equal; the prompt carries the 31 verses; D4B re-calls that close naming the 20, where the engine before did not re-call it; the judges' line names the 20.
+      6. Marks for the next run with an Oracle defender: the D4 request carries "THE VERSES PRESSED AGAINST YOU"; when the first close leaves a listed verse with no ANSWER line, one D4B re-call names it; the judges' request carries the PRESSED VERSES line only when a verse is still open after the close; the ASK 556 audit line stands once in review_notes.
+  - FIXES FROM RUN 42071, THE ENGINE'S OWN FORM DEFECTS:
+
+Graded by W1 (confirmed on the Wall, post 11854). After the write the manual becomes version 313.
