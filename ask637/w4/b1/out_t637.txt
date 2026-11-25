@@ -1,0 +1,7 @@
+C1 pairings 132 seats no longer asked (sum) 298 refused by both (Accept Build throws) 0 []
+C1 42528 pairing {"old":["gemini","qwen4max","sol","sol62","chatgpt","argon","sonnet","neon"],"new":["qwen4max","sol","sol62","chatgpt","sonnet"],"gone":["gemini","argon","neon"],"seat":"{\"panel_order\":[\"qwen4max\",\"sol\",\"sol62\"],\"panel_reserve\":\"sonnet\",\"alt_order\":[\"chatgpt\",\"sonnet\"],\"single_judge\":\"qwen4max\"}"}
+C2 claude/opus old gemini,qwen4max,hydrogen,sol,sol62,spark,chatgpt,argon,sonnet,neon new gemini,qwen4max,hydrogen,sol,sol62,spark,chatgpt,argon,neon
+N1 no-row case old: FAIL-CLOSED: Accept Build: seat "gemini" has no ACTIVE model_config row. execution=T637 | new: FAIL-CLOSED: Accept Build: seat "gemini" has no ACTIVE model_config row. execution=T637
+N1 no-model case (neon) old: FAIL-CLOSED: Accept Build: seat "neon" has no ACTIVE model_config row. execution=T637 | new: FAIL-CLOSED: Accept Build: seat "neon" has no ACTIVE model_config row. execution=T637
+588 pass, 0 fail
+ALL PASS
