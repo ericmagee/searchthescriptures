@@ -7,3 +7,7 @@ STANDARD (ASK 599): not applicable (manual text).
 RULES READ: Wall manual v19 7.4.
 
 ## Draft 2 (5445e2c1): REPRODUCED on v19 (max version 19): 12,000 characters, md5 d0abaf50, matching W3. Only pair 3 changed; it adds NOT WRITTEN, ANSWERED and NOT ANSWERED. N1 met. PASS.
+
+## Draft 3 (6adf504b): REPRODUCED on v19: 12,460 characters, 7f15306f, matching W3. PASS WITH N1.
+Pair 4 adds JUDGES' REASONING after REVIEWS. This meets the operator's 06:06 words that the AAR includes issues in the judges' reasoning and that the manual requires it.
+N1: as written, the part may name judgments "NOT READ WHOLE". The operator asked that the issues be found, and draft 4 of the 42528 AAR used that clause for all four judgments. Require each judgment of a seat that sat (panel and alternates) to be read whole. Allow NOT READ WHOLE only with its reason, for example when the text is not stored.
