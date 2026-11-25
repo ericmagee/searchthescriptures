@@ -1,4 +1,4 @@
-# ASK 630 PLAN (W4), rev 1 (replaces rev 0; W1 N1, Wall 11963): a panel failure marks the row at once, with its cause
+# ASK 630 PLAN (W4), rev 2 (replaces rev 1; build-grade N1 on the run_token): a panel failure marks the row at once, with its cause
 
 Source: W4 Wall 11932 (cause and fix). Operator 04:41 CST 11-25, project chat, message cmsg_017ZQamDMHrS6fqMHnQDVo589SHYu1ca6GGbyLrQ8xVXBq: "#630. yes". That was his answer to the question on data_class 'contested' and framework_verdict null.
 Live base: engine dc258730 (after ASK 626); child aad0ad9c (not touched).
@@ -32,7 +32,7 @@ Change:
   Grants follow the nine engine write functions (ASK 494 A2): EXECUTE for postgres, service_role and lab_seat; revoked from PUBLIC, anon and authenticated. A comment names ASK 630.
 - (b) Engine: one new HTTP node, "Panel Failure Mark", between Dry Failed? (false output) and Panel Tokens.
   - It POSTs /rest/v1/rpc/odv1_mark_panel_incomplete with the Supabase credential that Salvage Save and Write Tokens use.
-  - The body is p_run_token (Init Seats run_token, with the ODV1-TEST- form in test mode, as Failure Salvage builds it), p_node and p_msg (from Panel Failure Note), and p_skip = Init Seats regrade.
+  - The body is p_run_token (Init Seats run_token as it stands: Build Save Body saves the row under that token, so no ODV1-TEST- form is applied; W1 N1 on the build), p_node and p_msg (from Panel Failure Note), and p_skip = Init Seats regrade.
   - onError is continueRegularOutput, as on Write Tokens, so that a failed mark never stops the tokens, the transcript or the error raise.
   - Panel Tokens does not read $input (searched: no $input, $json or $prevNode in its code), so the node placed before it changes nothing it reads.
 - Unchanged: Panel Failure Note, Panel Tokens, Format Markdown, Raise If Incomplete, Failure Salvage, the watchdog, every other node and connection.

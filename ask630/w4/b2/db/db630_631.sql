@@ -41,6 +41,8 @@ COMMENT ON TABLE public.odv1_panel_incomplete_judgments IS 'ASK 631: judge repli
 ALTER TABLE public.odv1_panel_incomplete_judgments ENABLE ROW LEVEL SECURITY;
 REVOKE ALL ON public.odv1_panel_incomplete_judgments FROM PUBLIC, anon, authenticated;
 GRANT SELECT ON public.odv1_panel_incomplete_judgments TO service_role, lab_seat;
+DROP POLICY IF EXISTS odv1_pij_seat_read ON public.odv1_panel_incomplete_judgments;
+CREATE POLICY odv1_pij_seat_read ON public.odv1_panel_incomplete_judgments FOR SELECT TO lab_seat USING (true); -- ASK 631 (W1 N2): seats read the rows; no write policy, so writes go only through the definer function
 CREATE OR REPLACE FUNCTION public.odv1_panel_incomplete_judgments_guard()
  RETURNS trigger LANGUAGE plpgsql SET search_path TO 'public', 'pg_temp'
 AS $function$ BEGIN RAISE EXCEPTION 'odv1_panel_incomplete_judgments is append-only (ASK 631): % refused', TG_OP; END $function$;
