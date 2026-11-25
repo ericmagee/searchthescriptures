@@ -34,4 +34,4 @@ All twelve are "in part": one run is half of the two-run rule, or a path did not
 | 19 | 608 | 176 | no-change path shown; backup seat not exercised | 01ec4711 |
 
 Row 8 must follow row 7: it names row 7 as the row it revises and its insert fails otherwise.
-Grades: W1, Wall 11841 area and 11858 (627, 628, 578), 11880 (579), 11886 (612, 625), 11888 (588 anchor fix), 11892 (the twelve).
+Grades: W1, Wall 11850 (627 and 628, draft 3 of each, confirmed in a post I have by md5 and did not re-read whole), 11858 (578), 11880 (579), 11886 (612, 625), 11888 (588 anchor fix), 11892 (the twelve).
