@@ -1,0 +1,17 @@
+42373 CR3: pressed 31, with block 0, X listed b2 0, W3 rule 0; items b2 31, W3 rule 31
+42373 CR4 Matthew 1:19: X listed -> not listed; [L3] refs ["Matthew 1:18","Matthew 1:20"] [L1] refs ["Matthew 1:19"] SAME-CHAPTER: Matthew 1:18; Matthew 1:20
+42373 CR4: pressed 31, with block 11, X listed b2 1, W3 rule 0; items b2 31, W3 rule 31
+42517 CR3: pressed 17, with block 0, X listed b2 0, W3 rule 0; items b2 17, W3 rule 17
+42517 CR4 Matthew 1:25: X listed -> not listed; [L3] refs ["Matthew 1:24","Matthew 1:18"] [L1] refs ["Matthew 1:25"] SAME-CHAPTER: Matthew 1:24; Matthew 1:18
+42517 CR4 Matthew 1:24: X listed -> not listed; [L3] refs ["Matthew 1:19","Matthew 1:25"] [L1] refs ["Matthew 1:24"] SAME-CHAPTER: Matthew 1:19; Matthew 1:25
+42517 CR4: pressed 17, with block 17, X listed b2 2, W3 rule 0; items b2 17, W3 rule 17
+42528 CR3: pressed 15, with block 15, X listed b2 0, W3 rule 0; items b2 15, W3 rule 15
+42528 CR4: pressed 15, with block 15, X listed b2 0, W3 rule 0; items b2 15, W3 rule 15
+TOTAL {"blocks":58,"oldX":3,"newX":0,"toUn":3,"toLi":0,"neigh":3}
+range "[L3] Obadiah 1:10-14 \"For thy violence against thy brother Jacob\"" -> []
+range "[L3] Obadiah 1:9-14 \"And thy mighty men, O Teman\"" -> []
+variant A: b2 [] | W3 rule []
+variant B: b2 [] | W3 rule []
+variant C: b2 [{"ref":"Matthew 1:23","lacks":["O"]}] | W3 rule [{"ref":"Matthew 1:23","lacks":["O"]}]
+variant D: b2 [{"ref":"Matthew 1:23","lacks":["V","S","G","X","O"]}] | W3 rule [{"ref":"Matthew 1:23","lacks":["V","S","G","X","O"]}]
+variant E: b2 [{"ref":"Matthew 1:23","lacks":["X"]}] | W3 rule []

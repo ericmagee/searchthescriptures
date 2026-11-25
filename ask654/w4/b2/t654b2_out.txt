@@ -1,0 +1,28 @@
+PASS touched nodes only: D3B Build, D4 Build, D4B Build, Init with Guards, Shared Library
+PASS node count and connections unchanged
+PASS Library Check: all 76 MAP entries rebuild to n
+PASS LIB lines 0-3882 unchanged; added 22
+PASS D3B Build compiles
+PASS D4 Build compiles
+PASS D4B Build compiles
+PASS Init with Guards compiles
+PASS part 1: GUARDHOLD ends with block A, 1095 characters
+PASS part 1b: TEXTPROOF paragraph equals the plan's whole text, 569 characters
+PASS part 1c: the ASK 408 line carries the order clause once
+PASS Init with Guards: only block A, the two replacements and the order clause (1102 source characters)
+PASS C4: 42528 CR4 Matthew 1:23 block listed, lacks S (surrounding verse) and O (opponent words)
+PASS C4 replay 42373: CR3 31/31, CR4 31/31 listed; note 765 and 1137 characters
+PASS C4 replay 42517: CR3 17/17, CR4 17/17 listed; note 565 and 979 characters
+PASS C4 replay 42528: CR3 15/15, CR4 15/15 listed; note 851 and 851 characters
+PASS C3/C4 A: check 0 items, finder 0 hits (got 0, 0)
+PASS C3/C4 B: check 0 items, finder 0 hits (got 0, 0)
+PASS variant C listed as expected
+PASS variant D listed as expected
+PASS variant E listed as expected
+PASS D4B: verses already in the ASK 628 list are not listed twice
+PASS part 1d: the Oracle-defender branch of the close message equals the refresh and the rev 9 sentence (1308 characters)
+PASS part 1d: the refresh is the first five lines of block A, character for character
+PASS part 1d: the live sentence is gone
+PASS D4 Build: nothing else changed
+PASS part 1 FORM line is rev 9 ("another passage")
+TOTAL 27 PASS, 0 FAIL
