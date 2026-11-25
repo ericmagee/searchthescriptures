@@ -7,7 +7,7 @@ set -u
 H=https://truthapp.app.n8n.cloud/api/v1; B=/mnt/project-files/ask578/w4/b3; O=/mnt/project-files/ask578/w4/write2; E=moMxiV4Irg1uRBZN; C=MqQHRl7mQQ0z8QdT; cd $O
 RUN=$(curl -s -H "X-N8N-API-KEY: $N8N_API_KEY" "$H/executions?status=running&limit=100" | python3 -I -c "import json,sys;d=json.load(sys.stdin).get('data') or [];print(' '.join(x['id'] for x in d if x.get('workflowId') in ('$E','$C')))") || { echo "RUN CHECK FAILED; NOTHING WRITTEN"; exit 1; }
 [ -z "$RUN" ] || { echo "ENGINE OR CHILD RUN LIVE ($RUN); NOTHING WRITTEN"; exit 1; }
-mkdir -p atw && NODE_PATH=/mnt/project-files/ask578/w4/build/node_modules node /mnt/project-files/ask578/w4/build/t578b.js $B/base_eng.json $B/base_child.json $O/atw > atw/t578b.txt 2>&1; tail -1 atw/t578b.txt | grep -q "^ALL PASS" || { echo "T578B FAILED; NOTHING WRITTEN"; exit 1; }
+mkdir -p atw && NODE_PATH=/mnt/project-files/ask578/w4/build/node_modules node $B/t578c.js $B/base_eng.json $B/base_child.json $O/atw > atw/t578c.txt 2>&1; tail -1 atw/t578c.txt | grep -q "^ALL PASS" || { echo "T578C FAILED; NOTHING WRITTEN"; exit 1; }
 cmp -s atw/target_engine_578.json $B/target_engine_578.json && cmp -s atw/target_child_578.json $B/target_child_578.json || { echo "REBUILD DIFFERS FROM THE GRADED TARGET; NOTHING WRITTEN"; exit 1; }
 curl -s -H "X-N8N-API-KEY: $N8N_API_KEY" $H/workflows/$E -o prewrite_eng.json || exit 1
 curl -s -H "X-N8N-API-KEY: $N8N_API_KEY" $H/workflows/$C -o prewrite_child.json || exit 1

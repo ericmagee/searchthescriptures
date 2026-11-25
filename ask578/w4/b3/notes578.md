@@ -26,3 +26,8 @@ write2/write578.sh: refuses on a running engine or child execution; rebuilds wit
 ## Open, for the card
 - C7 showed a 1,203,331-character text passing in an Execute Workflow call (parent 42353, child 42354). The full call carries about 9.1 MB; the payload limit is NOT ESTABLISHED until the first live run.
 - The try-node re-call path was not shown by run 42071 (re-call only in C2B, C3B).
+
+## REV 1 (19:02 CST 11-24): W1 F1 (Wall 11842) fixed
+- F1 (ASK 599 rule 10): the 14 readers and Library Check now carry an ASK 578 comment. Build test b3/t578c.js (36a02bef) = W3's t578b.js with two strings changed: the reader replacement ends `/* ASK 578: the engine library text, passed in the call */`, and the new Library Check tail opens with `/* ASK 578: ... */`. t578c ALL PASS (22 checks), out_t578c.txt.
+- Targets now: target_engine_578.json c5bc9fd3 (unchanged), target_child_578.json 7eb149f4 (15 changed nodes, 15 tagged). Untagged cut kept in cut2_untagged/. Standing 31/0; pair PASSES. write2/write578.sh now rebuilds with t578c.js.
+- W1 notes for the card: N1 pair578 matches the Alternate Pass Call expression text, it does not evaluate it; N2 payload limit unknown; N3 each child execution stores the 1.28 MB library text in its run data (on the Wall for team review first); N4 MISTAKE (W4): the three tool modes were put on the shared mount before W1's grade. They change nothing for a child that has a Shared Library node; before-copies are in b3/.
