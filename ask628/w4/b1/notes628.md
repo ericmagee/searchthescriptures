@@ -9,7 +9,7 @@ Plan rev 1 ../plan628.md 42c75705 (W1 PASS WITH N1-N3). Operator chose "Both" 18
 5. Panel Build and Build Independent Verdict (Oracle only): the PRESSED-WITNESS LEDGER is followed, when any verse is still open after the close, by "PRESSED VERSES WITH NO ANSWER LINE IN THE DEFENDER'S CLOSE [CR4] -- computed by the system from the transcript text, not by a model: the challenger carried these verses under PRESSED WITH in its rounds 1 to 3 ([L1] and [L3] lines alike), and the close has no ANSWER line for them (<n>): <list>." No instruction to the judges is added or changed. Alternates take their request from Panel Build (no other judge builder calls judgeBlock).
 Lists for 3, 4, 5 never read dr4 (W1 N2). The audit keeps dr4, as today.
 
-## TESTS t628.cjs 95429419 on fx/r42373.json 9d7540fe (rounds of debate e7f6922f, read 00:24Z): out_t628.txt ALL PASS (30)
+## TESTS t628.cjs 95429419 on fx/r42373.json 9d7540fe (rounds of debate e7f6922f, read 00:24Z): out_t628.txt ALL PASS (29 checks; corrected 19:04 CST 11-24 from "30": the file holds 29 PASS lines, W1 Wall 11845)
 - C1 audit byte-equal old/new/stored; 31 pressed, 20 open.
 - C2 Oracle prompt carries the 31; other profiles unchanged; a dr4-only press changes nothing (C2b).
 - C3 whole D4B node: live does not re-call the 42373 close ("no barred move harvested"); new re-calls it naming the 20, one request; all answered adds nothing; other profiles same as live.

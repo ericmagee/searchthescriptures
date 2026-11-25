@@ -10,7 +10,7 @@ NOT ADDED: Close Group Batch Call and Enforcer Group Batch Call. C3 showed every
 No price, prompt, reasoning or model setting changes. record_debate_row_tokens unchanged.
 
 ## TESTS
-t627.cjs 946d7831 -> out_t627.txt e49a7ff6: ALL PASS (35 checks).
+t627.cjs 946d7831 -> out_t627.txt e49a7ff6: ALL PASS (34 checks; corrected 19:04 CST 11-24 from "35": the file holds 34 PASS lines, W1 Wall 11845).
 - C1 coverage: all 72 engine model-API nodes priced or out with the C3 reason; all 8 child nodes carried back and priced.
 - C2 shapes: each added node, each reply shape (anthropic; openrouter cost; openrouter BYOK): one entry, right family and fields; the live code gives 0. Not run gives nothing. One id in two nodes counts once.
 - C4 run 42373: the 9 QR replies read at 00:08Z (c4/qr42373.json e8548031, usage only): live code prices 0 of 9, new code 9 of 9:
