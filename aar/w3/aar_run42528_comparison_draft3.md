@@ -7,7 +7,7 @@
   - Run 42373: judged, UNDERDETERMINED, panel BROKEN 2-1. Stored cost $10.12; true cost about $11.45.
   - Run 42505: stopped in round 4 on the Anthropic usage limit. No verdict. Cost not stored.
   - Run 42517: all eight rounds, then the panel failed on judge hydrogen. No verdict. Cost $3.82.
-- No run since 42528. Live now: engine 3b72583c, child aad0ad9c.
+- No run since 42528. Live now: engine 3b72583c, child aad0ad9c. State of every item as of 06:05 CST 11-25.
 - The other parts of the report (objective, reviews, what went right, what went wrong, suggested improvements, knowledge base) stand as in the first report of this run, Wall 11953.
 
 ## IMPROVEMENTS SINCE THE LAST RUNS
@@ -22,7 +22,7 @@ Each is an earlier defect that run 42528 shows fixed.
 
 ## DEFECTS NOT RESOLVED
 Still present in run 42528:
-1. Rounds called a second time with nothing barred. Runs 42373 (five, $1.65), 42517 (one), 42528 (three, $0.73). ASK 633: cause found (the layers check fired; the record line is wrong); plan in progress.
+1. Rounds called a second time with nothing barred. Runs 42373 (five, $1.65), 42517 (one), 42528 (three, $0.73). ASK 633: cause found (the layers check fired; the record line is wrong); plan graded PASS, not built.
 2. Negative input-token counts in the cost record. Run 42373: one entry. Run 42517: five. Run 42528: one. Dollars are right. ASK 632: written to the engine 11-25, after the run; unexercised.
 3. The agreement step asks seats that cannot sit. Run 42373: sonnet. Run 42528: three Google seats beside a Google defender, $0.08. No ASK number.
 4. No run-start check before the run. Runs 42373, 42505, 42517 and 42528. The fixed tool is now in the tools folder; no run has been started with it.
@@ -65,7 +65,7 @@ Run 42373:
 3. Challenger's count cut with no premise named. OPEN, seen again. NO ASK NUMBER.
 4. chatgpt's result contradicts its own lines. LIVE AND UNEXERCISED (ASK 624.5).
 5. The synthesis gives no verdict. OPEN, not seen in run 42528. NO ASK NUMBER. Its second part (items charged by neither side) seen again.
-6. Five rounds called twice with nothing barred. OPEN, seen again (ASK 633, plan in progress).
+6. Five rounds called twice with nothing barred. OPEN, seen again (ASK 633, plan graded PASS, not built).
 7. Cost record leaves out calls. FIXED for the dollars (ASK 627). Resend and Close Group Retry calls not shown yet.
 8. Agreement step asks a seat that cannot sit. OPEN, seen again. NO ASK NUMBER.
 9. My wrong column name in a record row. CLOSED (correcting row in).
