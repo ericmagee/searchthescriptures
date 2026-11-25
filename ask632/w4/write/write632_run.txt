@@ -1,0 +1,50 @@
+engine base 066525aa-beeb-42ad-a92c-e5b6575bed96 nodes changed 1 ['Panel Tokens'] ; child unchanged aad0ad9c-ecc7-49a1-9079-57a065d9ec74
+STANDING: 31 PASS, 0 FAIL (7.8 s)
+PUT engine http 200
+Traceback (most recent call last):
+  File "<stdin>", line 4, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/project-files/ask632/w4/write/fetchback_eng_632.json'
+node:fs:440
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '/mnt/project-files/ask632/w4/write/fetchback_eng_632.json'
+    at Object.readFileSync (node:fs:440:20)
+    at load (/mnt/attach/project-files/standing/lib.cjs:4:29)
+    at Object.<anonymous> (/mnt/attach/project-files/standing/run.cjs:5:29)
+    at Module._compile (node:internal/modules/cjs/loader:1781:14)
+    at Object..js (node:internal/modules/cjs/loader:1913:10)
+    at Module.load (node:internal/modules/cjs/loader:1505:32)
+    at Function._load (node:internal/modules/cjs/loader:1309:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/mnt/project-files/ask632/w4/write/fetchback_eng_632.json'
+}
+
+Node.js v22.23.4
+node:fs:440
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '/mnt/project-files/ask632/w4/write/fetchback_eng_632.json'
+    at Object.readFileSync (node:fs:440:20)
+    at J (/mnt/attach/project-files/ask557/w4/build/test557.js:2:74)
+    at Object.<anonymous> (/mnt/attach/project-files/ask557/w4/build/test557.js:12:57)
+    at Module._compile (node:internal/modules/cjs/loader:1781:14)
+    at Object..js (node:internal/modules/cjs/loader:1913:10)
+    at Module.load (node:internal/modules/cjs/loader:1505:32)
+    at Function._load (node:internal/modules/cjs/loader:1309:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/mnt/project-files/ask632/w4/write/fetchback_eng_632.json'
+}
+
+Node.js v22.23.4
