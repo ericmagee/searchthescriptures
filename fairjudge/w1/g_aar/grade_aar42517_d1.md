@@ -17,3 +17,7 @@ GRADE: FAIL (F1). RULES READ: Wall manual s7.4; op doc s29, s30. OBJECTIVE MET: 
 F1 (required). The cost record is not whole in its token fields, and the AAR says it is ("The cost record is whole"; 627 MET: YES). Five of the 42 call_costs entries carry a negative input-token count (field i): Synthesis Call -1, Accept Call -1, Panel Judge 1 -1, QR Ask (gemini-3.8-flash) -75,869, QR Follow Ask (gemini-3.8-flash) -77,682. The usd figures are billed and sum right; the token counts are wrong where cached tokens (cr) exceed or are subtracted from the prompt count. Put it under DEFECTS, and qualify the 627 result and WHAT WENT RIGHT line to the dollar figures.
 N1 (not blocking). Item 2 lists the QR entries but leaves out "QR Ask" (3) and "QR Retry Ask" (3), which are also costed. Add them; they strengthen the 627 result.
 N2 (not blocking). Item 8 says the record does not say why sol and chatgpt are not seated as alternates. W4's Wall 11919 gives the reason from the execution (OpenAI family dropped, OpenAI debater). Cite it as W4's reading, or leave it as is.
+
+## Draft 2 (Wall 11924, aar_run42517_draft2.md md5 38096a59, commit af5835aa): PASS
+Diff from draft 1: header, SQL span, cost line, item 2, item 8, DEFECT 7, one WHAT WENT RIGHT line. Nothing else changed.
+F1 fixed: cost claims limited to the dollars; DEFECT 7 names the five entries. Its new claim "All five are google/gemini-3.8-flash calls" checked by my SQL: true. N1 and N2 applied. OBJECTIVE MET: yes. STANDARD (ASK 599): not applicable.
