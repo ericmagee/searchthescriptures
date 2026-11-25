@@ -1,0 +1,47 @@
+// ASK 630 + 631 tests (W4). node t630.cjs base_eng.json target_engine_630.json fx/r42517_fail.json
+const fs=require('fs');const [,,BE,TE,FX]=process.argv;
+const B=JSON.parse(fs.readFileSync(BE,'utf8')),T=JSON.parse(fs.readFileSync(TE,'utf8')),F=JSON.parse(fs.readFileSync(FX,'utf8'));
+let pass=0,fail=0;const ok=(c,m)=>{if(c){pass++;console.log('PASS',m);}else{fail++;console.log('FAIL',m);}};
+const P=w=>Object.fromEntries(w.nodes.map(n=>[n.name,JSON.stringify(n)]));const PB=P(B),PT=P(T);
+const NEW=['Panel Failure Mark','Panel Failure Rows','Failure Enforcer Log','Failure Judgments'];
+ok(T.nodes.length===B.nodes.length+4,'nodes '+B.nodes.length+' -> '+T.nodes.length+' (four added)');
+ok(Object.keys(PB).every(n=>PT[n]===PB[n]),'every base node byte-equal in the target');
+ok(NEW.every(n=>PT[n]),'the four new nodes exist');
+const ck=Object.keys(T.connections).filter(k=>JSON.stringify(T.connections[k])!==JSON.stringify(B.connections[k]));
+ok(JSON.stringify(ck.sort())===JSON.stringify(['Dry Failed?',...NEW].sort()),'connections changed only at Dry Failed? and the new nodes: '+ck.join(', '));
+ok(JSON.stringify(T.connections['Dry Failed?'].main[0])===JSON.stringify(B.connections['Dry Failed?'].main[0]),'Dry Failed? true (dry) still goes to Dry Failure Stop only');
+const nx=n=>T.connections[n].main[0].map(x=>x.node).join(',');
+ok(nx('Dry Failed?'.replace(/.*/,'Panel Failure Mark'))==='Panel Failure Rows'&&nx('Panel Failure Rows')==='Failure Enforcer Log'&&nx('Failure Enforcer Log')==='Failure Judgments'&&nx('Failure Judgments')==='Panel Tokens'&&T.connections['Dry Failed?'].main[1][0].node==='Panel Failure Mark','chain: Dry Failed? false -> Mark -> Rows -> Failure Enforcer Log -> Failure Judgments -> Panel Tokens');
+const N=Object.fromEntries(T.nodes.map(n=>[n.name,n]));
+ok(NEW.every(n=>N[n].onError==='continueRegularOutput'),'every new node has onError continueRegularOutput');
+ok(['Panel Failure Mark','Failure Enforcer Log','Failure Judgments'].every(n=>JSON.stringify(N[n].credentials)===JSON.stringify(N['Write Tokens'].credentials)),'the three HTTP nodes use Write Tokens\' Supabase credential');
+// a $ stub from a fixture map
+const mk=(fx)=>{const $=n=>{if(!(n in fx))return {get isExecuted(){return false;},first(){throw new Error('unexecuted '+n);}};return {isExecuted:true,first:()=>({json:fx[n][0]}),all:()=>fx[n].map(j=>({json:j}))};};return $;};
+const runCode=(code,fx)=>{const f=new Function('$','$input','$execution',code);return f(mk(fx),{first:()=>({json:{}})},{mode:'trigger',customData:{set(){}}});};
+const evalExpr=(e,fx)=>{const body=e.replace(/^=\{\{\s*/,'').replace(/\s*\}\}\s*$/,'');return new Function('$','$execution','return ('+body+');')(mk(fx),{mode:'trigger'});};
+const RC=N['Panel Failure Rows'].parameters.jsCode;
+const r=runCode(RC,F)[0].json;
+const cec=F['Close Enforcer Record'][0].cec_log;
+ok(r.enforcer_log.length===103&&JSON.stringify(r.enforcer_log)===JSON.stringify(cec),'42517: enforcer rows 103, equal to Close Enforcer Record cec_log');
+ok(r.judgments.length===2&&r.judgments[0].slot===1&&r.judgments[0].judge_seat==='gemini'&&r.judgments[1].slot===2&&r.judgments[1].judge_seat==='qwen4max','42517: judgments gemini slot 1, qwen4max slot 2; hydrogen absent');
+ok(r.judgments.every((j,i)=>j.reply_text===F['Panel Judge '+(i+1)+' openrouter'][0].choices[0].message.content&&j.finish_reason==='stop'&&j.completion_tokens===F['Panel Judge '+(i+1)+' openrouter'][0].usage.completion_tokens),'42517: reply text whole, finish stop, completion_tokens as stored ('+r.judgments.map(j=>j.completion_tokens).join(', ')+')');
+ok(r.debate_id===F['Check Save'][0].debate_id&&r.run_token===F['Init Seats'][0].run_token&&r.failed_node===F['Panel Failure Note'][0].failed_node,'42517: debate_id '+r.debate_id+', run_token '+r.run_token+', failed_node '+r.failed_node);
+const RS=F['Resolve Seats'][0];ok(r.judgments.every((j,i)=>j.judge_api_model===RS.judges[i].api_model),'judge_api_model from Resolve Seats: '+r.judgments.map(j=>j.judge_api_model).join(', '));
+const v1=runCode(RC,{...F,'Write Enforcer Log':[{}],'Write Judgment 1':[{}],'Write Judgment 2':[{}],'Write Judgment 3':[{}],'Panel Failure Note':[{...F['Panel Failure Note'][0],failed_node:'Derive Outcome'}]})[0].json;ok(v1.enforcer_log.length===0&&v1.judgments.length===0,'Write Enforcer Log and Write Judgment 1 to 3 succeeded (failure at Derive Outcome): 0 enforcer rows, 0 judgments (never twice)');
+const v1b=runCode(RC,{...F,'Write Enforcer Log':[{}],'Write Judgment 1':[{}],'Write Judgment 2':[{}],'Write Judgment 3':[{}],'Panel Failure Note':[{...F['Panel Failure Note'][0],failed_node:'Write Enforcer Log'}]})[0].json;ok(v1b.enforcer_log.length===103,'W1 N2: Write Enforcer Log itself failed: its rows are written (103)');
+const v2=runCode(RC,{...F,'Write Judgment 1':[{}],'Write Judgment 2':[{}],'Panel Failure Note':[{...F['Panel Failure Note'][0],failed_node:'Write Judgment 2'}]})[0].json;ok(v2.judgments.length===1&&v2.judgments[0].slot===2&&v2.enforcer_log.length===103,'W1 N1: failure at Write Judgment 2: slot 1 not stored again; slot 2 stored; slot 3 (no text in 42517) absent');
+const AL=[{seat:'x',kind:'cure'},{seat:'y',kind:'send_back'}];const v3=runCode(RC,{...F,'Alternate Merge':[{enforcer_log:AL}]})[0].json;ok(JSON.stringify(v3.enforcer_log)===JSON.stringify(AL),'Alternate Merge ran: its enforcer_log is the set');
+const FR={...F};delete FR['Panel Judge 1 openrouter'];FR['Panel Reserve openrouter']=[F['Panel Judge 1 openrouter'][0]];const v4=runCode(RC,FR)[0].json;ok(v4.judgments.length===2&&v4.judgments.some(j=>j.slot===null&&j.judge_seat===(RS.reserve?RS.reserve.seat:null)),'reserve reply is taken (slot null, seat from Resolve Seats reserve)');
+const FE={...F,'Panel Judge 2 openrouter':[{choices:[{message:{content:'   '},finish_reason:'stop'}]}]};ok(runCode(RC,FE)[0].json.judgments.length===1,'an all-space reply is not stored');
+// expressions
+const fx2={...F,'Panel Failure Rows':[r]};
+const mb=evalExpr(N['Panel Failure Mark'].parameters.jsonBody,F);
+ok(mb.p_run_token===F['Init Seats'][0].run_token&&mb.p_node==='Panel Check'&&/returned an envelope|returned no text/.test(mb.p_msg)&&mb.p_skip===false,'Mark body: run_token, node Panel Check, the failure message, skip false ('+mb.p_msg.slice(0,90)+')');
+const mbR=evalExpr(N['Panel Failure Mark'].parameters.jsonBody,{...F,'Init Seats':[{...F['Init Seats'][0],regrade:true}]});ok(mbR.p_skip===true,'Mark body: a regrade sends skip true');
+const eb=JSON.parse(evalExpr(N['Failure Enforcer Log'].parameters.jsonBody,fx2));
+ok(eb.p_run_token===r.run_token&&eb.p_debate_id===r.debate_id&&eb.p_rows.length===103,'Failure Enforcer Log body: 103 rows, run_token, debate_id');
+const wb=JSON.parse(evalExpr(B.nodes.find(n=>n.name==='Write Enforcer Log').parameters.jsonBody,{...F,'Alternate Merge':[{debate_id:r.debate_id,enforcer_log:cec}]}));
+ok(JSON.stringify(wb)===JSON.stringify(eb),'Failure Enforcer Log body equals what Write Enforcer Log would send for the same rows');
+const jb=evalExpr(N['Failure Judgments'].parameters.jsonBody,fx2);ok(jb.p_rows.length===2&&jb.p_debate_id===r.debate_id&&jb.p_failed_node==='Panel Check','Failure Judgments body: 2 rows, debate_id, failed node');
+const tag=RC.split('\n').every(l=>/ASK 631/.test(l));ok(tag,'ASK 599: every line of Panel Failure Rows is tagged ASK 631');
+console.log((fail?'RESULT: '+fail+' FAIL':'RESULT: ALL PASS')+' ('+pass+' pass)');

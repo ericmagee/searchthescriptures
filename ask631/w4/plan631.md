@@ -1,6 +1,6 @@
-# ASK 631 PLAN (W4), rev 0: when the panel fails, the checks already made and the judgments already returned are stored
+# ASK 631 PLAN (W4), rev 1 (replaces rev 0; W1 N1 to N3, Wall 11965): when the panel fails, the checks already made and the judgments already returned are stored
 
-Source: W4 Wall 11933, with the corrections in 11934. Operator 04:41 CST 11-25, project chat, message cmsg_017ZQamDMHrS6fqMHnQDVo589SHYu1ca6GGbyLrQ8xVXBq: "yes #631". That was his answer to whether a failed panel's usable judgments are stored, marked as not a verdict.
+Source: W4 Wall 11933, with the corrections in 11934. Operator 04:41 CST 11-25, project chat, message cmsg_017ZQamDMHrS6fqMHnQDVo589SHYu1ca6GGbyLrQ8xVXBq: "#631. yes". That was his answer to whether a failed panel's usable judgments are stored, marked as not a verdict.
 Live base: engine dc258730; child aad0ad9c (not touched). It is stacked with ASK 630, on the same failure path: one card and one write per workflow (op doc s29, STACKED PACKAGES), with one revert file per package.
 
 ## 1. OBJECTIVE
@@ -29,9 +29,10 @@ Change:
   - It inserts one row per element whose reply_text is a non-empty string.
 - (c) Engine: three nodes on the failure path, after ASK 630's Panel Failure Mark and before Panel Tokens. Each HTTP node has onError continueRegularOutput, so a failed store never stops the tokens, the transcript or the error raise.
   - "Panel Failure Rows" (code). It builds the two payloads.
-    - Enforcer rows: if Write Enforcer Log has already run, none, so nothing is written twice. Else, if Alternate Merge ran, its enforcer_log, the same set the normal path writes. Else, the round-stage logs: Close Enforcer Record cec_log, Judge Contradiction Record jcc_log and Assume Check Record acx_log, taken by the same three lookups as Alternate Merge's __cecL.
-    - Judgments: if Write Judgment 1 has run, none, because those judgments are already stored. Else, for slots 1 to 3, the Panel Judge k openrouter reply where choices[0].message.content is a non-empty string. Each carries its seat and api_model from Resolve Seats judges[k-1], with finish_reason and completion_tokens.
-    - The reserve's reply (Panel Reserve openrouter) is taken the same way if that node ran.
+    - A node counts as succeeded when it ran and is not the node Panel Failure Note names as failed. The chain stops at the first failure.
+    - Enforcer rows: if Write Enforcer Log succeeded, none, so nothing is written twice. If Write Enforcer Log itself failed, its rows are written here (W1 N2). Else, if Alternate Merge ran, its enforcer_log, the same set the normal path writes. Else, the round-stage logs: Close Enforcer Record cec_log, Judge Contradiction Record jcc_log and Assume Check Record acx_log, taken by the same three lookups as Alternate Merge's __cecL.
+    - Judgments: for each slot k from 1 to 3 whose own Write Judgment k did not succeed (W1 N1), the Panel Judge k openrouter reply where choices[0].message.content is a non-empty string. Each carries its seat and api_model from Resolve Seats judges[k-1], with finish_reason and completion_tokens.
+    - The reserve's reply (Panel Reserve openrouter) is taken the same way if that node ran and Write Judgment 1 did not succeed. It has no panel slot and is stored with slot null and its own seat (W1 N3).
     - debate_id comes from Check Save; run_token from Init Seats.
   - "Failure Enforcer Log": HTTP, the record_enforcer_log RPC. Its body expression is Write Enforcer Log's PRD de-duplication, copied once, with the rows from Panel Failure Rows. It is skipped when there are no rows.
   - "Failure Judgments": HTTP, the odv1_record_incomplete_panel RPC. It is skipped when there are no rows.
@@ -51,7 +52,11 @@ NOT SEARCHED: the dashboard pages (they read the functions above, which are not 
 
 ## 4. CRITERIA AND DONE
 - C1. 42517 replay of Panel Failure Rows from the stored node outputs gives 103 enforcer rows equal to cec_log, and 2 judgment rows (gemini slot 1, qwen4max slot 2), each with its reply text whole, finish "stop" and completion_tokens as stored. hydrogen is absent.
-- C2. With Write Enforcer Log marked as run, the enforcer rows are 0. With Write Judgment 1 marked as run, the judgment rows are 0. With Alternate Merge run, the rows equal its enforcer_log.
+- C2. Never twice, nothing lost:
+  - With Write Enforcer Log and Write Judgment 1 to 3 succeeded, 0 enforcer rows and 0 judgments.
+  - With Write Enforcer Log itself the failed node, its rows are written (W1 N2).
+  - With the failure at Write Judgment 2, slot 1 is not stored again and slot 2 is stored (W1 N1).
+  - With Alternate Merge run, the rows equal its enforcer_log.
 - C3. The function, in a rolled-back call: inserts n rows for n texts and skips an empty text. UPDATE and DELETE on the table raise. anon and authenticated have no EXECUTE and no table access.
 - C4. Engine: only the three nodes are added (plus ASK 630's node), and only the failure-path connections change. Every other node is byte-equal to dc258730. Standing set 31/0. S4 compile passes. A run with no panel failure never reaches the nodes (by connections).
 - C5. ASK 599: every new line is tagged ASK 631, there is no dead code, and no catch beyond the lookups that copy Alternate Merge's form.
