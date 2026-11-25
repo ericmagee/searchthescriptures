@@ -1,4 +1,4 @@
-const PLY=(()=>{ /* ASK 654: a pressed verse answered at the verse, in the FORM the Oracle is told: on its ANSWER block, [L1] the verse and a verse of its chapter, [L2] a Strong's number, [L3] a verse of another passage (ASK 654 b3: any verse that is not the pressed verse, nor a range holding it, nor a verse quoted at [L1]; ranges and book names read by REFP), [L4] the opponent's words from its round. Oracle seat only; used by D3B Build and D4B Build; a send-back, never a strike */
+const PLY=(()=>{ /* ASK 654: a pressed verse answered at the verse, in the FORM the Oracle is told: on its ANSWER block, [L1] the verse and a verse of its chapter, [L2] a Strong's number, [L3] a verse of another passage (plan rev 11, the team's code floor: an [L3] line meets it with a verse, alone or in a range, that is neither the pressed verse nor a verse quoted at [L1]; ranges and book names read by REFP), [L4] the opponent's words from its round. Oracle seat only; used by D3B Build and D4B Build; a send-back, never a strike */
  if(typeof REFP==='undefined'||typeof REFP.keys!=='function')throw new Error('ASK 654: PRESS LAYERS loaded without REFP');
  const RF='((?:[1-3] )?[A-Z][a-z]+\\.?(?: (?:of )?[A-Z][a-z]+)* \\d+:\\d+(?:\\s*[-–]\\s*\\d+)?)';
  const KY=s=>{const k=[...new Set(REFP.keys(String(s),{cap:30}).map(x=>x.key))];return k.length?k:[String(s)];}; /* a reference read through REFP: a range gives each verse, a short book name the KJV name */
@@ -17,7 +17,7 @@ const PLY=(()=>{ /* ASK 654: a pressed verse answered at the verse, in the FORM 
   for(const r of P){const bs=B.filter(b=>b.ref===r);if(!bs.length){items.push({ref:r,lacks:['B']});continue;}const lines=bs.flatMap(b=>b.lines);const lacks=[];
    const l1=tagged(lines,1).flatMap(refs);if(!l1.includes(r))lacks.push('V');if(!l1.some(x=>x!==r&&same(x,r)))lacks.push('S');
    if(!tagged(lines,2).some(l=>/\b[GH]\d{1,5}\b/.test(l)))lacks.push('G');
-   if(!tagged(lines,3).flatMap(units).some(u=>!u.includes(r)&&!u.some(x=>l1.includes(x))))lacks.push('X');
+   if(!tagged(lines,3).flatMap(refs).some(x=>x!==r&&!l1.includes(x)))lacks.push('X');
    let ok=false;for(const m of tagged(lines,4).join('\n').matchAll(/\[\s*(DR[1-4])\s*\][\s:,]*["“]([^"”\n]+)["”]/gi)){const k=m[1].toUpperCase(),q=W(m[2]);if(q.split(' ').length>=6&&opp&&opp[k]&&W(opp[k]).includes(q)){ok=true;break;}}if(!ok)lacks.push('O');
    if(lacks.length)items.push({ref:r,lacks});}
   return {applies:true,pressed:P.length,items,pass:!items.length};}

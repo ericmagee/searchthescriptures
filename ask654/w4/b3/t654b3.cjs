@@ -1,4 +1,4 @@
-// ASK 654 build b3 tests (W4), from t654b2. node t654b3.cjs tg/target_engine_654b3.json ../b2/tg/live_a5c3001d.json. node t654b.cjs tg/target_engine_654.json tg/live_a5c3001d.json
+// ASK 654 build b3 tests (W4), plan rev 11 (4a17e308), from t654b2. node t654b3.cjs tg/target_engine_654b3.json ../b2/tg/live_a5c3001d.json. node t654b.cjs tg/target_engine_654.json tg/live_a5c3001d.json
 const fs=require('fs');const [,,TG,LV]=process.argv;const E=JSON.parse(fs.readFileSync(TG,'utf8')),B0=JSON.parse(fs.readFileSync(LV,'utf8'));const D=__dirname+'/',W4='/mnt/project-files/ask654/w4/';
 let pass=0,fail=0;const ok=(c,m)=>{(c?pass++:fail++);console.log((c?'PASS ':'FAIL ')+m);};
 const nd=(w,n)=>w.nodes.find(k=>k.name===n);
@@ -58,7 +58,8 @@ const H='ANSWER: Matthew 1:23 -- D3 --',PW=['PRESSED WITH: Matthew 1:23 "Behold,
 const xs=t=>{const c=PLY.check(PW,t,o23);return c.items.length?c.items[0].lacks.join():'';};
 ok(xs(mk(H,'[L3] Isaiah 7:14 "Therefore the Lord himself shall give you a sign"'))==='','known good: Matthew 1:23 with Isaiah 7:14 at [L3] passes');
 ok(xs(mk(H,'[L3] Matthew 1:23 "Behold, a virgin shall be with child"'))==='X','known bad: the pressed verse at [L3] lacks X');
-ok(xs(mk(H,'[L3] Matthew 1:22-24 "Now all this was done"'))==='X','known bad: a range holding the pressed verse at [L3] lacks X');
+ok(xs(mk(H,'[L3] Matthew 1:22-24 "Now all this was done"'))==='','rev 11: a range holding R meets the mark by a verse that is neither R nor [L1] (1:24)');
+ok(xs(mk(H,'[L3] Matthew 1:23-24 "Behold, a virgin"','[L1] Matthew 1:24 "Then Joseph"'))==='X','rev 11: a range of R and an [L1] verse only lacks X');
 ok(xs(mk(H,'[L3] Matthew 1:22-23 "Now all this was done"'))==='X','known bad (W1): Matthew 1:22-23 at [L3] for Matthew 1:23 lacks X');
 ok(xs(mk(H,'[L3] Matt 1:22 "Now all this was done"'))==='X','known bad: the [L1] verse again at [L3] under a short name lacks X');
 ok(xs(mk(H,'[L3] Matthew 1:25 "And knew her not"'))==='','known limit: an adjacent verse of the chapter at [L3] passes (ASK 657 reads it)');
@@ -68,4 +69,14 @@ ok(xs(mk(H,'[L3] Isaiah 7:14 "Therefore the Lord"','[L1] Matthew 1:22-23 "Now al
 {const o={DR1:'',DR2:'',DR3:'The house of Esau shall be for stubble they shall kindle in them'};const t=['ANSWER: Obadiah 1:18 -- D2 --','[L1] Obadiah 1:18 "And the house of Jacob shall be a fire"','[L1] Obadiah 1:17 "But upon mount Zion shall be deliverance"','[L2] H7179 qash: "straw".','[L3] Obadiah 1:10 "For thy violence against thy brother Jacob"','[L4] [DR3] "The house of Esau shall be for stubble they shall kindle" is my opponent\'s inference.'].join('\n');
  const c=PLY.check(['PRESSED WITH: Obadiah 1:18 "And the house"'],t,o);ok(c.items.length===0,'known good: Obadiah (one chapter), another passage of the book at [L3] passes'+(c.items.length?' '+JSON.stringify(c.items):''));}
 ok(PLY.LACK.X==="[L3] a verse of another passage quoted with its reference",'note item X reads "[L3] a verse of another passage quoted with its reference"');
+
+// W1 Wall 12233, X cases (a) to (g) under rev 11
+ok(xs(mk(H,'[L3] Matthew 1:23 "Behold, a virgin"'))==='X','W1 (a): [L3] R alone: listed');
+ok(xs(mk(H,'[L3] Matthew 1:22-23 "Now all this was done"'))==='X','W1 (b): [L3] Matthew 1:22-23, 1:22 at [L1]: listed');
+ok(xs(mk(H,'[L3] Matthew 1:22-23 "Now all this was done"','[L1] Matthew 1:21 "And she shall bring forth a son"'))==='','W1 (c): the same range, [L1] only R and 1:21: not listed');
+ok(xs(mk(H,'[L3] Matt 1:22 "Now all this was done"'))==='X','W1 (d): the [L1] verse at [L3] under a short name: listed');
+ok(xs(mk(H,'[L3] Matthew 1:25 "And knew her not"'))==='','W1 (e): adjacent verse not at [L1]: not listed (known limit)');
+{const o={DR1:'',DR2:'',DR3:'For thy violence against thy brother Jacob shame shall cover thee'};const t=['ANSWER: Obadiah 1:10 -- D2 --','[L1] Obadiah 1:10 "For thy violence against thy brother Jacob"','[L1] Obadiah 1:11 "In the day that thou stoodest on the other side"','[L2] H2555 chamac: "violence".','[L3] Obadiah 1:15 "For the day of the LORD is near upon all the heathen"','[L4] [DR3] "For thy violence against thy brother Jacob shame shall cover" is my opponent\'s inference.'].join('\n');
+ const c=PLY.check(['PRESSED WITH: Obadiah 1:10 "For thy violence"'],t,o);ok(!c.items.some(i=>i.lacks.includes('X')),'W1 (f): Obadiah 1:15 at [L3] against [L1] 1:10 and 1:11: not listed'+(c.items.length?' '+JSON.stringify(c.items):''));}
+ok(xs(mk(H,'[L3] Isaiah 7:14 "Therefore the Lord himself shall give you a sign"'))==='','W1 (g): Matthew 1:23 with [L3] Isaiah 7:14: not listed');
 console.log('TOTAL '+pass+' PASS, '+fail+' FAIL');

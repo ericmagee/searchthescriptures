@@ -26,13 +26,14 @@ PASS part 1d: the live sentence is gone
 PASS D4 Build: nothing else changed
 PASS part 1 FORM line is rev 9 ("another passage")
 PASS b3 against b2: only Shared Library differs (Shared Library)
-PASS PRESS LAYERS rebuilds to n 13472
+PASS PRESS LAYERS rebuilds to n 13501
 PASS REFP is defined in the rebuilt PRESS LAYERS module
 PASS Obadiah 1:10-14 gives 5 keys
 PASS PLY without REFP throws by name (no silent catch)
 PASS known good: Matthew 1:23 with Isaiah 7:14 at [L3] passes
 PASS known bad: the pressed verse at [L3] lacks X
-PASS known bad: a range holding the pressed verse at [L3] lacks X
+PASS rev 11: a range holding R meets the mark by a verse that is neither R nor [L1] (1:24)
+PASS rev 11: a range of R and an [L1] verse only lacks X
 PASS known bad (W1): Matthew 1:22-23 at [L3] for Matthew 1:23 lacks X
 PASS known bad: the [L1] verse again at [L3] under a short name lacks X
 PASS known limit: an adjacent verse of the chapter at [L3] passes (ASK 657 reads it)
@@ -41,4 +42,11 @@ PASS short book name in the ANSWER head is read as Matthew 1:23
 PASS [L1] range 1:22-23 gives the verse and its neighbour (V and S)
 PASS known good: Obadiah (one chapter), another passage of the book at [L3] passes
 PASS note item X reads "[L3] a verse of another passage quoted with its reference"
-TOTAL 43 PASS, 0 FAIL
+PASS W1 (a): [L3] R alone: listed
+PASS W1 (b): [L3] Matthew 1:22-23, 1:22 at [L1]: listed
+PASS W1 (c): the same range, [L1] only R and 1:21: not listed
+PASS W1 (d): the [L1] verse at [L3] under a short name: listed
+PASS W1 (e): adjacent verse not at [L1]: not listed (known limit)
+PASS W1 (f): Obadiah 1:15 at [L3] against [L1] 1:10 and 1:11: not listed
+PASS W1 (g): Matthew 1:23 with [L3] Isaiah 7:14: not listed
+TOTAL 51 PASS, 0 FAIL

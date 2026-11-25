@@ -1,5 +1,5 @@
-// ASK 654 build b3 (W4): plan rev 10 (6ef36a99). b3 = b2 with the PLY module replaced by b3/ply_lines.js and the PRESS LAYERS MAP entry loading REFP before PRESS LIST and PLY.
-// [L3] mark: an [L3] line quotes a verse that is not the pressed verse, nor a range holding it, nor a verse quoted at [L1]; ranges and book names by REFP; note item X "[L3] a verse of another passage quoted with its reference".
+// ASK 654 build b3 (W4): plan rev 11 (4a17e308). b3 = b2 with the PLY module replaced by b3/ply_lines.js and the PRESS LAYERS MAP entry loading REFP before PRESS LIST and PLY.
+// [L3] mark (team design, rev 11): an [L3] line quotes a verse, alone or in a range, that is neither the pressed verse nor a verse quoted at [L1]; ranges and book names by REFP; note item X "[L3] a verse of another passage quoted with its reference".
 // Only Shared Library changes. node b654b3.cjs ../b2/tg/target_engine_654b2.json tg/target_engine_654b3.json
 const fs=require('fs');const [,,BE,OUT]=process.argv;const E=JSON.parse(fs.readFileSync(BE,'utf8'));const D=__dirname+'/';
 const n0=E.nodes.find(k=>k.name==='Shared Library');const T=n0.parameters.jsCode;
