@@ -1,7 +1,7 @@
-# ASK 638 PLAN, PART A (W4), rev 0: when a cure takes named premises out of a count, the counted-premises array drops the same premises
+# ASK 638 PLAN, PART A (W4), rev 1 (W1 F1, Wall 12059): when a cure takes named premises out of a count, the counted-premises array drops the same premises
 
 Source: W4 Wall 12018 (cause and fix, part A); W3's 42528 comparison AAR, item 9; the coordinator's assignment, 06:26 CST 11-25.
-Live base: engine ee4e389d. Child aad0ad9c (not touched). Nothing here touches reasoning, a model setting, a token limit, a prompt, a count, or what a judge is sent. Part B (a premise list in the CORRECTED COUNT form) changes a form judges write, so it is Eric's and is not planned here.
+Live base: engine ee4e389d. Child aad0ad9c (not touched). Nothing here touches reasoning, a model setting, a token limit, a prompt's instructions, or a count. Rev 1 correction: it DOES change two things a judge can be sent, both read from the stored array after the cure: (1) the judge enforcer prompt's line "STORED COUNTED PREMISES FOR THIS SIDE: ..." (LIB 2970), which lists the corrected array and marks a dropped premise "not counted (SPARED)"; (2) the gate's D38 BASIS check (LIB 1736, LIVE), which runs only on a side whose array length equals its count, so it can now raise a gate item to the judge on a side the cure lowered, and an uncured LIVE item counts in drv_uncured. Part B (a premise list in the CORRECTED COUNT form) changes a form judges write, so it is Eric's and is not planned here.
 
 ## 1. OBJECTIVE
 In 42528 sol's cure lowered the challenger's count from 2 to 1. The stored judgment (debate_judgments 1279) keeps counted_premises_challenger [3,4] beside the count of 1. pkgCPD records "COUNT: 2 to 1; ARRAY: [3,4] (kept); WHY: the count line names 0 counted premise(s) (none) for a count of 1".
@@ -25,7 +25,7 @@ Change, Shared Library only (library tooling; every MAP entry that holds a chang
    - no premise is in both the add list and the drop list.
    Then cpdSync finds the array length equal to the count and adds nothing, and one line is written: "[AUDIT v50: COUNTED PREMISES DERIVED (pkgCPD) -- SEAT: <seat>; SIDE: <side>; COUNT: <a> to <b>; WAS: [..]; NOW: [..]; FROM: the cure took premise(s) <list> out of the count; record-only, it removes no seat ; END]". When any condition fails, nothing is dropped and pkgCPD runs exactly as now.
 - Tagged ASK 638.
-Not changed: the count (R.fields); pkgCRG's grounds text; cpdSync; pkgB6 add; the send-back path; every cure rule's outcome; what is sent to any judge.
+Not changed: the count (R.fields); pkgCRG's grounds text; cpdSync; pkgB6 add; the send-back path; every cure rule's outcome; K-G8 (LIB 2089, run at LIB 2426 in Panel and Alternate Payloads, before the cure, on the array the judge wrote). Changed downstream (rev 1): the judge enforcer prompt's stored-premises line, and the D38 BASIS gate check (see the header). Build guard (rev 1): the drop also requires the array to have the count's length after it, and a count of 0 is left to pkgCPD.
 
 SEARCH:
 - "takes the premise out of the count" is made only at LIB 1219, 1220, 1225 and 1228, and read at LIB 1384 (rctOut, a reader of stored audit lines, unchanged).
@@ -63,7 +63,7 @@ ask638/w4/plan638a.md (this file). The build goes in ask638/w4/b1/.
 ## 8. STEPS (each names its card)
 1. W1 grades this plan (no card).
 2. W4 builds and runs C1 to C5 offline (no card). W1 grades the build.
-3. Card to the operator, from W4: "Write ASK 638 A (a cure's removed premise leaves the counted list too)?"
+3. Card to the operator, from W4: "Write ASK 638 A (a cure's removed premise leaves the counted list too)?" The card says that a judge can now be sent a D38 BASIS gate item and a changed STORED COUNTED PREMISES line.
 4. W4 writes; fetch back; audit row; Wall post; W1 readback.
 5. W3: manual entry and AAR rows.
 6. Two clean live runs.
