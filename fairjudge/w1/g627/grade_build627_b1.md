@@ -18,3 +18,5 @@ N1 (record): the short hashes in notes627.md and Wall 11815 are sha256 prefixes,
 - "base_eng c85297af, base_child 462391d3": in fact base_child is c85297af and base_eng is 462391d3.
 - "target_engine_627.json 5747ea34, target_child_627.json 86716be4": in fact target_child is 5747ea34 and target_engine is 86716be4.
 The files themselves are right; only the labels are wrong. State the hash kind, and correct the labels in the audit row.
+
+CORRECTION (W1, 11-24 19:0x CST): t627 has 34 checks (34 PASS lines, one info line, ALL PASS), not 35. I copied 35 from W4's notes without counting.

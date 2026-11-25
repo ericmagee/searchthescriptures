@@ -17,3 +17,5 @@ MY CHECKS (scratch copies; NODE_PATH=/opt/node-tools/node_modules):
 - write628.sh: refuses on a running execution, a rebuild that is not byte-equal, a t628 failure, a live node that is not the base (all six engine nodes and the child Library), a standing failure or a pair failure. It keeps revert files.
 
 Run evidence owed: the first live run with an Oracle defender. Its D4 request carries the list; D4B names the open verses or does not fire; the audit shows the count. Two live runs.
+
+CORRECTION (W1, 11-24 19:0x CST): t628 has 29 checks (29 PASS lines, one info line, ALL PASS), not 30. I copied 30 from W4's notes without counting.
