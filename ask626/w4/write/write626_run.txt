@@ -1,0 +1,7 @@
+engine base 2df7f6fa-d552-4764-aa31-05789a149925 nodes changed 14 ['D3 Build', 'C3 Build', 'C3 Extract', 'Build Independent Verdict', 'Build Save Body', 'Panel Build', 'Format Markdown', 'D4 Build', 'C4 Build', 'C2B Extract', 'D3B Extract', 'C3B Extract', 'Shared Library', 'Assume Check Build'] ; child unchanged aad0ad9c-ecc7-49a1-9079-57a065d9ec74
+STANDING: 31 PASS, 0 FAIL (18.7 s)
+PUT engine http 200
+eng dc258730-7f3a-4a5b-b53d-f38cd0355863 active True nodes 423 params equal put True conn equal True changed 14 ['D3 Build', 'C3 Build', 'C3 Extract', 'Build Independent Verdict', 'Build Save Body', 'Panel Build', 'Format Markdown', 'D4 Build', 'C4 Build', 'C2B Extract', 'D3B Extract', 'C3B Extract', 'Shared Library', 'Assume Check Build']
+child aad0ad9c-ecc7-49a1-9079-57a065d9ec74 unchanged True
+STANDING: 31 PASS, 0 FAIL (6.7 s)
+pair: engine lib 3cd2d095d2eb30eb map 7d1a2893c4d1df8a | child has no Shared Library node; its Library Check run on the engine text in the call | Library Check PASSES
