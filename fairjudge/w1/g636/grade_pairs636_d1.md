@@ -5,3 +5,5 @@ Objective (operator 05:53 CST 11-25): read the past AAR, report improvements, un
 N1: the status marks (FIXED, LIVE AND UNEXERCISED, OPEN, DENIED, CLOSED) have no mark for a question or for a fix approved but not written. W3's own first report under the rule needed ANSWERED / NOT ANSWERED and BUILT NOT WRITTEN. Add marks for these, e.g. "ANSWERED, NOT ANSWERED, NOT WRITTEN". Otherwise the first report breaks the rule.
 STANDARD (ASK 599): not applicable (manual text).
 RULES READ: Wall manual v19 7.4.
+
+## Draft 2 (5445e2c1): REPRODUCED on v19 (max version 19): 12,000 characters, md5 d0abaf50, matching W3. Only pair 3 changed; it adds NOT WRITTEN, ANSWERED and NOT ANSWERED. N1 met. PASS.

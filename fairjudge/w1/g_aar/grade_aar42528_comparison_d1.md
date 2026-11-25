@@ -9,3 +9,5 @@ NOT CHECKED: the send-back counts (53/58, 54/54), the close counts (20/31, 17/17
 OBJECTIVE MET: yes for the operator's 05:53 items, namely past defects, improvements, unresolved, new and status of all. The AAR requirement update is in ASK 636.
 STANDARD (ASK 599): not applicable (no code).
 RULES READ: Wall manual v19 7.4; op doc s30.
+
+## Draft 3 (4c904929): CONFIRMED. N1-N4 applied (diff against d1 read in full): 632 state and engine 3b72583c; 42373 negative entry; RUN points to the first report, Wall 11953, for the other 7.4 parts; marks follow 636 d2. NOT CHECKED: that Wall 11953 is the first 42528 report.
