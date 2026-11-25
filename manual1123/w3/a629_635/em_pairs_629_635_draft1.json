@@ -1,0 +1,26 @@
+{
+ "10.0": [
+  {
+   "old": "The reserve is the next seat unless it is JFL-moved or time-removed, in which case there is no reserve.",
+   "new": "The reserve is the first seat after the panel that is neither JFL-moved nor time-removed; if none is, there is no reserve (ASK 629; Init Seats). A reserve that substituted is not offered again as an alternate, because G3 refuses a model already on the panel; a reserve that was not used is still offered. Not shown by a run."
+  },
+  {
+   "old": "Panel Check classifies each slot (error, timeout, refused, no usable judgment).",
+   "new": "Panel Check classifies each slot (error, timeout, refused, no usable judgment). A reply whose message content is not text is no usable judgment, and its detail names the cause: `returned no text: finish_reason <f>; output tokens <n> (reasoning <r>); prompt tokens <p>` (ASK 629; a field the provider did not give prints \"not given\"); with no reserve free the run fails closed with `FAIL-CLOSED: seat \"<s>\" returned no text: ... NO ROW IS WRITTEN.` and \"[no reserve seat is free]\"."
+  },
+  {
+   "old": "api_model google/gemini-4-hydrogen, max_tokens 64000",
+   "new": "api_model google/gemini-4-hydrogen, max_tokens 131,072 (ASK 635; the row is the value's home)"
+  },
+  {
+   "old": "Hydrogen's fitness at the default on a full judge body is not shown.",
+   "new": "Hydrogen's fitness at the default on a full judge body is not shown. As a panel judge at 65,536 it returned no text (finish_reason length; 65,533 of its 65,536 output tokens were reasoning). Whether it returns a verdict at 131,072 is not shown by a run."
+  }
+ ],
+ "16.0": [
+  {
+   "old": "2. A panel seat fails closed with \"an envelope this parser does not recognise\" -> often `finish_reason: length` with empty content: the reasoning used the whole limit -> read the seat's `failed_reply` in `debate_enforcer_log`; the parser's message misnames the cause.",
+   "new": "2. A panel seat fails with \"returned no text: finish_reason length; output tokens <n> (reasoning <r>)\" -> the reasoning used the whole limit -> read the seat's `failed_reply` in `debate_enforcer_log`; the limit is the seat's `model_config.max_tokens`, and no reasoning setting is changed without the operator's instruction (§4). \"An envelope this parser does not recognise\" names any other reply form the parser cannot read."
+  }
+ ]
+}
