@@ -1,6 +1,6 @@
 #!/bin/bash
 # ASK 634 write (base engine e11a57aa (on the 646 fetch-back) / child aad0ad9c): ENGINE ONLY, Shared Library (one LIB line, 13 MAP lengths; W4 build b1 rebased on 637 2136d5ad, W1 grade PASS Wall 12009).
-# Operator press: PRESS_LINE. The child is not written; the script checks it is unchanged before and after.
+# Operator press: Eric pressed W4 card "Write it" 08:35 CST 11-25 (cmsg_017ZQamDMHrS6fqMHnQDVo584otzyTAZs2oZpEscmXAHnW); W1 recheck of b4 PASS Wall 12078. The child is not written; the script checks it is unchanged before and after.
 # Refuses while any engine or child execution runs, when live is not the base, or when the rebuild, t634, standing set, pair check or one-copy check fail.
 set -u
 : "${N8N_API_KEY:?N8N_API_KEY not set; NOTHING WRITTEN}"
