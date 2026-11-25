@@ -1,0 +1,26 @@
+PASS same 423 node names
+PASS only Build Save Body changed: Build Save Body
+PASS connections equal
+PASS loop found in base and target
+PASS N1: layers.first is present in the stored bar of all seven 42517 Extracts
+  base:  [AUDIT v47: BARRED MOVE RE-CALL (pkgBAR) -- SEAT: openrouter/meta/muse-spark-1.3 (CHALLENGER); ROUND: [DR1]; SENT BACK: 0 sentence(s); KEPT: second round (the replacement round (20423 -> 21162 chars; barred sentences 0 -> 0)); VOID: 0.]
+         [AUDIT v47: BARRED MOVE RE-CALL (pkgBAR) -- SEAT: openrouter/meta/muse-spark-1.3 (CHALLENGER); ROUND: [DR2]; SENT BACK: 1 sentence(s); KEPT: second round (the replacement round (15666 -> 15670 chars; barred sentences 1 -> 0)); VOID: 0.]
+  target:[AUDIT v47: ROUND RE-CALL (pkgBAR, pkgLAYB) -- SEAT: openrouter/meta/muse-spark-1.3 (CHALLENGER); ROUND: [DR1]; SENT BACK: 0 barred sentence(s); 4 layer point(s); KEPT: second round (the replacement round (20423 -> 21162 chars; barred sentences 0 -> 0)); VOID: 0.]
+         [AUDIT v47: ROUND RE-CALL (pkgBAR, pkgLAYB) -- SEAT: openrouter/meta/muse-spark-1.3 (CHALLENGER); ROUND: [DR2]; SENT BACK: 1 barred sentence(s); 1 layer point(s); KEPT: second round (the replacement round (15666 -> 15670 chars; barred sentences 1 -> 0)); VOID: 0.]
+PASS C1: two re-call lines (DR1, DR2), as before
+PASS C1: DR1 reads 0 barred sentence(s); 4 layer point(s)
+PASS C1: DR2 reads 1 barred sentence(s); 1 layer point(s)
+PASS C1: no line reads "SENT BACK: <n> sentence(s)"
+PASS C1: every line equal outside the label and SENT BACK (VOID lines included)
+PASS C2 barred only: 2 barred sentence(s); 0 layer point(s)
+PASS C2 layers only: 0 barred sentence(s); 5 layer point(s)
+PASS C2 both: 3 barred sentence(s); 2 layer point(s)
+PASS C2 CR4 pressed: 0 barred sentence(s); 0 layer point(s); 3 pressed verse(s) with no ANSWER line
+PASS C2 CR4, D4B Build not run: 1 barred sentence(s); 6 layer point(s); 0 pressed verse(s) with no ANSWER line
+PASS C2 no layers field: 1 barred sentence(s); 0 layer point(s)
+PASS C2 layers.first null: 0 barred sentence(s); 0 layer point(s)
+PASS C2 not resent: no line, as before
+PASS one line changed (line 265)
+PASS C4: tagged ASK 633; one new catch, the isExecuted guard form
+PASS target Build Save Body parses
+RESULT: ALL PASS (21)
