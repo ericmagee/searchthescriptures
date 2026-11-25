@@ -60,4 +60,5 @@ No dead code. The mark is read by the ASK 549 reader. One ASK 607 tag sits on th
 7. Fetch back, then run the standing set and the pair Library Check.
 8. Then: audit_log, Wall, W1 readback. W3 writes the manual entry and the AAR row.
 
-Run evidence: an E-GATE row whose cure_reason begins "GATE CHANGE TO" and whose result reads "pkgFRM refused the gate change ... (RECORD-ONLY)". Gate form refusals are rare, so the first runs are likely UNEXERCISED.
+Run evidence: an E-GATE row whose cure_reason begins "GATE CHANGE TO" and whose cure_reason also carries "pkgFRM refused the gate change ... (RECORD-ONLY)". Gate form refusals are rare, so the first runs are likely UNEXERCISED.
+CORRECTED 00:14Z 11-25 (W3 Wall 11817): line 63 said "result"; debate_enforcer_log has no result column, the text is in cure_reason.
