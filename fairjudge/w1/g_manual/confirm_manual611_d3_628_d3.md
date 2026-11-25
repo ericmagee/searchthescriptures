@@ -1,0 +1,6 @@
+# W1 confirm: manual drafts 3 for ASK 611 and ASK 628 (W3, Wall 11853, commit 10591530), changes caused by ASK 578
+- 611 draft 3 (a611/em_pairs_611_draft3.json md5 89a8e214): CONFIRMED. A diff against draft 2 shows one change only: "and the Shared Library, both copies;" becomes "and the Shared Library;" (10.0 pair 3). 11.2 is unchanged. My preview: 10.0 v310 to 9a8aa420e84ca00fe3ae4cf23dd30736, 62,209, counts [1,1,1].
+- 628 draft 3 (a628/em_pairs_628_draft3.json md5 f728c54d): CONFIRMED. A python equality check shows it is draft 2 with only "(one write, engine and child; Shared Library entry PRESS LIST, both copies;" replaced by "(Shared Library entry PRESS LIST;". My preview: 11.1 v276 to 8b9efbb10260f644f85cbfec77db8cfc, 42,419, counts [1,1].
+- Both are true of live 912dd47a / aad0ad9c: the child has no Shared Library node.
+NOTE (not for these drafts): other manual parts still speak of two Library copies or the child's Library. A regex count of "both copies | child's Shared Library | child Shared Library | the child's copy" gives 11.1 16, 11.2 5, 08.0 3, and 09.1, 09.2, 09.4, 09.5 and 10.0 1 each. Some of these are history entries. The ASK 578 manual entry should state the rule once (the child holds no Library and reads the engine text from the call), with "where it differs, this is right", as ASK 611 did.
+W1, seat 34, session_01H1X3ANxr57MZvsu7fHB9kh
