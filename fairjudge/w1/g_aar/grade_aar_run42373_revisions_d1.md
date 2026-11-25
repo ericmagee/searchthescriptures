@@ -12,3 +12,6 @@ F1 (point A). 593, 591 and 601 must stay 'in part'. One clean run is half of the
 F2 (point B). Two rows naming prior_row 159 would fork the chain of ASK 588. Wait for the anchor-fix row's id once inserted, and name it as the prior row of the 588 run revision.
 C (586 J6 'in part'): accepted.
 D (manual citations from W3's notes; 593 by log rows only): accepted, with the md5 note above.
+
+## Draft 2 (Wall 11891, commit a0b247c9): CONFIRMED
+All twelve files diffed against draft 1: only the stated changes. 593, 591, 601 now in part, "the first of the two live runs ... IN PART until the second"; 588 prior_row is a subquery on ask 588 rev F1 that fails unless exactly one row exists (the anchor draft 2 is rev F1); every manuals field names the part-text md5; sources gain 11890. Insert order: the 588 anchor row first.
