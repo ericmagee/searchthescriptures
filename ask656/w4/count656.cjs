@@ -7,7 +7,7 @@ const first=s=>s.replace(/\s*[-–]\s*\d+$/,'');const exp=s=>{const k=[...new Se
 const nm=s=>{const k=R.keys(first(s),{cap:30});return k.length?k[0].key:first(s);};
 const G={};for(const r of rows){(G[r.id+'/'+r.o]=G[r.id+'/'+r.o]||{P:[],A:[]})[r.k]=r.refs.split('|');}
 let T0={runs:new Set(),sides:0,rangesP:0,headRange:0,headFirst:0,headEach:0,headNone:0,found:0,opensOld:0,opensNew:0,created:0,removed:0};const ex=[];
-for(const [key,g] of Object.entries(G)){const rp=g.P.filter(s=>/[-–]\s*\d+$/.test(s));if(!rp.length)continue;T0.runs.add(key.split('/')[0]);T0.sides++;T0.rangesP+=rp.length;
+const SPLIT=process.argv[2];for(const [key,g] of Object.entries(G)){if(SPLIT==='with'&&!(g.A&&g.A.length))continue;if(SPLIT==='without'&&g.A&&g.A.length)continue;const rp=g.P.filter(s=>/[-–]\s*\d+$/.test(s));if(!rp.length)continue;T0.runs.add(key.split('/')[0]);T0.sides++;T0.rangesP+=rp.length;
  const A=g.A||[];const Aold=new Set(A.map(first)),Anew=new Set(A.flatMap(exp));
  for(const s of rp){const ks=exp(s);if(A.includes(s))T0.headRange++;else if(Aold.has(first(s))&&!ks.slice(1).some(k=>Aold.has(k)))T0.headFirst++;else if(ks.every(k=>Aold.has(k)))T0.headEach++;else T0.headNone++;}
  const Praw=[...new Set(g.P.map(first))],Araw=new Set(A.map(first));const oRaw=Praw.filter(k=>!Araw.has(k));const Pnm=[...new Set(g.P.map(nm))],Anm=new Set(A.map(nm));const oNm=Pnm.filter(k=>!Anm.has(k));T0.opensRaw=(T0.opensRaw||0)+oRaw.length;T0.opensNamesOnly=(T0.opensNamesOnly||0)+oNm.length;
