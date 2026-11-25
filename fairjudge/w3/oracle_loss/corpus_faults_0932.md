@@ -15,10 +15,11 @@ WHAT I DO NOT FAULT: the seed rows, the rows that name Joseph father, and the ma
 2. NO SERVED SIGHT ANSWERS MATTHEW 1:23 IN PLAIN WORDS.
 - The record's answer is in sight_number 1763: "the verse gives a sign and does not narrate the absence of a man; the seed rows stand". Sight 1763 is not in the served set. Sight 1822 points to "Sight 24 (almah) and Sight 1578"; sight 24 is not in the served set.
 - What the served sights give at this verse is word counts (1578) and the paragraph of item 1 (32).
+- Added from W1's check (Wall 12155): DG-57 (drift_guards rule_num 57) does answer Matthew 1:23, but it was not served to the Oracle in run 42528; sight 1763 credits its sign line to DG-8, which holds no such line.
 - Matthew 1:23 is the verse that broke the keystone at sol, sol62 and chatgpt in run 42528.
 
 3. "OF THE HOLY GHOST" HAS TWO ANSWERS IN THE CORPUS, AND THE ORACLE WAS LED TO THE ONE THAT LOST.
-- Sights 10, 32, 519: covenant origin, as "born of God" (1 John 5:1), "not the begetter".
+- Sights 10, 32, 519: covenant origin, as "born of God" (1 John 5:1). Sight 32: "not the begetter"; sight 10: "never biological paternity"; sight 519: "not the biological begetter" (attribution corrected after W1's check, Wall 12155).
 - Sight 1822 (2) and DG-8: the child is the Anointed, with Luke 3:22, Acts 10:37-38 and Luke 4:18. Acts 10:37 (pulled): "after the baptism which John preached". These are Jordan and ministry rows.
 - Sight 1822 itself sets the John 3 rows aside as "not womb rows". By the same measure the anointing rows are not womb rows, except Luke 1:15.
 - All three judges of 42528 broke the Oracle's link here, on exactly that ground.
