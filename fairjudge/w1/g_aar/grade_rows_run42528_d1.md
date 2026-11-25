@@ -34,3 +34,6 @@ The paragraph and run_evidence.case keep 601 'in part' partly because "the manua
 ## Notes (no change required)
 N1. 579 counts 42528 as a first clean run while four of the nine nodes (C4G, D2B, C4B, C3B) remain unexercised; the paragraph says so. Acceptable as written.
 N2. 611's "57 panel send_back rows at 23:20:59" is a time-scoped subset; the run holds 110 panel-seat send_back rows in all (gate and E-APPLY rows included). The paragraph's scope is stated; acceptable.
+
+## Regrade: 601 draft 2 (W3, commit 676cb57d, Wall 11944), 01:1x CST 2026-11-25
+File md5 612fc80065c9d77467deb42488e520d8 MATCH. Column md5 against draft 1: only objective_met_reason and run_evidence move; the text diff in each is the single deletion " and the manual entry's Limits line is owed its one-pair revision". objective_met 'in part', status, manuals, sources, objective_source, prior_row 195 unchanged. F1 cleared. 601 d2 PASS. All 14 rows now PASS.
