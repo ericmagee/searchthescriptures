@@ -1,0 +1,9 @@
+eng nodes changed 1 removed []
+child nodes changed 15 removed ['Shared Library']
+STANDING: 31 PASS, 0 FAIL (7.1 s)
+PUT eng http 200
+PUT child http 200
+eng 912dd47a-da89-4cba-9a9b-fb5b6d8f1efa active True nodes 423 params equal put True conn equal True changed ['Alternate Pass Call']
+child aad0ad9c-ecc7-49a1-9079-57a065d9ec74 active True nodes 155 params equal put True conn equal True changed ['R2 Alternate Build', 'R2 Alternate Merge Seat', 'R2 Alt Judge Enforcer Build', 'R2 Alt Judge Enforcer Record', 'R2 Alt Send Back Build', 'R2 Alt Send Back Record', 'R2 Alt Gate Build', 'R2 Alt Gate Record', 'R2 Alt Late Gate Build', 'R2 Alt Judge Enforcer Retry Build', 'R2 Alternate Payloads', 'R2 Alternate Cure Build', 'R2 Alternate Cure Normalize', 'R2 Alternate Merge', 'Shared Library', 'Library Check (ASK 422a)']
+STANDING: 31 PASS, 0 FAIL (7.0 s)
+pair: engine lib 027c8c4a71282403 map 771e35cfe3e3b51b | child has no Shared Library node; its Library Check run on the engine text in the call | Library Check PASSES
