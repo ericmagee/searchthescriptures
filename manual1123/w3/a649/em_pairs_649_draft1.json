@@ -1,0 +1,12 @@
+{
+ "11.0": [
+  {
+   "old": "lists the 11 debaters (claude, chatgpt, gemini, grok, mimo, haiku, opus, glm, qwen4max, spark, sol62)",
+   "new": "lists the 12 debaters (claude, chatgpt, gemini, grok, mimo, opus, glm, qwen4max, spark, sol62, hydrogen, neon)"
+  },
+  {
+   "old": "the two drop-downs list the 11 debaters",
+   "new": "the two drop-downs list the debaters `dash_debaters()` gives"
+  }
+ ]
+}
