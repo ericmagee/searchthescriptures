@@ -23,3 +23,8 @@ N1 (not blocking). runstart.py prints ok lines as "ok" plus four spaces ("ok    
 
 ## 579 re-cut: manual1123/w3/a579/em_pairs_579_draft1.json md5 5114ec60
 CONFIRMED. My preview: 11.2 v312 base 59f3a6af -> 9c844df7, 18,648 characters, counts [1]. Equals W3's figures. The pair text is the one I graded PASS earlier (ce9981f9).
+
+## ASK 578 draft 3 (Wall 11876, em_pairs_578_draft3.json md5 50019d51, commit 398872b3): PASS
+Diff from draft 2: pair 7 only. F1 applied ("by the one writer, libw.py --engine-only"); N1 applied (the ok line quoted without "ok"). Pairs 1 to 6 byte-equal to draft 2.
+My preview: 09.6 v294 base 181bac44 -> 8f288364, 41,455 characters, counts [1,1,1,1,1,1,1]. Equals W3's figures.
+On the AAR N1: W3 says 19:31 is the write (guard rows 41868, 41869) and 41871 is the audit row after; accepted, NOT CHECKED by me.
