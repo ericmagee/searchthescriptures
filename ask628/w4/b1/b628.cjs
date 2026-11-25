@@ -1,0 +1,33 @@
+// ASK 628 build: PRESS LIST Library entry (engine and child); Build Save Body audit uses it; D4 Build gives the Oracle defender the list; D4B Build re-calls on unanswered verses; Panel Build and Build Independent Verdict show the judges any still unanswered.
+// node b628.cjs base_eng.json base_child.json outdir
+const fs=require('fs');const [,,BE,BC,OUT]=process.argv;const E=JSON.parse(fs.readFileSync(BE,'utf8')),C=JSON.parse(fs.readFileSync(BC,'utf8'));
+const node=(d,n)=>{const x=d.nodes.find(k=>k.name===n);if(!x)throw new Error('no node '+n);return x;};
+const once=(s,a,b,w)=>{const i=s.indexOf(a);if(i<0||s.indexOf(a,i+1)>=0)throw new Error('anchor not unique: '+w);return s.slice(0,i)+b+s.slice(i+a.length);};
+const split=T=>({head:T.slice(0,T.indexOf('\n/*LIB*/')),L:JSON.parse(T.slice(T.indexOf('\n/*LIB*/')+8,T.lastIndexOf('\n/*MAP*/'))),M:JSON.parse(T.slice(T.lastIndexOf('\n/*MAP*/')+8,T.lastIndexOf('\n/*END*/')))});
+const join=p=>p.head+'\n/*LIB*/'+JSON.stringify(p.L)+'\n/*MAP*/'+JSON.stringify(p.M)+'\n/*END*/\n';
+const SRC=fs.readFileSync(__dirname+'/presslib628.js','utf8').replace(/\n$/,'');const KEY='PRESS LIST';
+for(const W of [E,C]){const n=node(W,'Shared Library');const p=split(n.parameters.jsCode);if(KEY in p.M)throw new Error('PRESS LIST already in MAP');const a=p.L.length;const lines=SRC.split('\n');p.L=p.L.concat(lines);p.M[KEY]={n:SRC.length,p:[[a,a+lines.length-1]]};n.parameters.jsCode=join(p);}
+const LOAD="(T=>{const L=JSON.parse(T.slice(T.indexOf('\\n/*LIB*/')+8,T.lastIndexOf('\\n/*MAP*/')));const M=JSON.parse(T.slice(T.lastIndexOf('\\n/*MAP*/')+8,T.lastIndexOf('\\n/*END*/')))['PRESS LIST'];if(!M)throw new Error('ASK 628: the Shared Library holds no PRESS LIST entry');const S=M.p.map(e=>typeof e==='number'?L[e]:typeof e[0]==='string'?e[0]:L.slice(e[0],e[1]+1).join('\\n')).join('\\n');if(S.length!==M.n)throw new Error('ASK 628: rebuilt PRESS LIST is '+S.length+', expected '+M.n);return new Function(S+'\\nreturn PRESSL;')();})($('Shared Library').params.jsCode)";
+const ORA="((($('Init Seats').first().json.defender||{}).profile)==='oracle')";
+// Build Save Body: the audit reads through PRESSL (same output)
+{const n=node(E,'Build Save Body');const s=n.parameters.jsCode;const a=s.indexOf("try{if(d.cr4){const __RF=");const b=s.indexOf("}}catch(e){}",a)+12;if(a<0||b<12)throw new Error('BSB audit not found');
+ const NEW="try{if(d.cr4){const PRESSL="+LOAD+";const __R=[d.gr1,d.gr2,d.dr3,d.dr4];const __PR=PRESSL.pressed(__R);const __NO=PRESSL.open(__R,d.cr4);FF.push('[AUDIT: CLOSE PRESS LIST (record-only) -- PRESSED: '+__PR.length+'; NO ANSWER LINE IN THE CLOSE: '+(__NO.length?__NO.join(', '):'none')+']');}}catch(e){} /* ASK 628: reader in the Shared Library */";
+ if(!/CLOSE PRESS LIST/.test(s.slice(a,b)))throw new Error('BSB block mismatch');n.parameters.jsCode=s.slice(0,a)+NEW+s.slice(b);}
+// D4 Build: the Oracle defender's close prompt carries the list
+{const n=node(E,'D4 Build');n.parameters.jsCode=once(n.parameters.jsCode,"const __ZH=(side,prev,seat,ms)=>",
+ "{const __PL=(()=>{try{if(!"+ORA+")return [];return "+LOAD+".pressed([RW.gr1,RW.gr2,RW.dr3]);}catch(e){return [];}})(); /* ASK 628: the verses pressed against the Oracle defender, given to its close */\n if(__PL.length){const __T='THE VERSES PRESSED AGAINST YOU -- computed by the system, not by a model: every verse the challenger carried under PRESSED WITH in its rounds 1 to 3 ('+__PL.length+'): '+__PL.join('; ')+'. Write one ANSWER line for each of them in this close, in the ANSWER form above.';for(let k=msgs.length-1;k>=0;k--){if(msgs[k]&&msgs[k].role==='user'&&typeof msgs[k].content==='string'){msgs[k]={...msgs[k],content:msgs[k].content+'\\n\\n'+__T};break;}}}}\nconst __ZH=(side,prev,seat,ms)=>",'D4 __ZH');}
+// D4B Build: unanswered pressed verses are a third reason for the one re-call
+{const n=node(E,'D4B Build');let s=n.parameters.jsCode;
+ s=once(s,"if(!c.applies)return pass('no round text',c);if(c.pass&&!__ln)return pass(",
+ "let __un=[];try{if("+ORA+"){const o=__RD(X.raw);__un="+LOAD+".open([o.DR1,o.DR2,o.DR3],X.raw);}}catch(e){__un=[];} /* ASK 628: pressed verses with no ANSWER line in the Oracle close */\nif(!c.applies)return pass('no round text',c);if(c.pass&&!__ln&&!__un.length)return pass(",'D4B gate');
+ s=once(s,"const note=[__ln?LAY.note(__lc,!c.pass):'',c.pass?'':BAR.note(c)].filter(Boolean).join('\\n\\n');",
+ "const note=[__ln?LAY.note(__lc,!c.pass):'',c.pass?'':BAR.note(c),__un.length?'PRESSED VERSES WITH NO ANSWER LINE -- computed by the system, not by a model: the challenger carried these verses under PRESSED WITH in its rounds 1 to 3, and your close has no ANSWER line for them ('+__un.length+'): '+__un.join('; ')+'.\\nWrite your whole close again, the same case, with one ANSWER line for each of them in the ANSWER form your instructions give. Return the whole round; this is the only request of its kind.':''].filter(Boolean).join('\\n\\n');",'D4B note');
+ s=once(s,"why:c.hits.length+' barred sentence(s); '+__ln+' layer point(s)',","why:c.hits.length+' barred sentence(s); '+__ln+' layer point(s); '+__un.length+' pressed verse(s) with no ANSWER line',press_open:__un,",'D4B why');
+ n.parameters.jsCode=s;}
+// Judges: Panel Build and Build Independent Verdict carry the list still open after the close
+const JL=(F)=>"const __PCL=(()=>{try{if(!"+ORA+")return '';const o="+LOAD+".open(["+F+".gr1,"+F+".gr2,"+F+".dr3],"+F+".cr4);return o.length?String.fromCharCode(10,10)+'PRESSED VERSES WITH NO ANSWER LINE IN THE DEFENDER\\'S CLOSE [CR4] -- computed by the system from the transcript text, not by a model: the challenger carried these verses under PRESSED WITH in its rounds 1 to 3 ([L1] and [L3] lines alike), and the close has no ANSWER line for them ('+o.length+'): '+o.join('; ')+'.':'';}catch(e){return '';}})(); /* ASK 628 */\n";
+{const n=node(E,'Panel Build');let s=n.parameters.jsCode;const A="const LEDGER=PWL.judgeBlock({cr1:F.cr1,gr1:F.gr1,cr2:F.cr2,gr2:F.gr2,cr3:F.cr3,dr3:F.dr3,cr4:F.cr4||null})+(t=>t?String.fromCharCode(10,10)+t:'')((()=>{try{return PWL.cList({dr3:F.dr3});}catch(e){return '';}})());";
+ s=once(s,A,JL('F')+A.slice(0,-1)+"+__PCL;",'Panel LEDGER');n.parameters.jsCode=s;}
+{const n=node(E,'Build Independent Verdict');let s=n.parameters.jsCode;const A="const LEDGER=PWL.judgeBlock({cr1:d.cr1,gr1:d.gr1,cr2:d.cr2,gr2:d.gr2,cr3:d.cr3,dr3:d.dr3,cr4:d.cr4||null});";
+ s=once(s,A,JL('d')+A.slice(0,-1)+"+__PCL;",'BIV LEDGER');n.parameters.jsCode=s;}
+fs.writeFileSync(OUT+'/target_engine_628.json',JSON.stringify(E));fs.writeFileSync(OUT+'/target_child_628.json',JSON.stringify(C));console.log('built');
