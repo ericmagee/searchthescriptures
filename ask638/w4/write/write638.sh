@@ -1,6 +1,6 @@
 #!/bin/bash
 # ASK 638 write (base engine 393bca2e (rebased on the 641 fetch-back) / child aad0ad9c): ENGINE ONLY, Shared Library (counted-premises drop, W4 build b1 a6073640, W1 grade PASS Wall 12062).
-# Operator press: PRESS_LINE
+# Operator press: Eric pressed W4 card "Write it" 08:23 CST 11-25 (cmsg_017ZQamDMHrS6fqMHnQDVo585hQ6W9wEeFfsVzkqb2uVoN); run after W1's recheck of the b2 rebase
 # Refuses while any engine or child execution runs, when live is not the base, or when the rebuild, t638, standing set, pair check or one-copy check fail.
 set -u
 : "${N8N_API_KEY:?N8N_API_KEY not set; NOTHING WRITTEN}"

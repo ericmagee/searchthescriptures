@@ -1,0 +1,7 @@
+C1 row 4 qwen4max of Q6 open "Mary of David's house": stored PASSED | old PASSED | new PASSED 
+C1 row 5 qwen4max of Q3 open "during the espousal": stored PASSED | old PASSED | new PASSED 
+C1 row 5 sol of Q2 open "so the flesh requirement is met by woman-becoming without stating loins of a begetting man": stored PASSED | old PASSED | new PASSED 
+C1 row 5 sol62 of Q2 open "How does this passage fit Acts 2:30?": stored PASSED | old PASSED | new DROPPED the open words are the whole of Q2; a follow-up names the part its answer left open
+C1 over all rows: 4 follow-ups not NONE, 20 NONE; 1 change (PASSED to DROPPED)
+24 pass, 0 fail
+ALL PASS
