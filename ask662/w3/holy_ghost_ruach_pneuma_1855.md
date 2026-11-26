@@ -1,4 +1,4 @@
-W3 (session_01H1X3ANsGiMnhnbkfphocmo). ASK 662. THE HOLY GHOST / SPIRIT (RUACH H7307, PNEUMA G4151): WHAT THE RECORD HOLDS. First reading, 18:49 to 18:56 CST 2026-11-25. Findings only; nothing proposed for writing, nothing written. Not yet checked by W1.
+W3 (session_01H1X3ANsGiMnhnbkfphocmo). ASK 662. THE HOLY GHOST / SPIRIT (RUACH H7307, PNEUMA G4151): WHAT THE RECORD HOLDS. First reading, 18:49 to 18:54 CST 2026-11-25. Findings only; nothing proposed for writing, nothing written. Checked by W1 (Wall 12283); its three corrections N1, N2, N3 are entered below.
 
 THE OPERATOR'S MESSAGE, 18:49 CST: "do you know "Holy Ghost" is a mistranslation. the word is Ruach in Greek pneuma ...I think we may need to alway write (Ruach) next to Holy Ghost. I think we should do a deep drive here ... do we have a sight on the Holy Spirit/Ghost?"
 
@@ -19,19 +19,20 @@ B. THE WORDS AS THE RECORD GIVES THEM (lexicon_words, column anchor_gloss).
 C. HOW THE KJV RENDERS THE TWO WORDS (kjv_word_map, counted).
 - G4151, 381 rows: spirit 254, ghost 90, spirits 31, and one each of wind, life, spiritually, spiritual, itself, also.
 - H7307, 377 rows: spirit 227, wind 81, breath 28, winds 11, spirits 5, side 5, mind 5, blast 4, vain 2, and one each of courage, anger, air, quarters, tempest, windy, cool, spiritual, sides.
-- "Ghost" is never the rendering of ruach. All 90 rows of "ghost" for pneuma are New Testament.
+- Added from W1's check (Wall 12283): rows with a compound tag add G4151 three times (Acts 13:9 "Ghost", 1 Corinthians 12:9, 12:10) and H7307 once (Ezekiel 1:4 "whirlwind"). With them: G4151 384 rows, ghost 91; H7307 378 rows. Acts 13:9 is the verse that makes 89 "Holy Ghost" verses against 90 exact-tag rows less John 19:30.
+- "Ghost" is never the rendering of ruach. All rows of "ghost" for pneuma are New Testament.
 
 D. "HOLY GHOST" AND "HOLY SPIRIT" ARE ONE GREEK PHRASE.
 - 89 verses read "Holy Ghost" (kjv_verses): Acts 41, Luke 11, Matthew 5, Romans 5, Hebrews 5, John 4, Mark 4, 1 Corinthians 3, 2 Corinthians 2, 1 Thessalonians 2, and one each in 2 Timothy, Titus, 1 Peter, 2 Peter, 1 John, Jude, 2 Esdras.
 - In 88 of the 90 "ghost" rows the word before it is G40. The two others: Matthew 12:31 ("Holy Ghost", the word before not tagged G40) and John 19:30 "gave up the ghost".
 - The same pair, G40 then G4151, is rendered "holy Spirit" at Luke 11:13, Ephesians 1:13, Ephesians 4:30 and 1 Thessalonians 4:8.
-- The Old Testament never reads "Holy Ghost". It reads "holy spirit" three times, each ruach with qodesh: Psalms 51:11, Isaiah 63:10, Isaiah 63:11.
+- The canonical Old Testament never reads "Holy Ghost". It reads "holy spirit" three times, each ruach with qodesh: Psalms 51:11, Isaiah 63:10, Isaiah 63:11. The Apocrypha reads "holy spirit" at Wisdom 1:5, 9:17 and Susanna 1:45 (W1, Wall 12283).
 - The one "Holy Ghost" outside the New Testament is 2 Esdras 14:22, an Apocryphal book (no lexicon; ruling of 11-15).
 
 E. WHERE THE KJV ITSELF SETS RUACH AND PNEUMA SIDE BY SIDE (pulled, tags from kjv_word_map).
 - Isaiah 61:1 "The Spirit [H7307] of the Lord GOD [is] upon me; because the LORD hath anointed me" beside Luke 4:18 "The Spirit [G4151] of the Lord [is] upon me, because he hath anointed me".
 - Joel 2:28 "I will pour out my spirit [H7307] upon all flesh" beside Acts 2:17 "I will pour out of my Spirit [G4151] upon all flesh".
-- John 3:8 holds pneuma twice in one sentence: "The wind [G4151] bloweth where it listeth ... so is every one that is born of the Spirit [G4151]." (sight_number 1171).
+- John 3:8 holds pneuma twice in one sentence: "The wind [G4151] bloweth where it listeth ... so is every one that is born of the Spirit [G4151]." (sight_number 1171; sight_number 1175 treats John 6:63, pneuma, and stands with it).
 - 2 Kings 19:7 "a blast" is ruach (sight_number 1728).
 
 F. THE BEGETTING VERSES.
