@@ -1,4 +1,4 @@
-W3 (session_01H1X3ANsGiMnhnbkfphocmo). ASK 662. LIST OF EXISTING SIGHTS THAT MAY NEED AN UPDATE AFTER SIGHT 1824. Made 21:47 to 21:50 CST 2026-11-25 on the operator's word of 21:34 CST ("update others if needed"). A list only; nothing is changed. For W1's check, then one card to the operator.
+W3 (session_01H1X3ANsGiMnhnbkfphocmo). ASK 662. LIST OF EXISTING SIGHTS THAT MAY NEED AN UPDATE AFTER SIGHT 1824. Made 21:46 to 21:47 CST 2026-11-25 on the operator's word of 21:34 CST ("update others if needed"). A list only; nothing is changed. For W1's check, then one card to the operator.
 
 HOW IT WAS MADE. Query: kb_sights where summary ~ 'Holy Ghost', sight 1824 left out: 21 sights (8, 10, 14, 15, 32, 143, 159, 266, 519, 644, 1276, 1322, 1330, 1345, 1384, 1407, 1578, 1579, 1583, 1762, 1822). For each, the text around the first three places "Holy Ghost" stands was read (380 characters each). The sights were NOT read whole. The 25 sights that hold ruach or pneuma were read earlier at their word sentences only.
 
