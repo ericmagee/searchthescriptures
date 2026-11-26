@@ -16,4 +16,9 @@ NO CHANGE PROPOSED for the other sixteen at the lines read: 14, 15, 32, 143, 159
 
 SEPARATE FROM THIS LIST, THE OPERATOR'S TO DECIDE: whether the "born of the Spirit" reading (Matthew 1:20 and John 3:6 one Greek construction; Isaac "after the Spirit" with Abraham named) becomes a part of sight 1824, its own sight, or stays a reading.
 
+ADDED ON W1'S CHECK (Wall 12336).
+- Error: W3. The search was case-sensitive and on summary only, so it missed four sights that carry the name in the title or in capitals: 1116 (Hebrews 3:7), 1118 (Hebrews 9:8), 1119 (Hebrews 10:15), 1154 (Acts 19:1-7). Search restated: title or summary, ignoring case, 25 sights. The four were read at those lines by W1 and by W3; none contradicts sight 1824. NO CHANGE PROPOSED for them.
+- The word "trinitarian" stands in four other sights: 139, 666, 1209, 1579. Each was weighed at its line; each names the word only to refuse it or to measure it (139 "Trinity absent from KJV"; 666 "would be training-doctrine import"; 1209 "does not draw a Trinitarian or anti-Trinitarian conclusion"). Only 1407 uses it as its own label for a verse.
+- The Sight 10 line "Matt 1:20 has NO kata sarka" is in the absence form (ruling 421), and Galatians 4:29 bears on its premise, since it sets "kata sarka" and "kata pneuma" on two sons of one named father.
+
 LIMITS. Not read whole: every sight above. Not searched: guards, conclusions and the book chapters for the same lines.
