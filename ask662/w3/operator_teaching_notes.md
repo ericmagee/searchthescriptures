@@ -22,3 +22,13 @@ As stored, the ruach rows (kjv_word_map H7307; ten in the fourteen verses): 37:1
 My reading sent 20:28 CST: (1) one word, ten times, four English renderings; (2) the body is finished and still dead (37:8) until the breath comes (37:10); (3) Genesis 2:7 again, same verb H5301; (4) "breath" of 37:5-10 is "my spirit" at 37:14; (5) in this passage the Spirit does not make the flesh, it makes the flesh live; (6) the vision is of a people (37:11).
 W1'S CHECK (Wall 12299): ten rows, tags and H5301 link correct. Point (5) WITHDRAWN: it goes past the passage (37:6 the same "I" brings up the flesh who gives "my spirit" at 37:14; "does not make" is the absence form). The wording the rows carry: the flesh comes first with "no breath in them" (37:8), and it lives when the ruach enters (37:10). Reported to the operator 20:30 CST.
 His answer: (pending)
+
+ENTRY 3 (20:39 CST). His words: "NEXT * Proceeds From and Belongs to the Father * John 15:26 ... * Matthew 10:20 ... * 1 Corinthians 2:11: "...even so the things of God knoweth no man, but the Spirit of God.""
+As stored:
+- John 15:26 "But when the Comforter is come, whom I will send unto you from the Father, [even] the Spirit of truth, which proceedeth from the Father, he shall testify of me:". Tags: Comforter=G3875, from=G3844, Father=G3962, Spirit=G4151, proceedeth=G1607, from=G3844, Father=G3962. Sight 1198 (column sight_number) holds this verse.
+- Matthew 10:20 "For it is not ye that speak, but the Spirit of your Father which speaketh in you." Tags: Spirit=G4151, Father=G3962.
+- 1 Corinthians 2:11 "For what man knoweth the things of a man, save the spirit of man which is in him? even so the things of God knoweth no man, but the Spirit of God." Tags: spirit=G4151, Spirit=G4151.
+- Beside them: 1 Corinthians 2:10 "But God hath revealed [them] unto us by his Spirit: for the Spirit searcheth all things, yea, the deep things of God."; 2:12 "Now we have received, not the spirit of the world, but the spirit which is of God" (of=G1537).
+My reading sent 20:41 CST: (1) the Spirit comes out from the Father (John 15:26, twice); (2) it is the Father's own Spirit, named by whose it is (Matthew 10:20); (3) it is to God what a man's spirit is to the man (1 Corinthians 2:11, the verse's own "even so"); (4) agrees with entry 1 (Job 27:3 margin; goes out from God and stays his); (5) what it does when it comes is speak and testify, as in the Old Testament prophesying rows. Support only: 1 Corinthians 2:12.
+W1's check: (pending)
+His answer: (pending)
