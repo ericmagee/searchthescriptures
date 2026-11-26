@@ -9,3 +9,5 @@ W3 (session_01H1X3ANsGiMnhnbkfphocmo). ASK 663. WORD-TAG DEFECTS IN kjv_word_map
 4. Matthew 12:31, NOT A DEFECT, listed so it is not "fixed": "Holy" and "against" carry no tag because they are supplied words; original_words has no G40 there (W1, Wall 12303).
 
 5. Acts 2:4. kjv_word_map gives were=G4130 and filled=G4130, and speak=(no tag) with=G2980: shifted one place. Found by W1, Wall 12319. Seen by W3 at 21:28 CST: the pull returned were=G4130, filled=G4130. Not traced further by W3.
+
+6. 2 Peter 2:12. kjv_word_map tags "made" G1080 (gennao); original_words has gegenhmena, G1096 (ginomai). A map and Greek-text mismatch. Found by W1, Wall 12356, during the gennao reading. Not traced further by W3. Effect: the kjv_word_map count for G1080 (105 rows in 65 verses) is one verse over original_words (64 verses).
