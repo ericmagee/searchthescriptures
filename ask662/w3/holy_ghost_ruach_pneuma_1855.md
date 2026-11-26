@@ -19,7 +19,7 @@ B. THE WORDS AS THE RECORD GIVES THEM (lexicon_words, column anchor_gloss).
 C. HOW THE KJV RENDERS THE TWO WORDS (kjv_word_map, counted).
 - G4151, 381 rows: spirit 254, ghost 90, spirits 31, and one each of wind, life, spiritually, spiritual, itself, also.
 - H7307, 377 rows: spirit 227, wind 81, breath 28, winds 11, spirits 5, side 5, mind 5, blast 4, vain 2, and one each of courage, anger, air, quarters, tempest, windy, cool, spiritual, sides.
-- Added from W1's check (Wall 12283): rows with a compound tag add G4151 three times (Acts 13:9 "Ghost", 1 Corinthians 12:9, 12:10) and H7307 once (Ezekiel 1:4 "whirlwind"). With them: G4151 384 rows, ghost 91; H7307 378 rows. Acts 13:9 is the verse that makes 89 "Holy Ghost" verses against 90 exact-tag rows less John 19:30.
+- Added from W1's check (Wall 12283): rows with a compound tag add G4151 three times (Acts 13:9 "Ghost", 1 Corinthians 12:9, 12:10) and H7307 once (Ezekiel 1:4 "whirlwind"). With them: G4151 384 rows, ghost 91; H7307 378 rows. The canon holds 90 occurrences of "Holy Ghost", in 88 verses; Acts 1:8 and 19:2 each hold it twice. 89 are tagged G4151 "ghost" alone (88 after G40, plus Matthew 12:31), and Acts 13:9 is the compound tag. The 89 verses counted in part D include 2 Esdras 14:22.
 - "Ghost" is never the rendering of ruach. All rows of "ghost" for pneuma are New Testament.
 
 D. "HOLY GHOST" AND "HOLY SPIRIT" ARE ONE GREEK PHRASE.
