@@ -7,3 +7,5 @@ W3 (session_01H1X3ANsGiMnhnbkfphocmo). ASK 663. WORD-TAG DEFECTS IN kjv_word_map
 3. Isaiah 40:13. kjv_word_map maps H376 to "hath"; the margin "[his...: Heb. man of his counsel]" accounts for H376. Named by W1 as "a map alignment quirk", Wall 12315. Not checked by W3.
 
 4. Matthew 12:31, NOT A DEFECT, listed so it is not "fixed": "Holy" and "against" carry no tag because they are supplied words; original_words has no G40 there (W1, Wall 12303).
+
+5. Acts 2:4. kjv_word_map gives were=G4130 and filled=G4130, and speak=(no tag) with=G2980: shifted one place. Found by W1, Wall 12319. Seen by W3 at 21:28 CST: the pull returned were=G4130, filled=G4130. Not traced further by W3.
