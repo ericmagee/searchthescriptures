@@ -1,0 +1,9 @@
+// tests: only the header comment differs; the engine's own Library Check code passes on the target and fails on the base.
+const fs=require('fs');const B=JSON.parse(fs.readFileSync('base_5d43650d.json','utf8')),T=JSON.parse(fs.readFileSync('target_661.json','utf8'));let p=0,f=0;const ok=(c,m)=>{c?p++:f++;console.log((c?'PASS ':'FAIL ')+m);};
+const P=d=>Object.fromEntries(d.nodes.map(n=>[n.name,JSON.stringify(n.parameters)]));const pb=P(B),pt=P(T);const ch=Object.keys(pb).filter(k=>pb[k]!==pt[k]);ok(JSON.stringify(ch)==='["Shared Library"]'&&JSON.stringify(B.connections)===JSON.stringify(T.connections),'only Shared Library differs; connections equal');
+const cb=B.nodes.find(n=>n.name==='Shared Library').parameters.jsCode,ct=T.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;let i=0;while(cb[i]===ct[i])i++;let j=0;while(cb[cb.length-1-j]===ct[ct.length-1-j])j++;ok(cb.length===ct.length||Math.abs(cb.length-ct.length)<3,'length change '+(ct.length-cb.length));console.log('  diff: "'+cb.slice(i,cb.length-j)+'" -> "'+ct.slice(i,ct.length-j)+'"');
+const lc=B.nodes.find(n=>n.name==='Library Check').parameters.jsCode;const s=lc.indexOf('const __lc=');const e=lc.indexOf('throw new Error',s);const pre=lc.slice(0,lc.indexOf('const __lc='));
+const run=code=>{const fn=new Function('$',pre.replace(/return[^;]*;?\s*$/,'')+";const __lc=$('Shared Library').params.jsCode;const __hm=__lc.match(/library sha ([0-9a-f]{16})/);const __hd=__hm?__hm[1]:null;const __ls=__LIBSHA422(__lc);return [__hd,__ls];");return fn(()=>({params:{jsCode:code}}));};
+let rb,rt;try{rb=run(cb);rt=run(ct);}catch(x){console.log('harness error',x.message);}
+if(rb){ok(rb[0]!==rb[1],'base: header '+rb[0]+' differs from body '+rb[1]+' (Library Check would throw)');ok(rt[0]===rt[1],'target: header '+rt[0]+' equals body '+rt[1]);}
+console.log('TOTAL '+p+' PASS, '+f+' FAIL');
