@@ -31,13 +31,13 @@ b=rep(b,'this reading does not say they are one child.','this sight does not say
 b=rep(b,'and shall call his name Immanuel." In the next chapter:','and shall call his name Immanuel." The Hebrew word there is almah (H5959), and Matthew 1:23 reads parthenos (G3933); Sight 24 and DG-57 hold the word. In the next chapter:')
 b=rep(b,'MY READING, EACH LINE MARKED.','THE READING, EACH LINE MARKED.')
 b=rep(b,'this file adds nothing there.','this sight adds nothing there.')
-S[2]=dict(title='The Promised Sons: Nine Sons Announced Before Conception; the Angel\'s "Also" at Luke 1:36; Genesis 18:14 and Luke 1:37',
- intro="Rows first (kjv_verses, pulled live 2026-11-25). Marks: [L1] the verse's own words; [L3] another passage set beside; [L4] a reading. The sons announced before they were conceived.\n",
- summary=b, layer='L1',
+S[2]=dict(title='The Promised Sons: Eight Sons Announced Before Conception, and Samuel Asked For; the Angel\'s "Also" at Luke 1:36',
+ intro="Rows first (kjv_verses, pulled live 2026-11-25; kjv_word_map at Isaiah 7:14 and Matthew 1:23). Marks: [L1] the verse's own words; [L2] the word under them, at a verse in its own language; [L3] another passage set beside; [L4] a reading. The sons announced before they were conceived.\n",
+ summary=b, layer='L1-L2-L3',
  topic='The sons announced before they were conceived: Isaac, Samson, the Shunammite\'s son, Samuel, Solomon, Josiah, Immanuel, John, Jesus; for each, the announcing, whether the act is told, and the father the rows name; the angel\'s own parallel of Elisabeth and Mary (Luke 1:36-37).',
  passage='Genesis 17:19; Genesis 18:14; Genesis 21:1-3; Judges 13:2-25; 2 Kings 4:14-18; 1 Samuel 1:11-19; 1 Chronicles 22:9; 1 Kings 13:2; Isaiah 7:14-16; Isaiah 8:3-4; Luke 1:13-37; Matthew 1:20-21',
  area='S1822 and DG-8 (the conception rows; the father question); S32; DG-57 and S24 (Isaiah 7:14); S1824; S1825 (Isaac born after the Spirit)',
- limits='R1 is a count of nine found by one phrase search; other announced sons under other wording were not searched for. Rebekah (Genesis 25:21) and Rachel (Genesis 30:22-23) were pulled and not worked in. Sights 1822, 32, 1578 were read at the lines named, not whole. No word tags were pulled, so the layer is filed L1; the [L3] lines are joins of passages. No sight title or summary named Luke 1:37 before this filing (0 rows).',
+ limits='R1 is a count of nine found by one phrase search; other announced sons under other wording were not searched for. Rebekah (Genesis 25:21) and Rachel (Genesis 30:22-23) were pulled and not worked in. Sights 1822, 32, 1578 were read at the lines named, not whole. Word tags were pulled at Isaiah 7:14 and Matthew 1:23 only; the [L3] lines are joins of passages. No sight title or summary named Luke 1:37 before this filing (0 rows).',
  graded='ask662/w3/promised_sons_reading_v2.md md5 2ca7faa2, W1 PASS Wall 12347')
 # 3 anointing
 b,_=body('anointing_reading_v2.md','WHAT THE RECORD ALREADY HOLDS.','NOT DONE.')
