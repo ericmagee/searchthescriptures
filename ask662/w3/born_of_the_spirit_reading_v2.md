@@ -38,7 +38,7 @@ E. BORN AGAIN BY THE WORD [L1].
 
 MY READING, EACH LINE MARKED.
 R1 [L2, Greek on Greek]. The words "that which is conceived in her is of the Holy Ghost" and "that which is born of the Spirit" are one construction in Greek: gennao, ek, pneuma. The 1611 margin at Matthew 1:20 itself gives "begotten".
-R2 [L3, another passage]. John 3:6 and 3:8 say those words of "every one that is born of the Spirit"; the question they answer is John 3:4 "How can a man be born when he is old? can he enter the second time into his mother's womb, and be born?", so the one born of the Spirit was first born of a mother. Galatians 4:29 says "after the Spirit" of Isaac, whose father Abraham is named in the same passage and at Genesis 21:2. So the phrase beside a birth is used in Scripture of persons with named fathers in the flesh.
+R2 [L3, another passage]. John 3:6 and 3:8 say those words of "every one that is born of the Spirit"; the question they answer is John 3:4 "How can a man be born when he is old? can he enter the second time into his mother's womb, and be born?", so the one born of the Spirit was first born of a mother. Galatians 4:29 says "after the Spirit" of Isaac, whose father Abraham is named in the same passage and at Genesis 21:2. So the phrase beside a birth is used in Scripture of a person with a named father in the flesh (Isaac).
 R3 [L4, a reading]. Matthew 1:20 read with those passages agrees with DG-8 as the record already holds it: "of the Holy Ghost" marks the child, and Joseph is addressed in that verse as "thou son of David" and Mary as "thy wife".
 R4 [L4]. Isaac is the nearest pattern in the canon for Matthew 1:20: a son promised beforehand by God's word, his birth called "after the Spirit" and "by promise", his father named.
 
