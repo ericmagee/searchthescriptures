@@ -1,0 +1,1282 @@
+[
+ {
+  "id": "A1",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"the chain from woman's seed to made-of-woman flesh yields Davidic flesh without requiring loins of a begetting man\" -- WITNESS WORDS: \"seed of David according to the flesh\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4783,
+   "completion_tokens": 485,
+   "total_tokens": 5268,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 314,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0030438,
+    "upstream_inference_prompt_cost": 0.0006188,
+    "upstream_inference_completions_cost": 0.002425
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 430,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-uKikve6kWWOQByYSGjPE",
+  "error": null
+ },
+ {
+  "id": "A2",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"The rows that affirm no man begetting Jesus carry the case [L4]; no verse is required to state a conclusion in its own words [L4].\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4713,
+   "completion_tokens": 43,
+   "total_tokens": 4756,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4710,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0004535,
+    "upstream_inference_prompt_cost": 0.0002385,
+    "upstream_inference_completions_cost": 0.000215
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-A1HQcAwPDQ8o9DWhZlFq",
+  "error": null
+ },
+ {
+  "id": "A3",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"begat stops at husband of Mary and birth is of her, not begotten by him.\" -- WITNESS WORDS: \"Jacob begat Joseph the husband of Mary, of whom was born Jesus\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4707,
+   "completion_tokens": 108,
+   "total_tokens": 4815,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 238,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0010638,
+    "upstream_inference_prompt_cost": 0.0005238,
+    "upstream_inference_completions_cost": 0.00054
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 52,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-VPPrWOrg1u5gMLGBfI11",
+  "error": null
+ },
+ {
+  "id": "A4",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"I will set up thy seed after thee, which shall proceed out of thy bowels\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4705,
+   "completion_tokens": 78,
+   "total_tokens": 4783,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 236,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0009113,
+    "upstream_inference_prompt_cost": 0.0005213,
+    "upstream_inference_completions_cost": 0.00039
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 48,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-3dxMlWokzxF4KaZlJjjG",
+  "error": null
+ },
+ {
+  "id": "A5",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"Thy father with G3962 pater is Mary's speech [L1][L2]\" and \"speech of custom stands beside stated qualification [L4]\" -- WITNESS WORDS: \"thy father and I\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4734,
+   "completion_tokens": 319,
+   "total_tokens": 5053,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 265,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00215255,
+    "upstream_inference_prompt_cost": 0.00055755,
+    "upstream_inference_completions_cost": 0.001595
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 261,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-quVBhRZjtRNjKbbKtgTy",
+  "error": null
+ },
+ {
+  "id": "A6",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"denied knowing spans to birth, excluding begetting by Joseph.\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4691,
+   "completion_tokens": 70,
+   "total_tokens": 4761,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4688,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0005874,
+    "upstream_inference_prompt_cost": 0.0002374,
+    "upstream_inference_completions_cost": 0.00035
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 45,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-HmqH4jDRSsBnZ1RU96A2",
+  "error": null
+ },
+ {
+  "id": "A7",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"not knowing till birth covers the taking and the espousal alike.\" -- WITNESS WORDS: \"knew her not till she had brought forth\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4694,
+   "completion_tokens": 77,
+   "total_tokens": 4771,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 4691,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00625175,
+    "upstream_inference_prompt_cost": 0.00586675,
+    "upstream_inference_completions_cost": 0.000385
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 32,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-1mNbApNpzPStQfWSe1aB",
+  "error": null
+ },
+ {
+  "id": "A8",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"Jesus had no biological father.\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4693,
+   "completion_tokens": 54,
+   "total_tokens": 4747,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 4690,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0061355,
+    "upstream_inference_prompt_cost": 0.0058655,
+    "upstream_inference_completions_cost": 0.00027
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 36,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-PaVRfZW2WJYinDkdIg8q",
+  "error": null
+ },
+ {
+  "id": "A9",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"the chain yields Davidic flesh by woman-becoming, with no loins of a begetting man stated\" -- WITNESS WORDS: \"the fruit of his loins, according to the flesh\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4709,
+   "completion_tokens": 124,
+   "total_tokens": 4833,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 4706,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0065055,
+    "upstream_inference_prompt_cost": 0.0058855,
+    "upstream_inference_completions_cost": 0.00062
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 68,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-sCuEmGGj3VC0271fVybZ",
+  "error": null
+ },
+ {
+  "id": "A10",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"H2233 zera (\"seed; figuratively, fruit, plant, sowing-time, posterity; [idiom] carnally, child, fruitful, seed(-time), sowing-time\") in 2 Samuel 7:12\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4731,
+   "completion_tokens": 60,
+   "total_tokens": 4791,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4728,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0005394,
+    "upstream_inference_prompt_cost": 0.0002394,
+    "upstream_inference_completions_cost": 0.0003
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-pNHAcACI4oO6gcClAwmN",
+  "error": null
+ },
+ {
+  "id": "B1",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"as was supposed,\" marks Joseph's sonship as the common opinion -- WITNESS WORDS: \"as was supposed) the son of Joseph\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4706,
+   "completion_tokens": 42,
+   "total_tokens": 4748,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 237,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00073255,
+    "upstream_inference_prompt_cost": 0.00052255,
+    "upstream_inference_completions_cost": 0.00021
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-KI5740Ayy0dYHVKqZHo4",
+  "error": null
+ },
+ {
+  "id": "B2",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"John 6:42 gives the town's words, spoken by people who murmured at him.\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4704,
+   "completion_tokens": 132,
+   "total_tokens": 4836,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 4701,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00653925,
+    "upstream_inference_prompt_cost": 0.00587925,
+    "upstream_inference_completions_cost": 0.00066
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 100,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-9uQJuvKtzmluQMVU4Dd1",
+  "error": null
+ },
+ {
+  "id": "B3",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"what is begotten in her has its point of origin in the Holy Ghost.\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4713,
+   "completion_tokens": 82,
+   "total_tokens": 4795,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 244,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0009413,
+    "upstream_inference_prompt_cost": 0.0005313,
+    "upstream_inference_completions_cost": 0.00041
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 54,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-xcneBg90LxhruBdLJrQd",
+  "error": null
+ },
+ {
+  "id": "B4",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"loins\" run down a line and are not tied to the immediate begetter -- WITNESS WORDS: \"of the fruit of his loins\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4709,
+   "completion_tokens": 128,
+   "total_tokens": 4837,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4706,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0008783,
+    "upstream_inference_prompt_cost": 0.0002383,
+    "upstream_inference_completions_cost": 0.00064
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 82,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-CCTGgJ50SpFXBGup7rqm",
+  "error": null
+ },
+ {
+  "id": "B5",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"The begetting named for this child is \"of the Holy Ghost\" (Matthew 1:20).\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4699,
+   "completion_tokens": 68,
+   "total_tokens": 4767,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 4696,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.006213,
+    "upstream_inference_prompt_cost": 0.005873,
+    "upstream_inference_completions_cost": 0.00034
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 35,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-tm1DwXFved21wioRK7as",
+  "error": null
+ },
+ {
+  "id": "B6",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"At Joseph the text calls him \"the husband of Mary\" and puts the birth \"of whom,\" out of her\" -- WITNESS WORDS: \"the husband of Mary, of whom was born Jesus\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4714,
+   "completion_tokens": 99,
+   "total_tokens": 4813,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 245,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00102755,
+    "upstream_inference_prompt_cost": 0.00053255,
+    "upstream_inference_completions_cost": 0.000495
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 42,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-Cth2PGjWnK15seQuiucu",
+  "error": null
+ },
+ {
+  "id": "B7",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"So the conception falls at the angel's word, and Joseph's knowing is not in the order.\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4698,
+   "completion_tokens": 49,
+   "total_tokens": 4747,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4695,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00048275,
+    "upstream_inference_prompt_cost": 0.00023775,
+    "upstream_inference_completions_cost": 0.000245
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 17,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-TYAwnxMNTSC7q2JqyKh4",
+  "error": null
+ },
+ {
+  "id": "B8",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"Leviticus 19:19 is addressed to Israel about cattle, a field and a garment.\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4701,
+   "completion_tokens": 81,
+   "total_tokens": 4782,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 232,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0009213,
+    "upstream_inference_prompt_cost": 0.0005163,
+    "upstream_inference_completions_cost": 0.000405
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 49,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-33J49cG5Gg0NXNuPzhBM",
+  "error": null
+ },
+ {
+  "id": "B9",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"A wife known by her husband in the espousal, as the defender's Step 2 has it, is not the virgin the quoted prophecy describes.\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4708,
+   "completion_tokens": 40,
+   "total_tokens": 4748,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 4705,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00608425,
+    "upstream_inference_prompt_cost": 0.00588425,
+    "upstream_inference_completions_cost": 0.0002
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-r3JiyXCT3syH1Xf9Zqji",
+  "error": null
+ },
+ {
+  "id": "B10",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"These rows state David's loins and David's seed.\" -- WITNESS WORDS: \"thy seed after thee\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4699,
+   "completion_tokens": 105,
+   "total_tokens": 4804,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 230,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0010388,
+    "upstream_inference_prompt_cost": 0.0005138,
+    "upstream_inference_completions_cost": 0.000525
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 66,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-IMrBJCdqThdQ1e6R38pC",
+  "error": null
+ },
+ {
+  "id": "A1",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"the chain from woman's seed to made-of-woman flesh yields Davidic flesh without requiring loins of a begetting man\" -- WITNESS WORDS: \"seed of David according to the flesh\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4783,
+   "completion_tokens": 161,
+   "total_tokens": 4944,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 314,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0014238,
+    "upstream_inference_prompt_cost": 0.0006188,
+    "upstream_inference_completions_cost": 0.000805
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 106,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-3MLwguM4bqzYKrzOcTcI",
+  "error": null
+ },
+ {
+  "id": "A2",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"The rows that affirm no man begetting Jesus carry the case [L4]; no verse is required to state a conclusion in its own words [L4].\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4713,
+   "completion_tokens": 71,
+   "total_tokens": 4784,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 244,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0008863,
+    "upstream_inference_prompt_cost": 0.0005313,
+    "upstream_inference_completions_cost": 0.000355
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 26,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-Ag2gcSBiDjfZx6O5PSZo",
+  "error": null
+ },
+ {
+  "id": "A3",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"begat stops at husband of Mary and birth is of her, not begotten by him.\" -- WITNESS WORDS: \"Joseph the husband of Mary, of whom was born Jesus\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4707,
+   "completion_tokens": 51,
+   "total_tokens": 4758,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4704,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0004932,
+    "upstream_inference_prompt_cost": 0.0002382,
+    "upstream_inference_completions_cost": 0.000255
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-JV5G1ny1BkB9aFSyfo1K",
+  "error": null
+ },
+ {
+  "id": "A4",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"I will set up thy seed after thee, which shall proceed out of thy bowels\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4705,
+   "completion_tokens": 59,
+   "total_tokens": 4764,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4702,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0005331,
+    "upstream_inference_prompt_cost": 0.0002381,
+    "upstream_inference_completions_cost": 0.000295
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 29,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-5bVUYkSm9B3gVjsET5m2",
+  "error": null
+ },
+ {
+  "id": "A5",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"Thy father with G3962 pater is Mary's speech [L1][L2], but Luke's narrator qualifies sonship as \"as was supposed\" in Luke 3:23 [L3], so speech of custom stands beside stated qualification [L4].\" -- WITNESS WORDS: \"thy father and I\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4734,
+   "completion_tokens": 164,
+   "total_tokens": 4898,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4731,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00105955,
+    "upstream_inference_prompt_cost": 0.00023955,
+    "upstream_inference_completions_cost": 0.00082
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 83,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-QzBEAVvsQgUsxKYxJP3w",
+  "error": null
+ },
+ {
+  "id": "A6",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"denied knowing spans to birth, excluding begetting by Joseph.\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4691,
+   "completion_tokens": 74,
+   "total_tokens": 4765,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 4688,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.006233,
+    "upstream_inference_prompt_cost": 0.005863,
+    "upstream_inference_completions_cost": 0.00037
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 49,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-P4n18MiriNKDWPxKHq3e",
+  "error": null
+ },
+ {
+  "id": "A7",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"not knowing till birth covers the taking and the espousal alike.\" -- WITNESS WORDS: \"knew her not till she had brought forth\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4694,
+   "completion_tokens": 72,
+   "total_tokens": 4766,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 4691,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00622675,
+    "upstream_inference_prompt_cost": 0.00586675,
+    "upstream_inference_completions_cost": 0.00036
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 27,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-Mb6HWz0BZHoACVRT0IeG",
+  "error": null
+ },
+ {
+  "id": "A8",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"Jesus had no biological father.\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4693,
+   "completion_tokens": 44,
+   "total_tokens": 4737,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 4690,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0060855,
+    "upstream_inference_prompt_cost": 0.0058655,
+    "upstream_inference_completions_cost": 0.00022
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 26,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-K34Vb5DdWGzKPDbtM54e",
+  "error": null
+ },
+ {
+  "id": "A9",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"the chain yields Davidic flesh by woman-becoming, with no loins of a begetting man stated\" -- WITNESS WORDS: \"of the fruit of his loins, according to the flesh\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4709,
+   "completion_tokens": 136,
+   "total_tokens": 4845,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 4706,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0065655,
+    "upstream_inference_prompt_cost": 0.0058855,
+    "upstream_inference_completions_cost": 0.00068
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 79,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-jQ1PrLGSDIDwMdsEJabu",
+  "error": null
+ },
+ {
+  "id": "A10",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"H2233 zera (\"seed; figuratively, fruit, plant, sowing-time, posterity; [idiom] carnally, child, fruitful, seed(-time), sowing-time\") in 2 Samuel 7:12\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4731,
+   "completion_tokens": 60,
+   "total_tokens": 4791,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 262,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0008538,
+    "upstream_inference_prompt_cost": 0.0005538,
+    "upstream_inference_completions_cost": 0.0003
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-hHq0hkVNjxvOtbThhtVz",
+  "error": null
+ },
+ {
+  "id": "B1",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"as was supposed,\" marks Joseph's sonship as the common opinion -- WITNESS WORDS: \"as was supposed) the son of Joseph\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4706,
+   "completion_tokens": 42,
+   "total_tokens": 4748,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 237,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00073255,
+    "upstream_inference_prompt_cost": 0.00052255,
+    "upstream_inference_completions_cost": 0.00021
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-CerxEQPanFn6LWMxqM5P",
+  "error": null
+ },
+ {
+  "id": "B2",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"John 6:42 gives the town's words, spoken by people who murmured at him.\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4704,
+   "completion_tokens": 126,
+   "total_tokens": 4830,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4701,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00086805,
+    "upstream_inference_prompt_cost": 0.00023805,
+    "upstream_inference_completions_cost": 0.00063
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 94,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-ugcDu7gs1Si9HAonMrQM",
+  "error": null
+ },
+ {
+  "id": "B3",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"what is begotten in her has its point of origin in the Holy Ghost.\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4713,
+   "completion_tokens": 79,
+   "total_tokens": 4792,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 244,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0009263,
+    "upstream_inference_prompt_cost": 0.0005313,
+    "upstream_inference_completions_cost": 0.000395
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 51,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-Ah1f3rDZT4PJbygGZ5ht",
+  "error": null
+ },
+ {
+  "id": "B4",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"loins run down a line and are not tied to the immediate begetter\" -- WITNESS WORDS: \"of the fruit of his loins\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4709,
+   "completion_tokens": 94,
+   "total_tokens": 4803,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 4706,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0063555,
+    "upstream_inference_prompt_cost": 0.0058855,
+    "upstream_inference_completions_cost": 0.00047
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 48,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-nTBQOMMwtkQLx6IdAlfk",
+  "error": null
+ },
+ {
+  "id": "B5",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"The begetting named for this child is \"of the Holy Ghost\" (Matthew 1:20).\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4699,
+   "completion_tokens": 73,
+   "total_tokens": 4772,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 4696,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.006238,
+    "upstream_inference_prompt_cost": 0.005873,
+    "upstream_inference_completions_cost": 0.000365
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 40,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-tTes8dzOxoa8nm2chWQG",
+  "error": null
+ },
+ {
+  "id": "B6",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"At Joseph the text calls him 'the husband of Mary' and puts the birth 'of whom,' out of her\" -- WITNESS WORDS: \"Joseph the husband of Mary, of whom was born Jesus\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4714,
+   "completion_tokens": 56,
+   "total_tokens": 4770,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4711,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00051855,
+    "upstream_inference_prompt_cost": 0.00023855,
+    "upstream_inference_completions_cost": 0.00028
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-rdc0uvq1UBspcxUNZb7O",
+  "error": null
+ },
+ {
+  "id": "B7",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"So the conception falls at the angel's word, and Joseph's knowing is not in the order.\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4698,
+   "completion_tokens": 67,
+   "total_tokens": 4765,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 229,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00084755,
+    "upstream_inference_prompt_cost": 0.00051255,
+    "upstream_inference_completions_cost": 0.000335
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 35,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-MAfpD1h3DgI5LYRsNWSS",
+  "error": null
+ },
+ {
+  "id": "B8",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"Leviticus 19:19 is addressed to Israel about cattle, a field and a garment.\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4701,
+   "completion_tokens": 72,
+   "total_tokens": 4773,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4698,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0005979,
+    "upstream_inference_prompt_cost": 0.0002379,
+    "upstream_inference_completions_cost": 0.00036
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 40,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-aUDGD5Cpz77qc1YP3k0W",
+  "error": null
+ },
+ {
+  "id": "B9",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"A wife known by her husband in the espousal, as the defender's Step 2 has it, is not the virgin the quoted prophecy describes.\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4708,
+   "completion_tokens": 40,
+   "total_tokens": 4748,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 4705,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00608425,
+    "upstream_inference_prompt_cost": 0.00588425,
+    "upstream_inference_completions_cost": 0.0002
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-HCOfVAYmHMKIamWj92k0",
+  "error": null
+ },
+ {
+  "id": "B10",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"These rows state David's loins and David's seed.\" -- WITNESS WORDS: \"thy seed after thee\"",
+  "finish": "stop",
+  "model": "openai/gpt-6.1-terra",
+  "usage": {
+   "prompt_tokens": 4699,
+   "completion_tokens": 122,
+   "total_tokens": 4821,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 4696,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.006483,
+    "upstream_inference_prompt_cost": 0.005873,
+    "upstream_inference_completions_cost": 0.00061
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 83,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795754650-GAQcOwbAV1Ksmo4PAuHe",
+  "error": null
+ }
+]
