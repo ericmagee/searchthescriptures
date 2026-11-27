@@ -1,0 +1,274 @@
+{
+ "source": "debate e7f6922f-746c-41f6-9f86-d3e5d3bb53c8 (run 42373; not used in any earlier test). Holding side CHALLENGER (DR1=engine_r1, DR2=engine_r2, DR3=challenger_r3). Each WITNESS is a verse the defender pressed, in KJV words from kjv_verses. Each TAKES is one sentence copied from the round, checked present by position(). LAYER LINES CITED are the [L1]/[L3] references of the same block with kjv_verses words, and [L2] lines as written; [L4] not sent. No tag-only TAKES (C-4): none.",
+ "entries": [
+  {
+   "id": "N1",
+   "n": 1,
+   "witness": "Acts 2:30 \"that of the fruit of his loins, according to the flesh, he would raise up Christ to sit on his throne\"",
+   "round": "DR3",
+   "takes": "So David's loins reach the child through the line Luke 3:31 gives, without the husband being the begetter.",
+   "layer_lines": [
+    "[L1] Acts 2:30: \"Therefore being a prophet, and knowing that God had sworn with an oath to him, that of the fruit of his loins, according to the flesh, he would raise up Christ to sit on his throne;\"",
+    "[L2] osphys (G3751): \"the loin ... procreative power\".",
+    "[L3] Hebrews 7:9: \"And as I may so say, Levi also, who receiveth tithes, payed tithes in Abraham.\"",
+    "[L3] Hebrews 7:10: \"For he was yet in the loins of his father, when Melchisedec met him.\""
+   ],
+   "source": "debate e7f6922f (run 42373), challenger_r3"
+  },
+  {
+   "id": "N2",
+   "n": 2,
+   "witness": "Matthew 1:20 \"fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost\"",
+   "round": "DR3",
+   "takes": "The \"fear\" is of taking her.",
+   "layer_lines": [
+    "[L1] Matthew 1:20: \"But while he thought on these things, behold, the angel of the Lord appeared unto him in a dream, saying, Joseph, thou son of David, fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost. [conceived: Gr. begotten]\"",
+    "[L2] phobeō (G5399): \"to be alarmed\". gar (G1063): \"assigning a reason\".",
+    "[L3] Matthew 1:18: \"Now the birth of Jesus Christ was on this wise: When as his mother Mary was espoused to Joseph, before they came together, she was found with child of the Holy Ghost.\""
+   ],
+   "source": "debate e7f6922f (run 42373), challenger_r3"
+  },
+  {
+   "id": "N3",
+   "n": 3,
+   "witness": "Mark 7:8 \"ye hold the tradition of men, [as] the washing of pots and cups\"",
+   "round": "DR2",
+   "takes": "The matter of Mark 7:8-9 is washings and the keeping of tradition, and that is the matter it states.",
+   "layer_lines": [
+    "[L1] Mark 7:8: \"For laying aside the commandment of God, ye hold the tradition of men, [as] the washing of pots and cups: and many other such like things ye do.\"",
+    "[L2] \"washing\" is baptismos (G909, ablution).",
+    "[L3] Mark 7:9: \"And he said unto them, Full well ye reject the commandment of God, that ye may keep your own tradition. [reject: or, frustrate]\""
+   ],
+   "source": "debate e7f6922f (run 42373), engine_r2"
+  },
+  {
+   "id": "N4",
+   "n": 4,
+   "witness": "Hebrews 7:14 \"For [it is] evident that our Lord sprang out of Juda\"",
+   "round": "DR3",
+   "takes": "It is plain that he sprang out of Juda because Matthew 1:16 gives the house by Joseph and Luke 3:31 gives the seed by the woman.",
+   "layer_lines": [
+    "[L1] Hebrews 7:14: \"For [it is] evident that our Lord sprang out of Juda; of which tribe Moses spake nothing concerning priesthood.\"",
+    "[L2] prodēlos (G4271): \"plain before all men\". anatellō (G393): \"to cause to arise; spring up\".",
+    "[L3] Isaiah 11:1: \"And there shall come forth a rod out of the stem of Jesse, and a Branch shall grow out of his roots:\""
+   ],
+   "source": "debate e7f6922f (run 42373), challenger_r3"
+  },
+  {
+   "id": "N5",
+   "n": 5,
+   "witness": "Matthew 1:24 \"Then Joseph being raised from sleep did as the angel of the Lord had bidden him, and took unto him his wife\"",
+   "round": "DR3",
+   "takes": "It fits the link.",
+   "layer_lines": [
+    "[L1] Matthew 1:24: \"Then Joseph being raised from sleep did as the angel of the Lord had bidden him, and took unto him his wife:\"",
+    "[L2] paralambanō (G3880): \"to receive near, i.e. associate with oneself\".",
+    "[L3] Matthew 1:20: \"But while he thought on these things, behold, the angel of the Lord appeared unto him in a dream, saying, Joseph, thou son of David, fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost. [conceived: Gr. begotten]\""
+   ],
+   "source": "debate e7f6922f (run 42373), challenger_r3"
+  },
+  {
+   "id": "N6",
+   "n": 6,
+   "witness": "Genesis 48:5 \"which were born unto thee in the land of Egypt before I came unto thee into Egypt, [are] mine; as Reuben and Simeon, they shall be mine\"",
+   "round": "DR3",
+   "takes": "They stand in Jacob's house by his word, \"[are] mine; as Reuben and Simeon\".",
+   "layer_lines": [
+    "[L1] Genesis 48:5: \"And now thy two sons, Ephraim and Manasseh, which were born unto thee in the land of Egypt before I came unto thee into Egypt, [are] mine; as Reuben and Simeon, they shall be mine.\"",
+    "[L2] yâlad (H3205): \"to bear young; causatively, to beget ... to show lineage\".",
+    "[L3] Numbers 1:18: \"And they assembled all the congregation together on the first [day] of the second month, and they declared their pedigrees after their families, by the house of their fathers, according to the number of the names, from twenty years old and upward, by their polls.\""
+   ],
+   "source": "debate e7f6922f (run 42373), challenger_r3"
+  },
+  {
+   "id": "N7",
+   "n": 7,
+   "witness": "Numbers 1:2 \"after their families, by the house of their fathers, with the number of [their] names\"",
+   "round": "DR3",
+   "takes": "That is the reckoning by taking and naming.",
+   "layer_lines": [
+    "[L1] Numbers 1:2: \"Take ye the sum of all the congregation of the children of Israel, after their families, by the house of their fathers, with the number of [their] names, every male by their polls;\"",
+    "[L2] ʼâb (H1): \"father, in a literal and immediate, or figurative and remote application\".",
+    "[L3] Luke 3:23: \"And Jesus himself began to be about thirty years of age, being (as was supposed) the son of Joseph, which was [the son] of Heli,\"",
+    "[L2] nomizō (G3543): \"to do by law (usage)\"."
+   ],
+   "source": "debate e7f6922f (run 42373), challenger_r3"
+  },
+  {
+   "id": "N8",
+   "n": 8,
+   "witness": "Jeremiah 18:8 \"If that nation, against whom I have pronounced, turn from their evil, I will repent of the evil that I thought to do unto them.\"",
+   "round": "DR3",
+   "takes": "The rule of 18:8 is stated for \"that nation\" with its own condition, the turning.",
+   "layer_lines": [
+    "[L1] Jeremiah 18:8: \"If that nation, against whom I have pronounced, turn from their evil, I will repent of the evil that I thought to do unto them.\"",
+    "[L2] shûwb (H7725): \"to turn back\".",
+    "[L3] Jeremiah 22:24: \"[As] I live, saith the LORD, though Coniah the son of Jehoiakim king of Judah were the signet upon my right hand, yet would I pluck thee thence;\""
+   ],
+   "source": "debate e7f6922f (run 42373), challenger_r3"
+  },
+  {
+   "id": "N9",
+   "n": 9,
+   "witness": "Haggai 2:23 \"and will make thee as a signet: for I have chosen thee\"",
+   "round": "DR2",
+   "takes": "Haggai gives the signet to Zerubbabel, called \"governor of Judah\", and that is the office Haggai names.",
+   "layer_lines": [
+    "[L1] Jeremiah 22:30: \"Thus saith the LORD, Write ye this man childless, a man [that] shall not prosper in his days: for no man of his seed shall prosper, sitting upon the throne of David, and ruling any more in Judah.\"",
+    "[L1] Matthew 1:12: \"And after they were brought to Babylon, Jechonias begat Salathiel; and Salathiel begat Zorobabel;\"",
+    "[L1] Matthew 1:16: \"And Jacob begat Joseph the husband of Mary, of whom was born Jesus, who is called Christ.\"",
+    "[L3] Haggai 2:21: \"Speak to Zerubbabel, governor of Judah, saying, I will shake the heavens and the earth;\"",
+    "[L3] Haggai 2:23: \"In that day, saith the LORD of hosts, will I take thee, O Zerubbabel, my servant, the son of Shealtiel, saith the LORD, and will make thee as a signet: for I have chosen thee, saith the LORD of hosts.\"",
+    "[L2] zera' (H2233, seed) stands in Jeremiah 22:30, and Matthew 1:12 shows Salathiel as Jechonias's begotten son."
+   ],
+   "source": "debate e7f6922f (run 42373), engine_r2"
+  },
+  {
+   "id": "N10",
+   "n": 10,
+   "witness": "Haggai 2:23 \"will I take thee, O Zerubbabel, my servant, the son of Shealtiel, saith the LORD, and will make thee as a signet: for I have chosen thee\"",
+   "round": "DR3",
+   "takes": "What is chosen is Zerubbabel himself, \"my servant\", and the office named is \"governor\", not one sitting upon the throne.",
+   "layer_lines": [
+    "[L1] Haggai 2:23: \"In that day, saith the LORD of hosts, will I take thee, O Zerubbabel, my servant, the son of Shealtiel, saith the LORD, and will make thee as a signet: for I have chosen thee, saith the LORD of hosts.\"",
+    "[L2] bâchar (H977): \"to try, i.e. (by implication) select\".",
+    "[L3] Haggai 2:21: \"Speak to Zerubbabel, governor of Judah, saying, I will shake the heavens and the earth;\"",
+    "[L3] Matthew 1:12: \"And after they were brought to Babylon, Jechonias begat Salathiel; and Salathiel begat Zorobabel;\""
+   ],
+   "source": "debate e7f6922f (run 42373), challenger_r3"
+  },
+  {
+   "id": "N11",
+   "n": 11,
+   "witness": "Luke 2:4 \"because he was of the house and lineage of David\"",
+   "round": "DR3",
+   "takes": "The \"because\" gives Joseph's own reason for going up, namely his paternal descent.",
+   "layer_lines": [
+    "[L1] Luke 2:4: \"And Joseph also went up from Galilee, out of the city of Nazareth, into Judaea, unto the city of David, which is called Bethlehem; (because he was of the house and lineage of David:)\"",
+    "[L2] patria (G3965): \"paternal descent ... family\".",
+    "[L3] Luke 2:5: \"To be taxed with Mary his espoused wife, being great with child. [taxed: or, enrolled]\""
+   ],
+   "source": "debate e7f6922f (run 42373), challenger_r3"
+  },
+  {
+   "id": "N12",
+   "n": 12,
+   "witness": "Luke 1:27 \"To a virgin espoused to a man whose name was Joseph, of the house of David\"",
+   "round": "DR3",
+   "takes": "The house of David is told here of Joseph.",
+   "layer_lines": [
+    "[L1] Luke 1:27: \"To a virgin espoused to a man whose name was Joseph, of the house of David; and the virgin's name [was] Mary.\"",
+    "[L2] oikos (G3624): \"a dwelling ... by implication, a family\".",
+    "[L3] Matthew 1:20: \"But while he thought on these things, behold, the angel of the Lord appeared unto him in a dream, saying, Joseph, thou son of David, fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost. [conceived: Gr. begotten]\"",
+    "[L3] Matthew 1:21: \"And she shall bring forth a son, and thou shalt call his name JESUS: for he shall save his people from their sins. [JESUS: that is, Saviour, Heb]\""
+   ],
+   "source": "debate e7f6922f (run 42373), challenger_r3"
+  },
+  {
+   "id": "N13",
+   "n": 13,
+   "witness": "1 Corinthians 15:38 \"But God giveth it a body as it hath pleased him, and to every seed his own body.\"",
+   "round": "DR3",
+   "takes": "\"His own body\" is the body proper to the kind, and the kind is one flesh of men.",
+   "layer_lines": [
+    "[L1] 1 Corinthians 15:38: \"But God giveth it a body as it hath pleased him, and to every seed his own body.\"",
+    "[L2] sperma (G4690): \"seed (including the male 'sperm'); by implication, offspring\".",
+    "[L3] Hebrews 10:5: \"Wherefore when he cometh into the world, he saith, Sacrifice and offering thou wouldest not, but a body hast thou prepared me: [hast...: or, thou hast fitted me]\""
+   ],
+   "source": "debate e7f6922f (run 42373), challenger_r3"
+  },
+  {
+   "id": "N14",
+   "n": 14,
+   "witness": "Psalms 132:11 \"Of the fruit of thy body will I set upon thy throne\"",
+   "round": "DR3",
+   "takes": "David's fruit therefore reaches him as flesh through a woman of David's line.",
+   "layer_lines": [
+    "[L1] Psalms 132:11: \"The LORD hath sworn [in] truth unto David; he will not turn from it; Of the fruit of thy body will I set upon thy throne. [body: Heb. belly]\"",
+    "[L2] beṭen (H990): \"the belly, especially the womb; also the bosom or body of anything\".",
+    "[L3] Romans 1:3: \"Concerning his Son Jesus Christ our Lord, which was made of the seed of David according to the flesh;\"",
+    "[L3] Galatians 4:4: \"But when the fulness of the time was come, God sent forth his Son, made of a woman, made under the law,\""
+   ],
+   "source": "debate e7f6922f (run 42373), challenger_r3"
+  },
+  {
+   "id": "N15",
+   "n": 15,
+   "witness": "Leviticus 19:19 \"Thou shalt not let thy cattle gender with a diverse kind\"",
+   "round": "DR1",
+   "takes": "The statute is addressed to \"ye\", Israel, about cattle, field and garment.",
+   "layer_lines": [
+    "[L1] Leviticus 19:19: \"Ye shall keep my statutes. Thou shalt not let thy cattle gender with a diverse kind: thou shalt not sow thy field with mingled seed: neither shall a garment mingled of linen and woollen come upon thee.\"",
+    "[L1] Genesis 2:7: \"And the LORD God formed man [of] the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul. [of the dust...: Heb. dust of the ground]\"",
+    "[L1] Genesis 2:22: \"And the rib, which the LORD God had taken from man, made he a woman, and brought her unto the man. [made: Heb. builded]\"",
+    "[L1] Luke 1:35: \"And the angel answered and said unto her, The Holy Ghost shall come upon thee, and the power of the Highest shall overshadow thee: therefore also that holy thing which shall be born of thee shall be called the Son of God.\"",
+    "[L3] 1 Corinthians 15:39: \"All flesh [is] not the same flesh: but [there is] one [kind of] flesh of men, another flesh of beasts, another of fishes, [and] another of birds.\""
+   ],
+   "source": "debate e7f6922f (run 42373), engine_r1"
+  },
+  {
+   "id": "N16",
+   "n": 16,
+   "witness": "Luke 1:36 \"And, behold, thy cousin Elisabeth, she hath also conceived a son in her old age\"",
+   "round": "DR3",
+   "takes": "Mary's descent from David is carried by Luke 3:23-31, not by this row.",
+   "layer_lines": [
+    "[L1] Luke 1:36: \"And, behold, thy cousin Elisabeth, she hath also conceived a son in her old age: and this is the sixth month with her, who was called barren.\"",
+    "[L2] syngenēs (G4773): \"a relative (by blood)\".",
+    "[L3] Luke 1:5: \"There was in the days of Herod, the king of Judaea, a certain priest named Zacharias, of the course of Abia: and his wife [was] of the daughters of Aaron, and her name [was] Elisabeth.\""
+   ],
+   "source": "debate e7f6922f (run 42373), challenger_r3"
+  },
+  {
+   "id": "N17",
+   "n": 17,
+   "witness": "John 6:42 \"Is not this Jesus, the son of Joseph, whose father and mother we know?\"",
+   "round": "DR2",
+   "takes": "The speakers of \"we know\" are the murmurers, and they set that sonship against \"I came down from heaven\".",
+   "layer_lines": [
+    "[L1] John 6:42: \"And they said, Is not this Jesus, the son of Joseph, whose father and mother we know? how is it then that he saith, I came down from heaven?\"",
+    "[L3] John 6:41: \"The Jews then murmured at him, because he said, I am the bread which came down from heaven.\""
+   ],
+   "source": "debate e7f6922f (run 42373), engine_r2"
+  },
+  {
+   "id": "N18",
+   "n": 18,
+   "witness": "Jeremiah 22:24 \"though Coniah the son of Jehoiakim king of Judah were the signet upon my right hand, yet would I pluck thee thence\"",
+   "round": "DR3",
+   "takes": "It plucks the same man from the signet place before verse 30 closes the throne to his seed.",
+   "layer_lines": [
+    "[L1] Jeremiah 22:24: \"[As] I live, saith the LORD, though Coniah the son of Jehoiakim king of Judah were the signet upon my right hand, yet would I pluck thee thence;\"",
+    "[L2] chôwthâm (H2368): \"a signature-ring; seal, signet\".",
+    "[L3] Jeremiah 22:30: \"Thus saith the LORD, Write ye this man childless, a man [that] shall not prosper in his days: for no man of his seed shall prosper, sitting upon the throne of David, and ruling any more in Judah.\""
+   ],
+   "source": "debate e7f6922f (run 42373), challenger_r3"
+  },
+  {
+   "id": "N19",
+   "n": 19,
+   "witness": "Genesis 2:22 \"And the rib, which the LORD God had taken from man, made he a woman\"",
+   "round": "DR3",
+   "takes": "What is born of her is of that kind.",
+   "layer_lines": [
+    "[L1] Genesis 2:22: \"And the rib, which the LORD God had taken from man, made he a woman, and brought her unto the man. [made: Heb. builded]\"",
+    "[L2] bânâh (H1129): \"to build\".",
+    "[L3] Genesis 2:23: \"And Adam said, This [is] now bone of my bones, and flesh of my flesh: she shall be called Woman, because she was taken out of Man. [Woman: Heb. Isha] [Man: Heb. Ish]\""
+   ],
+   "source": "debate e7f6922f (run 42373), challenger_r3"
+  },
+  {
+   "id": "N20",
+   "n": 20,
+   "witness": "Colossians 2:8 \"after the tradition of men, after the rudiments of the world, and not after Christ\"",
+   "round": "DR3",
+   "takes": "His resolve is the resolve of a man who has found a wife with child and does not count the child his.",
+   "layer_lines": [
+    "[L1] Colossians 2:8: \"Beware lest any man spoil you through philosophy and vain deceit, after the tradition of men, after the rudiments of the world, and not after Christ. [rudiments: or, elements] [make a prey: or, seduce you, or, lead you astray]\"",
+    "[L2] paradosis (G3862): \"transmission, i.e. (concretely) a precept\".",
+    "[L3] Mark 7:8: \"For laying aside the commandment of God, ye hold the tradition of men, [as] the washing of pots and cups: and many other such like things ye do.\""
+   ],
+   "source": "debate e7f6922f (run 42373), challenger_r3"
+  }
+ ]
+}
