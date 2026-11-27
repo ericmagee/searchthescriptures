@@ -1,0 +1,642 @@
+[
+ {
+  "n": 1,
+  "send": 1,
+  "answer": "ACCOUNTS -- \"the chain from woman's seed to made-of-woman flesh yields Davidic flesh without requiring loins of a begetting man\"",
+  "finish": "stop",
+  "model": "openai/gpt-6-luna",
+  "usage": {
+   "prompt_tokens": 4713,
+   "completion_tokens": 117,
+   "total_tokens": 4830,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4710,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001059,
+    "upstream_inference_prompt_cost": 4.74e-05,
+    "upstream_inference_completions_cost": 5.85e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 81,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795750831-WxJ23HjtPb2sCQhfacK3",
+  "error": null
+ },
+ {
+  "n": 2,
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"The rows that affirm no man begetting Jesus carry the case [L4]; no verse is required to state a conclusion in its own words [L4].\"",
+  "finish": "stop",
+  "model": "openai/gpt-6-luna",
+  "usage": {
+   "prompt_tokens": 4643,
+   "completion_tokens": 285,
+   "total_tokens": 4928,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4640,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001892,
+    "upstream_inference_prompt_cost": 4.67e-05,
+    "upstream_inference_completions_cost": 0.0001425
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 240,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795750831-v88AhTEsaj6KxWgCorJV",
+  "error": null
+ },
+ {
+  "n": 3,
+  "send": 1,
+  "answer": "ACCOUNTS -- \"begat stops at husband of Mary and birth is of her, not begotten by him.\"",
+  "finish": "stop",
+  "model": "openai/gpt-6-luna",
+  "usage": {
+   "prompt_tokens": 4637,
+   "completion_tokens": 101,
+   "total_tokens": 4738,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 168,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011646,
+    "upstream_inference_prompt_cost": 6.596e-05,
+    "upstream_inference_completions_cost": 5.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 71,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795750831-qW616LW5CxXU15Bdqblt",
+  "error": null
+ },
+ {
+  "n": 4,
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"I will set up thy seed after thee, which shall proceed out of thy bowels\"",
+  "finish": "stop",
+  "model": "openai/gpt-6-luna",
+  "usage": {
+   "prompt_tokens": 4635,
+   "completion_tokens": 87,
+   "total_tokens": 4722,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4632,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 9.012e-05,
+    "upstream_inference_prompt_cost": 4.662e-05,
+    "upstream_inference_completions_cost": 4.35e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 57,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795750831-LSEpzYmgbe7a279p7s5s",
+  "error": null
+ },
+ {
+  "n": 5,
+  "send": 1,
+  "answer": "ACCOUNTS -- \"Thy father with G3962 pater is Mary's speech\"",
+  "finish": "stop",
+  "model": "openai/gpt-6-luna",
+  "usage": {
+   "prompt_tokens": 4664,
+   "completion_tokens": 89,
+   "total_tokens": 4753,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 195,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000113835,
+    "upstream_inference_prompt_cost": 6.9335e-05,
+    "upstream_inference_completions_cost": 4.45e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 66,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795750831-UZnoVn0aAff6Z8uPSbMl",
+  "error": null
+ },
+ {
+  "n": 6,
+  "send": 1,
+  "answer": "ACCOUNTS -- \"excluding begetting by Joseph.\"",
+  "finish": "stop",
+  "model": "openai/gpt-6-luna",
+  "usage": {
+   "prompt_tokens": 4621,
+   "completion_tokens": 114,
+   "total_tokens": 4735,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4618,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00010348,
+    "upstream_inference_prompt_cost": 4.648e-05,
+    "upstream_inference_completions_cost": 5.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 97,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795750831-xaSilxP5azxhsjocr18y",
+  "error": null
+ },
+ {
+  "n": 7,
+  "send": 1,
+  "answer": "ACCOUNTS -- \"not knowing till birth\"",
+  "finish": "stop",
+  "model": "openai/gpt-6-luna",
+  "usage": {
+   "prompt_tokens": 4624,
+   "completion_tokens": 100,
+   "total_tokens": 4724,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4621,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 9.651e-05,
+    "upstream_inference_prompt_cost": 4.651e-05,
+    "upstream_inference_completions_cost": 5e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 84,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795750831-3hk14jZd6zBVllUYEPid",
+  "error": null
+ },
+ {
+  "n": 8,
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"Jesus had no biological father.\"",
+  "finish": "stop",
+  "model": "openai/gpt-6-luna",
+  "usage": {
+   "prompt_tokens": 4623,
+   "completion_tokens": 120,
+   "total_tokens": 4743,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 154,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012421,
+    "upstream_inference_prompt_cost": 6.421e-05,
+    "upstream_inference_completions_cost": 6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 102,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795750831-rOc9J8bPzNdCXfvhmIq6",
+  "error": null
+ },
+ {
+  "n": 9,
+  "send": 1,
+  "answer": "ACCOUNTS -- \"with no loins of a begetting man stated\"",
+  "finish": "stop",
+  "model": "openai/gpt-6-luna",
+  "usage": {
+   "prompt_tokens": 4639,
+   "completion_tokens": 284,
+   "total_tokens": 4923,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 4636,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0007218,
+    "upstream_inference_prompt_cost": 0.0005798,
+    "upstream_inference_completions_cost": 0.000142
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 262,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795750831-l4UdHvcyNhtqLY9FK1gz",
+  "error": null
+ },
+ {
+  "n": 10,
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"H2233 zera (\"seed; figuratively, fruit, plant, sowing-time, posterity; [idiom] carnally, child, fruitful, seed(-time), sowing-time\") in 2 Samuel 7:12\"",
+  "finish": "stop",
+  "model": "openai/gpt-6-luna",
+  "usage": {
+   "prompt_tokens": 4661,
+   "completion_tokens": 139,
+   "total_tokens": 4800,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4658,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011638,
+    "upstream_inference_prompt_cost": 4.688e-05,
+    "upstream_inference_completions_cost": 6.95e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 77,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795750831-XrJDWavFSpDVQ4xsbegO",
+  "error": null
+ },
+ {
+  "n": 1,
+  "send": 2,
+  "answer": "ACCOUNTS -- \"the chain from woman's seed to made-of-woman flesh yields Davidic flesh without requiring loins of a begetting man\"",
+  "finish": "stop",
+  "model": "openai/gpt-6-luna",
+  "usage": {
+   "prompt_tokens": 4713,
+   "completion_tokens": 115,
+   "total_tokens": 4828,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 244,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00013296,
+    "upstream_inference_prompt_cost": 7.546e-05,
+    "upstream_inference_completions_cost": 5.75e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 79,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795750831-eW2G16TojzdVs7wXE1dk",
+  "error": null
+ },
+ {
+  "n": 2,
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"The rows that affirm no man begetting Jesus carry the case\"",
+  "finish": "stop",
+  "model": "openai/gpt-6-luna",
+  "usage": {
+   "prompt_tokens": 4643,
+   "completion_tokens": 82,
+   "total_tokens": 4725,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 174,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00010771,
+    "upstream_inference_prompt_cost": 6.671e-05,
+    "upstream_inference_completions_cost": 4.1e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 57,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795750831-pT8zwxja4Ag9wB1bGr3U",
+  "error": null
+ },
+ {
+  "n": 3,
+  "send": 2,
+  "answer": "ACCOUNTS -- \"begat stops at husband of Mary and birth is of her, not begotten by him.\"",
+  "finish": "stop",
+  "model": "openai/gpt-6-luna",
+  "usage": {
+   "prompt_tokens": 4637,
+   "completion_tokens": 82,
+   "total_tokens": 4719,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 168,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00010696,
+    "upstream_inference_prompt_cost": 6.596e-05,
+    "upstream_inference_completions_cost": 4.1e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 52,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795750831-hlT12DKk1JoYE9f2KfGH",
+  "error": null
+ },
+ {
+  "n": 4,
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"I will set up thy seed after thee, which shall proceed out of thy bowels\"",
+  "finish": "stop",
+  "model": "openai/gpt-6-luna",
+  "usage": {
+   "prompt_tokens": 4635,
+   "completion_tokens": 64,
+   "total_tokens": 4699,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 166,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 9.771e-05,
+    "upstream_inference_prompt_cost": 6.571e-05,
+    "upstream_inference_completions_cost": 3.2e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 34,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795750831-CiKpb2v9YGYINwSgF96Q",
+  "error": null
+ },
+ {
+  "n": 5,
+  "send": 2,
+  "answer": "ACCOUNTS -- \"Thy father with G3962 pater is Mary's speech\"",
+  "finish": "stop",
+  "model": "openai/gpt-6-luna",
+  "usage": {
+   "prompt_tokens": 4664,
+   "completion_tokens": 76,
+   "total_tokens": 4740,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4661,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 8.491e-05,
+    "upstream_inference_prompt_cost": 4.691e-05,
+    "upstream_inference_completions_cost": 3.8e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 53,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795750831-645aTcALqJVF1QDB49EW",
+  "error": null
+ },
+ {
+  "n": 6,
+  "send": 2,
+  "answer": "ACCOUNTS -- \"excluding begetting by Joseph\"",
+  "finish": "stop",
+  "model": "openai/gpt-6-luna",
+  "usage": {
+   "prompt_tokens": 4621,
+   "completion_tokens": 259,
+   "total_tokens": 4880,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 152,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00019346,
+    "upstream_inference_prompt_cost": 6.396e-05,
+    "upstream_inference_completions_cost": 0.0001295
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 242,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795750831-3yjpWPpkNW3lxy28CixN",
+  "error": null
+ },
+ {
+  "n": 7,
+  "send": 2,
+  "answer": "ACCOUNTS -- \"not knowing till birth covers the taking and the espousal alike.\"",
+  "finish": "stop",
+  "model": "openai/gpt-6-luna",
+  "usage": {
+   "prompt_tokens": 4624,
+   "completion_tokens": 93,
+   "total_tokens": 4717,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4466,
+    "cache_write_tokens": 155,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000110835,
+    "upstream_inference_prompt_cost": 6.4335e-05,
+    "upstream_inference_completions_cost": 4.65e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 69,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795750831-HbxYaFl4sEBPzoTem7En",
+  "error": null
+ },
+ {
+  "n": 8,
+  "send": 2,
+  "answer": "ACCOUNTS -- \"Jesus had no biological father.\"",
+  "finish": "stop",
+  "model": "openai/gpt-6-luna",
+  "usage": {
+   "prompt_tokens": 4623,
+   "completion_tokens": 212,
+   "total_tokens": 4835,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4620,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001525,
+    "upstream_inference_prompt_cost": 4.65e-05,
+    "upstream_inference_completions_cost": 0.000106
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 195,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795750831-XzhBOccjg00gTSBUoKSN",
+  "error": null
+ },
+ {
+  "n": 9,
+  "send": 2,
+  "answer": "ACCOUNTS -- \"Davidic flesh\"",
+  "finish": "stop",
+  "model": "openai/gpt-6-luna",
+  "usage": {
+   "prompt_tokens": 4639,
+   "completion_tokens": 119,
+   "total_tokens": 4758,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 4636,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00010616,
+    "upstream_inference_prompt_cost": 4.666e-05,
+    "upstream_inference_completions_cost": 5.95e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 104,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795750831-q6ArTPqUjzeeieNPVmxc",
+  "error": null
+ },
+ {
+  "n": 10,
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"H2233 zera (\"seed; figuratively, fruit, plant, sowing-time, posterity; [idiom] carnally, child, fruitful, seed(-time), sowing-time\") in 2 Samuel 7:12\"",
+  "finish": "stop",
+  "model": "openai/gpt-6-luna",
+  "usage": {
+   "prompt_tokens": 4661,
+   "completion_tokens": 151,
+   "total_tokens": 4812,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 4658,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00065805,
+    "upstream_inference_prompt_cost": 0.00058255,
+    "upstream_inference_completions_cost": 7.55e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 89,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795750831-ECNoRLVpE72NF8MpVVFz",
+  "error": null
+ }
+]
