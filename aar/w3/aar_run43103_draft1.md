@@ -24,14 +24,14 @@ The Oracle's answer (round 4): the words are there "to mark the child's consecra
 Sol62: the verses "put the Holy Ghost with the conception of the child carried by the virgin, not merely with consecration of a child already begotten by Joseph."
 Answered or not: answered; the answer was judged to change what the verse says.
 Cause: the Oracle's argument. W1 adds: the step "Joseph knew Mary his wife within the espousal" is inferred from Genesis 4:1, Acts 2:30 and Romans 1:3; no quoted row states it. Sol graded this link UNDERDETERMINED.
-4. Sol changed its verdict and the engine did not read it. Cause: the engine. On the send-back sol wrote a whole new judgment: HELD, WHICH HOLDS: DEFENDER, links D4 and D6 no longer broken. It wrote no send-back answer lines, so the engine read none of it, kept the first verdict BROKEN, and removed the seat.
+4. Sol changed its verdict and the engine did not read it. Cause: the engine. On the send-back sol wrote a whole new judgment: HELD, WHICH HOLDS: DEFENDER, links D4 and D6 no longer broken. It wrote no send-back answer lines, so the engine read none of it, kept the first verdict BROKEN, and removed the seat. The send-back it answered carried 8 enforcer marks of the form "(right: X)", 5 of them STANDS; sol's change followed those marks (W1). Whether such a reply should be read touches ruling 428 and is the operator's call (ASK 673).
 5. The third seat held for the Oracle. Sonnet: HELD, WHICH HOLDS: DEFENDER; every collision UNDERDETERMINED; challenger chain STRAINED, because it "takes as given that Mary is of David while no quoted row gives it". Sonnet was removed by an engine defect (BUGS 1).
 6. Carried from run 42528: "of the Holy Ghost" lost as a meaning (ASK 659). RECURRED. New in this run: both sol seats name Luke 1:34 to 1:35, question and answer, as the deciding place.
 7. Carried to the next run as its primary objective: (a) to (d) above; the unread change of verdict; ASK 659.
 
 BUGS.
-1. Error: W4 (the builder). The assumption check (ASK 531) could not find the challenger's quoted verses. Its verse reader (ASK 524) reads only the form Reference "quote". The challenger wrote "quote" (Reference) in rounds 1 and 3, so the reader found 0 verses in each. Sonnet's correct answer on one item, quoting Matthew 1:23, was refused. That one item removed the only seat that held for the Oracle. The alternate terra was refused the same way. W1 confirmed it by replay and found the Oracle's rounds 1 and 2 give 0 verses too.
-2. A send-back reply written as a whole new judgment is not read. Sol: 23 items uncured, all "no answer to the send-back"; its change of verdict to HELD was lost.
+1. Error: W4 (the builder). The assumption check (ASK 531) could not find the challenger's quoted verses. Its verse reader (ASK 524) reads only the form Reference "quote". The challenger wrote "quote" (Reference) in rounds 1 and 3, so the reader found 0 verses in each. Sonnet's correct answer on one item, quoting Matthew 1:23, was refused. That one item removed the only seat that held for the Oracle. The alternate terra was refused the same way. W1 confirmed it by replay and found the Oracle's rounds 1 and 2 give 0 verses too. Fix plan: ASK 672 (W4; W1 passed the plan).
+2. A send-back reply written as a whole new judgment is not read. Sol: 23 items uncured, all "no answer to the send-back"; its change of verdict to HELD was lost. Plan: ASK 673 (W4; W1 passed the plan; the operator chooses the option).
 3. Sol62 removed on 6 assumption items. Its changes regraded premises the items did not name. The refusal is the rule as written. W4 traces the judge's confusion to item 4.
 4. Round labels follow the table column, not the side, when the Oracle defends. Judges wrote "erroneous round labels". Cause not yet read in code.
 5. A question-round answer from the Oracle came back empty at 4,000 output tokens (finish "length"). Same class as defect 5 of run 42528.
@@ -109,8 +109,8 @@ WHAT WENT RIGHT. The Matthew 1:19 correction held on its first run. The reserve 
 WHAT WENT WRONG. The Oracle repeated one answer four times on the verse that decided two seats. Its one direct question on that verse returned empty. The only seat that held was removed by a reader defect. A judge's change of verdict to HELD was not read. No verdict was counted.
 
 SUGGESTED IMPROVEMENTS. Each needs a plan, a grade and the operator's card.
-1. The verse reader takes both quoting forms, on both sides.
-2. A send-back reply with no answer lines is sent back once for the form before the seat is removed.
+1. The verse reader takes both quoting forms, on both sides (ASK 672, planned).
+2. A send-back reply written as a whole judgment is recorded, and the seat is asked once more in the required form (ASK 673, planned; his choice of option).
 3. An empty question-round answer is asked again.
 4. Round labels follow the side.
 5. Each removed seat draws its own alternate.
@@ -120,4 +120,4 @@ KNOWLEDGE BASE. YES. Entry: a judge's stored verdict is its first one; a send-ba
 FOR THE OPERATOR.
 1. The run was not clean: no verdict, and bug 1 is an engine defect that removed the holding seat.
 2. ASK 659 is not resolved by this run. His word of 11-25: "if this this isn't resolved after the next run ... I'll provide a solution."
-3. Nothing was changed. The five suggested improvements wait for plans and his cards.
+3. Nothing was changed. ASK 672 and ASK 673 are planned and come to him as cards; improvements 3, 4 and 5 have no plan yet.
