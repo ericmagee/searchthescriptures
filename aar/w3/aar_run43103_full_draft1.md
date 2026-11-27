@@ -275,10 +275,10 @@ WHAT WENT WRONG.
 
 SUGGESTED IMPROVEMENTS.
 Nothing below is written. Each write needs the operator's card.
-1. ASK 672 (the verse reader). The first fix (two quote forms) was not accepted by the operator, 12:56 CST 11-27: "I don't like that fix ... we can't hard code for every model and it different versions." He asked at 12:58 CST, "what if we ignore the checking for quotes?", and withdrew it at 12:59 CST: "request withdrawn ... we need another solution". So the quote check stays, with no form per model. The reworked plan carries two options. Its grade is not in. No card yet.
+1. ASK 672 (the verse reader). The first fix (two quote forms) was not accepted by the operator, 12:56 CST 11-27: "I don't like that fix ... we can't hard code for every model and it different versions." He asked at 12:58 CST, "what if we ignore the checking for quotes?", and withdrew it at 12:59 CST: "request withdrawn ... we need another solution". So the quote check stays, with no form per model. The reworked plan carries two options. Graded: option B PASS; option C FAIL on one point. No card yet.
 Option B: accept a judge's kept line when its quoted words (4 or more in a row) stand anywhere in the side's rounds 1 to 3. On this run it cures 12 of 12. Four of the 12 are cured on the side's own prose, not verse words.
-Option C (W4 recommends): one rule for any order. A quotation is joined to the reference next to it, before or after. On this run it cures 8 of 12, including the item that removed sonnet. The 4 refused are the 4 prose quotations. Tested on 439 stored runs, both sides, 42 model names: 77,841 verses found against the old reader's 46,485, and fewer in 0 rounds. Trade-off: some of what it finds may be a phrase quoted next to a reference.
-2. ASK 682 (a proven press marked unproven). Plan: remove the clause-search fallback in the floor, so a mind-verb claim is read only when the person stands in the two words before the verb. Replay on 11 runs, 552 presses: 3 change, all from UNPROVEN to PROVEN (this run's Luke 1:34, and one press each in two earlier runs). The floor has four copies; all four change. Its grade is not in. No card yet.
+Option C (W4 recommends): one rule for any order. A quotation is joined to the reference next to it, before or after. On this run it cures 8 of 12, including the item that removed sonnet. The 4 refused are the 4 prose quotations. Tested on 439 stored runs, both sides, 23 challenger and 20 defender model names: 77,841 verses found against the old reader's 46,485, and fewer in 0 rounds. Trade-off: some of what it finds may be a phrase quoted next to a reference. The point it failed on: in a list written "quote" (Reference), "quote" (Reference), it joins the second quotation to the first reference, so verse words would stand under the wrong verse. 3,139 such lists in 299 of the 439 runs fit the case. W4 owes a corrected plan.
+2. ASK 682 (a proven press marked unproven). Plan: remove the clause-search fallback in the floor, so a mind-verb claim is read only when the person stands in the two words before the verb. Replay on 11 runs, 552 presses: 3 change, all from UNPROVEN to PROVEN (this run's Luke 1:34, and one press each in two earlier runs). The floor has four copies; all four change. Plan graded PASS WITH C1 TO C3. What the fix gives up: a claim whose person stands farther back in the clause is no longer checked. No card yet.
 3. ASK 673 (a send-back reply written as a whole judgment). Plan graded PASS. Card: with the operator, options A, B and C; B recommended. ASK 643 rides with it.
 4. ASK 674 (question-round answers use the debater's own limit). Plan graded PASS WITH C1. Card: with the operator. ASK 644 rides with it.
 5. ASK 642 and ASK 647: built and graded PASS; not written.
@@ -298,8 +298,8 @@ FOR THE OPERATOR.
 2. ASK 659 is not resolved by this run. His word of 11-25: "if this this isn't resolved after the next run ... I'll provide a solution."
 3. Card with him: ASK 673, options A, B and C.
 4. Card with him: ASK 674, the question-round limit.
-5. Card to come: ASK 672, options B and C, after its grade.
-6. Card to come: ASK 682, after its grade.
+5. Card to come: ASK 672, after option C is corrected and graded.
+6. Card to come: ASK 682; its plan is graded.
 7. Question not answered: the Anthropic usage limit (raise it, or use debaters that are not Anthropic models).
 8. His choice owed: ASK 638 part B; the database test for ASK 630 and ASK 631.
 9. Held by him until after a clean run: ASK 664 Part 1, ASK 665, ASK 659, ASK 660, ASK 663, ASK 667.
