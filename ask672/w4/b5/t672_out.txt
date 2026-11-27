@@ -1,0 +1,13 @@
+PASS REV5 "a virgin shall be with child" (Matthew 1:23); "I know not a man" (Luk {"Matthew 1:23":["a virgin shall be with child"],"Luke 1:34":["I know not a man"]}
+PASS REV5 Matthew 1:23 "a virgin shall be with child"; Luke 1:34 "I know not a m {"Matthew 1:23":["a virgin shall be with child"],"Luke 1:34":["I know not a man"]}
+PASS REV5 Matthew 1:23: "a virgin shall be with child" Luke 1:34: "I know not a  {"Matthew 1:23":["a virgin shall be with child"],"Luke 1:34":["I know not a man"]}
+PASS REV5 "a virgin shall be with child" (Matthew 1:23), "I know not a man" (Luk {"Matthew 1:23":["a virgin shall be with child"],"Luke 1:34":["I know not a man"],"Luke 1:35":["the Holy Ghost shall come upon thee"]}
+PASS REV5 Luke 1:34 margin: "I know not a man" {"Luke 1:34":["I know not a man"]}
+PASS REV5 "I know not a man" -- Luke 1:34 {}
+PASS REV5 "a virgin shall be with child" Luke 1:34 "I know not a man" {"Luke 1:34":["I know not a man"]}
+PASS REV5 Isaiah 7:14 "Behold, a virgin shall conceive" (Isaiah 7:14); "I know n {"Isaiah 7:14":["Behold, a virgin shall conceive"],"Luke 1:34":["I know not a man"]}
+B3o DIFFERS "not ever")" PRESSED WITH: Luke 1:34 "How shall this be, seeing I know {}
+PASS REV5 "not ever")" PRESSED WITH: Luke 1:34 "How shall this be, seeing I know {"Luke 1:34":["How shall this be, seeing I know not a man?"],"Luke 1:35":["The Holy Ghost shall come upon thee"],"Luke 1:27":["the virgin's name was Mary."]}
+PASS REV5 "his parents," Luke 2:41; "Joseph and his mother," Luke 2:33 {"Luke 2:41":["Joseph and his mother,"]}
+PASS REV5 The Son is called "thy father" (*patḗr*, G3962) in that verse {}
+B3 PASS 11 of 11 | rev 3 differs on 1

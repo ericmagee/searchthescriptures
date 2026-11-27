@@ -1,0 +1,13 @@
+QUERY 1
+side	models	runs	old	rev5	rounds_rev5_below_old	rounds_old_zero
+CH	23	439	26598	39110	0	228
+DE	20	439	19887	28650	0	238
+QUERY 2
+form	checked	in_verse	off_verse
+REV5_BEF	39399	38835	564 (1.4%)
+REV5_AFT	7804	7685	119 (1.5%)
+OLD	34200	33868	332 (1.0%)
+REV 4 EXAMINATION (W1 C6): the 10 rounds where rev 4 found fewer than the old reader.
+6 rounds: the old reader's entry was not a quotation. A stray mark of emphasis opened a false span, e.g. Acts 15:16 | ** — **SUPPORTED. (c3451aa9 engine_r2; 0d23e864 engine_r2 x2; 55621db7 claude_r1, claude_r2; 9f60ccbc claude_r2; cd68f830 engine_r3).
+4 rounds: real verses lost by rev 4. One unbalanced quote mark earlier in the text shifted rev 4's quote scan, which reads quote marks from the top: 3ee68a78 engine_r3 (Luke 1:35, Luke 1:27 after '"not ever")"'); 3014ed5a engine_r3 (Luke 1:35, Matthew 1:16); f5c75a6f engine_r2 (Luke 2:41, 1 Chronicles 28:6); b038fcf4 engine_r2 (Matthew 1:16, Matthew 1:5).
+Rev 5 reads each reference where it stands, with no scan of quote marks from the top. It finds fewer than the old reader in 0 rounds (QUERY 1), and its test t672 holds the 3ee68a78 text (PASS).

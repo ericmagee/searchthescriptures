@@ -1,0 +1,25 @@
+-- ASK 672 rev 5, W1 C6. Run by W4 via execute_sql, 11-27 ~13:25 CST, on every debate_results row with rounds 1 to 3 on both sides.
+-- SQL port of the readers. old = live vp524 (Ref "quote"). rev 5: a = Ref GAP "quote" (ref not followed by ")"), b = "quote" (Ref), ab = both on one quotation; rev5 = a + b - ab.
+-- Port limits: SQL excludes every reference followed by ")" from (a); the JS excludes it only when a quotation and "(" stand before it.
+-- QUERY 1 (counts per side):
+with f as (select id, coalesce(challenger_model, engine_model) cm, coalesce(defender_model, claude_model) dm, engine_r1, engine_r2, challenger_r3, claude_r1, claude_r2, engine_r3 from debate_results where engine_r1 is not null and claude_r1 is not null and engine_r3 is not null and challenger_r3 is not null),
+r as (select id,'CH' side,cm m,engine_r1 t from f union all select id,'CH',cm,engine_r2 from f union all select id,'CH',cm,challenger_r3 from f
+ union all select id,'DE',dm,claude_r1 from f union all select id,'DE',dm,claude_r2 from f union all select id,'DE',dm,engine_r3 from f),
+p as (select '((?:[123] )?[A-Z][a-z]+(?: of [A-Z][a-z]+)? [0-9]+:[0-9]+(?:[-–][0-9]+)?)' ref, '(?![[:space:]]*\))[[:space:]\]:,;.–—-]{0,12}(?:margin[[:space:]:]{0,3})?' gap, '["“]([^"”\n]{2,})["”]' q),
+c as (select side, m, id,
+ (select count(*) from regexp_matches(t, ref||'(?: margin)?:?[ \t]*'||q,'g')) old,
+ (select count(*) from regexp_matches(t, ref||gap||q,'g')) a,
+ (select count(*) from regexp_matches(t, q||'[[:space:],;.]{0,3}\([[:space:]]*'||ref||'[[:space:]]*\)','g')) b,
+ (select count(*) from regexp_matches(t, ref||gap||q||'[[:space:],;.]{0,3}\([[:space:]]*'||ref||'[[:space:]]*\)','g')) ab
+ from r, p where t is not null)
+select side, count(distinct m) models, count(distinct id) runs, sum(old) old, sum(a+b-ab) rev5, count(*) filter (where a+b-ab<old) rounds_rev5_below_old, count(*) filter (where old=0 and a+b-ab>0) rounds_old_zero from c group by side;
+-- QUERY 2 (KJV text test; clean quotations of 4+ words: no "..", "…", "*", "[", "(", "_"):
+with f as (select id, engine_r1, engine_r2, challenger_r3, claude_r1, claude_r2, engine_r3 from debate_results where engine_r1 is not null and claude_r1 is not null and engine_r3 is not null and challenger_r3 is not null),
+r as (select unnest(array[engine_r1,engine_r2,challenger_r3,claude_r1,claude_r2,engine_r3]) t from f),
+p as (select '((?:[123] )?[A-Z][a-z]+(?: of [A-Z][a-z]+)? [0-9]+:[0-9]+(?:[-–][0-9]+)?)' ref, '(?![[:space:]]*\))[[:space:]\]:,;.–—-]{0,12}(?:margin[[:space:]:]{0,3})?' gap, '["“]([^"”\n]{2,})["”]' q),
+j as (select 'REV5_BEF' form, m[1] ref, m[2] w from r, p, regexp_matches(r.t, ref||gap||q,'g') m where r.t is not null
+ union all select 'REV5_AFT', m[2], m[1] from r, p, regexp_matches(r.t, q||'[[:space:],;.]{0,3}\([[:space:]]*'||ref||'[[:space:]]*\)','g') m where r.t is not null),
+j2 as (select form, regexp_match(ref, '^(.*) ([0-9]+):([0-9]+)(?:[-–]([0-9]+))?$') x, trim(regexp_replace(lower(w), '[^a-z0-9]+', ' ', 'g')) nw from j where w !~ '\.\.|…|\*|\[|\(|_'),
+j3 as (select form, nw, (select ' '||trim(regexp_replace(lower(string_agg(k.text,' ' order by k.verse)), '[^a-z0-9]+', ' ', 'g'))||' ' from kjv_verses k where k.book=(case x[1] when 'Psalm' then 'Psalms' else x[1] end) and k.chapter=x[2]::int and k.verse between x[3]::int and coalesce(x[4]::int, x[3]::int)) vt from j2 where array_length(regexp_split_to_array(nw,' '),1) >= 4)
+select form, count(*) filter (where vt is not null) checked, count(*) filter (where vt like '% '||nw||' %') in_v, count(*) filter (where vt is not null and vt not like '% '||nw||' %') off_v from j3 group by form;
+-- The old reader's KJV figure used the same j2/j3 with j = old pattern: 34,200 checked, 332 off-verse.
