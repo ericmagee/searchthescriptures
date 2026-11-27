@@ -1,4 +1,4 @@
-SIGHT CORRECTIONS, FINDING 6 A (W3; DRAFT 2 for W1's check; takes C1 to C4 of Wall 12736 and the layered reading layers_finding6.md d22cd5d8). Nothing is written.
+SIGHT CORRECTIONS, FINDING 6 A (W3; DRAFT 3: W1 PASS WITH R1, Wall 12742, R1 applied in pair 3, nothing else changed; takes C1 to C4 of Wall 12736 and the layered reading layers_finding6.md d22cd5d8). Nothing is written.
 Operator, 10:07 CST 11-27 (W3 thread): "let's correct the sight now." Earlier, about 10:02 CST: the teaching sentence "was to counter the divorce rhetoric"; "My teaching included the cause based off social tradition and env." So the cause stays in his words; rows are set beneath it; nothing of its substance is removed.
 Each OLD string occurs exactly once in its sight (counted by SQL 10:0x CST). Leviticus 19:19 (finding 6 B) is not touched: by the layers it was not a flaw.
 
@@ -12,7 +12,7 @@ NEW: (Matthew 1:19, paradeigmatizo, "expose to infamy")
 
 PAIR 3. Sight 266, L4 step 3. The rows under the tradition step.
 OLD: (Mark 7:8, [L3] application: it speaks of washings, and Matthew names no tradition)
-NEW: ([L3] "teaching [for] doctrines the commandments of men", Mark 7:7; Mark 7:8; "Full well ye reject the commandment of God, that ye may keep your own tradition", Mark 7:9; the Lord carries it past the washings to father and mother, "Making the word of God of none effect through your tradition, which ye have delivered: and many such like things do ye", Mark 7:11-13; "after the tradition of men ... and not after Christ", Colossians 2:8; the same word of shame, "put [him] to an open shame", Hebrews 6:6)
+NEW: ([L3] "teaching [for] doctrines the commandments of men", Mark 7:7; Mark 7:8; "Full well ye reject the commandment of God, that ye may keep your own tradition", Mark 7:9; the Lord carries it past the washings to father and mother, Mark 7:10-12; "Making the word of God of none effect through your tradition, which ye have delivered: and many such like things do ye", Mark 7:13; "after the tradition of men ... and not after Christ", Colossians 2:8; the same word of shame, "put [him] to an open shame", Hebrews 6:6)
 
 PAIR 4. Sight 32 (row id 281). The layers set under the ground; the cause kept in the operator's words.
 OLD: The ground, by the operator's teaching of 2026-11-13: the stigma
