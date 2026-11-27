@@ -1,8 +1,9 @@
 ASK 664 PART 2, THE ENFORCER'S QUESTION, rev 3c as one text (W3 seat 33, 23:0x CST 2026-11-26). Parts graded PASS by W1, Wall 12519 and 12524. Sentence order assembled by W3. NOT SENT, NOT BUILT: waits on the operator's word. Operator rulings carried: 22:55 and 22:56 CST (one verse doctrine; layers), 22:58 CST "it just needs to be there to be informative, not the decision itself", 22:59 CST "Because if not, then that will put us back in the one verse doctrine square."
 
-WHAT THE ENFORCER IS SENT: the WITNESS words; the judge's TAKES sentence; then LAYER LINES CITED: the layer lines the TAKES cites, as stored, or "none".
+WHAT THE ENFORCER IS SENT (rev 3c.1, W1 12526 and W4 12527): the opening sentence "You do not judge the debate and you do not say which side is right."; the WITNESS words; THE JUDGE'S TAKES WORDS, from [<round>]; then LAYER LINES CITED: for each reference the judge's own tags name, the tag, the reference and its KJV words read from kjv_verses ([L1] and [L3]); an [L2] entry as the judge wrote it; [L4] is the judge's DECIDES sentence and is not sent; or "none". Choice (a) of W4 12527, pending W1's grade.
 
 THE QUESTION:
+You do not judge the debate and you do not say which side is right.
 Do the TAKES words take up this witness's own words: do they state a meaning for the witness words quoted above, or say how the position agrees with those words? Whether that meaning is right is not your question.
 A TAKES that reads this witness together with other verses and says how the position agrees with them all accounts for it; the witness is not required to state the point by itself.
 TAKES words do not account for the witness when they only name it, when they speak only of another verse or another matter without joining it to this witness, or when they state the position's conclusion without taking up the witness's own words.
