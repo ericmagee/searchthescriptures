@@ -1,0 +1,9 @@
+ASK 664 Part 2, test10 extension J11 to J14, debate 45f53596, W1 (seat 34) BLIND LABELS under rev 3g draft 2 (bd85eda5).
+From body_texts_j11_14.md as sent (md5 b0dfb265), in the model's own form, with the position line "Christ had no human biological father." Written before reading any other seat's labels or W4's key (69e0d463).
+
+J11 ACCOUNTS -- TAKES: "Matthew 17:5 [L3] thus shows God acting by presence and not by a man." -- WITNESS WORDS: "a bright cloud overshadowed them" -- SAYS HOW: "God acting by presence and not by a man". Sentence: "the TAKES must say, in its own written words, how that position agrees with what the witness says" (the overshadowing is restated as God's presence, and "not by a man" is the position, written). Counter: "thus" points back.
+J12 ACCOUNTS -- TAKES: "Matthew 1:16 [L1] breaks the "begat" pattern at Joseph, who is "the husband of Mary, of whom was born Jesus"." -- WITNESS WORDS: "Joseph the husband of Mary, of whom was born Jesus" -- SAYS HOW: "breaks the "begat" pattern at Joseph". Sentence: the read-together sentence (Matthew 1:2's pattern is shown); the bearing rests on what the witness states ("the husband of Mary, of whom"), not only on what it omits.
+J13 ACCOUNTS (thin) -- TAKES: "That is my link: reckoned son, not begotten son." -- WITNESS WORDS: "(as was supposed) the son of Joseph" -- SAYS HOW: "reckoned son, not begotten son". Sentence: "the TAKES must say, in its own written words, how that position agrees with what the witness says". Counter: the pointer sentence ("That is my link"); the words after the colon say it themselves.
+J14 DNA -- "Matthew 1:18 [L1] places the finding with child before the coming together". Sentence: "Do not supply a step the TAKES does not write.": it restates the witness's order; how the position agrees is not written. Shape of D20.
+
+SUMMARY: ACCOUNTS J11, J12, J13 (3). DNA J14 (1). Thin: J13.
