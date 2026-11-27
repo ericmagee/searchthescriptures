@@ -1,0 +1,1282 @@
+[
+ {
+  "id": "N1",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"So David's loins reach the child through the line Luke 3:31 gives, without the husband being the begetter.\" -- WITNESS WORDS: \"that of the fruit of his loins, according to the flesh, he would raise up Christ to sit on his throne\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5082,
+   "completion_tokens": 919,
+   "total_tokens": 6001,
+   "cost": 0.003712888,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 4480,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.003712888,
+    "upstream_inference_prompt_cost": 0.000404488,
+    "upstream_inference_completions_cost": 0.0033084
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 851,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-10Bay0sxLlkPyOtdQenw",
+  "error": null
+ },
+ {
+  "id": "N2",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"The \"fear\" is of taking her.\" -- WITNESS WORDS: \"fear not to take unto thee Mary thy wife\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5075,
+   "completion_tokens": 542,
+   "total_tokens": 5617,
+   "cost": 0.0044,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0044,
+    "upstream_inference_prompt_cost": 0.003045,
+    "upstream_inference_completions_cost": 0.001355
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 505,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-YKKTh99dDzFDwwbnGoAH",
+  "error": null
+ },
+ {
+  "id": "N3",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"The matter of Mark 7:8-9 is washings and the keeping of tradition, and that is the matter it states.\" -- WITNESS WORDS: \"ye hold the tradition of men, [as] the washing of pots and cups\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5040,
+   "completion_tokens": 4973,
+   "total_tokens": 10013,
+   "cost": 0.00786436,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00786436,
+    "upstream_inference_prompt_cost": 0.00090216,
+    "upstream_inference_completions_cost": 0.0069622
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 4912,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-hrHetKPeiz9p7i1P3ShO",
+  "error": null
+ },
+ {
+  "id": "N4",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"It is plain that he sprang out of Juda because Matthew 1:16 gives the house by Joseph and Luke 3:31 gives the seed by the woman.\" -- WITNESS WORDS: \"For [it is] evident that our Lord sprang out of Juda\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5048,
+   "completion_tokens": 540,
+   "total_tokens": 5588,
+   "cost": 0.00560464,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00560464,
+    "upstream_inference_prompt_cost": 0.00418984,
+    "upstream_inference_completions_cost": 0.0014148
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 474,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-AVwqqv6wJ5JqmrXPc6GY",
+  "error": null
+ },
+ {
+  "id": "N5",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"It fits the link.\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5055,
+   "completion_tokens": 65,
+   "total_tokens": 5120,
+   "cost": 0.002755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.002755,
+    "upstream_inference_prompt_cost": 0.0025275,
+    "upstream_inference_completions_cost": 0.0002275
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 52,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-y0GdwE3OXVoqrmRFHqY7",
+  "error": null
+ },
+ {
+  "id": "N6",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"They stand in Jacob's house by his word, \"[are] mine; as Reuben and Simeon\"\" -- WITNESS WORDS: \"[are] mine; as Reuben and Simeon, they shall be mine\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5103,
+   "completion_tokens": 731,
+   "total_tokens": 5834,
+   "cost": 0.0013800997,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0013800997,
+    "upstream_inference_prompt_cost": 0.0003566997,
+    "upstream_inference_completions_cost": 0.0010234
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 601,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-QrMt5FEXTiwsxQTSOoQw",
+  "error": null
+ },
+ {
+  "id": "N7",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"That is the reckoning by taking and naming.\" -- WITNESS WORDS: \"Take ye the sum\" and \"with the number of [their] names\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5064,
+   "completion_tokens": 2019,
+   "total_tokens": 7083,
+   "cost": 0.0073809,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0073809,
+    "upstream_inference_prompt_cost": 0.0035448,
+    "upstream_inference_completions_cost": 0.0038361
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1977,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-HKN4UxMHdcHFwVIecOr0",
+  "error": null
+ },
+ {
+  "id": "N8",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"The rule of 18:8 is stated for \"that nation\" with its own condition, the turning.\" -- WITNESS WORDS: \"If that nation, against whom I have pronounced, turn from their evil, I will repent of the evil that I thought to do unto them.\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5051,
+   "completion_tokens": 2520,
+   "total_tokens": 7571,
+   "cost": 0.004432129,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.004432129,
+    "upstream_inference_prompt_cost": 0.000904129,
+    "upstream_inference_completions_cost": 0.003528
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2457,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-nz3GOx0iFr4VJrQdgkNh",
+  "error": null
+ },
+ {
+  "id": "N9",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"Haggai gives the signet to Zerubbabel, called \"governor of Judah\", and that is the office Haggai names.\" -- WITNESS WORDS: \"and will make thee as a signet: for I have chosen thee\" (read with \"Speak to Zerubbabel, governor of Judah\")",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5218,
+   "completion_tokens": 557,
+   "total_tokens": 5775,
+   "cost": 0.0011445382,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0011445382,
+    "upstream_inference_prompt_cost": 0.0003647382,
+    "upstream_inference_completions_cost": 0.0007798
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 416,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-1lbpuO3wftEgmb2vKVZ8",
+  "error": null
+ },
+ {
+  "id": "N10",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"What is chosen is Zerubbabel himself, 'my servant', and the office named is 'governor', not one sitting upon the throne.\" -- WITNESS WORDS: \"will I take thee, O Zerubbabel, my servant, the son of Shealtiel, saith the LORD, and will make thee as a signet: for I have chosen thee\" (read together with \"Zerubbabel, governor of Judah\", Haggai 2:21).",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5134,
+   "completion_tokens": 790,
+   "total_tokens": 5924,
+   "cost": 0.0014603866,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 4480,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0014603866,
+    "upstream_inference_prompt_cost": 0.0003543866,
+    "upstream_inference_completions_cost": 0.001106
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 618,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-RRD6gFTgRI1CmvU22uY8",
+  "error": null
+ },
+ {
+  "id": "N11",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"The \"because\" gives Joseph's own reason for going up, namely his paternal descent.\" -- WITNESS WORDS: \"because he was of the house and lineage of David\" (Luke 2:4)",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5027,
+   "completion_tokens": 321,
+   "total_tokens": 5348,
+   "cost": 0.001555468,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 4480,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001555468,
+    "upstream_inference_prompt_cost": 0.000399868,
+    "upstream_inference_completions_cost": 0.0011556
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 268,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-dRo0f4dreBAydJV2orZV",
+  "error": null
+ },
+ {
+  "id": "N12",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"The house of David is told here of Joseph.\" -- WITNESS WORDS: \"espoused to a man whose name was Joseph, of the house of David\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5106,
+   "completion_tokens": 477,
+   "total_tokens": 5583,
+   "cost": 0.0010247094,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0010247094,
+    "upstream_inference_prompt_cost": 0.0003569094,
+    "upstream_inference_completions_cost": 0.0006678
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 434,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-Zy7KLvUdo5NcA2UYCNdh",
+  "error": null
+ },
+ {
+  "id": "N13",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"'His own body' is the body proper to the kind, and the kind is one flesh of men.\" -- WITNESS WORDS: \"and to every seed his own body\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5051,
+   "completion_tokens": 385,
+   "total_tokens": 5436,
+   "cost": 0.00745059,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00745059,
+    "upstream_inference_prompt_cost": 0.00601069,
+    "upstream_inference_completions_cost": 0.0014399
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 339,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-cHYBCqUxeXKs8Rlvhrdn",
+  "error": null
+ },
+ {
+  "id": "N14",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"David's fruit therefore reaches him as flesh through a woman of David's line.\" -- WITNESS WORDS: \"Of the fruit of thy body will I set upon thy throne\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5074,
+   "completion_tokens": 740,
+   "total_tokens": 5814,
+   "cost": 0.0013906726,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0013906726,
+    "upstream_inference_prompt_cost": 0.0003546726,
+    "upstream_inference_completions_cost": 0.001036
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 694,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-zC7NVx3psmaI8W5FB0YT",
+  "error": null
+ },
+ {
+  "id": "N15",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"The statute is addressed to \"ye\", Israel, about cattle, field and garment.\" -- these words state only to whom the witness is addressed and what it is about, without stating a meaning for \"Thou shalt not let thy cattle gender with a diverse kind\" or saying how the position agrees with those words.",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5187,
+   "completion_tokens": 364,
+   "total_tokens": 5551,
+   "cost": 0.0008721713,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0008721713,
+    "upstream_inference_prompt_cost": 0.0003625713,
+    "upstream_inference_completions_cost": 0.0005096
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 294,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-ySRzZwmz5dKlmmYwwGZX",
+  "error": null
+ },
+ {
+  "id": "N16",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"Mary's descent from David is carried by Luke 3:23-31, not by this row.\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5058,
+   "completion_tokens": 5706,
+   "total_tokens": 10764,
+   "cost": 0.0083419542,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0083419542,
+    "upstream_inference_prompt_cost": 0.0003535542,
+    "upstream_inference_completions_cost": 0.0079884
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5678,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-WQ1K4URzwzt00HfrROgv",
+  "error": null
+ },
+ {
+  "id": "N17",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"The speakers of \"we know\" are the murmurers, and they set that sonship against \"I came down from heaven\"\" -- WITNESS WORDS: \"Is not this Jesus, the son of Joseph, whose father and mother we know? how is it then that he saith, I came down from heaven?\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5015,
+   "completion_tokens": 3327,
+   "total_tokens": 8342,
+   "cost": 0.0050038685,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 4480,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0050038685,
+    "upstream_inference_prompt_cost": 0.0003460685,
+    "upstream_inference_completions_cost": 0.0046578
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 3194,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-bFo5axMCKLJUGjAGgzJZ",
+  "error": null
+ },
+ {
+  "id": "N18",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"It plucks the same man from the signet place before verse 30 closes the throne to his seed.\" -- WITNESS WORDS: \"though Coniah the son of Jehoiakim king of Judah were the signet upon my right hand, yet would I pluck thee thence\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5081,
+   "completion_tokens": 532,
+   "total_tokens": 5613,
+   "cost": 0.002319604,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 4480,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.002319604,
+    "upstream_inference_prompt_cost": 0.000404404,
+    "upstream_inference_completions_cost": 0.0019152
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 461,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-7AlK6hAkUAFFdNeCZ4LR",
+  "error": null
+ },
+ {
+  "id": "N19",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"What is born of her is of that kind.\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5038,
+   "completion_tokens": 7413,
+   "total_tokens": 12451,
+   "cost": 0.01417801,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 4480,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01417801,
+    "upstream_inference_prompt_cost": 0.00076048,
+    "upstream_inference_completions_cost": 0.01341753
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7395,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-27Y1Vg3EypUfA28wCMc1",
+  "error": null
+ },
+ {
+  "id": "N20",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"His resolve is the resolve of a man who has found a wife with child and does not count the child his.\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5079,
+   "completion_tokens": 463,
+   "total_tokens": 5542,
+   "cost": 0.0010032221,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0010032221,
+    "upstream_inference_prompt_cost": 0.0003550221,
+    "upstream_inference_completions_cost": 0.0006482
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 433,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-EjfjeKmu8xIjSG5l5VkG",
+  "error": null
+ },
+ {
+  "id": "N1",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"So David's loins reach the child through the line Luke 3:31 gives, without the husband being the begetter.\" -- WITNESS WORDS: \"that of the fruit of his loins, according to the flesh, he would raise up Christ to sit on his throne\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5082,
+   "completion_tokens": 1429,
+   "total_tokens": 6511,
+   "cost": 0.0023513518,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 4480,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0023513518,
+    "upstream_inference_prompt_cost": 0.0003507518,
+    "upstream_inference_completions_cost": 0.0020006
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1333,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-cJvvXH30sRNEd5UsOhdJ",
+  "error": null
+ },
+ {
+  "id": "N2",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"The \"fear\" is of taking her.\" -- WITNESS WORDS: \"fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5075,
+   "completion_tokens": 442,
+   "total_tokens": 5517,
+   "cost": 0.00290905,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00290905,
+    "upstream_inference_prompt_cost": 0.00096425,
+    "upstream_inference_completions_cost": 0.0019448
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 382,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-wl1WqDTNMJQiwR9LfYR3",
+  "error": null
+ },
+ {
+  "id": "N3",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"The matter of Mark 7:8-9 is washings and the keeping of tradition, and that is the matter it states.\" -- these words only name what the passage is about (its matter: washings and keeping tradition); they state no meaning for the witness's own words (\"ye hold the tradition of men, [as] the washing of pots and cups\") and say nothing of how the position agrees with those words.",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5040,
+   "completion_tokens": 2550,
+   "total_tokens": 7590,
+   "cost": 0.011534277,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 4096,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.011534277,
+    "upstream_inference_prompt_cost": 0.000354312,
+    "upstream_inference_completions_cost": 0.011179965
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2628,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-Zy11EFF68JgInnFJEOkk",
+  "error": null
+ },
+ {
+  "id": "N4",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"It is plain that he sprang out of Juda because Matthew 1:16 gives the house by Joseph and Luke 3:31 gives the seed by the woman\" -- WITNESS WORDS: \"For [it is] evident that our Lord sprang out of Juda\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5048,
+   "completion_tokens": 1047,
+   "total_tokens": 6095,
+   "cost": 0.0018186552,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0018186552,
+    "upstream_inference_prompt_cost": 0.0003528552,
+    "upstream_inference_completions_cost": 0.0014658
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 917,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-xfwohsShQiAViVBduvke",
+  "error": null
+ },
+ {
+  "id": "N5",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"It fits the link.\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5055,
+   "completion_tokens": 616,
+   "total_tokens": 5671,
+   "cost": 0.001767245,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001767245,
+    "upstream_inference_prompt_cost": 0.000904845,
+    "upstream_inference_completions_cost": 0.0008624
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 606,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-25wmdGuvHcaKhDH0hpni",
+  "error": null
+ },
+ {
+  "id": "N6",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"They stand in Jacob's house by his word, \"[are] mine; as Reuben and Simeon\".\" -- WITNESS WORDS: \"[are] mine; as Reuben and Simeon, they shall be mine\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5103,
+   "completion_tokens": 825,
+   "total_tokens": 5928,
+   "cost": 0.00229013,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 4480,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00229013,
+    "upstream_inference_prompt_cost": 0.00079688,
+    "upstream_inference_completions_cost": 0.00149325
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 767,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-9lYf3lkikrbWwg9WoUSi",
+  "error": null
+ },
+ {
+  "id": "N7",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"That is the reckoning by taking and naming\" -- WITNESS WORDS: \"Take ye the sum ... with the number of [their] names\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5064,
+   "completion_tokens": 5655,
+   "total_tokens": 10719,
+   "cost": 0.0082709736,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0082709736,
+    "upstream_inference_prompt_cost": 0.0003539736,
+    "upstream_inference_completions_cost": 0.007917
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5621,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-7Y5H9tqF967mUY6d7QG2",
+  "error": null
+ },
+ {
+  "id": "N8",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"The rule of 18:8 is stated for \"that nation\" with its own condition, the turning.\" -- WITNESS WORDS: \"If that nation, against whom I have pronounced, turn from their evil, I will repent of the evil that I thought to do unto them.\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5051,
+   "completion_tokens": 1516,
+   "total_tokens": 6567,
+   "cost": 0.0024709849,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 4480,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0024709849,
+    "upstream_inference_prompt_cost": 0.0003485849,
+    "upstream_inference_completions_cost": 0.0021224
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1448,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-1osuoWLHUYJv77SSMkH3",
+  "error": null
+ },
+ {
+  "id": "N9",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"Haggai gives the signet to Zerubbabel, called \"governor of Judah\", and that is the office Haggai names.\" -- WITNESS WORDS: \"and will make thee as a signet: for I have chosen thee\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5218,
+   "completion_tokens": 1496,
+   "total_tokens": 6714,
+   "cost": 0.003023942,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 4480,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.003023942,
+    "upstream_inference_prompt_cost": 0.000929542,
+    "upstream_inference_completions_cost": 0.0020944
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1261,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-6OPcg39rDdiW2cI2JlHW",
+  "error": null
+ },
+ {
+  "id": "N10",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"What is chosen is Zerubbabel himself, \"my servant\", and the office named is \"governor\", not one sitting upon the throne.\" -- WITNESS WORDS: \"will I take thee, O Zerubbabel, my servant... for I have chosen thee\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5134,
+   "completion_tokens": 864,
+   "total_tokens": 5998,
+   "cost": 0.00494514,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00494514,
+    "upstream_inference_prompt_cost": 0.00323442,
+    "upstream_inference_completions_cost": 0.00171072
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 795,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-fnLFzAYUBCmbflxaQvUy",
+  "error": null
+ },
+ {
+  "id": "N11",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"The \"because\" gives Joseph's own reason for going up, namely his paternal descent.\" -- WITNESS WORDS: \"because he was of the house and lineage of David\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5027,
+   "completion_tokens": 302,
+   "total_tokens": 5329,
+   "cost": 0.002968506,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 4352,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.002968506,
+    "upstream_inference_prompt_cost": 0.001839026,
+    "upstream_inference_completions_cost": 0.00112948
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 256,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-FWFsmEEeK1LQjsrb7tfw",
+  "error": null
+ },
+ {
+  "id": "N12",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"The house of David is told here of Joseph.\" -- WITNESS WORDS: \"espoused to a man whose name was Joseph, of the house of David\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5106,
+   "completion_tokens": 422,
+   "total_tokens": 5528,
+   "cost": 0.0009426534,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 5056,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0009426534,
+    "upstream_inference_prompt_cost": 0.0003518534,
+    "upstream_inference_completions_cost": 0.0005908
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 379,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-33L4bWMZSZpdVGoaabYp",
+  "error": null
+ },
+ {
+  "id": "N13",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"\"His own body\" is the body proper to the kind, and the kind is one flesh of men.\" -- WITNESS WORDS: \"and to every seed his own body\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5051,
+   "completion_tokens": 457,
+   "total_tokens": 5508,
+   "cost": 0.0023587104,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 4096,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0023587104,
+    "upstream_inference_prompt_cost": 0.0003550853,
+    "upstream_inference_completions_cost": 0.0020036251
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 404,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-qz9xsM2ZNr3DLtQMuVpg",
+  "error": null
+ },
+ {
+  "id": "N14",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"David's fruit therefore reaches him as flesh through a woman of David's line.\" -- WITNESS WORDS: \"Of the fruit of thy body will I set upon thy throne\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5074,
+   "completion_tokens": 524,
+   "total_tokens": 5598,
+   "cost": 0.0010832166,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 5056,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0010832166,
+    "upstream_inference_prompt_cost": 0.0003496166,
+    "upstream_inference_completions_cost": 0.0007336
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 478,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-GpMAhHRehYXvc7rsvDam",
+  "error": null
+ },
+ {
+  "id": "N15",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"The statute is addressed to \"ye\", Israel, about cattle, field and garment.\" \u2014 these words only state to whom the witness is addressed and what it is about; they name the witness's subjects (cattle, field, garment) without stating a meaning for \"Thou shalt not let thy cattle gender with a diverse kind\" or saying how the position agrees with those words.",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5187,
+   "completion_tokens": 480,
+   "total_tokens": 5667,
+   "cost": 0.001595289,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 5184,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001595289,
+    "upstream_inference_prompt_cost": 0.000923289,
+    "upstream_inference_completions_cost": 0.000672
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 396,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-ktf1xFpNvbiZAszN3ogb",
+  "error": null
+ },
+ {
+  "id": "N16",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"Mary's descent from David is carried by Luke 3:23-31, not by this row.\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5058,
+   "completion_tokens": 11164,
+   "total_tokens": 16222,
+   "cost": 0.0159780982,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 5056,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0159780982,
+    "upstream_inference_prompt_cost": 0.0003484982,
+    "upstream_inference_completions_cost": 0.0156296
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 11136,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-vwpxwXjjKEvOZS0Gx4EI",
+  "error": null
+ },
+ {
+  "id": "N17",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"The speakers of \"we know\" are the murmurers, and they set that sonship against \"I came down from heaven\"\" -- WITNESS WORDS: \"Is not this Jesus, the son of Joseph, whose father and mother we know?\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5015,
+   "completion_tokens": 1770,
+   "total_tokens": 6785,
+   "cost": 0.00677086,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 4480,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00677086,
+    "upstream_inference_prompt_cost": 0.00039886,
+    "upstream_inference_completions_cost": 0.006372
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1710,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-3CO3IBrr1fbzFRcIW78Y",
+  "error": null
+ },
+ {
+  "id": "N18",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"It plucks the same man from the signet place before verse 30 closes the throne to his seed.\" -- WITNESS WORDS: \"though Coniah the son of Jehoiakim king of Judah were the signet upon my right hand, yet would I pluck thee thence\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5081,
+   "completion_tokens": 1007,
+   "total_tokens": 6088,
+   "cost": 0.0017604819,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 4480,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0017604819,
+    "upstream_inference_prompt_cost": 0.0003506819,
+    "upstream_inference_completions_cost": 0.0014098
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 936,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-wusHVOILNGTzZlVKjNTt",
+  "error": null
+ },
+ {
+  "id": "N19",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"What is born of her is of that kind\" -- WITNESS WORDS: \"taken from man, made he a woman\"",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5038,
+   "completion_tokens": 7527,
+   "total_tokens": 12565,
+   "cost": 0.0210876,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0210876,
+    "upstream_inference_prompt_cost": 0.0030228,
+    "upstream_inference_completions_cost": 0.0180648
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7490,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-bLboGqdznRgu5xuhFNoC",
+  "error": null
+ },
+ {
+  "id": "N20",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"His resolve is the resolve of a man who has found a wife with child and does not count the child his.\" -- these words speak only of another matter (a man's resolve toward a wife with child) and never take up this witness's own words, \"after the tradition of men, after the rudiments of the world, and not after Christ\", by stating a meaning for them or saying how the position agrees with them.",
+  "finish": "stop",
+  "model": "z-ai/glm-5.3",
+  "usage": {
+   "prompt_tokens": 5079,
+   "completion_tokens": 467,
+   "total_tokens": 5546,
+   "cost": 0.002085436,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 4480,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.002085436,
+    "upstream_inference_prompt_cost": 0.000404236,
+    "upstream_inference_completions_cost": 0.0016812
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 373,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "gen_id": "gen-1795756359-ZQ3oELRXNbS0eNo0uJsy",
+  "error": null
+ }
+]

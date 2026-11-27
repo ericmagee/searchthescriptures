@@ -1,0 +1,369 @@
+{
+ "ok": 12,
+ "of": 20,
+ "lenient": 0,
+ "strict": 8,
+ "cost": 0.609916,
+ "rows": [
+  {
+   "id": "N1",
+   "key": "A",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"So David's loins reach the child through the line Luke 3:31 gives, without the husband being the begetter.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"So David's loins reach the child through the line Luke 3:31 gives, without the husband being the begetter.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": false
+  },
+  {
+   "id": "N2",
+   "key": "A",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"The \"fear\" is of taking her.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"The \"fear\" is of taking her.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": false
+  },
+  {
+   "id": "N3",
+   "key": "DNA",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"The matter of Mark 7:8-9 is washings and the keeping of tradition, and that is the matter it states.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"The matter of Mark 7:8-9 is washings and the keeping of tradition, and that is the matter it states.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": true
+  },
+  {
+   "id": "N4",
+   "key": "A",
+   "s1": {
+    "raw": "ACCOUNTS -- TAKES: \"It is plain that he sprang out of Juda because Matthew 1:16 gives the house by Joseph and Luke 3:31 gives the seed by the woman.\" -- WITNESS WORDS: \"For [it is] evident that our Lord sprang out of Juda\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "s2": {
+    "raw": "ACCOUNTS -- TAKES: \"It is plain that he sprang out of Juda because Matthew 1:16 gives the house by Joseph and Luke 3:31 gives the seed by the woman.\" -- WITNESS WORDS: \"For [it is] evident that our Lord sprang out of Juda\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "final": "A",
+   "match": true
+  },
+  {
+   "id": "N5",
+   "key": "DNA",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"It fits the link.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"It fits the link.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": true
+  },
+  {
+   "id": "N6",
+   "key": "A",
+   "s1": {
+    "raw": "ACCOUNTS -- TAKES: \"They stand in Jacob's house by his word, \"[are] mine; as Reuben and Simeon\".\" -- WITNESS WORDS: \"[are] mine; as Reuben and Simeon, they shall be mine\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "s2": {
+    "raw": "ACCOUNTS -- TAKES: \"They stand in Jacob's house by his word, \"[are] mine; as Reuben and Simeon\".\" -- WITNESS WORDS: \"[are] mine; as Reuben and Simeon, they shall be mine\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "final": "A",
+   "match": true
+  },
+  {
+   "id": "N7",
+   "key": "A",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"That is the reckoning by taking and naming.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"That is the reckoning by taking and naming.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": false
+  },
+  {
+   "id": "N8",
+   "key": "A",
+   "s1": {
+    "raw": "ACCOUNTS -- TAKES: \"The rule of 18:8 is stated for \"that nation\" with its own condition, the turning.\" -- WITNESS WORDS: \"If that nation, against whom I have pronounced, turn from their evil, I will repent of the evil that I thought to do unto them.\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "s2": {
+    "raw": "ACCOUNTS -- TAKES: \"The rule of 18:8 is stated for \"that nation\" with its own condition, the turning.\" -- WITNESS WORDS: \"If that nation, against whom I have pronounced, turn from their evil, I will repent of the evil that I thought to do unto them.\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "final": "A",
+   "match": true
+  },
+  {
+   "id": "N9",
+   "key": "A",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"Haggai gives the signet to Zerubbabel, called \"governor of Judah\", and that is the office Haggai names.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"Haggai gives the signet to Zerubbabel, called \"governor of Judah\", and that is the office Haggai names.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": false
+  },
+  {
+   "id": "N10",
+   "key": "A",
+   "s1": {
+    "raw": "ACCOUNTS -- TAKES: \"What is chosen is Zerubbabel himself, \"my servant\", and the office named is \"governor\", not one sitting upon the throne.\" -- WITNESS WORDS: \"will I take thee, O Zerubbabel, my servant, the son of Shealtiel, saith the LORD, and will make thee as a signet: for I have chosen thee\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "s2": {
+    "raw": "ACCOUNTS -- TAKES: \"What is chosen is Zerubbabel himself, \"my servant\", and the office named is \"governor\", not one sitting upon the throne.\" -- WITNESS WORDS: \"will I take thee, O Zerubbabel, my servant, the son of Shealtiel, saith the LORD, and will make thee as a signet: for I have chosen thee\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "final": "A",
+   "match": true
+  },
+  {
+   "id": "N11",
+   "key": "A",
+   "s1": {
+    "raw": "ACCOUNTS -- TAKES: \"The \"because\" gives Joseph's own reason for going up, namely his paternal descent.\" -- WITNESS WORDS: \"because he was of the house and lineage of David\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "s2": {
+    "raw": "ACCOUNTS -- TAKES: \"The \"because\" gives Joseph's own reason for going up, namely his paternal descent.\" -- WITNESS WORDS: \"because he was of the house and lineage of David\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "final": "A",
+   "match": true
+  },
+  {
+   "id": "N12",
+   "key": "A",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"The house of David is told here of Joseph.\"\n\nThe TAKES sentence only says whom the phrase \"of the house of David\" is told of. It gives no meaning for the witness words and does not say how the position agrees with them. It also does not join the witness to Matthew 1:20-21 or any other verse.",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"The house of David is told here of Joseph.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": false
+  },
+  {
+   "id": "N13",
+   "key": "A",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"\"His own body\" is the body proper to the kind, and the kind is one flesh of men.\"\n\nThe TAKES words quote \"his own body\" and give it a meaning (\"the body proper to the kind\"). But they never join that meaning to the witness's other words, \"God giveth it a body as it hath pleased him\" or \"to every seed\". The rest of the sentence, \"the kind is one flesh of men\", is the position's conclusion. It is not a reading of this verse's words, and it does not say how the position agrees with them, so it does not account for the witness.",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"\\\"His own body\\\" is the body proper to the kind, and the kind is one flesh of men.\"\n\nThe TAKES words do restate the phrase \"his own body\" and give it a meaning, \"the body proper to the kind\". But they never join that meaning to the rest of the witness, \"God giveth it a body as it hath pleased him, and to every seed his own body\". They do not connect it to seed, to God giving the body, or to any other verse. \"The kind is one flesh of men\" is the position's conclusion, and the TAKES words do not show how the witness's own words lead to it.",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": false
+  },
+  {
+   "id": "N14",
+   "key": "A",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"David's fruit therefore reaches him as flesh through a woman of David's line.\"\n\nThe TAKES sentence states a conclusion about how David's fruit reaches him. It does not quote or take up the words \"Of the fruit of thy body\" or \"set upon thy throne\". It does not give a meaning for \"fruit of thy body\", with \"body\" glossed as belly (H990), and it does not say how the position agrees with those words. It does not join the witness to Romans 1:3 or Galatians 4:4 either.",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"David's fruit therefore reaches him as flesh through a woman of David's line.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": false
+  },
+  {
+   "id": "N15",
+   "key": "DNA",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"The statute is addressed to \"ye\", Israel, about cattle, field and garment.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"The statute is addressed to \"ye\", Israel, about cattle, field and garment.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": true
+  },
+  {
+   "id": "N16",
+   "key": "DNA",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"Mary's descent from David is carried by Luke 3:23-31, not by this row.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"Mary's descent from David is carried by Luke 3:23-31, not by this row.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": true
+  },
+  {
+   "id": "N17",
+   "key": "A",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"The speakers of \"we know\" are the murmurers, and they set that sonship against \"I came down from heaven\".\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"The speakers of \"we know\" are the murmurers, and they set that sonship against \"I came down from heaven\".\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": false
+  },
+  {
+   "id": "N18",
+   "key": "A",
+   "s1": {
+    "raw": "ACCOUNTS -- TAKES: \"It plucks the same man from the signet place before verse 30 closes the throne to his seed.\" -- WITNESS WORDS: \"though Coniah the son of Jehoiakim king of Judah were the signet upon my right hand, yet would I pluck thee thence\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "s2": {
+    "raw": "ACCOUNTS -- TAKES: \"It plucks the same man from the signet place before verse 30 closes the throne to his seed.\" -- WITNESS WORDS: \"though Coniah the son of Jehoiakim king of Judah were the signet upon my right hand, yet would I pluck thee thence\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "final": "A",
+   "match": true
+  },
+  {
+   "id": "N19",
+   "key": "DNA",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"What is born of her is of that kind.\"\n\nThe TAKES sentence gives no meaning for \"the rib, which the LORD God had taken from man, made he a woman\". It does not say how the position agrees with those words, and it does not join them to any other verse. It states only a conclusion about what is born of her.",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"What is born of her is of that kind.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": true
+  },
+  {
+   "id": "N20",
+   "key": "DNA",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"His resolve is the resolve of a man who has found a wife with child and does not count the child his.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"His resolve is the resolve of a man who has found a wife with child and does not count the child his.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": true
+  }
+ ]
+}
