@@ -1,0 +1,15 @@
+ASK 664 Part 2, test9 fresh entries H1 to H10 (entries_h10.json md5 b7c1ffb3; body_texts_h10.md md5 108e7a9b), W1 (seat 34) BLIND LABELS under rev 3f draft 2 (5cfd4638), unchanged.
+Method (12689, L1 of 12691): labelled from the body text as sent only, in the model's own form. An ACCOUNTS label must fill WITNESS WORDS from the witness as sent and SAYS HOW from words the TAKES writes; otherwise DNA. Written before reading any other seat's labels or W4's key.
+
+H1 ACCOUNTS (thin) -- TAKES: "The husband is named "husband" and not the one who begat." -- WITNESS WORDS: "Joseph the husband of Mary" -- SAYS HOW: "and not the one who begat". Sentence: the read-together sentence (Matthew 1:2's "begat" row is shown). Counter: the absence sentence, first half, if "not the one who begat" is read as resting only on what the witness does not state rather than on the word "husband" it does state.
+H2 DNA (thin) -- "Mary's "thy father" is the household's name for Joseph". Sentence: "stating what the witness or one of its words means is not enough by itself" with "Do not supply a step the TAKES does not write": the answer "my Father's business" is reported, but no words say how the challenger's position agrees; that is the reader's step. Counter: the read-together sentence (Luke 2:49 shown), as D19.
+H3 DNA -- "In Genesis 4:1 the sequence is knew, conceived, bare." Sentence: "Quoting or repeating the witness is not enough by itself".
+H4 DNA -- "The verbs state the power." Sentence: "stating what the witness or one of its words means is not enough by itself"; "a bright cloud overshadowed them" is not restated.
+H5 ACCOUNTS -- TAKES: "The town's "we know" is their claim in an objection, and the narrator's own qualifier, "as was supposed", sits on the same title." -- WITNESS WORDS: "whose father and mother we know" -- SAYS HOW: "the narrator's own qualifier, "as was supposed", sits on the same title". Sentence: the read-together sentence (Luke 3:23 shown).
+H6 ACCOUNTS -- TAKES: ""Thou son of David" is therefore a remote-kinship use, and the begetting of the child is carried by the clause "is of the Holy Ghost"." -- WITNESS WORDS: "Joseph, thou son of David" -- SAYS HOW: "the begetting of the child is carried by the clause "is of the Holy Ghost"". Sentence: the read-together sentence (Matthew 1:20 in full shown as [L1]).
+H7 DNA -- "The three rows address three different questions." Sentence: the pointer sentence ("The three rows" points outside) and "TAKES words do not account for the witness when they only name it".
+H8 DNA -- "I grant that Joseph is of David's house." Sentence: "Quoting or repeating the witness is not enough by itself".
+H9 DNA -- "Joseph's body is not what those rows name." Sentence: the pointer sentence ("those rows") with the absence sentence, first half.
+H10 DNA -- "The verb "made" is ginomai". Sentence: "Quoting or repeating the witness is not enough by itself, and stating what the witness or one of its words means is not enough by itself, and the two together are still not enough".
+
+SUMMARY: ACCOUNTS H1, H5, H6 (3). DNA H2, H3, H4, H7, H8, H9, H10 (7). Thin: H1, H2.
