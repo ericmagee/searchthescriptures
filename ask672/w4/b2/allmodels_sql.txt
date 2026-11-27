@@ -1,0 +1,11 @@
+-- ASK 672 rev 2 test set: every debate_results row with rounds 1 to 3 on both sides (439 runs), both sides, every debater model.
+-- SQL port of the two readers. old = live vp524 form (Reference "quote"). new = option C (a quotation with a reference next to it, before or after, gap of spaces/brackets/punctuation up to 12 chars).
+-- new count = A (ref gap quote) + B (quote gap ref) - AB (ref gap quote gap ref). Run 11-27 13:2x CST by W4 via execute_sql.
+with f as (select id, coalesce(challenger_model, engine_model) cm, coalesce(defender_model, claude_model) dm, engine_r1, engine_r2, challenger_r3, claude_r1, claude_r2, engine_r3 from debate_results where engine_r1 is not null and claude_r1 is not null and engine_r3 is not null and challenger_r3 is not null),
+r as (select id,'CH' side,cm m,1 rn,engine_r1 t from f union all select id,'CH',cm,2,engine_r2 from f union all select id,'CH',cm,3,challenger_r3 from f
+ union all select id,'DE',dm,1,claude_r1 from f union all select id,'DE',dm,2,claude_r2 from f union all select id,'DE',dm,3,engine_r3 from f),
+p as (select '(?:[123] )?[A-Z][a-z]+(?: of [A-Z][a-z]+)? [0-9]+:[0-9]+(?:[-–][0-9]+)?' ref, '[[:space:]()\[\]:,;.–—-]{0,12}(?:margin[[:space:]:]{0,3})?' gap, '["“][^"”\n]{2,}["”]' q),
+c as (select r.*, (select count(*) from regexp_matches(t, ref||'(?: margin)?:?[ \t]*["“][^"”\n]{2,}["”]','g')) old,
+ (select count(*) from regexp_matches(t, ref||gap||q,'g')) a, (select count(*) from regexp_matches(t, q||gap||ref,'g')) b,
+ (select count(*) from regexp_matches(t, ref||gap||q||gap||ref,'g')) ab from r, p where t is not null)
+select side, m, count(distinct id) runs, sum(old) old_found, sum(a+b-ab) new_found, count(*) filter (where a+b-ab<old) rounds_new_below_old, count(*) filter (where old=0 and a+b-ab>0) rounds_old_zero from c group by side, m order by side, runs desc;
