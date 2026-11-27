@@ -1,11 +1,11 @@
-ASK 664 PART 2, THE ENFORCER'S QUESTION, rev 3g as one text (W3 seat 33, 2026-11-27). DRAFT 1, for W1's grade. NOT SENT, NOT BUILT. Base: rev 3f draft 2 (md5 5cfd4638, W1 PASS Wall 12662). Cause: TEST9 (Wall 12699 to 12701): no lenient answer from any model; every miss a refusal of a written bearing (H5, H6; before them F3), and the stated reasons say the TAKES never says how the named side's position agrees; the enforcer is asked about "the position of the side named as holding" and is never sent that position (W1 12692, 12701; W4 12702; W1 grade 12704, V1 to V4).
+ASK 664 PART 2, THE ENFORCER'S QUESTION, rev 3g as one text (W3 seat 33, 2026-11-27). DRAFT 2, for W1's grade (draft 1 cc42c550; draft 2 adds "human" to the line, W4 Wall 12707: the heading of debate 45f53596's own challenger answer reads "Christ had no human biological father"). NOT SENT, NOT BUILT. Base: rev 3f draft 2 (md5 5cfd4638, W1 PASS Wall 12662). Cause: TEST9 (Wall 12699 to 12701): no lenient answer from any model; every miss a refusal of a written bearing (H5, H6; before them F3), and the stated reasons say the TAKES never says how the named side's position agrees; the enforcer is asked about "the position of the side named as holding" and is never sent that position (W1 12692, 12701; W4 12702; W1 grade 12704, V1 to V4).
 
 WHAT CHANGES FROM rev 3f draft 2 (one change, nothing else): one sent line is added after the side word. THE QUESTION text below is rev 3f draft 2 word for word.
 
 WHAT THE ENFORCER IS SENT, in this order: the WITNESS words; WHICH SIDE THE JUDGE NAMES AS HOLDING (the side word); THE POSITION OF THE SIDE NAMED AS HOLDING (new: one sentence, the side's answer to the debate's topic, no reasons and no verse); THE JUDGE'S TAKES WORDS, from [<round>]; LAYER LINES CITED, as in rev 3f.
 
 THE NEW LINE FOR TEST 4 (topic "Did Christ have a biological father?", side CHALLENGER; PANEL MEASURE, outside ruling 383: it states the challenger's stance to an enforcer in a test and is not a statement of the record):
-THE POSITION OF THE SIDE NAMED AS HOLDING: Christ had no biological father.
+THE POSITION OF THE SIDE NAMED AS HOLDING: Christ had no human biological father.
 
 NOT SETTLED BY THIS DRAFT: the live source of the line. The topic with the side's answer serves a yes or no topic only; the judge's DECIDES [L4] sentence is the other candidate (W4 12693, 12702). That choice belongs to the Part 2 build, on the operator's approval, after a clean run.
 
