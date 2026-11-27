@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community — The TRUTH App</title>
+  <meta name="description" content="Study, debate, and fellowship — precept upon precept, line upon line." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <style>
+    :root {
+      --bg:       #0a0d14;
+      --bg2:      #0f1421;
+      --bg3:      #141d2f;
+      --border:   #1e2d47;
+      --text:     #e2e8f0;
+      --soft:     #94a3b8;
+      --faint:    #475569;
+      --accent:   #00c896;
+      --accent2:  #009e78;
+      --l1:       #1e3a8a;
+      --l2:       #1d4ed8;
+      --l3:       #475569;
+      --l4:       #6b7280;
+      --fellow:   #92400e;
+      --err:      #991b1b;
+      --serif:    "EB Garamond", Georgia, serif;
+      --mono:     "Courier Prime", "Courier New", monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; overflow: hidden; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--serif);
+      font-size: 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .hidden { display: none !important; }
+
+    /* ---- Header ---- */
+    .hdr {
+      height: 54px;
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      padding: 0 1.25rem;
+      gap: 1rem;
+      flex-shrink: 0;
+    }
+    .hdr-logo {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .hdr-sep { color: var(--border); }
+    .hdr-title {
+      font-style: italic;
+      color: var(--soft);
+      font-size: 0.95rem;
+    }
+    .hdr-right { margin-left: auto; display: flex; align-items: center; gap: 0.75rem; }
+    .hdr-user {
+      font-family: var(--mono);
+      font-size: 0.64rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--faint);
+    }
+    .btn {
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.42rem 0.9rem;
+      border: 1px solid var(--accent);
+      background: transparent;
+      color: var(--accent);
+      cursor: pointer;
+      transition: background .15s, color .15s;
+    }
+    .btn:hover { background: var(--accent); color: var(--bg); }
+    .btn-solid { background: var(--accent); color: var(--bg); }
+    .btn-solid:hover { background: var(--accent2); border-color: var(--accent2); }
+    .btn-ghost {
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.42rem 0.9rem;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--faint);
+      cursor: pointer;
+    }
+
+    /* ---- Layout ---- */
+    .layout { flex: 1; display: flex; min-height: 0; }
+
+    /* ---- Sidebar ---- */
+    .sidebar {
+      width: 256px;
+      flex-shrink: 0;
+      border-right: 1px solid var(--border);
+      background: var(--bg2);
+      display: flex;
+      flex-direction: column;
+    }
+    .room-tabs { display: flex; border-bottom: 1px solid var(--border); }
+    .rtab {
+      flex: 1;
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--faint);
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid transparent;
+      padding: 0.65rem 0.4rem;
+      cursor: pointer;
+      transition: color .15s, border-color .15s;
+    }
+    .rtab.active { color: var(--accent); border-bottom-color: var(--accent); }
+    .room-list { flex: 1; overflow-y: auto; padding: 0.4rem 0; }
+    .room-item {
+      padding: 0.6rem 1rem;
+      cursor: pointer;
+      border-left: 3px solid transparent;
+      transition: background .12s;
+    }
+    .room-item:hover { background: var(--bg3); }
+    .room-item.active { background: var(--bg3); border-left-color: var(--accent); }
+    .room-name { font-size: 0.88rem; display: block; }
+    .room-meta {
+      font-family: var(--mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-top: 0.1rem;
+      display: block;
+    }
+    .rooms-empty {
+      padding: 1.5rem 1rem;
+      font-style: italic;
+      color: var(--faint);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+    .sidebar-foot {
+      padding: 0.7rem 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .btn-new-room {
+      width: 100%;
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.55rem;
+      border: 1px dashed var(--border);
+      background: transparent;
+      color: var(--faint);
+      cursor: pointer;
+      transition: border-color .15s, color .15s;
+    }
+    .btn-new-room:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ---- Chat main ---- */
+    .chat-main { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+    .chat-hdr {
+      height: 50px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      padding: 0 1.25rem;
+      gap: 0.75rem;
+      flex-shrink: 0;
+    }
+    .chat-room-name { font-size: 1rem; font-weight: 500; }
+    .chat-type-badge {
+      font-family: var(--mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.18rem 0.48rem;
+      border: 1px solid var(--border);
+      color: var(--faint);
+    }
+    .chat-members {
+      margin-left: auto;
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      color: var(--faint);
+    }
+
+    /* ---- Messages ---- */
+    .messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .msg { display: flex; flex-direction: column; gap: 0.22rem; }
+    .msg-meta { display: flex; align-items: baseline; gap: 0.45rem; flex-wrap: wrap; }
+    .msg-author {
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--soft);
+    }
+    .msg-layer {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      padding: 0.08rem 0.38rem;
+      color: #fff;
+    }
+    .msg-layer.L1_text    { background: var(--l1); }
+    .msg-layer.L2_language { background: var(--l2); }
+    .msg-layer.L3_crossref { background: var(--l3); }
+    .msg-layer.L4_inference { background: var(--l4); }
+    .msg-layer.fellowship  { background: var(--fellow); }
+    .msg-time {
+      font-family: var(--mono);
+      font-size: 0.58rem;
+      color: var(--faint);
+    }
+    .msg-body {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      padding: 0.65rem 0.9rem;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .msg.oracle .msg-body { border-left: 2px solid var(--accent); }
+    .pane-empty {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-style: italic;
+      color: var(--faint);
+      text-align: center;
+      padding: 2rem;
+    }
+
+    /* ---- Composer ---- */
+    .composer {
+      border-top: 1px solid var(--border);
+      padding: 0.8rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      flex-shrink: 0;
+    }
+    .layer-pills { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+    .lpill {
+      font-family: var(--mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.22rem 0.52rem;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--faint);
+      cursor: pointer;
+      transition: all .12s;
+    }
+    .lpill.on { color: #fff; border-color: transparent; }
+    .lpill[data-l="L1_text"].on    { background: var(--l1); }
+    .lpill[data-l="L2_language"].on { background: var(--l2); }
+    .lpill[data-l="L3_crossref"].on { background: var(--l3); }
+    .lpill[data-l="L4_inference"].on { background: var(--l4); }
+    .lpill[data-l="fellowship"].on  { background: var(--fellow); }
+    .compose-row { display: flex; gap: 0.5rem; }
+    .compose-input {
+      flex: 1;
+      resize: none;
+      font-family: var(--serif);
+      font-size: 0.95rem;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.55rem 0.8rem;
+      line-height: 1.5;
+      max-height: 7rem;
+    }
+    .compose-input:focus { outline: none; border-color: var(--accent); }
+    .btn-send {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0 1.1rem;
+      background: var(--accent);
+      color: var(--bg);
+      border: none;
+      cursor: pointer;
+      transition: background .15s;
+      white-space: nowrap;
+    }
+    .btn-send:hover { background: var(--accent2); }
+    .btn-send:disabled { opacity: 0.4; cursor: default; }
+
+    /* ---- Auth wall ---- */
+    .auth-wall {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .auth-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+    .auth-card h2 { font-size: 1.4rem; font-weight: 500; margin-bottom: 0.5rem; }
+    .auth-card .verse {
+      font-style: italic;
+      color: var(--soft);
+      font-size: 0.88rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    .auth-inputs { display: flex; flex-direction: column; gap: 0.7rem; }
+    .auth-email-input {
+      font-family: var(--serif);
+      font-size: 1rem;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.7rem 0.9rem;
+      text-align: center;
+    }
+    .auth-email-input:focus { outline: none; border-color: var(--accent); }
+    .auth-note {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      color: var(--faint);
+      margin-top: 0.25rem;
+    }
+    .auth-ok { color: var(--accent); font-style: italic; font-size: 0.9rem; }
+
+    /* ---- Modal ---- */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.72);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+    }
+    .modal {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      padding: 1.75rem;
+      max-width: 420px;
+      width: 90%;
+    }
+    .modal h3 { font-size: 1.1rem; font-weight: 500; margin-bottom: 1.2rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.9rem; }
+    .form-label {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--faint);
+    }
+    .form-input {
+      font-family: var(--serif);
+      font-size: 0.95rem;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.6rem 0.8rem;
+      width: 100%;
+    }
+    .form-input:focus { outline: none; border-color: var(--accent); }
+    .form-select {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.6rem 0.8rem;
+      width: 100%;
+      cursor: pointer;
+    }
+    .modal-btns { display: flex; gap: 0.5rem; justify-content: flex-end; margin-top: 0.25rem; }
+
+    /* ---- Scrollbar ---- */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 600px) {
+      .sidebar { width: 200px; }
+    }
+    @media (max-width: 440px) {
+      .sidebar { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="hdr">
+  <a class="hdr-logo" href="/">TRUTH</a>
+  <span class="hdr-sep">/</span>
+  <span class="hdr-title">Community</span>
+  <div class="hdr-right">
+    <span class="hdr-user" id="hdr-user"></span>
+    <button class="btn" id="hdr-auth-btn">Sign In</button>
+  </div>
+</header>
+
+<!-- Main layout -->
+<div class="layout">
+
+  <!-- Auth wall -->
+  <div class="auth-wall" id="auth-wall">
+    <div class="auth-card">
+      <h2>Join the Community</h2>
+      <p class="verse">"Iron sharpeneth iron; so a man sharpeneth the countenance of his friend."<br />— Proverbs 27:17</p>
+      <div class="auth-inputs">
+        <input type="email" class="auth-email-input" id="auth-email" placeholder="Enter your email" />
+        <button class="btn btn-solid" id="auth-submit">Send Sign-In Link</button>
+        <p class="auth-note" id="auth-msg">A link will be sent to your inbox — no password needed.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Community (signed in) -->
+  <div style="display:flex;flex:1;min-height:0;width:100%" id="community" class="hidden">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="room-tabs">
+        <button class="rtab active" data-type="study">Study</button>
+        <button class="rtab" data-type="debate">Debate</button>
+        <button class="rtab" data-type="fellowship">Fellowship</button>
+      </div>
+      <div class="room-list" id="room-list">
+        <div class="rooms-empty">Loading…</div>
+      </div>
+      <div class="sidebar-foot">
+        <button class="btn-new-room" id="btn-new-room">+ Create Room</button>
+      </div>
+    </aside>
+
+    <!-- Chat area -->
+    <main class="chat-main">
+
+      <!-- No room selected -->
+      <div class="pane-empty" id="no-room">
+        <div>
+          <p style="font-size:1.1rem;margin-bottom:0.4rem">Select a room to begin.</p>
+          <p style="font-size:0.85rem">Precept upon precept. Line upon line.</p>
+        </div>
+      </div>
+
+      <!-- Active room -->
+      <div id="room-view" class="hidden" style="display:flex;flex-direction:column;flex:1;min-height:0">
+        <div class="chat-hdr">
+          <span class="chat-room-name" id="room-name-display">—</span>
+          <span class="chat-type-badge" id="room-type-display">—</span>
+          <span class="chat-members" id="room-members-display"></span>
+        </div>
+
+        <div class="messages" id="messages">
+          <div class="pane-empty">No messages yet. Be the first to speak.</div>
+        </div>
+
+        <div class="composer">
+          <div class="layer-pills" id="layer-pills">
+            <button class="lpill on" data-l="L1_text">L1 Text</button>
+            <button class="lpill" data-l="L2_language">L2 Language</button>
+            <button class="lpill" data-l="L3_crossref">L3 Cross-Ref</button>
+            <button class="lpill" data-l="L4_inference">L4 Inference</button>
+            <button class="lpill" data-l="fellowship">Fellowship</button>
+          </div>
+          <div class="compose-row">
+            <textarea class="compose-input" id="compose-input" rows="2" placeholder="Write your message…"></textarea>
+            <button class="btn-send" id="btn-send">Send</button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<!-- Create Room Modal -->
+<div class="overlay hidden" id="modal-create">
+  <div class="modal">
+    <h3>Create a Room</h3>
+    <div class="form-group">
+      <label class="form-label">Room Name</label>
+      <input type="text" class="form-input" id="new-room-name" placeholder="e.g. Genesis Deep Dive" maxlength="80" />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Type</label>
+      <select class="form-select" id="new-room-type">
+        <option value="study">Study</option>
+        <option value="debate">Debate</option>
+        <option value="fellowship">Fellowship</option>
+      </select>
+    </div>
+    <div class="modal-btns">
+      <button class="btn-ghost" id="cancel-create">Cancel</button>
+      <button class="btn btn-solid" id="confirm-create">Create</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const SUPA_URL = 'https://bhffmkginddovmdcpnty.supabase.co';
+const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJoZmZta2dpbmRkb3ZtZGNwbnR5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4ODUxNjQsImV4cCI6MjA5NTQ2MTE2NH0.cdNxsU48LeMM8RBnmplA1TbRJo12OpJKNwCgYRJvwxA';
+
+const db = window.supabase.createClient(SUPA_URL, SUPA_KEY);
+
+// ── State ────────────────────────────────────────────────
+let user = null;
+let profile = null;
+let roomType = 'study';
+let activeRoom = null;
+let rt = null;           // realtime channel
+let selectedLayer = 'L1_text';
+
+// ── DOM ──────────────────────────────────────────────────
+const $ = id => document.getElementById(id);
+const authWall      = $('auth-wall');
+const community     = $('community');
+const hdrUser       = $('hdr-user');
+const hdrAuthBtn    = $('hdr-auth-btn');
+const authEmail     = $('auth-email');
+const authSubmit    = $('auth-submit');
+const authMsg       = $('auth-msg');
+const roomList      = $('room-list');
+const noRoom        = $('no-room');
+const roomView      = $('room-view');
+const roomNameDisp  = $('room-name-display');
+const roomTypeDisp  = $('room-type-display');
+const roomMembDisp  = $('room-members-display');
+const messages      = $('messages');
+const composeInput  = $('compose-input');
+const btnSend       = $('btn-send');
+const modalCreate   = $('modal-create');
+
+// ── Auth ─────────────────────────────────────────────────
+db.auth.onAuthStateChange(async (_evt, session) => {
+  user = session?.user ?? null;
+  if (user) {
+    await upsertProfile();
+    onSignedIn();
+  } else {
+    onSignedOut();
+  }
+});
+
+async function upsertProfile() {
+  const { data } = await db.from('profiles').select('*').eq('id', user.id).single();
+  if (data) { profile = data; return; }
+  const name = user.email.split('@')[0];
+  const { data: created } = await db.from('profiles')
+    .insert({ id: user.id, email: user.email, display_name: name })
+    .select().single();
+  profile = created;
+}
+
+function onSignedOut() {
+  authWall.classList.remove('hidden');
+  community.classList.add('hidden');
+  hdrAuthBtn.textContent = 'Sign In';
+  hdrUser.textContent = '';
+}
+
+function onSignedIn() {
+  authWall.classList.add('hidden');
+  community.classList.remove('hidden');
+  hdrAuthBtn.textContent = 'Sign Out';
+  hdrUser.textContent = profile?.display_name || user.email.split('@')[0];
+  loadRooms();
+}
+
+authSubmit.addEventListener('click', async () => {
+  const email = authEmail.value.trim();
+  if (!email) return;
+  authSubmit.disabled = true;
+  authMsg.textContent = 'Sending…';
+  authMsg.style.color = '';
+  const { error } = await db.auth.signInWithOtp({
+    email,
+    options: { emailRedirectTo: window.location.href }
+  });
+  if (error) {
+    authMsg.textContent = error.message;
+    authMsg.style.color = 'var(--err)';
+  } else {
+    authMsg.innerHTML = '<span class="auth-ok">Check your inbox — link sent.</span>';
+  }
+  authSubmit.disabled = false;
+});
+authEmail.addEventListener('keydown', e => { if (e.key === 'Enter') authSubmit.click(); });
+
+hdrAuthBtn.addEventListener('click', async () => {
+  if (user) await db.auth.signOut();
+});
+
+// ── Room tabs ─────────────────────────────────────────────
+document.querySelectorAll('.rtab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.rtab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    roomType = tab.dataset.type;
+    syncLayerPills();
+    loadRooms();
+  });
+});
+
+function syncLayerPills() {
+  document.querySelectorAll('.lpill').forEach(p => {
+    if (roomType === 'fellowship') {
+      p.classList.toggle('hidden', p.dataset.l !== 'fellowship');
+    } else {
+      p.classList.toggle('hidden', p.dataset.l === 'fellowship');
+    }
+  });
+  const defaultLayer = roomType === 'fellowship' ? 'fellowship' : 'L1_text';
+  pickLayer(defaultLayer);
+}
+
+// ── Rooms ─────────────────────────────────────────────────
+async function loadRooms() {
+  roomList.innerHTML = '<div class="rooms-empty">Loading…</div>';
+  const { data } = await db
+    .from('chat_rooms')
+    .select('id, name, room_type, created_at')
+    .eq('room_type', roomType)
+    .order('created_at');
+
+  if (!data || !data.length) {
+    roomList.innerHTML = '<div class="rooms-empty">No rooms yet — create the first one.</div>';
+    return;
+  }
+
+  roomList.innerHTML = '';
+  data.forEach(room => {
+    const div = document.createElement('div');
+    div.className = 'room-item' + (activeRoom?.id === room.id ? ' active' : '');
+    div.dataset.id = room.id;
+    div.innerHTML = `<span class="room-name">${esc(room.name)}</span><span class="room-meta">${room.room_type}</span>`;
+    div.addEventListener('click', () => enterRoom(room));
+    roomList.appendChild(div);
+  });
+}
+
+async function enterRoom(room) {
+  activeRoom = room;
+  document.querySelectorAll('.room-item').forEach(i => i.classList.remove('active'));
+  const el = roomList.querySelector(`[data-id="${room.id}"]`);
+  if (el) el.classList.add('active');
+
+  roomNameDisp.textContent = room.name;
+  roomTypeDisp.textContent = room.room_type;
+  noRoom.classList.add('hidden');
+  roomView.classList.remove('hidden');
+  roomView.style.display = 'flex';
+
+  // Join room
+  await db.from('room_members').upsert(
+    { room_id: room.id, user_id: user.id },
+    { onConflict: 'room_id,user_id' }
+  );
+
+  // Member count
+  const { count } = await db
+    .from('room_members')
+    .select('*', { count: 'exact', head: true })
+    .eq('room_id', room.id);
+  roomMembDisp.textContent = count ? `${count} member${count !== 1 ? 's' : ''}` : '';
+
+  syncLayerPills();
+  await loadMessages();
+  subscribeRoom(room.id);
+}
+
+// ── Messages ──────────────────────────────────────────────
+async function loadMessages() {
+  messages.innerHTML = '';
+
+  const { data, error } = await db
+    .from('chat_messages')
+    .select('id, content, layer, is_oracle, created_at, user_id')
+    .eq('room_id', activeRoom.id)
+    .is('deleted_at', null)
+    .order('created_at')
+    .limit(100);
+
+  if (error || !data?.length) {
+    messages.innerHTML = '<div class="pane-empty">No messages yet. Be the first to speak.</div>';
+    return;
+  }
+
+  // Batch-fetch profiles
+  const ids = [...new Set(data.map(m => m.user_id))];
+  const { data: profiles } = await db.from('profiles').select('id, display_name').in('id', ids);
+  const pmap = Object.fromEntries((profiles || []).map(p => [p.id, p]));
+
+  data.forEach(msg => renderMessage({ ...msg, profile: pmap[msg.user_id] }));
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function renderMessage(msg) {
+  const emptyEl = messages.querySelector('.pane-empty');
+  if (emptyEl) emptyEl.remove();
+
+  const name = msg.profile?.display_name || 'Member';
+  const time = new Date(msg.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  const lbl  = layerLabel(msg.layer);
+
+  const div = document.createElement('div');
+  div.className = 'msg' + (msg.is_oracle ? ' oracle' : '');
+  div.innerHTML = `
+    <div class="msg-meta">
+      <span class="msg-author">${esc(name)}</span>
+      <span class="msg-layer ${msg.layer}">${lbl}</span>
+      <span class="msg-time">${time}</span>
+    </div>
+    <div class="msg-body">${esc(msg.content)}</div>`;
+  messages.appendChild(div);
+}
+
+function layerLabel(l) {
+  return { L1_text: 'L1', L2_language: 'L2', L3_crossref: 'L3', L4_inference: 'L4', fellowship: 'Fellowship' }[l] || l;
+}
+
+// ── Realtime ──────────────────────────────────────────────
+function subscribeRoom(roomId) {
+  if (rt) db.removeChannel(rt);
+  rt = db.channel(`room-${roomId}`)
+    .on('postgres_changes', {
+      event: 'INSERT',
+      schema: 'public',
+      table: 'chat_messages',
+      filter: `room_id=eq.${roomId}`
+    }, async payload => {
+      const { data: p } = await db.from('profiles').select('id, display_name').eq('id', payload.new.user_id).single();
+      renderMessage({ ...payload.new, profile: p });
+      messages.scrollTop = messages.scrollHeight;
+    })
+    .subscribe();
+}
+
+// ── Send ──────────────────────────────────────────────────
+btnSend.addEventListener('click', sendMsg);
+composeInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMsg(); }
+});
+composeInput.addEventListener('input', () => {
+  composeInput.style.height = 'auto';
+  composeInput.style.height = composeInput.scrollHeight + 'px';
+});
+
+async function sendMsg() {
+  const content = composeInput.value.trim();
+  if (!content || !activeRoom || !user) return;
+  btnSend.disabled = true;
+  const { error } = await db.from('chat_messages').insert({
+    room_id: activeRoom.id,
+    user_id: user.id,
+    content,
+    layer: selectedLayer
+  });
+  if (!error) {
+    composeInput.value = '';
+    composeInput.style.height = 'auto';
+  }
+  btnSend.disabled = false;
+  composeInput.focus();
+}
+
+// ── Layer picker ──────────────────────────────────────────
+document.querySelectorAll('.lpill').forEach(p => {
+  p.addEventListener('click', () => pickLayer(p.dataset.l));
+});
+
+function pickLayer(layer) {
+  selectedLayer = layer;
+  document.querySelectorAll('.lpill').forEach(p => p.classList.toggle('on', p.dataset.l === layer));
+}
+
+// ── Create room modal ─────────────────────────────────────
+$('btn-new-room').addEventListener('click', () => {
+  modalCreate.classList.remove('hidden');
+  $('new-room-name').focus();
+});
+$('cancel-create').addEventListener('click', () => modalCreate.classList.add('hidden'));
+modalCreate.addEventListener('click', e => { if (e.target === modalCreate) modalCreate.classList.add('hidden'); });
+
+$('confirm-create').addEventListener('click', async () => {
+  const name = $('new-room-name').value.trim();
+  const type = $('new-room-type').value;
+  if (!name) return;
+  const { data, error } = await db.from('chat_rooms').insert({
+    name, room_type: type, created_by: user.id
+  }).select().single();
+  modalCreate.classList.add('hidden');
+  $('new-room-name').value = '';
+  if (!error && data) {
+    roomType = type;
+    document.querySelectorAll('.rtab').forEach(t => t.classList.toggle('active', t.dataset.type === type));
+    await loadRooms();
+    await enterRoom(data);
+  }
+});
+
+// ── Utility ───────────────────────────────────────────────
+function esc(s) {
+  return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+</script>
+</body>
+</html>
