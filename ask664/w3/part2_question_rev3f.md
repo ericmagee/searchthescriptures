@@ -1,9 +1,9 @@
-ASK 664 PART 2, THE ENFORCER'S QUESTION, rev 3f as one text (W3 seat 33, 2026-11-27). DRAFT 1, for W1's grade. NOT SENT, NOT BUILT. Base: rev 3e draft 2 (md5 785ebc20). Cause: TEST6 (Wall 12653 to 12656): no model met the bar; the decoy D18 (a quote plus a word meaning) was passed by four models; D4 and D7 are gaps in the words (W1 12656, P1 and P2).
+ASK 664 PART 2, THE ENFORCER'S QUESTION, rev 3f as one text (W3 seat 33, 2026-11-27). DRAFT 2 (draft 1 b2b2a76f PASSED W1 with F1 to F3, Wall 12659; this draft applies F1; F2 = W4's reader plan g6, Wall 12658; F3 settled at the comparison: three seats alike on D15 DNA). NOT SENT, NOT BUILT. Base: rev 3e draft 2 (md5 785ebc20). Cause: TEST6 (Wall 12653 to 12656): no model met the bar; the decoy D18 (a quote plus a word meaning) was passed by four models; D4 and D7 are gaps in the words (W1 12656, P1 and P2).
 
 WHAT CHANGES FROM rev 3e draft 2 (three changes, nothing else):
 1. Second sentence (P2 and D18): a quote and a meaning together are still not enough; the TAKES must say the bearing in its own written words; the reader supplies no step the TAKES does not write.
 2. Absence sentence, first half (P1): "only" is measured against the words that say how the position stands, even when the TAKES also quotes or restates the witness. The second half (scripture read together does not give a fact, naming the fact and the verses that do speak) is unchanged.
-3. Form line (W3, new, for the team's review): the ACCOUNTS form gains a third quoted part, SAYS HOW, the TAKES words that say how the position agrees; none found means DOES NOT ACCOUNT. Purpose: the model must point at the bearing words before it may say ACCOUNTS; a quote-and-meaning TAKES such as D18 has none to point at. W4 to say what the reader needs.
+3. Form line (W3, new, for the team's review): the ACCOUNTS form gains a third quoted part, SAYS HOW, the TAKES words that say how the position agrees; a sentence after the form line says that none found means DOES NOT ACCOUNT (F1). Purpose: the model must point at the bearing words before it may say ACCOUNTS; a quote-and-meaning TAKES such as D18 has none to point at. W4 to say what the reader needs.
 
 WHAT THE ENFORCER IS SENT: the WITNESS words; WHICH SIDE THE JUDGE NAMES AS HOLDING (change 1); THE JUDGE'S TAKES WORDS, from [<round>]; LAYER LINES CITED, as in rev 3c.1 (for each reference the judge's own tags name, the tag, the reference and its KJV words read from kjv_verses for [L1] and [L3]; an [L2] entry as the judge wrote it; or "none").
 
@@ -16,7 +16,8 @@ TAKES words do not account for the witness when they only name it, when they spe
 TAKES words that only say who spoke the witness, to whom it was addressed, or what it is about, without saying how the position of the side named as holding agrees with its words, do not account for it.
 If the words that say how the position stands rest only on what the witness does not state, the TAKES does not account for it, even when it also quotes or restates the witness; TAKES words that say scripture, read together, does not give a fact, and name the fact and the verses that do speak, account for it.
 The layer lines are there to inform your reading of the TAKES words. They do not decide the answer, and a TAKES is not failed for citing no layer; a witness may be taken up by reading it together with other verses.
-Answer on one line, in one of two forms: ACCOUNTS -- TAKES: "<words of the TAKES sentence that speak to the witness>" -- WITNESS WORDS: "<the witness's own words, quoted exactly, that the TAKES quotes or restates>" -- SAYS HOW: "<the words of the TAKES sentence that say how the position agrees; if you find none, the answer is DOES NOT ACCOUNT>" or DOES NOT ACCOUNT -- "<the TAKES words that decide it>".
+Answer on one line, in one of two forms: ACCOUNTS -- TAKES: "<words of the TAKES sentence that speak to the witness>" -- WITNESS WORDS: "<the witness's own words, quoted exactly, that the TAKES quotes or restates>" -- SAYS HOW: "<the words of the TAKES sentence that say how the position agrees>" or DOES NOT ACCOUNT -- "<the TAKES words that decide it>".
+If no words of the TAKES say how the position agrees, answer DOES NOT ACCOUNT.
 
 NOTES FOR THE GRADE:
 - Nothing sent changes. The pointer, read-together, does-not-account, speaker and inform sentences are as rev 3e draft 2.
