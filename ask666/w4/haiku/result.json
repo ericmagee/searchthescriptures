@@ -1,0 +1,369 @@
+{
+ "ok": 16,
+ "of": 20,
+ "lenient": 0,
+ "strict": 4,
+ "cost": 0.038756,
+ "rows": [
+  {
+   "id": "A1",
+   "key": "A",
+   "s1": {
+    "raw": "ACCOUNTS -- TAKES: \"the chain from woman's seed to made-of-woman flesh yields Davidic flesh without requiring loins of a begetting man [L4]\" -- WITNESS WORDS: \"made of the seed of David according to the flesh\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "s2": {
+    "raw": "ACCOUNTS -- TAKES: \"made of the seed of David according to the flesh\" -- WITNESS WORDS: \"made of the seed of David according to the flesh\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "final": "A",
+   "match": true
+  },
+  {
+   "id": "A2",
+   "key": "DNA",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"The rows that affirm no man begetting Jesus carry the case; no verse is required to state a conclusion in its own words\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"The rows that affirm no man begetting Jesus carry the case [L4]; no verse is required to state a conclusion in its own words [L4].\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": true
+  },
+  {
+   "id": "A3",
+   "key": "A",
+   "s1": {
+    "raw": "ACCOUNTS -- TAKES: \"begat stops at husband of Mary and birth is of her, not begotten by him.\" -- WITNESS WORDS: \"husband of Mary\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "s2": {
+    "raw": "ACCOUNTS -- TAKES: \"begat stops at husband of Mary and birth is of her, not begotten by him.\" -- WITNESS WORDS: \"husband of Mary\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "final": "A",
+   "match": true
+  },
+  {
+   "id": "A4",
+   "key": "DNA",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"I will set up thy seed after thee, which shall proceed out of thy bowels\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"I will set up thy seed after thee, which shall proceed out of thy bowels\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": true
+  },
+  {
+   "id": "A5",
+   "key": "A",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"Thy father with G3962 pater is Mary's speech [L1][L2], but Luke's narrator qualifies sonship as \"as was supposed\" in Luke 3:23 [L3], so speech of custom stands beside stated qualification [L4].\" (Only \"thy father\" of the witness is taken up, two words; the TAKES words do not take up \"and I have sought thee sorrowing\" and do not reach three words in a row of the witness.)",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "out of form"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"Thy father with G3962 pater is Mary's speech\" -- takes up only \"thy father\" (two words of the witness), and no three-word run of the witness is taken up.",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "out of form"
+   },
+   "final": "DNA",
+   "match": false
+  },
+  {
+   "id": "A6",
+   "key": "DNA",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"denied knowing spans to birth, excluding begetting by Joseph.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"denied knowing spans to birth, excluding begetting by Joseph.\" (the words name a conclusion about birth and begetting and never take up \"made of the seed of David according to the flesh\")",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "out of form"
+   },
+   "final": "DNA",
+   "match": true
+  },
+  {
+   "id": "A7",
+   "key": "A",
+   "s1": {
+    "raw": "ACCOUNTS -- TAKES: \"not knowing till birth covers the taking and the espousal alike.\" -- WITNESS WORDS: \"knew her not till\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "s2": {
+    "raw": "ACCOUNTS -- TAKES: \"not knowing till birth covers the taking and the espousal alike.\" -- WITNESS WORDS: \"knew her not till\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "final": "A",
+   "match": true
+  },
+  {
+   "id": "A8",
+   "key": "DNA",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"Jesus had no biological father.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"Jesus had no biological father.\" (It states a conclusion about Jesus's paternity and does not quote or take up any words of Acts 2:30, such as \"fruit of his loins\" or \"according to the flesh.\")",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "out of form"
+   },
+   "final": "DNA",
+   "match": true
+  },
+  {
+   "id": "A9",
+   "key": "A",
+   "s1": {
+    "raw": "ACCOUNTS -- TAKES: \"the chain yields Davidic flesh by woman-becoming, with no loins of a begetting man stated\" -- WITNESS WORDS: \"fruit of his loins, according to the flesh\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"the chain yields Davidic flesh by woman-becoming, with no loins of a begetting man stated\" takes up only the single words \"loins\" and \"flesh\" from the witness, not three words in a row of it, and it states no meaning for the phrase \"fruit of his loins, according to the flesh\".",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "out of form"
+   },
+   "final": "DNA",
+   "match": false
+  },
+  {
+   "id": "A10",
+   "key": "DNA",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"H2233 zera (\"seed; figuratively, fruit, plant, sowing-time, posterity; [idiom] carnally, child, fruitful, seed(-time), sowing-time\") in 2 Samuel 7:12\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"H2233 zera (\"seed; figuratively, fruit, plant, sowing-time, posterity; [idiom] carnally, child, fruitful, seed(-time), sowing-time\") in 2 Samuel 7:12\" speaks of another verse and a Hebrew word, and does not take up any of the witness words \"And knew her not till she had brought forth her firstborn son\" of Matthew 1:25.",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "out of form"
+   },
+   "final": "DNA",
+   "match": true
+  },
+  {
+   "id": "B1",
+   "key": "A",
+   "s1": {
+    "raw": "ACCOUNTS -- TAKES: \"In Luke 3:23 the KJV's own choice, \"as was supposed,\" marks Joseph's sonship as the common opinion.\" -- WITNESS WORDS: \"as was supposed\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "s2": {
+    "raw": "ACCOUNTS -- TAKES: \"In Luke 3:23 the KJV's own choice, \"as was supposed,\" marks Joseph's sonship as the common opinion.\" -- WITNESS WORDS: \"as was supposed\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "final": "A",
+   "match": true
+  },
+  {
+   "id": "B2",
+   "key": "A",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"John 6:42 gives the town's words, spoken by people who murmured at him.\" The sentence names the verse and attributes the speech to murmuring townspeople. It does not state what \"the son of Joseph, whose father and mother we know\" means or how the position agrees with those words.",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "out of form"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"John 6:42 gives the town's words, spoken by people who murmured at him.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": false
+  },
+  {
+   "id": "B3",
+   "key": "DNA",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"On the defender's glosses and his own pattern, what is begotten in her has its point of origin in the Holy Ghost.\" (This names no words of the witness, such as \"fruit of his loins\" or \"according to the flesh\", and speaks of what is begotten in her rather than of the raising up of Christ.)",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "out of form"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"On the defender's glosses and his own pattern, what is begotten in her has its point of origin in the Holy Ghost.\" (the words name a begetting \"in her\" and a Holy Ghost origin, which is another matter from Acts 2:30's \"of the fruit of his loins, according to the flesh, he would raise up Christ\"; they state no meaning for those witness words and do not say how the position agrees with them)",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "out of form"
+   },
+   "final": "DNA",
+   "match": true
+  },
+  {
+   "id": "B4",
+   "key": "A",
+   "s1": {
+    "raw": "ACCOUNTS -- TAKES: \"So \"seed\" and \"loins\" run down a line and are not tied to the immediate begetter.\" -- WITNESS WORDS: \"of the fruit of his loins\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "s2": {
+    "raw": "ACCOUNTS -- TAKES: \"So \"seed\" and \"loins\" run down a line and are not tied to the immediate begetter.\" -- WITNESS WORDS: \"of his loins\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "final": "A",
+   "match": true
+  },
+  {
+   "id": "B5",
+   "key": "DNA",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"The begetting named for this child is \"of the Holy Ghost\" (Matthew 1:20).\" This speaks of another verse and another matter, the begetting in Matthew 1:20, and does not take up any words of Luke 2:48 \"thy father and I have sought thee sorrowing.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"The begetting named for this child is \"of the Holy Ghost\" (Matthew 1:20).\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": true
+  },
+  {
+   "id": "B6",
+   "key": "A",
+   "s1": {
+    "raw": "ACCOUNTS -- TAKES: \"At Joseph the text calls him \"the husband of Mary\" and puts the birth \"of whom,\" out of her (Matthew 1:16).\" -- WITNESS WORDS: \"the husband of Mary, of whom\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "s2": {
+    "raw": "ACCOUNTS -- TAKES: \"At Joseph the text calls him \"the husband of Mary\" and puts the birth \"of whom,\" out of her (Matthew 1:16).\" -- WITNESS WORDS: \"the husband of Mary\"",
+    "raw_kind": "A",
+    "g2": "A",
+    "why": "form and quotations hold"
+   },
+   "final": "A",
+   "match": true
+  },
+  {
+   "id": "B7",
+   "key": "DNA",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"So the conception falls at the angel's word, and Joseph's knowing is not in the order.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"So the conception falls at the angel's word, and Joseph's knowing is not in the order.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": true
+  },
+  {
+   "id": "B8",
+   "key": "A",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"Leviticus 19:19 is addressed to Israel about cattle, a field and a garment.\" That names the verse and its subjects but does not take up \"thou shalt not sow thy field with mingled seed\": it states no meaning for \"sow\" or \"mingled seed,\" and it shares no three-word run with the witness (\"a field\" is not \"thy field\").",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "out of form"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"Leviticus 19:19 is addressed to Israel about cattle, a field and a garment.\" (it names the verse and the words \"a field\" but takes up no three words in a row of \"thou shalt not sow thy field with mingled seed\")",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "out of form"
+   },
+   "final": "DNA",
+   "match": false
+  },
+  {
+   "id": "B9",
+   "key": "DNA",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"A wife known by her husband in the espousal, as the defender's Step 2 has it, is not the virgin the quoted prophecy describes.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"A wife known by her husband in the espousal, as the defender's Step 2 has it, is not the virgin the quoted prophecy describes.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": true
+  },
+  {
+   "id": "B10",
+   "key": "DNA",
+   "s1": {
+    "raw": "DOES NOT ACCOUNT -- \"These rows state David's loins and David's seed.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "s2": {
+    "raw": "DOES NOT ACCOUNT -- \"These rows state David's loins and David's seed.\"",
+    "raw_kind": "DNA",
+    "g2": "DNA",
+    "why": "answered DOES NOT ACCOUNT"
+   },
+   "final": "DNA",
+   "match": true
+  }
+ ]
+}
