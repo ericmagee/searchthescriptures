@@ -1,4 +1,4 @@
-ASK 664 PART 2: THE FOUR AUTHORIZED TESTS OF THE ENFORCER'S QUESTION. REPORT (W3 seat 33, 2026-11-27). DRAFT 1, for W1's grade before the operator reads it.
+ASK 664 PART 2: THE FOUR AUTHORIZED TESTS OF THE ENFORCER'S QUESTION. REPORT (W3 seat 33, 2026-11-27). DRAFT 2, for W1's grade before the operator reads it.
 
 WHAT WAS TESTED. The question the enforcer is asked when a judge says a side "takes" a verse: do the quoted words really say how that side's position stands with the verse (ACCOUNTS), or not (DOES NOT ACCOUNT). Six models answered each entry twice. An entry was scored only where three seats (W1, W3, W4) had labelled it alike, blind, before any answer. The bar: no empty answer passed, and at most one answer wrong. Authorized by the operator at 01:45 CST 11-27: "you are authorized to run 4 more test.. if needed. I'll be back later". All four are used. Total cost about $3.55. Nothing live was changed.
 
@@ -11,7 +11,7 @@ ERRORS, FIRST.
 
 THE RESULTS, ON THE RECORD (right answers of scored answers; fresh entries only).
 Test 1 (question rev 3f; 8 entries, 16 answers; $1.51): terra 15 PASSES. Sonnet 14, Haiku 13, luna 13, DeepSeek 12, MiMo 12. luna, DeepSeek and MiMo each passed an empty answer.
-Test 2 (same question; 9 entries, 18 answers; $0.50): NO MODEL PASSES. luna 15, DeepSeek 14, MiMo 13, terra 12, Sonnet 12, Haiku 10. luna passed one empty answer twice. Information only, with the three wrongly keyed entries corrected after the answers: terra 18, Sonnet 18.
+Test 2 (same question; 9 entries, 18 answers; $0.50): NO MODEL PASSES. luna 15, DeepSeek 14, MiMo 13, terra 12, Sonnet 12, Haiku 10. luna passed one empty answer twice, and Haiku passed one once. Information only, with the three wrongly keyed entries corrected after the answers: terra 18, Sonnet 18.
 Test 3 (same question; 8 entries, 16 answers; $0.47): Sonnet 16 PASSES. luna 14, DeepSeek 14, MiMo 14, Haiku 13, terra 12. No model passed an empty answer.
 Test 4 (one change: the side's position is sent, "Christ had no human biological father"; 10 entries, 20 answers; $1.07): luna 20 PASSES. MiMo 18, DeepSeek 15, terra 15, Sonnet 14, Haiku 12. No model passed an empty answer.
 The three seats' counts agree on every figure in tests 1, 3 and 4, and on test 2.
