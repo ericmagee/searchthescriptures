@@ -1,11 +1,11 @@
 PASS T1 changed nodes ["Build Independent Verdict","Panel Build","Shared Library"]
 PASS T1 connections unchanged
-PASS T1 LIB lines changed [3471,3858], count 3910
+PASS T1 LIB lines changed [3471,3482,3858], count 3910
 PASS T1 MAP: only n changes, for the 6 entries holding the SCK624 line
 PASS T1 every MAP entry rebuilds at its stated length
-PASS T1 header = body: library sha d43172b717828bbb, 3910 lines
+PASS T1 header = body: library sha b882340e8c6bf485, 3910 lines
 PASS T1 ASK 599 rule 10: every changed LIB line carries "ASK 664"
-INFO T1 LIB 3471 change: base "t lb=sbLabel0(a.to);const old=x.lines.find(l=>lb&&sbLabel0(l)===lb)||x.lines[x.lines.length-1];LG.sckAdd.push({seat:g.seat,sid:x.gid,rule:'E-GATE',item:x.kind,line:old,ans:'CHANGE',to:a.to,wh" -> target "t lb=sbLabel0(a.to);let old=x.lines.find(l=>lb&&sbLabel0(l)===lb)||x.lines[x.lines.length-1];let __to=a.to;if(x.key==='SCK TKS'&&lb==='WHICH HOLDS'){const h=SCK624.host(p.verdict_raw,old);if(h&&h!==old){const __r=h.split(old).join('').replace(/^\\s*\\|\\s*|\\s*\\|\\s*$/g,'').replace(/\\s*\\|\\s*\\|\\s*/g,' | ').trim();__to=a.to+(__r?' | '+__r:'');old=h;}} /* ASK 664: a WHICH HOLDS part after ' | ' replaces its whole line, the changed WHICH HOLDS part first and the rest of the line after ' | ' (the apply reads a line by its first label) */LG.sckAdd.push({seat:g.seat,sid:x.gid,rule:'E-GATE',item:x.kind,line:old,ans:'CHANGE',to:__to,wh"
+INFO T1 LIB 3471 change: base "t lb=sbLabel0(a.to);const old=x.lines.find(l=>lb&&sbLabel0(l)===lb)||x.lines[x.lines.length-1];LG.sckAdd.push({seat:g.seat,sid:x.gid,rule:'E-GATE',item:x.kind,line:old,ans:'CHANGE',to:a.to,why:a.why});}}\n   let R=null,rw='';try{R=sbApply2024(g.seat,p.verdict_raw,g.F,its.concat(C.add,(C2&&C2.add)||[],LG.sckAdd),ctx.R);rw=String((R&&R.fields&&R.fields.verdict_tag)||(R&&R.tag)||p.verdict_tag||'').toUpperCase().replace(/[^A-Z].*$/,'');}catch(e){R=null;LG.sckErr=String(e&&e.message||e).slice(0,300);}\n   for(const x of __S){const a=A[x.gid];const ans=le?'NO REPLY':a?a.ans:'NOT READ';const still=!R||!rw?true:SCK624.open(R.text,rw,x.key);const cured=ans==='CHANGE'&&!still;LG.sck.push({gid:x.gid,kind:x.kind,key:x.key,lines:x.lines,ans,to:a&&a.to||'',reason:a&&a.why||'',cured,why:cure" -> target "t lb=sbLabel0(a.to);let old=x.lines.find(l=>lb&&sbLabel0(l)===lb)||x.lines[x.lines.length-1];let __to=a.to;if(x.key==='SCK TKS'&&/^D\\d+ VS C\\d+$/.test(lb||'')&&SCK624.fz(its).has(lb.replace(' VS ',' vs '))){LG.sckFz=(LG.sckFz||[]).concat(x.gid);continue;} /* ASK 664 A3: a CHANGE TO a line the send-back made the judge regrade is not applied for kind 4 */if(x.key==='SCK TKS'&&lb==='WHICH HOLDS'){const h=SCK624.host(p.verdict_raw,old);if(h&&h!==old){const __r=h.split(old).join('').replace(/^\\s*\\|\\s*|\\s*\\|\\s*$/g,'').replace(/\\s*\\|\\s*\\|\\s*/g,' | ').trim();__to=a.to+(__r?' | '+__r:'');old=h;}} /* ASK 664: a WHICH HOLDS part after ' | ' replaces its whole line, the changed WHICH HOLDS part first and the rest of the line after ' | ' (the apply reads a line by its first label) */LG.sckAdd.push({seat:g.seat,sid:x.gid,rule:'E-GATE',item:x.kind,line:old,ans:'CHANGE',to:__to,why:a.why});}}\n   let R=null,rw='';try{R=sbApply2024(g.seat,p.verdict_raw,g.F,its.concat(C.add,(C2&&C2.add)||[],LG.sckAdd),ctx.R);rw=String((R&&R.fields&&R.fields.verdict_tag)||(R&&R.tag)||p.verdict_tag||'').toUpperCase().replace(/[^A-Z].*$/,'');}catch(e){R=null;LG.sckErr=String(e&&e.message||e).slice(0,300);}\n   for(const x of __S){const a=A[x.gid];const ans=le?'NO REPLY':a?a.ans:'NOT READ';const still=!R||!rw?true:SCK624.open(R.text,rw,x.key);const cured=ans==='CHANGE'&&!still;LG.sck.push({gid:x.gid,kind:x.kind,key:x.key,lines:x.lines,ans,to:a&&a.to||'',reason:a&&a.why||'',cured,why:(LG.sckFz||[]).includes(x.gid)?'the change is to a line the send-back made you regrade (E-HOLD), which is not applied for this item (ASK 664)':cure"
 PASS T2 Panel Build: the two insertions only, byte-equal, once each
 PASS T2 compiles: Panel Build
 PASS T2 Build Independent Verdict: the two insertions only, byte-equal, once each
@@ -30,11 +30,18 @@ PASS T4 1279: with "-- TAKES:" added to the WHICH HOLDS part kind 4 does not fir
 PASS T4 1279: with "-- DISPUTES:" added to the WHICH HOLDS part kind 4 does not fire
 PASS T4 1272: with "-- TAKES:" added to the WHICH HOLDS part kind 4 does not fire
 PASS T5 kinds 1 to 3 give the same items on base and target over 33 stored judgments
+PASS T5 kinds 1 to 3 give the same items on base and target over all 678 stored judgments
+PASS T5 over all 678, kind 4 fires only where a WHICH HOLDS line exists: 20 judgments
 PASS T6 Gate Record functions load bodies: Cannot read properties of undefined (reading 'slice')
 PASS T6 1279 cure round trip, CHANGE TO the WHICH HOLDS part with TAKES: label WHICH HOLDS; applied true; still open false
 PASS T6 1272 cure round trip, CHANGE TO the WHICH HOLDS part with TAKES: label WHICH HOLDS; applied true; still open false
 INFO T7 1278 CHANGE TO the CHALLENGE STANDING line as SELF-SUPPORTED: label CHALLENGE STANDING; applied true; still open false
 INFO T8 1279 CHANGE TO the forced D1 vs C3 line as UNDERDETERMINED: label D1 VS C3; applied true; kind 4 still open true (trigger (a) remains)
+PASS T11 fz reads the forced pair from the E-HOLD send-back item: D1 vs C3
+PASS T11 1279 with D1 vs C3 forced: the item offers only the WHICH HOLDS cure
+PASS T11 1266 with no forced pair keeps "or CHANGE TO the one line you hold wrong"
+PASS T11 1279: a CHANGE TO the forced D1 vs C3 line is not applied for kind 4; the item stays open (uncured)
+PASS T11 1279 with D1 vs C3 forced: the WHICH HOLDS cure still applies and cures
 PASS T9 TAKES inserted
 PASS T9 WHL507.faults gives the same items with and without TAKES on 1279: []
 PASS T9 kinds 1 to 3 keys unchanged with TAKES on 1279: []
