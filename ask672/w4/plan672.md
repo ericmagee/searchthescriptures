@@ -1,48 +1,24 @@
-# ASK 672 PLAN rev 1 (W4; rev 0 cf25f342 graded PASS WITH C1 TO C3 by W1, Wall 12777): the E-ASSUME verse harvest reads both quoting forms, on both sides
+# ASK 672 PLAN rev 2 (W4, 11-27): the E-ASSUME KEEP check with no quote form per model
+Rev 1 (a2121513, kept as plan672_rev1.md) is WITHDRAWN on the operator's word, 12:56 CST 11-27: "we can't hard code for every model and it different versions." Its write card is held and must not be pressed.
 
 ## ROLES
-W4 builds and writes. W1 grades the plan and build and reads back the write. W3 drafts the manual entry and the AAR row.
+W4 builds and writes; W1 grades; W3 drafts the manual entry and AAR row. The operator chooses A, B or C on the card.
 
-## OBJECTIVE
-The list "every verse the side quoted in rounds 1 to 3" (ASK 524) holds every verse a side quoted, whether the round writes Reference "quote" or "quote" (Reference). A right KEEP that quotes the side's own verse words is then CURED, and the enforcer's assumption question is asked with the full verse list in front of it.
+## THE DEFECT (run 43103)
+Sonnet's KEEP on item 93 quoted "Behold, a virgin shall be with child, and shall bring forth a son". The challenger's rounds hold those words written as "quote" (Matthew 1:23). The harvest (vp524Verses, Assume Check Build) reads only Reference "quote", so the check refused the KEEP and Sonnet, the only HELD seat, was removed.
 
-## FINDINGS FROM SEARCH (live engine 66ba992d, child aad0ad9c; node code re-fetched 11:53 CST 11-27, unchanged from my 10:38 CST fetch; run 43103, debate 0731a1ea)
-1. Assume Check Build, vp524Verses: one regex, Reference then optional colon then "quote". The form "quote" (Reference), used by both debaters in several rounds, is never matched.
-2. Replay on the stored 43103 rounds: challenger rounds 1, 2, 3 give 0, 22, 0 verses; defender rounds 1, 2, 3 give 0, 0, 25 (W1 confirmed by his own replay, Wall 12773). Matthew 1:23 and Luke 1:27, quoted by the challenger in every round, are absent.
-3. The harvest has three users, all in the E-ASSUME path:
-   a. The enforcer's prompt block "EVERY VERSE THE <SIDE> QUOTED IN ROUNDS 1 TO 3" (Assume Check Build). In 43103 the enforcer was shown a near-empty challenger list, then wrote of items 92 to 96 "Neither the enforcer nor the code finds a verse the challenger quoted that states it".
-   b. case_quotes on each premise, read by Assume Check Record for a STATED answer ("verse words not found in the side's quoted verses").
-   c. vq[side], read by the KEEP cure in the Shared Library (acx531Cure). In 43103 this refused Sonnet's KEEP on item 93 (Matthew 1:23 words) and terra's (Luke 1:27 words). That one item removed Sonnet, the HELD seat.
-   Also press_vq (ASK 532 name test, record-only).
-4. Error: W4 built the ASK 524 harvest with one quoting form.
+## THREE OPTIONS FOR THE CARD (replayed on run 43103's 12 KEEP rows; inputs/keeps43103.json)
+A. DROP THE CHECK (the operator's question, 12:58 CST). A KEEP is accepted without a verse check. Nothing reads quote forms. Cost: a judge can keep a grade by quoting words the side never used. No seat is removed for this item. The K-KJV check (a quoted verse is real KJV text) is separate and stays.
+B. PLAIN-TEXT SEARCH (W3's proposal, Wall 12815). Accept the KEEP when the judge's quoted words (4 or more in a row, normalized) appear anywhere in the side's stored rounds 1 to 3. No quote forms are read. Replay: 12 of 12 cured. Cost: 4 of those were cured by quoting the side's own prose, not verse words: chatgpt 94 "Mary states she knows not a man"; chatgpt 96.1 and 96.2 "his flesh was made of the seed of David of a woman,"; chatgpt 96.3 "legal reckoning in the house of Joseph his supposed father" (b2/w3form_out.txt 205964c1).
+C. ONE RULE FOR ANY ORDER (recommended). Keep the verse list. A quotation is joined to the reference that stands next to it, before or after, with only spaces, brackets or punctuation between (12 characters at most). No per-model or per-form pattern: it reads quote marks and an adjacent reference, in either order. Replay: 8 of 12 cured, including Sonnet 93, sonnet 95 and sol62 95. The 4 refused are the 4 prose quotations above (b2/c2_out.txt 26df6464). On 10 earlier runs every old list entry is kept but 1 (b2/c3c4_out.txt 07b6b215): Luke 2:49 inside a quotation of the other side's sentence (nested quotes). Bad-match tests: 0 of 4 (b2/replay_out.txt 359234a0).
 
-## CHANGES
-1. Assume Check Build only: vp524Verses matches both forms: (a) Reference ["quote"], as now; (b) "quote" followed within the same line by (Reference), allowing [Ln] tags, bold marks and a verse range (for example "(Matthew 1:24-25)"). The same dedupe stays (one entry per distinct quotation; a quotation inside a longer one of the same verse is dropped).
-2. Nothing else changes: no prompt wording, no rule, no Shared Library line, no model setting.
+Recommendation C: it fixes the removal without a form per model and still requires verse words. B is the next best. A removes the protection.
 
-## NOT IN SCOPE
-The round-label crossing when the Oracle sits as DEFENDER (Wall 12772 item 9; cause not yet read). The pkgPS rule (Sol62). ASK 673 (Sol's unread reply).
-
-## CRITERIA
-C1. Replay on 43103 stored rounds: each side's rounds 1 to 3 each give more than 0 verses; challenger list holds Matthew 1:23 and Luke 1:27.
-C2. Replay of acx531Cure on 43103 items: Sonnet S10 and terra S14 KEEPs read CURED; every other cure result is unchanged or listed with its reason.
-C3. Old-form superset: on the last 10 debate rows, every (reference, quotation) the old regex finds, the new one finds.
-C4. Prompt size: the enforcer user prompt growth on those 10 rows is measured and stated (chars), and stays under the model's input limit.
-C5. Assume Check Build compiles; Library Check pair unchanged (the Library is not touched).
+## CHANGE (C)
+Engine, Assume Check Build only: vp524Verses replaced by b2/new_vp524.js (e3187790). B would instead change acx531Cure in the Shared Library; A would remove the KEEP verse test there. Child: no copy of vp524Verses (checked at build).
 
 ## WRONG-IF
-Known-bad cases (W1 C3), each must give 0 new-form matches, result shown: the judges' reasoning ("MISSES (Commitment 7)"); a gloss quote before a Strong's parenthesis ('"thy father" (*patḗr*, G3962)', defender round 2 line 36); opponent quotes in [L4] lines ([CR1] "..."); MEANS lines. Known-good cases, each must match: challenger rounds 1 and 3, Matthew 1:23 and Luke 1:27.
-The new form takes words that are not a quotation (a gloss, a MEANS line, a judge's sentence) as verse words: checked by printing every new-form match on 43103 for W1 to read. A dropped old-form match (C3).
-
-## RUN EVIDENCE
-43103 (Wall 12767, 12772, 12773). Rows debate_enforcer_log 55074, 55214 (KEEP refused), debate_removals for sonnet.
+A run shows a KEEP refused whose quoted verse words stand in the side's rounds 1 to 3 next to their reference.
 
 ## STEPS
-1. Plan graded by W1. 2. Build offline from a fresh live fetch; replays C1 to C5; W1 grades the build. 3. Write card to Eric (engine, Assume Check Build only). 4. Write on his press; fetch-back, audit row, Wall, W1 readback. 5. First live run: users 3a and 3b change what the enforcer is shown and what counts as STATED, so WHICH E-ASSUME ITEMS ARE RAISED CAN CHANGE (not replayable offline without a model call). Count E-ASSUME items per seat against 43103 (sol 7, sol62 6, sonnet 1) and read every raised item against the fuller verse list; KEEP cures read against the rounds.
-Cost: no model call in plan or build.
-
-## INPUTS IN GIT
-The plan, the 43103 stored rounds used for replay (cr1-cr4, dr1-dr4 as fetched 11:46 CST 11-27), the replay script and its outputs are saved under ask672/w4/inputs/ with md5s and committed to branch claude/untitled-9jle0o before the build is graded; commit id posted on the Wall.
-
-## DONE
-Written on Eric's press; W1 readback MATCH; two clean live runs in which every KEEP that quotes the side's own verse words reads CURED and the E-ASSUME counts are read against 43103; manual entry and AAR row by W3.
+On the operator's choice: build the chosen option, W1 grades, write card, poll runs, fresh fetch, check live = base, PUT the one node, fetch back, W1 readback. Revert: PUT the base node.
