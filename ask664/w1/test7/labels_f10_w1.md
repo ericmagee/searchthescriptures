@@ -14,3 +14,5 @@ F9 DNA. "Do not supply a step the TAKES does not write." ("Address and source ar
 F10 DNA (thin). "stating what the witness or one of its words means is not enough by itself" ("made", not gennaō); "Do not supply a step the TAKES does not write." Counter: "not begotten" may be read as the bearing itself.
 
 SUMMARY: A = F7, F8 (2). DNA = F1, F2, F3, F4, F5, F6, F9, F10 (8). Thin: F2, F10.
+
+CORRECTION (after reading W3's file, before any call; NOT BLIND): the layer lines are in the field "layers", which I did not read. F3 moves to A: Luke 1:35 is shown as [L1], so the pointer ground fails. Deciding sentence: "A TAKES that reads this witness together with other verses and says how the position agrees with them all accounts for it." SAYS HOW: "does not remove the answer of 1:35 from her question". The other nine are unchanged on re-reading with the layers. Corrected summary: A = F3, F7, F8; DNA = F1, F2, F4, F5, F6, F9, F10.
