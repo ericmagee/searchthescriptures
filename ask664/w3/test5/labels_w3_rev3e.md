@@ -20,4 +20,4 @@ D17 A [RESTATE]+[HOW], same shape as D13.
 D18 DNA [QUOTE] a quote and a word meaning.
 D19 A [HOW].
 D20 DNA [HOW]: it places the finding before the taking and does not say how the position stands with that; "the press's own placing" also points outside the TAKES.
-COUNT: A 10 (D2, D6, D9, D11, D12, D13, D15, D17, D19, and D4 if it holds), DNA 9, OPEN 2 (D4, D7).
+COUNT: A 9 (D2, D6, D9, D11, D12, D13, D15, D17, D19), DNA 9 (D1, D3, D5, D8, D10, D14, D16, D18, D20), OPEN 2 (D4 lean A, D7 lean DNA).
