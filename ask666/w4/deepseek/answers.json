@@ -1,0 +1,882 @@
+[
+ {
+  "id": "A1",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"and [L3] gives \"made of a woman\" and \"made of the seed of David according to the flesh\" [L3]; the chain from woman's seed to made-of-woman flesh yields Davidic flesh without requiring loins of a begetting man [L4]\" -- WITNESS WORDS: \"made of the seed of David\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4873,
+   "completion_tokens": 884,
+   "total_tokens": 5757,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 800
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4873
+  },
+  "gen_id": "75a6532e-5d12-4fa0-8bcf-3dce15876ab5",
+  "error": null
+ },
+ {
+  "id": "A2",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"The rows that affirm no man begetting Jesus carry the case [L4]; no verse is required to state a conclusion in its own words [L4].\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4802,
+   "completion_tokens": 326,
+   "total_tokens": 5128,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 285
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4802
+  },
+  "gen_id": "6b51d072-a667-44af-845b-d7bff6470d4f",
+  "error": null
+ },
+ {
+  "id": "A3",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"begat stops at husband of Mary and birth is of her, not begotten by him.\" -- WITNESS WORDS: \"Jacob begat Joseph the husband of Mary\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4796,
+   "completion_tokens": 344,
+   "total_tokens": 5140,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 297
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4796
+  },
+  "gen_id": "d069fd6f-fa3a-4392-8964-add8975f7e0b",
+  "error": null
+ },
+ {
+  "id": "A4",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"I will set up thy seed after thee, which shall proceed out of thy bowels\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4794,
+   "completion_tokens": 293,
+   "total_tokens": 5087,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 267
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4794
+  },
+  "gen_id": "65643b8e-ef4d-4af4-b937-6d732bac2483",
+  "error": null
+ },
+ {
+  "id": "A5",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"Thy father with G3962 pater is Mary's speech\" -- WITNESS WORDS: \"thy father and I\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4824,
+   "completion_tokens": 1224,
+   "total_tokens": 6048,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1187
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4824
+  },
+  "gen_id": "9cfdeea7-462d-4a94-8571-b3dad9cf71ab",
+  "error": null
+ },
+ {
+  "id": "A6",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"denied knowing spans to birth, excluding begetting by Joseph.\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4780,
+   "completion_tokens": 244,
+   "total_tokens": 5024,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 223
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4780
+  },
+  "gen_id": "d1619e02-bd8c-449b-8482-8dad5472c2bd",
+  "error": null
+ },
+ {
+  "id": "A7",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"not knowing till birth covers the taking and the espousal alike.\" -- WITNESS WORDS: \"knew her not till\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4784,
+   "completion_tokens": 581,
+   "total_tokens": 5365,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 542
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4784
+  },
+  "gen_id": "9f592244-746c-468e-bef1-a21b1ff4ec96",
+  "error": null
+ },
+ {
+  "id": "A8",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"Jesus had no biological father.\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4782,
+   "completion_tokens": 188,
+   "total_tokens": 4970,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 174
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4782
+  },
+  "gen_id": "7c09cf93-f126-4615-b00c-fd91b61b3509",
+  "error": null
+ },
+ {
+  "id": "A9",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"the chain yields Davidic flesh by woman-becoming, with no loins of a begetting man stated\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4798,
+   "completion_tokens": 517,
+   "total_tokens": 5315,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 487
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4798
+  },
+  "gen_id": "6266900b-1634-4d91-8763-f36065f714c9",
+  "error": null
+ },
+ {
+  "id": "A10",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"H2233 zera (\"seed; figuratively, fruit, plant, sowing-time; [idiom] carnally, child, fruitful, seed(-time), sowing-time\") in 2 Samuel 7:12\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4818,
+   "completion_tokens": 273,
+   "total_tokens": 5091,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 220
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4818
+  },
+  "gen_id": "19abe0eb-907c-407b-b02a-cd4c9593b507",
+  "error": null
+ },
+ {
+  "id": "B1",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"In Luke 3:23 the KJV's own choice, \"as was supposed,\" marks Joseph's sonship as the common opinion.\" -- WITNESS WORDS: \"as was supposed\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4795,
+   "completion_tokens": 369,
+   "total_tokens": 5164,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 318
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4795
+  },
+  "gen_id": "4d61655c-5b20-47ba-8d40-2774f367bb81",
+  "error": null
+ },
+ {
+  "id": "B2",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"John 6:42 gives the town's words, spoken by people who murmured at him.\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4792,
+   "completion_tokens": 506,
+   "total_tokens": 5298,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 479
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4792
+  },
+  "gen_id": "d44cb461-fea6-4c37-90de-7614661325ff",
+  "error": null
+ },
+ {
+  "id": "B3",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"On the defender's glosses and his own pattern, what is begotten in her has its point of origin in the Holy Ghost.\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4802,
+   "completion_tokens": 238,
+   "total_tokens": 5040,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 203
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4802
+  },
+  "gen_id": "7f27dee7-1944-4806-a8ae-8a5324905219",
+  "error": null
+ },
+ {
+  "id": "B4",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"So \"seed\" and \"loins\" run down a line and are not tied to the immediate begetter.\" -- WITNESS WORDS: \"of his loins\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4799,
+   "completion_tokens": 2457,
+   "total_tokens": 7256,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2409
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4799
+  },
+  "gen_id": "e40ba8f6-0545-4be8-8d39-bb91a7fecadb",
+  "error": null
+ },
+ {
+  "id": "B5",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"The begetting named for this child is \"of the Holy Ghost\" (Matthew 1:20).\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4788,
+   "completion_tokens": 183,
+   "total_tokens": 4971,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 153
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4788
+  },
+  "gen_id": "bc791375-9d10-434e-8c55-5fa97f301f2c",
+  "error": null
+ },
+ {
+  "id": "B6",
+  "send": 1,
+  "answer": "ACCOUNTS -- TAKES: \"At Joseph the text calls him \"the husband of Mary\" and puts the birth \"of whom,\" out of her (Matthew 1:16).\" -- WITNESS WORDS: \"the husband of Mary\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4803,
+   "completion_tokens": 363,
+   "total_tokens": 5166,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 308
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4803
+  },
+  "gen_id": "53de0d11-1b6e-4a5d-968e-d338cc46ac0f",
+  "error": null
+ },
+ {
+  "id": "B7",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"So the conception falls at the angel's word, and Joseph's knowing is not in the order.\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4787,
+   "completion_tokens": 294,
+   "total_tokens": 5081,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 266
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4787
+  },
+  "gen_id": "5b991f74-e84c-44ff-9f6e-a9cbf2a12b34",
+  "error": null
+ },
+ {
+  "id": "B8",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"Leviticus 19:19 is addressed to Israel about cattle, a field and a garment.\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4788,
+   "completion_tokens": 1066,
+   "total_tokens": 5854,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1039
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4788
+  },
+  "gen_id": "a45542eb-6667-4995-82e5-9dc48dce87aa",
+  "error": null
+ },
+ {
+  "id": "B9",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"A wife known by her husband in the espousal, as the defender's Step 2 has it, is not the virgin the quoted prophecy describes.\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4798,
+   "completion_tokens": 212,
+   "total_tokens": 5010,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 173
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4798
+  },
+  "gen_id": "3338d9ae-fd2b-4267-bfc2-2e04d2fa5662",
+  "error": null
+ },
+ {
+  "id": "B10",
+  "send": 1,
+  "answer": "DOES NOT ACCOUNT -- \"These rows state David's loins and David's seed.\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4788,
+   "completion_tokens": 907,
+   "total_tokens": 5695,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 887
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4788
+  },
+  "gen_id": "269a2671-ce91-4133-981f-eb5223bc4937",
+  "error": null
+ },
+ {
+  "id": "A1",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"the chain from woman's seed to made-of-woman flesh yields Davidic flesh without requiring loins of a begetting man [L4]\" -- WITNESS WORDS: \"made of the seed of David according to the flesh\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4873,
+   "completion_tokens": 537,
+   "total_tokens": 5410,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 478
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4873
+  },
+  "gen_id": "fe7e94e5-3092-470d-893e-ccc38739d4c3",
+  "error": null
+ },
+ {
+  "id": "A2",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"The rows that affirm no man begetting Jesus carry the case [L4]; no verse is required to state a conclusion in its own words [L4].\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4802,
+   "completion_tokens": 316,
+   "total_tokens": 5118,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 275
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4802
+  },
+  "gen_id": "3dcfc08d-3ee7-4637-8645-07cc77b00b5f",
+  "error": null
+ },
+ {
+  "id": "A3",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"begat stops at husband of Mary and birth is of her, not begotten by him.\" -- WITNESS WORDS: \"begat Joseph the husband of Mary\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4796,
+   "completion_tokens": 426,
+   "total_tokens": 5222,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 380
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4796
+  },
+  "gen_id": "9ca0b6e4-2980-4754-87a8-20db3f124654",
+  "error": null
+ },
+ {
+  "id": "A4",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"I will set up thy seed after thee, which shall proceed out of thy bowels\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4794,
+   "completion_tokens": 297,
+   "total_tokens": 5091,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 271
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4794
+  },
+  "gen_id": "bf08ae2d-70fa-485d-b882-e180a44af701",
+  "error": null
+ },
+ {
+  "id": "A5",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"Thy father with G3962 pater is Mary's speech\" -- WITNESS WORDS: \"thy father and I\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4824,
+   "completion_tokens": 1480,
+   "total_tokens": 6304,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1443
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4824
+  },
+  "gen_id": "0c518615-c416-4c05-91f4-cdda63512013",
+  "error": null
+ },
+ {
+  "id": "A6",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"denied knowing spans to birth, excluding begetting by Joseph.\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4780,
+   "completion_tokens": 322,
+   "total_tokens": 5102,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 301
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4780
+  },
+  "gen_id": "b8ee4612-d8dc-4e4a-a085-8772bc4a0e8c",
+  "error": null
+ },
+ {
+  "id": "A7",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"not knowing till birth covers the taking and the espousal alike.\" -- WITNESS WORDS: \"knew her not till\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4784,
+   "completion_tokens": 290,
+   "total_tokens": 5074,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 251
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4784
+  },
+  "gen_id": "3e3f1058-dbec-46f1-8bf9-2217df0f42b3",
+  "error": null
+ },
+ {
+  "id": "A8",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"Jesus had no biological father.\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4782,
+   "completion_tokens": 203,
+   "total_tokens": 4985,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 189
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4782
+  },
+  "gen_id": "85adda79-83cc-4854-ba0d-056a8080f4a0",
+  "error": null
+ },
+ {
+  "id": "A9",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"the chain yields Davidic flesh by woman-becoming, with no loins of a begetting man stated\" -- WITNESS WORDS: \"of his loins\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4798,
+   "completion_tokens": 1007,
+   "total_tokens": 5805,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 961
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4798
+  },
+  "gen_id": "f6135165-48ba-4d0e-963b-bf4e0eb27844",
+  "error": null
+ },
+ {
+  "id": "A10",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"H2233 zera (\"seed; figuratively, fruit, plant, sowing-time; [idiom] carnally, child, fruitful, seed(-time), sowing-time\") in 2 Samuel 7:12\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4818,
+   "completion_tokens": 422,
+   "total_tokens": 5240,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 369
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4818
+  },
+  "gen_id": "ef27d475-c067-4442-8bfe-d8115d5bc310",
+  "error": null
+ },
+ {
+  "id": "B1",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"In Luke 3:23 the KJV's own choice, \"as was supposed,\" marks Joseph's sonship as the common opinion.\" -- WITNESS WORDS: \"as was supposed\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4795,
+   "completion_tokens": 392,
+   "total_tokens": 5187,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 341
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4795
+  },
+  "gen_id": "76aac33b-df1a-4fa5-ab25-8c9fbd3b7982",
+  "error": null
+ },
+ {
+  "id": "B2",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"John 6:42 gives the town's words, spoken by people who murmured at him.\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4792,
+   "completion_tokens": 397,
+   "total_tokens": 5189,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 370
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4792
+  },
+  "gen_id": "96f18172-d4f7-4ec5-b2b1-90809b0f28bc",
+  "error": null
+ },
+ {
+  "id": "B3",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"On the defender's glosses and his own pattern, what is begotten in her has its point of origin in the Holy Ghost.\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4802,
+   "completion_tokens": 260,
+   "total_tokens": 5062,
+   "prompt_tokens_details": {
+    "cached_tokens": 1408
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 225
+   },
+   "prompt_cache_hit_tokens": 1408,
+   "prompt_cache_miss_tokens": 3394
+  },
+  "gen_id": "fb9e05e9-0e8c-492f-9bd7-78bbedc64bcc",
+  "error": null
+ },
+ {
+  "id": "B4",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"So \"seed\" and \"loins\" run down a line and are not tied to the immediate begetter.\" -- WITNESS WORDS: \"of the fruit of his loins\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4799,
+   "completion_tokens": 869,
+   "total_tokens": 5668,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 818
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4799
+  },
+  "gen_id": "19f7f97b-4dd4-443e-aa6d-aa6bfb3c3814",
+  "error": null
+ },
+ {
+  "id": "B5",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"The begetting named for this child is \"of the Holy Ghost\" (Matthew 1:20).\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4788,
+   "completion_tokens": 341,
+   "total_tokens": 5129,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 311
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4788
+  },
+  "gen_id": "5be7efd9-6165-49ac-9712-ee17004c12de",
+  "error": null
+ },
+ {
+  "id": "B6",
+  "send": 2,
+  "answer": "ACCOUNTS -- TAKES: \"At Joseph the text calls him \"the husband of Mary\" and puts the birth \"of whom,\" out of her (Matthew 1:16).\" -- WITNESS WORDS: \"the husband of Mary\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4803,
+   "completion_tokens": 515,
+   "total_tokens": 5318,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 460
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4803
+  },
+  "gen_id": "087ebb6b-81e9-40c2-a7a1-e7aafb0d3943",
+  "error": null
+ },
+ {
+  "id": "B7",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"So the conception falls at the angel's word, and Joseph's knowing is not in the order.\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4787,
+   "completion_tokens": 263,
+   "total_tokens": 5050,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 235
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4787
+  },
+  "gen_id": "e4b66ced-ffcb-4388-98a8-e345e4e46349",
+  "error": null
+ },
+ {
+  "id": "B8",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"Leviticus 19:19 is addressed to Israel about cattle, a field and a garment.\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4788,
+   "completion_tokens": 983,
+   "total_tokens": 5771,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 956
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4788
+  },
+  "gen_id": "e249adc9-62f6-4b24-a40c-ebc60db46f46",
+  "error": null
+ },
+ {
+  "id": "B9",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"A wife known by her husband in the espousal, as the defender's Step 2 has it, is not the virgin the quoted prophecy describes.\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4798,
+   "completion_tokens": 304,
+   "total_tokens": 5102,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 265
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4798
+  },
+  "gen_id": "e9aeff1f-9a24-4b74-a255-e4ffc638293f",
+  "error": null
+ },
+ {
+  "id": "B10",
+  "send": 2,
+  "answer": "DOES NOT ACCOUNT -- \"These rows state David's loins and David's seed.\"",
+  "finish": "stop",
+  "model": "deepseek-flash",
+  "usage": {
+   "prompt_tokens": 4788,
+   "completion_tokens": 563,
+   "total_tokens": 5351,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 543
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 4788
+  },
+  "gen_id": "f894480f-dd4f-4d50-bbfe-9eeb888ce2f8",
+  "error": null
+ }
+]
